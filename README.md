@@ -1,4 +1,4 @@
-# HID_Infinity_Integration
+# HID Infinity Integration
 The component lets you easily integrate with HID Authentication Platform that is available as a service or On-Premise.
 HID Authentication Platform is used by banks worldwide to secure critical assets, so that organizations can stay ahead
 of ever-changing regulation requirements and threat landscape, without disrupting user experience and productivity.
