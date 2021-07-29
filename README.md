@@ -16,3 +16,5 @@ a threat detection solution for real-time risk based authentication.
 * Possibility to use the HID Authentication Platform in conjunction with HID Risk Management Service and HID Identity Verification Service"
 
 Email Address: Consumer-Auth-Int-Sol-Eng@hidglobal.com
+
+Note: After downloading the repo from GIT zip the entire folder and import it in my library section in Visualizer.
