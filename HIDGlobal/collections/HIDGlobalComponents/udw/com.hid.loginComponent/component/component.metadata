@@ -1,0 +1,141 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid",
+        "uw_classname": "loginComponent",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.loginComponent"
+        ],
+        "templates": [
+            [
+                "desktop",
+                "segments",
+                "CopyCopytmpPushDevice2"
+            ]
+        ],
+        "actions": {
+            "common": {
+                "AS_Button_f81a7a839abc4b228e68d33a1cd170b7": {
+                    "channel": "common",
+                    "actionId": "AS_Button_f81a7a839abc4b228e68d33a1cd170b7",
+                    "actionName": "AS_Button_f81a7a839abc4b228e68d33a1cd170b7",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_ffe0ec05544948ef91a32ecc076d045c": {
+                    "channel": "common",
+                    "actionId": "AS_Button_ffe0ec05544948ef91a32ecc076d045c",
+                    "actionName": "AS_Button_ffe0ec05544948ef91a32ecc076d045c",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_i594f2e364034e6591171be6255642d7": {
+                    "channel": "common",
+                    "actionId": "AS_Button_i594f2e364034e6591171be6255642d7",
+                    "actionName": "AS_Button_i594f2e364034e6591171be6255642d7",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d": {
+                    "channel": "common",
+                    "actionId": "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d",
+                    "actionName": "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_c3f0065bccf94e0c91298e9f6485b3b0": {
+                    "channel": "common",
+                    "actionId": "AS_Button_c3f0065bccf94e0c91298e9f6485b3b0",
+                    "actionName": "AS_Button_c3f0065bccf94e0c91298e9f6485b3b0",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279": {
+                    "channel": "common",
+                    "actionId": "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279",
+                    "actionName": "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_b0ebddf304d6460b905404d6b496e0df": {
+                    "channel": "common",
+                    "actionId": "AS_Button_b0ebddf304d6460b905404d6b496e0df",
+                    "actionName": "AS_Button_b0ebddf304d6460b905404d6b496e0df",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130": {
+                    "channel": "common",
+                    "actionId": "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130",
+                    "actionName": "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_f5c1e87f46f341d1807d9a5f75939001": {
+                    "channel": "common",
+                    "actionId": "AS_Button_f5c1e87f46f341d1807d9a5f75939001",
+                    "actionName": "AS_Button_f5c1e87f46f341d1807d9a5f75939001",
+                    "key": "ide_onClick"
+                },
+                "AS_Label_fb87b28254404c7d89891f35a2ef3df7": {
+                    "channel": "common",
+                    "actionId": "AS_Label_fb87b28254404c7d89891f35a2ef3df7",
+                    "actionName": "AS_Label_fb87b28254404c7d89891f35a2ef3df7",
+                    "key": "ide_onTouchEnd"
+                },
+                "AS_Segment_b665927de68c4985b4b97a4f0a939bfc": {
+                    "channel": "common",
+                    "actionId": "AS_Segment_b665927de68c4985b4b97a4f0a939bfc",
+                    "actionName": "AS_Segment_b665927de68c4985b4b97a4f0a939bfc",
+                    "key": "ide_onRowClick"
+                }
+            }
+        },
+        "skins": [
+            "CopyCopyCopyCopyCopyslFontAwesomeIcon2",
+            "slForm",
+            "CopyCopysknCancelButton3",
+            "CopyCopyCopybtnBlueFocus0i610b63bc57943",
+            "CopyCopybtnBlueFocus0c7f6ad6cc2fb44",
+            "CopyCopysknButton3",
+            "CopyCopybtnWHiteFocus0icc5489e91c94f",
+            "CopyCopyCopyCopybtnBlueFocus0gb8a81e465aa4e",
+            "CopyCopyCopybtnWHiteFocus0b0bc321e4ba849",
+            "CopyCopyCopybtnWHiteFocus0e494279fcc6d4b",
+            "slFbox",
+            "CopyCopyCopyCopyslFbox0i469a68e1bcd48",
+            "CopyCopyCopyCopyslFbox0i8043c5ee57545",
+            "CopyCopyCopyCopyslFbox0eb76271aa51a4f",
+            "CopyCopyCopyslFbox0f0058af04e8c47",
+            "CopyCopyCopyCopyslFbox0h5f29846c88443",
+            "CopyCopysknHIDNotification0gbbd6db2de2c4c",
+            "CopyCopysknHIDError2",
+            "CopyCopyCopyCopydefLabel0icb9872ab8344f",
+            "CopyCopylblWelcome2",
+            "CopyCopyCopyCopydefLabel0dde568cd7c614b",
+            "CopyCopyslFbox0f07ae99ea5c74f",
+            "seg2Focus",
+            "CopyCopyseg4",
+            "sliPhoneSegmentHeader",
+            "CopyCopyCopyCopydefTextBoxNormal2",
+            "CopyCopyCopydefTextBoxNormal0j4e75fb1a2074d",
+            "defTextBoxFocus",
+            "CopyCopyCopyCopytbxPassword0a355b03fa9ea4d",
+            "CopyCopyCopytbxPassword0ee37c46d03ce4c",
+            "CopyCopyCopyCopytbxPassword0b81da92936114d",
+            "CopyCopyCopyslFbox0a2773411e2a747",
+            "defLabel",
+            "CopyCopyCopydefLabel0e05c3777154b42"
+        ],
+        "images": [
+            "pageoffdot.png",
+            "pageondot.png"
+        ],
+        "fonts": [
+            "FontAwesome"
+        ],
+        "nativeApis": 0,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2021-07-09T16:47:07.609Z",
+    "createdVizVersion": "9.1.8",
+    "project_version": "sprint38"
+}

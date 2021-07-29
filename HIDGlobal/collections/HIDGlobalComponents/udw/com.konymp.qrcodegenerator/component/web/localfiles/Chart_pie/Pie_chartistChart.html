@@ -1,0 +1,108 @@
+<!--
+ * Created by Team Kony.
+ * Copyright (c) 2017 Kony Inc. All rights reserved.
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chartist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="chartitst.css">
+
+    <style>
+      .ct-hidden {
+        opacity: 0;
+      }
+      .ct-dimmed {
+        opacity: 0.5;
+      }
+      .ct-legend {
+        float: left;	
+        margin-left: 25px;
+        position: relative;
+        list-style: none;
+        text-align: center;
+      }
+      .ct-legend li {
+        position: relative;
+        float: left;	
+        padding-left: 25px;
+        margin-left: 25px;
+        margin-bottom: 3px;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .ct-legend li:before {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 0px;
+        content: '';
+        border: 3px solid transparent;
+        border-radius: 2px;
+      }
+      .ct-legend li.inactive:before {
+        background: transparent;
+
+      }
+      .ct-legend.ct-legend-inside {
+        position: absolute;
+        font-family : 'Times New Roman';
+
+        top: 0;
+        left: 0;
+        margin-left:0px;
+      }
+      .ct-legend.ct-legend-inside li{
+        display: block;
+        margin: 2%;
+      }
+      #container {
+        width: 70%;	
+        margin-left:15%;
+        z-index:1;
+        position:relative;
+      }
+      #pie1{
+        width: 70%;
+        margin: 0;
+        margin-left:15%;
+        z-index:1;
+        position: relative;
+      }
+
+      #legends{            
+        z-index:5;  
+        position:relative ;
+      }
+      #body{
+        float:vertical;
+      }
+      .Title_Properties {
+        margin: 0;
+        text-align:center;
+      }
+         .ct-label {
+    fill: rgba(255, 255,255, 1);
+    color:rgba(255, 255,255, 1);
+    font-size: 100%;
+    line-height: 1;
+  	font-family: 'Helvetica';
+} 
+    </style>
+  </head>
+  <body>
+    <div id='master'>
+    <p id = 'lblTitle' class = 'Title_Properties'>Chart Title</p>
+    <div class = 'ct-square' id ='pie1'></div>
+    <div id='legends' style='width=120%; margin-left=-10%; height= 10%'>
+    </div>
+    </div>
+    <script type="text/javascript" src="chartist.js"></script>
+    <script type="text/javascript" src="chartistlegend.js"></script>
+    <script type="text/javascript" src="chartist_pie.js"></script>
+
+  </body>
+</html>

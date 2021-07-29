@@ -1,0 +1,221 @@
+{
+    "classname": "MobileApproveSDK",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "jb7d81e84d69465e9a7f3bd33b996867",
+                    "paramList": [],
+                    "propertyKey": "initiate",
+                    "pw": {
+                        "displayName": "initiate",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "f4cb246bf8064206b5714b2ed8503c6c",
+                    "paramList": [],
+                    "propertyKey": "changeUIMode",
+                    "pw": {
+                        "displayName": "changeUIMode",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "e258c2a28af841eb8db38d138bdc199d",
+                    "paramList": [],
+                    "propertyKey": "getUsername",
+                    "pw": {
+                        "displayName": "getUsername",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "d73b8e9c01b741bc8a6a1da0c7e3ba5c",
+                    "paramList": [],
+                    "propertyKey": "checkBioAvailablityPublic",
+                    "pw": {
+                        "displayName": "checkBioAvailablityPublic",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "fbd733c634704cd285a775d15b2765d5",
+                    "paramList": [],
+                    "propertyKey": "setBioStatusToEnable",
+                    "pw": {
+                        "displayName": "setBioStatusToEnable",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "b4a2f282bf7243ee94639416c947dcbb",
+                    "paramList": [],
+                    "propertyKey": "setBioStatusToDisable",
+                    "pw": {
+                        "displayName": "setBioStatusToDisable",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "b05d36258e274481a25a19fbdddc2064",
+                    "paramList": [],
+                    "propertyKey": "getPinRemainingDays",
+                    "pw": {
+                        "displayName": "getPinRemainingDays",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "c0eb33e2f01945ee876e9813b46ee45c",
+                    "paramList": [],
+                    "propertyKey": "getKeyProfileAge",
+                    "pw": {
+                        "displayName": "getKeyProfileAge",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "bdb73574a8a043a889bff335661fe5da",
+                    "paramList": [],
+                    "propertyKey": "renewContainer",
+                    "pw": {
+                        "displayName": "renewContainer",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "b33c8e0337e4416fb3fc714908f66afd",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onSuccessCB",
+                    "pw": {
+                        "displayName": "onSuccessCB",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "cc15c299a8e9441fbc9d4a33b1edeac1",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onUpdatePasswordCB",
+                    "pw": {
+                        "displayName": "onUpdatePasswordCB",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "i121d11cf1324dc1ab16e7ae3dac6b46",
+                    "paramList": [],
+                    "propertyIndex": 3,
+                    "propertyKey": "onLoginFlow",
+                    "pw": {
+                        "displayName": "onLoginFlow",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "jde61aff6c8446ffab972c3f22815522",
+                    "paramList": [],
+                    "propertyIndex": 4,
+                    "propertyKey": "bioStatusCallback",
+                    "pw": {
+                        "displayName": "bioStatusCallback",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "ace77e8250fe4dd58aaa68431ed20925",
+                    "paramList": [],
+                    "propertyIndex": 5,
+                    "propertyKey": "renewContainerExceptionCB",
+                    "pw": {
+                        "displayName": "renewContainerExceptionCB",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "originalPropertyKey": "skin",
+                    "propertyIndex": 1,
+                    "propertyKey": "skin1",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "skin",
+                        "displayName": "Normal",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g238db5fe8624f1da502a546f6191168"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hid",
+    "version": "1.0.0"
+}

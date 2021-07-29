@@ -1,0 +1,36 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid",
+        "uw_classname": "Demoheader",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.Demoheader"
+        ],
+        "templates": [],
+        "actions": {},
+        "skins": [
+            "CopyslFbox0b1581b8b0e154e",
+            "slForm",
+            "slImage",
+            "CopydefLabel0dfdea3dbaea747"
+        ],
+        "images": [
+            "bank_portal_logo.png",
+            "logout_60.png"
+        ],
+        "fonts": [
+            "Helvetica"
+        ],
+        "nativeApis": 2,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2021-07-28T09:18:33.943Z",
+    "createdVizVersion": "9.2.15",
+    "project_version": "sprint39"
+}

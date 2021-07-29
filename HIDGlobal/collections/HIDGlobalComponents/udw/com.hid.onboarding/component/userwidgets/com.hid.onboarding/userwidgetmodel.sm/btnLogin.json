@@ -1,0 +1,64 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s53627eaae23443bbf9f7bd03f76f289",
+    "_text_": "SUBMIT",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "48%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "number",
+        "value": ""
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "desktopweb": {
+        "blockedUISkin": "s5f0639cfdfc4b82a6815e345d982739"
+    },
+    "disabledSkins": {},
+    "displaytext": true,
+    "focusskin": "s33b209707874d0b811147e0a7866bdc",
+    "id": "btnLogin",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "ed914251a4b74c2a846909cee5569a27",
+    "name": "kony.ui.Button",
+    "parent": "flxButtons",
+    "pf": "userwidgetmodel",
+    "responsiveData": {},
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

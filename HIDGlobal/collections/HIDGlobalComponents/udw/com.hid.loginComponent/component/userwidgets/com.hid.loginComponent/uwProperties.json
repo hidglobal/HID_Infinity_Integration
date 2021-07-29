@@ -1,0 +1,128 @@
+{
+    "classname": "loginComponent",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "ee714bae80d14cd2850e12b5acfd88f9",
+                    "paramList": [],
+                    "propertyKey": "setContext",
+                    "pw": {
+                        "displayName": "setContext",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "c163ad5e36ca42e68224bd08b25d94c9",
+                    "paramList": [],
+                    "propertyKey": "resetUI",
+                    "pw": {
+                        "displayName": "resetUI",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "b07f6d82724348d0929e4c1cc742e3f6",
+                    "paramList": [],
+                    "propertyKey": "getUserName",
+                    "pw": {
+                        "displayName": "getUserName",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "idd3d5e857fd4177bc7af331218892b7",
+                    "paramList": [],
+                    "propertyKey": "logoutOnClick",
+                    "pw": {
+                        "displayName": "logoutOnClick",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "c553e8bc9d14485d95acde652da9362b",
+                    "paramList": [
+                        {
+                            "name": "userprofileJSON"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "onSuccessCallback",
+                    "pw": {
+                        "displayName": "onSuccessCallback",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "d17bf86e56dd413cb43d83259a1d8990",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onFailureCallback",
+                    "pw": {
+                        "displayName": "onFailureCallback",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "APPROVE",
+                    "group": "General",
+                    "kuid": "f0aa1a54749040e1991de68ad6e70694",
+                    "originalPropertyKey": "MFA",
+                    "propertyIndex": 2,
+                    "propertyKey": "MFA",
+                    "pw": {
+                        "displayName": "MFA",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hid",
+    "version": "1.0.0"
+}

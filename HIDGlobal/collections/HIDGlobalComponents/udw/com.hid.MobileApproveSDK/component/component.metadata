@@ -1,0 +1,111 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid",
+        "uw_classname": "MobileApproveSDK",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.MobileApproveSDK"
+        ],
+        "templates": [],
+        "actions": {
+            "common": {
+                "AS_Image_f6ea5ac3c98c48188d38afa6053fc4f2": {
+                    "channel": "common",
+                    "actionId": "AS_Image_f6ea5ac3c98c48188d38afa6053fc4f2",
+                    "actionName": "AS_Image_f6ea5ac3c98c48188d38afa6053fc4f2",
+                    "key": "ide_onTouchStart"
+                },
+                "AS_Image_e9734aafa6e2486f9ad1d23184ae8215": {
+                    "channel": "common",
+                    "actionId": "AS_Image_e9734aafa6e2486f9ad1d23184ae8215",
+                    "actionName": "AS_Image_e9734aafa6e2486f9ad1d23184ae8215",
+                    "key": "ide_onTouchStart"
+                },
+                "AS_Image_c17f2387abe64852bc89a57536f8b090": {
+                    "channel": "common",
+                    "actionId": "AS_Image_c17f2387abe64852bc89a57536f8b090",
+                    "actionName": "AS_Image_c17f2387abe64852bc89a57536f8b090",
+                    "key": "ide_onTouchStart"
+                }
+            }
+        },
+        "skins": [
+            "slFbox",
+            "CopyCopyCopyslFbox0bc0e95f8e5b94d",
+            "slImage",
+            "CopyCopyCopyskin3",
+            "CopyCopyskin0ja60b73ddf1249",
+            "CopyCopysknMajorBank3",
+            "CopyCopysknCustomerId3",
+            "CopyCopysknLblHideConfirmPin3",
+            "CopyCopysknLblConfirmPin3",
+            "slForm",
+            "sknBtnMobileComponent",
+            "sknBtnFocusMobileComponent",
+            "CopyCopyCopydefBtnNormal0i955e2c12fc44f",
+            "defBtnFocus",
+            "CopyCopyCopydefBtnNormal0a31f61373ac34b",
+            "CopyCopysknFirstTimeLogin3",
+            "CopyCopysknScreenBgImage3",
+            "CopyCopysknScreenBgColor0a5cb23195bd640",
+            "CopyCopyCopyslFbox0b935c0f01dbf41",
+            "CopyCopyCopyslFbox0bc4c046fe3ea44",
+            "CopyCopyskin0ea815a8b8b3b45",
+            "CopyCopysknActivationCode3",
+            "slFbox0b9e99e09889b47",
+            "slFbox0cf1f435deb8349",
+            "CopyCopyCopyflxError3",
+            "slFbox0a69700c9c2c446",
+            "slFbox0de6e1a063f8c48",
+            "CopyCopysknForgotCustomerId3",
+            "CopysknPinLogin3",
+            "sknFlxMainComponent",
+            "CopyCopysknBackGroundFit3",
+            "sknFlxMainComponentOpaque",
+            "CopyCopysknScreenBgColor0j8566523f9f34e",
+            "CopyslFbox0a7331e5bc6aa42",
+            "CopyCopyslFbox0fbb9a1d434bd41",
+            "CopyCopysknScreen3",
+            "CopydefLabel0bbc2a5bd861d46",
+            "CopyCopyCopydefLabel0e120ad29778149",
+            "CopyCopyCopyCopydefLabel3",
+            "CopyCopyCopyCopydefLabel0b49f20eead2a4a",
+            "CopyCopyCopyCopydefLabel0e3d7700c160441",
+            "CopyCopyCopyCopydefLabel0fab9151c80b847",
+            "CopyCopyCopyCopydefLabel0ic6fa07115fa41",
+            "CopyCopydefLabel0a79a6bb81a7642",
+            "CopydefLabel0ba8e88b4fb4848",
+            "CopyCopydefLabel0bb5724d4df324b",
+            "sknTbxComponent",
+            "sknTbxPHComponent"
+        ],
+        "images": [
+            "closeicon_1_3_4_1.png",
+            "imgshape140421490125936_3_4_1.png",
+            "bank_portal_logo_blue.png",
+            "image_732.gif",
+            "mobilebg2.png",
+            "biopromptico.png",
+            "internetbankingpwd.png",
+            "imgshape140421490031072.png",
+            "imgbg140421508966160.png",
+            "zenithbg.png"
+        ],
+        "fonts": [
+            "Helvetica",
+            "NeueHaasUnica-Medium",
+            "None"
+        ],
+        "nativeApis": 2,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2021-07-28T09:21:35.558Z",
+    "createdVizVersion": "9.2.15",
+    "project_version": "sprint39"
+}

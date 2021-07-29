@@ -1,0 +1,29 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid",
+        "uw_classname": "TransactionSigningMobileSDK",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.TransactionSigningMobileSDK"
+        ],
+        "templates": [],
+        "actions": {},
+        "skins": [
+            "slFbox",
+            "slForm"
+        ],
+        "images": [],
+        "fonts": [],
+        "nativeApis": 2,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2021-07-28T09:22:22.189Z",
+    "createdVizVersion": "9.2.15",
+    "project_version": "sprint39"
+}

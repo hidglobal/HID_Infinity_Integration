@@ -1,0 +1,64 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "6.49%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "sa74a9b0dc7f49518ce6f8c8d780d296",
+    "_text_": "View Authenticators",
+    "_top_": {
+        "type": "string",
+        "value": "4.51%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "15.00%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "68.30%"
+    },
+    "centery": {
+        "type": "number",
+        "value": ""
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "desktopweb": {
+        "blockedUISkin": "sdf79d6e52a7435cb4870032db59c6e0"
+    },
+    "disabledSkins": {},
+    "displaytext": true,
+    "focusskin": "se56607ca8ba4e9fb19b9785294db3eb",
+    "id": "btnViewAuth",
+    "ide_onClick": "AS_Button_eeee3988647a4ddca1c101645771c05b",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "db7b6da7e52a4e6bbe1d0be345fb9f34",
+    "name": "kony.ui.Button",
+    "parent": "userAdministration",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

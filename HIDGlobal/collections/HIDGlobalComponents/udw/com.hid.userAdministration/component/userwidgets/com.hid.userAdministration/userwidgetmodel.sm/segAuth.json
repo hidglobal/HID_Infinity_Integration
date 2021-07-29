@@ -1,0 +1,401 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "85%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "2%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_right_": {
+        "type": "string",
+        "value": "2%"
+    },
+    "_top_": {
+        "type": "string",
+        "value": "27%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "96%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "05",
+    "desktop": {
+        "_data_": [
+            {
+                "authType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Authenticator"
+                },
+                "btnEnbaleDisable": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "btnReset": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "disableThreshold": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "failurecountandMax": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Failure count/Max"
+                },
+                "lastfailedlogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last failed logon"
+                },
+                "lastsuccessfullogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last successful logon"
+                },
+                "lblAuthType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "status": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status"
+                },
+                "totalfailedlogons": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Total failed logons"
+                }
+            },
+            {
+                "authType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Authenticator"
+                },
+                "btnEnbaleDisable": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "btnReset": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "disableThreshold": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "failurecountandMax": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Failure count/Max"
+                },
+                "lastfailedlogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last failed logon"
+                },
+                "lastsuccessfullogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last successful logon"
+                },
+                "lblAuthType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "status": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status"
+                },
+                "totalfailedlogons": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Total failed logons"
+                }
+            },
+            {
+                "authType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Authenticator"
+                },
+                "btnEnbaleDisable": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "btnReset": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "disableThreshold": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "failurecountandMax": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Failure count/Max"
+                },
+                "lastfailedlogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last failed logon"
+                },
+                "lastsuccessfullogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last successful logon"
+                },
+                "lblAuthType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "status": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status"
+                },
+                "totalfailedlogons": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Total failed logons"
+                }
+            },
+            {
+                "authType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Authenticator"
+                },
+                "btnEnbaleDisable": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "btnReset": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "disableThreshold": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "failurecountandMax": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Failure count/Max"
+                },
+                "lastfailedlogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last failed logon"
+                },
+                "lastsuccessfullogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last successful logon"
+                },
+                "lblAuthType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "status": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status"
+                },
+                "totalfailedlogons": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Total failed logons"
+                }
+            },
+            {
+                "authType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Authenticator"
+                },
+                "btnEnbaleDisable": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "btnReset": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "disableThreshold": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "failurecountandMax": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Failure count/Max"
+                },
+                "lastfailedlogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last failed logon"
+                },
+                "lastsuccessfullogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last successful logon"
+                },
+                "lblAuthType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "status": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status"
+                },
+                "totalfailedlogons": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Total failed logons"
+                }
+            },
+            {
+                "authType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Authenticator"
+                },
+                "btnEnbaleDisable": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "btnReset": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Enable/Disable"
+                },
+                "disableThreshold": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "failurecountandMax": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Failure count/Max"
+                },
+                "lastfailedlogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last failed logon"
+                },
+                "lastsuccessfullogon": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Last successful logon"
+                },
+                "lblAuthType": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "status": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status"
+                },
+                "totalfailedlogons": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Total failed logons"
+                }
+            }
+        ],
+        "rowTemplateId": "cd4654112eed4577b6b4c75552524802",
+        "rowtemplate": "flexSegmentAuth",
+        "sectionHeaderTemplateId": null,
+        "selectionBehaviorConfig": null,
+        "widgetdatamap": {
+            "authType": "authType",
+            "btnEnbaleDisable": "btnEnbaleDisable",
+            "btnReset": "btnReset",
+            "disableThreshold": "disableThreshold",
+            "failurecountandMax": "failurecountandMax",
+            "flexSegmentAuth": "flexSegmentAuth",
+            "lastfailedlogon": "lastfailedlogon",
+            "lastsuccessfullogon": "lastsuccessfullogon",
+            "lblAuthType": "lblAuthType",
+            "status": "status",
+            "totalfailedlogons": "totalfailedlogons"
+        }
+    },
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segAuth",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ff00f7b2e70f421ab13e16e37df52f80",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom",
+        "vdistance": 1
+    },
+    "parent": "flxManageDevices",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowcounter": 5,
+    "rowfocusskin": "sace0071ccb544cc87d232af279781a2",
+    "rowskin": "s86285bf3821483c8c4651cfe2a8fdfb",
+    "rowtemplate": "flexSegmentAuth",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "se3e2f70dddc4f0ab77ea7f34882169a",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "selectionbehaviorconfig": null,
+    "separatorcolor": "aaaaaa00",
+    "separatorrequired": true,
+    "separatorthickness": 1,
+    "showscrollbars": true,
+    "swipeContext": {
+        "currentPage": 0,
+        "imageWidth": 1151,
+        "widthRatio": 0
+    },
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "authType": "authType",
+        "btnEnbaleDisable": "btnEnbaleDisable",
+        "btnReset": "btnReset",
+        "disableThreshold": "disableThreshold",
+        "failurecountandMax": "failurecountandMax",
+        "flexSegmentAuth": "flexSegmentAuth",
+        "lastfailedlogon": "lastfailedlogon",
+        "lastsuccessfullogon": "lastsuccessfullogon",
+        "lblAuthType": "lblAuthType",
+        "status": "status",
+        "totalfailedlogons": "totalfailedlogons"
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "12%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "22%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s0094a857ce3422ea9bd4def233ebeef",
+    "_text_": "CANCEL",
+    "_top_": {
+        "type": "string",
+        "value": "78%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s7d0ac6715754c04ab097928490d1064",
+    "id": "btnCancel",
+    "ide_onClick": "AS_Button_jd46006c910e42889a8bdca528942c99",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "e28573711e0144e48cbbb512c5b2bf1b",
+    "name": "kony.ui.Button",
+    "parent": "flxChangePassword",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "tabpaneId": "tabSelfService",
+    "wType": "Button",
+    "zindex": 1
+}

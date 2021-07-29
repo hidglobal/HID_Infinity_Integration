@@ -1,0 +1,101 @@
+{
+    "classname": "ApproveNotificationMobileSDK",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "d2c89f7265024b83af14c57f9e3b198b",
+                    "paramList": [],
+                    "propertyKey": "retrieveTransactionIds",
+                    "pw": {
+                        "displayName": "retrieveTransactionIds",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "d10d2f1d7f4046a2b65418d63587ca42",
+                    "paramList": [],
+                    "propertyKey": "showAuthentication",
+                    "pw": {
+                        "displayName": "showAuthentication",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "ad0f8830211b487f824b467b1fc6966a",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onCompletion",
+                    "pw": {
+                        "displayName": "onCompletion",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "c266f6502561450b9a7bba0bacf6edf2",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onRetrieveNotificationsCallback",
+                    "pw": {
+                        "displayName": "onRetrieveNotificationsCallback",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "",
+                    "group": "General",
+                    "kuid": "d9f5c8c2918b452e9ddc63fec046fdc9",
+                    "originalPropertyKey": "transactionID",
+                    "propertyIndex": 1,
+                    "propertyKey": "transactionID",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "transactionID",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hid",
+    "version": "1.0.0"
+}

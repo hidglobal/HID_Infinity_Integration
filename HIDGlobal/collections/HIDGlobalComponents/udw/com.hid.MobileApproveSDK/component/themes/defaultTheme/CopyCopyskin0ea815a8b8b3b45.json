@@ -1,0 +1,29 @@
+{
+  "background_color": "ffffffff",
+  "bg_type": "one",
+  "border_color": "00000000",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 0,
+  "desktopweb": {
+    "backgroundSize": true,
+    "bg_type": "image",
+    "bottom_left_border_color": "00000000",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 0,
+    "bottom_right_border_color": "00000000",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 0,
+    "isForked": true,
+    "top_left_border_color": "00000000",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 0,
+    "top_right_border_color": "00000000",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 0
+  },
+  "isDefaultSkin": false,
+  "isForked": true,
+  "kuid": "s337b9957af0451981809b4abc6798f0",
+  "wType": "FlexContainer"
+}

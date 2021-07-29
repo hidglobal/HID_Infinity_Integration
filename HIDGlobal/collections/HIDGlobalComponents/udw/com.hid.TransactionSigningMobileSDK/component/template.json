@@ -1,0 +1,69 @@
+{
+    "breakpointInfo": null,
+    "images": [],
+    "screenshotGenerated": true,
+    "skinDefs": {},
+    "sourceChannel": "common",
+    "templateDef": {
+        "DNDConfig": null,
+        "__parentReadjusting__": false,
+        "_height_": {
+            "type": "string",
+            "value": "100%"
+        },
+        "_left_": {
+            "type": "string",
+            "value": "0dp"
+        },
+        "_margin_": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "_orientation_": 6,
+        "_padding_": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "_percent_": true,
+        "_skin_": "s18a492191874719b241c9a655e4389b",
+        "_top_": {
+            "type": "string",
+            "value": "0dp"
+        },
+        "_width_": {
+            "type": "string",
+            "value": "100%"
+        },
+        "allboxes": [],
+        "autogrowmode": 0,
+        "canUpdateUI": true,
+        "children": [],
+        "clipbounds": true,
+        "containerweight": 100,
+        "enablescrolling": true,
+        "id": "TransactionSigningMobileSDK",
+        "info": null,
+        "iscustomlayout": false,
+        "isvisible": true,
+        "kuid": "gbdfa40a64c9457eb298666af4804ada",
+        "layouttype": 2,
+        "name": "kony.ui.FlexContainer",
+        "parent": "uwi3f1a49516b14d7289817bf3bac034b0",
+        "pf": "uwi3f1a49516b14d7289817bf3bac034b0",
+        "retaincontentalignment": false,
+        "retainflexpositionproperties": false,
+        "retainflowhorizontalalignment": false,
+        "snapgridsize": 10,
+        "snapshot": {
+            "md5": "UrAAzAxZObaDHGhj4Xg5jj+2yjs="
+        },
+        "snaptogrid": true,
+        "wType": "FlexContainer",
+        "widgetalignment": 1
+    },
+    "userwidgetKUID": "u327c2263e4d455190d10744b161faa7"
+}

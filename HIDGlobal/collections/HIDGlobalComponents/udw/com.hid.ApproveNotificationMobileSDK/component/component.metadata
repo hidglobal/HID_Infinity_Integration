@@ -1,0 +1,81 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid",
+        "uw_classname": "ApproveNotificationMobileSDK",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.ApproveNotificationMobileSDK"
+        ],
+        "templates": [],
+        "actions": {
+            "common": {
+                "AS_FlexContainer_b28664e367bd46ed96955707153510d8": {
+                    "channel": "common",
+                    "actionId": "AS_FlexContainer_b28664e367bd46ed96955707153510d8",
+                    "actionName": "AS_FlexContainer_b28664e367bd46ed96955707153510d8",
+                    "key": "ide_postShow"
+                },
+                "AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36": {
+                    "channel": "common",
+                    "actionId": "AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36",
+                    "actionName": "AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36",
+                    "key": "ide_onClick"
+                }
+            }
+        },
+        "skins": [
+            "CopyCopyslFbox5",
+            "slImage",
+            "slFbox",
+            "sknLblDeny",
+            "CopyCopyCopysknMajorBank1",
+            "CopyCopysknLblPwdPromptNormal",
+            "slForm",
+            "defBtnNormal",
+            "defBtnFocus",
+            "CopyCopyCopysknBtnCreate1",
+            "CopyCopyslFbox0bd5411173c1440",
+            "sknApproveLineFocus",
+            "sknApproveLineNormal",
+            "CopysknApproveFlxNormal0d5820446f04046",
+            "sknApproveFlxNormal",
+            "sknDenyFlxNormal",
+            "CopyCopyslFbox0a015e36ef42a49",
+            "CopyslFbox0hb9201b7ac8f4f",
+            "sknDenyLineFocus",
+            "CopyslFbox0gd1c7572f5f54e",
+            "sknDenyFlxNew",
+            "CopysknflxNotification",
+            "CopyCopyCopysknScreenBgColor2",
+            "CopyCopyCopysknScreenBgColor3",
+            "sknApproveFlxFocus",
+            "sknDenyFlxFocus",
+            "CopyCopyslFbox0cb5ec2ca8ab640",
+            "CopyCopydefLabel5",
+            "CopyCopysknLblPwdPromptNormal1",
+            "CopyCopyCopysknActiCode1",
+            "CopyCopyCopysknCustomeId1",
+            "CopyCopyCopysknTbxCustomerPH1"
+        ],
+        "images": [
+            "password1_1.png",
+            "imgpicture11140421490155184_3_3_1.png",
+            "image_732_2_1.gif",
+            "transaction5_1.png"
+        ],
+        "fonts": [
+            "Helvetica"
+        ],
+        "nativeApis": 2,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2021-07-28T09:17:56.908Z",
+    "createdVizVersion": "9.2.15",
+    "project_version": "sprint39"
+}

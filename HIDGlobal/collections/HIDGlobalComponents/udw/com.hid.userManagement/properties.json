@@ -1,0 +1,15 @@
+{
+    "assetPlatform": "Visualizer",
+    "assetVersion": "1.0.0",
+    "createdBy": "chakradhar.reddypakala@hidglobal.com",
+    "createdMFVersion": "9.2.2.2",
+    "createdVizVersion": "9.1.8",
+    "currentMFVersion": "9.2.2.2",
+    "currentVizVersion": "9.1.8",
+    "description": "Web Component",
+    "itemCategory": "udw",
+    "itemGuid": "cf3b99254bf143c2bc1fc6a159c52bfa",
+    "itemName": "com.hid.userManagement",
+    "libraryVersion": "libver4",
+    "modifiedBy": "chakradhar.reddypakala@hidglobal.com"
+}
