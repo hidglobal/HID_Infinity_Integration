@@ -12,6 +12,9 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
     NativeControllerAndroid.prototype.createContainer = function(qrPayload){
       this.sdkWrapperObj.createContainer(qrPayload,this.konyContext,sdkNotificationManager.getPushId(),this.componentInstance.passwordPromptCallback ,this.componentInstance.exceptionCallback);
     };
+    NativeControllerAndroid.prototype.updateUsername =function(username){
+      this.sdkWrapperObj.setUsername(username);
+    };
     NativeControllerAndroid.prototype.setPasswordToUser =function(password){
       this.sdkWrapperObj.setPasswordForUser(password);
     };
@@ -22,7 +25,7 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
       this.sdkWrapperObj.updatePassword(oldPassword,newPassword,this.konyContext,this.componentInstance.exceptionCallback,true);
     };
   
- NativeControllerAndroid.prototype.getLoginFlow =function(pushID){
+    NativeControllerAndroid.prototype.getLoginFlow =function(pushID){
       kony.print("PushId is ---> " + pushID);
       return this.sdkWrapperObj.getLoginFlow(this.konyContext,pushID,this.componentInstance.getRenewableCallbackSuccess);
     };
@@ -42,8 +45,17 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
     NativeControllerAndroid.prototype.generateOTP = function(pwd,isBiometricEnabled){
       return this.sdkWrapperObj.generateOTP(pwd,isBiometricEnabled,this.componentInstance.generateOTPSuccess,this.componentInstance.generateOTPFailure);
     };
+    NativeControllerAndroid.prototype.generateOTPExplicit = function(pwd,isBiometricEnabled){
+      return this.sdkWrapperObj.generateOTP(pwd,isBiometricEnabled,this.componentInstance.secureCodeSuccess,this.componentInstance.secureCodeFailure);
+    };
     NativeControllerAndroid.prototype.renewContainer = function(password){
       this.sdkWrapperObj.renewContainer(password,this.konyContext,this.componentInstance.renewContainercallback,this.componentInstance.renewContainerExceptionCB);
     };
+    NativeControllerAndroid.prototype.deleteUserProfile = function(){
+      return this.sdkWrapperObj.deleteContainer(this.konyContext);
+    };
+    NativeControllerAndroid.prototype.deleteContainerWithAuth = function(password){
+      this.sdkWrapperObj.deleteContainerWithAuth(this.konyContext,password,this.componentInstance.deleteContainerCallback);   
+    }
     return NativeControllerAndroid;
 });

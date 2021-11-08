@@ -12,7 +12,7 @@ define([], function() {
           }else if (deviceInfo.name.toLowerCase() === 'iphone') {
             platformName = 'IOS';
           }else {
-            platformName = deviceInfo.name.charAt(0).toUpperCase() + deviceInfo.name.slice(1);
+            platformName = 'IOS';//deviceInfo.name.charAt(0).toUpperCase() + deviceInfo.name.slice(1);
           }
           var nativeControllerPath = "com/hid/"+this.componentName+"/NativeController" + platformName + ".js";
           kony.print(nativeControllerPath);
@@ -25,7 +25,7 @@ define([], function() {
       }
     };
     ControllerImplementation.prototype.retriveTransaction = function(txId,password,isBioEnabled){
-         this.getNativeController().retriveTransaction(txId,password,isBioEnabled);
+         return this.getNativeController().retriveTransaction(txId,password,isBioEnabled);
     };
     ControllerImplementation.prototype.setNotificationStatus = function(txId,status,password){
          kony.print("ApproveSDK ---> ControllerImplementation _transactionID " + txId);
@@ -36,6 +36,9 @@ define([], function() {
     };
     ControllerImplementation.prototype.checkForBioAvailability = function(){
            return this.getNativeController().checkForBioAvailability();
+    };
+       ControllerImplementation.prototype.updateUsername = function(username){
+         this.getNativeController().updateUsername(username);
     };
     ControllerImplementation.prototype.retrievePendingNotifications = function(){
       return this.getNativeController().retrievePendingNotifications();

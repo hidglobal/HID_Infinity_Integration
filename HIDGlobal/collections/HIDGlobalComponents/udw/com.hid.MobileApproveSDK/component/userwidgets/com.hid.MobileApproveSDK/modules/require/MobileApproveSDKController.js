@@ -23,10 +23,20 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
   sdkConstants.ERROR_PIN = `PIN is incorrect`;
   sdkConstants.ERROR_SAME_PIN = `Same PIN prohibited`;
   sdkConstants.ERROR_PIN_CHANGE = `PIN can be change after 24 hrs`;
-  var contexts = ["ActivationCode","SetPassword","Login","Biometric","Success","UpdatePassword","SetStandardPassword","ProfileResetUI"];
+  sdkConstants.DELETE_USER_CNF_TXT = `You are about to delete your user profile from Major Bank`;
+  sdkConstants.DELETE_USER_SUCCESS = "Your profile has been deleted successfuly from Major Bank";
+  sdkConstants.DELETE_USER_FAILURE = "Deleting Profile failed, Please try again later";
+  sdkConstants.DELETE_UI_MODE_SHOW_CONSENSUS = 0;
+  sdkConstants.DELETE_UI_MODE_SHOW_SUCCESS = 1;
+  sdkConstants.DELETE_UI_MODE_SHOW_FAILURE = 2;
+  sdkConstants.DELETE_UI_MODE_HIDE = 3
+  sdkConstants.DELETE_UI_MODE_SHOW_PIN = 4;
+  sdkConstants.DELETE_UI_MODE_ERROR_PIN =5;
+  var contexts = ["ActivationCode","SetPassword","Login","Biometric","Success","UpdatePassword","SetStandardPassword","ProfileResetUI","Users"];
   var getProfileAge = 0;
   var isRegister = false ;
   return {
+    username : "",
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       this.resetUI();
       this.contextSwitch("ActivationCode");
@@ -60,7 +70,14 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.flxHideStandardPassword.onTouchEnd =source => this.hidePassword_onTouchEnd(source.id.substring(7));
       this.view.flxHideConfirmStandardPassword.onTouchStart =source => this.hidePassword_onTouchStart(source.id.substring(7));
       this.view.flxHideConfirmStandardPassword.onTouchEnd =source => this.hidePassword_onTouchEnd(source.id.substring(7));
+      this.view.segUsers.onRowClick = this.segusers_onRowClick;
       this.view.btnLogin.onTouchEnd = this.btnLogin_onClick;
+      this.view.btnDeleteUserPINOk.onClick = this.btnDeleteUserPINOk_onClick;
+      this.view.btnDeleteUserPinCancel.onClick = source => this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_HIDE);
+      this.view.btnDeleteUserOK.onClick = this.btnDeleteUserOK_onClick;
+      this.view.btnDeleteUserCancel.onClick = source => this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_HIDE);
+      this.view.btnDeleteUserDone.onClick = source => {this.showDeleteUserPrompt();this.initiate();}
+      this.view.PlusSquareLight.onTouchEnd = source => this.initActivationFlow();
       this.nativeController = new controllerImplemetation(this,baseConfig.id);
     },
     //Logic for getters/setters of custom properties
@@ -75,48 +92,80 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     pwdMaxLength : 100,
     pwdNotUserAttribute : "true",
     initiate : function(){
+     this.resetUI();
      this.setLoadingScreen(true);
       if(this.isAndroid() && !gblSDKNotificationManager){
         throw new Error("sdkNotificationManager.js not configured");
       }
-      var pushID = "";
-      if(this.isAndroid()){
-         pushID = gblSDKNotificationManager.isUpdateRequired() ? gblSDKNotificationManager.getPushId() : null;
-      }
+      var pushIDFromManager = gblSDKNotificationManager.isUpdateRequired() ? gblSDKNotificationManager.getPushId() : "";
+      var pushID = pushIDFromManager || "";
       let flowString = this.nativeController.getLoginFlow(pushID);
-      //alert(flowString);
       if(flowString == "Register"){
         isRegister = true ;		  
         this.initActivationFlow();
-        return
+        return;
       }
       let contentArray = flowString.split(",");
       let flow = contentArray[0];
       if(flow == "SingleLogin"){
         this.username = contentArray[1];
         this.initSingleLoginFlow();
-        //this.initActivationFlow();
         return;
       }
       if(flow == "MultiLogin"){
         // TODO : Multiple Login flow
+        this.initMultiLoginFlow(contentArray[1]);
       }
     },
+    
+    parseFlowStringForMultiUser : function(flowString){
+      kony.print("ApproveSDK ---> parseFlowStringForMultiUser flowString is " + flowString);
+      let users = flowString.split("|");
+      var usersJson = [];
+      for(let user of users){
+        let row = {};
+        row.username = user;
+        row.avatar = "generic_avatar3.png";
+        row.curnt_view = 1;
+        row.flxTempRowWrapper = {
+           "left" : "0%"
+         };
+         usersJson.push(row);
+      }
+      this.view.segUsers.widgetDataMap = {
+         "lblUsername" : "username",
+         "imgAvatar"  : "avatar",
+         "flxTempRowWrapper" : "flxTempRowWrapper"
+      };
+      this.view.segUsers.setData(usersJson);
+    },
+    
+    initMultiLoginFlow : function(flowString){
+      this.parseFlowStringForMultiUser(flowString);
+      this.contextSwitch("Users");
+      this.setLoadingScreen(false);
+    },
+    
     btnChangePassword_onClick(){
       this.contextSwitch("UpdatePassword");
     }, 
     
-    getPinRemainingDays : function(){
+    getPinRemainingDays : function(username){
+      if(username){
+        this.username = username;
+      }
       var allpolicy = this.nativeController.getPasswordPolicy();
       this.passwordPolicy = JSON.parse(allpolicy);
-     
+      if(this.passwordPolicy.hasOwnProperty("profileExpiryDate")){
+         getProfileAge = +this.passwordPolicy.profileExpiryDate;
+      }
       if(this.passwordPolicy.hasOwnProperty("currentAge") && this.passwordPolicy.currentAge <=this.passwordPolicy.maxAge){
         var remainingAge = this.passwordPolicy.maxAge - this.passwordPolicy.currentAge ;
         kony.print("Remaining age of Current PIN "+ remainingAge);
         return remainingAge;
       }else {
         return 10000;
-      }     
+      }
     },  
     
     btnUpdatePIN_onClick : function(){
@@ -180,6 +229,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     validateSecureOTPSuccess : function(){
       this.setLoadingScreen(false);
+      this.resetUI();
       if(this.onSuccessCB){
         this.onSuccessCB.call(this);
       }
@@ -202,8 +252,25 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       if(status){
         this.nativeController.generateOTP("",true);
       }
-
     },
+    getSecureCode : function(pin,username){
+      if(username){
+        this.username = username;
+      }
+      let isEnabled = this.nativeController.checkForBioAvailability();
+      if(pin == "" && !isEnabled){
+         kony.print("ApproveSDK ---> Biometric is not enabled for this user, so Staying with PIN Prompt")
+         return;
+      }
+      this.nativeController.generateOTPExplicit(pin,isEnabled);
+    },
+    secureCodeSuccess : function(otp){
+      this.commonEventEmitter(this.secureCodeSuccess,[otp]);
+    },
+    secureCodeFailure : function(exceptionType,message){
+      this.commonEventEmitter(this.secureCodeFailure,[exceptionType,message]);
+    },
+    
     btnSetStandardPassword_onClick: function() {
       this.setLoadingScreen(true);
       kony.print("btnSetStandardPassword_onClick init");
@@ -273,7 +340,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         "username": this.username,
         "password": password,
         "userId": this.userId
-      }
+      };
       businessController.setStandardPassword(params,this.setStandardPasswordSucess,this.setStandardPasswordFailure);
  //     }
     },
@@ -327,8 +394,6 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         "username": username
       };
       businessController.validateActivatonCode(params,this.validateActivationCodeSucess,this.validateActivationCodeFailure);
-      //let invCode = `{"ver":"v8","url":"test.aaas.hidcloud.com:443/td7f7131a5289307306696","uid":"sdkuser1","did":"94124","dty":"DT_TDSV4B","dir":"26205","pch":"CH_TDSPROV","pth":"AT_TDSOOB","sec":"","pss":"ODBHUjA0Q0w1MA=="}`;
-      //this.nativeController.createContainer(invCode);
     },
     validateActivationCodeSucess : function(success){
       this.userId = success.userid;
@@ -454,14 +519,20 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       kony.print("ApproveSDKWrapper return Profile Age " + getProfileAge);
     },
     
-    getKeyProfileAge : function(){
+    getKeyProfileAge : function(username){
+      if(username){
+        this.username = username;
+      }  
       if(isRegister){
         return -1;
       }
       return getProfileAge;	  
     },
     
-    renewContainer : function(password){
+    renewContainer : function(password,username){
+      if(username){
+        this.username = username;
+      }  
       this.nativeController.renewContainer(password);
     },
     
@@ -471,16 +542,13 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     
 // Reset User Profile after Expiry    
     btnConfirmUserPIN_onClick(){
-      
       let password = this.view.tbxPConfirmUserPIN.text; 
-      
       if(password === "" || password === null) {
         //this.setLoadingScreen(false);
         this.showErroProfileReset(true,sdkConstants.ERROR_PIN);
         return;
       }
       this.NativeController.reNewContainer(password);            
-      
     },    
     
     passwordPromptCallback : function(passwordPolicyString, passwordPolicyObject){
@@ -561,13 +629,23 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
     },
     
-    checkBioAvailablityPublic(){
+    checkBioAvailablityPublic(username){
+      if(username){
+         this.username = username;
+      }  
       return this.nativeController.checkForBioAvailability();
     },
-    setBioStatusToEnable(password){
+    setBioStatusToEnable(password,username){
+      if(username){
+         this.username = username;
+      }  
+      kony.print("ApproveSDK ---> username while change Bio" + this.username);
       this.nativeController.enableBioMetrics(password);     
     },
-    setBioStatusToDisable(){
+    setBioStatusToDisable(username){
+      if(username){
+         this.username = username;
+      } 
       this.nativeController.disableBioMetrics();     
     },
     showStandardPasswordUI : function(){
@@ -715,7 +793,8 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     showSuccessScreen: function(successMsg){
       this.view.lblSuccess.text = successMsg;
       this.contextSwitch("Success");
-      kony.timer.schedule("Timer",this.initSingleLoginFlow,3,false);
+      this.resetUI();
+      kony.timer.schedule("Timer",this.initiate,3,false);
     },
     contextSwitch : function(context){
       for(let i of contexts){
@@ -739,22 +818,225 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.tbxConfirmPassword.text = "";
       this.view.tbxPassword.text = "";
       this.view.tbxCurrentPIN.text = "";
+      this.view.tbxPinLogin.text = "";
       this.view.tbxNewPIN.text = "";
       this.view.flxBioPrompt.setVisibility(false);
     },
+    segusers_onRowClick : function(){
+      let username = this.view.segUsers.selectedRowItems[0].username;
+      kony.print("ApproveSDK ---> Username is " + username);
+      this.username = username;
+      this.initSingleLoginFlow();
+    },
     getUsername : function(){
+      kony.print("ApproveSDK ---> Username inside component is " + this.username);
       return this.username;
     },
+    deleteUserProfile : function(name){
+       kony.print("ApproveSDK ---> username to be deleted is " + name);
+       if(name){
+         this.username = name;
+       }  
+       let status = this.nativeController.deleteUserProfile();
+       return status;
+    },
+    deleteContainerCallback : function(status){
+      kony.print("ApproveSDKWrapper ---> DeleteContainer Status is " + status);
+      if(status === "success"){
+        kony.print("ApproveSDKWrapper ---> Showing DeleteContainer succes screen");
+        this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_SUCCESS);
+      }
+      else if(status === "failure"){
+        this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_FAILURE);
+      }
+      else if(status === "AuthenticationException"){
+        this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_ERROR_PIN);
+      }
+      else if(status === "NoBioAuth"){
+         this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_PIN);
+      }else if(status === "FingerprintException"){
+         this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_PIN);
+      }else {
+         this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_FAILURE);
+      }
+    },
     changeUIMode : function(mode){
-      let modes = ["SetStandardPassword","UpdatePassword","Login"];
+      let modes = ["SetStandardPassword","UpdatePassword","Login","ActivationCode"];
       for(let i of modes){
         this.view[`flx${i}`].setVisibility(i===mode);
       }
       this.resetUI();
     },
+    swipeDetected:function(widgetInfo,swipeInfo){
+      try{
+        var needToAnimate = false;
+        var curRowData = this.view.segUsers.data[swipeInfo.row];
+        kony.print("RowData is ---> " + JSON.stringify(curRowData));
+        var vw =  curRowData.curnt_view;
+        var sd = swipeInfo.swipeDirection;
+        kony.print(`ApproveSDKWrapper --->vw   ${vw} sd ${sd}`);
+        var fstStepConfig={
+          "left": "-20%",
+          "stepConfig": {
+            "timingFunction": kony.anim.EASE
+          }
+        };
+
+        var lstStepConfig = {
+          "left": "-20%",
+          "stepConfig": {
+            "timingFunction": kony.anim.EASE
+          }
+        };
+
+        if(sd===1 && vw===1){
+          kony.print("ApproveSDKWrapper ---> reveal del btn");
+          fstStepConfig.left = "0%";
+          lstStepConfig.left = "-20%";
+          curRowData.curnt_view = 2;
+          curRowData.flxTempRowWrapper = {
+            left : "-20%"
+          };
+          needToAnimate = true;
+        } else if(sd===2 && vw===2){
+          kony.print("ApproveSDKWrapper ---> to defautl view");
+          fstStepConfig.left = "-20%";
+          lstStepConfig.left = "0%";
+          curRowData.flxTempRowWrapper = {
+            left : "0%"
+          };
+          curRowData.curnt_view = 1;
+          needToAnimate = true;
+        }else{
+          needToAnimate = false;
+        }
+        var self = this;
+        if(needToAnimate){
+          this.view.segUsers.animateRows({
+            rows:[{
+              sectionIndex : swipeInfo.section,
+              rowIndex : swipeInfo.row
+            }],
+            widgets:["flxTempRowWrapper"],
+            animation:{
+              definition:kony.ui.createAnimation({
+                "0" : fstStepConfig,
+                "100": lstStepConfig
+              }), 
+              config:{
+                "delay": 0,
+                "iterationCount": 1,
+                "fillMode": kony.anim.FILL_MODE_FORWARDS,
+                "duration": 0.2,
+                "direction": kony.anim.DIRECTION_ALTERNATE
+              },
+              callbacks:{
+                animationEnd : function(){
+                  self.view.segUsers.setDataAt(curRowData,swipeInfo.row); 
+                  self.view.forceLayout();
+                  kony.print(`ApproveSDKWrapper ---> final left is ${curRowData.flxTempRowWrapper.left} and row is ${swipeInfo.row}`);
+                }
+              }
+            }
+          });
+        }
+      }catch(exc){
+        alert("exception in swipeHandler!!!!");
+      }
+    },
+    deleteRowDetected:function(widgetInfo,rowData){      
+       var curRowData = this.view.segUsers.data[rowData.row];
+       kony.print("ApproveSDK  ----> rowData " + JSON.stringify(curRowData));
+       this.username = curRowData.username;
+       this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_CONSENSUS);
+    },
+    showDeleteUserPrompt : function(mode=sdkConstants.DELETE_UI_MODE_HIDE){
+      var config = {};
+      config.consensesTxt = sdkConstants.DELETE_USER_CNF_TXT;
+      config.succesMsg = sdkConstants.DELETE_USER_SUCCESS;
+      config.errorPin = "";
+      switch(mode){
+        case sdkConstants.DELETE_UI_MODE_SHOW_CONSENSUS: 
+          //Show Consensus Prompt
+          config.cnf = false;
+          config.consenses = true;
+          config.main = true;
+          config.pin = false;
+          break;
+        case sdkConstants.DELETE_UI_MODE_SHOW_SUCCESS:
+          //Show Confirmation prompt for Success
+          config.cnf = true;
+          config.consenses = false;
+          config.main = true;
+          config.pin = false;
+          break;
+        case sdkConstants.DELETE_USER_FAILURE:
+          //Show Confirmation prompt for Failure
+          config.cnf = true;
+          config.consenses = false;
+          config.main = true;
+          config.pin = false;
+          config.succesMsg = sdkConstants.DELETE_USER_FAILURE;
+          break;
+        case sdkConstants.DELETE_UI_MODE_HIDE:
+          //Dismiss Prompt;
+          config.cnf = false;
+          config.consenses = false;
+          config.main = false;
+          config.pin = false;
+          break;
+        case sdkConstants.DELETE_UI_MODE_SHOW_PIN:
+          //Show Pin;
+          config.cnf = false;
+          config.consenses = false;
+          config.main = true;
+          config.pin = true;
+          break;
+        case sdkConstants.DELETE_UI_MODE_ERROR_PIN:
+          //Show Error Pin
+          config.cnf = false;
+          config.consenses = false;
+          config.main = true;
+          config.pin = true;
+          config.errorPin = sdkConstants.ERROR_PIN;
+          break;
+        default:
+          config.cnf = false;
+          config.consenses = false;
+          config.main = false;
+          config.pin = false;
+      }
+      this.view.flxDeleteUserConfirmation.setVisibility(config.cnf);
+      this.view.flxDeleteUserConsensus.setVisibility(config.consenses);
+      this.view.flxDeleteProfile.setVisibility(config.main);
+      this.view.flxDeleteUserPin.setVisibility(config.pin);
+      this.view.lblDeleteCNF.text = config.succesMsg; 
+      this.view.lblDeleteConsenses.text = config.consensesTxt;
+      this.view.lblErrorPinDeleteUser.text = config.errorPin;
+      this.view.forceLayout();
+    },
+    btnDeleteUserOK_onClick : function(){
+      //this.setLoadingScreen(true);
+//       if(this.isAndroid()){
+//         this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_PIN);
+//       } 
+      this.nativeController.deleteContainerWithAuth("");
+    },
+    btnDeleteUserPINOk_onClick : function(){
+      if(this.view.tbDeleteUserPin.text === "" || this.view.tbDeleteUserPin.text === null ){
+         this.view.lblErrorPinDeleteUser.text = sdkConstants.ERROR_PWD_NOT_ENTERED;
+         return;
+      }
+      this.nativeController.deleteContainerWithAuth(this.view.tbDeleteUserPin.text);
+    },
     isAndroid : function(){
       var deviceInfo = kony.os.deviceInfo();
       return deviceInfo.name.toLowerCase() === 'android';
+    },
+    commonEventEmitter(event,args){
+      if(event){
+        event.apply(this,args);
+      }
     }
   };
-});
+}); 

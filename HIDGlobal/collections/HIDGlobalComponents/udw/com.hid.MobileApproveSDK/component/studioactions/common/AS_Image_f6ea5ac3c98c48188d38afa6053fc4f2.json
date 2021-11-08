@@ -13,9 +13,9 @@
             "name": "y"
         }],
         "contextObj": {
+            "KUID": "udf637f759e64eaa943af27248e39362",
             "name": "userwidgetmodel",
-            "type": "userwidgets",
-            "KUID": "udf637f759e64eaa943af27248e39362"
+            "type": "userwidgets"
         },
         "language": "js",
         "actions": [{

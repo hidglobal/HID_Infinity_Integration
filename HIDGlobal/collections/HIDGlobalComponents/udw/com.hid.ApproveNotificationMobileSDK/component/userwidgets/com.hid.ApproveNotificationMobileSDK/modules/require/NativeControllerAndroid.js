@@ -13,7 +13,7 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
        this.sdkWrapperObj.setNotificationStatus(txID,status,password,this.componentInstance.onCompletionCallback, this.componentInstance.pwdPromtCallback,this.konyContext);
     };
     NativeControllerAndroid.prototype.retriveTransaction =function(txID,password,isBioEnabled){
-       this.sdkWrapperObj.retriveTransaction(txID,this.konyContext,password,isBioEnabled,this.componentInstance.retriveTransactionCallback);
+       return this.sdkWrapperObj.retriveTransaction(txID,this.konyContext,password,isBioEnabled,this.componentInstance.retriveTransactionCallback);
     };
     NativeControllerAndroid.prototype.notifyPassword =function(password,mode){
        this.sdkWrapperObj.notifyPassword(password,mode);
@@ -25,7 +25,10 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
       return this.sdkWrapperObj.authenticatiationForPush(password,isBioEnabled,this.componentInstance.authenticatiationForPushCallback);
     };
     NativeControllerAndroid.prototype.retrievePendingNotifications = function(){
-    return this.sdkWrapperObj.retrievePendingNotifications(this.konyContext, this.componentInstance.onRecievedNotificationsCallback);
+        return this.sdkWrapperObj.retrievePendingNotifications(this.konyContext, this.componentInstance.onRecievedNotificationsCallback);
+    };
+    NativeControllerAndroid.prototype.updateUsername =function(username){
+      this.sdkWrapperObj.setUsername(username);
     };
 
     return NativeControllerAndroid;

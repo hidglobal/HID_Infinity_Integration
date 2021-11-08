@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s581f0ab3e1d4ec393d28a2d726fbe09",
+    "_skin_": "s4dcb5b6793d46b7b609d0dcb6764628",
     "_top_": {
         "type": "string",
         "value": "-14.09%"
@@ -37,7 +37,7 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "s581f0ab3e1d4ec393d28a2d726fbe09",
+    "focusskin": "s4dcb5b6793d46b7b609d0dcb6764628",
     "id": "flxBgImagePIN",
     "info": null,
     "isvisible": false,

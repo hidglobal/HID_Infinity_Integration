@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "5.00%"
     },
     "_margin_": [
         0,
@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+    "_skin_": "s6a30759ad7442f48bf3a57cfb4ad59a",
     "_text_": "Major Bank",
     "_top_": {
         "type": "string",
@@ -42,11 +42,11 @@
     "canUpdateUI": true,
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "43.02%"
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+    "focusskin": "s6a30759ad7442f48bf3a57cfb4ad59a",
     "id": "lblSetPwd",
     "info": null,
     "ipad": {

@@ -45,15 +45,6 @@
     "border_width": 1,
     "isForked": true
   },
-  "iphone": {
-    "background_color": "ffffffff",
-    "bg_type": "one",
-    "border_color": "ffffffff",
-    "border_style": "custom",
-    "border_type": 0,
-    "border_width": 1,
-    "isForked": true
-  },
   "isDefaultSkin": false,
   "kiosk": {
     "background_color": "ffffffff",

@@ -1,4 +1,22 @@
+/***************************************************************************************************************************
+FileName : sdkNotificationManager.js                                       
+Purpose  : Handles HID-Approve push notifications and dynmically Injects Notification UI in form
+Author   : Andey Savanth
+Org      : HID Global
+How to   :  step1 : Update senderID for GCM Android in gblAndroidSenderID variable.(Mandatory)
+            step2 : call registerNotifications function from preAppInit.(Mandatory)
+            step3 : check registerNotificationCallbacks for custom callbacK invocation.
+                    If no customizations is required no need to change any callbacks.
+            step4 : Handle onlinePushNotificationCallback and offlinePushNotificationCallback
+                    callbacks as per your requirment.(Mandatory)
+            step5 : call showNotificationComponent(txID , mode) to show Notifications and make any customizations
+                    like deviceBack if Required.(Mandatory)
+Note     :  This is an implementation sample only and used for reference. It may not work out of the box.
+            This file is mandatory for HID-Approve PushNotifications.
+****************************************************************************************************************************/
+var gblAndroidSenderID = "355440045191";
 var gblRegId = null;
+var gblSDKNotificationManager = null;
 var gblIsUpdateRequired = false;
 const constKeyChainIdentifier = "HID_SDK_PushID";
 const onlineMode = "Online";
@@ -7,12 +25,11 @@ const offlineForm = "frmNotification";
 var offlineTds = '';
 gblNotificationFlow = false;
 gblAppBackground = false;
-function registerPushAndroid(){ 
-   var config = {
-      senderid : "355440045191"
-   };
+function registerPushHIDApprove(){
+   var config =  isAndroid() ?{senderid : gblAndroidSenderID} : [1,2];
    let pushIDInKeyStore = kony.keychain.retrieve({"identifier" : constKeyChainIdentifier});
-   if(typeof(pushIDInKeyStore) == "object" &&  pushIDInKeyStore.hasOwnProperty("securedata")){
+   kony.print("ApproveSDK ---> pushIDInKeyStore is" + JSON.stringify(pushIDInKeyStore));
+   if(typeof(pushIDInKeyStore) == "object" &&  pushIDInKeyStore.hasOwnProperty("securedata") && pushIDInKeyStore.securedata){
      kony.print("ApproveSDK ---> PushId Found in Keystore is " + pushIDInKeyStore.securedata);
      gblRegId = pushIDInKeyStore.securedata;
      gblIsUpdateRequired = false;
@@ -24,25 +41,31 @@ function registerPushAndroid(){
   kony.print("ApproveSDK ---> Push called");
 }
 
-function regSuccessAndroidCallback(regId) {
+function pushRegSuccessCallback(regId) {
     kony.print("ApproveSDK ---> JavaScript regSuccessCallback() called **");
     kony.print(regId);
     var data = {};
-    if (kony.os.deviceInfo().name.toLowerCase() === 'android'){
+    if(isAndroid()){
       data.identifier = constKeyChainIdentifier;
       data.securedata = regId
+    }else{
+      data.identifier = constKeyChainIdentifier;
+      data.securedata = regId
+      data.secureaccount = "HID";
     }
-    kony.keychain.save(data);
+    let status = kony.keychain.save(data);
+    kony.print("ApproveSDK ---> Kony Keychain Status " + JSON.stringify(status));
     gblRegId = regId;
 }
 
-function regFailureAndroidCallback(errormsg) {
+function pushRegFailureCallback(errormsg) {
     kony.print("ApproveSDK ---> JavaScript regFailureCallback() called *");
     kony.print(errormsg.failurereason);
     kony.print(errormsg.description);
 }
 
-function onlinePushNotificationAndroidCallback(msg) {
+function onlinePushNotificationCallback(msg) {
+    kony.print("ApproveSDK ---> onlinePushNotificationCallback() called * " + JSON.stringify(msg));
     if(gblNotificationFlow){
       //Already there is a pending Notification So ignoring
       return;
@@ -50,30 +73,33 @@ function onlinePushNotificationAndroidCallback(msg) {
     gblNotificationFlow =true;
     kony.print("ApproveSDK ---> onlinePushNotificationCallback() called * " + JSON.stringify(msg));
     kony.print(msg);
-    if(kony.application.getCurrentForm().id !== "FrmSplash"){
+    if(kony.application.getCurrentForm() && kony.application.getCurrentForm().id !== "FrmSplash"){
       showNotificationComponent(msg.tds,onlineMode);
     }else{
-      offlinePushNotificationAndroidCallback(msg);
+      offlinePushNotificationCallback(msg);
     }
 }
 
-function offlinePushNotificationAndroidCallback(msg) {
-    kony.print("ApproveSDK ---> CurrForm is " + kony.application.getCurrentForm().id)
-    if(gblNotificationFlow &&  kony.application.getCurrentForm().id !== "FrmSplash"){
-      return;
-    }
-    gblNotificationFlow =true;
-    kony.print("ApproveSDK ---> offlinePushNotificationCallback() called *** " + JSON.stringify(msg));
-    kony.print(msg);
-    //showNotificationComponent(msg.tds,offlineMode);
-   offlineTds = msg.tds;
+function offlinePushNotificationCallback(msg){
+  kony.print("ApproveSDK ---> msg.tds" + msg.tds);
+  // kony.print("ApproveSDK ---> CurrForm is " + kony.application.getCurrentForm().id)
+  if(gblNotificationFlow && kony.application.getCurrentForm() && kony.application.getCurrentForm().id !== "FrmSplash"){
+    return;
+  }
+  gblNotificationFlow =true;
+  kony.print("ApproveSDK ---> offlinePushNotificationCallback() called *** " + JSON.stringify(msg));
+  kony.print(msg);
+  if(gblAppBackground){
+    showNotificationComponent(msg.tds,onlineMode);
+  }
+  offlineTds = msg.tds;
 }
 
-function unregSuccessAndroidCallback() {
+function deRegisterPushSuccessCallback() {
     kony.print("ApproveSDK ---> unregSuccessCallback() called *");
 }
 
-function unregFailureAndroidCallback(errormsg) {
+function deRegPushFailureCallback(errormsg) {
     kony.print("ApproveSDK ---> unregFailureCallback() called *");
     kony.print(errormsg.errorcode);
     kony.print(errormsg.errormessage);
@@ -83,24 +109,22 @@ function isAndroid(){
     var deviceInfo = kony.os.deviceInfo();
     return deviceInfo.name.toLowerCase() === 'android';
 }
-function callbackAndroidSetCallbacks() {
+function registerNotificationCallbacks() {
     kony.push.setCallbacks({
-        onsuccessfulregistration: regSuccessAndroidCallback,
-        onfailureregistration: regFailureAndroidCallback,
-        onlinenotification: onlinePushNotificationAndroidCallback,
-        offlinenotification: offlinePushNotificationAndroidCallback,
-        onsuccessfulderegistration: unregSuccessAndroidCallback,
-        onfailurederegistration: unregFailureAndroidCallback
+        onsuccessfulregistration: pushRegSuccessCallback,
+        onfailureregistration: pushRegFailureCallback,
+        onlinenotification: onlinePushNotificationCallback,
+        offlinenotification: offlinePushNotificationCallback,
+        onsuccessfulderegistration: deRegisterPushSuccessCallback,
+        onfailurederegistration: deRegPushFailureCallback
     });
 }
 
 function registerNotifications(){
     gblSDKNotificationManager = sdkNotificationManager;
     kony.print("ApproveSDK ---> PostAppInit called");
-    if(isAndroid()){
-       callbackAndroidSetCallbacks();
-       registerPushAndroid();
-    }
+    registerNotificationCallbacks();
+    registerPushHIDApprove();
 }
 
 function showNotificationComponent(msg,mode){
@@ -157,16 +181,22 @@ function showNotificationComponent(msg,mode){
     };
     if(mode === onlineMode){
           currForm.ApproveNotificationMobileSDK.onCompletion = (status)=> {
-           kony.print("ApproveSDK ---> Notification set stauts " + status);
+            kony.print("ApproveSDK ---> Notification set stauts " + status);
             if(currForm.id == "frmBankDashboard"){
               currForm.ApproveNotificationMobileSDK.setVisibility(false);
+              if(!status){
+                let count = currForm.lblNotificationCounter.text;
+                count = (count == 0 || count == "" || count == null) ? 1 : +count+1;
+                currForm.lblNotificationCounter.text = `${parseInt(count)}`;  
+                currForm.lblNotificationCounter.setVisibility(true);
+              }
             }
             else{
               currForm.remove(notificationComponent);
             }
            currForm.onDeviceBack = originalDeviceBack;
            currForm.onHide = originalOnHide;
-           gblAppBackground = false;
+           //gblAppBackground = false;
            gblNotificationFlow =false;
        }
     }
@@ -174,7 +204,7 @@ function showNotificationComponent(msg,mode){
        currForm.ApproveNotificationMobileSDK.onCompletion = (status) =>{
           kony.print("ApproveSDK ---> Notification set stauts " + status);
           gblNotificationFlow =false;
-          gblAppBackground = false;
+         // gblAppBackground = false;
           kony.application.exit();
        }
     }
@@ -188,7 +218,7 @@ var sdkNotificationManager  = {
     isUpdateRequired : function(){
       return gblIsUpdateRequired;
     },
-   showOfflineNotification : function(){
+    showOfflineNotification : function(){
      showNotificationComponent(offlineTds,offlineMode);
    },
   

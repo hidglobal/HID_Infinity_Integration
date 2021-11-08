@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+    "_skin_": "s6b2e07a49c34bdf9fe6b01abf2407b6",
     "_text_": "Customer ID",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 7,
-    "focusskin": "s7003745cbcb4f8a97356ae1b3fdc991",
+    "focusskin": "s6b2e07a49c34bdf9fe6b01abf2407b6",
     "id": "lblcustomerid",
     "info": null,
     "ipad": {

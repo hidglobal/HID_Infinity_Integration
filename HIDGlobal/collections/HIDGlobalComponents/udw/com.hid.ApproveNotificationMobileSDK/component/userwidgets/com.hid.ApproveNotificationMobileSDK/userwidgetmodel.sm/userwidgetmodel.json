@@ -36,13 +36,11 @@
     ],
     "containerweight": 100,
     "currentLocale": "default",
-    "device": "Pixel3",
+    "device": "iPhone11",
     "displayorientation": 3,
     "enabledforidletimeout": false,
     "globalUserWidgetRefs": [
-        "ubaae65ede6448b3823f5fabeb54dc85",
-        "ufa025e94bf04e42a0cb830627aace26",
-        "u51e685d6dc84bb188523718492f6cd1"
+        "u2490a9523584900b7c413e767c0e9d5"
     ],
     "id": "userwidgetmodel",
     "info": null,
@@ -62,9 +60,9 @@
         "formTransition": "None"
     },
     "paddinginpixel": false,
-    "platform": "android",
-    "prevDevice": "iPhone11",
-    "prevPlatform": "iphone",
+    "platform": "iphone",
+    "prevDevice": "Pixel3",
+    "prevPlatform": "android",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,

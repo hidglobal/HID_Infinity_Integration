@@ -1,15 +1,15 @@
 {
     "assetPlatform": "Visualizer",
     "assetVersion": "1.0.0",
-    "createdBy": "manishkumar.patel@hidglobal.com",
-    "createdMFVersion": "9.2.2.2",
-    "createdVizVersion": "9.2.15",
-    "currentMFVersion": "9.2.2.2",
-    "currentVizVersion": "9.2.15",
+    "createdBy": "rohit.singh@hidglobal.com",
+    "createdMFVersion": "9.3.0.2",
+    "createdVizVersion": "9.2.37",
+    "currentMFVersion": "9.3.0.2",
+    "currentVizVersion": "9.2.37",
     "description": "",
     "itemCategory": "udw",
-    "itemGuid": "j67abca411924fe6a5ccaa5a3f2d652e",
+    "itemGuid": "bacc012fe48f4b3a812bbc632556ac59",
     "itemName": "com.hid.TransactionSigningMobileSDK",
     "libraryVersion": "libver4",
-    "modifiedBy": "manishkumar.patel@hidglobal.com"
+    "modifiedBy": "rohit.singh@hidglobal.com"
 }

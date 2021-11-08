@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+    "_skin_": "s6a30759ad7442f48bf3a57cfb4ad59a",
     "_text_": "Major Bank",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+    "focusskin": "s6a30759ad7442f48bf3a57cfb4ad59a",
     "id": "lblMajorBank",
     "info": null,
     "ipad": {

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s1a7107643764141a0c76b6fc5dfd6c9",
+    "_skin_": "s60e6be7b5fa41d18cf58a58ecddcc5f",
     "_text_": "Dear user do you want to enable Biometrics for Login",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     },
     "containerweight": 100,
     "contentalignment": 5,
-    "focusskin": "s5ae6b61ca464ce8875d095fec75384b",
+    "focusskin": "s18071bdaca04dc7b0e76baed09329de",
     "id": "lblFP",
     "info": null,
     "ipad": {

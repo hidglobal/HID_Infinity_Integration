@@ -6,7 +6,6 @@
     "sourceChannel": "common",
     "templateDef": {
         "DNDConfig": null,
-        "__parentReadjusting__": false,
         "_height_": {
             "type": "string",
             "value": "100%"
@@ -49,7 +48,6 @@
         "enablescrolling": true,
         "flxOpaque": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -87,11 +85,73 @@
                 "flxLoading",
                 "flxMain",
                 "flxPassword",
-                "flxPasswordTimeout"
+                "flxPasswordTimeout",
+                "flxIosBack"
             ],
             "clipbounds": false,
             "containerweight": 100,
             "enablescrolling": true,
+            "flxIosBack": {
+                "DNDConfig": null,
+                "_height_": {
+                    "type": "string",
+                    "value": "100%"
+                },
+                "_left_": {
+                    "type": "string",
+                    "value": "0dp"
+                },
+                "_margin_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_orientation_": 6,
+                "_padding_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_percent_": true,
+                "_skin_": "s18a492191874719b241c9a655e4389b",
+                "_top_": {
+                    "type": "string",
+                    "value": "0dp"
+                },
+                "_width_": {
+                    "type": "string",
+                    "value": "100%"
+                },
+                "allboxes": [],
+                "autogrowmode": 0,
+                "canUpdateUI": true,
+                "children": [],
+                "clipbounds": true,
+                "containerweight": 100,
+                "enablescrolling": true,
+                "id": "flxIosBack",
+                "info": null,
+                "iscustomlayout": false,
+                "isvisible": true,
+                "kuid": "i938bcd66af642f392e775975039b2ed",
+                "layouttype": 2,
+                "name": "kony.ui.FlexContainer",
+                "parent": "flxOpaque",
+                "pf": "uwje282156b46246ba965efdc3f22be2dd",
+                "retaincontentalignment": false,
+                "retainflexpositionproperties": false,
+                "retainflowhorizontalalignment": false,
+                "snapgridsize": 10,
+                "snapshot": {
+                    "md5": "HVJrgi4bu3nptpHzriMwrvsi5qw="
+                },
+                "snaptogrid": true,
+                "wType": "FlexContainer",
+                "widgetalignment": 1,
+                "zindex": 2
+            },
             "flxLoading": {
                 "DNDConfig": null,
                 "Image0c66b2b755e864e": {
@@ -150,14 +210,13 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "kcCV3h2eIybkszaEtV+xYgHkjIw="
+                        "md5": "6NRpKWEPwvB00fwnyGb/Qs412FA="
                     },
                     "srcType": 1,
                     "wType": "Image",
                     "widgetalignment": 5,
                     "zindex": 1
                 },
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "55%"
@@ -281,7 +340,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "HGeB37uxQADt7Afjf12U/wbbjRQ="
+                        "md5": "fTEj9y6rvNfK7TecMyK22fRvUJc="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -296,19 +355,18 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "HhI0bLUp+WNGl/yV6a94AVuTGoo="
+                    "md5": "dcrEHa8YfMVImX21e/zdDJxYeeM="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
-                "zindex": 1
+                "zindex": 5
             },
             "flxMain": {
                 "DNDConfig": null,
                 "Image0dc5c511638fc4e": {
                     "@class": "com.kony.gen.viz.model.component.KVizImage2",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_base64_": null,
                     "_height_": {
                         "type": "string",
@@ -346,13 +404,6 @@
                         "value": "50.00%"
                     },
                     "containerweight": 100,
-                    "context": {
-                        "channel": "mobile",
-                        "formID": "uwje282156b46246ba965efdc3f22be2dd",
-                        "platform": "android",
-                        "templateType": "userwidgets",
-                        "topLevelBox": null
-                    },
                     "id": "Image0dc5c511638fc4e",
                     "imagescalemode": 0,
                     "info": null,
@@ -365,14 +416,13 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "1JJNGgu3CMk9Itpu9qL7W2WeG+A="
+                        "md5": "RKumemiSVfHHv0UvcdAQpi1sLcM="
                     },
                     "srcType": 1,
                     "wType": "Image",
                     "widgetalignment": 5,
                     "zindex": 6
                 },
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "55%"
@@ -409,7 +459,6 @@
                 "btnApprove": {
                     "@class": "com.kony.gen.viz.model.component.KVizButton",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "50dp"
@@ -456,7 +505,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "mEsldLnR26EgFVsBqwB+ZhKMV5I="
+                        "md5": "anLb+iQkJPlJ0O0KW83R0rXyMO8="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -464,7 +513,6 @@
                 "btnDeny": {
                     "@class": "com.kony.gen.viz.model.component.KVizButton",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "50dp"
@@ -511,7 +559,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "mfHD08lmdC9vWNdw9maSqoLxy98="
+                        "md5": "eAvongwGkUSaSLhKxA7lXl7UI+M="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -541,7 +589,6 @@
                 "enablescrolling": true,
                 "flxApproveSliderMain": {
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "10%"
@@ -590,7 +637,6 @@
                     "enablescrolling": true,
                     "flxApproveDarkNew": {
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "string",
                             "value": "100%"
@@ -651,7 +697,7 @@
                         "retainflowhorizontalalignment": false,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "k7uOXqqgmuXETqZDUsz9Tpflkgw="
+                            "md5": "Tvt2usruvb/PnqHZUksCaZUw4TU="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -660,7 +706,6 @@
                     },
                     "flxCircleApprove": {
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "string",
                             "value": "27dp"
@@ -708,7 +753,6 @@
                         "enablescrolling": true,
                         "flxApproveLineDown": {
                             "DNDConfig": null,
-                            "__parentReadjusting__": false,
                             "_height_": {
                                 "type": "string",
                                 "value": "1dp"
@@ -765,7 +809,7 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "oPLmhoQ2iBopKTNrUKppsVqs1Dc="
+                                "md5": "h+OsTmcpySB6hi1hS4QQcPZwz7s="
                             },
                             "snaptogrid": false,
                             "wType": "FlexContainer",
@@ -774,7 +818,6 @@
                         },
                         "flxApproveLineUp": {
                             "DNDConfig": null,
-                            "__parentReadjusting__": false,
                             "_height_": {
                                 "type": "string",
                                 "value": "1dp"
@@ -831,7 +874,7 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "FoOdnaz3n/gw8RgLD2Z/uwEd9Yc="
+                                "md5": "1qT1ZiWRn9HhTZmZ8erS+DmqUS0="
                             },
                             "snaptogrid": false,
                             "wType": "FlexContainer",
@@ -852,7 +895,7 @@
                         "retainflowhorizontalalignment": false,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "ggLa7ltVrb0sNUgz/ptfd7fZ2oA="
+                            "md5": "bHC4PDrKpvAONmREFTGqM+g+OIM="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -868,7 +911,6 @@
                     "lblApproveNew": {
                         "@class": "com.kony.gen.viz.model.component.KVizLabel",
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "string",
                             "value": "50%"
@@ -917,9 +959,6 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 5,
-                        "genericProperties": {
-                            "textStyle": {}
-                        },
                         "id": "lblApproveNew",
                         "info": null,
                         "ipad": {
@@ -941,8 +980,9 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "fWTRaal+hbImOg9nZzSiKwsh0qU="
+                            "md5": "Ce5wuaJ3/q0kuRFSxErdjSvB0Rg="
                         },
+                        "textstyle": {},
                         "tooltip": "",
                         "wType": "Label",
                         "zindex": 1
@@ -955,7 +995,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "5/gqTfkpK0I8JhSjBBr1gofI6Ig="
+                        "md5": "WAhAc/VXMIhxelzoJbTPAJkd+Qw="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -966,7 +1006,6 @@
                     "CopylblDeny0b769bac15aa44f": {
                         "@class": "com.kony.gen.viz.model.component.KVizLabel",
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "ref",
                             "value": "preferred"
@@ -1015,9 +1054,6 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 5,
-                        "genericProperties": {
-                            "textStyle": {}
-                        },
                         "id": "CopylblDeny0b769bac15aa44f",
                         "info": null,
                         "ipad": {
@@ -1039,14 +1075,14 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "ZAvYr2Sfj5ynaS3g5wMyWi13t5U="
+                            "md5": "8K2jEsGW0SEnzKDq+WWrSa+kBC8="
                         },
+                        "textstyle": {},
                         "tooltip": "",
                         "wType": "Label",
                         "zindex": 1
                     },
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "10%"
@@ -1095,7 +1131,6 @@
                     "enablescrolling": true,
                     "flxCircleDeny": {
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "string",
                             "value": "27dp"
@@ -1132,7 +1167,7 @@
                         "canUpdateUI": true,
                         "centery": {
                             "type": "string",
-                            "value": "50%"
+                            "value": "50.00%"
                         },
                         "children": [
                             "flxDenyLineUp",
@@ -1143,7 +1178,6 @@
                         "enablescrolling": true,
                         "flxDenyLineDown": {
                             "DNDConfig": null,
-                            "__parentReadjusting__": false,
                             "_height_": {
                                 "type": "string",
                                 "value": "1dp"
@@ -1200,7 +1234,7 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "wxhNkIqPexAWsKOSKPfpliwR5vc="
+                                "md5": "vncBrjjkojSwQ1J2SpJl7p7TOBA="
                             },
                             "snaptogrid": false,
                             "wType": "FlexContainer",
@@ -1209,7 +1243,6 @@
                         },
                         "flxDenyLineUp": {
                             "DNDConfig": null,
-                            "__parentReadjusting__": false,
                             "_height_": {
                                 "type": "string",
                                 "value": "1dp"
@@ -1266,7 +1299,7 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "IyM2sufx3lhwpkkM0PHjc7CFeOM="
+                                "md5": "4Mc3h22U4LIT5N+J0EU7T0wjZXg="
                             },
                             "snaptogrid": false,
                             "wType": "FlexContainer",
@@ -1287,7 +1320,7 @@
                         "retainflowhorizontalalignment": false,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "sBlnUNc3eB36IfoPV8kuk08QPuM="
+                            "md5": "UAlk40sEqimqduosdbpFvnJ8ubM="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -1296,7 +1329,6 @@
                     },
                     "flxDenyDarkNew": {
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "string",
                             "value": "100%"
@@ -1353,7 +1385,7 @@
                         "retainflowhorizontalalignment": false,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "Dexk32eRMuaTQEW1kY3DBovQAqc="
+                            "md5": "gnwqyd7QntLLTyx0x21Ph/2tYKk="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -1374,7 +1406,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "li+39foB9w77Fk9yFuwJExAyooo="
+                        "md5": "hCEdg4QrIajffUTXymSS+GpReyM="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -1383,7 +1415,6 @@
                 },
                 "flxHeader": {
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "14%"
@@ -1433,7 +1464,6 @@
                     "imgMajorBank": {
                         "@class": "com.kony.gen.viz.model.component.KVizImage2",
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_base64_": null,
                         "_height_": {
                             "type": "string",
@@ -1471,13 +1501,6 @@
                             "value": "50%"
                         },
                         "containerweight": 100,
-                        "context": {
-                            "channel": "mobile",
-                            "formID": "uwje282156b46246ba965efdc3f22be2dd",
-                            "platform": "android",
-                            "templateType": "userwidgets",
-                            "topLevelBox": null
-                        },
                         "id": "imgMajorBank",
                         "imagescalemode": 0,
                         "info": null,
@@ -1490,7 +1513,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "cpFga97Uw1io93yX+eIfo82fTP4="
+                            "md5": "ZNeBfcWVGE++gmozkEiKf+FkfzY="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -1504,7 +1527,6 @@
                     "lblMajorBank": {
                         "@class": "com.kony.gen.viz.model.component.KVizLabel",
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "ref",
                             "value": "preferred"
@@ -1551,9 +1573,6 @@
                         "containerweight": 100,
                         "contentalignment": 4,
                         "focusskin": "sa314382a3d74f1d802ca374f468278f",
-                        "genericProperties": {
-                            "textStyle": {}
-                        },
                         "id": "lblMajorBank",
                         "info": null,
                         "ipad": {
@@ -1584,8 +1603,9 @@
                         "parent": "flxHeader",
                         "pf": "uwje282156b46246ba965efdc3f22be2dd",
                         "snapshot": {
-                            "md5": "84fOGWTrnTlKgrtyBV4U7SSLOIk="
+                            "md5": "N0THH2LGFtXThu7PLcW4QGqZqck="
                         },
+                        "textstyle": {},
                         "tooltip": "",
                         "wType": "Label",
                         "zindex": 0
@@ -1595,7 +1615,7 @@
                     "pf": "uwje282156b46246ba965efdc3f22be2dd",
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "7o2hpttNIOU3t+kQdui4hHYwCCw="
+                        "md5": "vYjO6XWgmwcbj1j//kcPJ8e8MMo="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -1604,7 +1624,6 @@
                 },
                 "flxSliderMain": {
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "20%"
@@ -1753,7 +1772,7 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "2s3LKTsIXceXTv/kdKoX1UsOGQg="
+                                "md5": "eFJnTLCA8f+/4cdCSLLJcWOa7/8="
                             },
                             "snaptogrid": true,
                             "wType": "FlexContainer",
@@ -1884,7 +1903,7 @@
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "snapshot": {
-                                    "md5": "QHhc0zjF5/rLETph3NFa4CnJHPc="
+                                    "md5": "/7twZEHt497wfc1y07zLGH5XvQQ="
                                 },
                                 "textstyle": {},
                                 "tooltip": "",
@@ -1899,7 +1918,7 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "dPnbSgSGar8kilEhIdHYEaFJaks="
+                                "md5": "Xs/uMMrAw2a0lQyyPZjhJVKTZXI="
                             },
                             "snaptogrid": true,
                             "wType": "FlexContainer",
@@ -1960,7 +1979,7 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "tXEMvSoHJw97+rKOUwuxc/CPgbo="
+                                "md5": "wdzqOv4P6NJuUm7J4YpB91uhaXY="
                             },
                             "snaptogrid": true,
                             "wType": "FlexContainer",
@@ -2087,7 +2106,7 @@
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "snapshot": {
-                                    "md5": "Q2dV/14sV92oiCVb9RysTgYpxXo="
+                                    "md5": "ylVmQPhmNJPG6RCxCT7l7SBiGfo="
                                 },
                                 "textstyle": {},
                                 "tooltip": "",
@@ -2102,7 +2121,7 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "EPnWDniywAhJklJJcEKankFbtnw="
+                                "md5": "Sk1Y4QE7r8TnmoGfBr2W4p/pZJA="
                             },
                             "snaptogrid": true,
                             "wType": "FlexContainer",
@@ -2123,7 +2142,7 @@
                         "retainflowhorizontalalignment": false,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "AtiuKqYKY9TkngJkjV+UX03aTqY="
+                            "md5": "HE97He3tavUpQyiKtB1Roqq6In8="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -2189,7 +2208,7 @@
                         "retainflowhorizontalalignment": false,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "2LTdFp/S/l3cbWjSlC4366JkuEU="
+                            "md5": "Uia8BShcOE5qo7AK8p9oVHeMRv4="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -2211,7 +2230,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "1CYdlJj3Oapscoo9TpoxPx0L9bQ="
+                        "md5": "nc9IwNwZlvkqS6vv24sjZdApfjo="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -2227,7 +2246,6 @@
                 "lblTDS": {
                     "@class": "com.kony.gen.viz.model.component.KVizLabel",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "ref",
                         "value": "preferred"
@@ -2272,9 +2290,6 @@
                     },
                     "containerweight": 100,
                     "contentalignment": 5,
-                    "genericProperties": {
-                        "textStyle": {}
-                    },
                     "id": "lblTDS",
                     "info": null,
                     "ipad": {
@@ -2296,8 +2311,9 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "m2kWIJumuo2LK5e0WPwBGEfiaaQ="
+                        "md5": "VcyVa7TFup94TgSKPUBspGEVGwQ="
                     },
+                    "textstyle": {},
                     "tooltip": "",
                     "wType": "Label",
                     "zindex": 1
@@ -2305,7 +2321,6 @@
                 "lblVerifyTS": {
                     "@class": "com.kony.gen.viz.model.component.KVizLabel",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "ref",
                         "value": "preferred"
@@ -2371,7 +2386,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "JC4HaVnGuBGBAYd8kCfF+wZZ/LI="
+                        "md5": "P5WcqNE/GDU3HcyaQ7NA3TBOqo0="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -2386,12 +2401,12 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "zWJiXSNh6aaRvJWIfqxGD3JOQqA="
+                    "md5": "o4irczde/PqAIxV33A4qMcVycvw="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
-                "zindex": 1
+                "zindex": 5
             },
             "flxPassword": {
                 "CopyflxHeader0e2bb22c909b244": {
@@ -2447,7 +2462,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "SAJl4B97HroBygZEmKoQY9CK3Fc="
+                            "md5": "U4v9yt1Z7aJ8gwTZtcdkO3gAfGI="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -2533,7 +2548,7 @@
                         "parent": "CopyflxHeader0e2bb22c909b244",
                         "pf": "uwje282156b46246ba965efdc3f22be2dd",
                         "snapshot": {
-                            "md5": "DbnYYNq4WJ+5vDzLDk8umd+JqoA="
+                            "md5": "3+f7ptvfN/Z+Wjj6M8VUZSW2yys="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -2596,7 +2611,7 @@
                     "pf": "uwje282156b46246ba965efdc3f22be2dd",
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "3sFNvYnLSckOoMD+B4nJ1N8V/rM="
+                        "md5": "RsiMVkEfj3oQyR65dIKVJnRCKAw="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -2656,14 +2671,13 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "Pyu0bM12EhFIiXpxzzebVqsqtBE="
+                        "md5": "StukAcaEyG80rS2W0RQd8sO4GcU="
                     },
                     "srcType": 1,
                     "wType": "Image",
                     "widgetalignment": 5,
                     "zindex": 6
                 },
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "55%"
@@ -2750,7 +2764,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "whOxvO3cEC+KrbmkohwK1OaoMW8="
+                        "md5": "5z9lmY5nqk0TxjEHN4uoP+RwupM="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -2849,7 +2863,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "lAFWKJZPnmIC14zaa32ju9N7zNo="
+                        "md5": "CyxKvAWiYH1Soq2MlGtYbtiDh+k="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -2924,7 +2938,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "dMX7Lbyyq05C/cN3DwTDFzpHQYc="
+                        "md5": "KIHU0YzMnbGQIxrZ+DCvW3Hx0nE="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -2939,7 +2953,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "lL6WShI7618xYd0XtlmVII25Ui8="
+                    "md5": "oj7Kuw+KG/gYx5EYweHmsCfbiUY="
                 },
                 "snaptogrid": true,
                 "tbxPassword": {
@@ -3008,7 +3022,7 @@
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "7JTYrI0jXDqTCJkZ+REn9mUhg1M="
+                        "md5": "ZdWAAcREV9m+/DD5mtARiGcZGRE="
                     },
                     "textinputmode": "N",
                     "tooltip": "",
@@ -3018,7 +3032,7 @@
                 },
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
-                "zindex": 1
+                "zindex": 5
             },
             "flxPasswordTimeout": {
                 "CopyImage0j496a0b633b549": {
@@ -3073,7 +3087,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "bRZ/BiuwOZ8X9meT0vP9NoE9xGk="
+                        "md5": "yuF1RFJnlTMXNdRVt8Q7Sg29GSA="
                     },
                     "srcType": 1,
                     "wType": "Image",
@@ -3133,7 +3147,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "sc2sWqqK9KG6a2r/o3gxb6uPIHY="
+                            "md5": "LMO2nZJ1gM1joND1LMXXClAArCc="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -3219,7 +3233,7 @@
                         "parent": "CopyflxHeader0a2a525b4524a4e",
                         "pf": "uwje282156b46246ba965efdc3f22be2dd",
                         "snapshot": {
-                            "md5": "tsduBsEEuB5CEXJMWQ67+pbbWfk="
+                            "md5": "FC/iahluxSK4kT72XNibh6fg1Lc="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -3282,7 +3296,7 @@
                     "pf": "uwje282156b46246ba965efdc3f22be2dd",
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "PT3h9ezn6tu2O39NBopQgplJVS8="
+                        "md5": "uudc1DUHJJhY/UMSFxsTllDYmJA="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -3357,7 +3371,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "Jy2DzFq4W///7uRP67dm+1ot3M4="
+                        "md5": "IBqA69g31hIaVbTPnrWBjHw5Pn8="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -3365,7 +3379,6 @@
                     "zindex": 1
                 },
                 "DNDConfig": null,
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "55%"
@@ -3452,7 +3465,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "vK87iboab+iSJlZouvqqL/iGSGA="
+                        "md5": "YJjhTQ1rb3o1EMjoG4u3wRq1ZnE="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3551,7 +3564,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "xVTME8xfnGkS5fKgK9JoQ0HKGfY="
+                        "md5": "0TR6nNgQjrSg6ozTsu6i8KN8YSA="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -3566,7 +3579,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "2fF/Y3/6h9gOp79jTGag4U6W3og="
+                    "md5": "edaRyNRh6zmbdWfsFLebmVJPMrY="
                 },
                 "snaptogrid": true,
                 "tbxPasswordTimeout": {
@@ -3635,7 +3648,7 @@
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "O8hfivS5c5zUXVTQbdOPwGGYCSc="
+                        "md5": "MLGAWPUN7XQusnDTLoD1x7Fn2rY="
                     },
                     "textinputmode": "N",
                     "tooltip": "",
@@ -3645,7 +3658,7 @@
                 },
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
-                "zindex": 1
+                "zindex": 5
             },
             "focusskin": "s8a014274e2a4e1786b338e4035335d8",
             "id": "flxOpaque",
@@ -3658,7 +3671,7 @@
             "pf": "uwje282156b46246ba965efdc3f22be2dd",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "5l+OI/6RdtU4h3dBwSYGrZ/EaQg="
+                "md5": "m7lQgbS4R60xYdKTchm6qXqvfDA="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -3680,11 +3693,11 @@
         "retainflowhorizontalalignment": false,
         "snapgridsize": 10,
         "snapshot": {
-            "md5": "/7yupdBc0rXD0fFYUHFHcMsIXMk="
+            "md5": "6RclBO0iURc89k6YCViZO1SQfEU="
         },
         "snaptogrid": true,
         "wType": "FlexContainer",
         "widgetalignment": 1
     },
-    "userwidgetKUID": "u51e685d6dc84bb188523718492f6cd1"
+    "userwidgetKUID": "u2490a9523584900b7c413e767c0e9d5"
 }

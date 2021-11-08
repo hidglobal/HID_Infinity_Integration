@@ -36,7 +36,7 @@
     "canUpdateUI": true,
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "50.00%"
     },
     "children": [
         "flxDenyLineUp",

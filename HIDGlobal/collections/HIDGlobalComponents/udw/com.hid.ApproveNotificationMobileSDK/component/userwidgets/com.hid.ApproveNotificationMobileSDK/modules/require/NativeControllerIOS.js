@@ -1,17 +1,39 @@
-define(['./Inherits', './NativeController', './KonyLogger'], function(Inherits, NativeController, konyLoggerModule) {
-  var konymp = konymp || {};
-  konymp.logger = (new konyLoggerModule("barcodeqrscanner NativeControllerIOS Component")) || function() {};
-  konymp.logger.setLogLevel("DEBUG");
-  konymp.logger.enableServerLogging = true; 
+define(['./Inherits', './NativeController'], function(Inherits, NativeController) {
   var NativeControllerIOS = function(componentInstance) {
-     // Constructor
+    var wrapperClass = objc.import("HIDApproveSDKWrapper");
+    this.approveSDKWrapper = wrapperClass.alloc().jsinit(); 
+    if(this.approveSDKWrapper){
+      kony.print("ApproveSDK ---> Framework Loaded ");
+    }else{
+      kony.print("ApproveSDK ---> Framework NOT Loaded ");
+    }
+    this.componentInstance = componentInstance;
   };
   Inherits(NativeControllerIOS, NativeController);
-  /**
-     * @function scan
-     * @private
-     * @description: scan the code
-     */
+  NativeControllerIOS.prototype.setNotificationStatus =function(txID,status,pwd){
+    kony.print("ApproveSDK ---> Android Controller " + txID);
+    this.approveSDKWrapper.setNotificationStatusWithStatusWithPasswordWithJSCallbackWithPwdPromptCB(txID, status, pwd, this.componentInstance.onCompletionCallback, this.componentInstance.pwdPromtCallback);
+  };
   
+  NativeControllerIOS.prototype.retriveTransaction =function(txID,pwd,isBioEnabled){
+    return this.approveSDKWrapper.retreiveTransactionWithPasswordIsBioEnabledWithCallback(txID, pwd, isBioEnabled, this.componentInstance.retriveTransactionCallback);
+  };
+  
+  NativeControllerIOS.prototype.checkForBioAvailability = function(){
+    return this.approveSDKWrapper.checkBioAvailability();
+  };
+  
+  NativeControllerIOS.prototype.retrievePendingNotifications = function(){
+    try{
+      this.approveSDKWrapper.retrievePendingNotifications(this.componentInstance.onRecievedNotificationsCallback);
+    }catch(e){
+      alert("Error " + JSON.stringify(e));
+    }
+  };
+  
+  NativeControllerIOS.prototype.updateUsername =function(username){
+      this.approveSDKWrapper.setUsername(username);
+  };
+
   return NativeControllerIOS;
 });

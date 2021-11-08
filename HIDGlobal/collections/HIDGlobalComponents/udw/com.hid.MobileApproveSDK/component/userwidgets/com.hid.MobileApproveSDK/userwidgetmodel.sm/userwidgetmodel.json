@@ -15,7 +15,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s1eb2e2dc8414452a461467b50fc81ea",
+    "_skin_": "s6d3cbdb561a4aaf98f95b79718279b4",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -36,14 +36,12 @@
     ],
     "containerweight": 100,
     "currentLocale": "default",
-    "device": "iPhone11ProMax",
+    "device": "iPhone11",
     "displayorientation": 3,
     "enabledforidletimeout": false,
     "globalUserWidgetRefs": [
-        "ufe12b0c75514400bd57a2ccf7b5aec5",
-        "u298442b5f3449eab36f775b8020e798",
-        "u2e55b50f0af47a5873c6420d490c241",
-        "ue59b68b3b094446b990dcb9615a66d1"
+        "u59af99cbde3488f94a52ed5b8704e7f",
+        "ua0d97d915784bc6b1f8c50828ed098f"
     ],
     "id": "userwidgetmodel",
     "info": null,

@@ -39,6 +39,7 @@
         "flxActivationCode",
         "flxSetPassword",
         "flxLogin",
+        "flxUsers",
         "flxLoading",
         "flxSuccess",
         "flxUpdatePassword",

@@ -104,7 +104,9 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       kony.print("ApproveSDK " + JSON.stringify(error));
       this.commonEventEmitter(this.signTransactionFailure, [error]);
     },
-    
+    getUsername : function(){
+       return this._username;
+    },
     commonEventEmitter(event,args){
       if(event){
         event.apply(this,args);

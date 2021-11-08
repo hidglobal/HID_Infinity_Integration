@@ -1,5 +1,4 @@
 define([], function() {
-  
     var ControllerImplementation = function(componentInstance, componentName) {
       this.componentInstance = componentInstance;
       this.componentName="MobileApproveSDK";
@@ -13,17 +12,28 @@ define([], function() {
                     }else if (deviceInfo.name.toLowerCase() === 'iphone') {
             				platformName = 'IOS';
                     }else {
-                        platformName = deviceInfo.name.charAt(0).toUpperCase() + deviceInfo.name.slice(1);
+                       platformName = 'IOS';// deviceInfo.name.charAt(0).toUpperCase() + deviceInfo.name.slice(1);
                     }
                     var nativeControllerPath = "com/hid/"+this.componentName+"/NativeController" + platformName + ".js";
                     var nativeController = require(nativeControllerPath);
                     this.nativeControllerInstance = new nativeController(this.componentInstance);
-                }
+               // }else{
+                    //this.updateUsername(this.nativeControllerInstance,this.componentInstance);
+                } 
+                this.updateUsername(this.nativeControllerInstance,this.componentInstance);
                 return this.nativeControllerInstance;
             } catch (exception) {
                throw new Error(exception);
             }
-
+     
+        };
+        this.updateUsername = function(nativeController,cmpInstance){
+           let username = cmpInstance.getUsername();
+           kony.print("ApproveSDK --->username  is" + username);
+           if(!username || username === ""){
+             return;
+           }
+           nativeController.updateUsername(username);
         };
         ControllerImplementation.prototype.createContainer = function(qrString){
            this.getNativeController().createContainer(qrString);
@@ -55,8 +65,17 @@ define([], function() {
         ControllerImplementation.prototype.generateOTP = function(pwd,isBiometricEnabled){
            return this.getNativeController().generateOTP(pwd,isBiometricEnabled);
         };
+        ControllerImplementation.prototype.generateOTPExplicit = function(pwd,isBiometricEnabled){
+           return this.getNativeController().generateOTPExplicit(pwd,isBiometricEnabled);
+        };
         ControllerImplementation.prototype.renewContainer = function(password){
           return this.getNativeController().renewContainer(password);
+        };
+        ControllerImplementation.prototype.deleteUserProfile = function(){
+          return this.getNativeController().deleteUserProfile();
+        };
+        ControllerImplementation.prototype.deleteContainerWithAuth = function(password){
+           this.getNativeController().deleteContainerWithAuth(password);
         };
     };
     return ControllerImplementation;

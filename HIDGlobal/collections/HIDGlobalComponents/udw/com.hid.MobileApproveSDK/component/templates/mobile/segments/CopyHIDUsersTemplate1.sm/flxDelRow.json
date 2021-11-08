@@ -1,0 +1,59 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sea7227736264164912d77db91491d90",
+    "_width_": {
+        "type": "string",
+        "value": "16.60%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "children": [
+        "TrashDark",
+        "Label0e1e8c911738b41"
+    ],
+    "clipbounds": true,
+    "containerId": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flxDelRow",
+    "ide_onClick": "AS_FlexContainer_ce35e9c4ff184b5790e300f788e08bcd",
+    "info": null,
+    "isvisible": true,
+    "kuid": "d69c404f6a184e88a60a282a5575b28e",
+    "layouttype": 4,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxTempRowWrapper",
+    "pf": "CopyHIDUsersTemplate1",
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 2
+}

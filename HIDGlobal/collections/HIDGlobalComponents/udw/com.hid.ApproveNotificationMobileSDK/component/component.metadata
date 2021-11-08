@@ -67,7 +67,7 @@
         "fonts": [
             "Helvetica"
         ],
-        "nativeApis": 2,
+        "nativeApis": 1,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -75,7 +75,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2021-07-28T09:17:56.908Z",
-    "createdVizVersion": "9.2.15",
+    "createdOn": "2021-10-19T05:41:43.526Z",
+    "createdVizVersion": "9.2.37",
     "project_version": "sprint39"
 }

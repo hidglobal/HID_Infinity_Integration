@@ -1,4 +1,11 @@
 {
+  "android": {
+    "border_color": "72af2fff",
+    "border_style": "custom",
+    "border_type": 0,
+    "border_width": 1,
+    "isForked": true
+  },
   "androidwearos": {
     "background_color": "f0fff0ff",
     "bg_type": "one",
@@ -37,15 +44,6 @@
     "top_right_border_width": 1
   },
   "ipad": {
-    "background_color": "f0fff0ff",
-    "bg_type": "one",
-    "border_color": "72af2fff",
-    "border_style": "custom",
-    "border_type": 0,
-    "border_width": 1,
-    "isForked": true
-  },
-  "iphone": {
     "background_color": "f0fff0ff",
     "bg_type": "one",
     "border_color": "72af2fff",

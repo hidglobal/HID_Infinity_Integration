@@ -37,7 +37,8 @@
         "flxLoading",
         "flxMain",
         "flxPassword",
-        "flxPasswordTimeout"
+        "flxPasswordTimeout",
+        "flxIosBack"
     ],
     "clipbounds": false,
     "containerweight": 100,

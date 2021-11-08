@@ -4,8 +4,6 @@ define([], function() {
   globals.approveFlag = false;
   globals.approvePoll = false;
   var instance = null;
-  
-  var instance = null;
   const serviceConfig = {
     "serviceName": "HIDObjects",
     "accessType": {
@@ -136,7 +134,7 @@ define([], function() {
     let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0", 
                     "currentRiskScore" : "2", "transactionId" : transactionId};    
     
-       var client = KNYMobileFabric;
+    var client = KNYMobileFabric;
     var serviceName = "customHIDLogin";
     var identitySvc = client.getIdentityService(serviceName);
     let loginPayload = SCAEventConstants.getLoginPayload(loginJson);
