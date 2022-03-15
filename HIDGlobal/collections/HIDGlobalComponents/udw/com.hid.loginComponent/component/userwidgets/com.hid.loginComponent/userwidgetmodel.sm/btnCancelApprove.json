@@ -1,0 +1,57 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "4%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s199d80fbd8f49c8a7382e46323dfe2d",
+    "_text_": "Cancel",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "48%"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "number",
+        "value": ""
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s632c2d88c8642628d388b75d312241e",
+    "id": "btnCancelApprove",
+    "ide_onClick": "AS_Button_f81a7a839abc4b228e68d33a1cd170b7",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "h78b1b3706e04a4a8ab292dbb0b14c2c",
+    "name": "kony.ui.Button",
+    "parent": "flxApproveBtns",
+    "pf": "userwidgetmodel",
+    "responsiveData": {},
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

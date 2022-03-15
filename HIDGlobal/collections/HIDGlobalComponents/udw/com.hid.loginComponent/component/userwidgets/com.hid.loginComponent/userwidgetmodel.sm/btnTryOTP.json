@@ -1,0 +1,57 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s1e4e2ce034346cf88f2bbaf640c232a",
+    "_text_": "Try Secure Code",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "48%"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "number",
+        "value": ""
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "sbcb81d7bdc0484db0199e5f7a027044",
+    "id": "btnTryOTP",
+    "ide_onClick": "AS_Button_f5c1e87f46f341d1807d9a5f75939001",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "i0e60ee8cf7c4d1395121751b7209a12",
+    "name": "kony.ui.Button",
+    "parent": "flxApproveBtns",
+    "pf": "userwidgetmodel",
+    "responsiveData": {},
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

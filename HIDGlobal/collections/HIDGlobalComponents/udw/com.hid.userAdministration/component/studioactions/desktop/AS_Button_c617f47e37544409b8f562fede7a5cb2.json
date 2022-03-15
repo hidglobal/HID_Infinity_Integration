@@ -1,0 +1,26 @@
+{
+    "AS_Button_c617f47e37544409b8f562fede7a5cb2": {
+        "id": "AS_Button_c617f47e37544409b8f562fede7a5cb2",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "segmentAuth",
+            "type": "templates",
+            "platform": "",
+            "KUID": "cd4654112eed4577b6b4c75552524802"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_j2aa4761c8094cc2afae795cc94ca0b1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.executeOnParent(\"resetFailureCount\", {row : context.rowIndex,\nsection : context.sectionIndex});",
+            "parentId": null
+        }]
+    }
+}

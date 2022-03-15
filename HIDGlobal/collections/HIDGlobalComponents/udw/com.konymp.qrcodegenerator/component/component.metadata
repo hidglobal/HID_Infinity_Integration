@@ -1,0 +1,29 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.konymp",
+        "uw_classname": "qrcodegenerator",
+        "isLocked": false,
+        "userwidgets": [
+            "com.konymp.qrcodegenerator"
+        ],
+        "templates": [],
+        "actions": {},
+        "skins": [
+            "slForm",
+            "slFbox"
+        ],
+        "images": [],
+        "fonts": [],
+        "nativeApis": 0,
+        "mfbundle": "services/services.zip",
+        "localFiles": true,
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2021-07-09T17:07:31.016Z",
+    "createdVizVersion": "9.1.8",
+    "project_version": "sprint38"
+}

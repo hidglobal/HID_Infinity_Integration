@@ -1,0 +1,40 @@
+{
+    "AS_Image_ed8cb251cee947e188d4419fb0472416": {
+        "id": "AS_Image_ed8cb251cee947e188d4419fb0472416",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "KUID": "f142f6f0df6343d7a9bb4fe2daea4b19",
+            "name": "CopyCopytmpDevicesSegment1",
+            "platform": "",
+            "type": "templates"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___jf4263febbaa4c24b534246482e5d906",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onCancelTouchEnd",
+            "display": "onCancelTouchEnd",
+            "inputparams": [{
+                "name": "eventobject",
+                "value": " eventobject"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

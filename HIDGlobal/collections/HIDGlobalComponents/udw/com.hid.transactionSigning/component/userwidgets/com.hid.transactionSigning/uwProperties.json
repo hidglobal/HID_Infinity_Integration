@@ -1,0 +1,129 @@
+{
+    "classname": "transactionSigning",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "g931165502394f6c8bb8dc692a20ae81",
+                    "paramList": [],
+                    "propertyKey": "initiate",
+                    "pw": {
+                        "displayName": "initiate",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "e00ac22a28cf45e487eafa4177204349",
+                    "paramList": [],
+                    "propertyKey": "changeTSMode",
+                    "pw": {
+                        "displayName": "changeTSMode",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "b15751e12bda4047b4de80d183c9d4e2",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "showLoading",
+                    "pw": {
+                        "displayName": "showLoading",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "f5fb5658f4ed4ca6a025f59723f7a79e",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "dismissLoading",
+                    "pw": {
+                        "displayName": "dismissLoading",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "e5b2f7de782648bcaa4a3b7ca326e668",
+                    "paramList": [],
+                    "propertyIndex": 3,
+                    "propertyKey": "onTSSuccess",
+                    "pw": {
+                        "displayName": "onTSSuccess",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "SyamTest1",
+                    "group": "General",
+                    "kuid": "c62a1730b03a4f64861eb0956cb8a046",
+                    "originalPropertyKey": "username",
+                    "propertyIndex": 1,
+                    "propertyKey": "username",
+                    "pw": {
+                        "displayName": "username",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "Sending amount transfer",
+                    "group": "General",
+                    "kuid": "g413a1dbc3ba4e2b96d0c217bf5f6687",
+                    "originalPropertyKey": "tds",
+                    "propertyIndex": 2,
+                    "propertyKey": "tds",
+                    "pw": {
+                        "displayName": "tds",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hid",
+    "version": "1.0.0"
+}

@@ -1,0 +1,75 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "4%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Device Serial Number",
+    "_skin_": "sd911f9080ea4320ab6a3c119fbd0480",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "85%"
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centery": {
+        "type": "number",
+        "value": ""
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "desktopweb": {
+        "placeholderSkin": "sa2ad56602e2438e81c7c98e6bb8e369"
+    },
+    "disabledSkins": {
+        "focusSkin": "s5d06dcec9df4671bbbb09cd9636a011"
+    },
+    "focusskin": null,
+    "id": "tbxDeviceSerial",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardtype": "A",
+    "kuid": "jc28c57e583f4eb5a7b3fdb2cede454a",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
+    "parent": "flxHWdevicenumber",
+    "pf": "userwidgetmodel",
+    "placeholderskin": "sa2ad56602e2438e81c7c98e6bb8e369",
+    "responsiveData": {},
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 1
+}

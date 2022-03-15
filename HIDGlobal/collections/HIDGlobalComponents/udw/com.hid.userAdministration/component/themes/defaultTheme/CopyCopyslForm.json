@@ -1,0 +1,92 @@
+{
+    "background_color": "ffffff",
+    "bg_type": "one",
+    "border_color": "ffffffff",
+    "desktopweb": {
+        "bottom_left_border_color": "ffffffff",
+        "bottom_left_border_style": "plain",
+        "bottom_right_border_color": "ffffffff",
+        "bottom_right_border_style": "plain",
+        "isCustomCSSEnabled": false,
+        "isForked": true,
+        "top_left_border_color": "ffffffff",
+        "top_left_border_style": "plain",
+        "top_right_border_color": "ffffffff",
+        "top_right_border_style": "plain"
+    },
+    "isDefaultSkin": false,
+    "kuid": "s176095ae0794e87bb96baf2196e6109",
+    "spaan": {
+        "bottom_left_border_color": "ffffffff",
+        "bottom_left_border_style": "plain",
+        "bottom_right_border_color": "ffffffff",
+        "bottom_right_border_style": "plain",
+        "isCustomCSSEnabled": false,
+        "isForked": true,
+        "top_left_border_color": "ffffffff",
+        "top_left_border_style": "plain",
+        "top_right_border_color": "ffffffff",
+        "top_right_border_style": "plain"
+    },
+    "spaandroidtablet": {
+        "bottom_left_border_color": "ffffffff",
+        "bottom_left_border_style": "plain",
+        "bottom_right_border_color": "ffffffff",
+        "bottom_right_border_style": "plain",
+        "isCustomCSSEnabled": false,
+        "isForked": true,
+        "top_left_border_color": "ffffffff",
+        "top_left_border_style": "plain",
+        "top_right_border_color": "ffffffff",
+        "top_right_border_style": "plain"
+    },
+    "spaip": {
+        "bottom_left_border_color": "ffffffff",
+        "bottom_left_border_style": "plain",
+        "bottom_right_border_color": "ffffffff",
+        "bottom_right_border_style": "plain",
+        "isCustomCSSEnabled": false,
+        "isForked": true,
+        "top_left_border_color": "ffffffff",
+        "top_left_border_style": "plain",
+        "top_right_border_color": "ffffffff",
+        "top_right_border_style": "plain"
+    },
+    "spaipad": {
+        "bottom_left_border_color": "ffffffff",
+        "bottom_left_border_style": "plain",
+        "bottom_right_border_color": "ffffffff",
+        "bottom_right_border_style": "plain",
+        "isCustomCSSEnabled": false,
+        "isForked": true,
+        "top_left_border_color": "ffffffff",
+        "top_left_border_style": "plain",
+        "top_right_border_color": "ffffffff",
+        "top_right_border_style": "plain"
+    },
+    "spawindowstablet": {
+        "bottom_left_border_color": "ffffffff",
+        "bottom_left_border_style": "plain",
+        "bottom_right_border_color": "ffffffff",
+        "bottom_right_border_style": "plain",
+        "isCustomCSSEnabled": false,
+        "isForked": true,
+        "top_left_border_color": "ffffffff",
+        "top_left_border_style": "plain",
+        "top_right_border_color": "ffffffff",
+        "top_right_border_style": "plain"
+    },
+    "spawinphone8": {
+        "bottom_left_border_color": "ffffffff",
+        "bottom_left_border_style": "plain",
+        "bottom_right_border_color": "ffffffff",
+        "bottom_right_border_style": "plain",
+        "isCustomCSSEnabled": false,
+        "isForked": true,
+        "top_left_border_color": "ffffffff",
+        "top_left_border_style": "plain",
+        "top_right_border_color": "ffffffff",
+        "top_right_border_style": "plain"
+    },
+    "wType": "Form"
+}

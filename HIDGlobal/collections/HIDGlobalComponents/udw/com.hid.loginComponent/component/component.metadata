@@ -1,0 +1,142 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid",
+        "uw_classname": "loginComponent",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.loginComponent"
+        ],
+        "templates": [
+            [
+                "desktop",
+                "segments",
+                "CopyCopyCopyCopytmpPushDevice"
+            ]
+        ],
+        "actions": {
+            "common": {
+                "AS_Button_f81a7a839abc4b228e68d33a1cd170b7": {
+                    "channel": "common",
+                    "actionId": "AS_Button_f81a7a839abc4b228e68d33a1cd170b7",
+                    "actionName": "AS_Button_f81a7a839abc4b228e68d33a1cd170b7",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_ffe0ec05544948ef91a32ecc076d045c": {
+                    "channel": "common",
+                    "actionId": "AS_Button_ffe0ec05544948ef91a32ecc076d045c",
+                    "actionName": "AS_Button_ffe0ec05544948ef91a32ecc076d045c",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_i594f2e364034e6591171be6255642d7": {
+                    "channel": "common",
+                    "actionId": "AS_Button_i594f2e364034e6591171be6255642d7",
+                    "actionName": "AS_Button_i594f2e364034e6591171be6255642d7",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d": {
+                    "channel": "common",
+                    "actionId": "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d",
+                    "actionName": "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_c3f0065bccf94e0c91298e9f6485b3b0": {
+                    "channel": "common",
+                    "actionId": "AS_Button_c3f0065bccf94e0c91298e9f6485b3b0",
+                    "actionName": "AS_Button_c3f0065bccf94e0c91298e9f6485b3b0",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279": {
+                    "channel": "common",
+                    "actionId": "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279",
+                    "actionName": "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_b0ebddf304d6460b905404d6b496e0df": {
+                    "channel": "common",
+                    "actionId": "AS_Button_b0ebddf304d6460b905404d6b496e0df",
+                    "actionName": "AS_Button_b0ebddf304d6460b905404d6b496e0df",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130": {
+                    "channel": "common",
+                    "actionId": "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130",
+                    "actionName": "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_f5c1e87f46f341d1807d9a5f75939001": {
+                    "channel": "common",
+                    "actionId": "AS_Button_f5c1e87f46f341d1807d9a5f75939001",
+                    "actionName": "AS_Button_f5c1e87f46f341d1807d9a5f75939001",
+                    "key": "ide_onClick"
+                },
+                "AS_Label_fb87b28254404c7d89891f35a2ef3df7": {
+                    "channel": "common",
+                    "actionId": "AS_Label_fb87b28254404c7d89891f35a2ef3df7",
+                    "actionName": "AS_Label_fb87b28254404c7d89891f35a2ef3df7",
+                    "key": "ide_onTouchEnd"
+                },
+                "AS_Segment_b665927de68c4985b4b97a4f0a939bfc": {
+                    "channel": "common",
+                    "actionId": "AS_Segment_b665927de68c4985b4b97a4f0a939bfc",
+                    "actionName": "AS_Segment_b665927de68c4985b4b97a4f0a939bfc",
+                    "key": "ide_onRowClick"
+                }
+            }
+        },
+        "skins": [
+            "CopyCopyCopyCopyCopyCopyCopyslFontAwesomeIcon",
+            "slForm",
+            "CopyCopyCopyCopysknCancelButton",
+            "CopyCopyCopyCopyCopybtnBlueFocus",
+            "CopyCopyCopyCopybtnBlueFocus",
+            "CopyCopyCopyCopysknButton",
+            "CopyCopyCopyCopybtnWHiteFocus",
+            "CopyCopyCopyCopyCopyCopybtnBlueFocus",
+            "CopyCopyCopyCopyCopybtnWHiteFocus",
+            "CopyCopyCopyCopyCopybtnWHiteFocus1",
+            "slFbox",
+            "CopyCopyCopyCopyCopyCopyslFbox",
+            "CopyCopyCopyCopyCopyCopyslFbox1",
+            "CopyCopyCopyCopyCopyCopyslFbox2",
+            "CopyCopyCopyCopyCopyslFbox",
+            "CopyCopyCopyCopyCopyCopyslFbox3",
+            "CopyCopyCopyCopysknHIDNotification",
+            "CopyCopyCopyCopysknHIDError",
+            "CopyCopyCopyCopyCopyCopydefLabel",
+            "CopyCopyCopyCopylblWelcome",
+            "CopyCopyCopyCopyCopyCopydefLabel1",
+            "CopyCopyCopyCopyslFbox",
+            "seg2Focus",
+            "CopyCopyCopyCopyseg",
+            "sliPhoneSegmentHeader",
+            "CopyCopyCopyCopyCopyCopydefTextBoxNormal",
+            "CopyCopyCopyCopyCopydefTextBoxNormal1",
+            "defTextBoxFocus",
+            "CopyCopyCopyCopyCopyCopytbxPassword",
+            "CopyCopyCopyCopyCopytbxPassword",
+            "CopyCopyCopyCopyCopyCopytbxPassword1",
+            "CopyCopyCopyCopyCopyslFbox1",
+            "defLabel",
+            "CopyCopyCopyCopyCopydefLabel"
+        ],
+        "images": [
+            "pageoffdot.png",
+            "pageondot.png"
+        ],
+        "fonts": [
+            "FontAwesome",
+            "Gotham-Book"
+        ],
+        "nativeApis": 3,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2022-03-15T05:19:05.788Z",
+    "createdVizVersion": "9.2.37",
+    "project_version": "sprint39"
+}

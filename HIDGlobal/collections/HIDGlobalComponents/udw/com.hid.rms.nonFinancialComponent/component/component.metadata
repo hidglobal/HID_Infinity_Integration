@@ -1,0 +1,153 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid.rms",
+        "uw_classname": "nonFinancialComponent",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.rms.nonFinancialComponent"
+        ],
+        "templates": [
+            [
+                "desktop",
+                "segments",
+                "CopyCopyCopyCopyCopytmpPushDevice"
+            ]
+        ],
+        "actions": {
+            "common": {
+                "AS_Button_cc85ec45fddf4e139b5d77822fa74c56": {
+                    "channel": "common",
+                    "actionId": "AS_Button_cc85ec45fddf4e139b5d77822fa74c56",
+                    "actionName": "AS_Button_cc85ec45fddf4e139b5d77822fa74c56",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_af325467f3824b3b80bc9d71881ef644": {
+                    "channel": "common",
+                    "actionId": "AS_Button_af325467f3824b3b80bc9d71881ef644",
+                    "actionName": "AS_Button_af325467f3824b3b80bc9d71881ef644",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_afe64f5cae044e82811a461edaab4c5a": {
+                    "channel": "common",
+                    "actionId": "AS_Button_afe64f5cae044e82811a461edaab4c5a",
+                    "actionName": "AS_Button_afe64f5cae044e82811a461edaab4c5a",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_d207d860fff4456693e16f02642c1633": {
+                    "channel": "common",
+                    "actionId": "AS_Button_d207d860fff4456693e16f02642c1633",
+                    "actionName": "AS_Button_d207d860fff4456693e16f02642c1633",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_d0ff93364fd2441f8c7ddc847f090c66": {
+                    "channel": "common",
+                    "actionId": "AS_Button_d0ff93364fd2441f8c7ddc847f090c66",
+                    "actionName": "AS_Button_d0ff93364fd2441f8c7ddc847f090c66",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_e31eee39291f4898a07ef38b3e858de0": {
+                    "channel": "common",
+                    "actionId": "AS_Button_e31eee39291f4898a07ef38b3e858de0",
+                    "actionName": "AS_Button_e31eee39291f4898a07ef38b3e858de0",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_ae231eb54f18408da74695f4b6f264e7": {
+                    "channel": "common",
+                    "actionId": "AS_Button_ae231eb54f18408da74695f4b6f264e7",
+                    "actionName": "AS_Button_ae231eb54f18408da74695f4b6f264e7",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_a91ece4869d84ece8f62fcb0298724ae": {
+                    "channel": "common",
+                    "actionId": "AS_Button_a91ece4869d84ece8f62fcb0298724ae",
+                    "actionName": "AS_Button_a91ece4869d84ece8f62fcb0298724ae",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_c62bc68547324b719b49c9e5dadad6da": {
+                    "channel": "common",
+                    "actionId": "AS_Button_c62bc68547324b719b49c9e5dadad6da",
+                    "actionName": "AS_Button_c62bc68547324b719b49c9e5dadad6da",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_f7f34412437e40558dbb2e3482af2dfa": {
+                    "channel": "common",
+                    "actionId": "AS_Button_f7f34412437e40558dbb2e3482af2dfa",
+                    "actionName": "AS_Button_f7f34412437e40558dbb2e3482af2dfa",
+                    "key": "ide_onClick"
+                },
+                "AS_Label_becc74f5c00547259e65a033629a5d48": {
+                    "channel": "common",
+                    "actionId": "AS_Label_becc74f5c00547259e65a033629a5d48",
+                    "actionName": "AS_Label_becc74f5c00547259e65a033629a5d48",
+                    "key": "ide_onTouchEnd"
+                },
+                "AS_Segment_b9b5531430854e448f977e756e2e4eff": {
+                    "channel": "common",
+                    "actionId": "AS_Segment_b9b5531430854e448f977e756e2e4eff",
+                    "actionName": "AS_Segment_b9b5531430854e448f977e756e2e4eff",
+                    "key": "ide_onRowClick"
+                }
+            }
+        },
+        "skins": [
+            "CopyCopyCopyCopyCopyCopyCopyCopyslFontAwesomeIcon",
+            "slForm",
+            "CopyCopyCopyCopysknButton0gd8362e1166e43",
+            "CopyCopyCopyCopyCopysknCancelButton",
+            "CopyCopyCopyCopyCopybtnBlueFocus3",
+            "CopyCopyCopyCopybtnBlueFocus0ad0b019a257e4a",
+            "CopyCopyCopyCopyCopysknButton",
+            "CopyCopyCopyCopybtnWHiteFocus0c9624ff12d7a4d",
+            "CopyCopyCopyCopyCopyCopybtnWHiteFocus",
+            "CopyCopyCopyCopyCopyCopyCopybtnBlueFocus",
+            "CopyCopyCopyCopyCopyCopybtnWHiteFocus1",
+            "slFbox",
+            "CopyCopyCopyCopyCopyCopyslFbox0fcd72c10b17445",
+            "CopyCopyCopyCopyCopyCopyCopyslFbox",
+            "CopyCopyCopyCopyCopyCopyCopyslFbox1",
+            "CopyCopyCopyCopyCopyslFbox0ga22a4eeae0a40",
+            "CopyCopyCopyCopyCopyCopyslFbox4",
+            "CopyCopyCopyCopyCopyCopyCopyslFbox2",
+            "CopyCopyCopyCopyCopysknHIDNotification",
+            "CopyCopyCopyCopyCopysknHIDError",
+            "CopyCopyCopyCopyCopyCopyCopydefLabel",
+            "CopyCopyCopyCopylblWelcome0e3a459ff60574c",
+            "CopyCopyCopyCopylblWelcome0jc08e89e1d7c47",
+            "CopyCopyCopyCopyCopyCopydefLabel2",
+            "CopyCopyCopyCopylblWelcome0b79a37bbb22e47",
+            "CopyCopyCopyCopyCopylblWelcome",
+            "CopyslFbox0a1a589e40e7f45",
+            "seg2Focus",
+            "CopyCopyCopyCopyCopyseg",
+            "sliPhoneSegmentHeader",
+            "CopyCopyCopyCopyCopyCopyCopydefTextBoxNormal",
+            "CopyCopyCopyCopyCopyCopydefTextBoxNormal1",
+            "defTextBoxFocus",
+            "CopyCopyCopyCopyCopyCopyCopytbxPassword",
+            "CopyCopyCopyCopyCopytbxPassword3",
+            "CopyCopyCopyCopyCopyCopyCopytbxPassword1",
+            "CopyCopyCopyCopyCopyslFbox0i8ebd994446b4b",
+            "defLabel",
+            "CopyCopyCopyCopyCopydefLabel0j8223b0c6d2d4c"
+        ],
+        "images": [
+            "pageoffdot.png",
+            "pageondot.png"
+        ],
+        "fonts": [
+            "FontAwesome",
+            "Helvetica"
+        ],
+        "nativeApis": 3,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2022-03-15T05:20:59.260Z",
+    "createdVizVersion": "9.2.37",
+    "project_version": "sprint39"
+}

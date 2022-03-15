@@ -1,0 +1,27 @@
+{
+    "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130": {
+        "id": "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u145a18e5af34b58ac4f81c0d874ff71"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___i173ffe4a8b74f2ea57c3fa31ee53ac4",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "initiateSecondFactor",
+            "display": "initiateSecondFactor",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

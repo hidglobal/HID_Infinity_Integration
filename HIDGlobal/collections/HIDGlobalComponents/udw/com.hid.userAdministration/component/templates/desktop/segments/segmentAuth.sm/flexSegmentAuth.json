@@ -1,0 +1,77 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "13%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "authType",
+        "status",
+        "btnEnbaleDisable",
+        "btnReset",
+        "lastsuccessfullogon",
+        "lastfailedlogon",
+        "totalfailedlogons",
+        "failurecountandMax",
+        "lblAuthType",
+        "disableThreshold"
+    ],
+    "clipbounds": true,
+    "containerId": true,
+    "containerweight": 100,
+    "controllerInfo": {
+        "default": {
+            "channel": "desktop",
+            "name": "flexSegmentAuthController"
+        }
+    },
+    "defaultunit": 2,
+    "enablescrolling": true,
+    "id": "flexSegmentAuth",
+    "info": null,
+    "isTemplate": true,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "a10e4b191398438a82f5958f094ad6b8",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "segmentAuth",
+    "pf": "segmentAuth",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1
+}

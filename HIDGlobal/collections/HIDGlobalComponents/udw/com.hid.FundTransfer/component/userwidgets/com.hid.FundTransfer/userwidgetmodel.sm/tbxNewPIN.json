@@ -1,0 +1,67 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "68.50%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Enter Pin",
+    "_skin_": "s922b46395b74800a95cad3c91a7b38c",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "31.43%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "android": {},
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "s922b46395b74800a95cad3c91a7b38c",
+    "id": "tbxNewPIN",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardstyle": "digitpad",
+    "keyboardtype": "A",
+    "kuid": "g023370692814a9ebf98df784966eaa5",
+    "mode": "N",
+    "name": "kony.ui.TextBox2",
+    "parent": "flxCreatePinInnerPR",
+    "pf": "userwidgetmodel",
+    "placeholderskin": "sda63d73b7374cdabb64d061af98a142",
+    "restrictcharactersset": ".",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": true,
+    "textinputmode": "N",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 0
+}

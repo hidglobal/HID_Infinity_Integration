@@ -1,0 +1,65 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "60%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "45%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_top_": {
+        "type": "string",
+        "value": "15%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "50%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "lblUserId",
+        "txtUserIdValue",
+        "lblInviteCode",
+        "txtInviteCodeValue",
+        "lblServiceUrl",
+        "txtServiceUrlValue"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flxManual",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "f58a0fb6c6a0403b82f18b9412e59f08",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxRegisterDevice1",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "tabpaneId": "tabSelfService",
+    "wType": "FlexContainer",
+    "widgetalignment": 1
+}

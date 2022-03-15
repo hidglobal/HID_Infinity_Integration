@@ -1,0 +1,74 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Enter OTP",
+    "_skin_": "sd6278d33a464507926b50b5ca8b0ae9",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "7%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "50%"
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "desktopweb": {
+        "placeholderSkin": "s2f30386385d4dd78391625bbab88f1e"
+    },
+    "disabledSkins": {
+        "focusSkin": "s72d9b6cad4947d9a6a931af29a9711c"
+    },
+    "id": "tbxOTP",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardstyle": "A",
+    "keyboardtype": "A",
+    "kuid": "b7685cbc727f43aeb6e9b3ed75c4a571",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
+    "parent": "flxOTP",
+    "pf": "userwidgetmodel",
+    "placeholderskin": "s2f30386385d4dd78391625bbab88f1e",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 1
+}

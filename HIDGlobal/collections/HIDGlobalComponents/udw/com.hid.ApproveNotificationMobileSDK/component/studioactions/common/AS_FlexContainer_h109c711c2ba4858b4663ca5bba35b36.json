@@ -1,0 +1,47 @@
+{
+    "AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36": {
+        "id": "AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "je282156b46246ba965efdc3f22be2dd",
+            "name": "userwidgetmodel",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ROTATE_ACTION_d05d002b36634d6aa90171406a5a5f91",
+            "type": "ROTATE_ACTION",
+            "itemType": "COMPONENT",
+            "itemId": "userwidgetmodel",
+            "widgetId": "flxSlider",
+            "itemKUID": "je282156b46246ba965efdc3f22be2dd",
+            "widgetKUID": "b6c4134050ec4487bfe54564785407b1",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {
+                    "x": "100",
+                    "y": "100"
+                },
+                "rotate": "45",
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                }
+            },
+            "config": {
+                "delay": "0",
+                "duration": "1",
+                "fillMode": "kony.anim.FILL_MODE_FORWARDS",
+                "iterationCount": 1
+            },
+            "start": "Immediately",
+            "animationId": "ROTATE_ACTION_d05d002b36634d6aa90171406a5a5f91",
+            "displayAnimationId": "ROTATE_ACTION_d05d002b36634d6aa90171406a5a5f91",
+            "forkedPlatform": "all",
+            "widgetPath": "this.view.flxSlider"
+        }]
+    }
+}
