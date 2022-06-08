@@ -1,0 +1,60 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "50%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "6.67%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sc05da5085e74f568bc33f549c17f677",
+    "_top_": {
+        "type": "string",
+        "value": "26.39%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "86.40%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "flxHeaderSetPassword",
+        "flxCreatePin",
+        "flxConfirmPin",
+        "flxbtnSetPwd",
+        "flxErrorPwd"
+    ],
+    "clipbounds": false,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flxMainSetPwd",
+    "info": null,
+    "isvisible": true,
+    "kuid": "f50c124191374c9383c9ef39bcb1d934",
+    "layouttype": 4,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxSetPassword",
+    "pf": "userwidgetmodel",
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 2
+}

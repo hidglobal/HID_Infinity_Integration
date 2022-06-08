@@ -1,0 +1,67 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "30%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Enter PIN",
+    "_skin_": "sb360bb4d570468896962e2380d65eb1",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "45%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "android": {},
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "s72d9b6cad4947d9a6a931af29a9711c",
+    "id": "tbDeleteUserPin",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardstyle": "telpad",
+    "keyboardtype": "A",
+    "kuid": "g1fcfa5b35444d0784d42b97446a9795",
+    "mode": "N",
+    "name": "kony.ui.TextBox2",
+    "parent": "flxEnterPin",
+    "pf": "userwidgetmodel",
+    "placeholderskin": "s3b0eb764bc84a6a9641448102e47eab",
+    "restrictcharactersset": "!@#$%^&*(){}><  +=/,-_.N;",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": true,
+    "textinputmode": "N",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 1
+}

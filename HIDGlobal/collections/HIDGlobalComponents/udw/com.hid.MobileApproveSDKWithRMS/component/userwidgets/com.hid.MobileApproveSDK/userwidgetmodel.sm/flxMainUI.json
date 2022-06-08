@@ -1,0 +1,76 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "60%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "6.67%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "sc05da5085e74f568bc33f549c17f677",
+    "_top_": {
+        "type": "string",
+        "value": "26.39%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "allboxes": [],
+    "android": {
+        "height": {
+            "type": "string",
+            "value": "50%"
+        }
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50.00%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "45.00%"
+    },
+    "children": [
+        "flxHeader",
+        "lblActivationText",
+        "flxFirstField",
+        "flxSecondField",
+        "flxBtn",
+        "flxErrActivationCode",
+        "flxForgotCustomerId"
+    ],
+    "clipbounds": false,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "focusskin": "sd9d043524ea4873b318bd44c3d32a80",
+    "id": "flxMainUI",
+    "info": null,
+    "isvisible": true,
+    "kuid": "ba5f1ac8c0804de3868143483ab1dd43",
+    "layouttype": 4,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxActivationCode",
+    "pf": "userwidgetmodel",
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 6
+}
