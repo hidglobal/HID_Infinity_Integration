@@ -84,7 +84,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "sb65a3fbeb924314bf4823ffb561fdce",
+            "_skin_": "sf4007af623b4d2288ec078d8d28622a",
             "_top_": {
                 "type": "string",
                 "value": "0.00%"
@@ -125,7 +125,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sc05da5085e74f568bc33f549c17f677",
+                "_skin_": "s6a098cc5974456d9647787dca8842a2",
                 "_top_": {
                     "type": "string",
                     "value": "26.39%"
@@ -220,7 +220,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "LOGIN",
                         "_top_": {
                             "type": "string",
@@ -234,7 +234,7 @@
                         "containerweight": 100,
                         "contentalignment": 5,
                         "displaytext": true,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnValidateActivationCode",
                         "info": null,
                         "iscustomlayout": false,
@@ -246,7 +246,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "ljfMylsF3DVJF7tcsRp/XOs/mHY="
+                            "md5": "gti45SutYO49yZk4eiJWhvceGjk="
                         },
                         "wType": "Button",
                         "zindex": 1
@@ -350,7 +350,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s155d8f850994e2fbf003e75c8a2600a",
+                        "_skin_": "s5f5263173ef4b809991c4da29fc608f",
                         "_text_": "",
                         "_top_": {
                             "type": "number",
@@ -399,7 +399,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "OCOE7hPs5b0DdaeB7yuP4TgBUYs="
+                            "md5": "RlUEZWjCcYsxCCEVOXeADf0jRno="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -492,7 +492,7 @@
                             0
                         ],
                         "_percent_": true,
-                        "_skin_": "s762924f29fe4d718672fb5f9043cbb7",
+                        "_skin_": "s6b9398f3c1e475fbf82a4985e96bfda",
                         "_top_": {
                             "type": "string",
                             "value": "1%"
@@ -510,7 +510,7 @@
                         "clipbounds": false,
                         "containerweight": 100,
                         "enablescrolling": true,
-                        "focusskin": "s762924f29fe4d718672fb5f9043cbb7",
+                        "focusskin": "s6b9398f3c1e475fbf82a4985e96bfda",
                         "id": "flxCustomerId",
                         "info": null,
                         "isvisible": true,
@@ -521,7 +521,7 @@
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "/+wg6HNX2FYF6HjlfeQCF9+sbpI="
+                            "md5": "oG7QxQModyCC8hS9t5WFqMN+xCQ="
                         },
                         "snaptogrid": true,
                         "tbxUsername": {
@@ -548,7 +548,7 @@
                                 0
                             ],
                             "_placeholder_": "Enter Customer ID",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -568,7 +568,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxUsername",
                             "info": null,
                             "iscustomlayout": false,
@@ -579,12 +579,12 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxCustomerId",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": false,
                             "snapshot": {
-                                "md5": "5kcuqWoK1CUyexMgGssFic5Fdic="
+                                "md5": "FicVVXJWZaJGXeUPEGa7qjYo54Q="
                             },
                             "textinputmode": "A",
                             "tooltip": "",
@@ -624,7 +624,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                        "_skin_": "se71b7fecece48e68f7989f150a46128",
                         "_text_": "Customer ID",
                         "_top_": {
                             "type": "string",
@@ -645,7 +645,7 @@
                         "canUpdateUI": true,
                         "containerweight": 100,
                         "contentalignment": 7,
-                        "focusskin": "s7003745cbcb4f8a97356ae1b3fdc991",
+                        "focusskin": "se71b7fecece48e68f7989f150a46128",
                         "id": "lblcustomerid",
                         "info": null,
                         "ipad": {
@@ -676,7 +676,7 @@
                         "parent": "flxFirstField",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "YU/PcBdGVIyLxPvRpQNhlMv3Ug0="
+                            "md5": "/53o5LugDzM27+WCs6o/0jrXKyE="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -718,7 +718,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s2e1525d623449e196ebb75774e5340b",
+                    "_skin_": "sfff526348934d0eb3283a92a11a9394",
                     "_text_": "Forgot Customer ID?",
                     "_top_": {
                         "type": "string",
@@ -743,7 +743,7 @@
                     },
                     "containerweight": 100,
                     "contentalignment": 4,
-                    "focusskin": "s2e1525d623449e196ebb75774e5340b",
+                    "focusskin": "sfff526348934d0eb3283a92a11a9394",
                     "id": "flxForgotCustomerId",
                     "info": null,
                     "ipad": {
@@ -774,7 +774,7 @@
                     "parent": "flxMainUI",
                     "pf": "uwudf637f759e64eaa943af27248e39362",
                     "snapshot": {
-                        "md5": "Rlmgzq2FGgdvKlrlxE6DFtj4g3k="
+                        "md5": "JW0yjVRjelqqUTudk2EDrjQG/UA="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -853,8 +853,8 @@
                             0,
                             0
                         ],
-                        "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                        "_src_": "bank_portal_logo_blue.png",
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "bank_portal_logo_blue_1.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -881,7 +881,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "ZTlhMRgVgoZt9HDQ5chq/SeBr7A="
+                            "md5": "eqlNacHt5QSRTvDTteEyI0r24WA="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -915,7 +915,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "_skin_": "s0c8c1ce77f54c7499f53d2313093e40",
                         "_text_": "Major Bank",
                         "_top_": {
                             "type": "string",
@@ -940,7 +940,7 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "focusskin": "s0c8c1ce77f54c7499f53d2313093e40",
                         "id": "lblMajorBank",
                         "info": null,
                         "ipad": {
@@ -971,7 +971,7 @@
                         "parent": "flxHeader",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "xDsTelmRA6YpEmUf5dszarnTqG4="
+                            "md5": "/1Y8NGaQknCcXQk4DimrVWtWDVE="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -1061,7 +1061,7 @@
                             0
                         ],
                         "_percent_": true,
-                        "_skin_": "s762924f29fe4d718672fb5f9043cbb7",
+                        "_skin_": "s6b9398f3c1e475fbf82a4985e96bfda",
                         "_top_": {
                             "type": "string",
                             "value": "1%"
@@ -1079,7 +1079,7 @@
                         "clipbounds": false,
                         "containerweight": 100,
                         "enablescrolling": true,
-                        "focusskin": "s762924f29fe4d718672fb5f9043cbb7",
+                        "focusskin": "s6b9398f3c1e475fbf82a4985e96bfda",
                         "id": "flxTbxActivationCode",
                         "info": null,
                         "isvisible": true,
@@ -1090,7 +1090,7 @@
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "oAr+kELdKEerfAFwfXq+7TfKD2A="
+                            "md5": "cbtjhSd+dhJzaCszPI2NiVd+NlI="
                         },
                         "snaptogrid": true,
                         "tbxActivationCode": {
@@ -1117,7 +1117,7 @@
                                 0
                             ],
                             "_placeholder_": "Enter Activation Code",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -1137,7 +1137,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxActivationCode",
                             "info": null,
                             "iscustomlayout": false,
@@ -1148,12 +1148,12 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxTbxActivationCode",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": true,
                             "snapshot": {
-                                "md5": "jnJohNN/QdAMrrX4LmdOYe2dKGE="
+                                "md5": "5n9OraujDJKcGU1W6Fkev0Arivw="
                             },
                             "textinputmode": "A",
                             "tooltip": "",
@@ -1193,7 +1193,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                        "_skin_": "se71b7fecece48e68f7989f150a46128",
                         "_text_": "Activation Code",
                         "_top_": {
                             "type": "string",
@@ -1214,7 +1214,7 @@
                         "canUpdateUI": true,
                         "containerweight": 100,
                         "contentalignment": 7,
-                        "focusskin": "s7003745cbcb4f8a97356ae1b3fdc991",
+                        "focusskin": "se71b7fecece48e68f7989f150a46128",
                         "id": "lblActivationCode",
                         "info": null,
                         "ipad": {
@@ -1245,7 +1245,7 @@
                         "parent": "flxSecondField",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "ULvhYvLOyTbykT5PNvhCuj70e64="
+                            "md5": "wr2f3SqpQVYWdNugHpeY5uXCai0="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -1264,7 +1264,7 @@
                     "widgetalignment": 1,
                     "zindex": 4
                 },
-                "focusskin": "sd9d043524ea4873b318bd44c3d32a80",
+                "focusskin": "s3f51560229448609ffb3a2b07a1b32e",
                 "id": "flxMainUI",
                 "info": null,
                 "isvisible": true,
@@ -1293,7 +1293,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s92b97bf300042f8a7015bea89deae8f",
+                    "_skin_": "s53100495f2f45e39a3a7bb2ab9fa5a8",
                     "_text_": "Please enter your Customer ID and Activation Code to register your account",
                     "_top_": {
                         "type": "string",
@@ -1338,7 +1338,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "vxf5QQUxfLzZdHFZbN9c+27a7W8="
+                        "md5": "HJ60UOlD0LDWMqkYdibDVuRDkqQ="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -1350,14 +1350,14 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "2ikKoIHmuCiM7p10qJeOHs0N2g8="
+                    "md5": "GqcdTM8T/nQZ15UyDXaxah3ahKY="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
                 "zindex": 6
             },
-            "focusskin": "sb65a3fbeb924314bf4823ffb561fdce",
+            "focusskin": "sf4007af623b4d2288ec078d8d28622a",
             "id": "flxActivationCode",
             "info": null,
             "isvisible": false,
@@ -1368,7 +1368,7 @@
             "pf": "uwudf637f759e64eaa943af27248e39362",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "2AdLNc1d36qYp5AWn0Z9jwb4SdY="
+                "md5": "USYyenHTFAmCHhR8neeP+HP47Eg="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -1442,7 +1442,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sb5bc26016e743c8b6ff1eafe3c6fa9f",
+                "_skin_": "s0e879cebb3440d1b7ae1e45589f6a45",
                 "_top_": {
                     "type": "string",
                     "value": "0dp"
@@ -1484,7 +1484,7 @@
                         0
                     ],
                     "_percent_": true,
-                    "_skin_": "sa09fccfc1ae416c8e4cfeccf5c9bc0a",
+                    "_skin_": "s0b36f66e7544e0a8ef3b820626d8106",
                     "_top_": {
                         "type": "string",
                         "value": "244dp"
@@ -1522,7 +1522,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s993e831718c46179b4c684317e9ba06",
+                        "_skin_": "s6983c046b2043e0b1b7a62b2420e539",
                         "_text_": "Skip",
                         "_width_": {
                             "type": "string",
@@ -1544,7 +1544,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "Wk0i8DVd/fQ3dHuJG7Vou4u0+6M="
+                            "md5": "RURqgKfmDhQhgviI5cpI4A/14DA="
                         },
                         "wType": "Button",
                         "zindex": 1
@@ -1576,7 +1576,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s54fe6e5c0184eedbd8e06fc2ddaf517",
+                        "_skin_": "s02852a922b84f70bfcc17f361ab7f20",
                         "_text_": "Yes",
                         "_width_": {
                             "type": "string",
@@ -1598,7 +1598,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "D5AtKpRcWafxxapjy/hjJdmTLl0="
+                            "md5": "5uduMRL0nkfqOIaMQH5K1VBgfEA="
                         },
                         "wType": "Button",
                         "zindex": 1
@@ -1645,7 +1645,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se158156c856457abb9a0129c5d9cb4b",
+                        "_skin_": "se6cdf50743943afa92eac416272b3bf",
                         "_text_": "Dear user do you want to enable Finger print Authentication",
                         "_top_": {
                             "type": "string",
@@ -1690,7 +1690,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "Gs5VO2KdaoruyXULaNIG8xGlRrE="
+                            "md5": "v6lToBazIeE9Xgljrwto5zXZ38I="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -1705,7 +1705,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "4Q2YRnCKtCxUu7tsbggx4riU9co="
+                        "md5": "PJqk+gJwg261j6B8IZwIbl3+c4w="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -1725,7 +1725,7 @@
                 "retainflexpositionproperties": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "ixrB1LlLWtDlZGOBdH6FuIyHi5U="
+                    "md5": "c8dqJ5zn/uXSqmyKBS1EjrPmLdE="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -1778,7 +1778,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "sab95443dd6d4eb087f73ef050a86778",
+            "_skin_": "s86ffaea52a34f4fa215cb7672aea739",
             "_top_": {
                 "type": "string",
                 "value": "0%"
@@ -1819,7 +1819,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sc15b9d08dd946de863232ca7ef898a9",
+                "_skin_": "s3a2d329c9354f468cf1f92f3e8fcfe4",
                 "_top_": {
                     "type": "string",
                     "value": "0%"
@@ -1862,8 +1862,8 @@
                             0,
                             0
                         ],
-                        "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                        "_src_": "image_732.gif",
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "image_732_1.gif",
                         "_top_": {
                             "type": "string",
                             "value": "55%"
@@ -1890,7 +1890,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "Nf7wBFyVcW9OxektFr6/ssAA+3M="
+                            "md5": "l/APRgDegPWfYyNsp+gFYmneb1E="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -1919,7 +1919,7 @@
                         0
                     ],
                     "_percent_": true,
-                    "_skin_": "s06decfa18334113b0b435369863a829",
+                    "_skin_": "s0333ab11d22438ea845af2b89a8f655",
                     "_top_": {
                         "type": "string",
                         "value": "285dp"
@@ -1974,7 +1974,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sa3d81fdd16f4a0fadbac68a9126def8",
+                        "_skin_": "sfdfd73b37874b6bb77caeb13f943702",
                         "_text_": "Please wait while we process your request",
                         "_top_": {
                             "type": "string",
@@ -2019,7 +2019,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "F1lEcWNr8KjaxRlc4sFTe95/qdM="
+                            "md5": "wv0Xgop5dhPwmZwX7aFuV1buSw8="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -2034,14 +2034,14 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "r50vxOuCbHdo1F+Rjy8D7ZnzJFE="
+                        "md5": "LH7p77cCmM4pcEWRAthwmgQ7Go8="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
                     "widgetalignment": 1,
                     "zindex": 1
                 },
-                "focusskin": "s70022f860964c25956dc50d496390f2",
+                "focusskin": "s08ebd4df7b94e55800112499ab3e1e8",
                 "id": "flxOpaque",
                 "info": null,
                 "isvisible": true,
@@ -2052,14 +2052,14 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "iKv7PcsrTgyUQQMmWsxlJTXHfTo="
+                    "md5": "7js1Rw31JoI3/Z+jI9i7w0hmr88="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
                 "zindex": 100
             },
-            "focusskin": "sab95443dd6d4eb087f73ef050a86778",
+            "focusskin": "s86ffaea52a34f4fa215cb7672aea739",
             "id": "flxLoading",
             "info": null,
             "isvisible": false,
@@ -2070,7 +2070,7 @@
             "pf": "uwudf637f759e64eaa943af27248e39362",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "sSP+436Pt4Q24PPw74UZh/zxTj8="
+                "md5": "vIHyNJWfv8RRkc6+lUu0vxHHUzg="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -2102,7 +2102,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "sab95443dd6d4eb087f73ef050a86778",
+            "_skin_": "s86ffaea52a34f4fa215cb7672aea739",
             "_top_": {
                 "type": "string",
                 "value": "0%"
@@ -2143,7 +2143,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sc05da5085e74f568bc33f549c17f677",
+                "_skin_": "s6a098cc5974456d9647787dca8842a2",
                 "_top_": {
                     "type": "string",
                     "value": "26.39%"
@@ -2198,7 +2198,7 @@
                         0
                     ],
                     "_percent_": true,
-                    "_skin_": "sa3d82025e5e43928f944e34b1cc4418",
+                    "_skin_": "s6e543ac34384014bc2d015bdf07c70d",
                     "_top_": {
                         "type": "string",
                         "value": "1%"
@@ -2245,7 +2245,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s61837bf0b5247b3a9a01b2e94ba2ccd",
+                        "_skin_": "s48bcd5c1a744152b5b9ed5c4286dc74",
                         "_text_": "Incorrect Username/Password.",
                         "_top_": {
                             "type": "number",
@@ -2295,7 +2295,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "pHqX+0s3voyolQ0ffef9Rx1rbe4="
+                            "md5": "Zx5ILrq5S7wkko4642jpvs8mC88="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -2311,7 +2311,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "tJISUUzeJ5T6a/i6aZkvjU6GdJc="
+                        "md5": "NZ4LFb00f8ULXrr7aF8TmgsTcBY="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -2390,8 +2390,8 @@
                             0,
                             0
                         ],
-                        "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                        "_src_": "bank_portal_logo_blue.png",
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "bank_portal_logo_blue_1.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -2418,7 +2418,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "PmxegdjwqeH08FMIpWziV3Yt9OM="
+                            "md5": "uOiXhajwvksJl+XqZMrmWs6R+g0="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -2452,7 +2452,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "_skin_": "s0c8c1ce77f54c7499f53d2313093e40",
                         "_text_": "Major Bank",
                         "_top_": {
                             "type": "string",
@@ -2477,7 +2477,7 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "focusskin": "s0c8c1ce77f54c7499f53d2313093e40",
                         "id": "lblHeaderLogin",
                         "info": null,
                         "ipad": {
@@ -2508,7 +2508,7 @@
                         "parent": "flxHeaderLogin",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "Qi3h/qVUYLgeB5dOtsigCrTItgs="
+                            "md5": "pge64sAvULiEA2l8cyM2FexGS9c="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -2585,7 +2585,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "LOGIN",
                         "_top_": {
                             "type": "string",
@@ -2600,7 +2600,7 @@
                         "contentalignment": 5,
                         "displaytext": true,
                         "enablehapticfeedback": false,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnLogin",
                         "info": null,
                         "iphone": {
@@ -2617,7 +2617,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "f0E1nlEJxCJErgeoo8LKSakzQVQ="
+                            "md5": "JJFhB9kVwf5Z6mHVetf7PnCk/4I="
                         },
                         "wType": "Button",
                         "zindex": 1
@@ -2717,7 +2717,7 @@
                             0
                         ],
                         "_percent_": true,
-                        "_skin_": "s762924f29fe4d718672fb5f9043cbb7",
+                        "_skin_": "s6b9398f3c1e475fbf82a4985e96bfda",
                         "_top_": {
                             "type": "string",
                             "value": "1%"
@@ -2735,7 +2735,7 @@
                         "clipbounds": false,
                         "containerweight": 100,
                         "enablescrolling": true,
-                        "focusskin": "s762924f29fe4d718672fb5f9043cbb7",
+                        "focusskin": "s6b9398f3c1e475fbf82a4985e96bfda",
                         "id": "flxTbxPINLogin",
                         "info": null,
                         "isvisible": true,
@@ -2746,7 +2746,7 @@
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "ZkInpQf3PTvH50m4RJuQY3JePjs="
+                            "md5": "D5I745n77uv0eim2LdGR0enbo6M="
                         },
                         "snaptogrid": true,
                         "tbxPinLogin": {
@@ -2773,7 +2773,7 @@
                                 0
                             ],
                             "_placeholder_": "Enter PIN",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -2793,7 +2793,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxPinLogin",
                             "info": null,
                             "iscustomlayout": false,
@@ -2805,13 +2805,13 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxTbxPINLogin",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "restrictcharactersset": "!@#$%^&*(){}><  +=/,-_.N;",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": true,
                             "snapshot": {
-                                "md5": "XzOLZig28Jn4x5hgdBSmQK9wxOs="
+                                "md5": "HWqB9TVztdlMcuJnaGyzny/ehqc="
                             },
                             "textinputmode": "N",
                             "tooltip": "",
@@ -2851,7 +2851,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                        "_skin_": "se71b7fecece48e68f7989f150a46128",
                         "_text_": "PIN",
                         "_top_": {
                             "type": "string",
@@ -2872,7 +2872,7 @@
                         "canUpdateUI": true,
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "s7003745cbcb4f8a97356ae1b3fdc991",
+                        "focusskin": "se71b7fecece48e68f7989f150a46128",
                         "id": "lbPinLogin",
                         "info": null,
                         "ipad": {
@@ -2903,7 +2903,7 @@
                         "parent": "flxPinLogin",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "h3iYyanwI+GXBTUexaFuk0vBblg="
+                            "md5": "rWH4Itm3uWoBq2A9fIhfklVxUhM="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -2993,7 +2993,7 @@
                             0
                         ],
                         "_percent_": true,
-                        "_skin_": "s762924f29fe4d718672fb5f9043cbb7",
+                        "_skin_": "s6b9398f3c1e475fbf82a4985e96bfda",
                         "_top_": {
                             "type": "string",
                             "value": "1%"
@@ -3011,7 +3011,7 @@
                         "clipbounds": false,
                         "containerweight": 100,
                         "enablescrolling": true,
-                        "focusskin": "s762924f29fe4d718672fb5f9043cbb7",
+                        "focusskin": "s6b9398f3c1e475fbf82a4985e96bfda",
                         "id": "flxCustomerIdTbx",
                         "info": null,
                         "isvisible": true,
@@ -3022,7 +3022,7 @@
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "m9nSuF546gap2FYMUw6KrZWB0/o="
+                            "md5": "bqFzHInSZereA8o9lS47o+bH8Nk="
                         },
                         "snaptogrid": true,
                         "tbxUsernameLogin": {
@@ -3049,7 +3049,7 @@
                                 0
                             ],
                             "_placeholder_": "Enter Customer ID",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -3069,7 +3069,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxUsernameLogin",
                             "info": null,
                             "iscustomlayout": false,
@@ -3080,12 +3080,12 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxCustomerIdTbx",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": false,
                             "snapshot": {
-                                "md5": "v2hNQcEMyFMeARywjWSsQZZAKZw="
+                                "md5": "a5A1u0Pbfa/BpG2ap7ok9AjvMZM="
                             },
                             "textinputmode": "A",
                             "tooltip": "",
@@ -3125,7 +3125,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                        "_skin_": "se71b7fecece48e68f7989f150a46128",
                         "_text_": "Customer ID",
                         "_top_": {
                             "type": "string",
@@ -3146,7 +3146,7 @@
                         "canUpdateUI": true,
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "s7003745cbcb4f8a97356ae1b3fdc991",
+                        "focusskin": "se71b7fecece48e68f7989f150a46128",
                         "id": "lblUsernameLogin",
                         "info": null,
                         "ipad": {
@@ -3177,7 +3177,7 @@
                         "parent": "flxusernameLogin",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "bDGxilnOgv43bRMHKCesD4tgt4s="
+                            "md5": "Ge6iTmjc6XUPBRIJSeWAVKjayMs="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -3224,7 +3224,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s6667ab428194bf4af4160b79f1aa858",
+                    "_skin_": "sd8934cddfdb4a7b973e09479d3257fa",
                     "_text_": "To experience an end-to-end banking journey Login now",
                     "_top_": {
                         "type": "string",
@@ -3269,7 +3269,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "jPuc5eisMbBVKwA3G/13B4G2Qfg="
+                        "md5": "MSHBBxTgLDa43Y65E2K3Do2Y5+A="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -3281,14 +3281,14 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "REwHbdLJym97n2ITwclAx1egP3w="
+                    "md5": "NRRBkPeuf6mev89vIC9UhG7IFgI="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
                 "zindex": 2
             },
-            "focusskin": "sab95443dd6d4eb087f73ef050a86778",
+            "focusskin": "s86ffaea52a34f4fa215cb7672aea739",
             "id": "flxLogin",
             "info": null,
             "isvisible": false,
@@ -3299,7 +3299,7 @@
             "pf": "uwudf637f759e64eaa943af27248e39362",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "DCAypcP8yV0Fi+2JeZ4Yh9YVXGc="
+                "md5": "Plg6AKRmk5xNNtwaaOSOVOsbd9A="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -3331,7 +3331,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "sab95443dd6d4eb087f73ef050a86778",
+            "_skin_": "s86ffaea52a34f4fa215cb7672aea739",
             "_top_": {
                 "type": "string",
                 "value": "0%"
@@ -3373,7 +3373,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sc05da5085e74f568bc33f549c17f677",
+                "_skin_": "s6a098cc5974456d9647787dca8842a2",
                 "_top_": {
                     "type": "string",
                     "value": "26.39%"
@@ -3465,7 +3465,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "CONFIRM",
                         "_top_": {
                             "type": "string",
@@ -3480,7 +3480,7 @@
                         "contentalignment": 5,
                         "displaytext": true,
                         "enablehapticfeedback": false,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnConfirmOOB",
                         "info": null,
                         "iphone": {
@@ -3497,7 +3497,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "GEfzxoitaIyr/1dv1++H3K3jZV4="
+                            "md5": "BJydOKeAo+F39FmQPamBOdEiQbA="
                         },
                         "wType": "Button",
                         "zindex": 1
@@ -3551,7 +3551,7 @@
                         0
                     ],
                     "_percent_": true,
-                    "_skin_": "sa3d82025e5e43928f944e34b1cc4418",
+                    "_skin_": "s6e543ac34384014bc2d015bdf07c70d",
                     "_top_": {
                         "type": "string",
                         "value": "1%"
@@ -3598,7 +3598,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s61837bf0b5247b3a9a01b2e94ba2ccd",
+                        "_skin_": "s48bcd5c1a744152b5b9ed5c4286dc74",
                         "_text_": "Incorrect Username/Password.",
                         "_top_": {
                             "type": "number",
@@ -3648,7 +3648,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "Wws8ksTafYPT0ZeMnjRbNCN6MBc="
+                            "md5": "xcP9XmuLOokbktBMy50gceD3Nx4="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -3664,7 +3664,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "tgTlQ1si0A0zuNEP8TlN2K7KimA="
+                        "md5": "VJwfSHHzjf6IOW+o3CwFPoh1eNU="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -3697,8 +3697,8 @@
                             0,
                             0
                         ],
-                        "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                        "_src_": "bank_portal_logo_blue.png",
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "bank_portal_logo_blue_1.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -3732,7 +3732,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "UD6aYtuagtk1D3kwX9p/xE3u+LE="
+                            "md5": "2woVoy+6bZ9HeC0qDa6+Lc3GiRQ="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -3763,7 +3763,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "_skin_": "s0c8c1ce77f54c7499f53d2313093e40",
                         "_text_": "Major Bank",
                         "_top_": {
                             "type": "string",
@@ -3788,7 +3788,7 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "focusskin": "s0c8c1ce77f54c7499f53d2313093e40",
                         "genericProperties": {
                             "textStyle": {}
                         },
@@ -3822,7 +3822,7 @@
                         "parent": "flxHeaderOOB",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "xfbPfaShbpi+YMRQMgnRWtwDjEQ="
+                            "md5": "S0ww4h6IiHvS9kS9ywP3q3FgpDA="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -3965,7 +3965,7 @@
                             0
                         ],
                         "_percent_": true,
-                        "_skin_": "s762924f29fe4d718672fb5f9043cbb7",
+                        "_skin_": "s6b9398f3c1e475fbf82a4985e96bfda",
                         "_top_": {
                             "type": "string",
                             "value": "1%"
@@ -3983,7 +3983,7 @@
                         "clipbounds": false,
                         "containerweight": 100,
                         "enablescrolling": true,
-                        "focusskin": "s762924f29fe4d718672fb5f9043cbb7",
+                        "focusskin": "s6b9398f3c1e475fbf82a4985e96bfda",
                         "id": "flxTbxOTP",
                         "info": null,
                         "isvisible": true,
@@ -3994,7 +3994,7 @@
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "ZtMQq79yTLWVjZ6Xy6TgeERFzgM="
+                            "md5": "XRIXTbDakT0WB+MlIZ1I9CUQPM0="
                         },
                         "snaptogrid": true,
                         "tbxOTP": {
@@ -4022,7 +4022,7 @@
                                 0
                             ],
                             "_placeholder_": "Enter OTP",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -4042,7 +4042,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxOTP",
                             "info": null,
                             "iphone": {
@@ -4061,13 +4061,13 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxTbxOTP",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "restrictcharactersset": "!@#$%^&*(){}><  +=/,-_.N;",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": false,
                             "snapshot": {
-                                "md5": "0ql76JaOUnxTPZoa9lBzchDYO6A="
+                                "md5": "RS7czClp1lt06bIt5rPJ7xNvvrc="
                             },
                             "textinputmode": "N",
                             "tooltip": "",
@@ -4108,7 +4108,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                        "_skin_": "se71b7fecece48e68f7989f150a46128",
                         "_text_": "OTP",
                         "_top_": {
                             "type": "string",
@@ -4129,7 +4129,7 @@
                         "canUpdateUI": true,
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "s7003745cbcb4f8a97356ae1b3fdc991",
+                        "focusskin": "se71b7fecece48e68f7989f150a46128",
                         "genericProperties": {
                             "textStyle": {}
                         },
@@ -4163,7 +4163,7 @@
                         "parent": "flxOTP",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "6izWEl6EGjGwcC0215fch4C6cc4="
+                            "md5": "y/4mxTtff7IICVnItp8CXLR3tV8="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -4257,7 +4257,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s8b262e8208a41c39feab707fe15a2de",
+                        "_skin_": "sce3351c568042428eedbec5f2b895a3",
                         "_text_": "Resend OTP",
                         "_top_": {
                             "type": "number",
@@ -4312,7 +4312,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "YnGXlgaSnw97W9DhO2l2rqYlsRQ="
+                            "md5": "9sQ8+KIiQw9hgko1u4qPHCJrX6g="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -4359,7 +4359,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s6667ab428194bf4af4160b79f1aa858",
+                    "_skin_": "sd8934cddfdb4a7b973e09479d3257fa",
                     "_text_": "Enter the OTP sent to your registered mobile number",
                     "_top_": {
                         "type": "string",
@@ -4407,7 +4407,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "tzD2Mzf2EXuW6pC2bWh5P8psaUE="
+                        "md5": "9ksdainQG/kw/U5oFdxMUcc9cug="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -4496,14 +4496,14 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "F9aWmfM7K6ZF3WIwI+KNFWM1Dhc="
+                    "md5": "lLCLXq1TGhX7e3+3UgnK/XdWNNo="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
                 "zindex": 2
             },
-            "focusskin": "sab95443dd6d4eb087f73ef050a86778",
+            "focusskin": "s86ffaea52a34f4fa215cb7672aea739",
             "id": "flxOOB",
             "info": null,
             "isvisible": true,
@@ -4514,7 +4514,7 @@
             "pf": "uwudf637f759e64eaa943af27248e39362",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "B+SPrekEYD3cfUIXs7sTygcON38="
+                "md5": "YJuDqaoYd1E7HH37reegh8JnXwU="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -4546,7 +4546,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "s6c3d78e419945abae1cf81bb6469925",
+            "_skin_": "sf8f540b101e4713b66d43f49d94d42a",
             "_top_": {
                 "type": "string",
                 "value": "0dp"
@@ -4576,7 +4576,7 @@
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "0HPWBmqPQXgLx5JMkD/t7qSMdmc="
+                "md5": "8HTZdUh0ffZ1yRcmkIXBdJkOd+8="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -4608,7 +4608,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "s194b013b5c34923898b4a2931fb7321",
+            "_skin_": "s63e2c2509834595b0df83cb59efde3a",
             "_top_": {
                 "type": "string",
                 "value": "0%"
@@ -4651,7 +4651,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s581f0ab3e1d4ec393d28a2d726fbe09",
+                "_skin_": "s5a2236be0364778809244096d940785",
                 "_top_": {
                     "type": "string",
                     "value": "-14.09%"
@@ -4666,7 +4666,7 @@
                 "clipbounds": false,
                 "containerweight": 100,
                 "enablescrolling": true,
-                "focusskin": "s581f0ab3e1d4ec393d28a2d726fbe09",
+                "focusskin": "s5a2236be0364778809244096d940785",
                 "id": "flxBgImagePIN",
                 "info": null,
                 "isvisible": false,
@@ -4677,7 +4677,7 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "HTw34yC3KLSGCStz5i9PVayFKds="
+                    "md5": "MDX/2jxStUmgWbOVojeB4REz9Iw="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -4708,7 +4708,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s70022f860964c25956dc50d496390f2",
+                "_skin_": "s08ebd4df7b94e55800112499ab3e1e8",
                 "_top_": {
                     "type": "string",
                     "value": "0%"
@@ -4723,7 +4723,7 @@
                 "clipbounds": false,
                 "containerweight": 100,
                 "enablescrolling": true,
-                "focusskin": "s70022f860964c25956dc50d496390f2",
+                "focusskin": "s08ebd4df7b94e55800112499ab3e1e8",
                 "id": "flxBgOpaquePIN",
                 "info": null,
                 "isvisible": true,
@@ -4734,7 +4734,7 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "NcP3abZmR7UWM4XwkHdsT1Yhrok="
+                    "md5": "eVOZLDCOoWyxC0fLPmHap9bYh/E="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -4768,8 +4768,8 @@
                             0,
                             0
                         ],
-                        "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                        "_src_": "bank_portal_logo_blue.png",
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "bank_portal_logo_blue_1.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -4796,7 +4796,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "fm/IKdlqLkAluJjqj+tQoDpYIEk="
+                            "md5": "cjiODJ3GKvdhhOQYX+DSvkOEdlI="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -4826,7 +4826,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "_skin_": "s0c8c1ce77f54c7499f53d2313093e40",
                         "_text_": "Major Bank",
                         "_top_": {
                             "type": "string",
@@ -4851,7 +4851,7 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "focusskin": "s0c8c1ce77f54c7499f53d2313093e40",
                         "id": "CopylblHeaderLogin0g5b96e3c22de4f",
                         "info": null,
                         "ipad": {
@@ -4882,7 +4882,7 @@
                         "parent": "FlxHeaderProfileReset",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "I3cD7PvRTPB65KXN0Ngm3X+pr10="
+                            "md5": "81tmMSeUvL1XV3Fj92tdPNBecOg="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -4974,7 +4974,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sc05da5085e74f568bc33f549c17f677",
+                "_skin_": "s6a098cc5974456d9647787dca8842a2",
                 "_top_": {
                     "type": "string",
                     "value": "26.39%"
@@ -5113,7 +5113,7 @@
                                 0,
                                 0
                             ],
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Enter PIN",
                             "_top_": {
                                 "type": "string",
@@ -5134,7 +5134,7 @@
                             "canUpdateUI": true,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "s2efa7fbd245431e8fc1cd44ad032b8a",
+                            "focusskin": "s4eb0cab12b64b81836ef450756af1d5",
                             "id": "lblEnterPIN",
                             "info": null,
                             "ipad": {
@@ -5165,7 +5165,7 @@
                             "parent": "flxEnterUserPIN",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "eWxHBiEHEkYZb3Ud9yeiA4LVASM="
+                                "md5": "38ulrNm9W9GRNPI314rbsUJ9mc0="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -5204,7 +5204,7 @@
                                 0
                             ],
                             "_placeholder_": "Enter Pin",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -5224,7 +5224,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxPConfirmUserPIN",
                             "info": null,
                             "iscustomlayout": false,
@@ -5235,13 +5235,13 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxEnterUserPIN",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "restrictcharactersset": ".",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": true,
                             "snapshot": {
-                                "md5": "jqky5F/6+LM5iBbJnHmujwMowGk="
+                                "md5": "ID8mAYCTeTAFNI1XfOuXvvR4p70="
                             },
                             "textinputmode": "A",
                             "tooltip": "",
@@ -5294,7 +5294,7 @@
                         0
                     ],
                     "_percent_": true,
-                    "_skin_": "sba8417705b549218d6104ca73ab08ea",
+                    "_skin_": "s08a2de904284a43839b383ea4782c9a",
                     "_top_": {
                         "type": "string",
                         "value": "0dp"
@@ -5341,7 +5341,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s1e973d7141d4c49a9092c4dfbdfcc21",
+                        "_skin_": "s7138fa026de47aeb590692342055ac2",
                         "_text_": "Incorrect PIN",
                         "_top_": {
                             "type": "number",
@@ -5391,7 +5391,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "+yhNSN88JtU+wDqWeODP5HeglTY="
+                            "md5": "iVv9adPaNssqv5sKspXE78oFYY4="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -5407,7 +5407,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "twdsFGFyTwPBMy40mv9x4tkmMw4="
+                        "md5": "P0LqfWL8Q1kRjKylDStUgE8eXzM="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -5472,7 +5472,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "CONFIRM PIN",
                         "_top_": {
                             "type": "string",
@@ -5490,7 +5490,7 @@
                         "containerweight": 100,
                         "contentalignment": 5,
                         "displaytext": true,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnConfirmUserPIN",
                         "info": null,
                         "iscustomlayout": false,
@@ -5502,7 +5502,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "ug123cbcJYneMR366uNECnYyqUs="
+                            "md5": "ljFn2GyTcZcyRmfm891HVwoEyl0="
                         },
                         "wType": "Button",
                         "zindex": 1
@@ -5545,14 +5545,14 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "HqU1gmHUd/JrkH4NQyiRI4velQM="
+                    "md5": "k1nP/fRH0LYuBAsYuvVp3YQsI8c="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
                 "zindex": 2
             },
-            "focusskin": "s194b013b5c34923898b4a2931fb7321",
+            "focusskin": "s63e2c2509834595b0df83cb59efde3a",
             "id": "flxProfileResetUI",
             "info": null,
             "isvisible": false,
@@ -5563,7 +5563,7 @@
             "pf": "uwudf637f759e64eaa943af27248e39362",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "j1YsAJrGJJAGzNYoluxbeNwm0Ng="
+                "md5": "kQi0AWpYdFJ4SO9Ii3CfEyPANXo="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -5595,7 +5595,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "s194b013b5c34923898b4a2931fb7321",
+            "_skin_": "s63e2c2509834595b0df83cb59efde3a",
             "_top_": {
                 "type": "string",
                 "value": "0%"
@@ -5638,7 +5638,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s337b9957af0451981809b4abc6798f0",
+                "_skin_": "s489c27ab9174a0aa4a6fded347c465e",
                 "_top_": {
                     "type": "string",
                     "value": "27.75%"
@@ -5720,7 +5720,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "Skip",
                         "_top_": {
                             "type": "string",
@@ -5734,7 +5734,7 @@
                         "containerweight": 100,
                         "contentalignment": 5,
                         "displaytext": true,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnBioSkip",
                         "info": null,
                         "iscustomlayout": false,
@@ -5746,7 +5746,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "mEjw4nGnEm1axCqaff+ApVoEKXw="
+                            "md5": "tgqdwX9A3eQb7a95Ag4C5i4e5u0="
                         },
                         "wType": "Button",
                         "zindex": 12
@@ -5774,7 +5774,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "Yes",
                         "_top_": {
                             "type": "string",
@@ -5788,7 +5788,7 @@
                         "containerweight": 100,
                         "contentalignment": 5,
                         "displaytext": true,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnBioYes",
                         "info": null,
                         "iscustomlayout": false,
@@ -5800,7 +5800,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "cnpl2WnP2CuZiCfPV6NC9YBbuik="
+                            "md5": "s6slqMbj8wOxG+T1EOcu+DJMZ4g="
                         },
                         "wType": "Button",
                         "zindex": 12
@@ -5859,8 +5859,8 @@
                         0,
                         0
                     ],
-                    "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                    "_src_": "biopromptico.png",
+                    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                    "_src_": "biopromptico_1.png",
                     "_top_": {
                         "type": "string",
                         "value": "10.00%"
@@ -5887,7 +5887,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "+XfyMemPwI0nbnCALr2XpGtGBKU="
+                        "md5": "FYm5lFMFhL5W+4TtMgEEwgPYA9o="
                     },
                     "srcType": 1,
                     "wType": "Image",
@@ -5921,7 +5921,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s1a7107643764141a0c76b6fc5dfd6c9",
+                    "_skin_": "s7bbd360e5db400bae391167e3680575",
                     "_text_": "Dear user do you want to enable Biometrics for Login",
                     "_top_": {
                         "type": "string",
@@ -5946,7 +5946,7 @@
                     },
                     "containerweight": 100,
                     "contentalignment": 5,
-                    "focusskin": "s5ae6b61ca464ce8875d095fec75384b",
+                    "focusskin": "se297949ab704dd6ad95218a39226801",
                     "id": "lblFP",
                     "info": null,
                     "ipad": {
@@ -5977,7 +5977,7 @@
                     "parent": "flxBioPrompt",
                     "pf": "uwudf637f759e64eaa943af27248e39362",
                     "snapshot": {
-                        "md5": "aZlDlo26JDHpA8yYeB9QwtU3nis="
+                        "md5": "hYxVcH/N+mzz/Zv76QqliG2jrwA="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -5989,7 +5989,7 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "iONDcw1wljYpl+dPYVbO21a7MS8="
+                    "md5": "nRMLD32/HmhKTWnCyfCFaQQGvA8="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -6021,8 +6021,8 @@
                         0,
                         0
                     ],
-                    "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                    "_src_": "closeicon_1_3_4_1.png",
+                    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                    "_src_": "closeicon_1_3_4_1_1.png",
                     "_top_": {
                         "type": "number",
                         "value": "0"
@@ -6054,7 +6054,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "/C745n511zMrWlyJlbAur4a13iM="
+                        "md5": "YQtTIy54V96vj6tI1dPS3Io85O0="
                     },
                     "srcType": 1,
                     "wType": "Image",
@@ -6084,7 +6084,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s6e7be1b36d34a86a6db451d97a1f60b",
+                "_skin_": "s76ab1cd2e3e47648ed672a2ba5cfc2e",
                 "_top_": {
                     "type": "string",
                     "value": "0dp"
@@ -6132,7 +6132,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s155d8f850994e2fbf003e75c8a2600a",
+                    "_skin_": "s5f5263173ef4b809991c4da29fc608f",
                     "_text_": "Incorrect Username/Password.",
                     "_top_": {
                         "type": "number",
@@ -6181,7 +6181,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "CpeuXCs1uD6vQJosG11zpf+nTmo="
+                        "md5": "yQHFyIGiiAmg+fs41sprLfB1t7s="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -6195,7 +6195,7 @@
                 "retainflexpositionproperties": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "IOaVH1ibO+Ke7Shy5ZwdzZsjsFw="
+                    "md5": "JU8C7ye5fG6zvz4/20CvRMDB19U="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -6226,7 +6226,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sc05da5085e74f568bc33f549c17f677",
+                "_skin_": "s6a098cc5974456d9647787dca8842a2",
                 "_top_": {
                     "type": "string",
                     "value": "26.39%"
@@ -6365,7 +6365,7 @@
                                 0,
                                 0
                             ],
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Confirm PIN",
                             "_top_": {
                                 "type": "string",
@@ -6386,7 +6386,7 @@
                             "canUpdateUI": true,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "s2efa7fbd245431e8fc1cd44ad032b8a",
+                            "focusskin": "s4eb0cab12b64b81836ef450756af1d5",
                             "id": "lblConfirmPin",
                             "info": null,
                             "ipad": {
@@ -6417,7 +6417,7 @@
                             "parent": "flxConfirmPinInner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "TcbAakTdxjXJiee5qG87yJasP4o="
+                                "md5": "trOpgCrqXvby8UCUlxypIbl9ZBk="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -6456,7 +6456,7 @@
                                 0
                             ],
                             "_placeholder_": "Confirm PIN",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -6476,7 +6476,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxConfirmPassword",
                             "info": null,
                             "iscustomlayout": false,
@@ -6488,13 +6488,13 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxConfirmPinInner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "restrictcharactersset": "!@#$%^&*()-=_+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>{}:\".,/\":?",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": true,
                             "snapshot": {
-                                "md5": "8m5dWOb4Si3Bag/6AkvfoqF5TWo="
+                                "md5": "FmxxVg6TogyikExYovj3Pd1XG+Y="
                             },
                             "textinputmode": "N",
                             "tooltip": "",
@@ -6530,7 +6530,7 @@
                             "type": "number",
                             "value": "0"
                         },
-                        "_skin_": "s04b9ea9d6594ff89744d8cd20c5b991",
+                        "_skin_": "s5525c61fb2c406c82db2155654eb8b2",
                         "_top_": {
                             "type": "string",
                             "value": "0%"
@@ -6574,8 +6574,8 @@
                                 "type": "string",
                                 "value": "5%"
                             },
-                            "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                            "_src_": "imgshape140421490125936_3_4_1.png",
+                            "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                            "_src_": "imgshape140421490125936_3_4_1_1.png",
                             "_top_": {
                                 "type": "string",
                                 "value": "5dp"
@@ -6602,7 +6602,7 @@
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "snapshot": {
-                                "md5": "vHdckxqgSTXhQ941XUrAaZfPxrg="
+                                "md5": "yDbkg+XOXWChrAj3GzEA98WUdN4="
                             },
                             "srcType": 1,
                             "wType": "Image",
@@ -6636,7 +6636,7 @@
                                 "type": "string",
                                 "value": "1.00%"
                             },
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Hide",
                             "_top_": {
                                 "type": "string",
@@ -6661,7 +6661,7 @@
                             },
                             "containerweight": 100,
                             "contentalignment": 6,
-                            "focusskin": "s3cab2e2f9f04b33a3db6eba29f9e843",
+                            "focusskin": "s00e14c9a82f453fa56e0917792d3dc8",
                             "id": "lblHideConfirmPassword",
                             "info": null,
                             "ipad": {
@@ -6692,7 +6692,7 @@
                             "parent": "flxHideConfirmPassword",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "3nZ6OwV4rYSUBiMTgTiFtcnpn1U="
+                                "md5": "C0sQdvGllCv9lrFm9uMRzbwsGho="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -6705,7 +6705,7 @@
                         "reverselayoutdirection": true,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "qB29WtAIw0GNFO2kpjUpJOE6Ix4="
+                            "md5": "KMc8nkDZv69n+VAbaXOOCxa/Qbc="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -6848,7 +6848,7 @@
                                 0,
                                 0
                             ],
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Create PIN",
                             "_top_": {
                                 "type": "string",
@@ -6869,7 +6869,7 @@
                             "canUpdateUI": true,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "s2efa7fbd245431e8fc1cd44ad032b8a",
+                            "focusskin": "s4eb0cab12b64b81836ef450756af1d5",
                             "id": "lblCreatePin",
                             "info": null,
                             "ipad": {
@@ -6900,7 +6900,7 @@
                             "parent": "flxCreatePinInner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "cXACs7mYR+UbbOBx1O4vwpGakSA="
+                                "md5": "efHJJy93sfQb1W2g3q/O80F9ZB4="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -6939,7 +6939,7 @@
                                 0
                             ],
                             "_placeholder_": "Enter PIN",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -6959,7 +6959,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxPassword",
                             "info": null,
                             "iscustomlayout": false,
@@ -6971,13 +6971,13 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxCreatePinInner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "restrictcharactersset": "!@#$%^&*()-=_+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>{}:\".,/\":?",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": true,
                             "snapshot": {
-                                "md5": "GJWGWgamRJScDRW1wE8jy95gtPw="
+                                "md5": "GNinGKPm/6s/uof091SBhoer3Jg="
                             },
                             "textinputmode": "N",
                             "tooltip": "",
@@ -7013,7 +7013,7 @@
                             "type": "number",
                             "value": "0"
                         },
-                        "_skin_": "s04b9ea9d6594ff89744d8cd20c5b991",
+                        "_skin_": "s5525c61fb2c406c82db2155654eb8b2",
                         "_top_": {
                             "type": "string",
                             "value": "0%"
@@ -7057,8 +7057,8 @@
                                 "type": "string",
                                 "value": "5%"
                             },
-                            "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                            "_src_": "imgshape140421490125936_3_4_1.png",
+                            "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                            "_src_": "imgshape140421490125936_3_4_1_1.png",
                             "_top_": {
                                 "type": "string",
                                 "value": "5dp"
@@ -7085,7 +7085,7 @@
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "snapshot": {
-                                "md5": "57tnBxUonUI+FQMnHRJcQXx7el0="
+                                "md5": "fHH4SS2oPNfJ7CYrx51BrYpAS50="
                             },
                             "srcType": 1,
                             "wType": "Image",
@@ -7119,7 +7119,7 @@
                                 "type": "string",
                                 "value": "1%"
                             },
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Hide",
                             "_top_": {
                                 "type": "string",
@@ -7144,7 +7144,7 @@
                             },
                             "containerweight": 100,
                             "contentalignment": 6,
-                            "focusskin": "s3cab2e2f9f04b33a3db6eba29f9e843",
+                            "focusskin": "s00e14c9a82f453fa56e0917792d3dc8",
                             "id": "lblHideCreatePin",
                             "info": null,
                             "ipad": {
@@ -7175,7 +7175,7 @@
                             "parent": "flxHidePassword",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "5hC9pWvv33bKGOAU0QFE+cF+i+g="
+                                "md5": "wiWpWlZRXk8j9B0G7YzyK/PjKxs="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -7188,7 +7188,7 @@
                         "reverselayoutdirection": true,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "1wFZV2dXLV4S+coDbBmlsZn7eT0="
+                            "md5": "N6i0/vSSZoPPtsBJaw0oZdnnqdw="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -7236,7 +7236,7 @@
                         0
                     ],
                     "_percent_": true,
-                    "_skin_": "sba8417705b549218d6104ca73ab08ea",
+                    "_skin_": "s08a2de904284a43839b383ea4782c9a",
                     "_top_": {
                         "type": "string",
                         "value": "2%"
@@ -7283,7 +7283,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s1e973d7141d4c49a9092c4dfbdfcc21",
+                        "_skin_": "s7138fa026de47aeb590692342055ac2",
                         "_text_": "Incorrect PIN",
                         "_top_": {
                             "type": "string",
@@ -7333,7 +7333,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "vRBKHzWarZX4A6eTdaBlUW07aXs="
+                            "md5": "eg3fEXQe6b6kTDO9QrCiJW8Kt6E="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -7349,7 +7349,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "TmZj3a/kvYW/7lM46EvPbleZn0Y="
+                        "md5": "WkLdzdrqIqbuJC45038p1VuMyvU="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -7428,8 +7428,8 @@
                             0,
                             0
                         ],
-                        "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                        "_src_": "bank_portal_logo_blue.png",
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "bank_portal_logo_blue_1.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -7456,7 +7456,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "2Eyk6r+Ksn8aTJF+SBbe3odfklA="
+                            "md5": "IwhsSHaghjrpIDdKBBzxJ9paCwc="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -7490,7 +7490,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "_skin_": "s0c8c1ce77f54c7499f53d2313093e40",
                         "_text_": "Major Bank",
                         "_top_": {
                             "type": "string",
@@ -7515,7 +7515,7 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "focusskin": "s0c8c1ce77f54c7499f53d2313093e40",
                         "id": "lblSetPwd",
                         "info": null,
                         "ipad": {
@@ -7546,7 +7546,7 @@
                         "parent": "flxHeaderSetPassword",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "Ebd2zTp0ZStUsfdAa2Y3k2O6LTw="
+                            "md5": "gG270KkeNvPDWxRQtmSzm7WxEMY="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -7623,7 +7623,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "CREATE",
                         "_top_": {
                             "type": "string",
@@ -7637,7 +7637,7 @@
                         "containerweight": 100,
                         "contentalignment": 5,
                         "displaytext": true,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnSetPassword",
                         "info": null,
                         "iscustomlayout": false,
@@ -7649,7 +7649,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "s/G7pF+FnU13EoqpQYn/Q6fX/Rs="
+                            "md5": "m2MJgNWZ3Wx6Dq39zUEZmR/ihE8="
                         },
                         "wType": "Button",
                         "zindex": 1
@@ -7692,14 +7692,14 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "Bd0T8E5evMBzg3T+VHqhMAsSRh8="
+                    "md5": "ZMFN6jVNQXSWTV560EczdVmi5qA="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
                 "zindex": 2
             },
-            "focusskin": "s194b013b5c34923898b4a2931fb7321",
+            "focusskin": "s63e2c2509834595b0df83cb59efde3a",
             "id": "flxSetPassword",
             "info": null,
             "isvisible": false,
@@ -7710,7 +7710,7 @@
             "pf": "uwudf637f759e64eaa943af27248e39362",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "AiVPoZCw9gjL3gXu1L0HOrgnuHg="
+                "md5": "Vo5we940jqqrNfW/fa84XUuZOQc="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -7742,7 +7742,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "s194b013b5c34923898b4a2931fb7321",
+            "_skin_": "s63e2c2509834595b0df83cb59efde3a",
             "_top_": {
                 "type": "string",
                 "value": "0.00%"
@@ -7785,7 +7785,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s6e7be1b36d34a86a6db451d97a1f60b",
+                "_skin_": "s76ab1cd2e3e47648ed672a2ba5cfc2e",
                 "_top_": {
                     "type": "string",
                     "value": "0dp"
@@ -7829,8 +7829,8 @@
                         0,
                         0
                     ],
-                    "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                    "_src_": "closeicon_1_3_4_1.png",
+                    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                    "_src_": "closeicon_1_3_4_1_1.png",
                     "_top_": {
                         "type": "number",
                         "value": "0"
@@ -7862,7 +7862,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "kstOZ+YSNMoHN0A9xR9Xyiw/Cxg="
+                        "md5": "KNAbkYDEuq3Ya7IaWY+ODfnVC0s="
                     },
                     "srcType": 1,
                     "wType": "Image",
@@ -7897,7 +7897,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s155d8f850994e2fbf003e75c8a2600a",
+                    "_skin_": "s5f5263173ef4b809991c4da29fc608f",
                     "_text_": "Enter a valid standard password",
                     "_top_": {
                         "type": "number",
@@ -7946,7 +7946,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "Q2dE6sTB6joYakYeB2oSnIZpZUw="
+                        "md5": "G3cFOw0PewrdECuESYKhK2LGbOE="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -7960,7 +7960,7 @@
                 "retainflexpositionproperties": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "YthmbNWmgYgbFocDIY8lJoyhsgE="
+                    "md5": "c7CJ91838ENPrPycDDSZS/4ZnvA="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -7991,7 +7991,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sc05da5085e74f568bc33f549c17f677",
+                "_skin_": "s6a098cc5974456d9647787dca8842a2",
                 "_top_": {
                     "type": "string",
                     "value": "26.39%"
@@ -8130,7 +8130,7 @@
                                 0,
                                 0
                             ],
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Confirm Password",
                             "_top_": {
                                 "type": "string",
@@ -8151,7 +8151,7 @@
                             "canUpdateUI": true,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "s2efa7fbd245431e8fc1cd44ad032b8a",
+                            "focusskin": "s4eb0cab12b64b81836ef450756af1d5",
                             "id": "lblConfirmStandardPassword",
                             "info": null,
                             "ipad": {
@@ -8182,7 +8182,7 @@
                             "parent": "flxConfirmStandardPassword",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "6aZWg5GTn2cDolXfwcbUT33Slu4="
+                                "md5": "vvG1oFm56mrTDq5WwWp9cZBr2yA="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -8221,7 +8221,7 @@
                                 0
                             ],
                             "_placeholder_": "Confirm Password",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -8241,7 +8241,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxConfirmStandardPassword",
                             "info": null,
                             "iscustomlayout": false,
@@ -8252,12 +8252,12 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxConfirmStandardPassword",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": true,
                             "snapshot": {
-                                "md5": "C500EMeHqMBgFD8AdSc7RDZ7Yac="
+                                "md5": "+sTdP/ZMScTwneEjIVjUTDN3JmQ="
                             },
                             "textinputmode": "A",
                             "tooltip": "",
@@ -8293,7 +8293,7 @@
                             "type": "number",
                             "value": "0"
                         },
-                        "_skin_": "s04b9ea9d6594ff89744d8cd20c5b991",
+                        "_skin_": "s5525c61fb2c406c82db2155654eb8b2",
                         "_top_": {
                             "type": "string",
                             "value": "0.00%"
@@ -8337,8 +8337,8 @@
                                 "type": "string",
                                 "value": "5%"
                             },
-                            "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                            "_src_": "imgshape140421490125936_3_4_1.png",
+                            "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                            "_src_": "imgshape140421490125936_3_4_1_1.png",
                             "_top_": {
                                 "type": "string",
                                 "value": "5dp"
@@ -8365,7 +8365,7 @@
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "snapshot": {
-                                "md5": "ZkntYPlonw4DujYpbHqnHsA1qZw="
+                                "md5": "FvBxNxXZuYB/EW1RICcdzLBJFmo="
                             },
                             "srcType": 1,
                             "wType": "Image",
@@ -8399,7 +8399,7 @@
                                 "type": "string",
                                 "value": "1%"
                             },
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Hide",
                             "_top_": {
                                 "type": "string",
@@ -8424,7 +8424,7 @@
                             },
                             "containerweight": 100,
                             "contentalignment": 6,
-                            "focusskin": "s3cab2e2f9f04b33a3db6eba29f9e843",
+                            "focusskin": "s00e14c9a82f453fa56e0917792d3dc8",
                             "id": "lblHideConfirmStandardPassword",
                             "info": null,
                             "ipad": {
@@ -8455,7 +8455,7 @@
                             "parent": "flxHideConfirmStandardPassword",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "jtlDTy/dA+lphm1m9zqDcFX6KZs="
+                                "md5": "kW9Y6O+yqkY+lhWDD8IVc/jFWrc="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -8468,7 +8468,7 @@
                         "reverselayoutdirection": true,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "hiTTDMOC36j7R9AKoO8wgw93D9Y="
+                            "md5": "itORtMmUGTUfaaxz1ZN58RAKWyg="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -8564,7 +8564,7 @@
                                 0,
                                 0
                             ],
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Create Password",
                             "_top_": {
                                 "type": "string",
@@ -8585,7 +8585,7 @@
                             "canUpdateUI": true,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "s2efa7fbd245431e8fc1cd44ad032b8a",
+                            "focusskin": "s4eb0cab12b64b81836ef450756af1d5",
                             "id": "lblCreatePassword",
                             "info": null,
                             "ipad": {
@@ -8616,7 +8616,7 @@
                             "parent": "CopyflxCreatePinInner0d82d998498df4d",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "El58Tlz8hSH6PhfDma6bq7ntBE4="
+                                "md5": "UuTVoKN1lxfLouI11qOoYlxP6XU="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -8655,7 +8655,7 @@
                                 0
                             ],
                             "_placeholder_": "Enter Password",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -8675,7 +8675,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxStandardPassword",
                             "info": null,
                             "iscustomlayout": false,
@@ -8686,13 +8686,13 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "CopyflxCreatePinInner0d82d998498df4d",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "restrictcharactersset": ".",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": true,
                             "snapshot": {
-                                "md5": "tgeOSjKOSy2qWN7exb0CV7Cg6NY="
+                                "md5": "Fuv+KvLYCvs8qa+0Proxs1b0LZ8="
                             },
                             "textinputmode": "A",
                             "tooltip": "",
@@ -8776,8 +8776,8 @@
                                 "type": "string",
                                 "value": "5%"
                             },
-                            "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                            "_src_": "imgshape140421490125936_3_4_1.png",
+                            "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                            "_src_": "imgshape140421490125936_3_4_1_1.png",
                             "_top_": {
                                 "type": "string",
                                 "value": "5dp"
@@ -8804,7 +8804,7 @@
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "snapshot": {
-                                "md5": "h0VoZBwV+dirRiTyUsQEg+2FBQ4="
+                                "md5": "RSctM3iWpY4TlMZX0gYoIXrck8s="
                             },
                             "srcType": 1,
                             "wType": "Image",
@@ -8834,7 +8834,7 @@
                                 "type": "string",
                                 "value": "1%"
                             },
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Hide",
                             "_top_": {
                                 "type": "string",
@@ -8859,7 +8859,7 @@
                             },
                             "containerweight": 100,
                             "contentalignment": 6,
-                            "focusskin": "s3cab2e2f9f04b33a3db6eba29f9e843",
+                            "focusskin": "s00e14c9a82f453fa56e0917792d3dc8",
                             "id": "CopylblHideCreatePin0a4f494fe99424d",
                             "info": null,
                             "ipad": {
@@ -8890,7 +8890,7 @@
                             "parent": "flxHideStandardPassword",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "Dvjug860RCVCOS66jdexqKBWBis="
+                                "md5": "tw1EJxrrQmaCqa56OW+t3GOiBTg="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -8920,7 +8920,7 @@
                             "type": "number",
                             "value": "0"
                         },
-                        "_skin_": "s04b9ea9d6594ff89744d8cd20c5b991",
+                        "_skin_": "s5525c61fb2c406c82db2155654eb8b2",
                         "_top_": {
                             "type": "string",
                             "value": "0.00%"
@@ -8950,7 +8950,7 @@
                         "reverselayoutdirection": true,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "CM3d2l1BmR/Jx73HfFfLwsT0wcc="
+                            "md5": "pleBqd4ZyjkxogT6M90W3OJCU70="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -8998,7 +8998,7 @@
                         0
                     ],
                     "_percent_": true,
-                    "_skin_": "s725cc90ae57402282c3897a0dd0f9db",
+                    "_skin_": "sfaae0df451c45b0b13ea321d9ad5eb5",
                     "_top_": {
                         "type": "string",
                         "value": "1%"
@@ -9049,7 +9049,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s56c640c91314ef1a241eda9a404297d",
+                        "_skin_": "sdf431416bcc483e827869d1c37f9971",
                         "_text_": "Incorrect Username/Password.",
                         "_top_": {
                             "type": "number",
@@ -9099,7 +9099,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "eDumlskyVwaSkar2nxV5q2XDsII="
+                            "md5": "/u49uS2SHR3O4VbBosi/e0wzbxM="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -9115,7 +9115,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "L3mQwatO0v67z323Q2OsOp+gxGY="
+                        "md5": "NzRHYdcTZ2PGgXqI3K70kMTO6O8="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -9147,8 +9147,8 @@
                             0,
                             0
                         ],
-                        "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                        "_src_": "bank_portal_logo_blue.png",
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "bank_portal_logo_blue_1.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -9175,7 +9175,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "yNJEMcwH+pGWNiCBABEaU0vLd4A="
+                            "md5": "MtxniP6jqDWEhXYIHb32AIwj0uk="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -9205,7 +9205,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "_skin_": "s0c8c1ce77f54c7499f53d2313093e40",
                         "_text_": "Major Bank",
                         "_top_": {
                             "type": "string",
@@ -9230,7 +9230,7 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "focusskin": "s0c8c1ce77f54c7499f53d2313093e40",
                         "id": "CopylblSetPwd0b759cd50d4c049",
                         "info": null,
                         "ipad": {
@@ -9261,7 +9261,7 @@
                         "parent": "flxHeaderSetPassword0g4ea1cdc80ce45",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "druJ2oYuGfc0sdgl0PWzk3EOwE4="
+                            "md5": "P307qcHG0v8xwBS0Y5yq3+axqQY="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -9389,7 +9389,7 @@
                             "type": "string",
                             "value": "0%"
                         },
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "SUBMIT",
                         "_top_": {
                             "type": "string",
@@ -9403,7 +9403,7 @@
                         "containerweight": 100,
                         "contentalignment": 5,
                         "displaytext": true,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnSetStandardPassword",
                         "info": null,
                         "iscustomlayout": false,
@@ -9415,7 +9415,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "h0JFmpe3X/AdfGK9iX1FrccQa1g="
+                            "md5": "BhiQ8LOzVvQ0eHIuHtlTKo+FwvA="
                         },
                         "wType": "Button",
                         "zindex": 1
@@ -9458,7 +9458,7 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "BmYqZ04nHMBRvhfJO0Y9JMzgAfc="
+                    "md5": "wLewne2YbMxOnpwFfYftDd6Ni3s="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -9489,7 +9489,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s1a7107643764141a0c76b6fc5dfd6c9",
+                    "_skin_": "s7bbd360e5db400bae391167e3680575",
                     "_text_": "Do you want to add standard internet banking password",
                     "_top_": {
                         "type": "string",
@@ -9514,7 +9514,7 @@
                     },
                     "containerweight": 100,
                     "contentalignment": 5,
-                    "focusskin": "s5ae6b61ca464ce8875d095fec75384b",
+                    "focusskin": "se297949ab704dd6ad95218a39226801",
                     "id": "CopylblFP0a5d362f2f33b46",
                     "info": null,
                     "ipad": {
@@ -9545,7 +9545,7 @@
                     "parent": "flxStandardPasswordPrompt",
                     "pf": "uwudf637f759e64eaa943af27248e39362",
                     "snapshot": {
-                        "md5": "OaCCauZf+e3v34SUM8kci6lFRXQ="
+                        "md5": "/faO76XhnjGeYe7neEunLaSf2JU="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -9575,7 +9575,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s337b9957af0451981809b4abc6798f0",
+                "_skin_": "s489c27ab9174a0aa4a6fded347c465e",
                 "_top_": {
                     "type": "string",
                     "value": "27.75%"
@@ -9657,7 +9657,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "Skip",
                         "_top_": {
                             "type": "string",
@@ -9671,7 +9671,7 @@
                         "containerweight": 100,
                         "contentalignment": 5,
                         "displaytext": true,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnSPSkip",
                         "info": null,
                         "iscustomlayout": false,
@@ -9683,7 +9683,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "Fxi8hymR05F+BoV6dmj1Q1eGaCo="
+                            "md5": "6qGY1l+Rf25g0ZUeSfTywTP4ONk="
                         },
                         "wType": "Button",
                         "zindex": 12
@@ -9711,7 +9711,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "Yes",
                         "_top_": {
                             "type": "string",
@@ -9725,7 +9725,7 @@
                         "containerweight": 100,
                         "contentalignment": 5,
                         "displaytext": true,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnSPYes",
                         "info": null,
                         "iscustomlayout": false,
@@ -9737,7 +9737,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "j1OrEUoscFseNej3RmoS5/J/Rys="
+                            "md5": "Ve7QNcw9Ct8Wlehq+Jo4UlI1Q8M="
                         },
                         "wType": "Button",
                         "zindex": 12
@@ -9796,8 +9796,8 @@
                         0,
                         0
                     ],
-                    "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                    "_src_": "internetbankingpwd.png",
+                    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                    "_src_": "internetbankingpwd_1.png",
                     "_top_": {
                         "type": "string",
                         "value": "10%"
@@ -9824,7 +9824,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "v3SiGfcP1xTqwaCzjHK37uya5oQ="
+                        "md5": "OSce6HCopoN1FL6qIJF3333zbq8="
                     },
                     "srcType": 1,
                     "wType": "Image",
@@ -9840,14 +9840,14 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "b3ZwVI2UlgRRQlSSNP0Xx7ixP9E="
+                    "md5": "TbOZzR6tMeO5Y+ZXIUKjvPHqd+E="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
                 "zindex": 20
             },
-            "focusskin": "s194b013b5c34923898b4a2931fb7321",
+            "focusskin": "s63e2c2509834595b0df83cb59efde3a",
             "id": "flxSetStandardPassword",
             "info": null,
             "isvisible": false,
@@ -9858,7 +9858,7 @@
             "pf": "uwudf637f759e64eaa943af27248e39362",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "vcYDGZebV8JXS3GOwh7Ek8pPQIw="
+                "md5": "P41b+NNz/brcoawvvspugl/5R/U="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -9891,8 +9891,8 @@
                         0,
                         0
                     ],
-                    "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                    "_src_": "bank_portal_logo_blue.png",
+                    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                    "_src_": "bank_portal_logo_blue_1.png",
                     "_top_": {
                         "type": "string",
                         "value": "0dp"
@@ -9919,7 +9919,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "6p73b1DQoI7aEuUqGjWOKyXgtuk="
+                        "md5": "UoJPShG36oF7WHpDwKqLkGcSj9c="
                     },
                     "srcType": 1,
                     "wType": "Image",
@@ -9949,7 +9949,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                    "_skin_": "s0c8c1ce77f54c7499f53d2313093e40",
                     "_text_": "Major Bank",
                     "_top_": {
                         "type": "string",
@@ -9974,7 +9974,7 @@
                     },
                     "containerweight": 100,
                     "contentalignment": 4,
-                    "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                    "focusskin": "s0c8c1ce77f54c7499f53d2313093e40",
                     "id": "CopylblHeaderLogin0gab4dd45df674b",
                     "info": null,
                     "ipad": {
@@ -10005,7 +10005,7 @@
                     "parent": "CopyflxHeaderLogin0ad5c010fe24d43",
                     "pf": "uwudf637f759e64eaa943af27248e39362",
                     "snapshot": {
-                        "md5": "IW//pyfj3YC+iKnMiNRigHxvyLI="
+                        "md5": "IM3LVYp6wRe1w8nzjAOZYwtNmos="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -10099,7 +10099,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "sc05da5085e74f568bc33f549c17f677",
+            "_skin_": "s6a098cc5974456d9647787dca8842a2",
             "_top_": {
                 "type": "string",
                 "value": "0.00%"
@@ -10198,8 +10198,8 @@
                         0,
                         0
                     ],
-                    "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                    "_src_": "imgshape140421490031072.png",
+                    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                    "_src_": "imgshape140421490031072_1.png",
                     "_top_": {
                         "type": "string",
                         "value": "0dp"
@@ -10226,7 +10226,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "MO+cdVkfL9Tjmqg1ZSf12z19Vsg="
+                        "md5": "kMNOWttGxq+WvE+xURaXPnSCZRI="
                     },
                     "srcType": 1,
                     "wType": "Image",
@@ -10261,7 +10261,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sf45a4b9f48148438a950aef731eebb9",
+                    "_skin_": "s41536dafc114d2ebedfd98e2d3429d7",
                     "_text_": "Device Registration Success",
                     "_top_": {
                         "type": "string",
@@ -10306,7 +10306,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "URk6LEsqR/iW7c71hbjapa88Qt0="
+                        "md5": "oYLeS0Ecn2wJ8mvw06mGxxYe3yU="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -10328,7 +10328,7 @@
                 "widgetalignment": 1,
                 "zindex": 1
             },
-            "focusskin": "sab95443dd6d4eb087f73ef050a86778",
+            "focusskin": "s86ffaea52a34f4fa215cb7672aea739",
             "id": "flxSuccess",
             "info": null,
             "isvisible": false,
@@ -10339,7 +10339,7 @@
             "pf": "uwudf637f759e64eaa943af27248e39362",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "ekirnkBXTc6r0CxsAWQemOe1AUM="
+                "md5": "ozPdYbA7J2lPy4rDEtOZxlAHaNU="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -10371,7 +10371,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "s194b013b5c34923898b4a2931fb7321",
+            "_skin_": "s63e2c2509834595b0df83cb59efde3a",
             "_top_": {
                 "type": "string",
                 "value": "0%"
@@ -10413,7 +10413,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s6e7be1b36d34a86a6db451d97a1f60b",
+                "_skin_": "s76ab1cd2e3e47648ed672a2ba5cfc2e",
                 "_top_": {
                     "type": "string",
                     "value": "0dp"
@@ -10457,8 +10457,8 @@
                         0,
                         0
                     ],
-                    "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                    "_src_": "closeicon_1_3_4_1.png",
+                    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                    "_src_": "closeicon_1_3_4_1_1.png",
                     "_top_": {
                         "type": "number",
                         "value": "0"
@@ -10490,7 +10490,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "2IpjaVrRy8w03ajpsjoTd0KWtW0="
+                        "md5": "/EMUeLKP3dS9n+vw1cknVa9R+iI="
                     },
                     "srcType": 1,
                     "wType": "Image",
@@ -10525,7 +10525,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s155d8f850994e2fbf003e75c8a2600a",
+                    "_skin_": "s5f5263173ef4b809991c4da29fc608f",
                     "_text_": "Incorrect Username/Password.",
                     "_top_": {
                         "type": "number",
@@ -10574,7 +10574,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "sdCp5MAwmCTt4YAOemAp/gK8pqk="
+                        "md5": "rDMDOhWGIE7Rek9iLSRvBgIkpRA="
                     },
                     "textstyle": {},
                     "tooltip": "",
@@ -10588,7 +10588,7 @@
                 "retainflexpositionproperties": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "09RWll0hwklWYhuwEyHppsWfIAo="
+                    "md5": "Rrmy2XZuCLRJTYrGpOuOhu5CXIs="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -10619,7 +10619,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s21f90a327824f5182c8dcbd70d333f4",
+                "_skin_": "s4c45c0b1a2740c8a26016673a9bbe23",
                 "_top_": {
                     "type": "string",
                     "value": "25.86%"
@@ -10676,8 +10676,8 @@
                                 "type": "string",
                                 "value": "5%"
                             },
-                            "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                            "_src_": "imgshape140421490125936_3_4_1.png",
+                            "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                            "_src_": "imgshape140421490125936_3_4_1_1.png",
                             "_top_": {
                                 "type": "string",
                                 "value": "5dp"
@@ -10704,7 +10704,7 @@
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "snapshot": {
-                                "md5": "HkjdZMJqC4huci4Jh23C2yyL5X8="
+                                "md5": "VLfUxLvkPgiZVP74mAaWotSpX7M="
                             },
                             "srcType": 1,
                             "wType": "Image",
@@ -10734,7 +10734,7 @@
                                 "type": "string",
                                 "value": "1%"
                             },
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Hide",
                             "_top_": {
                                 "type": "string",
@@ -10759,7 +10759,7 @@
                             },
                             "containerweight": 100,
                             "contentalignment": 6,
-                            "focusskin": "s3cab2e2f9f04b33a3db6eba29f9e843",
+                            "focusskin": "s00e14c9a82f453fa56e0917792d3dc8",
                             "id": "CopylblHideConfirmPassword0e8042ec9b9c146",
                             "info": null,
                             "ipad": {
@@ -10790,7 +10790,7 @@
                             "parent": "CopyflxHideNewPIN0ecc86607bc7c47",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "mqfziT6a4S+F824ibcQfffbL8ik="
+                                "md5": "QVz1Oajjk0/8K0hOVQUHGmrXSTU="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -10820,7 +10820,7 @@
                             "type": "number",
                             "value": "0"
                         },
-                        "_skin_": "s04b9ea9d6594ff89744d8cd20c5b991",
+                        "_skin_": "s5525c61fb2c406c82db2155654eb8b2",
                         "_top_": {
                             "type": "string",
                             "value": "0%"
@@ -10850,7 +10850,7 @@
                         "reverselayoutdirection": true,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "7C66j56QaZ9G7X5UweZEIgv7/rk="
+                            "md5": "+xho6SQzaFkUWKgtDtSa2xLbwP4="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -10927,7 +10927,7 @@
                                 0,
                                 0
                             ],
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Confirm PIN",
                             "_top_": {
                                 "type": "string",
@@ -10948,7 +10948,7 @@
                             "canUpdateUI": true,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "s2efa7fbd245431e8fc1cd44ad032b8a",
+                            "focusskin": "s4eb0cab12b64b81836ef450756af1d5",
                             "id": "CopylblNewPIN0b6a3afeb2aec4b",
                             "info": null,
                             "ipad": {
@@ -10979,7 +10979,7 @@
                             "parent": "flxNewPINConfirmInner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "DdyezShsaZusGIYNPxF6BaKGqA4="
+                                "md5": "FnGhEFlCoXBCJmVI1vMQeh59Zfg="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -11064,7 +11064,7 @@
                                 0
                             ],
                             "_placeholder_": "Confirm PIN",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -11084,7 +11084,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxConfirmUpdPwd",
                             "info": null,
                             "iscustomlayout": false,
@@ -11096,12 +11096,12 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxNewPINConfirmInner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": true,
                             "snapshot": {
-                                "md5": "TD6TZU49fC8F7x5LFetNm9DqPS0="
+                                "md5": "PvlspYGhmZ85MuIAP0xoUnH7Gd0="
                             },
                             "textinputmode": "N",
                             "tooltip": "",
@@ -11249,7 +11249,7 @@
                                 0,
                                 0
                             ],
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Current PIN",
                             "_top_": {
                                 "type": "string",
@@ -11270,7 +11270,7 @@
                             "canUpdateUI": true,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "s2efa7fbd245431e8fc1cd44ad032b8a",
+                            "focusskin": "s4eb0cab12b64b81836ef450756af1d5",
                             "id": "lblCurrentPINInner",
                             "info": null,
                             "ipad": {
@@ -11301,7 +11301,7 @@
                             "parent": "flxCurrentPINInner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "75Dp5wWPbGQq0bm/QqQiGuLCEB8="
+                                "md5": "OA/HmUDSLyOrgs/bZuuwi2+keEs="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -11340,7 +11340,7 @@
                                 0
                             ],
                             "_placeholder_": "Enter Current PIN",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -11360,7 +11360,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxCurrentPIN",
                             "info": null,
                             "iscustomlayout": false,
@@ -11372,13 +11372,13 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxCurrentPINInner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "restrictcharactersset": ".",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": true,
                             "snapshot": {
-                                "md5": "EsYg4MWCGFeNhvbJRnuUjH8zFBo="
+                                "md5": "+r17JtnJplTOJyQGR8c9JEQWVL0="
                             },
                             "textinputmode": "N",
                             "tooltip": "",
@@ -11415,8 +11415,8 @@
                                 "type": "string",
                                 "value": "5%"
                             },
-                            "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                            "_src_": "imgshape140421490125936_3_4_1.png",
+                            "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                            "_src_": "imgshape140421490125936_3_4_1_1.png",
                             "_top_": {
                                 "type": "string",
                                 "value": "5dp"
@@ -11443,7 +11443,7 @@
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "snapshot": {
-                                "md5": "emY0XrddK0G8Nd51uoF9Unv3xlA="
+                                "md5": "tCeZ/r99uHC5+cXEtJ7PHniVy1I="
                             },
                             "srcType": 1,
                             "wType": "Image",
@@ -11473,7 +11473,7 @@
                                 "type": "string",
                                 "value": "1%"
                             },
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Hide",
                             "_top_": {
                                 "type": "string",
@@ -11498,7 +11498,7 @@
                             },
                             "containerweight": 100,
                             "contentalignment": 6,
-                            "focusskin": "s3cab2e2f9f04b33a3db6eba29f9e843",
+                            "focusskin": "s00e14c9a82f453fa56e0917792d3dc8",
                             "id": "CopylblHideCreatePin0dab5c51a345e44",
                             "info": null,
                             "ipad": {
@@ -11529,7 +11529,7 @@
                             "parent": "flxHideCurrentPIN",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "GQxfIMvIkSxG4QORC11JUly59e4="
+                                "md5": "XVaI/SqjZfoKsjOKG9XtuwVAQ6E="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -11559,7 +11559,7 @@
                             "type": "number",
                             "value": "0"
                         },
-                        "_skin_": "s04b9ea9d6594ff89744d8cd20c5b991",
+                        "_skin_": "s5525c61fb2c406c82db2155654eb8b2",
                         "_top_": {
                             "type": "string",
                             "value": "0%"
@@ -11589,7 +11589,7 @@
                         "reverselayoutdirection": true,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "J/cC4V9VDubcwLy8fbJXQTwlA8w="
+                            "md5": "Rj4VE73BQtu/m+lRRXN63aLKJVo="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -11637,7 +11637,7 @@
                         0
                     ],
                     "_percent_": true,
-                    "_skin_": "sda5a7959b4f41b186111879dafc075c",
+                    "_skin_": "se9b4856e21c4e2dbb394fa38edd3928",
                     "_top_": {
                         "type": "string",
                         "value": "0dp"
@@ -11684,7 +11684,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s7f08a763e6843a1b39256f1e78c8d54",
+                        "_skin_": "s6f60fe8d7d34e0dbee99fbad67e4e36",
                         "_text_": "Incorrect Username/Password.",
                         "_top_": {
                             "type": "number",
@@ -11734,7 +11734,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "RdV1ypo3wXMJbkMnMSJKZC/wSjA="
+                            "md5": "xxkEEk9zozE4NF7jIw3WXYru4Kg="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -11750,7 +11750,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "/wRIvI218SeiQKbsm35ieznN1z4="
+                        "md5": "ochM+I58xB5WYy2KxS8/TC042hk="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -11782,8 +11782,8 @@
                             0,
                             0
                         ],
-                        "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                        "_src_": "bank_portal_logo_blue.png",
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "bank_portal_logo_blue_1.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -11810,7 +11810,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "jGlK/k1JUbfQIRSBaIn3rFvvhTU="
+                            "md5": "SsS3m1ui9O9s7rzD6DwNgSiFRPE="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -11840,7 +11840,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "_skin_": "s0c8c1ce77f54c7499f53d2313093e40",
                         "_text_": "Major Bank",
                         "_top_": {
                             "type": "string",
@@ -11865,7 +11865,7 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "focusskin": "s0c8c1ce77f54c7499f53d2313093e40",
                         "id": "CopylblHeaderLogin0j95e55e2d72a47",
                         "info": null,
                         "ipad": {
@@ -11896,7 +11896,7 @@
                         "parent": "flxHeaderUpdatePassword",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "rayaUIgc1AGg+ghKceQyB+LlfDE="
+                            "md5": "OS0v5hDodiBPvU8xXTDF5e06q4w="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -12038,8 +12038,8 @@
                                 "type": "string",
                                 "value": "5%"
                             },
-                            "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                            "_src_": "imgshape140421490125936_3_4_1.png",
+                            "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                            "_src_": "imgshape140421490125936_3_4_1_1.png",
                             "_top_": {
                                 "type": "string",
                                 "value": "5dp"
@@ -12066,7 +12066,7 @@
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "snapshot": {
-                                "md5": "rqwiQaGjtBCgB30eSQFwa66o9zs="
+                                "md5": "c+vDmD2mgAoE58gAPHBhFexNoM4="
                             },
                             "srcType": 1,
                             "wType": "Image",
@@ -12096,7 +12096,7 @@
                                 "type": "string",
                                 "value": "1%"
                             },
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "Hide",
                             "_top_": {
                                 "type": "string",
@@ -12121,7 +12121,7 @@
                             },
                             "containerweight": 100,
                             "contentalignment": 6,
-                            "focusskin": "s3cab2e2f9f04b33a3db6eba29f9e843",
+                            "focusskin": "s00e14c9a82f453fa56e0917792d3dc8",
                             "id": "CopylblHideConfirmPassword0df9753b739ac41",
                             "info": null,
                             "ipad": {
@@ -12152,7 +12152,7 @@
                             "parent": "flxHideNewPIN",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "T8wFMgHIkYC7Z+0RtmUW90d13sA="
+                                "md5": "ceX0wBRWwbCJjLr1Xx1tr3QWYGY="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -12182,7 +12182,7 @@
                             "type": "number",
                             "value": "0"
                         },
-                        "_skin_": "s04b9ea9d6594ff89744d8cd20c5b991",
+                        "_skin_": "s5525c61fb2c406c82db2155654eb8b2",
                         "_top_": {
                             "type": "string",
                             "value": "0%"
@@ -12212,7 +12212,7 @@
                         "reverselayoutdirection": true,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "s1g1F9WfxFs5PUanrEyyWXpivwk="
+                            "md5": "/9oaa27Hj2MvClszaEdiMe7p+fs="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -12289,7 +12289,7 @@
                                 0,
                                 0
                             ],
-                            "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+                            "_skin_": "se71b7fecece48e68f7989f150a46128",
                             "_text_": "New PIN",
                             "_top_": {
                                 "type": "string",
@@ -12310,7 +12310,7 @@
                             "canUpdateUI": true,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "s2efa7fbd245431e8fc1cd44ad032b8a",
+                            "focusskin": "s4eb0cab12b64b81836ef450756af1d5",
                             "id": "lblNewPIN",
                             "info": null,
                             "ipad": {
@@ -12341,7 +12341,7 @@
                             "parent": "flxNewPINInner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
                             "snapshot": {
-                                "md5": "nFwjGnP2Ba5YwE8I0LFiCvIPG6U="
+                                "md5": "5LHOGUqw5AVW0fHQevW2SiSLY54="
                             },
                             "textstyle": {},
                             "tooltip": "",
@@ -12380,7 +12380,7 @@
                                 0
                             ],
                             "_placeholder_": "Enter New PIN",
-                            "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "_text_": "",
                             "_top_": {
                                 "type": "string",
@@ -12400,7 +12400,7 @@
                             "containerheightmode": 1,
                             "containerweight": 100,
                             "contentalignment": 4,
-                            "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+                            "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
                             "id": "tbxNewPIN",
                             "info": null,
                             "iscustomlayout": false,
@@ -12412,12 +12412,12 @@
                             "name": "kony.ui.TextBox2",
                             "parent": "flxNewPINInner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+                            "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "securetextentry": true,
                             "snapshot": {
-                                "md5": "LvyYfld9Yh3TfdpwCi6YEXZxwXM="
+                                "md5": "R6Ls9kMKL8A+EgkQ7g+mZgozmso="
                             },
                             "textinputmode": "N",
                             "tooltip": "",
@@ -12504,7 +12504,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se589a932f6446c98254493ceb98098f",
+                        "_skin_": "s283aa49094b4451b9210e4a5c2e6b27",
                         "_text_": "UPDATE",
                         "_top_": {
                             "type": "string",
@@ -12522,7 +12522,7 @@
                         "containerweight": 100,
                         "contentalignment": 5,
                         "displaytext": true,
-                        "focusskin": "s880364557d44ee988ad542856ec1155",
+                        "focusskin": "s3200a060b2449358c630e32b51908e1",
                         "id": "btnUpdatePIN",
                         "info": null,
                         "iscustomlayout": false,
@@ -12534,7 +12534,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "Qk6PdgO2Nr0jtpPiQiNMnt3CG/s="
+                            "md5": "6nWKX5efkg99SGfHyYfrW8eS2KE="
                         },
                         "wType": "Button",
                         "zindex": 1
@@ -12577,14 +12577,14 @@
                 "pf": "uwudf637f759e64eaa943af27248e39362",
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "7RxGfJJ5f+gWVLmI4KQHwHIyloM="
+                    "md5": "CnoJfV1VhaRWfjpOwz/MwdfRWlY="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
                 "widgetalignment": 1,
                 "zindex": 2
             },
-            "focusskin": "s194b013b5c34923898b4a2931fb7321",
+            "focusskin": "s63e2c2509834595b0df83cb59efde3a",
             "id": "flxUpdatePassword",
             "info": null,
             "isvisible": false,
@@ -12595,7 +12595,7 @@
             "pf": "uwudf637f759e64eaa943af27248e39362",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "J/wVOxX0PPKF1JsxTt78CMeKf2c="
+                "md5": "wBA4jWzdeyv8TqZdO5QHmQMGY44="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -12627,7 +12627,7 @@
                 0
             ],
             "_percent_": true,
-            "_skin_": "s8beee64ada1496ea57aaacd187d673c",
+            "_skin_": "s676f84187ac495981c881baff4f9d29",
             "_top_": {
                 "type": "string",
                 "value": "0.00%"
@@ -12669,7 +12669,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s3af52d400744bad8336967476df4645",
+                "_skin_": "s76b06b45ff04a5486c13de912c22bae",
                 "_top_": {
                     "type": "string",
                     "value": "0%"
@@ -12711,7 +12711,7 @@
                         0
                     ],
                     "_percent_": true,
-                    "_skin_": "s1bf9f6f6255474885bbb2795529e831",
+                    "_skin_": "s173e3b0e21e4181ac6651d7c9f3abae",
                     "_top_": {
                         "type": "string",
                         "value": "0.00%"
@@ -12803,7 +12803,7 @@
                                     0,
                                     0
                                 ],
-                                "_skin_": "sf55296769a64c95a4b235050b5252fb",
+                                "_skin_": "s94de958d8f241f483a5192849fffc2d",
                                 "_text_": "User profile Deleted Successfully",
                                 "_top_": {
                                     "type": "string",
@@ -12844,7 +12844,7 @@
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "snapshot": {
-                                    "md5": "77G1VntNjVbJ4Ori45N6mBJaBQY="
+                                    "md5": "l88mvlxP/OYLUFW7t9mT1YjfMkA="
                                 },
                                 "textstyle": {},
                                 "tooltip": "",
@@ -12924,7 +12924,7 @@
                                     0,
                                     0
                                 ],
-                                "_skin_": "sb646ab80a9943c69209f6a80463e4d5",
+                                "_skin_": "s9639c323e914ddb9afc50a187fcb299",
                                 "_text_": "OK",
                                 "_top_": {
                                     "type": "string",
@@ -12939,7 +12939,7 @@
                                 "contentalignment": 5,
                                 "disabledSkins": {},
                                 "displaytext": true,
-                                "focusskin": "s36a366349124a5ead651a4065b1de75",
+                                "focusskin": "s9b2edf9c91a41a6a6c398b9836c83c4",
                                 "id": "btnDeleteUserDone",
                                 "info": null,
                                 "iscustomlayout": false,
@@ -12951,7 +12951,7 @@
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "snapshot": {
-                                    "md5": "OaP51q55UHwbtZS5vfPsjyqe2oM="
+                                    "md5": "oYWVeXZBhLtx/L1mQ9uUO82H79k="
                                 },
                                 "wType": "Button",
                                 "zindex": 1
@@ -13011,7 +13011,7 @@
                             0
                         ],
                         "_percent_": true,
-                        "_skin_": "sb9848606a904c5ea9f12f161095b265",
+                        "_skin_": "s3e1760bc2d845c5a6864476cb52c16b",
                         "_top_": {
                             "type": "string",
                             "value": "40%"
@@ -13052,7 +13052,7 @@
                         "retainflowhorizontalalignment": false,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "9Fi6uNQkNsuUD2i2tIe8faXGISQ="
+                            "md5": "Gjt5Dqn/AujFfyfhaHwAsGfmx7c="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -13083,7 +13083,7 @@
                             0
                         ],
                         "_percent_": true,
-                        "_skin_": "sb9848606a904c5ea9f12f161095b265",
+                        "_skin_": "s3e1760bc2d845c5a6864476cb52c16b",
                         "_top_": {
                             "type": "string",
                             "value": "40%"
@@ -13136,7 +13136,7 @@
                                     0,
                                     0
                                 ],
-                                "_skin_": "sbef21208c2049c083799db47ac80541",
+                                "_skin_": "s7504fa10d134bc793fa51834a24d33c",
                                 "_text_": "Alert",
                                 "_top_": {
                                     "type": "string",
@@ -13181,7 +13181,7 @@
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "snapshot": {
-                                    "md5": "l5X7yxa78Wo4pMB85fk2KxjN9Bw="
+                                    "md5": "H/8XMM8Elix1UkxcFqCsTmVF8QI="
                                 },
                                 "textstyle": {},
                                 "tooltip": "",
@@ -13278,7 +13278,7 @@
                                     0
                                 ],
                                 "_percent_": true,
-                                "_skin_": "sed7ae13ce6a4e4e8e814f89f58a7320",
+                                "_skin_": "s42c26f0ecad4f88aaf9bfb41a80cf42",
                                 "_top_": {
                                     "type": "string",
                                     "value": "0%"
@@ -13312,7 +13312,7 @@
                                         0,
                                         0
                                     ],
-                                    "_skin_": "sb646ab80a9943c69209f6a80463e4d5",
+                                    "_skin_": "s9639c323e914ddb9afc50a187fcb299",
                                     "_text_": "CANCEL",
                                     "_top_": {
                                         "type": "string",
@@ -13326,7 +13326,7 @@
                                     "containerweight": 100,
                                     "contentalignment": 5,
                                     "displaytext": true,
-                                    "focusskin": "s36a366349124a5ead651a4065b1de75",
+                                    "focusskin": "s9b2edf9c91a41a6a6c398b9836c83c4",
                                     "id": "btnDeleteUserCancel",
                                     "info": null,
                                     "iscustomlayout": false,
@@ -13338,7 +13338,7 @@
                                     "retaincontentalignment": false,
                                     "retainflexpositionproperties": false,
                                     "snapshot": {
-                                        "md5": "wQTVNXV2WXxaJI9/fuis4fWZMkU="
+                                        "md5": "g7P6qiWWSIkVJAIkquLq6WGqGfs="
                                     },
                                     "wType": "Button",
                                     "zindex": 1
@@ -13364,7 +13364,7 @@
                                 "retainflowhorizontalalignment": false,
                                 "snapgridsize": 10,
                                 "snapshot": {
-                                    "md5": "+d13BXMqmNwxtOUdh4cv0dhFi2Q="
+                                    "md5": "s9JpF/ZZ4lrZkg/7PpEMUIamtEo="
                                 },
                                 "snaptogrid": true,
                                 "wType": "FlexContainer",
@@ -13395,7 +13395,7 @@
                                     0
                                 ],
                                 "_percent_": true,
-                                "_skin_": "s0c134ac68574abca79442aba98cf847",
+                                "_skin_": "sea52bed9fca497faa65f722af0c1b05",
                                 "_width_": {
                                     "type": "string",
                                     "value": "40%"
@@ -13425,7 +13425,7 @@
                                         0,
                                         0
                                     ],
-                                    "_skin_": "sb646ab80a9943c69209f6a80463e4d5",
+                                    "_skin_": "s9639c323e914ddb9afc50a187fcb299",
                                     "_text_": "OK",
                                     "_top_": {
                                         "type": "string",
@@ -13439,7 +13439,7 @@
                                     "containerweight": 100,
                                     "contentalignment": 5,
                                     "displaytext": true,
-                                    "focusskin": "s36a366349124a5ead651a4065b1de75",
+                                    "focusskin": "s9b2edf9c91a41a6a6c398b9836c83c4",
                                     "id": "btnDeleteUserOK",
                                     "info": null,
                                     "iscustomlayout": false,
@@ -13451,7 +13451,7 @@
                                     "retaincontentalignment": false,
                                     "retainflexpositionproperties": false,
                                     "snapshot": {
-                                        "md5": "+34PrCvVvgkThmCoR7VSM3+w8xA="
+                                        "md5": "9I2QqRTfekGFs0H/vzLB/Zf496Q="
                                     },
                                     "wType": "Button",
                                     "zindex": 1
@@ -13477,7 +13477,7 @@
                                 "retainflowhorizontalalignment": false,
                                 "snapgridsize": 10,
                                 "snapshot": {
-                                    "md5": "CBBhfs9VhCZpaIFFrqk55VL81ok="
+                                    "md5": "lHafKoajwARU1tspDznAFI0lx3I="
                                 },
                                 "snaptogrid": true,
                                 "wType": "FlexContainer",
@@ -13698,7 +13698,7 @@
                         "retainflowhorizontalalignment": false,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "01fOOF0zy2YbeS8hN5dhJ/nR5+8="
+                            "md5": "GbALEjJ9hwzODR3Z8rTWzZnsCSk="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -13729,7 +13729,7 @@
                             0
                         ],
                         "_percent_": true,
-                        "_skin_": "sb9848606a904c5ea9f12f161095b265",
+                        "_skin_": "s3e1760bc2d845c5a6864476cb52c16b",
                         "_top_": {
                             "type": "string",
                             "value": "40%"
@@ -13825,7 +13825,7 @@
                                     0
                                 ],
                                 "_percent_": true,
-                                "_skin_": "sed7ae13ce6a4e4e8e814f89f58a7320",
+                                "_skin_": "s42c26f0ecad4f88aaf9bfb41a80cf42",
                                 "_top_": {
                                     "type": "string",
                                     "value": "0%"
@@ -13859,7 +13859,7 @@
                                         0,
                                         0
                                     ],
-                                    "_skin_": "sb646ab80a9943c69209f6a80463e4d5",
+                                    "_skin_": "s9639c323e914ddb9afc50a187fcb299",
                                     "_text_": "CANCEL",
                                     "_top_": {
                                         "type": "string",
@@ -13873,7 +13873,7 @@
                                     "containerweight": 100,
                                     "contentalignment": 5,
                                     "displaytext": true,
-                                    "focusskin": "s36a366349124a5ead651a4065b1de75",
+                                    "focusskin": "s9b2edf9c91a41a6a6c398b9836c83c4",
                                     "id": "btnDeleteUserPinCancel",
                                     "info": null,
                                     "iscustomlayout": false,
@@ -13885,7 +13885,7 @@
                                     "retaincontentalignment": false,
                                     "retainflexpositionproperties": false,
                                     "snapshot": {
-                                        "md5": "wGi0xUJ+6Cj6EsjB/2+GCyg3i24="
+                                        "md5": "y0vnp5Fvfz/vLcJ78AjAXzQr+88="
                                     },
                                     "wType": "Button",
                                     "zindex": 1
@@ -13911,7 +13911,7 @@
                                 "retainflowhorizontalalignment": false,
                                 "snapgridsize": 10,
                                 "snapshot": {
-                                    "md5": "wxekQXePCNULogeOBnh0tlYvy04="
+                                    "md5": "TfGVGqkghGCJ34sH7QVQHk0b43s="
                                 },
                                 "snaptogrid": true,
                                 "wType": "FlexContainer",
@@ -13942,7 +13942,7 @@
                                     0
                                 ],
                                 "_percent_": true,
-                                "_skin_": "s0c134ac68574abca79442aba98cf847",
+                                "_skin_": "sea52bed9fca497faa65f722af0c1b05",
                                 "_top_": {
                                     "type": "string",
                                     "value": "0"
@@ -13976,7 +13976,7 @@
                                         0,
                                         0
                                     ],
-                                    "_skin_": "sb646ab80a9943c69209f6a80463e4d5",
+                                    "_skin_": "s9639c323e914ddb9afc50a187fcb299",
                                     "_text_": "OK",
                                     "_top_": {
                                         "type": "string",
@@ -13990,7 +13990,7 @@
                                     "containerweight": 100,
                                     "contentalignment": 5,
                                     "displaytext": true,
-                                    "focusskin": "s36a366349124a5ead651a4065b1de75",
+                                    "focusskin": "s9b2edf9c91a41a6a6c398b9836c83c4",
                                     "id": "btnDeleteUserPINOk",
                                     "info": null,
                                     "iscustomlayout": false,
@@ -14002,7 +14002,7 @@
                                     "retaincontentalignment": false,
                                     "retainflexpositionproperties": false,
                                     "snapshot": {
-                                        "md5": "BZEEdb2hrwdZeO0HU7yjWwGzxAE="
+                                        "md5": "MttDMNEXMarfWvsA2nYHzkKiMRM="
                                     },
                                     "wType": "Button",
                                     "zindex": 1
@@ -14028,7 +14028,7 @@
                                 "retainflowhorizontalalignment": false,
                                 "snapgridsize": 10,
                                 "snapshot": {
-                                    "md5": "3YmW2pP/w/zx6Jjb5Enjmmb6PUk="
+                                    "md5": "Rr0lWwqs5lVEr4+Y5NCVgL1gIlk="
                                 },
                                 "snaptogrid": true,
                                 "wType": "FlexContainer",
@@ -14131,7 +14131,7 @@
                                     0,
                                     0
                                 ],
-                                "_skin_": "s6bb46c09a91419a978c77e8d9573d6b",
+                                "_skin_": "s45f0f67eae3475296a792cbe38d69f5",
                                 "_text_": "Please enter your PIN to delete your Profile",
                                 "_top_": {
                                     "type": "string",
@@ -14172,7 +14172,7 @@
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "snapshot": {
-                                    "md5": "a9KJ8NYf3EmfHtBF14mXZRl6JjI="
+                                    "md5": "cH04fv4otqUUfk2xm7R2fyamelo="
                                 },
                                 "textstyle": {},
                                 "tooltip": "",
@@ -14214,7 +14214,7 @@
                                     0
                                 ],
                                 "_placeholder_": "Enter PIN",
-                                "_skin_": "sb360bb4d570468896962e2380d65eb1",
+                                "_skin_": "s576eb7e69df4aaab41ab3a40bf7bcf1",
                                 "_text_": "",
                                 "_top_": {
                                     "type": "string",
@@ -14234,7 +14234,7 @@
                                 "containerheightmode": 1,
                                 "containerweight": 100,
                                 "contentalignment": 4,
-                                "focusskin": "s72d9b6cad4947d9a6a931af29a9711c",
+                                "focusskin": "sc9e29acbce8409c971ab4aba77d9d0f",
                                 "id": "tbDeleteUserPin",
                                 "info": null,
                                 "iscustomlayout": false,
@@ -14246,13 +14246,13 @@
                                 "name": "kony.ui.TextBox2",
                                 "parent": "flxEnterPin",
                                 "pf": "uwudf637f759e64eaa943af27248e39362",
-                                "placeholderskin": "s3b0eb764bc84a6a9641448102e47eab",
+                                "placeholderskin": "s75733e03afb4c73b21609337b6cd286",
                                 "restrictcharactersset": "!@#$%^&*(){}><  +=/,-_.N;",
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "securetextentry": true,
                                 "snapshot": {
-                                    "md5": "rfgOxE1TfYvAEc8k0MTib1BY/kA="
+                                    "md5": "2wBZ07tDYc52bolVx00zQDOu8oY="
                                 },
                                 "textinputmode": "N",
                                 "tooltip": "",
@@ -14339,7 +14339,7 @@
                                     0,
                                     0
                                 ],
-                                "_skin_": "sbef21208c2049c083799db47ac80541",
+                                "_skin_": "s7504fa10d134bc793fa51834a24d33c",
                                 "_text_": "Enter PIN",
                                 "_top_": {
                                     "type": "string",
@@ -14384,7 +14384,7 @@
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "snapshot": {
-                                    "md5": "4cwbmba/iQL8hq/rjssfImLyG0E="
+                                    "md5": "EFitc2z0Gq99+Wv/yJVdkUBOH4Q="
                                 },
                                 "textstyle": {},
                                 "tooltip": "",
@@ -14430,7 +14430,7 @@
                                 0
                             ],
                             "_percent_": true,
-                            "_skin_": "sa3d82025e5e43928f944e34b1cc4418",
+                            "_skin_": "s6e543ac34384014bc2d015bdf07c70d",
                             "_top_": {
                                 "type": "string",
                                 "value": "0%"
@@ -14477,7 +14477,7 @@
                                     0,
                                     0
                                 ],
-                                "_skin_": "s61837bf0b5247b3a9a01b2e94ba2ccd",
+                                "_skin_": "s48bcd5c1a744152b5b9ed5c4286dc74",
                                 "_text_": "Incorrect PIN",
                                 "_top_": {
                                     "type": "number",
@@ -14527,7 +14527,7 @@
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "snapshot": {
-                                    "md5": "rOmye64tFm9pn3Jkg3Lv3ySvJOs="
+                                    "md5": "h9zmn5NeWCqRwVtz8IWDtTAEG0I="
                                 },
                                 "textstyle": {},
                                 "tooltip": "",
@@ -14543,7 +14543,7 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "yMUfBpRVrgr+4D1t0gPKr9wsLUU="
+                                "md5": "GQTXadTMYkeRsXyCaFYi996UiTk="
                             },
                             "snaptogrid": true,
                             "wType": "FlexContainer",
@@ -14564,7 +14564,7 @@
                         "retainflowhorizontalalignment": false,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "E4Rki7wAFy0QZi5XBY53sYHzTYU="
+                            "md5": "3lADDnq9egLFXuOxy26nh80AmSs="
                         },
                         "snaptogrid": true,
                         "wType": "FlexContainer",
@@ -14585,7 +14585,7 @@
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "l/E8YpQBEOKmnUMVk44MdPpLSeE="
+                        "md5": "So5uHbgw1HNEzkW3McFtu6x0TRQ="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -14606,7 +14606,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "omrPVkeEu7y1Ksr4/g4Yo5pbyIQ="
+                    "md5": "rMS61jPSkw7a7MHk60Tu4rrNr8k="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -14833,14 +14833,14 @@
                                     }
                                 }
                             ],
-                            "rowTemplateId": "a280ac5a164949ceba2442f65bf71cf4",
-                            "rowtemplate": "flxHIDUsersTemplate",
+                            "rowTemplateId": "hd62c9e691dc4e3ba856189c22dd3487",
+                            "rowtemplate": "CopyflxHIDUsersTemplate",
                             "widgetdatamap": {
+                                "CopyflxHIDUsersTemplate": "CopyflxHIDUsersTemplate",
                                 "Label0e1e8c911738b41": "Label0e1e8c911738b41",
                                 "TrashDark": "TrashDark",
                                 "flxContactImg": "flxContactImg",
                                 "flxDelRow": "flxDelRow",
-                                "flxHIDUsersTemplate": "flxHIDUsersTemplate",
                                 "flxRowWrapper": "flxRowWrapper",
                                 "flxTempRowWrapper": "flxTempRowWrapper",
                                 "imgAvatar": "imgAvatar",
@@ -14860,12 +14860,12 @@
                         "retainflexpositionproperties": false,
                         "retainselection": false,
                         "rowcounter": 1,
-                        "rowfocusskin": "safb6223f3b646eabca9f1b2d998d1c4",
-                        "rowskin": "sfe843cdf5b44b1889a626c6327a5a31",
+                        "rowfocusskin": "sc7e34ba70a64c0c9bd178e3b14b51a7",
+                        "rowskin": "s2b99621c6144439b5c5dd4bb0e57266",
                         "rowtemplate": null,
                         "screenlevelwidget": false,
                         "seccounter": 0,
-                        "sectionheaderskin": "s9a5899b6052402c86f63db1e22f82b1",
+                        "sectionheaderskin": "se3e2f70dddc4f0ab77ea7f34882169a",
                         "selectedRows": null,
                         "selectedState": false,
                         "selectedindex": null,
@@ -14878,14 +14878,14 @@
                         "separatorthickness": 3,
                         "showscrollbars": false,
                         "snapshot": {
-                            "md5": "8wm/Ms1TUz1nhGKfadI2xLNd8Q0="
+                            "md5": "1VJPWyVdvapuT8BUwi8C/pW0L+Q="
                         },
                         "viewtype": "tableview",
                         "vizProps": {},
                         "wType": "Segment",
                         "widgetalignment": 5,
                         "widgetdatamap": {
-                            "flxHIDUsersTemplate": "flxHIDUsersTemplate",
+                            "CopyflxHIDUsersTemplate": "CopyflxHIDUsersTemplate",
                             "imgAvatar": "imgAvatar",
                             "lblUsername": "lblUsername"
                         },
@@ -14927,7 +14927,7 @@
                             "type": "string",
                             "value": "5.00%"
                         },
-                        "_skin_": "s3be691c1b9541b5b55f4ba1aaf5965b",
+                        "_skin_": "s38cce89c1314a9db95e391a28e85210",
                         "_text_": "",
                         "_top_": {
                             "type": "string",
@@ -14970,7 +14970,7 @@
                         "parent": "flxUserSubHeader",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "Zp4/5O8lYrtNIXD8c2/omg8qtBo="
+                            "md5": "zREHXQYvFCPH13rL8ZnOfetQ6fw="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -15000,7 +15000,7 @@
                             "type": "string",
                             "value": "2%"
                         },
-                        "_skin_": "s3be691c1b9541b5b55f4ba1aaf5965b",
+                        "_skin_": "s38cce89c1314a9db95e391a28e85210",
                         "_text_": "",
                         "_top_": {
                             "type": "string",
@@ -15039,7 +15039,7 @@
                         "parent": "flxUserSubHeader",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "EmDsdLNmo1/nxIKAfW+ElcQz6AQ="
+                            "md5": "gnUXF2W9oGfDE1roVBFAe96qil4="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -15117,7 +15117,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s6667ab428194bf4af4160b79f1aa858",
+                        "_skin_": "sd8934cddfdb4a7b973e09479d3257fa",
                         "_text_": "CREDENTIALS",
                         "_top_": {
                             "type": "string",
@@ -15158,7 +15158,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "UXjT4QzkjAvKQ4/au9tcGi5IpHY="
+                            "md5": "5S9kwI5hKnRk0/NqSwGVhd2J1tg="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -15205,8 +15205,8 @@
                             0,
                             0
                         ],
-                        "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                        "_src_": "bank_portal_logo_blue.png",
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "bank_portal_logo_blue_1.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -15233,7 +15233,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "bbhTbFOyc8djuvzhGi8yb/kSJJU="
+                            "md5": "1OyfBJIk6/sITTaUL53q4kwV63Y="
                         },
                         "srcType": 1,
                         "wType": "Image",
@@ -15263,7 +15263,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "_skin_": "s0c8c1ce77f54c7499f53d2313093e40",
                         "_text_": "Major Bank",
                         "_top_": {
                             "type": "string",
@@ -15288,7 +15288,7 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 4,
-                        "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
+                        "focusskin": "s0c8c1ce77f54c7499f53d2313093e40",
                         "id": "CopylblHeaderLogin0gdc12039694347",
                         "info": null,
                         "ipad": {
@@ -15319,7 +15319,7 @@
                         "parent": "flxUsersHeader",
                         "pf": "uwudf637f759e64eaa943af27248e39362",
                         "snapshot": {
-                            "md5": "AmuuA0uQ1xwaQIYNpyy5p8U55go="
+                            "md5": "36ttk0D9+VPbsO4q2xVpwmnX8aM="
                         },
                         "textstyle": {},
                         "tooltip": "",
@@ -15410,7 +15410,7 @@
                 "widgetalignment": 1,
                 "zindex": 1
             },
-            "focusskin": "sab95443dd6d4eb087f73ef050a86778",
+            "focusskin": "s86ffaea52a34f4fa215cb7672aea739",
             "id": "flxUsers",
             "info": null,
             "isvisible": false,
@@ -15421,7 +15421,7 @@
             "pf": "uwudf637f759e64eaa943af27248e39362",
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "5zYGgBVKv75semU0F18y4XO/aug="
+                "md5": "qImM0wC73HMafpr0OncUgrnzG7Y="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -15454,8 +15454,8 @@
                 0,
                 0
             ],
-            "_skin_": "s0110c6e51734175b4910209b5c5b877",
-            "_src_": "mobilebg2.png",
+            "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+            "_src_": "mobilebg2_1.png",
             "_top_": {
                 "type": "string",
                 "value": "0dp"
@@ -15485,7 +15485,7 @@
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "snapshot": {
-                "md5": "ujNs1jZIeKi716pyBc0+JSttH1U="
+                "md5": "bdw3l2wBBxPlswBkVZrFAMhpQH0="
             },
             "srcType": 1,
             "wType": "Image",
@@ -15511,5 +15511,5 @@
         "wType": "FlexContainer",
         "widgetalignment": 1
     },
-    "userwidgetKUID": "u20bda331feb47958abd666417784ae7"
+    "userwidgetKUID": "u0ec6a3455c641fc851e3f82a5439477"
 }

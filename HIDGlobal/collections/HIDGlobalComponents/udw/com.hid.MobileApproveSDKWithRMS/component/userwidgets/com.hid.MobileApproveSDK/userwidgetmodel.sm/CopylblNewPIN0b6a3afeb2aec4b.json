@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+    "_skin_": "se71b7fecece48e68f7989f150a46128",
     "_text_": "Confirm PIN",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s2efa7fbd245431e8fc1cd44ad032b8a",
+    "focusskin": "s4eb0cab12b64b81836ef450756af1d5",
     "id": "CopylblNewPIN0b6a3afeb2aec4b",
     "info": null,
     "ipad": {

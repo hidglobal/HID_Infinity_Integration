@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "Enter OTP",
-    "_skin_": "sa43a159fb7940fb9f7b8397c802ed16",
+    "_skin_": "s0542dadb9a14cb9aae0d746d5cb28bf",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "sa43a159fb7940fb9f7b8397c802ed16",
+    "focusskin": "s0542dadb9a14cb9aae0d746d5cb28bf",
     "id": "tbxOTP",
     "info": null,
     "iphone": {
@@ -61,7 +61,7 @@
     "name": "kony.ui.TextBox2",
     "parent": "flxTbxOTP",
     "pf": "userwidgetmodel",
-    "placeholderskin": "sac0a769f0584708a5ed5524eed03182",
+    "placeholderskin": "s33e7dcbccc04bfb9005f29a6d51ee11",
     "restrictcharactersset": "!@#$%^&*(){}><  +=/,-_.N;",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

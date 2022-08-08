@@ -5,7 +5,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "facbb4bb6a774a669bee478bb90bce45",
+                    "kuid": "bd0b426ea20a4872b44208eb33c5661f",
                     "paramList": [],
                     "propertyKey": "resetUI",
                     "pw": {
@@ -17,7 +17,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "c0ba3660bb63401684813c579011388f",
+                    "kuid": "a1ff1b4766974d0aa547aa70b3cda423",
                     "paramList": [],
                     "propertyKey": "getUserId",
                     "pw": {
@@ -34,7 +34,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "e910dcb74773496f8c7970b364025ec6",
+                    "kuid": "ac60092e00a7420281505a69b04c5051",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "showLoading",
@@ -47,7 +47,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "ca8a0689f0bc4bbe9d43b47ea66ec0af",
+                    "kuid": "je7e6531b95146b58db730f5f84b11e8",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "dismissLoading",
@@ -60,7 +60,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "c53be9a94033459ea9feb540787141b8",
+                    "kuid": "ea70ce39d5d44282a763b96c12bc8565",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "changeContext",
@@ -73,7 +73,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "c55f955e78d8449581cef0e108c6b255",
+                    "kuid": "jbd7bc9fde0d4a6ea679cfd631d40f36",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "switchLogin",
@@ -86,7 +86,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "eec043bcf5fd432e9f7a36d38717fc86",
+                    "kuid": "b2683c00dcc9414ca838aa4f620f16d7",
                     "paramList": [],
                     "propertyIndex": 5,
                     "propertyKey": "passwordPolicy",
@@ -114,7 +114,7 @@
                     "access": "Write",
                     "defaultValue": "APPROVE",
                     "group": "General",
-                    "kuid": "e8f0c3c81bb6489bb7613814e387d545",
+                    "kuid": "g1a99ec657bb4b96a9e78697a167cded",
                     "originalPropertyKey": "MFA",
                     "propertyIndex": 1,
                     "propertyKey": "MFA",

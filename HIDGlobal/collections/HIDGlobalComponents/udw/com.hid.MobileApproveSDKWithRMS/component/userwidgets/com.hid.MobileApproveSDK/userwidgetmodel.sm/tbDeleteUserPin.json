@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "Enter PIN",
-    "_skin_": "sb360bb4d570468896962e2380d65eb1",
+    "_skin_": "s576eb7e69df4aaab41ab3a40bf7bcf1",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s72d9b6cad4947d9a6a931af29a9711c",
+    "focusskin": "sc9e29acbce8409c971ab4aba77d9d0f",
     "id": "tbDeleteUserPin",
     "info": null,
     "iscustomlayout": false,
@@ -54,7 +54,7 @@
     "name": "kony.ui.TextBox2",
     "parent": "flxEnterPin",
     "pf": "userwidgetmodel",
-    "placeholderskin": "s3b0eb764bc84a6a9641448102e47eab",
+    "placeholderskin": "s75733e03afb4c73b21609337b6cd286",
     "restrictcharactersset": "!@#$%^&*(){}><  +=/,-_.N;",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

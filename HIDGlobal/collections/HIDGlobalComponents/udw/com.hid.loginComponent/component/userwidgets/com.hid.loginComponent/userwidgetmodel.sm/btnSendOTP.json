@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s1e4e2ce034346cf88f2bbaf640c232a",
+    "_skin_": "s78430ddcbc8472885c7a57efb4fad5f",
     "_text_": "Send OTP",
     "_top_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s820c40cb7894c3fb3e848c8932847e1",
+    "focusskin": "saa6283eb9e942d8b7e1c3036d4c94d0",
     "id": "btnSendOTP",
     "ide_onClick": "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130",
     "info": null,

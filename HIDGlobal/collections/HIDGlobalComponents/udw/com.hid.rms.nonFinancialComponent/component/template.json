@@ -6,6 +6,7 @@
     "sourceChannel": "common",
     "templateDef": {
         "DNDConfig": null,
+        "__parentReadjusting__": false,
         "_height_": {
             "type": "string",
             "value": "100%"
@@ -52,6 +53,7 @@
         "enablescrolling": true,
         "flxApprove": {
             "DNDConfig": null,
+            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "101.11%"
@@ -755,6 +757,7 @@
         },
         "flxLogin": {
             "DNDConfig": null,
+            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -814,6 +817,7 @@
             "enablescrolling": true,
             "flxButtons": {
                 "DNDConfig": null,
+                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "8%"
@@ -850,6 +854,7 @@
                 "btnCancel": {
                     "@class": "com.kony.gen.viz.model.component.KVizButton",
                     "DNDConfig": null,
+                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "100%"
@@ -905,6 +910,7 @@
                 "btnSubmit": {
                     "@class": "com.kony.gen.viz.model.component.KVizButton",
                     "DNDConfig": null,
+                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "100%"
@@ -1009,6 +1015,7 @@
                 "Lock": {
                     "@class": "com.kony.gen.viz.model.component.KVizLabel",
                     "DNDConfig": null,
+                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "ref",
                         "value": "preferred"
@@ -1078,6 +1085,7 @@
                     "wType": "Label",
                     "zindex": 1
                 },
+                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "8.50%"
@@ -1143,6 +1151,7 @@
                 "tbxPassword": {
                     "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
                     "DNDConfig": null,
+                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "100%"
@@ -1299,6 +1308,7 @@
                     "wType": "Label",
                     "zindex": 1
                 },
+                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "8.50%"
@@ -1445,6 +1455,7 @@
             "lblErrorLogin": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
                 "DNDConfig": null,
+                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "15%"
@@ -1519,6 +1530,7 @@
             "lblSigntoAcc": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
                 "DNDConfig": null,
+                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "ref",
                     "value": "preferred"
@@ -1593,6 +1605,7 @@
             "lblWelcome": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
                 "DNDConfig": null,
+                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "ref",
                     "value": "preferred"
@@ -1681,6 +1694,7 @@
         },
         "flxOTP": {
             "DNDConfig": null,
+            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -2209,7 +2223,7 @@
                     "placeholderSkin": "se79d413abb14c60800f4638110cdd81"
                 },
                 "disabledSkins": {
-                    "focusSkin": "s72d9b6cad4947d9a6a931af29a9711c"
+                    "focusSkin": "sc9e29acbce8409c971ab4aba77d9d0f"
                 },
                 "id": "tbxOTP",
                 "info": null,
@@ -2227,7 +2241,7 @@
                 "retainflexpositionproperties": false,
                 "securetextentry": false,
                 "snapshot": {
-                    "md5": "IbMgEIGGTp1HTExOlUPrOcQRgjA="
+                    "md5": "2+wZEB5WPkrlwmzDdVvpT+F8fdw="
                 },
                 "textinputmode": "A",
                 "tooltip": "",
@@ -2241,6 +2255,7 @@
         },
         "flxOTPError": {
             "DNDConfig": null,
+            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -2648,6 +2663,7 @@
         },
         "flxPushDevices": {
             "DNDConfig": null,
+            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -3097,20 +3113,12 @@
                 "desktop": {
                     "_data_": [
                         {
-                            "lblDeviceId": {
-                                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                                "text": "Label"
-                            },
                             "lblDeviceName": {
                                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                                 "text": "PushDevice1"
                             }
                         },
                         {
-                            "lblDeviceId": {
-                                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                                "text": "Label"
-                            },
                             "lblDeviceName": {
                                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                                 "text": "PushDevice2"
@@ -3121,8 +3129,7 @@
                     "rowtemplate": "Flex0d3d7ae1b5dea4c",
                     "selectionBehaviorConfig": {},
                     "widgetdatamap": {
-                        "flxSegPushDevices1": "flxSegPushDevices1",
-                        "lblDeviceId": "lblDeviceId",
+                        "flxSegPushDevices": "flxSegPushDevices",
                         "lblDeviceName": "lblDeviceName"
                     }
                 },
@@ -3160,12 +3167,12 @@
                 "retainflexpositionproperties": false,
                 "retainselection": false,
                 "rowcounter": 1,
-                "rowfocusskin": "safb6223f3b646eabca9f1b2d998d1c4",
+                "rowfocusskin": "sc7e34ba70a64c0c9bd178e3b14b51a7",
                 "rowskin": "s58e4de929e849b7b375427c80657e58",
                 "rowtemplate": "Flex0d3d7ae1b5dea4c",
                 "screenlevelwidget": false,
                 "seccounter": 0,
-                "sectionheaderskin": "s9a5899b6052402c86f63db1e22f82b1",
+                "sectionheaderskin": "se3e2f70dddc4f0ab77ea7f34882169a",
                 "selectedRows": null,
                 "selectedState": false,
                 "selectedindex": null,
@@ -3178,7 +3185,7 @@
                 "separatorthickness": 2,
                 "showscrollbars": false,
                 "snapshot": {
-                    "md5": "rb+nNACwxSg42BRJulNUpwbBC2E="
+                    "md5": "OyHeh6IZFDP2k+evkEC+Oy5C6P0="
                 },
                 "viewtype": "tableview",
                 "vizProps": {},
@@ -3219,5 +3226,5 @@
         "widgetalignment": 1,
         "zindex": 1
     },
-    "userwidgetKUID": "u32be69dc05b4741aee8acfa237b7d82"
+    "userwidgetKUID": "udbd40b3e9ff48729ec9c9e8da9e3d98"
 }

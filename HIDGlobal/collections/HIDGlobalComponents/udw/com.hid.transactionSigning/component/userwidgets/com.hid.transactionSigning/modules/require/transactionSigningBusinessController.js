@@ -9,6 +9,7 @@ define([], function() {
       "access": "online"
     }
   };
+    
   const HIDObjectServices = {
     getRepository: function(repoName) {
       var objSvc = kony.sdk.getCurrentInstance().getObjectService(serviceConfig.serviceName, serviceConfig.accessType);
@@ -33,6 +34,27 @@ define([], function() {
       };
     }
   };
+  
+//   const objectService = {
+//     "name" : "HIDAuthService",
+//     "accessType" : { "access" : "online"}
+//   };
+  
+//   const HidObjectAuthServices = {
+//      getDataModel : function (objectName){
+//       var objectInstance = KNYMobileFabric.getObjectService(objectService.name,objectService.accessType );
+//       return {
+//         customVerb : function(customVerb, params, callback) {
+//           var dataObject = new kony.sdk.dto.DataObject(objectName);         
+//           for (let key in params){
+//             dataObject.addField(key, params[key]);
+//           }          
+//           var options = { "dataObject" : dataObject};
+//           objectInstance.customVerb(customVerb, options, success => callback(true, success), error => callback(false, error));
+//         }
+//       };
+//     }
+//   };
 
   function transactionSigningBusinessController() {
   }
@@ -117,6 +139,35 @@ define([], function() {
     objService.customVerb("validateSMSOTP", params, callback);
   };  
   
+  transactionSigningBusinessController.prototype.getApproveDevices = function(params, S_CB, F_CB){
+    try {
+      var deviceDataModel = HIDObjectServices.getRepository("Devices");
+      const callback = (status, response) => {
+        if (status){
+          if(response.Devices.length > 0)
+          {
+            var devices = this.fetchFriendlyName(response.Devices);            
+            S_CB(devices);           
+          } else {
+            F_CB({"errorMsg" : "User has no device"});            
+          }
+        } else {
+          F_CB(response);}
+      };
+      deviceDataModel.customVerb("searchDevices", params, callback);
+    } catch (exception) {
+    }        
+  };  
+  
+  transactionSigningBusinessController.prototype.fetchFriendlyName = function(devices){
+    let filteredResources = devices.filter(v => (v.type === "DT_TDSV4" || v.type === "DT_TDSV4B") && v.active);
+    let friendlyNames = [];
+    let tempJson = {};
+    filteredResources.forEach(v => {
+      tempJson = {"deviceId":v.deviceId,"friendlyName":v.friendlyName};
+      friendlyNames.push(tempJson); });
+    return friendlyNames;
+  };
   transactionSigningBusinessController.getInstance = function() {
     instance = instance === null ? new transactionSigningBusinessController() : instance;
     return instance;

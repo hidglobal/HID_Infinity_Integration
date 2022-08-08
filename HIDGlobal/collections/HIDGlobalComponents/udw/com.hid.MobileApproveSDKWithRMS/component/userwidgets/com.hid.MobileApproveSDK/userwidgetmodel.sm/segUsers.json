@@ -109,14 +109,14 @@
                 }
             }
         ],
-        "rowTemplateId": "a280ac5a164949ceba2442f65bf71cf4",
-        "rowtemplate": "flxHIDUsersTemplate",
+        "rowTemplateId": "hd62c9e691dc4e3ba856189c22dd3487",
+        "rowtemplate": "CopyflxHIDUsersTemplate",
         "widgetdatamap": {
+            "CopyflxHIDUsersTemplate": "CopyflxHIDUsersTemplate",
             "Label0e1e8c911738b41": "Label0e1e8c911738b41",
             "TrashDark": "TrashDark",
             "flxContactImg": "flxContactImg",
             "flxDelRow": "flxDelRow",
-            "flxHIDUsersTemplate": "flxHIDUsersTemplate",
             "flxRowWrapper": "flxRowWrapper",
             "flxTempRowWrapper": "flxTempRowWrapper",
             "imgAvatar": "imgAvatar",
@@ -136,12 +136,12 @@
     "retainflexpositionproperties": false,
     "retainselection": false,
     "rowcounter": 1,
-    "rowfocusskin": "safb6223f3b646eabca9f1b2d998d1c4",
-    "rowskin": "sfe843cdf5b44b1889a626c6327a5a31",
+    "rowfocusskin": "sc7e34ba70a64c0c9bd178e3b14b51a7",
+    "rowskin": "s2b99621c6144439b5c5dd4bb0e57266",
     "rowtemplate": null,
     "screenlevelwidget": false,
     "seccounter": 0,
-    "sectionheaderskin": "s9a5899b6052402c86f63db1e22f82b1",
+    "sectionheaderskin": "se3e2f70dddc4f0ab77ea7f34882169a",
     "selectedRows": null,
     "selectedState": false,
     "selectedindex": null,
@@ -158,7 +158,7 @@
     "wType": "Segment",
     "widgetalignment": 5,
     "widgetdatamap": {
-        "flxHIDUsersTemplate": "flxHIDUsersTemplate",
+        "CopyflxHIDUsersTemplate": "CopyflxHIDUsersTemplate",
         "imgAvatar": "imgAvatar",
         "lblUsername": "lblUsername"
     },

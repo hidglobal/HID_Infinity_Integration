@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s8beee64ada1496ea57aaacd187d673c",
+    "_skin_": "s676f84187ac495981c881baff4f9d29",
     "_top_": {
         "type": "string",
         "value": "0.00%"
@@ -40,7 +40,7 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "sab95443dd6d4eb087f73ef050a86778",
+    "focusskin": "s86ffaea52a34f4fa215cb7672aea739",
     "id": "flxUsers",
     "info": null,
     "isvisible": false,

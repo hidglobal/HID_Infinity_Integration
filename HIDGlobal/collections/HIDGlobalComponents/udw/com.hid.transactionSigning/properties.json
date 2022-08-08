@@ -1,15 +1,15 @@
 {
     "assetPlatform": "Visualizer",
     "assetVersion": "1.0.0",
-    "createdBy": "chakradhar.reddypakala@hidglobal.com",
-    "createdMFVersion": "9.2.2.2",
-    "createdVizVersion": "9.1.8",
-    "currentMFVersion": "9.2.2.2",
-    "currentVizVersion": "9.1.8",
-    "description": "Web Components",
+    "createdBy": "subramanya.heggaraepaneendra@hidglobal.com",
+    "createdMFVersion": "9.5.0.0",
+    "createdVizVersion": "9.2.37",
+    "currentMFVersion": "9.5.0.0",
+    "currentVizVersion": "9.2.37",
+    "description": "",
     "itemCategory": "udw",
-    "itemGuid": "d83a9b10d4fd4d8f85b55da8eb3fefa5",
+    "itemGuid": "a6e5500d7f694bbe81fd01a15b6fbceb",
     "itemName": "com.hid.transactionSigning",
     "libraryVersion": "libver4",
-    "modifiedBy": "chakradhar.reddypakala@hidglobal.com"
+    "modifiedBy": "subramanya.heggaraepaneendra@hidglobal.com"
 }

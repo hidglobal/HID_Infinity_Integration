@@ -19,11 +19,20 @@ define([], function() {
           var nativeController = require(nativeControllerPath);
           this.nativeControllerInstance = new nativeController(this.componentInstance);
         }
+        this.updateUsername(this.nativeControllerInstance,this.componentInstance);
         return this.nativeControllerInstance;
       } catch (exception) {
         throw new Error(exception);
       }
     };
+    this.updateUsername = function(nativeController,cmpInstance){
+           let username = cmpInstance.getUsername();
+           kony.print("ApproveSDK --->username  is" + username);
+           if(!username){
+             return;
+           }
+           nativeController.updateUsername(username);
+        };
     ControllerImplementation.prototype.signTransaction = function(values){
          this.getNativeController().signTransaction(values);
     };

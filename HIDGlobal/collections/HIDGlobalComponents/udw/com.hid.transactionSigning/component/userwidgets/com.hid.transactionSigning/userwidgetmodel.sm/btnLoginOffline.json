@@ -25,7 +25,7 @@
     "_text_": "SUBMIT",
     "_top_": {
         "type": "string",
-        "value": "5%"
+        "value": "3%"
     },
     "_width_": {
         "type": "string",
@@ -34,7 +34,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.00%"
+        "value": "50.04%"
     },
     "centery": {
         "type": "number",

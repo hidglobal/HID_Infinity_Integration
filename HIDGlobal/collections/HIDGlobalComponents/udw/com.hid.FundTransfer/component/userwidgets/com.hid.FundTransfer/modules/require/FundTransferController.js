@@ -23,6 +23,7 @@ define(function() {
   uiConstants.ERROR_INVALID_REMARKS = `Please enter valid Remarks`;
   uiConstants.ERROR_TRANSACTION_FAILED = `Transfer confirmation failed please try again`;
   uiConstants.EMPTY_PIN = `Please enter PIN`;
+  uiConstants.SUCCESS_SCREEN_TIMEOUT = 5;
   return {
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       this.contextSwitch("MainPage");
@@ -40,7 +41,8 @@ define(function() {
 //      this.view.MobileApproveSDK.onUpdatePasswordSuccess = this.onUpdatePasswordSuccess;
       this.view.btnUpdatePINtrans.onClick = this.btnUpdatePINtrans_onClick;
       this.view.flxConfirmPrompt.setVisibility(false);
-      this.view.tbxcurrency.setEnabled(false);
+      this.view.tbxcurrency.setEnabled(false);     
+       this.view.btnSecureCodeConfirmOk.onClick  = this.btnSecureCodeConfirmOk_onClick;
     },
     //Logic for getters/setters of custom properties
     initGettersSetters: function() {
@@ -51,8 +53,23 @@ define(function() {
         this._username = val;
         this.view.TransactionSigningMobileSDK.username = val;
       });
+      
+      defineGetter(this, "mode", function() {      
+        return this._mode;
+      });
+      defineSetter(this, "mode", function(val) {
+        this._mode = val;
+        switch(this._mode){
+          case "OTP":
+            this.view.btnTransferSubmit.text = "Generate OTP";
+            break;
+          default:
+            this.view.btnTransferSubmit.text = "Transfer";
+        }
+        this.view.TransactionSigningMobileSDK.mode = val;
+      });
     },
-
+	interval : 59,
     pwdPromtCallback : function(eventType, eventCode){
       this.view.txtEnterPin.text = "";
       this.setLoadingScreen(false);
@@ -126,7 +143,10 @@ define(function() {
       this.view.TransactionSigningMobileSDK.validatePassword(password);
     },   
     
+    //this.view.flxSecureCodePin.setVisibility(true);
+    
     btnTransferSubmit_onClick : function(){
+      this.view.TransactionSigningMobileSDK.mode = this._mode;
       this.view.flxConfirmPrompt.setVisibility(false);
       this.showError(false,"");
       let toAccount = this.view.tbxTransferTo.text;
@@ -137,7 +157,7 @@ define(function() {
       values.push(amount);
       values.push(remarks); 
       this.setLoadingScreen(true);
-      this.view.TransactionSigningMobileSDK.signTransaction(values);
+      this.view.TransactionSigningMobileSDK.signTransaction(values); 
     },
     showConfirmationPrompt : function(){
       let toAccount = this.view.tbxTransferTo.text;
@@ -172,7 +192,19 @@ define(function() {
       this.showErrorPassword(true,error);
     },
     
-    SCB_signTransaction : function(){
+    SCB_signTransaction : function(otp){
+      if(this._mode== 'OTP')
+        {
+          this.resetUI();
+          this.view.lblSecureCodeText.text = otp;        
+          this.view.lblEnterPinError.setVisibility(false);
+          this.view.flxSecureCodeConfirmation.setVisibility(true);
+          this.view.flxLoading.setVisibility(false);
+          this.view.flxSecureCodePin.setVisibility(true);
+          kony.timer.schedule("timer",()=> this.timerFun(this.interval--), 1, true);
+          this.view.flxEnableSecureCode.setVisibility(false);
+          return;
+        }
       this.setLoadingScreen(false);
       this.setPasswordScreen(false);
       this.contextSwitch("TransferSuccess");
@@ -184,7 +216,7 @@ define(function() {
         this.resetUI();
         this.contextSwitch("MainPage");
         this.commonEventEmitter(this.onSuccess, ["success"]);
-      },2, false);
+      },uiConstants.SUCCESS_SCREEN_TIMEOUT, false);
     },
     FCB_signTransaction : function(error){
       this.setLoadingScreen(false);
@@ -192,7 +224,14 @@ define(function() {
       this.contextSwitch("MainPage");     
       this.showError(true,uiConstants.ERROR_TRANSACTION_FAILED);
     },
-    
+    timerFun : function(sec){   
+      if(sec === 0){
+        this.interval = 59;
+        this.resetSecureCodeUI();          
+      }
+      var text = sec < 10 ? `0${sec}`:`${sec}`;
+      this.view.lblSecureCodeTimeout.text =`This code will be display for ${text} more secs..`;
+    },
    checkPasswordPolicy : function(pwd){
      kony.print("ApproveSDKWrapper : inside checkPasswordPolicy "+pwd);
       if(this.passwordPolicy.hasOwnProperty("minAlpha") && +this.passwordPolicy.minAlpha === 0){
@@ -317,6 +356,7 @@ define(function() {
       this.view.flxTransferError.setVisibility(visible);      
     },
     resetUI : function(){
+      this.resetSecureCodeUI();
       this.showError(false,"");
       this.showPwdPromptError(false,"");
       this.setLoadingScreen(false);
@@ -326,6 +366,20 @@ define(function() {
       this.view.tbxRemarks.text = "";
       this.view.flxUpdatePasswordTrans.setVisibility(false);
       this.view.flxConfirmPrompt.setVisibility(false);
-    }
+    },
+    resetSecureCodeUI : function(){
+      this.view.flxSecureCodePin.setVisibility(false);
+      this.view.flxSecureCodeConfirmation.setVisibility(false);
+      this.view.flxEnableSecureCode.setVisibility(false);
+      this.view.lblSecureCodeText.text = "";
+      this.view.tbxOtpEnterPin.text = "";
+      kony.timer.cancel("timer");
+      this.interval = 59;
+      this.view.lblSecureCodeTimeout.text =`This code will be display for ${this.interval} more secs..`;
+    },
+    btnSecureCodeConfirmOk_onClick : function(){
+    this.resetSecureCodeUI();
+  },
+ 
   };
 });

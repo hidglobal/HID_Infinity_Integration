@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s2e1525d623449e196ebb75774e5340b",
+    "_skin_": "sfff526348934d0eb3283a92a11a9394",
     "_text_": "Forgot Customer ID?",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s2e1525d623449e196ebb75774e5340b",
+    "focusskin": "sfff526348934d0eb3283a92a11a9394",
     "id": "flxForgotCustomerId",
     "info": null,
     "ipad": {

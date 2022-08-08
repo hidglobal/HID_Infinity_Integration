@@ -180,7 +180,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       if(flowString == "Register"){
         isRegister = true ;		  
         this.initActivationFlow();
-        return;
+        return ;
       }
       let contentArray = flowString.split(",");
       let flow = contentArray[0];
@@ -193,6 +193,10 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         // TODO : Multiple Login flow
         this.initMultiLoginFlow(contentArray[1]);
       }
+    },
+    
+    getLoginFLowPublic : function(){
+      return this.nativeController.getLoginFlow("");
     },
 
     parseFlowStringForMultiUser : function(flowString){
@@ -544,11 +548,13 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       if(username){
         this.username = username;
       }
-      let isEnabled = this.nativeController.checkForBioAvailability();
-      if(pin == "" && !isEnabled){
-        kony.print("ApproveSDK ---> Biometric is not enabled for this user, so Staying with PIN Prompt")
-        return;
-      }
+     let isEnabled = false;
+		if(pin == "" || pin == null){
+			isEnabled = this.nativeController.checkForBioAvailability();
+			if(!isEnabled){
+			return;
+			}
+		}
       this.nativeController.generateOTPExplicit(pin,isEnabled);
     },
     secureCodeSuccess : function(otp){

@@ -1,0 +1,21 @@
+{
+    "AS_Button_f7f34412437e40558dbb2e3482af2dfa": {
+        "id": "AS_Button_f7f34412437e40558dbb2e3482af2dfa",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_be83440836ba4a39b05ad8e1fa06a041",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "trySecureCodeOnClick",
+            "display": "trySecureCodeOnClick",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

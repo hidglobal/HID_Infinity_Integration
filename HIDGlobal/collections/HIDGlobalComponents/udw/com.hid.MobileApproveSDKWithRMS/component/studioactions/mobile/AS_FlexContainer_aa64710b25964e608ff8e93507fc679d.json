@@ -1,0 +1,26 @@
+{
+    "AS_FlexContainer_aa64710b25964e608ff8e93507fc679d": {
+        "id": "AS_FlexContainer_aa64710b25964e608ff8e93507fc679d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "KUID": "hd62c9e691dc4e3ba856189c22dd3487",
+            "name": "CopyHIDUsersTemplate",
+            "platform": "",
+            "type": "templates"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_abdb753c10ed45dbb4d58b3b18dab039",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.onDeleteRow(eventobject,context);",
+            "parentId": null
+        }]
+    }
+}

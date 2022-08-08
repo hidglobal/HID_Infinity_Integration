@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s1e4e2ce034346cf88f2bbaf640c232a",
+    "_skin_": "s78430ddcbc8472885c7a57efb4fad5f",
     "_text_": "Try Secure Code",
     "_top_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "sbcb81d7bdc0484db0199e5f7a027044",
+    "focusskin": "s8aeec7f44bf4618bff84818263a5139",
     "id": "btnSecureCode",
     "ide_onClick": "AS_Button_b0ebddf304d6460b905404d6b496e0df",
     "info": null,

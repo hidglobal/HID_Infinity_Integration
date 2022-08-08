@@ -32,6 +32,9 @@
             "CopyCopyslFbox",
             "CopysknConfimTransfer",
             "slFbox0f0daeaad59ad43",
+            "CopyslFbox0j03773661a2e46",
+            "CopyslFbox0de683bc7d37d48",
+            "sknFlxEnableBiometric",
             "slFbox0a66ce647ffb645",
             "CopyslFbox0bf26a599be9f43",
             "CopyCopyslFbox0edd4953d5c624a",
@@ -41,6 +44,8 @@
             "CopysknScreenBgColor0j4f4dd5e65654e",
             "CopysknScreenBgColor2",
             "CopyslFbox0g4906815881d4b",
+            "flxBiometricOpaque",
+            "CopyslFbox0idf063943c794f",
             "slFbox0b983d2a82dee48",
             "CopyCopysknPinLogin0cd68d09da77342",
             "CopyCopysknPinLogin1",
@@ -50,6 +55,8 @@
             "CopysknCustomerId0a8c55035a37847",
             "CopysknLblConfirmPin2",
             "CopyCopydefLabel0f87a65388e2b4d",
+            "sknLblEnableBiometric",
+            "sknlblSCErrorNew",
             "CopyCopyCopyCopydefLabel0cb3e485e836341",
             "CopyCopyCopyCopydefLabel0e1ba8bdfbbef4b",
             "CopyCopyskin0b0d642f7c7c04c",
@@ -60,6 +67,10 @@
             "CopysknMajorBank0h4bb81d417c945",
             "CopysknMajorBank2",
             "CopydefLabel0febbcc5b456742",
+            "sknLabEnableTopMsg",
+            "sknLblSecureCodeText",
+            "sknLblSecureCodeTimeout",
+            "sknLblSecureCodeTitle",
             "CopysknMajorBank0ba3ebb7ff8e847",
             "CopyCopydefLabel0g27f3ac370f84e",
             "CopyCopydefLabel1",
@@ -70,6 +81,9 @@
             "sknTbxPalceholderTS",
             "CopysknCustomeId0db306e05c5f342",
             "CopysknTbxCustomerPH2",
+            "CopysknTbxFocus0b53ec2ad0b534c",
+            "defTextBoxFocus",
+            "CopysknTbxFocus0cc42765ceac745",
             "CopysknTbxTransferTo0c740b1c758e346",
             "CopysknTbxFocus0df55af7dfc5346",
             "slForm"
@@ -88,9 +102,10 @@
         "fonts": [
             "NeueHaasUnica-Regular",
             "default",
-            "Helvetica"
+            "Helvetica",
+            "iphoneSystem"
         ],
-        "nativeApis": 2,
+        "nativeApis": 0,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -98,7 +113,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2021-07-28T09:19:14.648Z",
-    "createdVizVersion": "9.2.15",
+    "createdOn": "2022-08-01T06:36:40.117Z",
+    "createdVizVersion": "9.2.37",
     "project_version": "sprint39"
 }

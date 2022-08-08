@@ -43,7 +43,7 @@
     "id": "flxTransferError",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "f870d27d1e4a4848ad1152d9f5ce2005",
     "layouttype": 2,
     "masterType": 1,

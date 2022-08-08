@@ -15,6 +15,13 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       defineSetter(this, "username", function(val) {
         this._username = val;
       });
+      
+      defineGetter(this, "mode", function() {
+        return this._mode;
+      });
+      defineSetter(this, "mode", function(val) {
+        this._mode = val;
+      });
     },
     signTransaction(values){
       this.valueArray = values;
@@ -53,11 +60,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     
     
     passwordUpdateSuccess : function(){
-      this.commonEventEmitter(this.passwordUpdateSuccess, [success]);      
+      this.commonEventEmitter(this.passwordUpdateSuccess, ["success"]);      
     },
     
     passwordUpdateError : function(){
-      this.commonEventEmitter(this.passwordUpdateError, [InvalidPassword]);  
+      this.commonEventEmitter(this.passwordUpdateError, ["InvalidPassword"]);  
     },
     
     validatePassword : function(password){
@@ -65,9 +72,15 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     
     SCB_signTransaction(otp){
-      kony.print("ApproveSDK in SCB_SignTransaction:  Validate Transaction OTP "+otp);
-      this.validateTransactionOTP(otp);
-     // this.commonEventEmitter(this.signTransactionSuccess, [otp]);
+      kony.print("ApproveSDK in SCB_SignTransaction:  Validate Transaction OTP "+ otp);
+      if(this._mode == "OTP")
+        {
+          this.commonEventEmitter(this.signTransactionSuccess, [otp]);        
+        }
+      else{
+           this.validateTransactionOTP(otp);
+      }
+      
     },
     FCB_signTransaction(exception,message){
       kony.print("in SCB_SignTransaction:"+exception + " " + message);
@@ -75,7 +88,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
    
     validateTransactionOTP : function(otp){
      let values = this.valueArray;
-     if(otp === "" || isNaN(otp)){
+     if(otp === "" || isNaN(otp)){ 
         return;
       }     
       let username = this._username;
@@ -104,7 +117,9 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       kony.print("ApproveSDK " + JSON.stringify(error));
       this.commonEventEmitter(this.signTransactionFailure, [error]);
     },
-    
+    getUsername : function(){
+       return this._username;
+    },
     commonEventEmitter(event,args){
       if(event){
         event.apply(this,args);
