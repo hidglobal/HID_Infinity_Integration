@@ -1,15 +1,15 @@
 {
     "assetPlatform": "Visualizer",
     "assetVersion": "1.0.0",
-    "createdBy": "manishkumar.patel@hidglobal.com",
-    "createdMFVersion": "9.2.2.2",
-    "createdVizVersion": "9.2.15",
-    "currentMFVersion": "9.2.2.2",
-    "currentVizVersion": "9.2.15",
+    "createdBy": "subramanya.heggaraepaneendra@hidglobal.com",
+    "createdMFVersion": "9.5.0.0",
+    "createdVizVersion": "9.2.37",
+    "currentMFVersion": "9.5.0.0",
+    "currentVizVersion": "9.2.37",
     "description": "",
     "itemCategory": "udw",
-    "itemGuid": "g400f01d526949949f902072a8aa1db9",
+    "itemGuid": "b54f52514a7a4d1a9a75010849295e60",
     "itemName": "com.hid.FundTransfer",
     "libraryVersion": "libver4",
-    "modifiedBy": "manishkumar.patel@hidglobal.com"
+    "modifiedBy": "subramanya.heggaraepaneendra@hidglobal.com"
 }

@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "9%"
+        "value": "10%"
     },
     "_left_": {
         "type": "string",
@@ -25,11 +25,11 @@
     "_text_": "Login to your account",
     "_top_": {
         "type": "string",
-        "value": "2%"
+        "value": "1%"
     },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "100%"
     },
     "_wrapping_": 2,
     "android": {

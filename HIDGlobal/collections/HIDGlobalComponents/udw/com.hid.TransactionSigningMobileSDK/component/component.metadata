@@ -15,7 +15,7 @@
         ],
         "images": [],
         "fonts": [],
-        "nativeApis": 1,
+        "nativeApis": 0,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -23,7 +23,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2021-10-19T05:39:04.161Z",
+    "createdOn": "2022-08-03T06:06:28.775Z",
     "createdVizVersion": "9.2.37",
     "project_version": "sprint39"
 }

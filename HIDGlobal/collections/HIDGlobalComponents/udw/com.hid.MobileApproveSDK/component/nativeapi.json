@@ -1,45 +1,14 @@
 {
     "NativeFunctionAPI": {
         "iOS": {
-            "14.0": {
-                "HIDApproveSDKWrapper-iOS-14.0": {
+            "14.0": {},
+            "15.0": {
+                "HIDApproveSDKWrapper-iOS-15.0": {
                     "title": "HIDApproveSDKWrapper",
                     "platform": "iOS",
-                    "os": "14.0",
+                    "os": "15.0",
                     "isDefault": false,
-                    "filename": "HIDApproveSDKWrapper-iOS-14.0.zip",
-                    "nfiversion": "3.0",
-                    "enable": true
-                }
-            },
-            "14.3": {
-                "Kony_FileStorage-iOS-14.3": {
-                    "title": "Kony_FileStorage",
-                    "platform": "iOS",
-                    "os": "14.3",
-                    "ci": true,
-                    "isDefault": true,
-                    "filename": "Kony_FileStorage-iOS-14.3.zip",
-                    "nfiversion": "3.0",
-                    "enable": true
-                },
-                "Kony_SDKCommons-iOS-14.3": {
-                    "title": "Kony_SDKCommons",
-                    "platform": "iOS",
-                    "os": "14.3",
-                    "ci": true,
-                    "isDefault": true,
-                    "filename": "Kony_SDKCommons-iOS-14.3.zip",
-                    "nfiversion": "3.0",
-                    "enable": true
-                },
-                "Kony_SyncV2-iOS-14.3": {
-                    "title": "Kony_SyncV2",
-                    "platform": "iOS",
-                    "os": "14.3",
-                    "ci": true,
-                    "isDefault": true,
-                    "filename": "Kony_SyncV2-iOS-14.3.zip",
+                    "filename": "HIDApproveSDKWrapper-iOS-15.0.zip",
                     "nfiversion": "3.0",
                     "enable": true
                 }
@@ -47,47 +16,12 @@
         },
         "Android": {
             "4.0": {
-                "ApproveSDKWrapper-Android-4.0": {
-                    "title": "ApproveSDKWrapper",
+                "HIDApproveSDKWrapper-Android-4.0": {
+                    "title": "HIDApproveSDKWrapper",
                     "platform": "Android",
                     "os": "4.0",
                     "isDefault": false,
-                    "filename": "ApproveSDKWrapper-Android-4.0.zip",
-                    "enable": true
-                },
-                "HID_Approve_SDK-Android-4.0": {
-                    "title": "HID_Approve_SDK",
-                    "platform": "Android",
-                    "os": "4.0",
-                    "isDefault": false,
-                    "filename": "HID_Approve_SDK-Android-4.0.zip",
-                    "enable": true
-                },
-                "Kony_FileStorage-Android-4.0": {
-                    "title": "Kony_FileStorage",
-                    "platform": "Android",
-                    "os": "4.0",
-                    "ci": true,
-                    "isDefault": true,
-                    "filename": "Kony_FileStorage-Android-4.0.zip",
-                    "enable": true
-                },
-                "Kony_SDKCommons-Android-4.0": {
-                    "title": "Kony_SDKCommons",
-                    "platform": "Android",
-                    "os": "4.0",
-                    "ci": true,
-                    "isDefault": true,
-                    "filename": "Kony_SDKCommons-Android-4.0.zip",
-                    "enable": true
-                },
-                "Kony_SyncV2-Android-4.0": {
-                    "title": "Kony_SyncV2",
-                    "platform": "Android",
-                    "os": "4.0",
-                    "ci": true,
-                    "isDefault": true,
-                    "filename": "Kony_SyncV2-Android-4.0.zip",
+                    "filename": "HIDApproveSDKWrapper-Android-4.0.zip",
                     "enable": true
                 }
             }

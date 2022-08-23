@@ -42,7 +42,7 @@ define(function () {
                   }
             }`;
         }
-    }; 
+    };   
 
   UserManagementBusinessController.prototype.validatePassword = function(loginJson, S_CB, F_CB){  
     var client = KNYMobileFabric;
@@ -50,7 +50,7 @@ define(function () {
     var identitySvc = client.getIdentityService(serviceName);
     let loginPayload = SCAEventConstants.getLoginPayload(loginJson);
     var options = {
-      "payload": loginPayload,     
+      "payload": loginPayload, 
       "authType" : "STATIC_PWD",
       "isMfa":false
     };
@@ -125,10 +125,13 @@ define(function () {
       } catch(exception){
         alert("Exception occurred in changeUserPassword, error : "+ exception.message);
       }};
+
+//    this.validatePassword(username, oldPassword, success, F_CB);
     let transactionId = Math.floor(Math.random() * 10000);
     let loginJson = {"userid" : username, "password" : oldPassword, "requiredRiskScore" : "0", 
                     "currentRiskScore" : "2", "transactionId" : transactionId};
     this.validatePassword(loginJson, success, F_CB);
+    
   };
 
   UserManagementBusinessController.prototype.updateDeviceFriendlyName = function(params, S_CB, F_CB){

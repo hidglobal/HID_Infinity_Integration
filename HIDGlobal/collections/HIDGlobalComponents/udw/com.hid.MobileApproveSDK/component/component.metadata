@@ -141,7 +141,7 @@
             "None",
             "Gotham-Book"
         ],
-        "nativeApis": 3,
+        "nativeApis": 2,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -149,7 +149,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2021-10-28T06:31:29.104Z",
+    "createdOn": "2022-08-22T08:32:35.699Z",
     "createdVizVersion": "9.2.37",
     "project_version": "sprint39"
 }

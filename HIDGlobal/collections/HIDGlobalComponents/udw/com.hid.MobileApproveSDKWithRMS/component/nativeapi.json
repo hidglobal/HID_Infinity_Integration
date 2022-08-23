@@ -34,20 +34,38 @@
                     "enable": true
                 }
             },
-            "14.0": {
-                "HIDApproveSDKWrapper-iOS-14.0": {
+            "14.0": {},
+            "15.0": {
+                "HIDRMSWrapper-iOS-15.0": {
+                    "title": "HIDRMSWrapper",
+                    "platform": "iOS",
+                    "os": "15.0",
+                    "isDefault": false,
+                    "filename": "HIDRMSWrapper-iOS-15.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                },
+                "HIDApproveSDKWrapper-iOS-15.0": {
                     "title": "HIDApproveSDKWrapper",
                     "platform": "iOS",
-                    "os": "14.0",
+                    "os": "15.0",
                     "isDefault": false,
-                    "filename": "HIDApproveSDKWrapper-iOS-14.0.zip",
+                    "filename": "HIDApproveSDKWrapper-iOS-15.0.zip",
                     "nfiversion": "3.0",
-                    "enable": false
+                    "enable": true
                 }
             }
         },
         "Android": {
             "4.0": {
+                "HIDApproveSDKWrapper-Android-4.0": {
+                    "title": "HIDApproveSDKWrapper",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "HIDApproveSDKWrapper-Android-4.0.zip",
+                    "enable": true
+                },
                 "Kony_FileStorage-Android-4.0": {
                     "title": "Kony_FileStorage",
                     "platform": "Android",
@@ -73,6 +91,16 @@
                     "ci": true,
                     "isDefault": true,
                     "filename": "Kony_SyncV2-Android-4.0.zip",
+                    "enable": true
+                }
+            },
+            "1.0": {
+                "RMSWrapper-Android-1.0": {
+                    "title": "RMSWrapper",
+                    "platform": "Android",
+                    "os": "1.0",
+                    "isDefault": false,
+                    "filename": "RMSWrapper-Android-1.0.zip",
                     "enable": true
                 }
             }

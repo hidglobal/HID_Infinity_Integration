@@ -22,10 +22,10 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_skin_": "s18a492191874719b241c9a655e4389b",
     "_top_": {
         "type": "string",
-        "value": "5%"
+        "value": "40%"
     },
     "_width_": {
         "type": "string",
@@ -52,7 +52,7 @@
     "kuid": "d33c1315e5c74704956b0cc3adcc46bc",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxTSOffline",
+    "parent": "flxOfflineFields",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

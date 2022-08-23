@@ -5,7 +5,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "f95b7a97539b439e886910bf7ae2e771",
+                    "kuid": "a8b99b39aafb45929ecdb600e6888a89",
                     "paramList": [],
                     "propertyKey": "signTransaction",
                     "pw": {
@@ -17,7 +17,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "bb4be7f9bdd24499a0f8d4dc71431141",
+                    "kuid": "f3db23f33c8f42de99a53863a96a95ee",
                     "paramList": [],
                     "propertyKey": "validatePassword",
                     "pw": {
@@ -29,7 +29,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "bb6f9fde89b24129a602ec97c51472f5",
+                    "kuid": "a5b5f6c176c94c118ff605089501a2f3",
                     "paramList": [],
                     "propertyKey": "getPasswordPolicy",
                     "pw": {
@@ -41,7 +41,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "db1625ececeb4282bf15aa0fe36657bf",
+                    "kuid": "dcb3b262b733499dad3cfa466f656ca5",
                     "paramList": [],
                     "propertyKey": "updatePassword",
                     "pw": {
@@ -58,7 +58,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "gb7a346020734b4ead878fec064cac65",
+                    "kuid": "bc95313a92664b64841ab25504caac7d",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "signTransactionSuccess",
@@ -71,7 +71,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "d32b7fb955c746bea9d949371a09a83e",
+                    "kuid": "cba93002c9f3497f94e3c0a20a26b7be",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "signTransactionFailure",
@@ -84,7 +84,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "e44e3158f40d46319706579e3634bcc9",
+                    "kuid": "cc1a33440f254622a539064cf95d4d80",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "onPasswordPrompt",
@@ -97,7 +97,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "g36af136ae3449f1a686185e611a673e",
+                    "kuid": "hfdb798fd6cd41139ad1f507aabfd618",
                     "paramList": [],
                     "propertyIndex": 5,
                     "propertyKey": "passwordUpdateSuccess",
@@ -110,7 +110,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "f44ef78b117a4e5cba2116060eb11be4",
+                    "kuid": "i2f3efa0e97248628a4ed764353d6287",
                     "paramList": [],
                     "propertyIndex": 6,
                     "propertyKey": "passwordUpdateError",
@@ -138,13 +138,30 @@
                     "access": "Write",
                     "defaultValue": "",
                     "group": "General",
-                    "kuid": "e9b614f71a2c4540b569c132c29f0582",
+                    "kuid": "a888ba50c4cf444cae198f478f5a570c",
                     "originalPropertyKey": "username",
                     "propertyIndex": 1,
                     "propertyKey": "username",
                     "pw": {
                         "dependencyConditions": {},
                         "displayName": "username",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "gbdfa40a64c9457eb298666af4804ada",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "TRANSACT",
+                    "group": "General",
+                    "kuid": "c110a158b253495094c02b4a43bba801",
+                    "originalPropertyKey": "mode",
+                    "propertyIndex": 2,
+                    "propertyKey": "mode",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "mode",
                         "uiRepresentation": "Label-Textbox"
                     },
                     "srcWgtKUID": "gbdfa40a64c9457eb298666af4804ada",

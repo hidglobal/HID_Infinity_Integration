@@ -5,7 +5,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "b9d0ec9821d740d4a50385f110aeae92",
+                    "kuid": "f9a0138151a049d48826201e7fe7c9ea",
                     "paramList": [],
                     "propertyKey": "initiate",
                     "pw": {
@@ -17,7 +17,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a5a74f93f0984f708c108244e9406d20",
+                    "kuid": "gf2185a7c1ef45429d087a88646f7ce9",
                     "paramList": [],
                     "propertyKey": "changeUIMode",
                     "pw": {
@@ -29,7 +29,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "c143086fc07d49ec9ea0cf37508b6839",
+                    "kuid": "ia6d13c6d9db4b7985e28cb9713a4bd6",
                     "paramList": [],
                     "propertyKey": "getUsername",
                     "pw": {
@@ -41,7 +41,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a786460655584d51a7cbe8fd5e4f7aa9",
+                    "kuid": "gbe920810b0243d69dcb394db38a5aa4",
                     "paramList": [],
                     "propertyKey": "checkBioAvailablityPublic",
                     "pw": {
@@ -53,7 +53,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "dd7e1d7dab3744129e490da6a6ef6d05",
+                    "kuid": "d4e91c10ca224429948a340a4ccb0ccf",
                     "paramList": [],
                     "propertyKey": "setBioStatusToEnable",
                     "pw": {
@@ -65,7 +65,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "bf7b22d6f8924175a633489e6562fdb5",
+                    "kuid": "e3e418321a024360b32b9672ff7a3365",
                     "paramList": [],
                     "propertyKey": "setBioStatusToDisable",
                     "pw": {
@@ -77,7 +77,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "ae01309d5a354ae1b84aaaf5142299a9",
+                    "kuid": "a4135d7849a549a3bc9b484917a1530d",
                     "paramList": [],
                     "propertyKey": "getPinRemainingDays",
                     "pw": {
@@ -89,7 +89,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "jda7cb54ed9b4f698bf244b3e3e555e1",
+                    "kuid": "h85ff663a22a466485c743df05869374",
                     "paramList": [],
                     "propertyKey": "getKeyProfileAge",
                     "pw": {
@@ -101,7 +101,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a2364aaf993649bf8ed821928486d6d6",
+                    "kuid": "i3bc74118a8f405d8a05291fba4f5be2",
                     "paramList": [],
                     "propertyKey": "renewContainer",
                     "pw": {
@@ -113,7 +113,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "g44e936d085d4d82a4cf525bc41e7b1d",
+                    "kuid": "h984682cd84b43d282678822ebe7a1d0",
                     "paramList": [],
                     "propertyKey": "deleteUserProfile",
                     "pw": {
@@ -125,7 +125,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "cb11c28061c645919aa3b67cc4f4d30f",
+                    "kuid": "i80d7124b0b5442eba63587946f79b7b",
                     "paramList": [],
                     "propertyKey": "getSecureCode",
                     "pw": {
@@ -137,11 +137,23 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "abb9e30f1a44416f8c945396c0cc36fb",
+                    "kuid": "hc9767b6a77d44d8bbb85d8f937b38da",
                     "paramList": [],
                     "propertyKey": "logout",
                     "pw": {
                         "displayName": "logout",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "f9269467c10648b1b645e83ebc02afa2",
+                    "paramList": [],
+                    "propertyKey": "getLoginFLowPublic",
+                    "pw": {
+                        "displayName": "getLoginFLowPublic",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
@@ -297,7 +309,7 @@
             "custom": [
                 {
                     "access": "Write",
-                    "defaultValue": true,
+                    "defaultValue": false,
                     "group": "General",
                     "kuid": "aba5245b31b84e06a52ca24432f5a50f",
                     "originalPropertyKey": "isRMSEnabled",

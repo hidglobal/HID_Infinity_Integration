@@ -1,0 +1,92 @@
+{
+    "HEAD": "wf6c5406ac754b93bf954f8a5cc777f7",
+    "w1fb204286374071bb3fe9dcd0f324d0": {
+        "extension": "js",
+        "kuid": "w1fb204286374071bb3fe9dcd0f324d0",
+        "name": "qrcode.js",
+        "parent": "w98270677a844fb3a5f87ee819627f99",
+        "type": "F"
+    },
+    "w483720399a346f99f93ee07057cc88c": {
+        "extension": "html",
+        "kuid": "w483720399a346f99f93ee07057cc88c",
+        "name": "Copyqrenc.html",
+        "parent": "wf6c5406ac754b93bf954f8a5cc777f7",
+        "type": "F"
+    },
+    "w602bea998ae463ab2792f60e3b9043e": {
+        "extension": "js",
+        "kuid": "w602bea998ae463ab2792f60e3b9043e",
+        "name": "jquery.min.js",
+        "parent": "w98270677a844fb3a5f87ee819627f99",
+        "type": "F"
+    },
+    "w6b332e0682a47f083e0f72cad71472f": {
+        "extension": "html",
+        "kuid": "w6b332e0682a47f083e0f72cad71472f",
+        "name": "qrenc3.html",
+        "parent": "wf6c5406ac754b93bf954f8a5cc777f7",
+        "type": "F"
+    },
+    "w6c4edac872d459887d3655bb42f4c5f": {
+        "extension": "js",
+        "kuid": "w6c4edac872d459887d3655bb42f4c5f",
+        "name": "qrcode.js",
+        "parent": "wf8d569c42954f05955d866e127d8025",
+        "type": "F"
+    },
+    "w71a89bdc7a44415abb848ff092ec1c5": {
+        "extension": "html",
+        "kuid": "w71a89bdc7a44415abb848ff092ec1c5",
+        "name": "qrcodeIndex.html",
+        "parent": "wf8d569c42954f05955d866e127d8025",
+        "type": "F"
+    },
+    "w98270677a844fb3a5f87ee819627f99": {
+        "children": [
+            "w602bea998ae463ab2792f60e3b9043e",
+            "w1fb204286374071bb3fe9dcd0f324d0",
+            "w9a04ac1a5e7439f95f8aad6fc324ec0"
+        ],
+        "kuid": "w98270677a844fb3a5f87ee819627f99",
+        "name": "CopykonympQRCode",
+        "parent": "wf6c5406ac754b93bf954f8a5cc777f7",
+        "type": "D"
+    },
+    "w9a04ac1a5e7439f95f8aad6fc324ec0": {
+        "extension": "html",
+        "kuid": "w9a04ac1a5e7439f95f8aad6fc324ec0",
+        "name": "qrcodeIndex.html",
+        "parent": "w98270677a844fb3a5f87ee819627f99",
+        "type": "F"
+    },
+    "wdf26d8686604a8d8a387f7e963cd676": {
+        "extension": "js",
+        "kuid": "wdf26d8686604a8d8a387f7e963cd676",
+        "name": "jquery.min.js",
+        "parent": "wf8d569c42954f05955d866e127d8025",
+        "type": "F"
+    },
+    "wf6c5406ac754b93bf954f8a5cc777f7": {
+        "children": [
+            "wf8d569c42954f05955d866e127d8025",
+            "w6b332e0682a47f083e0f72cad71472f",
+            "w98270677a844fb3a5f87ee819627f99",
+            "w483720399a346f99f93ee07057cc88c"
+        ],
+        "kuid": "wf6c5406ac754b93bf954f8a5cc777f7",
+        "name": "localfiles",
+        "type": "L"
+    },
+    "wf8d569c42954f05955d866e127d8025": {
+        "children": [
+            "wdf26d8686604a8d8a387f7e963cd676",
+            "w6c4edac872d459887d3655bb42f4c5f",
+            "w71a89bdc7a44415abb848ff092ec1c5"
+        ],
+        "kuid": "wf8d569c42954f05955d866e127d8025",
+        "name": "konympQRCode",
+        "parent": "wf6c5406ac754b93bf954f8a5cc777f7",
+        "type": "D"
+    }
+}

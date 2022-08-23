@@ -36,7 +36,7 @@ define([`com/hid/transactionSigning/transactionSigningBusinessController`], func
     transactionSigningBusinessController.approveTransactInitiate(params, Success_CB,Failure_CB);
   };
   
-  transactionSigningPresentationController.prototype.aprroveTransactInitiate = function(updateTSUI,username,toAccount,amount,desc){
+  transactionSigningPresentationController.prototype.aprroveTransactInitiate = function(updateTSUI,username,deviceId,toAccount,amount,desc){
     let Success_CB = success => {
       var authReqId = success.AprroveTransactInitiate[0].auth_req_id;
       let UIObject = {
@@ -57,12 +57,18 @@ define([`com/hid/transactionSigning/transactionSigningBusinessController`], func
 
     let params = {
       "username": username,
+      "deviceId": deviceId,
       "tds": ` You are about to perform the below transaction to ${toAccount} of amount ${amount} with description ${desc}`
      
     };
     transactionSigningBusinessController.approveTransactInitiate(params, Success_CB,Failure_CB);
   };
  
+  transactionSigningPresentationController.prototype.getApproveDevices = function(username, S_CB, F_CB){
+    let params = {"username" : username};
+    transactionSigningBusinessController.getApproveDevices(params, S_CB, F_CB);
+  };
+  
   transactionSigningPresentationController.prototype.OfflineTS = function(updateTSUI,username,toAccount,amount,desc,OTP){
     let Success_CB = success => {
       //alert(JSON.stringify(success));

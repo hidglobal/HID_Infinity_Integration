@@ -11,6 +11,9 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
     NativeControllerAndroid.prototype.signTransaction =function(values){
        this.sdkWrapperObj.signTransaction(values,this.componentInstance.pwdPromtCallback,this.componentInstance.SCB_signTransaction,this.componentInstance.FCB_signTransaction,this.konyContext);
     };
+    NativeControllerAndroid.prototype.updateUsername =function(username){
+      this.sdkWrapperObj.setUsername(username);
+    };
     NativeControllerAndroid.prototype.notifyPassword =function(password,mode){
        this.sdkWrapperObj.notifyPassword(password,mode);
     };

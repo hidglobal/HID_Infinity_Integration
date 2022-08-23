@@ -43,10 +43,8 @@
         "value": "50%"
     },
     "children": [
-        "flxToAccountOffline",
-        "flxCurrencyOffline",
-        "flxAmountOffline",
-        "flxDescOffline",
+        "flxOfflineFields",
+        "flxQRCodeScan",
         "flxOTP",
         "btnLoginOffline",
         "lblTSSuccess",
@@ -58,7 +56,7 @@
     "id": "flxTSOffline",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "bfac12ff25e64a06b2d7e286a5d18520",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",

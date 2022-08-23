@@ -39,9 +39,7 @@
     "device": "Pixel3",
     "displayorientation": 3,
     "enabledforidletimeout": false,
-    "globalUserWidgetRefs": [
-        "uc5285a556ab43c29b1ed218015b75fe"
-    ],
+    "globalUserWidgetRefs": [],
     "id": "userwidgetmodel",
     "info": null,
     "initdone": false,
@@ -66,6 +64,7 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,
+    "shellCSS": "and_Pixel3",
     "titlebar": true,
     "type": 3,
     "wType": "Form"
