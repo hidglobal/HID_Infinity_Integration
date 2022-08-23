@@ -64,7 +64,7 @@
             "CopyCopyCopyCopyslFbox0abd984bc1e0645",
             "CopyCopyCopyslFbox0ad245811fb7c4d",
             "CopyCopyCopyCopyslFbox0ff893203729a4e",
-            "CopyCopyCopyCopyCopyCopydefLabel",
+            "CopyCopyCopyCopyCopyCopyCopydefLabel",
             "CopyCopyCopylblErrortext",
             "CopyCopyCopyseg",
             "CopyCopyCopyseg1",
@@ -83,7 +83,8 @@
             "pageondot.png"
         ],
         "fonts": [
-            "FontAwesome"
+            "FontAwesome",
+            "Gotham-Book"
         ],
         "nativeApis": 0,
         "mfbundle": "services/services.zip",
@@ -93,7 +94,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2021-07-09T16:54:42.684Z",
-    "createdVizVersion": "9.1.8",
-    "project_version": "sprint38"
+    "createdOn": "2022-08-03T06:43:37.116Z",
+    "createdVizVersion": "9.2.37",
+    "project_version": "sprint39"
 }

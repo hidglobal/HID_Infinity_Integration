@@ -129,7 +129,6 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         this.isKnownDevice = this.deviceTag==this.tm_tag;
       } 
       kony.print("RMS => isKnownDevice:"+this.isKnownDevice);
-      //this.GetMyIpFunction();
       var self = this;
       if(this.client_ip.trim() != ""){
         this.rmsLoginApiCall();
@@ -142,6 +141,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
           self.rmsLoginApiCall();
         });
       }
+//       this.GetMyIpFunction();
     },     
     GetMyIpFunction: function(){
       try{
@@ -166,7 +166,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       }
     },
     rmsLoginApiCall : function(){
-      let randomValue = Math.floor(Math.random()*10000000);
+      let randomValue = Math.floor(Math.random()*100000);
       this.app_session_id = String(randomValue) ;
 
       const rmsLoad = {
@@ -394,7 +394,8 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         //let finalData = [ {"lblEnableDiasbleHeader" : "Edit","lblTotalFailureHeader" : "Total Failures","lblAuthHeader" : "Authenticator","lblStatusHeader":"Status","lblTotalSuccessHeader":"Total Success","template":"flxAuthHeader"}];
         //inalData.push(authData);
         this.view.segmentPushDevices.data = deviceData;
-        this.commonEventHandler(this.dismissLoading, ""); } else {
+        this.commonEventHandler(this.dismissLoading, ""); } 
+       else {
           this.deviceId = "";
           AuthenticationPresentationController.initiateApprove(this.username, "", this.initiateApproveSuccess,
                                                                this.initiateApproveFailure);

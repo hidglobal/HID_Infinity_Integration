@@ -267,8 +267,8 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
       this.contextSwitch("Error");
     },
     approveDeviceRegistrationSuccess : function(response){
-      this.view.qrcodegenerator.dataToEncode = response.inviteCodeString;
-      this.view.qrcodegenerator.generate();
+      this.view.qrcodegeneratorNew.dataToEncode = response.inviteCodeString;
+      this.view.qrcodegeneratorNew.generate();
       this.view.lblUid.text = `<p>Username : ${response.username}<\p>`;
       this.view.lblInvCode.text =`<p>Invite Code : ${response.decodedInvCode}<\p>`;
       this.view.lblRegURL.text = `<p>${response.url}<\p>`;
@@ -308,8 +308,9 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     },
 
     deviceRegistrationPollingSuccess: function(response){
-      this.contextSwitch("Approve");
-      OnboardingPresentationController.initiateApproveNotification(this.updateOnboardingUI);
+      this.contextSwitch("RegistrationSuccess");
+  //    this.contextSwitch("Approve");
+ //     OnboardingPresentationController.initiateApproveNotification(this.updateOnboardingUI);
     },
     deviceRegistrationPollingFailure: function(response){
       //Can update any text field

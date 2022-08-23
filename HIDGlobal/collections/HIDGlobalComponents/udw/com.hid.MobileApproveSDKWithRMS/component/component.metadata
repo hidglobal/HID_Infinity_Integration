@@ -58,7 +58,7 @@
             "CopyCopysknLblConfirmPin3",
             "sknLblEnableBiometric",
             "CopyslFontAwesomeIcon0c20c39ab47814b",
-            "slForm",
+            "CopyslForm0b7ac425b693846",
             "sknBtnMobileComponent",
             "sknBtnFocusMobileComponent",
             "CopyCopyCopydefBtnNormal0i955e2c12fc44f",
@@ -115,6 +115,7 @@
             "sknTbxPHComponent",
             "CopydefLabel0cb5c71d776a447",
             "CopyslFontAwesomeIcon0f3115f8bdcc846",
+            "slForm",
             "FLXROUND",
             "CopyslFbox0d437aad479b448",
             "SKNCHARCOAL",
@@ -142,7 +143,7 @@
             "None",
             "Gotham-Book"
         ],
-        "nativeApis": 0,
+        "nativeApis": 4,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -150,7 +151,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2022-05-24T11:15:53.856Z",
+    "createdOn": "2022-08-22T08:38:41.193Z",
     "createdVizVersion": "9.2.37",
     "project_version": "sprint39"
 }

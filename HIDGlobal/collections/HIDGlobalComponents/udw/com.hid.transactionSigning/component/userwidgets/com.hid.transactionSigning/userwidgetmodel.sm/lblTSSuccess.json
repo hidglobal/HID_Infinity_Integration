@@ -7,7 +7,7 @@
     },
     "_height_": {
         "type": "string",
-        "value": "10%"
+        "value": "5%"
     },
     "_left_": {
         "type": "string",
@@ -29,7 +29,7 @@
     "_text_": "Login to your account",
     "_top_": {
         "type": "string",
-        "value": "2%"
+        "value": "1%"
     },
     "_width_": {
         "type": "string",
@@ -45,7 +45,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "50.01%"
     },
     "containerweight": 100,
     "contentalignment": 5,

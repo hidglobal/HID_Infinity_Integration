@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s199d80fbd8f49c8a7382e46323dfe2d",
+    "_skin_": "s882bb1aea9c4b1392357880ad3d15be",
     "_text_": "Cancel",
     "_top_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s3fe878e3cf349efb7424de6009f66b2",
+    "focusskin": "sb249c9bc522428bab7c233453af7e71",
     "id": "btnCancelOTP",
     "ide_onClick": "AS_Button_ffe0ec05544948ef91a32ecc076d045c",
     "info": null,

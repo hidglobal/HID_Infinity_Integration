@@ -1,0 +1,146 @@
+{
+    "classname": "qrcodegeneratorNew",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "f8e127e772e5439995ef9988f7b6530a",
+                    "paramList": [],
+                    "propertyKey": "generate",
+                    "pw": {
+                        "displayName": "generate",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "u54db38a67cd4dc292b47bce4b74b9d4",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "kony",
+                    "group": "General",
+                    "kuid": "gda09cafdfbc4712a5d41892092a0a43",
+                    "originalPropertyKey": "dataToEncode",
+                    "propertyIndex": 1,
+                    "propertyKey": "dataToEncode",
+                    "pw": {
+                        "displayName": "Data To Encode",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u54db38a67cd4dc292b47bce4b74b9d4",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "#000000",
+                    "group": "General",
+                    "kuid": "j9f2a50ab54640508ac87297a95aff3f",
+                    "originalPropertyKey": "colorLight",
+                    "propertyIndex": 2,
+                    "propertyKey": "colorLight",
+                    "pw": {
+                        "displayName": "Color Light",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u54db38a67cd4dc292b47bce4b74b9d4",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "#ffffff",
+                    "group": "General",
+                    "kuid": "g357fd3243004119a28aa1c844eb9155",
+                    "originalPropertyKey": "colorDark",
+                    "propertyIndex": 3,
+                    "propertyKey": "colorDark",
+                    "pw": {
+                        "displayName": "Color Dark",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u54db38a67cd4dc292b47bce4b74b9d4",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "128",
+                    "group": "General",
+                    "kuid": "c5cafe0faf39469d8afdbf1efa1b57c2",
+                    "originalPropertyKey": "qrcodeWidth",
+                    "propertyIndex": 4,
+                    "propertyKey": "qrcodeWidth",
+                    "pw": {
+                        "displayName": "QR Code Width",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u54db38a67cd4dc292b47bce4b74b9d4",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "128",
+                    "group": "General",
+                    "kuid": "aab12005838f40ad868519a436e554ec",
+                    "originalPropertyKey": "qrcodeHeight",
+                    "propertyIndex": 5,
+                    "propertyKey": "qrcodeHeight",
+                    "pw": {
+                        "displayName": "QR Code Height",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u54db38a67cd4dc292b47bce4b74b9d4",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "Level L",
+                    "group": "General",
+                    "kuid": "d56fd7b66a484536b118b260d10e2268",
+                    "originalPropertyKey": "correctLevel",
+                    "propertyIndex": 6,
+                    "propertyKey": "correctLevel",
+                    "pw": {
+                        "displayName": "Error Correction Level",
+                        "uiRepresentation": "Label-Combobox"
+                    },
+                    "srcWgtKUID": "u54db38a67cd4dc292b47bce4b74b9d4",
+                    "type": "list selector",
+                    "value": [
+                        "Level L",
+                        "Level M",
+                        "Level Q",
+                        "Level H"
+                    ]
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.konymp",
+    "version": "1.0.0"
+}

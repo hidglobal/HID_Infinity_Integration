@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s1e4e2ce034346cf88f2bbaf640c232a",
+    "_skin_": "s78430ddcbc8472885c7a57efb4fad5f",
     "_text_": "LOGIN",
     "_top_": {
         "type": "string",
@@ -43,11 +43,11 @@
     "containerweight": 100,
     "contentalignment": 5,
     "desktopweb": {
-        "blockedUISkin": "s21200e0c2d844efa790417a2ed3a155"
+        "blockedUISkin": "sf23dcdf64f1465fa059f270305e2f72"
     },
     "disabledSkins": {},
     "displaytext": true,
-    "focusskin": "s876649bfddf465493f74ad673f995c0",
+    "focusskin": "s57d3330c7fa42e4be4eed7656d674b6",
     "id": "btnLogin",
     "ide_onClick": "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279",
     "info": null,

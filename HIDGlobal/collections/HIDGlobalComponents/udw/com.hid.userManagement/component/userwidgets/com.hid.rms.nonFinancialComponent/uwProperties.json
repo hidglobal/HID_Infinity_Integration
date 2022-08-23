@@ -1,0 +1,193 @@
+{
+    "classname": "nonFinancialComponent",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "g95193441d2343fd938b898be3f9cb8c",
+                    "paramList": [],
+                    "propertyKey": "analyzeAction",
+                    "pw": {
+                        "displayName": "analyzeAction",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "c8ef7c966f83415893c63befedfc4dd5",
+                    "paramList": [],
+                    "propertyKey": "updateActionInRMS",
+                    "pw": {
+                        "displayName": "updateActionInRMS",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "d294ead4ccf6498c901c6c6403e40e8a",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "analyzeActionSuccess",
+                    "pw": {
+                        "displayName": "analyzeActionSuccess",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "d47e11959e164b85966ed90f07d3922a",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "analyzeActionFailure",
+                    "pw": {
+                        "displayName": "analyzeActionFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "e6057a145c0b485d95ae245c4e23371a",
+                    "paramList": [],
+                    "propertyIndex": 3,
+                    "propertyKey": "updateActionInRMSSuccess",
+                    "pw": {
+                        "displayName": "updateActionInRMSSuccess",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "h0c10b8f8d1f448e8d1d797a64269f83",
+                    "paramList": [],
+                    "propertyIndex": 4,
+                    "propertyKey": "updateActionInRMSFailure",
+                    "pw": {
+                        "displayName": "updateActionInRMSFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "a087e78f003a47d1b0be8524ebacb73f",
+                    "paramList": [],
+                    "propertyIndex": 5,
+                    "propertyKey": "stepUpRequired",
+                    "pw": {
+                        "displayName": "stepUpRequired",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": 5,
+                    "group": "General",
+                    "kuid": "f32bb92d881a444e8ee4467e6a984e18",
+                    "originalPropertyKey": "thresholdScore",
+                    "propertyIndex": 1,
+                    "propertyKey": "thresholdScore",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "thresholdScore",
+                        "type": "integer",
+                        "uiRepresentation": "Label-Textbox",
+                        "validationData": "^(\\+|-)?\\d+$"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "integer",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "STD_PWD",
+                    "group": "General",
+                    "kuid": "dbc052fd8c4046eda0d8533a66df7c50",
+                    "originalPropertyKey": "MFA",
+                    "propertyIndex": 2,
+                    "propertyKey": "MFA",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "MFA",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "C8hDRqP6KY",
+                    "group": "General",
+                    "kuid": "a6c8d5f9c05c4f32bb470838fd61c0e7",
+                    "originalPropertyKey": "tmCookieTag",
+                    "propertyIndex": 3,
+                    "propertyKey": "tmCookieTag",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "tmCookieTag",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "TS01d4cc80",
+                    "group": "General",
+                    "kuid": "a8f0281a19de430eb4ea8300193212e7",
+                    "originalPropertyKey": "tmCookieSid",
+                    "propertyIndex": 4,
+                    "propertyKey": "tmCookieSid",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "tmCookieSid",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "f07c751b2246424b9f006f4ab5605fb5",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hid.rms",
+    "version": "1.0.0"
+}

@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "12%"
+        "value": "18%"
     },
     "_left_": {
         "type": "string",
@@ -22,10 +22,10 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_skin_": "s18a492191874719b241c9a655e4389b",
     "_top_": {
         "type": "string",
-        "value": "5%"
+        "value": "42%"
     },
     "_width_": {
         "type": "string",
@@ -36,7 +36,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "49.37%"
     },
     "children": [
         "lblAmountOffline",
@@ -52,7 +52,7 @@
     "kuid": "icaaeb8746694b03b9d6a44215818302",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxTSOffline",
+    "parent": "flxOfflineFields",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

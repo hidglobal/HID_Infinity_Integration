@@ -6,7 +6,7 @@
         "isLocked": false,
         "userwidgets": [
             "com.hid.onboarding",
-            "com.konymp.qrcodegenerator"
+            "com.konymp.qrcodegeneratorNew"
         ],
         "templates": [],
         "actions": {},
@@ -98,7 +98,7 @@
         ],
         "fonts": [
             "FontAwesome",
-            "Helvetica"
+            "Gotham-Book"
         ],
         "nativeApis": 0,
         "mfbundle": "services/services.zip",
@@ -108,7 +108,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2021-07-09T16:43:01.031Z",
-    "createdVizVersion": "9.1.8",
-    "project_version": "sprint38"
+    "createdOn": "2022-08-03T06:20:18.246Z",
+    "createdVizVersion": "9.2.37",
+    "project_version": "sprint39"
 }

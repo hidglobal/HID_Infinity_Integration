@@ -46,7 +46,8 @@
         "TransactionSigningMobileSDK",
         "flxLoading",
         "flxUpdatePasswordTrans",
-        "flxAccountDetails"
+        "flxAccountDetails",
+        "flxSecureCodePin"
     ],
     "clipbounds": false,
     "containerweight": 100,
