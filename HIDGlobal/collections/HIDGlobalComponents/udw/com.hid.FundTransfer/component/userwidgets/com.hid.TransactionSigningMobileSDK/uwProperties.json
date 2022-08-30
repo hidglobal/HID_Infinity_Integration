@@ -150,6 +150,23 @@
                     "srcWgtKUID": "gbdfa40a64c9457eb298666af4804ada",
                     "type": "string",
                     "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "TRANSACT",
+                    "group": "General",
+                    "kuid": "b0341691919f4b86834d36959217ee73",
+                    "originalPropertyKey": "mode",
+                    "propertyIndex": 2,
+                    "propertyKey": "mode",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "mode",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "gbdfa40a64c9457eb298666af4804ada",
+                    "type": "string",
+                    "value": ""
                 }
             ],
             "passthrough": []

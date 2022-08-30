@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "se55660726c14c60977d92bec16f15b4",
+    "_skin_": "sf5911be165b46e88b86da01c9bcf199",
     "_text_": "Cancel",
     "_top_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s2461ae4a8e043e6b5d217bed9caf210",
+    "focusskin": "s8fd57d5eae44a21919237c28622b6f5",
     "id": "btnCancelScanQR",
     "info": null,
     "iscustomlayout": false,

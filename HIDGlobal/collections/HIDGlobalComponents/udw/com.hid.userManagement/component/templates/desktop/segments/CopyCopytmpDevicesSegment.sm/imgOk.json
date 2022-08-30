@@ -1,0 +1,65 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "__parentReadjusting__": false,
+    "_base64_": null,
+    "_height_": {
+        "type": "string",
+        "value": "50%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+    "_src_": "done_black_24dp_2_1.png",
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "50%"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerId": true,
+    "containerweight": 100,
+    "context": {
+        "channel": "desktop",
+        "platform": "desktopweb",
+        "templateType": "segments",
+        "topLevelBox": null
+    },
+    "id": "imgOk",
+    "ide_onTouchEnd": "AS_Image_h952bc2fb39d452f8049640042717a48",
+    "imagescalemode": 1,
+    "info": null,
+    "invokedProperty": "src",
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "c9f3a06bfd0f4100afd0f8e69180f253",
+    "name": "kony.ui.Image2",
+    "parent": "flxEditButtons",
+    "pf": "CopyCopytmpDevicesSegment",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5
+}

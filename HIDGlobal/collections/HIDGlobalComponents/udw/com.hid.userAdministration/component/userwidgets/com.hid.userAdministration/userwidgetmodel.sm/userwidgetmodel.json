@@ -45,8 +45,11 @@
         "ueb9b7220c134e9ba732c3558b7773a2",
         "uee538a0ecd44b84b2155c78e8643bbc",
         "u8b90c0f59974999a541a64457659168",
-        "u613761871694009a1efac59fffaf341",
-        "u770f9de507c464b9dccf794e9459803"
+        "uee9a02223fc4a6c87f0c4f7422e033b",
+        "u495a7eb77ae40aeb05ed3742abac02d",
+        "uf98800debac4995920912607d4b2ef5",
+        "u3bd78fa5a6842b5a848a8ffa265b804",
+        "ub9a3fe8ad9c43fbac202ffd2c227c0b"
     ],
     "id": "userwidgetmodel",
     "info": null,
@@ -72,7 +75,6 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainscrollposition": false,
-    "shellCSS": "desktop",
     "titlebar": true,
     "type": 3,
     "wType": "Form"

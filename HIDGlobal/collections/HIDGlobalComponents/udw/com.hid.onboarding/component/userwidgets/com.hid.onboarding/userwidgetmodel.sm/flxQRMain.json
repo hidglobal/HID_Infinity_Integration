@@ -39,7 +39,7 @@
         "value": "50%"
     },
     "children": [
-        "qrcodegenerator"
+        "qrcodegeneratorNew"
     ],
     "clipbounds": true,
     "containerweight": 100,

@@ -5,9 +5,16 @@
         "uw_classname": "transactionSigning",
         "isLocked": false,
         "userwidgets": [
-            "com.hid.transactionSigning"
+            "com.hid.transactionSigning",
+            "com.konymp.qrcodegeneratorNew"
         ],
-        "templates": [],
+        "templates": [
+            [
+                "desktop",
+                "segments",
+                "CopyCopyCopyCopytmpPushDevice1"
+            ]
+        ],
         "actions": {
             "common": {
                 "AS_Button_dff7d086809c48dbbd946e49e701e048": {
@@ -15,6 +22,12 @@
                     "actionId": "AS_Button_dff7d086809c48dbbd946e49e701e048",
                     "actionName": "AS_Button_dff7d086809c48dbbd946e49e701e048",
                     "key": "ide_onClick"
+                },
+                "AS_Segment_c12f758c4311436baf01c9930ee1095f": {
+                    "channel": "common",
+                    "actionId": "AS_Segment_c12f758c4311436baf01c9930ee1095f",
+                    "actionName": "AS_Segment_c12f758c4311436baf01c9930ee1095f",
+                    "key": "ide_onRowClick"
                 }
             }
         },
@@ -25,23 +38,41 @@
             "CopyCopyCopyCopyCopyCopybtnWHiteFocus",
             "CopyCopyCopyCopyslFbox0g26f9ff38ff64e",
             "slFbox",
+            "CopyslFbox0af86d06d07524e",
+            "CopyslFbox0a1945089e9154b",
             "CopyCopysknlblTSThemeBlue",
             "CopyCopysknlblTSSuccess",
             "CopyCopysknlblTSError",
+            "CopydefLabel0de468d81936f42",
+            "CopydefLabel0add337f0f8df4b",
+            "CopydefLabel0eff9184e469d4d",
+            "CopyCopyCopyCopysknHIDNotification1",
+            "CopyCopyCopyCopyCopyCopydefLabel",
+            "seg2Focus",
+            "CopyCopyCopyCopyseg1",
+            "sliPhoneSegmentHeader",
             "CopyCopyCopyCopysknTbxHIDBLUE1",
-            "CopyCopyCopyCopyCopysknTbxHIDBLUE"
+            "CopyCopyCopyCopyCopysknTbxHIDBLUE",
+            "CopyCopyCopyCopyCopyslFbox",
+            "defLabel",
+            "CopyCopyCopyCopyCopydefLabel"
         ],
-        "images": [],
-        "fonts": [],
+        "images": [
+            "pageoffdot.png",
+            "pageondot.png"
+        ],
+        "fonts": [
+            "Gotham-Book"
+        ],
         "nativeApis": 0,
         "mfbundle": "services/services.zip",
-        "localFiles": [],
+        "localFiles": true,
         "cordova": [],
         "forms": {},
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2021-07-09T16:51:54.550Z",
-    "createdVizVersion": "9.1.8",
-    "project_version": "sprint38"
+    "createdOn": "2022-08-03T06:36:10.721Z",
+    "createdVizVersion": "9.2.37",
+    "project_version": "sprint39"
 }

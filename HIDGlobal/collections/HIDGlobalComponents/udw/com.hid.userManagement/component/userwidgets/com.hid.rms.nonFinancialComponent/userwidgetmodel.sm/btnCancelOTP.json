@@ -1,0 +1,56 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "4%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s57ecad3406d4cfcb239bf1cc00ca946",
+    "_text_": "Cancel",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "48%"
+    },
+    "canUpdateUI": true,
+    "centery": {
+        "type": "number",
+        "value": ""
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "se0dc53a972742a0b2efc35ddae9d338",
+    "id": "btnCancelOTP",
+    "ide_onClick": "AS_Button_afe64f5cae044e82811a461edaab4c5a",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "e453a665e4584b88819927d726bda34c",
+    "name": "kony.ui.Button",
+    "parent": "flxOTPButtons",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

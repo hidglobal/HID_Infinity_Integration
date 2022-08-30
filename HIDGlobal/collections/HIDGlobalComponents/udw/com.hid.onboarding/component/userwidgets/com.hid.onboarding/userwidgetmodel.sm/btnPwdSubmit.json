@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s2461ae4a8e043e6b5d217bed9caf210",
+    "_skin_": "s8fd57d5eae44a21919237c28622b6f5",
     "_text_": "SUBMIT",
     "_top_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s5fbea3745a24ea1bb55624280e70be0",
+    "focusskin": "sd1457a3e8834b0481245e3d219d5e7d",
     "id": "btnPwdSubmit",
     "info": null,
     "iscustomlayout": false,

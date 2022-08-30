@@ -6,7 +6,6 @@
     "sourceChannel": "common",
     "templateDef": {
         "DNDConfig": null,
-        "__parentReadjusting__": false,
         "_height_": {
             "type": "string",
             "value": "100%"
@@ -61,7 +60,6 @@
         "enablescrolling": true,
         "flxActivationCode": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -1377,7 +1375,6 @@
         },
         "flxBiometric": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -1755,7 +1752,6 @@
         },
         "flxLoading": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -2079,7 +2075,6 @@
         },
         "flxLogin": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -3308,7 +3303,6 @@
         },
         "flxOOB": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -3350,7 +3344,6 @@
             "enablescrolling": true,
             "flxMainPageOOB": {
                 "DNDConfig": null,
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "60%"
@@ -3407,7 +3400,6 @@
                 "enablescrolling": true,
                 "flxConfirmBtn": {
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "8.40%"
@@ -3444,7 +3436,6 @@
                     "btnConfirmOOB": {
                         "@class": "com.kony.gen.viz.model.component.KVizButton",
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "string",
                             "value": "100%"
@@ -3528,7 +3519,6 @@
                 },
                 "flxErrOTP": {
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "10%"
@@ -3675,7 +3665,6 @@
                     "CopyimgLogin0c0564cc7ec2547": {
                         "@class": "com.kony.gen.viz.model.component.KVizImage2",
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_base64_": null,
                         "_height_": {
                             "type": "string",
@@ -3713,13 +3702,6 @@
                             "value": "50%"
                         },
                         "containerweight": 100,
-                        "context": {
-                            "channel": "mobile",
-                            "formID": "uwudf637f759e64eaa943af27248e39362",
-                            "platform": "android",
-                            "templateType": "userwidgets",
-                            "topLevelBox": null
-                        },
                         "id": "CopyimgLogin0c0564cc7ec2547",
                         "imagescalemode": 0,
                         "info": null,
@@ -3742,7 +3724,6 @@
                     "CopylblHeaderLogin0a0f217906d074d": {
                         "@class": "com.kony.gen.viz.model.component.KVizLabel",
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "ref",
                             "value": "preferred"
@@ -3789,9 +3770,6 @@
                         "containerweight": 100,
                         "contentalignment": 4,
                         "focusskin": "sa31fc6fd6b94fb1a3d7cb6029db4fb2",
-                        "genericProperties": {
-                            "textStyle": {}
-                        },
                         "id": "CopylblHeaderLogin0a0f217906d074d",
                         "info": null,
                         "ipad": {
@@ -3824,12 +3802,12 @@
                         "snapshot": {
                             "md5": "xfbPfaShbpi+YMRQMgnRWtwDjEQ="
                         },
+                        "textstyle": {},
                         "tooltip": "",
                         "wType": "Label",
                         "zindex": 0
                     },
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "16%"
@@ -3894,7 +3872,6 @@
                 },
                 "flxOTP": {
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "14%"
@@ -3942,7 +3919,6 @@
                     "enablescrolling": true,
                     "flxTbxOTP": {
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "string",
                             "value": "60%"
@@ -4000,7 +3976,6 @@
                         "tbxOTP": {
                             "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
                             "DNDConfig": null,
-                            "__parentReadjusting__": false,
                             "_height_": {
                                 "type": "string",
                                 "value": "100%"
@@ -4087,7 +4062,6 @@
                     "lblOTP": {
                         "@class": "com.kony.gen.viz.model.component.KVizLabel",
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "string",
                             "value": "30%"
@@ -4130,9 +4104,6 @@
                         "containerweight": 100,
                         "contentalignment": 4,
                         "focusskin": "s7003745cbcb4f8a97356ae1b3fdc991",
-                        "genericProperties": {
-                            "textStyle": {}
-                        },
                         "id": "lblOTP",
                         "info": null,
                         "ipad": {
@@ -4165,6 +4136,7 @@
                         "snapshot": {
                             "md5": "6izWEl6EGjGwcC0215fch4C6cc4="
                         },
+                        "textstyle": {},
                         "tooltip": "",
                         "wType": "Label",
                         "zindex": 3
@@ -4183,7 +4155,6 @@
                 },
                 "flxResendOTPBtn": {
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "8.40%"
@@ -4236,7 +4207,6 @@
                     "lblResendOTP": {
                         "@class": "com.kony.gen.viz.model.component.KVizLabel",
                         "DNDConfig": null,
-                        "__parentReadjusting__": false,
                         "_height_": {
                             "type": "ref",
                             "value": "preferred"
@@ -4285,9 +4255,6 @@
                         },
                         "containerweight": 100,
                         "contentalignment": 5,
-                        "genericProperties": {
-                            "textStyle": {}
-                        },
                         "id": "lblResendOTP",
                         "info": null,
                         "ipad": {
@@ -4314,6 +4281,7 @@
                         "snapshot": {
                             "md5": "YnGXlgaSnw97W9DhO2l2rqYlsRQ="
                         },
+                        "textstyle": {},
                         "tooltip": "",
                         "wType": "Label",
                         "zindex": 1
@@ -4338,7 +4306,6 @@
                 "lblOOBtext": {
                     "@class": "com.kony.gen.viz.model.component.KVizLabel",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "10%"
@@ -4383,9 +4350,6 @@
                     },
                     "containerweight": 100,
                     "contentalignment": 5,
-                    "genericProperties": {
-                        "textStyle": {}
-                    },
                     "id": "lblOOBtext",
                     "info": null,
                     "ipad": {
@@ -4409,6 +4373,7 @@
                     "snapshot": {
                         "md5": "tzD2Mzf2EXuW6pC2bWh5P8psaUE="
                     },
+                    "textstyle": {},
                     "tooltip": "",
                     "wType": "Label",
                     "zindex": 1
@@ -4416,7 +4381,6 @@
                 "lblOTPtext": {
                     "@class": "com.kony.gen.viz.model.component.KVizLabel",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "10%"
@@ -4461,9 +4425,6 @@
                     },
                     "containerweight": 100,
                     "contentalignment": 5,
-                    "genericProperties": {
-                        "textStyle": {}
-                    },
                     "id": "lblOTPtext",
                     "info": null,
                     "ipad": {
@@ -4487,6 +4448,7 @@
                     "snapshot": {
                         "md5": "MfkJk4jSHksSuRaW2E2DdYKbms4="
                     },
+                    "textstyle": {},
                     "tooltip": "",
                     "wType": "Label",
                     "zindex": 1
@@ -4523,7 +4485,6 @@
         },
         "flxOpaqueBGNew": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -4585,7 +4546,6 @@
         },
         "flxProfileResetUI": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -5572,7 +5532,6 @@
         },
         "flxSetPassword": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -7719,7 +7678,6 @@
         },
         "flxSetStandardPassword": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -10076,7 +10034,6 @@
                 "zindex": 6
             },
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "52%"
@@ -10348,7 +10305,6 @@
         },
         "flxUpdatePassword": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -12604,7 +12560,6 @@
         },
         "flxUsers": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -15432,7 +15387,6 @@
         "imgBg": {
             "@class": "com.kony.gen.viz.model.component.KVizImage2",
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_base64_": null,
             "_height_": {
                 "type": "string",
@@ -15466,13 +15420,6 @@
             },
             "canUpdateUI": true,
             "containerweight": 100,
-            "context": {
-                "channel": "mobile",
-                "formID": "uwudf637f759e64eaa943af27248e39362",
-                "platform": "android",
-                "templateType": "userwidgets",
-                "topLevelBox": null
-            },
             "id": "imgBg",
             "imagescalemode": 0,
             "info": null,
@@ -15511,5 +15458,5 @@
         "wType": "FlexContainer",
         "widgetalignment": 1
     },
-    "userwidgetKUID": "u20bda331feb47958abd666417784ae7"
+    "userwidgetKUID": "u90952686eaf47d4938aea890dbe9d79"
 }

@@ -11,6 +11,8 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
       this.view.btnLoginChallenge.onClick = this.btnLoginChallenge_onClick;
       this.view.btnSendSMSOtp.onClick = this.btnSendSMSOtp_onClick;
       this.view.btnValidateOTP.onClick = this.btnValidateOTP_onClick;
+      this.view.lblGenerateQR.onTouchEnd = this.lblGeneratorQR_onTouchEnd;
+      this.view.lblOfflineManualEntry.onTouchEnd = this.lblOfflineManualEntry_onTouchEnd;
       this.setChallengeUI(false);
       this.changeTSMode("Approve");
     },
@@ -27,9 +29,9 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
       });
       defineSetter(this, "tds", function(val) {
         this._tds = val;
-      });
-
+      });  
     },
+   
     updateTSUI : function(response){
       this.resetUIFeilds();
       switch(response.state){
@@ -117,44 +119,126 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
       transactionSigningPresentationController.aprroveTransact_Initiate(this.updateTSUI,this._username,this._tds);
     },
     btnLogin_onClick : function(){
-      let toAccount = this.view.tbxToAccount.text;
-      let amount = this.view.tbxAmount.text.trim();
-      let desc = this.view.tbxDescription.text;
-      if(toAccount === "" || isNaN(toAccount)){
+      this.toAccount = this.view.tbxToAccount.text;
+      this.amount = this.view.tbxAmount.text.trim();
+      this.desc = this.view.tbxDescription.text;
+      if(this.toAccount === "" || isNaN(this.toAccount)){
         this.view.lblError.text = `Please enter valid "to Account"`;
         return;
       }
-      if(desc === ""){
+      if(this.amount === "" || isNaN(this.amount)){
+        this.view.lblError.text = "Please enter valid Amount";
+        return;
+      }      
+      if(this.desc === ""){
         this.view.lblError.text = "Please enter Description";
         return;
       }
-      if(amount === "" || isNaN(amount)){
-        this.view.lblError.text = "Please enter valid Amount";
-        return;
-      }
       this.commonEventHandler(this.showLoading, "");
-      transactionSigningPresentationController.aprroveTransactInitiate(this.updateTSUI,this._username,toAccount,amount,desc);
-
+      
+      //call list of Devices
+      transactionSigningPresentationController.getApproveDevices(this.username, this.getDeviceSuccess,
+                                                               this.getDeviceFailure); 
+ //     transactionSigningPresentationController.aprroveTransactInitiate(this.updateTSUI,this._username,toAccount,amount,desc);
     },
-
-    btnLoginOffline_onClick : function(){
+    
+    getDeviceSuccess : function(response) {    
+      if(response.length === 0){
+        this.getDeviceFailure("");
+      } else if(response.length > 1){
+        this.view.flxTSApprove.setVisibility(false);
+        this.view.flxPushDevices.setVisibility(true);
+        
+  //      this.contextSwitch("PushDevices");
+        let deviceData = response.map((device) => ({
+          "deviceName" : device.friendlyName,
+          "deviceId" : device.deviceId})); let widetDataMap = {
+          "lblDeviceName" : "deviceName",
+          "lblDeviceId" : "deviceId"
+        };
+        this.view.segmentPushDevices.widgetDataMap = widetDataMap;
+        //let finalData = [ {"lblEnableDiasbleHeader" : "Edit","lblTotalFailureHeader" : "Total Failures","lblAuthHeader" : "Authenticator","lblStatusHeader":"Status","lblTotalSuccessHeader":"Total Success","template":"flxAuthHeader"}];
+        //inalData.push(authData);
+        this.view.segmentPushDevices.data = deviceData;
+        this.commonEventHandler(this.dismissLoading, ""); } 
+       else {
+          this.deviceId = "";
+          transactionSigningPresentationController.aprroveTransactInitiate(this.updateTSUI,this._username,this.deviceId,this.toAccount,this.amount,this.desc);
+        }
+    },    
+    
+    getDeviceFailure : function(response) {
+      this.view.lblError.text = "No push device is registered, please complete enrollment process.";
+      this.commonEventHandler(this.dismissLoading, "");
+    },
+    
+    initiateApprove : function(rowNumber){
+      this.view.flxPushDevices.setVisibility(false);  
+      this.view.flxTSApprove.setVisibility(true);    
+      this.commonEventHandler(this.showLoading, "");
+      let totalData = this.view.segmentPushDevices.data.slice();
+      let data = totalData[rowNumber];
+      this.deviceId = data.deviceId;
+            transactionSigningPresentationController.aprroveTransactInitiate(this.updateTSUI,this._username,this.deviceId, this.toAccount,this.amount,this.desc);
+    },    
+    
+    lblGeneratorQR_onTouchEnd : function(){
+      this.view.lblTSSuccess.text ="";
       let toAccount = this.view.tbxToAccountOffline.text;
       let amount = this.view.tbxAmountOffline.text.trim();
       let desc = this.view.tbxDescriptionOffline.text;
-      let OTP = this.view.tbxOTPOffline.text.trim();
       if(toAccount === "" || isNaN(toAccount)){
         this.view.lblTSSuccess.skin="sknlblTSError";
         this.view.lblTSSuccess.text = `Please enter valid "to Account"`;
+        return;
+      }
+      if(amount === "" || isNaN(amount)){
+        this.view.lblTSSuccess.skin="sknlblTSError";
+        this.view.lblTSSuccess.text = "Please enter valid Amount";
         return;
       }
       if(desc === ""){
         this.view.lblTSSuccess.skin="sknlblTSError";
         this.view.lblTSSuccess.text = "Please enter Description";
         return;
+      }      
+      QRdata = {
+        "toAccount" : toAccount,
+        "amount" : amount,
+        "desc" : desc
+      };
+      this.view.qrcodegeneratorNew.dataToEncode = JSON.stringify(QRdata);
+      this.view.qrcodegeneratorNew.generate();
+      this.view.flxOfflineFields.setVisibility(false);
+      this.view.flxQRCodeScan.setVisibility(true);
+      this.view.forceLayout();
+    },
+    
+    lblOfflineManualEntry_onTouchEnd(){
+      this.view.flxQRCodeScan.setVisibility(false);
+      this.view.flxOfflineFields.setVisibility(true);
+      
+    },
+    
+    btnLoginOffline_onClick : function(){
+      let toAccount = this.view.tbxToAccountOffline.text ;
+      let amount = this.view.tbxAmountOffline.text.trim();
+      let desc = this.view.tbxDescriptionOffline.text;
+      let OTP = this.view.tbxOTPOffline.text.trim();
+      kony.print("Details "+ toAccount + amount + desc);
+      if(toAccount === "" || isNaN(toAccount)){
+        this.view.lblTSSuccess.skin="sknlblTSError";
+        this.view.lblTSSuccess.text = `Please enter valid "to Account"`;
+        return;
       }
-      if(amount === "" || isNaN(amount)){
+      if(amount === "" || isNaN(amount) || amount === undefined ){
         this.view.lblTSSuccess.skin="sknlblTSError";
         this.view.lblTSSuccess.text = "Please enter valid Amount";
+        return;
+      }      
+      if(desc === "" || amount === undefined){
+        this.view.lblTSSuccess.skin="sknlblTSError";
+        this.view.lblTSSuccess.text = "Please enter Description";
         return;
       }
       if(OTP === "" || isNaN(OTP)){
@@ -205,6 +289,10 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
       this.view.lblErrorChallenge.text = "";
       this.view.lblErrorOTP.text="";
       this.view.lblsendSMSOTP.text="";
+      this.view.flxOfflineFields.setVisibility(true);
+      this.view.flxQRCodeScan.setVisibility(false);
+      this.view.flxPushDevices.setVisibility(false);
+      
     },
     resetTextFeilds : function(){
       this.view.tbxToAccount.text = "";

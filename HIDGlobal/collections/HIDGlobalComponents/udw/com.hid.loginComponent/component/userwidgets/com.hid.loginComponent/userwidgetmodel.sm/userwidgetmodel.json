@@ -15,7 +15,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s7706b9666d942568e79115ad5ee3432",
+    "_skin_": "s00053ae350e4375b7c17f0fc7a4e7fc",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -41,10 +41,10 @@
     "displayorientation": 3,
     "enabledforidletimeout": false,
     "globalUserWidgetRefs": [
-        "udf10e1a74f8463d83da0ab9dc9bf2f3",
-        "u853641cf3114ef19d192b4bafb53057",
-        "uaa317ebb3f04c299c0a106a2cc5ad57",
-        "udc96d04f7f84230873331769c19c8b7"
+        "u894783a16f5451ab7a495e92cbfebfe",
+        "u9f8c4a1e7fb49239979babcdb1bf641",
+        "u617c19951d24def9f48640661e33119",
+        "uc2c6b219f9a40e9b318dec08d01dbee"
     ],
     "id": "userwidgetmodel",
     "info": null,
@@ -72,5 +72,8 @@
     "retainscrollposition": false,
     "titlebar": true,
     "type": 3,
+    "vizProps": {
+        "globalRespDesignEnabled": true
+    },
     "wType": "Form"
 }

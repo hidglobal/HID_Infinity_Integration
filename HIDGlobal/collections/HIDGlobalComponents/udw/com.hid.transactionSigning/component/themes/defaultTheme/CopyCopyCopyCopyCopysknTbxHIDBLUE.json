@@ -16,6 +16,7 @@
   "border_type": 0,
   "border_width": 0,
   "desktopweb": {
+    "font_name": "Gotham-Book",
     "font_size": 80,
     "isForked": false
   },

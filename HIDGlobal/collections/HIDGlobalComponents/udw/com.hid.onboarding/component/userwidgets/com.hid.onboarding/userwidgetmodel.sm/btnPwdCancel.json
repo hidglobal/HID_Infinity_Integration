@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s5fbea3745a24ea1bb55624280e70be0",
+    "_skin_": "sd1457a3e8834b0481245e3d219d5e7d",
     "_text_": "CANCEL",
     "_top_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s2461ae4a8e043e6b5d217bed9caf210",
+    "focusskin": "s8fd57d5eae44a21919237c28622b6f5",
     "id": "btnPwdCancel",
     "info": null,
     "iscustomlayout": false,

@@ -54,32 +54,23 @@
     "desktop": {
         "_data_": [
             {
-                "lblDeviceId": {
-                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "Label"
-                },
                 "lblDeviceName": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                     "text": "PushDevice1"
                 }
             },
             {
-                "lblDeviceId": {
-                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "Label"
-                },
                 "lblDeviceName": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                     "text": "PushDevice2"
                 }
             }
         ],
-        "rowTemplateId": "afd08737b0e449e08be33c5dfe0c3690",
+        "rowTemplateId": "g5e48c15e38e46358925f1daa2765d1b",
         "rowtemplate": "Flex0d3d7ae1b5dea4c",
         "selectionBehaviorConfig": {},
         "widgetdatamap": {
-            "flxSegPushDevices2": "flxSegPushDevices2",
-            "lblDeviceId": "lblDeviceId",
+            "flxSegPushDevices": "flxSegPushDevices",
             "lblDeviceName": "lblDeviceName"
         }
     },
@@ -117,12 +108,12 @@
     "retainflexpositionproperties": false,
     "retainselection": false,
     "rowcounter": 1,
-    "rowfocusskin": "safb6223f3b646eabca9f1b2d998d1c4",
-    "rowskin": "s73eb530dcbf4b1f9b903239dd3063c0",
+    "rowfocusskin": "sc7e34ba70a64c0c9bd178e3b14b51a7",
+    "rowskin": "sd56641984ae497ea7e2796aead22453",
     "rowtemplate": "Flex0d3d7ae1b5dea4c",
     "screenlevelwidget": false,
     "seccounter": 0,
-    "sectionheaderskin": "s9a5899b6052402c86f63db1e22f82b1",
+    "sectionheaderskin": "se3e2f70dddc4f0ab77ea7f34882169a",
     "selectedRows": null,
     "selectedState": false,
     "selectedindex": null,

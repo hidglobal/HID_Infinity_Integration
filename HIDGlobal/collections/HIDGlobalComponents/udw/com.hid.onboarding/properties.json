@@ -1,15 +1,15 @@
 {
     "assetPlatform": "Visualizer",
     "assetVersion": "1.0.0",
-    "createdBy": "chakradhar.reddypakala@hidglobal.com",
-    "createdMFVersion": "9.2.2.2",
-    "createdVizVersion": "9.1.8",
-    "currentMFVersion": "9.2.2.2",
-    "currentVizVersion": "9.1.8",
-    "description": "Web Components\n",
+    "createdBy": "rohit.singh@hidglobal.com",
+    "createdMFVersion": "9.6.0.1",
+    "createdVizVersion": "9.2.37",
+    "currentMFVersion": "9.6.0.1",
+    "currentVizVersion": "9.2.37",
+    "description": "",
     "itemCategory": "udw",
-    "itemGuid": "b4e3b8eecc594867b5975b92faf22cd2",
+    "itemGuid": "ed3bc84b689f4bb5bf9ec58783853ce0",
     "itemName": "com.hid.onboarding",
     "libraryVersion": "libver4",
-    "modifiedBy": "chakradhar.reddypakala@hidglobal.com"
+    "modifiedBy": "rohit.singh@hidglobal.com"
 }

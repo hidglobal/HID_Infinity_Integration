@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s53627eaae23443bbf9f7bd03f76f289",
+    "_skin_": "s02c9d9f9d1249cab815a7677dd46ff0",
     "_text_": "REGISTER",
     "_top_": {
         "type": "string",
@@ -43,7 +43,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s33b209707874d0b811147e0a7866bdc",
+    "focusskin": "s0fee8de324e42d7ac506ed47be23a3d",
     "id": "btnSignUp",
     "info": null,
     "iscustomlayout": false,

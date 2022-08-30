@@ -1,64 +1,34 @@
 {
-    "android": {
-        "font_name": "default"
-    },
-    "androidwearos": {
-        "font_name": "default"
-    },
-    "background_color": "00000000",
-    "bg_type": "one",
-    "border_color": "424242ff",
-    "border_style": "plain",
-    "border_type": 0,
-    "border_width": 0,
-    "desktopweb": {
-        "font_name": "Helvetica"
-    },
-    "font_color": "4b88f1ff",
-    "font_name": "Helvetica",
-    "font_size": 150,
-    "font_style": "normal",
-    "font_weight": "normal",
-    "ipad": {
-        "font_name": "System"
-    },
-    "iphone": {
-        "font_name": "System"
-    },
-    "isDefaultSkin": true,
-    "kiosk": {
-        "font_name": "None"
-    },
-    "kuid": "s14f251960df4c05be4103aaea8bf0bb",
-    "spaan": {
-        "font_name": "Helvetica"
-    },
-    "spaandroidtablet": {
-        "font_name": "Helvetica"
-    },
-    "spaip": {
-        "font_name": "Helvetica"
-    },
-    "spaipad": {
-        "font_name": "Helvetica"
-    },
-    "spawindowstablet": {
-        "font_name": "Helvetica"
-    },
-    "spawinphone8": {
-        "font_name": "Helvetica"
-    },
-    "tabrcandroid": {
-        "font_name": "default"
-    },
-    "wType": "RichText",
-    "watchos": {
-        "font_name": "System"
-    },
-    "windows8": {
-        "font_name": "None"
-    },
-    "winphone8": {
-        "font_name": "None"
-    }
+  "android": {},
+  "androidwearos": {},
+  "background_color": "00000000",
+  "bg_type": "one",
+  "border_color": "424242ff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 0,
+  "desktopweb": {
+    "font_name": "Gotham-Book"
+  },
+  "font_color": "4b88f1ff",
+  "font_name": "Gotham-Book",
+  "font_size": 150,
+  "font_style": "normal",
+  "font_weight": "normal",
+  "ipad": {},
+  "iphone": {},
+  "isDefaultSkin": true,
+  "kiosk": {},
+  "kuid": "s14f251960df4c05be4103aaea8bf0bb",
+  "spaan": {},
+  "spaandroidtablet": {},
+  "spaip": {},
+  "spaipad": {},
+  "spawindowstablet": {},
+  "spawinphone8": {},
+  "tabrcandroid": {},
+  "wType": "RichText",
+  "watchos": {},
+  "windows8": {},
+  "winphone8": {}
 }
