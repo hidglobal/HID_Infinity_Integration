@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s60e6be7b5fa41d18cf58a58ecddcc5f",
+    "_skin_": "s1a7107643764141a0c76b6fc5dfd6c9",
     "_text_": "Do you want to add standard internet banking password",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     },
     "containerweight": 100,
     "contentalignment": 5,
-    "focusskin": "s18071bdaca04dc7b0e76baed09329de",
+    "focusskin": "s5ae6b61ca464ce8875d095fec75384b",
     "id": "CopylblFP0a5d362f2f33b46",
     "info": null,
     "ipad": {

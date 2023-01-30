@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "92%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "saa0a9e89d1242cf87034703bfe0dbff",
+    "_skin_": "s8f9b73ead1140868ddc347cb30e069a",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -39,15 +39,17 @@
         "value": "50.00%"
     },
     "children": [
-        "flxMainPage",
         "flxTransferSuccess",
+        "flxTransferDeclined",
         "flxPasswordPrompt",
         "flxConfirmPrompt",
         "TransactionSigningMobileSDK",
         "flxLoading",
         "flxUpdatePasswordTrans",
-        "flxAccountDetails",
-        "flxSecureCodePin"
+        "flxSecureCodePin",
+        "flxNonRMS",
+        "flxRMS",
+        "payments"
     ],
     "clipbounds": false,
     "containerweight": 100,

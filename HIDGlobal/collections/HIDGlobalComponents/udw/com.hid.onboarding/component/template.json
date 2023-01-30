@@ -49,7 +49,8 @@
             "flxHWOTP",
             "flxRegistrationSuccess",
             "flxError",
-            "flxDeviceRegistration"
+            "flxDeviceRegistration",
+            "flxOOBPIN"
         ],
         "clipbounds": true,
         "containerweight": 100,
@@ -111,7 +112,7 @@
             "containerweight": 100,
             "desktopweb": {},
             "disabledSkins": {
-                "blockedUISkin": "s33a5374659e4e798c987f917ccff17e"
+                "blockedUISkin": "s3f4bbfdf94f485e939d41f2414ef80d"
             },
             "enablescrolling": true,
             "flxButtonsApprove": {
@@ -138,7 +139,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s233fc076ed04a77a6ee56acf5352158",
+                "_skin_": "sca0edcfa6884cafa24e58d16fc67a8e",
                 "_top_": {
                     "type": "string",
                     "value": "10%"
@@ -172,7 +173,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s02c9d9f9d1249cab815a7677dd46ff0",
+                    "_skin_": "see4fd9d9ea649c8b7ddf1a4a647b0bc",
                     "_text_": "Resend Push Notification",
                     "_top_": {
                         "type": "string",
@@ -194,7 +195,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s0fee8de324e42d7ac506ed47be23a3d",
+                    "focusskin": "sc38d983a17d4db398f58d4999b9d0b7",
                     "id": "btnResendApprove",
                     "info": null,
                     "iscustomlayout": false,
@@ -206,7 +207,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "95boj5cFX0prkSHM7iFTKnIO1ts="
+                        "md5": "l3gQTkJho8KC0dcogpAM7Kblxko="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -236,7 +237,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "oo+s32Y+5WJgIW+4G/8TBvycfvM="
+                    "md5": "JgtjaQ1pPZVhliXvdV0rXBELaVI="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -272,7 +273,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sf0d214207bf4658a879ddffe3705ba9",
+                "_skin_": "sf63cbcbaf0b478698d004dd2030aad6",
                 "_text_": "HID Approve Notification",
                 "_top_": {
                     "type": "string",
@@ -317,7 +318,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "3Ad7FXCg94cSnpkPxQ7kT/nqNyE="
+                    "md5": "E5F7KDDId20M17p1G9MvdF/cTlE="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -346,7 +347,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s87c2850209b4bdbb8e6806a9bad9a97",
+                "_skin_": "s7d6a5536460492f990facb604ebee70",
                 "_text_": "Label",
                 "_top_": {
                     "type": "string",
@@ -391,7 +392,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "w6NPWh0A6B1eYneNMuytP2GhSVY="
+                    "md5": "y5mM8R/RbhmU2dJRQfBOcu/3oTE="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -420,7 +421,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sa82de7420334b1f939b325806c4523a",
+                "_skin_": "s4bab0e9172243339f10ae58fa4bddd1",
                 "_text_": "",
                 "_top_": {
                     "type": "string",
@@ -465,7 +466,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "P0fneHf0hsrBJaM5NzVYmM8x7rQ="
+                    "md5": "F2EE1x+mV1HZ8CPTl/DiTpl1Vgc="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -494,7 +495,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s87c2850209b4bdbb8e6806a9bad9a97",
+                "_skin_": "s7d6a5536460492f990facb604ebee70",
                 "_text_": "Test Registered Approve Device",
                 "_top_": {
                     "type": "string",
@@ -539,7 +540,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "fkL5MrLbONl52ekq9IymLaQBow0="
+                    "md5": "5AIjLHgm5CdcNtEIZ3WFgXRsbMw="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -568,7 +569,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s214cc374819495783133da7f003c9cc",
+                "_skin_": "se6d03727e224684b2d0b25d5b1fe4aa",
                 "_text_": "A Push notification have been sent to your registered Approve Device. Please Approve the notification to complete the registration.",
                 "_top_": {
                     "type": "string",
@@ -613,7 +614,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "nDqsqQCyVHHNYfbn7xdDqS6ypsw="
+                    "md5": "8GFs8rdXPGOAES1UQb7WY8B3Lcg="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -642,7 +643,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s9c6da08e21e40e6bd8f2c97b791cf12",
+                "_skin_": "s93603b0ec794d67b31f833ec2ab5a7f",
                 "_text_": "Please Approve the notification to complete registration",
                 "_top_": {
                     "type": "string",
@@ -687,7 +688,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "m2+2phSMQC44QP3j71OoDbt0m9w="
+                    "md5": "KArU0X6j6PilDI8Un1pEcw2oNFc="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -701,7 +702,7 @@
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "owdlPqoQe9OTk75e+SDAtd/l5UI="
+                "md5": "BOFfDq7ylNOu3dcaLhKc+JTiq+k="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -787,7 +788,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sd7cb73e3d1b4039b6fc08f5c23e7b28",
+                "_skin_": "s25daa5d64644074b0b2ed941352179f",
                 "_top_": {
                     "type": "string",
                     "value": "8%"
@@ -839,7 +840,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sd2d6583b92a432c9b781909a04fec46",
+                    "_skin_": "scad20dae2fd4ca3a231e9d718827476",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -883,7 +884,7 @@
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
                     "responsiveData": {},
                     "snapshot": {
-                        "md5": "5BINn0JlYCgDM76Gz1/0GlrrOOY="
+                        "md5": "vDM7nzwqrZmnKcIRgI/TgyCJEM8="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -898,7 +899,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "CT42qVUBRLo6zT/k+jQXmBSlWYw="
+                    "md5": "KAbnDljlrFSzDebAIngCo6TkMzg="
                 },
                 "snaptogrid": true,
                 "tbxPassword1": {
@@ -925,7 +926,7 @@
                         0
                     ],
                     "_placeholder_": "Password",
-                    "_skin_": "sa7bbe66b7f14f05ad4d9e3d5555b8c4",
+                    "_skin_": "s423aab6287f444fa4dc5b2a2c42c60e",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -949,10 +950,10 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s43d6cdf9fd44dc599acf159974939c9"
+                        "placeholderSkin": "s15e92d73d9f4951b645b324dbeb5019"
                     },
                     "disabledSkins": {
-                        "focusSkin": "sd16a14d5e42400d8471ad292e2f47a9"
+                        "focusSkin": "s96da5117b8240588e1cd990af77c4e5"
                     },
                     "focusskin": null,
                     "id": "tbxPassword1",
@@ -965,13 +966,13 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxPassword1",
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
-                    "placeholderskin": "s43d6cdf9fd44dc599acf159974939c9",
+                    "placeholderskin": "s15e92d73d9f4951b645b324dbeb5019",
                     "responsiveData": {},
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "FPEy4pS1/lPgrdpCPihj7BhwHTo="
+                        "md5": "h4XMHG3+mMohHiULcoHjEV0VH6I="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -1007,7 +1008,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sd7cb73e3d1b4039b6fc08f5c23e7b28",
+                "_skin_": "s25daa5d64644074b0b2ed941352179f",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -1059,7 +1060,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sd2d6583b92a432c9b781909a04fec46",
+                    "_skin_": "scad20dae2fd4ca3a231e9d718827476",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -1103,7 +1104,7 @@
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
                     "responsiveData": {},
                     "snapshot": {
-                        "md5": "LMaioKT4hSkMXQTmmwiCzfgGRWo="
+                        "md5": "PYgok0OpaoG5G1/NAovMZe0bcVE="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -1118,7 +1119,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "2D24GaflItrpYs3vx0eEnCpaxv0="
+                    "md5": "DleMOHhyKeWclUaoRz6Rq4gMk3c="
                 },
                 "snaptogrid": true,
                 "tbxPassword2": {
@@ -1145,7 +1146,7 @@
                         0
                     ],
                     "_placeholder_": "Confirm Password",
-                    "_skin_": "s43d6cdf9fd44dc599acf159974939c9",
+                    "_skin_": "s15e92d73d9f4951b645b324dbeb5019",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -1169,10 +1170,10 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s7e8528564d64a24b61d99d82ff0f912"
+                        "placeholderSkin": "sb7b789828a944bdae0c6ed2988eee2c"
                     },
                     "disabledSkins": {
-                        "focusSkin": "sd16a14d5e42400d8471ad292e2f47a9"
+                        "focusSkin": "s96da5117b8240588e1cd990af77c4e5"
                     },
                     "focusskin": null,
                     "id": "tbxPassword2",
@@ -1185,13 +1186,13 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxPassword2",
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
-                    "placeholderskin": "s7e8528564d64a24b61d99d82ff0f912",
+                    "placeholderskin": "sb7b789828a944bdae0c6ed2988eee2c",
                     "responsiveData": {},
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "z+926mYmU9KowJAZDUJj4dODAOg="
+                        "md5": "/N/V6O8UlYDlLkQTpiRyPV6SCdY="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -1227,7 +1228,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "scb82591ebb142a4ac4db597164614de",
+                "_skin_": "s1c6a9c15aee4560b95556aeefc0ee7b",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -1261,7 +1262,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sd1457a3e8834b0481245e3d219d5e7d",
+                    "_skin_": "s5875058131b4b3bb357729842db87b8",
                     "_text_": "CANCEL",
                     "_top_": {
                         "type": "string",
@@ -1279,7 +1280,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s8fd57d5eae44a21919237c28622b6f5",
+                    "focusskin": "sdb7efb3e0a0477e9232db849f693291",
                     "id": "btnPwdCancel",
                     "info": null,
                     "iscustomlayout": false,
@@ -1292,7 +1293,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "wLTrIgMwfEgOrFceiRECLocfseI="
+                        "md5": "1X6x23iZ7bFzoy5Gur2ZLIUcq8I="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -1320,7 +1321,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s8fd57d5eae44a21919237c28622b6f5",
+                    "_skin_": "sdb7efb3e0a0477e9232db849f693291",
                     "_text_": "SUBMIT",
                     "_top_": {
                         "type": "string",
@@ -1338,7 +1339,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sd1457a3e8834b0481245e3d219d5e7d",
+                    "focusskin": "s5875058131b4b3bb357729842db87b8",
                     "id": "btnPwdSubmit",
                     "info": null,
                     "iscustomlayout": false,
@@ -1351,7 +1352,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "OicpjUug6mugBBdn8rzfZZ2Uz5A="
+                        "md5": "O1FvBlPmOeEJCaFStu7e+kAsZoM="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -1383,7 +1384,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "NaINE1/6xQAaL7qX45rTipTCgqU="
+                    "md5": "cgHvqj9z0JqYOM8bMjWYK1Ed/yU="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -1419,7 +1420,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sfbb04b7eef84e21b2dce52f82b507fd",
+                "_skin_": "sb868fb4cf284b5aa9571161b0200ec8",
                 "_text_": "Add Password",
                 "_top_": {
                     "type": "string",
@@ -1465,7 +1466,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "blARoaJcaV4/ble1Plgkdenizas="
+                    "md5": "JPaIsN70ihQNgQb2TsJFjpUkOL8="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -1494,7 +1495,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sc25f48adea8491a9eca7ff92e4f2b71",
+                "_skin_": "s81e4dbbff314d0ebd0b37e410ab3b11",
                 "_text_": "error",
                 "_top_": {
                     "type": "string",
@@ -1540,7 +1541,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "jeyz21JZ9jvpg2Z0s0mXmSGfNqA="
+                    "md5": "eSfX1hHIFaB6vw9449tC+bjFFEI="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -1569,7 +1570,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s62267d334ac4f40adaea96839618111",
+                "_skin_": "s28a2568d8124a4db80466b1e43b2eb6",
                 "_text_": "Registration Process",
                 "_top_": {
                     "type": "string",
@@ -1615,7 +1616,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "37Y69VzviSbuTh0D5OcNuKZAeQA="
+                    "md5": "OxpR3aqfPVYH6luZ/WlXs4vs8mA="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -1719,7 +1720,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sb7e59223c504709ba77ee3a3097b582",
+                "_skin_": "sfc2a9214bfd4d7b94672e0a9a3847bd",
                 "_top_": {
                     "type": "string",
                     "value": "1%"
@@ -1823,7 +1824,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s33e634aa03546408779f5b8cfd4bdb0",
+                        "_skin_": "s9974616e7cd4b11aef28f450fee34f3",
                         "_text_": "<p>RichText</p>",
                         "_top_": {
                             "type": "string",
@@ -1849,7 +1850,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "5QsfAMPN8menPQsI/MnXXg8LgR0="
+                            "md5": "hX1z6DnebE91KhAtilBCNzW5ON8="
                         },
                         "wType": "RichText",
                         "widgetalignment": 5,
@@ -1878,7 +1879,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s9c6da08e21e40e6bd8f2c97b791cf12",
+                        "_skin_": "s93603b0ec794d67b31f833ec2ab5a7f",
                         "_text_": "Invite Code : qewru2843j321",
                         "_top_": {
                             "type": "string",
@@ -1923,7 +1924,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "B436O8yl+sZDJ6bX2IYRdNxYN/8="
+                            "md5": "sND8qCtRcVrzQek2ypgqKdkliOE="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -1952,7 +1953,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sa410502d1924a5b9c695e7cc63686d2",
+                        "_skin_": "se64e5d742a44f48adb8bb22041a43ac",
                         "_text_": "<p>RichText</p>",
                         "_top_": {
                             "type": "string",
@@ -1978,7 +1979,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "P2Mp+7RlwcVhk2lRSriPhVmXX+w="
+                            "md5": "Vkq2/203bQFgnDScS3erxc8fuyE="
                         },
                         "wType": "RichText",
                         "widgetalignment": 5,
@@ -2007,7 +2008,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s9c6da08e21e40e6bd8f2c97b791cf12",
+                        "_skin_": "s93603b0ec794d67b31f833ec2ab5a7f",
                         "_text_": "Service URL: ",
                         "_top_": {
                             "type": "string",
@@ -2052,7 +2053,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "Dj3STsyt/EqPAEvluD5k0AsDhVw="
+                            "md5": "s5dWnF8HtegifNCKlthtTaSD4I0="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -2081,7 +2082,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "se4727b5bf494eb295a5dc64b81e1c13",
+                        "_skin_": "s0885e92c452494a9f0c9f1b6d846868",
                         "_text_": "",
                         "_top_": {
                             "type": "string",
@@ -2126,7 +2127,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "0xpMwZfNiLSam3pm0n06U5Q8rTA="
+                            "md5": "5g83LGWyBRNs4SA+wu+Bq0SCvrM="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -2155,7 +2156,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s33e634aa03546408779f5b8cfd4bdb0",
+                        "_skin_": "s9974616e7cd4b11aef28f450fee34f3",
                         "_text_": "<p>RichText</p>",
                         "_top_": {
                             "type": "string",
@@ -2181,7 +2182,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "8bywL5JsVk9EiaosYVtCYeunrmY="
+                            "md5": "ipYMYIbbZslUoG3BGxBQrtEn3FE="
                         },
                         "wType": "RichText",
                         "widgetalignment": 5,
@@ -2210,7 +2211,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s9c6da08e21e40e6bd8f2c97b791cf12",
+                        "_skin_": "s93603b0ec794d67b31f833ec2ab5a7f",
                         "_text_": "username : RonladoCR7",
                         "_top_": {
                             "type": "string",
@@ -2255,7 +2256,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "u5NluN74WPJbcJpHYNzaEtzD5HU="
+                            "md5": "1mxN9T6orpWysZ98y6LEMSwkMp0="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -2316,9 +2317,7 @@
                         "type": "string",
                         "value": "50%"
                     },
-                    "children": [
-                        "qrcodegeneratorNew"
-                    ],
+                    "children": [],
                     "clipbounds": true,
                     "containerweight": 100,
                     "enablescrolling": true,
@@ -2331,161 +2330,12 @@
                     "name": "kony.ui.FlexContainer",
                     "parent": "flxRegOptions",
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
-                    "qrcodegeneratorNew": {
-                        "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
-                        "DNDConfig": null,
-                        "__childrenGenerated__": true,
-                        "__convertedToKUID__": true,
-                        "_children_": [
-                            "af6ac1a9bf8e4d9e9eda30c2448a6b2e"
-                        ],
-                        "_height_": {
-                            "type": "string",
-                            "value": "100%"
-                        },
-                        "_left_": {
-                            "type": "string",
-                            "value": "0dp"
-                        },
-                        "_margin_": [
-                            0,
-                            0,
-                            0,
-                            0
-                        ],
-                        "_orientation_": 1,
-                        "_padding_": [
-                            0,
-                            0,
-                            0,
-                            0
-                        ],
-                        "_percent_": true,
-                        "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
-                        "_top_": {
-                            "type": "string",
-                            "value": "0dp"
-                        },
-                        "_width_": {
-                            "type": "string",
-                            "value": "100%"
-                        },
-                        "af6ac1a9bf8e4d9e9eda30c2448a6b2e": {
-                            "@class": "com.kony.gen.viz.model.component.KVizBrowser",
-                            "DNDConfig": null,
-                            "__UDWInstanceModelForRender__": true,
-                            "__instanceKUID__": "cf271f7bfe75471ea28ff86028854750",
-                            "__srcKUID__": "ud1e6c430a9f4c97bc8bb73b4a265c1e",
-                            "_height_": {
-                                "type": "string",
-                                "value": "100%"
-                            },
-                            "_left_": {
-                                "type": "string",
-                                "value": "0%"
-                            },
-                            "_margin_": [
-                                0,
-                                0,
-                                0,
-                                0
-                            ],
-                            "_padding_": [
-                                0,
-                                0,
-                                0,
-                                0
-                            ],
-                            "_responsiveData_": {},
-                            "_top_": {
-                                "type": "string",
-                                "value": "0%"
-                            },
-                            "_type_": 5,
-                            "_width_": {
-                                "type": "string",
-                                "value": "100%"
-                            },
-                            "canUpdateUI": true,
-                            "containerweight": 69,
-                            "detecttelnumber": true,
-                            "displayName": "brsrQRCodeGenerator",
-                            "enablenativecommunication": true,
-                            "htmlstring": "Browser",
-                            "id": "af6ac1a9bf8e4d9e9eda30c2448a6b2e",
-                            "info": null,
-                            "iscustomlayout": false,
-                            "isvisible": true,
-                            "kuid": "af6ac1a9bf8e4d9e9eda30c2448a6b2e",
-                            "localurl": "w2ed64d0129b4eea9de830bf5d24d1a6",
-                            "margininpixel": false,
-                            "method": "get",
-                            "name": "kony.ui.Browser",
-                            "paddinginpixel": false,
-                            "parent": "qrcodegeneratorNew",
-                            "pf": "uwu4a6c6d617684834ad14a822ced81180",
-                            "requesturlconfig": {
-                                "URL": "",
-                                "requestMethod": "get"
-                            },
-                            "responsiveData": {},
-                            "retaincontentalignment": false,
-                            "retainflexpositionproperties": false,
-                            "screenlevelwidget": false,
-                            "snapshot": {
-                                "md5": "a0hjxC5+Rp0ukWYvcjq3ageVqT4="
-                            },
-                            "url": "",
-                            "wType": "Browser",
-                            "zindex": 1
-                        },
-                        "autogrowmode": 0,
-                        "canUpdateUI": true,
-                        "centerx": {
-                            "type": "string",
-                            "value": "50%"
-                        },
-                        "clipbounds": true,
-                        "componentState": {
-                            "instanceModified": false,
-                            "sourceModified": false,
-                            "synced": true
-                        },
-                        "containerweight": 0,
-                        "data": {
-                            "colorDark": "#00539b",
-                            "colorLight": "#ffffff",
-                            "correctLevel": "Level M",
-                            "qrcodeHeight": "140",
-                            "qrcodeWidth": "140"
-                        },
-                        "enablescrolling": true,
-                        "id": "qrcodegeneratorNew",
-                        "info": null,
-                        "iscustomlayout": false,
-                        "isvisible": true,
-                        "kuid": "cf271f7bfe75471ea28ff86028854750",
-                        "layouttype": 2,
-                        "masterType": 1,
-                        "name": "kony.ui.UserWidgetInstance",
-                        "parent": "flxQRMain",
-                        "pf": "uwu4a6c6d617684834ad14a822ced81180",
-                        "retaincontentalignment": false,
-                        "retainflexpositionproperties": false,
-                        "snapgridsize": 10,
-                        "snapshot": {
-                            "md5": "lIafaHGuJQNeE4JCXTgjR+96N+0="
-                        },
-                        "snaptogrid": true,
-                        "sourceUserWidget": "u54db38a67cd4dc292b47bce4b74b9d4",
-                        "wType": "UserWidgetInstance"
-                    },
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "retainflowhorizontalalignment": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "e6K1TerIjQvBoI8ztjIVfjqeu5E="
+                        "md5": "qth3CHruwTJ+IBDYLucFNmsidFg="
                     },
                     "snaptogrid": true,
                     "wType": "FlexContainer",
@@ -2507,7 +2357,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "UH7A1P755l9gnXa9CHOHl+tgXAg="
+                    "md5": "FxIfPRmuQhmhjv7FXJXdWccSjQc="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -2538,7 +2388,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sf1b1d1a16174e63b543b8a0cea92868",
+                "_skin_": "sdc6d15c32eb4217967a34f23af1457e",
                 "_top_": {
                     "type": "string",
                     "value": "1%"
@@ -2572,7 +2422,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sf5911be165b46e88b86da01c9bcf199",
+                    "_skin_": "sb87d74fb4ea4dbaa1bf44bb891ef47a",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -2590,7 +2440,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s8fd57d5eae44a21919237c28622b6f5",
+                    "focusskin": "sdb7efb3e0a0477e9232db849f693291",
                     "id": "btnCancelScanQR",
                     "info": null,
                     "iscustomlayout": false,
@@ -2603,7 +2453,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "TeLwPzejBA2i83xAhZ0kgykZCoU="
+                        "md5": "y1SddCX88ezoBoIPFLRUcq+dhtk="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -2631,7 +2481,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s8fd57d5eae44a21919237c28622b6f5",
+                    "_skin_": "sdb7efb3e0a0477e9232db849f693291",
                     "_text_": "Done",
                     "_top_": {
                         "type": "string",
@@ -2649,7 +2499,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sf5911be165b46e88b86da01c9bcf199",
+                    "focusskin": "sb87d74fb4ea4dbaa1bf44bb891ef47a",
                     "id": "btnPushDone",
                     "info": null,
                     "iscustomlayout": false,
@@ -2662,7 +2512,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "H9MxFOBt23yR3pXncKu35/bxTg8="
+                        "md5": "iBpCURshKf6XQTn29QRtcDrJynM="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -2694,7 +2544,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "hlqMCE3ALL7kOCz86kclaQP3Q0M="
+                    "md5": "DroCRWyDUpj+rRbV/qEOUsITCpQ="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -2730,7 +2580,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sd7acf05b4ae4e63b3fc0e94776fc6a7",
+                "_skin_": "s5e9fe815e6c48c88f784bdc3666f1ee",
                 "_text_": "Activate Manually",
                 "_top_": {
                     "type": "string",
@@ -2776,7 +2626,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "D7HdfJpSMDDqb6BmkPO+2EPI/mc="
+                    "md5": "c+KTbi03/RENOB7BadZ4cZa95OM="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -2805,7 +2655,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s3d88ae5998e480ab7de77ab59e5f023",
+                "_skin_": "s765adb48b6247a9bc1679d6024ad754",
                 "_text_": "<p>Scan your QR Code using HID Approve app on your  mobile device</p>",
                 "_top_": {
                     "type": "string",
@@ -2835,7 +2685,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "o7eAJN88OoMYGlq/7Q4kODgfkfQ="
+                    "md5": "O7GXVIM+roxnqA1DwxDxVqOW2Og="
                 },
                 "wType": "RichText",
                 "widgetalignment": 5,
@@ -2864,7 +2714,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s9c6da08e21e40e6bd8f2c97b791cf12",
+                "_skin_": "s93603b0ec794d67b31f833ec2ab5a7f",
                 "_text_": "Scan your QR Code using HID Approve app on your  mobile device",
                 "_top_": {
                     "type": "string",
@@ -2910,7 +2760,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "iPsp4/uCIqXkvQOJsDrJOFdfnT8="
+                    "md5": "B8rk+GKxqS38Svm/6LrSY9Jjr4U="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -2939,7 +2789,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sd7acf05b4ae4e63b3fc0e94776fc6a7",
+                "_skin_": "s5e9fe815e6c48c88f784bdc3666f1ee",
                 "_text_": "Registration Process",
                 "_top_": {
                     "type": "string",
@@ -2985,7 +2835,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "DvThHx09HZJd/m/1qrwL6qb09rw="
+                    "md5": "v4X4pk01CBf67NLk3ozlSdwQkbE="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3082,7 +2932,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s2d35e2b6405417f88ac4ce76604f5f1",
+                "_skin_": "s6e6f635daa7481f8d4da76753d2ffd3",
                 "_top_": {
                     "type": "string",
                     "value": "5%"
@@ -3116,7 +2966,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sc07046c324c4f50984cf5b778dfb559",
+                    "_skin_": "sc615c87f137463aac11015542a04860",
                     "_text_": "Go Home",
                     "_top_": {
                         "type": "string",
@@ -3138,7 +2988,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s7cc801a45b24a0e9fc62cbf3a1c1316",
+                    "focusskin": "s315841edbf64d49a42a60c52cf2424f",
                     "id": "btnGoHome",
                     "info": null,
                     "iscustomlayout": false,
@@ -3150,7 +3000,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "1HI2HFGngBWNjVvqTEuP2LN2K4I="
+                        "md5": "JxtRsUP3WS0DtNVjw4Hf4vHIgkw="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3180,7 +3030,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "soijXBLgoBes7rq5M6EWdq43c+c="
+                    "md5": "hUiZuXchua9l70wI8Mp50Gkh0RU="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -3216,7 +3066,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sf32e7df01694f568fd07f777e4090d0",
+                "_skin_": "s4c5a881738242c9a02610d60e3f9e85",
                 "_text_": "Registration has been failed. Please contact support",
                 "_top_": {
                     "type": "string",
@@ -3261,7 +3111,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "89LNWPeLrQpv6UdDrVdECD1WKHI="
+                    "md5": "3haaLCFSxh8o6SXBsvTfVlkfI+Q="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3290,7 +3140,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s4e01e4418254a349609c66befc6d229",
+                "_skin_": "s4545afbf99e42f8a7bb30c283e304cf",
                 "_text_": "Registration Failed",
                 "_top_": {
                     "type": "string",
@@ -3335,7 +3185,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "ZQBx/UFs1nzR9QUbuffh4LjeAco="
+                    "md5": "j76KEAYzidrluzuvitfLSB3w5Jc="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3434,7 +3284,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s74d4154c231490d878a0f5874cb1efb",
+                "_skin_": "s0c3953734c34e77a513a8cfa1f37463",
                 "_top_": {
                     "type": "string",
                     "value": "10%"
@@ -3486,7 +3336,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s6e1aa3612c4410ea2914b7655c07173",
+                    "_skin_": "sb65ccbb6edc496690ed0eaf118149c4",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -3530,7 +3380,7 @@
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
                     "responsiveData": {},
                     "snapshot": {
-                        "md5": "8LZSuHdOVI56So0PSrUVZh2kbOI="
+                        "md5": "0FVb6GVrSKyiaIT78WKlpUlkZ9E="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -3545,7 +3395,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "y+p9L9DY40ezA6qUQO+lFX+qEKI="
+                    "md5": "QgQ0OzHDmt0i7+5THoMo0H3QFk8="
                 },
                 "snaptogrid": true,
                 "tbxDeviceSerial": {
@@ -3572,7 +3422,7 @@
                         0
                     ],
                     "_placeholder_": "Device Serial Number",
-                    "_skin_": "sa648abd704e40bf882d0fd2b6768183",
+                    "_skin_": "sf34806e61634623b0e9b9abe07a5207",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -3596,10 +3446,10 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "sdb7003a2b2a4ea9a280e9c7791f114d"
+                        "placeholderSkin": "sd0d1c6d1c804739ae9350462e2da5d3"
                     },
                     "disabledSkins": {
-                        "focusSkin": "s1e077dd84a84b7c93c28295531cf4e7"
+                        "focusSkin": "sab7a9bd953f441586e7969431b1e047"
                     },
                     "focusskin": null,
                     "id": "tbxDeviceSerial",
@@ -3612,13 +3462,13 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxHWdevicenumber",
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
-                    "placeholderskin": "sdb7003a2b2a4ea9a280e9c7791f114d",
+                    "placeholderskin": "sd0d1c6d1c804739ae9350462e2da5d3",
                     "responsiveData": {},
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": false,
                     "snapshot": {
-                        "md5": "rtsYax3MJtihFZJ2J8SPByTCH0Y="
+                        "md5": "ZLd/mr5sGdDZdKuWRwp7hwN+L5g="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -3654,7 +3504,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s59eba19744a4e60a5b983ce6e16b660",
+                "_skin_": "se89bd2505ca4570bc55343e3d4db653",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -3688,7 +3538,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s1e3aff38c5b4d4a875178b1e28d04a2",
+                    "_skin_": "s046489d3d8f4ab39079be57e13461ee",
                     "_text_": "CANCEL",
                     "_top_": {
                         "type": "string",
@@ -3706,7 +3556,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s07f86beaee8456cb3a5da0ca6331462",
+                    "focusskin": "s2f9eecfebb543b385efc6429ed17122",
                     "id": "btnCancelHW",
                     "info": null,
                     "iscustomlayout": false,
@@ -3719,7 +3569,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "6Ww8rGEXD9K35E+kv2hpyA7EVuM="
+                        "md5": "pefVtvZ3Uo+wFmMeXlYTn4T3Szw="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3747,7 +3597,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s07f86beaee8456cb3a5da0ca6331462",
+                    "_skin_": "s2f9eecfebb543b385efc6429ed17122",
                     "_text_": "SUBMIT",
                     "_top_": {
                         "type": "string",
@@ -3765,7 +3615,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s1e3aff38c5b4d4a875178b1e28d04a2",
+                    "focusskin": "s046489d3d8f4ab39079be57e13461ee",
                     "id": "btnSubmitHW",
                     "info": null,
                     "iscustomlayout": false,
@@ -3778,7 +3628,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "4CwVZAr5l4xV6o7qbVpOTy+F1zE="
+                        "md5": "z2UKjR5lA7RmX5ApfOmDaxeUW/o="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3810,7 +3660,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "u6wnAeavt4/g5DoaqtRE1ot4q9w="
+                    "md5": "p+YX9uto7yluOVaImw4sPmAC6ok="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -3846,7 +3696,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sbcb117067c64294a7fbdabdfaf75b02",
+                "_skin_": "s20f6d9acd404617b0c90e218248914f",
                 "_text_": "error",
                 "_top_": {
                     "type": "string",
@@ -3892,7 +3742,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "Dnw17rzaaWMfRkppDtm68FG4aqk="
+                    "md5": "+uFmp/fE3PJOt8sNrYwIV3uXbHI="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3921,7 +3771,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sacacb18bdd64cc997cca99736d935c5",
+                "_skin_": "s4d9d8b8ceb64d7d88a9a22ba756e435",
                 "_text_": "Please enter the Hardware device serial number",
                 "_top_": {
                     "type": "string",
@@ -3967,7 +3817,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "JA2hurDRIvmu2LTyyqmJmCr4yzE="
+                    "md5": "ja/HUMBNL5WiIejvDjjcL/FaaxU="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3996,7 +3846,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sc9b9e1cc29e496f8584c1bda2a55066",
+                "_skin_": "s42bc099daec4cdfbd30c6587e9fab97",
                 "_text_": "Hardware Device Registration",
                 "_top_": {
                     "type": "string",
@@ -4042,7 +3892,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "G7ecHL3nMqM4laMvbVuxKPMuH94="
+                    "md5": "D5Kvm5yKJRg/I39WASW5+ob+wlo="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4141,7 +3991,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sd12b6a773644a0ca301f35e487e9100",
+                "_skin_": "s03e2b2ec7e14e19a5b5ee5510daec85",
                 "_top_": {
                     "type": "string",
                     "value": "2%"
@@ -4175,7 +4025,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sb3cabeb41e44f6fbe73f702f7e619e3",
+                    "_skin_": "sbceaa0ab23f4726a377eba9623ca198",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -4193,7 +4043,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s5fee25b693645f0bd53322156ba9408",
+                    "focusskin": "sae334675121420fb60374be48c8ccea",
                     "id": "btnCancleHWOTP",
                     "info": null,
                     "iscustomlayout": false,
@@ -4206,7 +4056,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "VXb0/qgjVUJMVGqT3Qe8K5ZuPqw="
+                        "md5": "npQGKYhqjAEbkrlE4GmPDPg5QPA="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -4234,7 +4084,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s99079a48ab945caa37e19650d1f1fca",
+                    "_skin_": "s7ab8cad768844369867819025819a00",
                     "_text_": "Confirm",
                     "_top_": {
                         "type": "string",
@@ -4252,7 +4102,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s59b9405acee44cb9b7449bb655d2aaa",
+                    "focusskin": "saf8301fbab14a819da32f3b47b68886",
                     "id": "btnConfirmHWOTP",
                     "info": null,
                     "iscustomlayout": false,
@@ -4265,7 +4115,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "CMqCv46fHMLUirlJzNXspdEaS9Y="
+                        "md5": "f/Aav8mWJFyZf4GSCqXSkeSiXZs="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -4297,7 +4147,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "J9VwSuUvWiZOJqlhEnTaqD+TsLE="
+                    "md5": "PbVFGEJnZLpLi9KspcgM301SX1Y="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -4333,7 +4183,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sd49a7f9292147579fc45aedd04adc72",
+                "_skin_": "s8c85f1ab3744935b25d72d62236fbbb",
                 "_text_": "You have 3 attempts before account is blocked",
                 "_top_": {
                     "type": "string",
@@ -4379,7 +4229,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "aig8nFRJgBNThOtToXa457h1PVM="
+                    "md5": "zGT2BsbwQ0e/cP8A33Ot2Fwokg8="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4408,7 +4258,7 @@
                     0,
                     0
                 ],
-                "_skin_": "se271948b5124c39884e4bc10ac7205b",
+                "_skin_": "sb3380c064ef4972bb90583417ff608c",
                 "_text_": "Please enter your One-Time Password",
                 "_top_": {
                     "type": "string",
@@ -4454,7 +4304,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "IN7wV0smX/NINJ1L2L6UcY9/lA8="
+                    "md5": "/7Z4l+OiglwXIwIUZ3WKKGgTQgc="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4483,7 +4333,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sda21f063f1f4cba9bd23fb1e874ce52",
+                "_skin_": "s1d699a92def4bd4962364a60abe7590",
                 "_text_": "Hardware Secure Code",
                 "_top_": {
                     "type": "string",
@@ -4529,7 +4379,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "l+3MoqXRC55+QXlrMbdcwc7QdPg="
+                    "md5": "lmdhA4pqYPpmCq9KbQ5k03A8xYw="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4570,7 +4420,7 @@
                     0
                 ],
                 "_placeholder_": "Enter OTP",
-                "_skin_": "s7408376844d47429d7d3beb9237bdd8",
+                "_skin_": "s5960aedb3d04e00ad9595b3cbcc2c88",
                 "_text_": "",
                 "_top_": {
                     "type": "string",
@@ -4594,7 +4444,7 @@
                 "containerweight": 100,
                 "contentalignment": 5,
                 "desktopweb": {
-                    "placeholderSkin": "s7f41f9586694f2a88998fbfb6cceeb2"
+                    "placeholderSkin": "scca834a0cc54138b8cd55f2900c6c91"
                 },
                 "disabledSkins": {
                     "focusSkin": "sc9e29acbce8409c971ab4aba77d9d0f"
@@ -4610,12 +4460,12 @@
                 "name": "kony.ui.TextBox2",
                 "parent": "flxHWOTP",
                 "pf": "uwu4a6c6d617684834ad14a822ced81180",
-                "placeholderskin": "s7f41f9586694f2a88998fbfb6cceeb2",
+                "placeholderskin": "scca834a0cc54138b8cd55f2900c6c91",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "securetextentry": true,
                 "snapshot": {
-                    "md5": "SDDo0hFd/XnxCtnMvCgM7Yej1Rk="
+                    "md5": "+PiDbU7desrJL/1UVixzcyzDLsY="
                 },
                 "textinputmode": "A",
                 "tooltip": "",
@@ -4686,7 +4536,7 @@
             "containerweight": 100,
             "desktopweb": {},
             "disabledSkins": {
-                "blockedUISkin": "s33a5374659e4e798c987f917ccff17e"
+                "blockedUISkin": "s3f4bbfdf94f485e939d41f2414ef80d"
             },
             "enablescrolling": true,
             "flxButtons": {
@@ -4713,7 +4563,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s233fc076ed04a77a6ee56acf5352158",
+                "_skin_": "sca0edcfa6884cafa24e58d16fc67a8e",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -4747,7 +4597,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s02c9d9f9d1249cab815a7677dd46ff0",
+                    "_skin_": "see4fd9d9ea649c8b7ddf1a4a647b0bc",
                     "_text_": "SUBMIT",
                     "_top_": {
                         "type": "string",
@@ -4769,11 +4619,11 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "desktopweb": {
-                        "blockedUISkin": "sda320dd4dd0465cbd7ceeaaf3a68f93"
+                        "blockedUISkin": "s9fe6a0715994897a347edfee974658b"
                     },
                     "disabledSkins": {},
                     "displaytext": true,
-                    "focusskin": "s0fee8de324e42d7ac506ed47be23a3d",
+                    "focusskin": "sc38d983a17d4db398f58d4999b9d0b7",
                     "id": "btnLogin",
                     "info": null,
                     "iscustomlayout": false,
@@ -4786,7 +4636,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "0AusKDbdaecsJx7suv5yEo5hGsA="
+                        "md5": "DgTq6lT48B3egew5R/x2uMWCfo4="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -4814,7 +4664,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s02c9d9f9d1249cab815a7677dd46ff0",
+                    "_skin_": "see4fd9d9ea649c8b7ddf1a4a647b0bc",
                     "_text_": "REGISTER",
                     "_top_": {
                         "type": "string",
@@ -4836,7 +4686,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s0fee8de324e42d7ac506ed47be23a3d",
+                    "focusskin": "sc38d983a17d4db398f58d4999b9d0b7",
                     "id": "btnSignUp",
                     "info": null,
                     "iscustomlayout": false,
@@ -4849,7 +4699,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "Gz/0ApuxQVDwjytp7XMyfynNSX4="
+                        "md5": "bjIX8knwcmd0M5rufJ75Ywqh2Bk="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -4881,7 +4731,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "5RJ4KWTz9Oon5bK3YazWY/smf5o="
+                    "md5": "PaaFxVoAjMpjXL9G0ChJ6UGDa0I="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -5010,7 +4860,7 @@
                             0
                         ],
                         "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
-                        "_src_": "approveicon_3_3_3.png",
+                        "_src_": "approveicon_3_3_4.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -5034,7 +4884,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "36EQtrcjY/FunagjjM/py9ALDjM="
+                            "md5": "g0o+7bLlmTMg1elkFbTFnqpf0p0="
                         },
                         "srcType": 1,
                         "tooltip": "Approve",
@@ -5067,7 +4917,7 @@
                             0
                         ],
                         "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
-                        "_src_": "emailotpicon_3_3_3.png",
+                        "_src_": "emailotpicon_3_3_4.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -5091,7 +4941,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "4k/Q6sHStz3+I2orhNm9trxKTdk="
+                            "md5": "ky+gbX4qzyKjDBcZb/zRl/xJly4="
                         },
                         "srcType": 1,
                         "tooltip": "EMAIL OTP",
@@ -5124,7 +4974,7 @@
                             0
                         ],
                         "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
-                        "_src_": "imgpwdf_3_2_3.png",
+                        "_src_": "imgpwdf_3_2_4.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -5148,7 +4998,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "QjtBWAgZbML4o7tLbndIHc0oBn0="
+                            "md5": "URrHeU7rO4LPM9OGDvyTJoJcMHU="
                         },
                         "srcType": 1,
                         "tooltip": "Hardware OTP",
@@ -5181,7 +5031,7 @@
                             0
                         ],
                         "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
-                        "_src_": "smsotpicon_3_3_3.png",
+                        "_src_": "smsotpicon_3_3_4.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -5205,7 +5055,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "AZ8qoo/lWRrcjTj7jArxXsjj+0M="
+                            "md5": "+7KD0cILBq84lQtHZRvW2jPi+B4="
                         },
                         "srcType": 1,
                         "tooltip": "SMS OTP",
@@ -5238,7 +5088,7 @@
                             0
                         ],
                         "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
-                        "_src_": "imgsc_3_2_3.png",
+                        "_src_": "imgsc_3_2_4.png",
                         "_top_": {
                             "type": "string",
                             "value": "0dp"
@@ -5262,7 +5112,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "z6oFWWctO/1XkPMYNtwOes+UA48="
+                            "md5": "K5C/I4NdvCiFXzxuIInAEhceBMQ="
                         },
                         "srcType": 1,
                         "tooltip": "Secure Code",
@@ -5320,7 +5170,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s553772f865a46f092d0bb49bef14646",
+                    "_skin_": "se089c842a914f1eb0999cc94d885b33",
                     "_text_": "Choose Another Credential",
                     "_top_": {
                         "type": "string",
@@ -5365,7 +5215,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "tVHKzkHtDvr4uTQePU3V+KB6gJc="
+                        "md5": "DmESv7B6XMdmC+qtWwjfcPI1Lgo="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -5410,7 +5260,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s233fc076ed04a77a6ee56acf5352158",
+                "_skin_": "sca0edcfa6884cafa24e58d16fc67a8e",
                 "_top_": {
                     "type": "string",
                     "value": "1%"
@@ -5503,7 +5353,7 @@
                             "type": "number",
                             "value": ""
                         },
-                        "_skin_": "s9d0f1de49904e7a926afcef5cb0fe97",
+                        "_skin_": "s68976b8021d4b07ba5949d510cbfd25",
                         "_text_": "Label",
                         "_top_": {
                             "type": "string",
@@ -5549,7 +5399,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "ifR+vXMHvv2Nlz97SNscT7cBcpE="
+                            "md5": "L3yUxzumRzfs1qAzc0WCfbuU43g="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -5595,7 +5445,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s9b531808c50461fadd86bf7764fc592",
+                        "_skin_": "s361f4b5d08d429f8d51e735bddb97d5",
                         "_text_": "",
                         "_top_": {
                             "type": "string",
@@ -5639,7 +5489,7 @@
                         "pf": "uwu4a6c6d617684834ad14a822ced81180",
                         "responsiveData": {},
                         "snapshot": {
-                            "md5": "Sy5tkYIT/XdK78zqTOEg18YcFlc="
+                            "md5": "fbknXhRF8DN2BJLLKuyQpmtrjgM="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -5669,7 +5519,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "s9b531808c50461fadd86bf7764fc592",
+                        "_skin_": "s361f4b5d08d429f8d51e735bddb97d5",
                         "_text_": "",
                         "_top_": {
                             "type": "string",
@@ -5714,7 +5564,7 @@
                         "pf": "uwu4a6c6d617684834ad14a822ced81180",
                         "responsiveData": {},
                         "snapshot": {
-                            "md5": "9JVyYcTRNM9y4OhKHWBb26cxzaU="
+                            "md5": "CUBbtBmdd2/gKQGZOT5Yv1Afh1Y="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -5794,7 +5644,7 @@
                             0,
                             0
                         ],
-                        "_skin_": "sbb691e8bffe47469be79cc8321cb52b",
+                        "_skin_": "s3102651dc4146e38e072a5efd91135a",
                         "_text_": "Remember Me",
                         "_top_": {
                             "type": "string",
@@ -5840,7 +5690,7 @@
                         "retaincontentalignment": false,
                         "retainflexpositionproperties": false,
                         "snapshot": {
-                            "md5": "LFh1fATvWjNJmoqVqRUtvPwARkc="
+                            "md5": "dBIFt8JD35ftm0wyAOXAzPuxxSc="
                         },
                         "tooltip": "",
                         "wType": "Label",
@@ -5877,7 +5727,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "5FQuIv/WM3eq3ny87oJQV7Fu0OE="
+                    "md5": "XqOplcN4sGwWDcGa87tIEE6CVoc="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -5909,7 +5759,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sd499fee0d7c4baf827112c83fc526c5",
+                    "_skin_": "s18c2e85b51b499db7d11cccd9272c60",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -5953,7 +5803,7 @@
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
                     "responsiveData": {},
                     "snapshot": {
-                        "md5": "OTyAfL1pk1PXj7NlHbWcIAUOCy4="
+                        "md5": "TxZucvOmaxFd4X+Z72TOJLOMDtE="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -5981,7 +5831,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s49ddba3ea6d4a2bacefb561ee6263cb",
+                "_skin_": "se34d9fd29a8411f984650266e8dde79",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -6019,7 +5869,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "2i3BqyLZe0EF1yCLvVShx2sGSlc="
+                    "md5": "kn1VFJmUCVoCQF3bF/U8M3rCJjg="
                 },
                 "snaptogrid": true,
                 "tbxActivationCode": {
@@ -6046,7 +5896,7 @@
                         0
                     ],
                     "_placeholder_": "Activation Code",
-                    "_skin_": "sa7bbe66b7f14f05ad4d9e3d5555b8c4",
+                    "_skin_": "s423aab6287f444fa4dc5b2a2c42c60e",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -6070,10 +5920,10 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s7e8528564d64a24b61d99d82ff0f912"
+                        "placeholderSkin": "sb7b789828a944bdae0c6ed2988eee2c"
                     },
                     "disabledSkins": {
-                        "focusSkin": "se5266c619ef4c8cbb17a7d3e01a7337"
+                        "focusSkin": "sd06a592b167428f89027e4145593f07"
                     },
                     "focusskin": null,
                     "id": "tbxActivationCode",
@@ -6086,13 +5936,13 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxPassword",
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
-                    "placeholderskin": "s7e8528564d64a24b61d99d82ff0f912",
+                    "placeholderskin": "sb7b789828a944bdae0c6ed2988eee2c",
                     "responsiveData": {},
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "cmCk6wyi9vBFLeo5I4a1Wd+6MDM="
+                        "md5": "DyOEV9mPNSuvUVrzTZDRd8u4PYM="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -6129,7 +5979,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sd499fee0d7c4baf827112c83fc526c5",
+                    "_skin_": "s18c2e85b51b499db7d11cccd9272c60",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -6177,7 +6027,7 @@
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
                     "responsiveData": {},
                     "snapshot": {
-                        "md5": "2jtThA9ZGpH1blZU39aRZ1/GxzM="
+                        "md5": "dCesesKXGi1y/fixQKWKyCXOs0A="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -6205,7 +6055,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s49ddba3ea6d4a2bacefb561ee6263cb",
+                "_skin_": "se34d9fd29a8411f984650266e8dde79",
                 "_top_": {
                     "type": "string",
                     "value": "6%"
@@ -6243,7 +6093,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "UHTCYQrMF8L0eifgRYGXVLWYWUc="
+                    "md5": "MY1nWpn6lPl3VXBW/hGsWxkEMAM="
                 },
                 "snaptogrid": true,
                 "tbxUser": {
@@ -6270,11 +6120,11 @@
                         0
                     ],
                     "_placeholder_": "Username",
-                    "_skin_": "sa7bbe66b7f14f05ad4d9e3d5555b8c4",
+                    "_skin_": "s423aab6287f444fa4dc5b2a2c42c60e",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
-                        "value": "9dp"
+                        "value": "0%"
                     },
                     "_width_": {
                         "type": "string",
@@ -6285,19 +6135,15 @@
                     "autocorrect": false,
                     "autofilter": false,
                     "canUpdateUI": true,
-                    "centery": {
-                        "type": "string",
-                        "value": "50%"
-                    },
                     "containerheight": "",
                     "containerheightmode": 1,
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s7e8528564d64a24b61d99d82ff0f912"
+                        "placeholderSkin": "sb7b789828a944bdae0c6ed2988eee2c"
                     },
                     "disabledSkins": {
-                        "focusSkin": "se5266c619ef4c8cbb17a7d3e01a7337"
+                        "focusSkin": "sd06a592b167428f89027e4145593f07"
                     },
                     "focusskin": null,
                     "id": "tbxUser",
@@ -6310,13 +6156,13 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxUserName",
                     "pf": "uwu4a6c6d617684834ad14a822ced81180",
-                    "placeholderskin": "s7e8528564d64a24b61d99d82ff0f912",
+                    "placeholderskin": "sb7b789828a944bdae0c6ed2988eee2c",
                     "responsiveData": {},
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": false,
                     "snapshot": {
-                        "md5": "ds3QAciTE6ZBBBQHhRLtrfh83RM="
+                        "md5": "TJZcx0vJlbE7+Wz8KLzumwSxnqI="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -6357,7 +6203,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s87c2850209b4bdbb8e6806a9bad9a97",
+                "_skin_": "s7d6a5536460492f990facb604ebee70",
                 "_text_": "Label",
                 "_top_": {
                     "type": "string",
@@ -6403,7 +6249,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "gL1B3sFk/xVdo88xnL9jvFNm6+s="
+                    "md5": "h5J2LFk8xFdXvbL8BATA2e5Kgok="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -6432,7 +6278,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sa82de7420334b1f939b325806c4523a",
+                "_skin_": "s4bab0e9172243339f10ae58fa4bddd1",
                 "_text_": "Label",
                 "_top_": {
                     "type": "string",
@@ -6478,7 +6324,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "SPbGVJWxgihG+tbAaBPrbb5kRg8="
+                    "md5": "/K1iRc2/6bb8z9+eCiMM+gU4w1E="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -6507,7 +6353,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s87c2850209b4bdbb8e6806a9bad9a97",
+                "_skin_": "s7d6a5536460492f990facb604ebee70",
                 "_text_": "Enter your Activation Code",
                 "_top_": {
                     "type": "string",
@@ -6553,7 +6399,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "9SZsLvOLwkH9nvXqYC92f6/Yz1k="
+                    "md5": "j5shjEaaRc/ex+JZtjMxv4zjxqI="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -6582,7 +6428,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s8352aee561c4a80b0b7c4211aded9a7",
+                "_skin_": "sc59e88a33584799b39b66f79d31ce23",
                 "_text_": "Welcome!",
                 "_top_": {
                     "type": "string",
@@ -6628,7 +6474,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "fItRLT+wRRWlAtTP0ZLWbPfXuPc="
+                    "md5": "o4JLHoCu7BaEaqzxLG/4U/pErFs="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -6642,7 +6488,1508 @@
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "F5DVivsz3kQht4EQHSzP++UdYLo="
+                "md5": "Fd3dxAlYiJWs7CI1QiZGVB2rnfw="
+            },
+            "snaptogrid": true,
+            "wType": "FlexContainer",
+            "widgetalignment": 1,
+            "zindex": 1
+        },
+        "flxOOBPIN": {
+            "DNDConfig": null,
+            "_height_": {
+                "type": "string",
+                "value": "100%"
+            },
+            "_left_": {
+                "type": "string",
+                "value": "0dp"
+            },
+            "_margin_": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "_orientation_": 6,
+            "_padding_": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "_percent_": true,
+            "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+            "_top_": {
+                "type": "string",
+                "value": "0dp"
+            },
+            "_width_": {
+                "type": "string",
+                "value": "100%"
+            },
+            "allboxes": [],
+            "autogrowmode": 0,
+            "canUpdateUI": true,
+            "centerx": {
+                "type": "string",
+                "value": "50%"
+            },
+            "centery": {
+                "type": "string",
+                "value": "50%"
+            },
+            "children": [
+                "lblWelcomeOOBPIN",
+                "lblSigntoAccOOBPIN",
+                "flxUserNameOOBPIN",
+                "flxPIN",
+                "flxLoginButton",
+                "flxChooseOOBPIN",
+                "lblErrorOOBPIN",
+                "lblConsensusOOBPIN"
+            ],
+            "clipbounds": false,
+            "containerweight": 100,
+            "desktopweb": {},
+            "disabledSkins": {
+                "blockedUISkin": "scd2361281014db4b7469fecfc007cd6"
+            },
+            "enablescrolling": true,
+            "flxChooseOOBPIN": {
+                "DNDConfig": null,
+                "_height_": {
+                    "type": "string",
+                    "value": "20%"
+                },
+                "_left_": {
+                    "type": "string",
+                    "value": "0dp"
+                },
+                "_margin_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_orientation_": 6,
+                "_padding_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_percent_": true,
+                "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+                "_top_": {
+                    "type": "string",
+                    "value": "3%"
+                },
+                "_width_": {
+                    "type": "string",
+                    "value": "80%"
+                },
+                "allboxes": [],
+                "autogrowmode": 0,
+                "canUpdateUI": true,
+                "centerx": {
+                    "type": "string",
+                    "value": "50%"
+                },
+                "children": [
+                    "lblChooseOOBPIN",
+                    "flxDiffAuthOOBPIN"
+                ],
+                "clipbounds": false,
+                "containerweight": 100,
+                "enablescrolling": true,
+                "flxDiffAuthOOBPIN": {
+                    "DNDConfig": null,
+                    "_height_": {
+                        "type": "string",
+                        "value": "90%"
+                    },
+                    "_left_": {
+                        "type": "string",
+                        "value": "0dp"
+                    },
+                    "_margin_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_orientation_": 6,
+                    "_padding_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_percent_": true,
+                    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+                    "_top_": {
+                        "type": "string",
+                        "value": "10%"
+                    },
+                    "_width_": {
+                        "type": "string",
+                        "value": "100%"
+                    },
+                    "allboxes": [],
+                    "autogrowmode": 0,
+                    "canUpdateUI": true,
+                    "centerx": {
+                        "type": "string",
+                        "value": "50%"
+                    },
+                    "children": [
+                        "icoApproveOOBPIN",
+                        "icoSecureOOBPIN",
+                        "icoSMSOOBPIN",
+                        "icoEmailOOBPIN",
+                        "icoHWOOBPIN"
+                    ],
+                    "clipbounds": false,
+                    "containerweight": 100,
+                    "enablescrolling": true,
+                    "icoApproveOOBPIN": {
+                        "@class": "com.kony.gen.viz.model.component.KVizImage2",
+                        "DNDConfig": null,
+                        "_base64_": null,
+                        "_height_": {
+                            "type": "string",
+                            "value": "30dp"
+                        },
+                        "_left_": {
+                            "type": "string",
+                            "value": "5%"
+                        },
+                        "_margin_": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "_padding_": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "approveicon_3_5.png",
+                        "_top_": {
+                            "type": "string",
+                            "value": "0dp"
+                        },
+                        "_width_": {
+                            "type": "string",
+                            "value": "30dp"
+                        },
+                        "canUpdateUI": true,
+                        "containerweight": 100,
+                        "id": "icoApproveOOBPIN",
+                        "imagescalemode": 1,
+                        "info": null,
+                        "invokedProperty": "src",
+                        "iscustomlayout": false,
+                        "isvisible": true,
+                        "kuid": "c8adc69979c44bb5b69a74ce071b1f32",
+                        "name": "kony.ui.Image2",
+                        "parent": "flxDiffAuthOOBPIN",
+                        "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                        "retaincontentalignment": false,
+                        "retainflexpositionproperties": false,
+                        "snapshot": {
+                            "md5": "GkgO6N3OHxvoHnQbMeVNcu1ZgVg="
+                        },
+                        "srcType": 1,
+                        "tooltip": "Approve",
+                        "wType": "Image",
+                        "widgetalignment": 5,
+                        "zindex": 1
+                    },
+                    "icoEmailOOBPIN": {
+                        "@class": "com.kony.gen.viz.model.component.KVizImage2",
+                        "DNDConfig": null,
+                        "_base64_": null,
+                        "_height_": {
+                            "type": "string",
+                            "value": "30dp"
+                        },
+                        "_left_": {
+                            "type": "string",
+                            "value": "5%"
+                        },
+                        "_margin_": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "_padding_": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "emailotpicon_3_5.png",
+                        "_top_": {
+                            "type": "string",
+                            "value": "0dp"
+                        },
+                        "_width_": {
+                            "type": "string",
+                            "value": "30dp"
+                        },
+                        "canUpdateUI": true,
+                        "containerweight": 100,
+                        "id": "icoEmailOOBPIN",
+                        "imagescalemode": 1,
+                        "info": null,
+                        "invokedProperty": "src",
+                        "iscustomlayout": false,
+                        "isvisible": true,
+                        "kuid": "fa0dc91c1dc847ba9e670a0dab9df77f",
+                        "name": "kony.ui.Image2",
+                        "parent": "flxDiffAuthOOBPIN",
+                        "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                        "retaincontentalignment": false,
+                        "retainflexpositionproperties": false,
+                        "snapshot": {
+                            "md5": "bQFFyqACwcSJfbVIBwvxcYbVe8Q="
+                        },
+                        "srcType": 1,
+                        "tooltip": "EMAIL OTP",
+                        "wType": "Image",
+                        "widgetalignment": 5,
+                        "zindex": 1
+                    },
+                    "icoHWOOBPIN": {
+                        "@class": "com.kony.gen.viz.model.component.KVizImage2",
+                        "DNDConfig": null,
+                        "_base64_": null,
+                        "_height_": {
+                            "type": "string",
+                            "value": "30dp"
+                        },
+                        "_left_": {
+                            "type": "string",
+                            "value": "5%"
+                        },
+                        "_margin_": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "_padding_": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "imgpwdf_2_4.png",
+                        "_top_": {
+                            "type": "string",
+                            "value": "0dp"
+                        },
+                        "_width_": {
+                            "type": "string",
+                            "value": "30dp"
+                        },
+                        "canUpdateUI": true,
+                        "containerweight": 100,
+                        "id": "icoHWOOBPIN",
+                        "imagescalemode": 1,
+                        "info": null,
+                        "invokedProperty": "src",
+                        "iscustomlayout": false,
+                        "isvisible": true,
+                        "kuid": "g9e129c45cb74b40bd39b12d4d0790dc",
+                        "name": "kony.ui.Image2",
+                        "parent": "flxDiffAuthOOBPIN",
+                        "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                        "retaincontentalignment": false,
+                        "retainflexpositionproperties": false,
+                        "snapshot": {
+                            "md5": "BmG7mN0rN4ELTno3ulVkmf08cZs="
+                        },
+                        "srcType": 1,
+                        "tooltip": "Hardware OTP",
+                        "wType": "Image",
+                        "widgetalignment": 5,
+                        "zindex": 1
+                    },
+                    "icoSMSOOBPIN": {
+                        "@class": "com.kony.gen.viz.model.component.KVizImage2",
+                        "DNDConfig": null,
+                        "_base64_": null,
+                        "_height_": {
+                            "type": "string",
+                            "value": "30dp"
+                        },
+                        "_left_": {
+                            "type": "string",
+                            "value": "5%"
+                        },
+                        "_margin_": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "_padding_": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "smsotpicon_3_5.png",
+                        "_top_": {
+                            "type": "string",
+                            "value": "0dp"
+                        },
+                        "_width_": {
+                            "type": "string",
+                            "value": "30dp"
+                        },
+                        "canUpdateUI": true,
+                        "containerweight": 100,
+                        "id": "icoSMSOOBPIN",
+                        "imagescalemode": 1,
+                        "info": null,
+                        "invokedProperty": "src",
+                        "iscustomlayout": false,
+                        "isvisible": true,
+                        "kuid": "c6fdd84983b44999ba0a6d7cf90c5c67",
+                        "name": "kony.ui.Image2",
+                        "parent": "flxDiffAuthOOBPIN",
+                        "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                        "retaincontentalignment": false,
+                        "retainflexpositionproperties": false,
+                        "snapshot": {
+                            "md5": "DrUcr4DXu+NDiWuVbW6fODrM/Es="
+                        },
+                        "srcType": 1,
+                        "tooltip": "SMS OTP",
+                        "wType": "Image",
+                        "widgetalignment": 5,
+                        "zindex": 1
+                    },
+                    "icoSecureOOBPIN": {
+                        "@class": "com.kony.gen.viz.model.component.KVizImage2",
+                        "DNDConfig": null,
+                        "_base64_": null,
+                        "_height_": {
+                            "type": "string",
+                            "value": "30dp"
+                        },
+                        "_left_": {
+                            "type": "string",
+                            "value": "5%"
+                        },
+                        "_margin_": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "_padding_": [
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+                        "_src_": "imgsc_2_4.png",
+                        "_top_": {
+                            "type": "string",
+                            "value": "0dp"
+                        },
+                        "_width_": {
+                            "type": "string",
+                            "value": "30dp"
+                        },
+                        "canUpdateUI": true,
+                        "containerweight": 100,
+                        "id": "icoSecureOOBPIN",
+                        "imagescalemode": 1,
+                        "info": null,
+                        "invokedProperty": "src",
+                        "iscustomlayout": false,
+                        "isvisible": true,
+                        "kuid": "h7b5dde6d3b84a3fba3f83bcacefef24",
+                        "name": "kony.ui.Image2",
+                        "parent": "flxDiffAuthOOBPIN",
+                        "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                        "retaincontentalignment": false,
+                        "retainflexpositionproperties": false,
+                        "snapshot": {
+                            "md5": "tu5kMx7A90NNCni0FvYcJB1A+es="
+                        },
+                        "srcType": 1,
+                        "tooltip": "Secure Code",
+                        "wType": "Image",
+                        "widgetalignment": 5,
+                        "zindex": 1
+                    },
+                    "id": "flxDiffAuthOOBPIN",
+                    "info": null,
+                    "iscustomlayout": false,
+                    "isvisible": true,
+                    "kuid": "a312f5d075964d058fa23d62803782fb",
+                    "layouttype": 3,
+                    "name": "kony.ui.FlexContainer",
+                    "parent": "flxChooseOOBPIN",
+                    "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                    "retaincontentalignment": false,
+                    "retainflexpositionproperties": false,
+                    "retainflowhorizontalalignment": false,
+                    "snapgridsize": 10,
+                    "snapshot": {
+                        "md5": "lFrsaK44w1C8CgPKOxXOusF81/o="
+                    },
+                    "snaptogrid": true,
+                    "wType": "FlexContainer",
+                    "widgetalignment": 1,
+                    "zindex": 1
+                },
+                "id": "flxChooseOOBPIN",
+                "info": null,
+                "iscustomlayout": false,
+                "isvisible": true,
+                "kuid": "h35eb4077cd646a4b7d467fd23a61a94",
+                "layouttype": 4,
+                "lblChooseOOBPIN": {
+                    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+                    "DNDConfig": null,
+                    "_height_": {
+                        "type": "ref",
+                        "value": "preferred"
+                    },
+                    "_left_": {
+                        "type": "string",
+                        "value": "13dp"
+                    },
+                    "_margin_": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "_padding_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_skin_": "s8a3c325400c40a780d9062fbe794374",
+                    "_text_": "Choose Another Credential",
+                    "_top_": {
+                        "type": "string",
+                        "value": "4dp"
+                    },
+                    "_width_": {
+                        "type": "string",
+                        "value": "100%"
+                    },
+                    "_wrapping_": 2,
+                    "android": {
+                        "textStyle": {
+                            "letterSpacing": 0,
+                            "strikeThrough": false
+                        }
+                    },
+                    "canUpdateUI": true,
+                    "centerx": {
+                        "type": "string",
+                        "value": "50%"
+                    },
+                    "containerweight": 100,
+                    "contentalignment": 5,
+                    "id": "lblChooseOOBPIN",
+                    "info": null,
+                    "ipad": {
+                        "psp": {
+                            "wrapping": 2
+                        }
+                    },
+                    "iphone": {
+                        "psp": {
+                            "wrapping": 2
+                        }
+                    },
+                    "iscustomlayout": false,
+                    "isvisible": true,
+                    "kuid": "h4b827dca9204cb99aa393bb62dcd8db",
+                    "name": "kony.ui.Label",
+                    "parent": "flxChooseOOBPIN",
+                    "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                    "retaincontentalignment": false,
+                    "retainflexpositionproperties": false,
+                    "snapshot": {
+                        "md5": "vP4BNL76PMgXKcZrUc9uYfg2FP4="
+                    },
+                    "tooltip": "",
+                    "wType": "Label",
+                    "zindex": 1
+                },
+                "name": "kony.ui.FlexContainer",
+                "parent": "flxOOBPIN",
+                "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                "retaincontentalignment": false,
+                "retainflexpositionproperties": false,
+                "retainflowhorizontalalignment": false,
+                "snapgridsize": 10,
+                "snapshot": {
+                    "md5": "+8wqxTVVEvRyEGEqCqrr8lgsfFE="
+                },
+                "snaptogrid": true,
+                "wType": "FlexContainer",
+                "widgetalignment": 1,
+                "zindex": 1
+            },
+            "flxLoginButton": {
+                "DNDConfig": null,
+                "_height_": {
+                    "type": "string",
+                    "value": "8%"
+                },
+                "_left_": {
+                    "type": "string",
+                    "value": "10%"
+                },
+                "_margin_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_orientation_": 6,
+                "_padding_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_percent_": true,
+                "_skin_": "s892cdc9412841adbbe4c7f897ebaa34",
+                "_top_": {
+                    "type": "string",
+                    "value": "6%"
+                },
+                "_width_": {
+                    "type": "string",
+                    "value": "55%"
+                },
+                "allboxes": [],
+                "autogrowmode": 0,
+                "btnLoginOOBPIN": {
+                    "@class": "com.kony.gen.viz.model.component.KVizButton",
+                    "DNDConfig": null,
+                    "_height_": {
+                        "type": "string",
+                        "value": "100%"
+                    },
+                    "_left_": {
+                        "type": "string",
+                        "value": "0%"
+                    },
+                    "_margin_": [
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "_padding_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_skin_": "sa01c3d857bf4ee9807fb893d265af30",
+                    "_text_": "SUBMIT",
+                    "_top_": {
+                        "type": "string",
+                        "value": "0%"
+                    },
+                    "_width_": {
+                        "type": "string",
+                        "value": "100%"
+                    },
+                    "canUpdateUI": true,
+                    "centerx": {
+                        "type": "string",
+                        "value": "50%"
+                    },
+                    "centery": {
+                        "type": "number",
+                        "value": ""
+                    },
+                    "containerweight": 100,
+                    "contentalignment": 5,
+                    "desktopweb": {
+                        "blockedUISkin": "see19310136f4419a72d83c27626748a"
+                    },
+                    "disabledSkins": {},
+                    "displaytext": true,
+                    "focusskin": "s8e3ebf3361c4b5dad4a40025e25c134",
+                    "id": "btnLoginOOBPIN",
+                    "ide_onClick": "AS_Button_e42eee5cbaaa4110b9e01340a9494c12",
+                    "info": null,
+                    "iscustomlayout": false,
+                    "isvisible": true,
+                    "kuid": "c11b80fdd7904019914f527e10a0ab12",
+                    "name": "kony.ui.Button",
+                    "parent": "flxLoginButton",
+                    "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                    "retaincontentalignment": false,
+                    "retainflexpositionproperties": false,
+                    "snapshot": {
+                        "md5": "+PQQIBrGWPt8SsmI/CnQGdBLENw="
+                    },
+                    "wType": "Button",
+                    "zindex": 1
+                },
+                "btnSignUpOOBPIN": {
+                    "@class": "com.kony.gen.viz.model.component.KVizButton",
+                    "DNDConfig": null,
+                    "_height_": {
+                        "type": "string",
+                        "value": "100%"
+                    },
+                    "_left_": {
+                        "type": "string",
+                        "value": "3%"
+                    },
+                    "_margin_": [
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "_padding_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_skin_": "s717d561093b4ddd8435fe4e3b91e076",
+                    "_text_": "REGISTER",
+                    "_top_": {
+                        "type": "string",
+                        "value": "0%"
+                    },
+                    "_width_": {
+                        "type": "string",
+                        "value": "48%"
+                    },
+                    "canUpdateUI": true,
+                    "centery": {
+                        "type": "number",
+                        "value": ""
+                    },
+                    "containerweight": 100,
+                    "contentalignment": 5,
+                    "displaytext": true,
+                    "focusskin": "scc6f8df7f804fc38bf30d7f02980fa7",
+                    "id": "btnSignUpOOBPIN",
+                    "info": null,
+                    "iscustomlayout": false,
+                    "isvisible": true,
+                    "kuid": "f2f018b484714b66828bf3af7408c07e",
+                    "name": "kony.ui.Button",
+                    "parent": "flxLoginButton",
+                    "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                    "responsiveData": {},
+                    "retaincontentalignment": false,
+                    "retainflexpositionproperties": false,
+                    "snapshot": {
+                        "md5": "yoom3aUyJWymZl3hjTgIf9NYw3E="
+                    },
+                    "wType": "Button",
+                    "zindex": 1
+                },
+                "canUpdateUI": true,
+                "centerx": {
+                    "type": "string",
+                    "value": "50%"
+                },
+                "children": [
+                    "btnLoginOOBPIN",
+                    "btnSignUpOOBPIN"
+                ],
+                "clipbounds": true,
+                "containerweight": 100,
+                "enablescrolling": true,
+                "id": "flxLoginButton",
+                "info": null,
+                "iscustomlayout": false,
+                "isvisible": true,
+                "kuid": "fbdd74d8c56342a0839296a8ac37b826",
+                "layouttype": 2,
+                "name": "kony.ui.FlexContainer",
+                "parent": "flxOOBPIN",
+                "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                "retaincontentalignment": false,
+                "retainflexpositionproperties": false,
+                "retainflowhorizontalalignment": false,
+                "snapgridsize": 10,
+                "snapshot": {
+                    "md5": "F6KTEa1HyMJXEQBWDrECt0zmPwg="
+                },
+                "snaptogrid": true,
+                "wType": "FlexContainer",
+                "widgetalignment": 1,
+                "zindex": 1
+            },
+            "flxPIN": {
+                "DNDConfig": null,
+                "LockIcon": {
+                    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+                    "DNDConfig": null,
+                    "_height_": {
+                        "type": "ref",
+                        "value": "preferred"
+                    },
+                    "_left_": {
+                        "type": "string",
+                        "value": "5%"
+                    },
+                    "_margin_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_padding_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_skin_": "sbdfe5b86c5043d4b22c4362056a431d",
+                    "_text_": "",
+                    "_top_": {
+                        "type": "string",
+                        "value": "10dp"
+                    },
+                    "_width_": {
+                        "type": "ref",
+                        "value": "preferred"
+                    },
+                    "_wrapping_": 2,
+                    "android": {
+                        "textStyle": {
+                            "letterSpacing": 0,
+                            "strikeThrough": false
+                        }
+                    },
+                    "canUpdateUI": true,
+                    "centery": {
+                        "type": "string",
+                        "value": "50%"
+                    },
+                    "containerweight": 100,
+                    "contentalignment": 4,
+                    "id": "LockIcon",
+                    "info": null,
+                    "ipad": {
+                        "psp": {
+                            "wrapping": 2
+                        }
+                    },
+                    "iphone": {
+                        "psp": {
+                            "wrapping": 2
+                        }
+                    },
+                    "isvisible": true,
+                    "kuid": "gfaebf30513a467b99676f5cff20bbfc",
+                    "masterType": 1,
+                    "name": "kony.ui.Label",
+                    "parent": "flxPIN",
+                    "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                    "snapshot": {
+                        "md5": "rDnRUN6Ku7RyRzzUdmio1BZ44S4="
+                    },
+                    "tooltip": "",
+                    "wType": "Label",
+                    "zindex": 1
+                },
+                "_height_": {
+                    "type": "string",
+                    "value": "8.50%"
+                },
+                "_left_": {
+                    "type": "string",
+                    "value": "10%"
+                },
+                "_margin_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_orientation_": 6,
+                "_padding_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_percent_": true,
+                "_skin_": "sabcdae03f8c448f9e2822c07f639200",
+                "_top_": {
+                    "type": "string",
+                    "value": "3%"
+                },
+                "_width_": {
+                    "type": "string",
+                    "value": "55%"
+                },
+                "allboxes": [],
+                "autogrowmode": 0,
+                "canUpdateUI": true,
+                "centerx": {
+                    "type": "string",
+                    "value": "50%"
+                },
+                "children": [
+                    "LockIcon",
+                    "tbxOOBPIN"
+                ],
+                "clipbounds": true,
+                "containerweight": 100,
+                "enablescrolling": true,
+                "id": "flxPIN",
+                "info": null,
+                "iscustomlayout": false,
+                "isvisible": true,
+                "kuid": "f73767b0523f4a2a89ca6b206f74a1f6",
+                "layouttype": 3,
+                "name": "kony.ui.FlexContainer",
+                "parent": "flxOOBPIN",
+                "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                "retaincontentalignment": false,
+                "retainflexpositionproperties": false,
+                "retainflowhorizontalalignment": false,
+                "snapgridsize": 10,
+                "snapshot": {
+                    "md5": "Dy/Bpx6uEAu62bTMkw9f0DjitCQ="
+                },
+                "snaptogrid": true,
+                "tbxOOBPIN": {
+                    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+                    "DNDConfig": null,
+                    "_height_": {
+                        "type": "string",
+                        "value": "100%"
+                    },
+                    "_left_": {
+                        "type": "string",
+                        "value": "5%"
+                    },
+                    "_margin_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_padding_": [
+                        3,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_placeholder_": "PIN",
+                    "_skin_": "s29c55f8d6cf4da38d4c6af7be2c416b",
+                    "_text_": "",
+                    "_top_": {
+                        "type": "string",
+                        "value": "0"
+                    },
+                    "_width_": {
+                        "type": "string",
+                        "value": "85%"
+                    },
+                    "autocapitalize": "none",
+                    "autocomplete": false,
+                    "autocorrect": false,
+                    "autofilter": false,
+                    "canUpdateUI": true,
+                    "centery": {
+                        "type": "number",
+                        "value": ""
+                    },
+                    "containerheight": "",
+                    "containerheightmode": 1,
+                    "containerweight": 100,
+                    "contentalignment": 4,
+                    "desktopweb": {
+                        "placeholderSkin": "sdc43a6be8664bc2a3dbb4a84471f871"
+                    },
+                    "disabledSkins": {},
+                    "focusskin": "s02dbfd3528a437f959cb94f26c95020",
+                    "id": "tbxOOBPIN",
+                    "info": null,
+                    "iscustomlayout": false,
+                    "isvisible": true,
+                    "keyboardtype": "A",
+                    "kuid": "a15685b2ed7840f3bce2e98e7b27337a",
+                    "mode": "A",
+                    "name": "kony.ui.TextBox2",
+                    "parent": "flxPIN",
+                    "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                    "placeholderskin": "sdc43a6be8664bc2a3dbb4a84471f871",
+                    "retaincontentalignment": false,
+                    "retainflexpositionproperties": false,
+                    "securetextentry": true,
+                    "snapshot": {
+                        "md5": "cjboUntvz9Z5p0phOU04VMPBwok="
+                    },
+                    "textinputmode": "A",
+                    "tooltip": "",
+                    "viewtype": "default",
+                    "wType": "TextField",
+                    "zindex": 1
+                },
+                "wType": "FlexContainer",
+                "widgetalignment": 1,
+                "zindex": 1
+            },
+            "flxUserNameOOBPIN": {
+                "DNDConfig": null,
+                "UserIcon": {
+                    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+                    "DNDConfig": null,
+                    "_height_": {
+                        "type": "ref",
+                        "value": "preferred"
+                    },
+                    "_left_": {
+                        "type": "string",
+                        "value": "5%"
+                    },
+                    "_margin_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_padding_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_skin_": "s150b80eafed46868f7ca0152281a16b",
+                    "_text_": "",
+                    "_top_": {
+                        "type": "string",
+                        "value": "8dp"
+                    },
+                    "_width_": {
+                        "type": "ref",
+                        "value": "preferred"
+                    },
+                    "_wrapping_": 2,
+                    "android": {
+                        "textStyle": {
+                            "letterSpacing": 0,
+                            "strikeThrough": false
+                        }
+                    },
+                    "canUpdateUI": true,
+                    "centerx": {
+                        "type": "number",
+                        "value": ""
+                    },
+                    "centery": {
+                        "type": "string",
+                        "value": "50%"
+                    },
+                    "containerweight": 100,
+                    "contentalignment": 4,
+                    "id": "UserIcon",
+                    "info": null,
+                    "ipad": {
+                        "psp": {
+                            "wrapping": 2
+                        }
+                    },
+                    "iphone": {
+                        "psp": {
+                            "wrapping": 2
+                        }
+                    },
+                    "isvisible": true,
+                    "kuid": "gea2536f3c30454c8754d335292142e3",
+                    "masterType": 1,
+                    "name": "kony.ui.Label",
+                    "parent": "flxUserNameOOBPIN",
+                    "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                    "snapshot": {
+                        "md5": "DWRBnF2jAMESHNIkGuUJK64tTyY="
+                    },
+                    "tooltip": "",
+                    "wType": "Label",
+                    "zindex": 1
+                },
+                "_height_": {
+                    "type": "string",
+                    "value": "8.50%"
+                },
+                "_left_": {
+                    "type": "string",
+                    "value": "10%"
+                },
+                "_margin_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_orientation_": 6,
+                "_padding_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_percent_": true,
+                "_skin_": "se6011e25821440ab33a790369ec4e82",
+                "_top_": {
+                    "type": "string",
+                    "value": "6%"
+                },
+                "_width_": {
+                    "type": "string",
+                    "value": "55%"
+                },
+                "allboxes": [],
+                "autogrowmode": 0,
+                "canUpdateUI": true,
+                "centerx": {
+                    "type": "string",
+                    "value": "50%"
+                },
+                "children": [
+                    "UserIcon",
+                    "tbxUserOOBPIN"
+                ],
+                "clipbounds": true,
+                "containerweight": 100,
+                "enablescrolling": true,
+                "id": "flxUserNameOOBPIN",
+                "info": null,
+                "iscustomlayout": false,
+                "isvisible": true,
+                "kuid": "cb46dadd65ed479c9dbaa3d2a406036f",
+                "layouttype": 3,
+                "name": "kony.ui.FlexContainer",
+                "parent": "flxOOBPIN",
+                "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                "retaincontentalignment": false,
+                "retainflexpositionproperties": false,
+                "retainflowhorizontalalignment": false,
+                "snapgridsize": 10,
+                "snapshot": {
+                    "md5": "lKJdd3cfK1hX2CznXOuH23SGibw="
+                },
+                "snaptogrid": true,
+                "tbxUserOOBPIN": {
+                    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+                    "DNDConfig": null,
+                    "_height_": {
+                        "type": "string",
+                        "value": "100%"
+                    },
+                    "_left_": {
+                        "type": "string",
+                        "value": "5%"
+                    },
+                    "_margin_": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_padding_": [
+                        3,
+                        0,
+                        0,
+                        0
+                    ],
+                    "_placeholder_": "Username",
+                    "_skin_": "sb0637bedcd84ce094b24e4b9cb707e2",
+                    "_text_": "",
+                    "_top_": {
+                        "type": "string",
+                        "value": "0dp"
+                    },
+                    "_width_": {
+                        "type": "string",
+                        "value": "85%"
+                    },
+                    "autocapitalize": "none",
+                    "autocomplete": false,
+                    "autocorrect": false,
+                    "autofilter": false,
+                    "canUpdateUI": true,
+                    "containerheight": "",
+                    "containerheightmode": 1,
+                    "containerweight": 100,
+                    "contentalignment": 4,
+                    "desktopweb": {
+                        "placeholderSkin": "sdc43a6be8664bc2a3dbb4a84471f871"
+                    },
+                    "disabledSkins": {},
+                    "focusskin": "s02dbfd3528a437f959cb94f26c95020",
+                    "id": "tbxUserOOBPIN",
+                    "info": null,
+                    "iscustomlayout": false,
+                    "isvisible": true,
+                    "keyboardtype": "A",
+                    "kuid": "d8621664a2e149aa85509d6355018c23",
+                    "mode": "A",
+                    "name": "kony.ui.TextBox2",
+                    "parent": "flxUserNameOOBPIN",
+                    "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                    "placeholderskin": "sdc43a6be8664bc2a3dbb4a84471f871",
+                    "retaincontentalignment": false,
+                    "retainflexpositionproperties": false,
+                    "securetextentry": false,
+                    "snapshot": {
+                        "md5": "uH+JPHc+8S0/WFe2kqY1JN7+YdE="
+                    },
+                    "textinputmode": "A",
+                    "tooltip": "",
+                    "viewtype": "default",
+                    "wType": "TextField",
+                    "zindex": 1
+                },
+                "wType": "FlexContainer",
+                "widgetalignment": 1,
+                "zindex": 1
+            },
+            "id": "flxOOBPIN",
+            "info": null,
+            "iscustomlayout": false,
+            "isvisible": false,
+            "kuid": "h459b7a0c5ab4429a8b834b618db0615",
+            "layouttype": 4,
+            "lblConsensusOOBPIN": {
+                "@class": "com.kony.gen.viz.model.component.KVizLabel",
+                "DNDConfig": null,
+                "_height_": {
+                    "type": "ref",
+                    "value": "preferred"
+                },
+                "_left_": {
+                    "type": "string",
+                    "value": "16dp"
+                },
+                "_margin_": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "_padding_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_skin_": "s4866791adc14ef49215c612bcc7125e",
+                "_text_": "Label",
+                "_top_": {
+                    "type": "string",
+                    "value": "9dp"
+                },
+                "_width_": {
+                    "type": "ref",
+                    "value": "preferred"
+                },
+                "_wrapping_": 2,
+                "android": {
+                    "textStyle": {
+                        "letterSpacing": 0,
+                        "strikeThrough": false
+                    }
+                },
+                "canUpdateUI": true,
+                "centerx": {
+                    "type": "number",
+                    "value": ""
+                },
+                "containerweight": 100,
+                "contentalignment": 4,
+                "id": "lblConsensusOOBPIN",
+                "info": null,
+                "ipad": {
+                    "psp": {
+                        "wrapping": 2
+                    }
+                },
+                "iphone": {
+                    "psp": {
+                        "wrapping": 2
+                    }
+                },
+                "iscustomlayout": false,
+                "isvisible": true,
+                "kuid": "b4c89ff0273044c98f22a1994f8a9fe2",
+                "name": "kony.ui.Label",
+                "parent": "flxOOBPIN",
+                "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                "responsiveData": {},
+                "retaincontentalignment": false,
+                "retainflexpositionproperties": false,
+                "snapshot": {
+                    "md5": "hYF+DqqOSJl0K+UydZxKKe8crfk="
+                },
+                "tooltip": "",
+                "wType": "Label",
+                "zindex": 1
+            },
+            "lblErrorOOBPIN": {
+                "@class": "com.kony.gen.viz.model.component.KVizLabel",
+                "DNDConfig": null,
+                "_height_": {
+                    "type": "string",
+                    "value": "15%"
+                },
+                "_left_": {
+                    "type": "string",
+                    "value": "25dp"
+                },
+                "_margin_": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "_padding_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_skin_": "s2701a2973564774a71cdd17e81bbeea",
+                "_text_": "Label",
+                "_top_": {
+                    "type": "string",
+                    "value": "10dp"
+                },
+                "_width_": {
+                    "type": "string",
+                    "value": "70%"
+                },
+                "_wrapping_": 2,
+                "android": {
+                    "textStyle": {
+                        "letterSpacing": 0,
+                        "strikeThrough": false
+                    }
+                },
+                "canUpdateUI": true,
+                "centerx": {
+                    "type": "string",
+                    "value": "50%"
+                },
+                "containerweight": 100,
+                "contentalignment": 5,
+                "id": "lblErrorOOBPIN",
+                "info": null,
+                "ipad": {
+                    "psp": {
+                        "wrapping": 2
+                    }
+                },
+                "iphone": {
+                    "psp": {
+                        "wrapping": 2
+                    }
+                },
+                "iscustomlayout": false,
+                "isvisible": true,
+                "kuid": "e08555cd469c44eb80e2673b745b23c3",
+                "name": "kony.ui.Label",
+                "parent": "flxOOBPIN",
+                "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                "retaincontentalignment": false,
+                "retainflexpositionproperties": false,
+                "snapshot": {
+                    "md5": "+UhAankkYpIzJfE7pDZf3k6DSoc="
+                },
+                "tooltip": "",
+                "wType": "Label",
+                "zindex": 1
+            },
+            "lblSigntoAccOOBPIN": {
+                "@class": "com.kony.gen.viz.model.component.KVizLabel",
+                "DNDConfig": null,
+                "_height_": {
+                    "type": "ref",
+                    "value": "preferred"
+                },
+                "_left_": {
+                    "type": "string",
+                    "value": "93dp"
+                },
+                "_margin_": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "_padding_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_skin_": "s4e4451dfb7f41d9bda57e161bbc7cfe",
+                "_text_": "Login to your account",
+                "_top_": {
+                    "type": "string",
+                    "value": "2%"
+                },
+                "_width_": {
+                    "type": "string",
+                    "value": "100%"
+                },
+                "_wrapping_": 2,
+                "android": {
+                    "textStyle": {
+                        "letterSpacing": 0,
+                        "strikeThrough": false
+                    }
+                },
+                "canUpdateUI": true,
+                "centerx": {
+                    "type": "string",
+                    "value": "50%"
+                },
+                "containerweight": 100,
+                "contentalignment": 5,
+                "id": "lblSigntoAccOOBPIN",
+                "info": null,
+                "ipad": {
+                    "psp": {
+                        "wrapping": 2
+                    }
+                },
+                "iphone": {
+                    "psp": {
+                        "wrapping": 2
+                    }
+                },
+                "iscustomlayout": false,
+                "isvisible": true,
+                "kuid": "f5853fd268cc456ba2d033e96e5924db",
+                "name": "kony.ui.Label",
+                "parent": "flxOOBPIN",
+                "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                "retaincontentalignment": false,
+                "retainflexpositionproperties": false,
+                "snapshot": {
+                    "md5": "38gLqZuQ4JjBpRGoUiosDFkqEIE="
+                },
+                "tooltip": "",
+                "wType": "Label",
+                "zindex": 1
+            },
+            "lblWelcomeOOBPIN": {
+                "@class": "com.kony.gen.viz.model.component.KVizLabel",
+                "DNDConfig": null,
+                "_height_": {
+                    "type": "ref",
+                    "value": "preferred"
+                },
+                "_left_": {
+                    "type": "string",
+                    "value": "93dp"
+                },
+                "_margin_": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "_padding_": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "_skin_": "sabe1d3623994739809638b58271fbe0",
+                "_text_": "Welcome!",
+                "_top_": {
+                    "type": "string",
+                    "value": "10%"
+                },
+                "_width_": {
+                    "type": "string",
+                    "value": "80%"
+                },
+                "_wrapping_": 2,
+                "android": {
+                    "textStyle": {
+                        "letterSpacing": 0,
+                        "strikeThrough": false
+                    }
+                },
+                "canUpdateUI": true,
+                "centerx": {
+                    "type": "string",
+                    "value": "50%"
+                },
+                "containerweight": 100,
+                "contentalignment": 5,
+                "id": "lblWelcomeOOBPIN",
+                "info": null,
+                "ipad": {
+                    "psp": {
+                        "wrapping": 2
+                    }
+                },
+                "iphone": {
+                    "psp": {
+                        "wrapping": 2
+                    }
+                },
+                "iscustomlayout": false,
+                "isvisible": true,
+                "kuid": "f5ee7b97a97c4249a56f8b5d691ba0fa",
+                "name": "kony.ui.Label",
+                "parent": "flxOOBPIN",
+                "pf": "uwu4a6c6d617684834ad14a822ced81180",
+                "retaincontentalignment": false,
+                "retainflexpositionproperties": false,
+                "snapshot": {
+                    "md5": "STGGpSVd9yY7OcLAxDnGW0y7ceU="
+                },
+                "tooltip": "",
+                "wType": "Label",
+                "zindex": 1
+            },
+            "name": "kony.ui.FlexContainer",
+            "parent": "onboarding",
+            "pf": "uwu4a6c6d617684834ad14a822ced81180",
+            "retaincontentalignment": false,
+            "retainflexpositionproperties": false,
+            "retainflowhorizontalalignment": false,
+            "snapgridsize": 10,
+            "snapshot": {
+                "md5": "/F4FKlDGdOF9mPOyKzB9nWs6DNk="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -6727,7 +8074,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s2d35e2b6405417f88ac4ce76604f5f1",
+                "_skin_": "s6e6f635daa7481f8d4da76753d2ffd3",
                 "_top_": {
                     "type": "string",
                     "value": "2%"
@@ -6761,7 +8108,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s075610770244272b07eea7435ed9903",
+                    "_skin_": "s0574817a9b54a068bc38dc1c983b8e2",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -6779,7 +8126,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sf6fddf323df4a698fe4b934ce65170c",
+                    "focusskin": "s3826bfbf4e2410db523fba17e8c1f48",
                     "id": "btnCancelOTP",
                     "info": null,
                     "iscustomlayout": false,
@@ -6792,7 +8139,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "S+poL/nubL/q2sJC89XdZm4qurA="
+                        "md5": "ubahhbDYu9zqKIvLJo/HrpYv47U="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -6820,7 +8167,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sc07046c324c4f50984cf5b778dfb559",
+                    "_skin_": "sc615c87f137463aac11015542a04860",
                     "_text_": "Confirm",
                     "_top_": {
                         "type": "string",
@@ -6838,7 +8185,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s7cc801a45b24a0e9fc62cbf3a1c1316",
+                    "focusskin": "s315841edbf64d49a42a60c52cf2424f",
                     "id": "btnConfirmOTP",
                     "info": null,
                     "iscustomlayout": false,
@@ -6851,7 +8198,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "yViahgzpI/GnvLkzeS+nK+WhafM="
+                        "md5": "USAHTuNImk5D4EZ7Qx9xJQZQ5yU="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -6883,7 +8230,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "Vpx1uuu++RkXQOWvV5HilkSOBV0="
+                    "md5": "4eksJAVRbnAyP0Nf4Ax7eXhxMCQ="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -6919,7 +8266,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s653cf79359a4b4fa28cf8ef3d55ab6d",
+                "_skin_": "saa67881a7c5437390cdea3c291aea8e",
                 "_text_": "invalid OTP entered \n You have 3 attempts before account is blocked",
                 "_top_": {
                     "type": "string",
@@ -6965,7 +8312,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "4R0xvcX7w0AYlfwm0ZAM7Njyot4="
+                    "md5": "wZmaYKscBDh7c7oR6iD1uvBTE4I="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -6994,7 +8341,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s381e1e852ba4d288b2b0d922ac387e2",
+                "_skin_": "s8dc6aefb347427cbfc1cbdfb9eb6241",
                 "_text_": "Please enter your One-Time Password",
                 "_top_": {
                     "type": "string",
@@ -7040,7 +8387,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "MTBPPwI/pE4tE+Jk71wQvVK2e/Q="
+                    "md5": "EQbGwV0WlsBShA2yspJksNX9OhE="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -7069,7 +8416,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sb5e0188632f4392b185a53623258cf5",
+                "_skin_": "s4500455255246c3a7fe5a24890f9f43",
                 "_text_": "HID Approve Secure Code",
                 "_top_": {
                     "type": "string",
@@ -7115,7 +8462,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "SuRpLL+RGkyc5ALGGdB9CcGuSME="
+                    "md5": "pRjvdL3ZSOMAInRpOfUy/PBry20="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -7156,7 +8503,7 @@
                     0
                 ],
                 "_placeholder_": "Enter OTP",
-                "_skin_": "s4d33e794ca349c1891cf0cd6a86a93e",
+                "_skin_": "s702268122844816bd431db4bb3e2cc4",
                 "_text_": "",
                 "_top_": {
                     "type": "string",
@@ -7180,7 +8527,7 @@
                 "containerweight": 100,
                 "contentalignment": 5,
                 "desktopweb": {
-                    "placeholderSkin": "sb7a5290ec5940f9aa907638e3ccc496"
+                    "placeholderSkin": "s9c0c12f34ee41a49b4ffb81f2100b9f"
                 },
                 "disabledSkins": {
                     "focusSkin": "sc9e29acbce8409c971ab4aba77d9d0f"
@@ -7196,12 +8543,12 @@
                 "name": "kony.ui.TextBox2",
                 "parent": "flxOTP",
                 "pf": "uwu4a6c6d617684834ad14a822ced81180",
-                "placeholderskin": "sb7a5290ec5940f9aa907638e3ccc496",
+                "placeholderskin": "s9c0c12f34ee41a49b4ffb81f2100b9f",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "securetextentry": false,
                 "snapshot": {
-                    "md5": "qFCOFlhFewzZH1VaukiqQSCLWzk="
+                    "md5": "sROMyiUPQfpXk80Tftu/oGEF/qc="
                 },
                 "textinputmode": "A",
                 "tooltip": "",
@@ -7237,7 +8584,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s3aa45aa2ff4415498cc8a648ddb5deb",
+                "_skin_": "s14f8f5c445c4881afe471933de924af",
                 "_text_": "Dear user registration process is completed successfully. Please Login to experience the Digital Banking",
                 "_top_": {
                     "type": "string",
@@ -7282,7 +8629,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "TY+eZ4sXQsVCHNFEQfpAJ37VdJk="
+                    "md5": "xESN4A8NUNUZnTJu9M+96vyBoTY="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -7313,7 +8660,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s2d35e2b6405417f88ac4ce76604f5f1",
+                "_skin_": "s6e6f635daa7481f8d4da76753d2ffd3",
                 "_top_": {
                     "type": "string",
                     "value": "5%"
@@ -7347,7 +8694,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s075610770244272b07eea7435ed9903",
+                    "_skin_": "s0574817a9b54a068bc38dc1c983b8e2",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -7365,7 +8712,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sf6fddf323df4a698fe4b934ce65170c",
+                    "focusskin": "s3826bfbf4e2410db523fba17e8c1f48",
                     "id": "btnRegCancel",
                     "info": null,
                     "iscustomlayout": false,
@@ -7377,7 +8724,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "qARtCJh/pn2B/8QfKBN/Ve5P1CY="
+                        "md5": "pGGhfL8bk+bMbJlmTYn3r6+VCfs="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -7405,7 +8752,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sc07046c324c4f50984cf5b778dfb559",
+                    "_skin_": "sc615c87f137463aac11015542a04860",
                     "_text_": "Login",
                     "_top_": {
                         "type": "string",
@@ -7427,7 +8774,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s7cc801a45b24a0e9fc62cbf3a1c1316",
+                    "focusskin": "s315841edbf64d49a42a60c52cf2424f",
                     "id": "btnRegSuccess",
                     "info": null,
                     "iscustomlayout": false,
@@ -7439,7 +8786,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "PA4x165s6JFZ3NTmpING4yBcdds="
+                        "md5": "yzt14LGq8J7VuS+ucbJ9lUjiDHc="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -7470,7 +8817,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "O60GfnPYbUWDR2PJOUqzDa2X/WM="
+                    "md5": "4vIwg1wAgCldXryZYGWyJcIyJ8Q="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -7500,7 +8847,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s4e01e4418254a349609c66befc6d229",
+                "_skin_": "s4545afbf99e42f8a7bb30c283e304cf",
                 "_text_": "Registration Successful",
                 "_top_": {
                     "type": "string",
@@ -7545,7 +8892,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "4nKXSHCS90NhnAqbpxURdQVPWpU="
+                    "md5": "EJE9mhjvPTVXSYBrRLoWfUKEzSY="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -7636,11 +8983,11 @@
         "retainflowhorizontalalignment": false,
         "snapgridsize": 10,
         "snapshot": {
-            "md5": "DbF9y9yGjInGFdbA5D/ZwWg4z7A="
+            "md5": "uUksQybYtmG+iclKcYWXWF3HfVI="
         },
         "snaptogrid": true,
         "wType": "FlexContainer",
         "widgetalignment": 1
     },
-    "userwidgetKUID": "uf6ceefc4a284e3db901c0c10e119584"
+    "userwidgetKUID": "u20efed1ab714a8199ae5142baaa67d7"
 }

@@ -15,7 +15,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s00053ae350e4375b7c17f0fc7a4e7fc",
+    "_skin_": "s263fc1c77444410bdb4021765148bd2",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -41,9 +41,7 @@
     "displayorientation": 3,
     "enabledforidletimeout": false,
     "globalUserWidgetRefs": [
-        "u98d3749bf2f4a3da915b420b6f587ce",
-        "ufd06854d6374344b5b7b0aaba9156d5",
-        "u37e263dfb6b43488160dae721b867bd"
+        "uf9ba8ba31734cc7be51445dc833913f"
     ],
     "id": "userwidgetmodel",
     "info": null,

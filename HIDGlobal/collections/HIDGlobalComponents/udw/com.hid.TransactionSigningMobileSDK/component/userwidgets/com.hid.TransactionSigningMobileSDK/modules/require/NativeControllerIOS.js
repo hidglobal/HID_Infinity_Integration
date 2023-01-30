@@ -11,8 +11,9 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
     this.componentInstance = componentInstance;
   };
   Inherits(NativeControllerIOS, NativeController);
-  NativeControllerIOS.prototype.signTransaction =function(values){
-       this.approveSDKWrapper.signTransactionWithPwdPromptCallbackWithSuccessCBWithFailureCB(values, this.componentInstance.pwdPromtCallback, this.componentInstance.SCB_signTransaction, this.componentInstance.FCB_signTransaction);
+  NativeControllerIOS.prototype.signTransaction =function(values,otpLabel = "hotp"){
+       //this.approveSDKWrapper.signTransactionWithPwdPromptCallbackWithSuccessCBWithFailureCB(values, this.componentInstance.pwdPromtCallback, this.componentInstance.SCB_signTransaction, this.componentInstance.FCB_signTransaction);
+       this.approveSDKWrapper.signTransactionWithPwdPromptCallbackWithSuccessCBWithFailureCBWithOTPLabel(values, this.componentInstance.pwdPromtCallback, this.componentInstance.SCB_signTransaction, this.componentInstance.FCB_signTransaction,otpLabel);
   };
   NativeControllerIOS.prototype.updateUsername =function(username){
       this.approveSDKWrapper.setUsername(username);

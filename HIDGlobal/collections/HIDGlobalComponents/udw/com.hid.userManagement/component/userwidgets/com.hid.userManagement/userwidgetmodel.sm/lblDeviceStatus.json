@@ -22,7 +22,7 @@
         0
     ],
     "_skin_": "s2144e241d89444ca608f66c8976e634",
-    "_text_": "Device Action",
+    "_text_": "Device Status",
     "_top_": {
         "type": "string",
         "value": "0%"

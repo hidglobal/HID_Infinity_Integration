@@ -1,0 +1,31 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid",
+        "uw_classname": "TransactionSigningWithoutUI",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.TransactionSigningWithoutUI"
+        ],
+        "templates": [],
+        "actions": {},
+        "skins": [
+            "slFbox",
+            "slForm"
+        ],
+        "images": [],
+        "fonts": [
+            "Gotham-Book"
+        ],
+        "nativeApis": 0,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2023-01-23T08:40:59.683Z",
+    "createdVizVersion": "9.2.37",
+    "project_version": "sprint39"
+}

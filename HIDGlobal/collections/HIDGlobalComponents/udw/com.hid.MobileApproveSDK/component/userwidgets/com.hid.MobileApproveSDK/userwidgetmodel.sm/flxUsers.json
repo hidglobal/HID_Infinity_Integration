@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s766d1426b45468bbe003b93d9692b6e",
+    "_skin_": "s8beee64ada1496ea57aaacd187d673c",
     "_top_": {
         "type": "string",
         "value": "0.00%"
@@ -40,10 +40,10 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "sc82965f7741499481491a98be876f13",
+    "focusskin": "sab95443dd6d4eb087f73ef050a86778",
     "id": "flxUsers",
     "info": null,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "g1491a1810ec444faf318404cefb2c6d",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

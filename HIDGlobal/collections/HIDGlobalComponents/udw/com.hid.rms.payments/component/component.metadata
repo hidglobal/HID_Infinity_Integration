@@ -1,0 +1,31 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid.rms",
+        "uw_classname": "payments",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.rms.payments"
+        ],
+        "templates": [],
+        "actions": {},
+        "skins": [
+            "slForm",
+            "slFbox"
+        ],
+        "images": [],
+        "fonts": [
+            "Gotham-Book"
+        ],
+        "nativeApis": 0,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2023-01-23T08:28:38.819Z",
+    "createdVizVersion": "9.2.37",
+    "project_version": "sprint39"
+}

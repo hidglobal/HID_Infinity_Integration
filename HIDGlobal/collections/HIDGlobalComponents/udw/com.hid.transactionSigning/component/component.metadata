@@ -5,8 +5,7 @@
         "uw_classname": "transactionSigning",
         "isLocked": false,
         "userwidgets": [
-            "com.hid.transactionSigning",
-            "com.konymp.qrcodegeneratorNew"
+            "com.hid.transactionSigning"
         ],
         "templates": [
             [
@@ -33,9 +32,9 @@
         },
         "skins": [
             "slForm",
-            "CopyCopyCopyCopyCopyCopybtnBlueFocus1",
-            "CopyCopyCopyCopyCopyCopyCopybtnBlueFocus",
-            "CopyCopyCopyCopyCopyCopybtnWHiteFocus",
+            "CopyCopyCopyCopyCopyCopyCopybtnBlueFocus4",
+            "CopyCopyCopyCopyCopyCopyCopyCopybtnBlueFocus",
+            "CopyCopyCopyCopyCopyCopyCopybtnWHiteFocus",
             "CopyCopyCopyCopyslFbox0g26f9ff38ff64e",
             "slFbox",
             "CopyslFbox0af86d06d07524e",
@@ -47,15 +46,15 @@
             "CopydefLabel0add337f0f8df4b",
             "CopydefLabel0eff9184e469d4d",
             "CopyCopyCopyCopysknHIDNotification1",
-            "CopyCopyCopyCopyCopyCopydefLabel",
+            "CopyCopyCopyCopyCopyCopydefLabel0e9c076046b5a4e",
             "seg2Focus",
             "CopyCopyCopyCopyseg1",
             "sliPhoneSegmentHeader",
             "CopyCopyCopyCopysknTbxHIDBLUE1",
             "CopyCopyCopyCopyCopysknTbxHIDBLUE",
-            "CopyCopyCopyCopyCopyslFbox",
+            "CopyCopyCopyCopyCopyslFbox0h954927985cc44",
             "defLabel",
-            "CopyCopyCopyCopyCopydefLabel"
+            "CopyCopyCopyCopyCopydefLabel0c803265e388040"
         ],
         "images": [
             "pageoffdot.png",
@@ -66,13 +65,13 @@
         ],
         "nativeApis": 0,
         "mfbundle": "services/services.zip",
-        "localFiles": true,
+        "localFiles": [],
         "cordova": [],
         "forms": {},
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2022-08-03T06:36:10.721Z",
+    "createdOn": "2023-01-24T10:50:02.964Z",
     "createdVizVersion": "9.2.37",
     "project_version": "sprint39"
 }

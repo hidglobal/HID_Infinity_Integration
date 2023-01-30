@@ -1,0 +1,67 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "60%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Enter Amount",
+    "_skin_": "s2f4ae45223c400c845ffac8126b1a2d",
+    "_text_": "USD",
+    "_top_": {
+        "type": "string",
+        "value": "33.13%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "25%"
+    },
+    "android": {},
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "sa400a5ba6784119a39a0a153faf406f",
+    "id": "tbxCurrencyRMS",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardstyle": "A",
+    "keyboardtype": "A",
+    "kuid": "a0b382d0759d455684f64be60dd970c7",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
+    "parent": "flxRMSAccount",
+    "pf": "userwidgetmodel",
+    "placeholderskin": "sdfcb456855f4ba788b92fc87c853166",
+    "restrictcharactersset": "!@#$%^&*(){}><  +=/,-_N;",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 1
+}

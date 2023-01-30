@@ -1,12 +1,27 @@
 define(['com/hid/loginComponent/AuthenticationPresentationController'], function(AuthenticationPresentationController) {
-  var contexts = ["Login","OTP","OTPError","PushDevices", "Approve"];
-  var ip_url = `https://myexternalip.com/raw`;
+  var contexts = ["Login","OTP","OTPError","PushDevices", "Approve","OOBPIN","Secure"];
   return {
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       this.resetUIFields();
       this.view.btnLogin.onClick = this.loginPassword;
       this.view.tbxPassword.onDone = this.loginPassword;
-      this.contextSwitch("Login");
+      this.view.btnLoginOOBPIN.onClick = this.loginSMSOTP;
+      this.view.tbxOOBPIN.onDone = this.loginSMSOTP;
+      this.view.btnLoginSecure.onClick = this.loginSecureCode;
+      this.view.tbxSecureCode.onDone = this.loginSecureCode;
+      this.view.btnConfirmOTP.onClick = this.btnConfirmOTP_onClick;
+//        alert(this._FirstFactor)
+//       switch(this._FirstFactor){
+//         case "STATIC_PWD":
+//           this.contextSwitch("Login");
+//           break;
+//         case "OTP_SMS_PIN":
+//           this.contextSwitch("OOBPIN");
+//           break;
+//         case "SECURE_CODE":
+//           this.contextSwitch("Secure");
+//           break;
+//       }
       this.TM_Cookie_Sid = "";
       this.TM_Cookie_Tag = "";
       this.tm_sid = "";
@@ -16,28 +31,17 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     app_session_id : "",
     //Logic for getters/setters of custom properties
     initGettersSetters: function() { 
-      defineGetter(this, "MFA", function() {
-        return this._MFA;
-      });
-      defineSetter(this, "MFA", function(val) {
-        if(!["OTP_SMS","OTP_EML","APPROVE","OTP_HWT"].some(v=>v===val)){
-          throw {
-            "type": "CUSTOM",
-            "message": "MFA property is Invalid"
-          };
-        }
-        this._MFA = val;
-      });
       //Check for RMS enabled or not.
       defineGetter(this, "isRMSEnabled", function() {
-        kony.print(this._isRMSEnabled);
+        kony.print('isRMSEnabled:'+this._isRMSEnabled);
         return this._isRMSEnabled;
       });
       defineSetter(this, "isRMSEnabled", function(val){
         if(!(val) || val == undefined){
           this._isRMSEnabled = false;
+        }else {
+          this._isRMSEnabled = val;
         }
-        else this._isRMSEnabled = val;
       });
       //Check for RMS Read Only or not.
       defineGetter(this, "isRMSReadOnly", function() {
@@ -45,16 +49,18 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         return this._isRMSReadOnly;
       });
       defineSetter(this, "isRMSReadOnly", function(val){
-        if(!(val) || val == undefined){
+        if(!(val) || val === undefined){
           this._isRMSReadOnly = false;
+        }else {
+          this._isRMSReadOnly = val;
         }
-        else this._isRMSEnabled = val;
       });
       //Check for RMS defined Cookies
       defineGetter(this, "tmCookieSid", function() {
         return this.TM_Cookie_Sid;
-      }); defineSetter(this, "tmCookieSid", function(val){
-        if(!(val) || val == undefined){
+      }); 
+      defineSetter(this, "tmCookieSid", function(val){
+        if(!(val) || val === undefined){
           throw {
             "type": "CUSTOM",
             "message": "TM_COOKIE_SID property is Invalid"
@@ -66,7 +72,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         return this.TM_Cookie_Tag;
       }); 
       defineSetter(this, "tmCookieTag", function(val){
-        if(!(val) || val == undefined){
+        if(!(val) || val === undefined){
           throw {
             "type": "CUSTOM",
             "message": "TM_COOKIE_SID property is Invalid"
@@ -79,20 +85,69 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         return this._adaptiveAuth;
       });
       defineSetter(this, "adaptiveAuth", function(val) {
-        if(!(val)|| val == undefined){  
+        if(!(val)|| val === undefined){  
           this._adaptiveAuth=null;
         }
         this._adaptiveAuth = val;
       });
+      defineGetter(this, "FirstFactor", function() {
+        return this._FirstFactor;
+      });
+      defineSetter(this, "FirstFactor", function(val) {
+        if(!["OTP_SMS_PIN","STATIC_PWD","SECURE_CODE"].some(v=>v===val)){
+          throw {
+            "type": "CUSTOM",
+            "message": "FirstFactor property is Invalid"
+          };
+        }
+      this._FirstFactor = val;
+      switch(this._FirstFactor){
+          case "STATIC_PWD":
+            this.contextSwitch("Login");
+            break;
+          case "OTP_SMS_PIN":
+            this.contextSwitch("OOBPIN");
+            break;
+          case "SECURE_CODE":
+            this.contextSwitch("Secure");
+            break;
+       }
+      });
+      defineGetter(this, "MFA", function() {
+        return this._MFA;
+      });
+      defineSetter(this, "MFA", function(val) {
+        if(!["OTP_SMS","OTP_EML","APPROVE","OTP_HWT","NO_MFA"].some(v=>v===val)){
+          throw {
+            "type": "CUSTOM",
+            "message": "MFA property is Invalid"
+          };
+        }
+        if(val !=="NO_MFA" && this._FirstFactor === "OTP_SMS_PIN"){
+          throw {
+            "type": "CUSTOM",
+            "message": "MFA property is Invalid.Please select MFA = NO_MFA for the selected FirstFactor"
+          };
+        }
+        if(val === "NO_MFA" && this._FirstFactor !== "OTP_SMS_PIN" ){
+          throw {
+            "type": "CUSTOM",
+            "message": "MFA property is Invalid.Cannot set MFA value = NO_MFA for selected FirstFactor"
+          };
+        }
+        this._MFA = val;
+      });
     },
     username : "",
+    password : "",
     gblTimer : null, 
     deviceTag : "",
     isKnownDevice : false,
     client_ip : "",
     newrequest : "",
     setContext: function(context) {
-    },     
+    }, 
+    
     loginPassword : function(){
       if(this.view.tbxUser.text === ""){
         this.view.lblErrorLogin.text = "Please enter UserID";
@@ -103,13 +158,68 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         return;
       }
       this.username = this.view.tbxUser.text;
-      if(this._isRMSEnabled == true){
-        this.loginPasswordwithRMS();
+      this.password = this.view.tbxPassword.text;
+      this.login(this._isRMSEnabled,this.username,this.password);
+    },
+    loginSecureCode : function(){     
+      if(this.view.tbxUserSecure.text === ""){
+        this.view.lblErrorSecure.text = "Please enter UserID";
+        return;
+      }
+      if(this.view.tbxSecureCode.text === ""){
+        this.view.lblErrorSecure.text = "Please enter Secure Code";
+        return;
+      }
+      this.username = this.view.tbxUserSecure.text;
+      this.password = this.view.tbxSecureCode.text;
+      this.login(this._isRMSEnabled,this.username,this.password);
+      
+    },
+    loginSMSOTP : function(){
+      if(this.view.tbxUserOOBPIN.text === ""){
+        this.view.lblErrorOOBPIN.text = "Please enter UserID";
+        return;
+      }
+      if(this.view.tbxOOBPIN.text === ""){
+        this.view.lblErrorOOBPIN.text = "Please enter PIN";
+        return;
+      }
+      this.username = this.view.tbxUserOOBPIN.text;
+      this.password = this.view.tbxOOBPIN.text;
+      this.commonEventHandler(this.showLoading, "");
+      AuthenticationPresentationController.sendOTP(this._FirstFactor, this.username,this.sendSMSOTPSuccess, this.sendSMSOTPFailure, true, this.password);
+    }, 
+    sendSMSOTPSuccess : function(response){
+      this.view.lblWelcome6.text = "HID Out Of Band SMS OTP";
+      this.contextSwitch("OTP");
+      this.commonEventHandler(this.dismissLoading, "");
+    },
+    sendSMSOTPFailure : function(error){
+      this.view.lblErrorOOBPIN.text = "Username or PIN is invalid";
+      this.view.lblErrorOOBPIN.setVisibility(true);
+      this.commonEventHandler(this.dismissLoading, "");
+    },
+    btnConfirmOTP_onClick : function(){
+      if(this.view.tbxOTP.text === ""){
+        this.view.lblErrorOTP.text = "Please enter OTP";
+        return;
+      }
+      this.password = this.view.tbxOTP.text;
+      if(this._FirstFactor === "OTP_SMS_PIN"){
+        this.login(this._isRMSEnabled,this.username,this.password);
+      }else{
+        this.validateOTP(this._MFA, this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure);
+      }    
+    },
+    
+    login : function(isEnabled,username,password){
+      if(isEnabled === true){
+        this.loginPasswordwithRMS(username,password);
       } else {
-        this.loginPasswordWithoutRMS();
+        this.loginPasswordWithoutRMS(username,password);
       }
     },
-    loginPasswordwithRMS : function() {
+    loginPasswordwithRMS : function(username,password) {
       let decodeCookie = document.cookie.split(";");
       for(var i=0; i<decodeCookie.length; i++) {
         cookiename = decodeCookie[i].split('=')[0].replace(/\s/g, "");
@@ -120,52 +230,30 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
           this.tm_tag = decodeCookie[i].split('=')[1];
         }
       }
-      this.deviceTag = localStorage.getItem(`HID_deviceTag_${this.username}`); 
+      this.deviceTag = localStorage.getItem(`HID_deviceTag_${username}`); 
       if(this.deviceTag === null){
         this.isKnownDevice = false;
         this.deviceTag = this.tm_tag;
       }
       else{ 
-        this.isKnownDevice = this.deviceTag==this.tm_tag;
+        this.isKnownDevice = this.deviceTag===this.tm_tag;
       } 
       kony.print("RMS => isKnownDevice:"+this.isKnownDevice);
       var self = this;
-      if(this.client_ip.trim() != ""){
-        this.rmsLoginApiCall();
+      if(this.client_ip.trim() !== ""){
+        this.rmsLoginApiCall(username,password);
       }else{
         const url = "https://api.ipify.org/?format=json"
         fetch(url)
           .then(response => response.json())
           .then(data =>{ 
           self.client_ip = data.ip;
-          self.rmsLoginApiCall();
+          self.rmsLoginApiCall(username,password);
         });
       }
-//       this.GetMyIpFunction();
     },     
-    GetMyIpFunction: function(){
-      try{
-        var url = ip_url;
-        var request = new kony.net.HttpRequest();
-        newrequest = request;
-        request.onReadyStateChange = this.CallBackFunction;
-        request.open(constants.HTTP_METHOD_GET, url, true);
-        request.send();
-      }catch(ex){
-        kony.print(ex.message);
-      }
-    },    
-    CallBackFunction: function(){
-      if(this.client_ip.trim() !=""){
-        return;
-      }
-      if(newrequest.readyState == constants.HTTP_READY_STATE_DONE){
-        var resString = newrequest.response;
-        this.client_ip = resString;
-        this.rmsLoginApiCall();
-      }
-    },
-    rmsLoginApiCall : function(){
+    
+    rmsLoginApiCall : function(username,password){
       let randomValue = Math.floor(Math.random()*100000);
       this.app_session_id = String(randomValue) ;
 
@@ -176,18 +264,90 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         "app_session_id" : this.app_session_id
       };
       this.commonEventHandler(this.showLoading, "");
-      AuthenticationPresentationController.validatePassword(this.username, this.view.tbxPassword.text, this.onValidatePasswordRMSSuccess, this.onValidatePasswordRMSFailure,rmsLoad);
+      if(this._FirstFactor ==="STATIC_PWD"){
+        AuthenticationPresentationController.validatePassword(username, password, this.onValidatePasswordRMSSuccess, this.onValidatePasswordRMSFailure,rmsLoad);
+      } else {
+        AuthenticationPresentationController.authenticateFirstFactor(username, password, this._FirstFactor, this.firstFactorRMSSuccess, this.firstFactorRMSFailure,rmsLoad);              
+      }
     },
-    onValidatePasswordRMSSuccess : function(response){
+    firstFactorRMSSuccess : function(response){      
+      switch(this._FirstFactor){
+        case "OTP_SMS_PIN":
+          this.authenticateOOBPINRMSSuccess(response);
+          break;
+        case "SECURE_CODE":
+          this.authenticateSecureRMSSuccess(response);
+          break;
+      }      
+    },
+    firstFactorRMSFailure : function(error){
+      switch(this._FirstFactor){
+        case "OTP_SMS_PIN":
+          this.authenticateOOBPINRMSFailure(error);
+          break;
+        case "SECURE_CODE":
+          this.authenticateSecureRMSFailure(error);
+          break;
+      }   
+    },
+    authenticateOOBPINRMSSuccess : function(response){
       alert(JSON.stringify(response.mfa_meta.rms));
       this.mfa_key = response.mfa_meta.auth_id;
-      var noStepup = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp == "false";
-      var stepUp = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp == "true";
+      var noStepup = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "false";
+      var stepUp = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "true";
       this.currentThreat = +response.mfa_meta.rms.currentThreat || 10;
       if(noStepup && this.isKnownDevice){
         //If isRMSReadOnly then donot perform stepdown
         kony.print("RMS => isRMSReadOnly:"+this._isRMSReadOnly);
-        if(this._isRMSReadOnly == false){
+        if(this._isRMSReadOnly === false){
+          this.updateRMSServiceEvent("STEP_DOWN");
+          return;
+        }
+      }
+      this.commonEventHandler(this.dismissLoading, "");
+      this.initiateSecondFactor();
+      this.client_ip="";
+    },
+    authenticateOOBPINRMSFailure : function(error){
+      kony.print("authenticateOOBPINRMSFailure error:"+JSON.stringify(error));
+      if(error.details.message.includes("USER-BLOCK") && error.details.message.includes(-3)){
+        this.view.lblErrorOTP.text = "User is blocked for Login";
+      } else {
+        this.view.lblErrorOTP.text = "Username or PIN is Invalid";
+      }
+      if(error.details.message.includes("Reason indicating that OTP did not match")){
+        this.view.lblErrorOTP.text = "Invalid OTP entered, please enter valid OTP";
+      }
+      this.commonEventHandler(this.dismissLoading, "");
+      this.client_ip="";
+    },
+    
+    authenticateSecureRMSSuccess : function(response){
+      kony.print("authenticateSecureRMSSuccess response:"+JSON.stringify(response.mfa_meta.rms));
+      this.rmsScoreSuccess(response);
+    },
+    authenticateSecureRMSFailure : function(error){
+      kony.print("authenticateSecureRMSFailure error:"+JSON.stringify(error));
+      this.rmsScoreFailure(error);
+    },
+    onValidatePasswordRMSSuccess : function(response){
+      kony.print("onValidatePasswordRMSSuccess response:"+JSON.stringify(response.mfa_meta.rms));
+      this.rmsScoreSuccess(response);
+    },
+    onValidatePasswordRMSFailure : function(error){
+      kony.print("onValidatePasswordRMSFailure error:"+JSON.stringify(error));
+      this.rmsScoreFailure(error);
+    },
+    rmsScoreSuccess : function(response){
+      alert(JSON.stringify(response.mfa_meta.rms));
+      this.mfa_key = response.mfa_meta.auth_id;
+      var noStepup = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "false";
+      var stepUp = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "true";
+      this.currentThreat = +response.mfa_meta.rms.currentThreat || 10;
+      if(noStepup && this.isKnownDevice){
+        //If isRMSReadOnly then donot perform stepdown
+        kony.print("RMS => isRMSReadOnly:"+this._isRMSReadOnly);
+        if(this._isRMSReadOnly === false){
           this.updateRMSServiceEvent("STEP_DOWN");
           return;
         }
@@ -216,20 +376,29 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.initiateSecondFactor();
       this.client_ip="";
     },
-    onValidatePasswordRMSFailure : function(error){
-      kony.print("onValidatePasswordRMSFailure error:"+JSON.stringify(error));
+    rmsScoreFailure : function(error){     
       if(error.details.message.includes("USER-BLOCK") && error.details.message.includes(-3)){
-        this.view.lblErrorLogin.text = "User is blocked for Login";
+        if(this._FirstFactor === "STATIC_PWD"){
+          this.view.lblErrorLogin.text = "User is blocked for Login";
+        } else {
+          this.view.lblErrorSecure.text = "User is blocked for Login";
+        }
       } else {
-        this.view.lblErrorLogin.text = "Username or Password is Invalid";
+        if(this._FirstFactor === "STATIC_PWD"){
+          this.view.lblErrorLogin.text = "Username or Password is invalid";
+        } else {
+          this.view.lblErrorSecure.text = "Username or Secure code is invalid";
+        }       
       }
       this.commonEventHandler(this.dismissLoading, "");
       this.client_ip="";
     },
     updateRMSServiceEvent : function(rmsevent){
-      if(rmsevent === "STEP_DOWN"){
+      if(rmsevent === "STEP_DOWN" && this._FirstFactor !=="OTP_SMS_PIN"){
         AuthenticationPresentationController.updateRMSServiceEvent(rmsevent, this.mfa_key, this.onStepDownSuccessCB, this.onStepDownFailureCB );
-      } else if((rmsevent === "APPROVE_DENY") || (rmsevent === "APPROVE_TIMEOUT")){
+      }else if(rmsevent === "STEP_DOWN" && this._FirstFactor ==="OTP_SMS_PIN"){
+        AuthenticationPresentationController.updateRMSServiceEvent(rmsevent, this.mfa_key, this.onStepDownSuccessCB, this.onStepDownFailureCB, this.password);
+      }else if((rmsevent === "APPROVE_DENY") || (rmsevent === "APPROVE_TIMEOUT")){
         AuthenticationPresentationController.updateRMSServiceEvent(rmsevent, this.mfa_key, this.onApproveRMSEventSuccessCB, this.onApproveRMSEventFailureCB);
       }
     },
@@ -246,12 +415,23 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       if(!this.isKnownDevice){
         this.confirmationAlert(this.deviceTag);
       }
-      this.client_ip = "";
-      this.onSuccessCallback(response);
+      this.client_ip = "";      
+      this.commonEventHandler(this.onSuccessCallback,response);
       this.commonEventHandler(this.dismissLoading, "");
     },
     onStepDownFailureCB : function(error){
-      this.view.lblErrorLogin.text = "Something went wrong Please after sometime " + error;
+      switch(this._FirstFactor){
+        case "STATIC_PWD":
+          this.view.lblErrorLogin.text = "Something went wrong Please after sometime " + error;
+          break;
+        case "OTP_SMS_PIN":
+          this.view.lblErrorOOBPIN.text = "Something went wrong Please after sometime " + error;
+          break;
+        case "SECURE_CODE":
+          this.view.lblErrorSecure.text = "Something went wrong Please after sometime " + error;
+          break;
+      }
+      
     },
 
     confirmationAlert: function(tag){ 
@@ -265,35 +445,89 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         "contentAlignment": constants.ALERT_CONTENT_ALIGN_CENTER
       };
       function isTrustedDevice(res){
-        if(res == true){
+        if(res === true){
           localStorage.setItem(`HID_deviceTag_${this.username}`,tag);         
         }    
       }
       kony.ui.Alert(basicConf, pspConfig);
     },
 
-    loginPasswordWithoutRMS : function(){
+    loginPasswordWithoutRMS : function(username,password){
       this.commonEventHandler(this.showLoading, "");
-      AuthenticationPresentationController.validatePassword(this.username, this.view.tbxPassword.text, this.onValidatePasswordSuccess, this.onValidatePasswordFailure);
+      if(this._FirstFactor ==="STATIC_PWD"){
+        AuthenticationPresentationController.validatePassword(username, password, this.onValidatePasswordSuccess, this.onValidatePasswordFailure);
+      } else {
+        AuthenticationPresentationController.authenticateFirstFactor(username, password, this._FirstFactor, this.firstFactorSuccess, this.firstFactorFailure);             
+      }
+    },
+    firstFactorSuccess : function(response){      
+      switch(this._FirstFactor){
+        case "OTP_SMS_PIN":
+          this.authenticateOOBPINSuccess(response);
+          break;
+        case "SECURE_CODE":
+          this.authenticateSecureSuccess(response);
+          break;
+      }      
+    },
+    firstFactorFailure : function(error){
+      switch(this._FirstFactor){
+        case "OTP_SMS_PIN":
+          this.authenticateOOBPINFailure(error);
+          break;
+        case "SECURE_CODE":
+          this.authenticateSecureFailure(error);
+          break;
+      }
+    },   
+    authenticateOOBPINSuccess: function(response){
+      this.mfa_key = response.mfa_meta.auth_id;
+      this.initiateSecondFactor();
+    },
+    authenticateOOBPINFailure: function(error){
+      if(!this.validateFailureCallbackScenario(error)){
+        this.view.lblErrorOTP.text = "Invalid OTP entered, please enter valid OTP";
+      }
+      this.commonEventHandler(this.dismissLoading, "");
+    },
+    authenticateSecureSuccess : function(response){
+      this.mfa_key = response.mfa_meta.auth_id;
+      this.initiateSecondFactor();
+    },
+    authenticateSecureFailure : function(error){
+      this.view.lblErrorSecure.text = "Username or Secure code is invalid";
+      this.commonEventHandler(this.dismissLoading, "");
     },
     onValidatePasswordSuccess : function(response){
       this.mfa_key = response.mfa_meta.auth_id;
       this.initiateSecondFactor();
     },
     onValidatePasswordFailure : function(error){
-      this.view.lblErrorLogin.text = "Username or Password is Incorrect";
+      this.view.lblErrorLogin.text = "Username or Password is invalid";
       this.commonEventHandler(this.dismissLoading, "");
     },
     initiateSecondFactor : function(){
-      if(this._MFA === "OTP_SMS" || this._MFA === "OTP_EML"){
-        AuthenticationPresentationController.sendOTP(this._MFA, this.username, this.sendOTPSuccess, this.sendOTPFailure);
-      } else if (this._MFA === "APPROVE") {
-        AuthenticationPresentationController.getApproveDevices(this.username, this.getDeviceSuccess,
-                                                               this.getDeviceFailure); }else if (this._MFA === "OTP_HWT") {
-          //this.showHWOTPFlx()
+      switch(this._MFA){
+        case "OTP_SMS":
+          AuthenticationPresentationController.sendOTP(this._MFA, this.username, this.sendOTPSuccess, this.sendOTPFailure);
+          break;
+        case "OTP_EML":
+          AuthenticationPresentationController.sendOTP(this._MFA, this.username, this.sendOTPSuccess, this.sendOTPFailure);
+          break;
+        case "APPROVE":
+          AuthenticationPresentationController.getApproveDevices(this.username, this.getDeviceSuccess, this.getDeviceFailure);
+          break;
+        case "OTP_HWT":
           this._MFA = "APPROVE";
           this.sendOTPSuccess("OTP_HWT");
-        }
+          break;
+        case "NO_MFA":
+          if(this._isRMSEnabled === true){
+            this._MFA = "STEP_DOWN";
+          }
+          AuthenticationPresentationController.validateOTP(this._MFA, this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure);
+          break;
+      }
     }, 
     sendOTPSuccess : function(response){
       switch(this._MFA){
@@ -310,6 +544,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
           this.view.lblWelcome6.text = "HID Secure Code";
       }
       this.contextSwitch("OTP");
+      this.commonEventHandler(this.dismissLoading, "");
     }, 
     sendOTPFailure : function(error){
       this.contextSwitch("OTPError");
@@ -341,7 +576,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         this.confirmationAlert(this.deviceTag);
       }
       this.client_ip = "";
-      this.onSuccessCallback(response);
+      this.commonEventHandler(this.onSuccessCallback,response);
       this.commonEventHandler(this.dismissLoading, "");
       //this.contextSwitch("Login");
     }, 
@@ -360,24 +595,48 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         errorMessage = "Error occurred while login, please contact your administrator";
       }
       if(errorMessage !== ""){
-        this.contextSwitch("Login");
-        this.view.lblErrorLogin.text = errorMessage;
-        if(this._MFA === "APPROVE"){
-          clearInterval(this.gblTimer);
-        }
+        switch(this._FirstFactor){
+          case "OTP_SMS_PIN":
+            this.contextSwitch("OOBPIN");
+            this.view.lblErrorOOBPIN.text = errorMessage;
+            break;
+          case "SECURE_CODE":
+            this.contextSwitch("Secure");
+            this.view.lblErrorSecure.text = errorMessage;
+            if(this._MFA === "APPROVE"){
+              clearInterval(this.gblTimer);
+            }
+            break;
+          case "STATIC_PWD":
+            this.contextSwitch("Login");
+            this.view.lblErrorLogin.text = errorMessage;
+            if(this._MFA === "APPROVE"){
+              clearInterval(this.gblTimer);
+            }
+            break;
+        }        
+        this.commonEventHandler(this.onFailureCallback,errorMessage);
         this.commonEventHandler(this.dismissLoading, "");
-        this.onFailureCallback(errorMessage);
         return true;
       }
       return false;
     }, 
     cancelOnClick : function(){
       this.mfa_key = "";
-      if(this._MFA === "APPROVE"){
+      if(this._FirstFactor === "OTP_SMS_PIN"){
+        this.contextSwitch("OOBPIN");
+      }else{
+        if(this._MFA === "APPROVE"){
         clearInterval(this.gblTimer);
         AuthenticationPresentationController.cancelApprovePolling();
+        }
+        if(this._FirstFactor === "STATIC_PWD"){
+          this.contextSwitch("Login");
+        }else{
+          this.contextSwitch("Secure");
+        }
+        
       }
-      this.contextSwitch("Login");
     }, 
     getDeviceSuccess : function(response) {
       if(response.length === 0){
@@ -415,6 +674,14 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.commonEventHandler(this.dismissLoading, "");
     },
     initiateApproveSuccess : function(response){
+      if(this._FirstFactor === "SECURE_CODE"){
+        this.view.flxTimer.height = "40%";
+        this.view.lblTimerNot.centerX = "51%";
+        this.view.lblTimerNot.centerY = "30%";
+        this.view.lblResendNot.centerX = "46%";
+        this.view.lblResendNot.centerY = "60%";     
+        this.view.flxApproveBtns.setVisibility(false);
+      }
       this.approveView(true, "Approve");
       this.commonEventHandler(this.dismissLoading, "");
       this.view.lblApproveNot.text = "We've sent a notification to your device. Approve the notification to continue.";
@@ -447,9 +714,21 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
             this.updateRMSServiceEvent("APPROVE_TIMEOUT");
           }
         } else {
-          this.contextSwitch("Login");
-          this.view.lblErrorLogin.text = "Error occurred while Login, please try again";
-          this.onFailureCallback(response);
+          switch(this._FirstFactor){
+            case "STATIC_PWD":
+              this.contextSwitch("Login");
+              this.view.lblErrorLogin.text = "Error occurred while Login, please try again";
+              break;
+            case "OTP_SMS_PIN":
+              this.contextSwitch("OOBPIN");
+              this.view.lblErrorOOBPIN.text = "Error occurred while Login, please try again";
+              break;
+            case "SECURE_CODE":
+              this.contextSwitch("Secure");
+              this.view.lblErrorSecure.text = "Error occurred while Login, please try again";
+              break;          
+          }
+          this.commonEventHandler(this.onFailureCallback,response);
         }
         if(errorText !== ""){
           this.view.lblErrorApprove.text = errorText;
@@ -469,6 +748,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       }
       this.mfa_key = "";
       this.client_ip ="";
+      this.resetUIFields();
       return;
       //this.contextSwitch("Login");
     }, 
@@ -546,7 +826,13 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     resetUIFields : function(){
       this.view.tbxUser.text = "";
       this.view.tbxPassword.text = "";
+      this.view.tbxUserOOBPIN.text = "";
+      this.view.tbxOOBPIN.text = "";
+      this.view.tbxUserSecure.text = "";
+      this.view.tbxSecureCode.text = "";
       this.view.lblErrorLogin.text = "";
+      this.view.lblErrorOOBPIN.text = "";
+      this.view.lblErrorSecure.text = "";
       this.view.tbxOTP.text = "";
       this.view.lblErrorOTP.text = "";
       this.view.lblSendOtpError.text = "";
@@ -555,7 +841,13 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.view.lblTimerNot.text = "";
     },
     resetUI : function(){
-      this.contextSwitch("Login");
+      if(this._FirstFactor === "STATIC_PWD"){
+        this.contextSwitch("Login");
+      } else if(this._FirstFactor === "OTP_SMS_PIN"){
+        this.contextSwitch("OOBPIN");
+      } else{
+        this.contextSwitch("Secure");
+      }
     },
     getUserName : function(){
       return this.username;

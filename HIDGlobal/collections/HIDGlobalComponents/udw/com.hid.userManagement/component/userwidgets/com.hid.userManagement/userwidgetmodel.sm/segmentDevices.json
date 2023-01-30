@@ -64,19 +64,19 @@
                 },
                 "imgActive": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "tick_2_1.png"
+                    "src": "tickgreen.png"
                 },
                 "imgCancel": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "clear_black_24dp_2_1.png"
+                    "src": "clear_black_24dp_2_2.png"
                 },
                 "imgOk": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "done_black_24dp_2_1.png"
+                    "src": "done_black_24dp_2_2.png"
                 },
                 "imgSuspend": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "cross_2_1.png"
+                    "src": "clear_black_24dp_2_2.png"
                 },
                 "lblDeviceId": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -92,7 +92,6 @@
                 },
                 "txtDeviceName": {
                     "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
-                    "placeholder": "",
                     "text": ""
                 }
             },
@@ -107,19 +106,19 @@
                 },
                 "imgActive": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "tick_2_1.png"
+                    "src": "tickgreen.png"
                 },
                 "imgCancel": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "clear_black_24dp_2_1.png"
+                    "src": "clear_black_24dp_2_2.png"
                 },
                 "imgOk": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "done_black_24dp_2_1.png"
+                    "src": "done_black_24dp_2_2.png"
                 },
                 "imgSuspend": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "cross_2_1.png"
+                    "src": "clear_black_24dp_2_2.png"
                 },
                 "lblDeviceId": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -135,7 +134,6 @@
                 },
                 "txtDeviceName": {
                     "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
-                    "placeholder": "",
                     "text": ""
                 }
             },
@@ -150,19 +148,19 @@
                 },
                 "imgActive": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "tick_2_1.png"
+                    "src": "tickgreen.png"
                 },
                 "imgCancel": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "clear_black_24dp_2_1.png"
+                    "src": "clear_black_24dp_2_2.png"
                 },
                 "imgOk": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "done_black_24dp_2_1.png"
+                    "src": "done_black_24dp_2_2.png"
                 },
                 "imgSuspend": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "cross_2_1.png"
+                    "src": "clear_black_24dp_2_2.png"
                 },
                 "lblDeviceId": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -178,16 +176,15 @@
                 },
                 "txtDeviceName": {
                     "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
-                    "placeholder": "",
                     "text": ""
                 }
             }
         ],
-        "rowTemplateId": "b46b7b40120444e0b50b7269a52b41a9",
-        "rowtemplate": "CopyCopyflxDevicesSegment",
+        "rowTemplateId": "f142f6f0df6343d7a9bb4fe2daea4b19",
+        "rowtemplate": "CopyCopyflxDevicesSegment1",
         "sectionHeaderTemplateId": null,
         "widgetdatamap": {
-            "CopyCopyflxDevicesSegment": "CopyCopyflxDevicesSegment",
+            "CopyCopyflxDevicesSegment1": "CopyCopyflxDevicesSegment1",
             "Edit": "Edit",
             "btnChangeStatus": "btnChangeStatus",
             "flxEditButtons": "flxEditButtons",
@@ -257,7 +254,7 @@
     "wType": "Segment",
     "widgetalignment": 5,
     "widgetdatamap": {
-        "CopyCopyflxDevicesSegment": "CopyCopyflxDevicesSegment",
+        "CopyCopyflxDevicesSegment1": "CopyCopyflxDevicesSegment1",
         "Edit": "Edit",
         "btnChangeStatus": "btnChangeStatus",
         "flxEditButtons": "flxEditButtons",

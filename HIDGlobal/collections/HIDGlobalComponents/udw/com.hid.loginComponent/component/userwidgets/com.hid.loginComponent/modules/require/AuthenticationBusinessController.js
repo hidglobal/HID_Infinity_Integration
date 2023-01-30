@@ -73,8 +73,17 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
         }
     };   
 
+  
   AuthenticationBusinessController.prototype.validatePassword = function(loginJson, S_CB, F_CB,rmsLoad=null){
     konymp.logger.trace("----------Entering validatePassword Function---------", konymp.logger.FUNCTION_ENTRY);
+    
+    this.authenticateFirstFactor(loginJson,"STATIC_PWD", S_CB, F_CB, rmsLoad);
+    
+    konymp.logger.trace("----------Exiting validatePassword Function---------", konymp.logger.FUNCTION_EXIT);
+  };
+  
+  AuthenticationBusinessController.prototype.authenticateFirstFactor = function(loginJson,authType, S_CB, F_CB, rmsLoad=null){
+    konymp.logger.trace("----------Entering authenticateFirstFactor Function---------", konymp.logger.FUNCTION_ENTRY);
     var client = KNYMobileFabric;
     var serviceName = "customHIDLogin";
     var identitySvc = client.getIdentityService(serviceName);
@@ -87,27 +96,25 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     }
     var options = {
       "payload" : loginPayload,
-      "authType":"STATIC_PWD",
+      "authType":authType,
       "isMfa":true
     };
 
     identitySvc.login(options,
-                      success=>{
-      var mfaDetails = identitySvc.getMfaDetails();
-      konymp.logger.debug("validatePassword Function success", konymp.logger.SUCCESS_CALLBACK);
-      userName = loginJson.userid;
-      S_CB(mfaDetails);
-
-    },
-                      error=>{
-      konymp.logger.debug("validatePassword function error : "+ JSON.stringify(error), konymp.logger.ERROR_CALLBACK);
-      F_CB(error);
-    }
-                     );
-    konymp.logger.trace("----------Exiting validatePassword Function---------", konymp.logger.FUNCTION_EXIT);
+      success=>{
+        var mfaDetails = identitySvc.getMfaDetails();
+        konymp.logger.debug("authenticateFirstFactor Function success", konymp.logger.SUCCESS_CALLBACK);
+        userName = loginJson.userid;
+        S_CB(mfaDetails);
+      },
+      error=>{
+        konymp.logger.debug("authenticateFirstFactor function error : "+ JSON.stringify(error), konymp.logger.ERROR_CALLBACK);
+        F_CB(error);
+      });
+    konymp.logger.trace("----------Exiting authenticateFirstFactor Function---------", konymp.logger.FUNCTION_EXIT);
   };
 
-  AuthenticationBusinessController.prototype.updateRMSServiceEvent = function(authType, mfa_key, S_CB, F_CB){
+  AuthenticationBusinessController.prototype.updateRMSServiceEvent = function(authType, mfa_key, S_CB, F_CB,password){
     var client = KNYMobileFabric;
     var serviceName = "customHIDLogin";
     var identitySvc = client.getIdentityService(serviceName);
@@ -116,7 +123,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
       "mfa_meta": {
       },
       "authType" : authType,
-      "password" : "12345",
+      "password" : password,
       "mfa_key" : mfa_key
     };
     identitySvc.validateMfa(mfaParams, success => S_CB(success), error => F_CB(error));

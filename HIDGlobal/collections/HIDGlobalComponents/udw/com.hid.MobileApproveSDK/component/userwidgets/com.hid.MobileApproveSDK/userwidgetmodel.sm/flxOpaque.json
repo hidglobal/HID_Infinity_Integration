@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s71ff195029e4d90a331c65e96f9ba48",
+    "_skin_": "sc15b9d08dd946de863232ca7ef898a9",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -39,7 +39,7 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "s1bdc1b741d94bc6b938f7ce50984330",
+    "focusskin": "s70022f860964c25956dc50d496390f2",
     "id": "flxOpaque",
     "info": null,
     "isvisible": true,

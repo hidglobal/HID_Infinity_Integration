@@ -43,7 +43,8 @@
         "flxHWOTP",
         "flxRegistrationSuccess",
         "flxError",
-        "flxDeviceRegistration"
+        "flxDeviceRegistration",
+        "flxOOBPIN"
     ],
     "clipbounds": true,
     "containerweight": 100,

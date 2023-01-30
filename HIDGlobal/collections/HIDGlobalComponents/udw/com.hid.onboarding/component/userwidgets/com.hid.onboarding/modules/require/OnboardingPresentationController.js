@@ -149,6 +149,39 @@ define([`com/hid/onboarding/OnboardingBusinessController`], function(OnboardingB
     //     alert(JSON.stringify(params));
     OnboardingBusinessController.addOOBToUser(params, Success_CB,Failure_CB);
   };
+  OnboardingPresentationController.prototype.addOOBToUserWithPin = function(updateOnboardingUI,authType,PIN,userId = this.userId){
+    var authenticatorType = authType === "OTP_SMS" ? "AT_OOBSMS" : "AT_OOBEML";
+    var authenticatorValue =  authType === "OTP_SMS" ? "DT_OOBSMS" : "DT_OOBEML";
+    this.authType = authenticatorType;
+    this.OOBPIN = PIN;
+    let Success_CB = success => {
+      let UIObject = {
+        "state" : "addOOBToUserSuccess",
+        "response" : {
+          "response" : success
+        }
+      };
+      this.sendOOBWithPIN(updateOnboardingUI,authenticatorType);
+    }; 
+    let Failure_CB = error => {
+            //alert(JSON.stringify(error));
+      let UIObject = {
+        "state" : "addOOBToUserFailure",
+        "response" : {
+          "response" : error
+        }
+      };
+    };
+    let params = {
+      "AuthenticatorType": authenticatorType,
+      "userId": userId,
+      "AuthenticatorValue": authenticatorValue,
+      "OOB_PIN" : PIN,
+      "isPasswordRequired" : true
+    };
+     // alert(JSON.stringify(params));
+    OnboardingBusinessController.addOOBToUser(params, Success_CB,Failure_CB);
+  };
   OnboardingPresentationController.prototype.sendOOB = function(updateOnboardingUI,authType = this.authType,username = this.username){
 
     let Success_CB = success => {
@@ -162,6 +195,25 @@ define([`com/hid/onboarding/OnboardingBusinessController`], function(OnboardingB
       "username": username
     };
     //     alert(JSON.stringify(params));
+    OnboardingBusinessController.sendOOB(params, Success_CB,Failure_CB);
+  };
+  
+    OnboardingPresentationController.prototype.sendOOBWithPIN = function(updateOnboardingUI,authType = this.authType,username = this.username){
+
+    let Success_CB = success => {
+      updateOnboardingUI({"state" : "addAndSendOOBSuccess"});
+    };
+    let Failure_CB = error => {
+      updateOnboardingUI({"state" : "addAndSendOOBFailure"});
+    };
+    let PIN = this.OOBPIN;
+    let params = {
+      "AuthenticationType": authType,
+      "username": username,
+      "isPasswordRequired" : true,
+      "password" : PIN
+    };
+        //alert(JSON.stringify(params));
     OnboardingBusinessController.sendOOB(params, Success_CB,Failure_CB);
   };
   OnboardingPresentationController.prototype.validateOOB = function(updateOnboardingUI, OTP, authType = this.authType, username = this.username){

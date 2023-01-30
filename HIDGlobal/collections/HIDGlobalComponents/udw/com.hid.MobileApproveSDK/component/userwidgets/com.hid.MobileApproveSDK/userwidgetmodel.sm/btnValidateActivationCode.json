@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s3c287fcd9ea4e1b905ed828870377f4",
+    "_skin_": "se589a932f6446c98254493ceb98098f",
     "_text_": "LOGIN",
     "_top_": {
         "type": "string",
@@ -35,7 +35,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s564c201067c40bfaa972d8e59ba9c06",
+    "focusskin": "s880364557d44ee988ad542856ec1155",
     "id": "btnValidateActivationCode",
     "info": null,
     "iscustomlayout": false,

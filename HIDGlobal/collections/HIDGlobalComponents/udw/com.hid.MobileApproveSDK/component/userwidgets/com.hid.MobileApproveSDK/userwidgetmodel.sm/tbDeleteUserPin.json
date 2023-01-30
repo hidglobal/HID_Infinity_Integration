@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "Enter PIN",
-    "_skin_": "s8b2fb35f98c4479bf20ab1f6ff984e7",
+    "_skin_": "sb360bb4d570468896962e2380d65eb1",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -54,7 +54,7 @@
     "name": "kony.ui.TextBox2",
     "parent": "flxEnterPin",
     "pf": "userwidgetmodel",
-    "placeholderskin": "sdc2b0e43df5429b87463d002764bf34",
+    "placeholderskin": "s3b0eb764bc84a6a9641448102e47eab",
     "restrictcharactersset": "!@#$%^&*(){}><  +=/,-_.N;",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

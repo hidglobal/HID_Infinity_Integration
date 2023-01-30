@@ -12,8 +12,7 @@
   "background_color": "ffffffff",
   "bg_type": "one",
   "border_color": "555555ff",
-  "border_radius": 4,
-  "border_style": "custom",
+  "border_style": "plain",
   "border_type": 0,
   "border_width": 1,
   "desktopweb": {

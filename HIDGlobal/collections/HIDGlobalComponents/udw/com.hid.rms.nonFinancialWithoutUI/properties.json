@@ -1,0 +1,15 @@
+{
+    "assetPlatform": "Visualizer",
+    "assetVersion": "1.0.0",
+    "createdBy": "rohit.singh@hidglobal.com",
+    "createdMFVersion": "9.6.0.2",
+    "createdVizVersion": "9.2.37",
+    "currentMFVersion": "9.6.0.2",
+    "currentVizVersion": "9.2.37",
+    "description": "",
+    "itemCategory": "udw",
+    "itemGuid": "ec27309877fb4aedbaf1bfb0d8df2926",
+    "itemName": "com.hid.rms.nonFinancialWithoutUI",
+    "libraryVersion": "libver4",
+    "modifiedBy": "rohit.singh@hidglobal.com"
+}

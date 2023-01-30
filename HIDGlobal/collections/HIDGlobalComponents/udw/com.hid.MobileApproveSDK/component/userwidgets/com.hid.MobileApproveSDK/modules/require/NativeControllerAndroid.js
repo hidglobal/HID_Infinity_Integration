@@ -22,9 +22,11 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
       return this.sdkWrapperObj.getPasswordPolicy(this.konyContext);
     };
     NativeControllerAndroid.prototype.updatePassword =function(oldPassword,newPassword){
-      this.sdkWrapperObj.updatePassword(oldPassword,newPassword,this.konyContext,this.componentInstance.exceptionCallback,true);
+      this.sdkWrapperObj.updatePassword(oldPassword,newPassword,this.konyContext,this.componentInstance.updatePwdCallbackInternalComponent,true);
     };
-  
+    NativeControllerAndroid.prototype.updatePasswordExplicit =function(oldPassword,newPassword){
+      this.sdkWrapperObj.updatePassword(oldPassword,newPassword,this.konyContext,this.componentInstance.updatePwdCallbackInternal,true);
+    };
     NativeControllerAndroid.prototype.getLoginFlow =function(pushID){
       kony.print("PushId is ---> " + pushID);
       return this.sdkWrapperObj.getLoginFlow(this.konyContext,pushID,this.componentInstance.getRenewableCallbackSuccess);
@@ -42,11 +44,11 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
     NativeControllerAndroid.prototype.checkForBioAvailability = function(){
       return this.sdkWrapperObj.checkForBioAvailability(this.konyContext);
     };
-    NativeControllerAndroid.prototype.generateOTP = function(pwd,isBiometricEnabled){
-      return this.sdkWrapperObj.generateOTP(pwd,isBiometricEnabled,this.componentInstance.generateOTPSuccess,this.componentInstance.generateOTPFailure);
+    NativeControllerAndroid.prototype.generateOTP = function(pwd,isBiometricEnabled,label = "hotp"){
+      return this.sdkWrapperObj.generateOTP(pwd,isBiometricEnabled,this.componentInstance.generateOTPSuccess,this.componentInstance.generateOTPFailure,label);
     };
-    NativeControllerAndroid.prototype.generateOTPExplicit = function(pwd,isBiometricEnabled){
-      return this.sdkWrapperObj.generateOTP(pwd,isBiometricEnabled,this.componentInstance.secureCodeSuccess,this.componentInstance.secureCodeFailure);
+    NativeControllerAndroid.prototype.generateOTPExplicit = function(pwd,isBiometricEnabled, label = "hotp"){
+      return this.sdkWrapperObj.generateOTP(pwd,isBiometricEnabled,this.componentInstance.secureCodeSuccess,this.componentInstance.secureCodeFailure,label);
     };
     NativeControllerAndroid.prototype.renewContainer = function(password){
       this.sdkWrapperObj.renewContainer(password,this.konyContext,this.componentInstance.renewContainercallback,this.componentInstance.renewContainerExceptionCB);
@@ -56,6 +58,9 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
     };
     NativeControllerAndroid.prototype.deleteContainerWithAuth = function(password){
       this.sdkWrapperObj.deleteContainerWithAuth(this.konyContext,password,this.componentInstance.deleteContainerCallback);   
+    }
+    NativeControllerAndroid.prototype.verifyPassword = function(password, isBiometricEnabled,bioString){
+      this.sdkWrapperObj.verifyPassword(this.konyContext,password,isBiometricEnabled,bioString,this.componentInstance.verifyPasswordCallbackInternal);   
     }
     return NativeControllerAndroid;
 });

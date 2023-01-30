@@ -167,6 +167,26 @@
                     "srcWgtKUID": "gbdfa40a64c9457eb298666af4804ada",
                     "type": "string",
                     "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "hotp",
+                    "group": "General",
+                    "kuid": "hb41e1457581418d9de9496f4e63b2d8",
+                    "originalPropertyKey": "otpLabel",
+                    "propertyIndex": 3,
+                    "propertyKey": "otpLabel",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "otpLabel",
+                        "uiRepresentation": "Label-Combobox"
+                    },
+                    "srcWgtKUID": "gbdfa40a64c9457eb298666af4804ada",
+                    "type": "list selector",
+                    "value": [
+                        "hotp",
+                        "totp"
+                    ]
                 }
             ],
             "passthrough": []

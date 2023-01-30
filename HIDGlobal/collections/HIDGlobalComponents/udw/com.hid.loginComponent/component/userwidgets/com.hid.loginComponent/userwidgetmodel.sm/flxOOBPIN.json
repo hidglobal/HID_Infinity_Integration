@@ -1,0 +1,77 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "children": [
+        "lblWelcomeOOBPIN",
+        "lblSigntoAccOOBPIN",
+        "flxUserNameOOBPIN",
+        "flxPIN",
+        "flxLoginButton",
+        "lblErrorOOBPIN"
+    ],
+    "clipbounds": false,
+    "containerweight": 100,
+    "desktopweb": {},
+    "disabledSkins": {
+        "blockedUISkin": "s6212e074e314724bd6d71587d9c5b8e"
+    },
+    "enablescrolling": true,
+    "id": "flxOOBPIN",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "b412a32fdd1f4831af64e369372eef2c",
+    "layouttype": 4,
+    "name": "kony.ui.FlexContainer",
+    "parent": "loginComponent",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}

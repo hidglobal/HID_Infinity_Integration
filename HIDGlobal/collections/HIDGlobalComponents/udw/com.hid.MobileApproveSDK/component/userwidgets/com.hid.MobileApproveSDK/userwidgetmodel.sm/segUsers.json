@@ -109,14 +109,14 @@
                 }
             }
         ],
-        "rowTemplateId": "efa942f5ca8c4d88813da4c8e48a3042",
-        "rowtemplate": "CopyflxHIDUsersTemplate1",
+        "rowTemplateId": "a280ac5a164949ceba2442f65bf71cf4",
+        "rowtemplate": "flxHIDUsersTemplate",
         "widgetdatamap": {
-            "CopyflxHIDUsersTemplate1": "CopyflxHIDUsersTemplate1",
             "Label0e1e8c911738b41": "Label0e1e8c911738b41",
             "TrashDark": "TrashDark",
             "flxContactImg": "flxContactImg",
             "flxDelRow": "flxDelRow",
+            "flxHIDUsersTemplate": "flxHIDUsersTemplate",
             "flxRowWrapper": "flxRowWrapper",
             "flxTempRowWrapper": "flxTempRowWrapper",
             "imgAvatar": "imgAvatar",
@@ -137,7 +137,7 @@
     "retainselection": false,
     "rowcounter": 1,
     "rowfocusskin": "safb6223f3b646eabca9f1b2d998d1c4",
-    "rowskin": "s89933563d5d4cc1928f2d2e0e459b8b",
+    "rowskin": "sfe843cdf5b44b1889a626c6327a5a31",
     "rowtemplate": null,
     "screenlevelwidget": false,
     "seccounter": 0,
@@ -158,7 +158,7 @@
     "wType": "Segment",
     "widgetalignment": 5,
     "widgetdatamap": {
-        "CopyflxHIDUsersTemplate1": "CopyflxHIDUsersTemplate1",
+        "flxHIDUsersTemplate": "flxHIDUsersTemplate",
         "imgAvatar": "imgAvatar",
         "lblUsername": "lblUsername"
     },

@@ -5,7 +5,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "ccede0c9d5ca4a1999b6c4c4f897db77",
+                    "kuid": "e928aa0b961a4685af8c5f669940d186",
                     "paramList": [],
                     "propertyKey": "initiate",
                     "pw": {
@@ -17,7 +17,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "ec0b8555d6324791bc3701a3c83f57c4",
+                    "kuid": "de2c11b93dd34601bdde61c730fd6145",
                     "paramList": [],
                     "propertyKey": "changeTSMode",
                     "pw": {
@@ -34,7 +34,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "a1bd274e28824775aa381b5fb5bb04e8",
+                    "kuid": "i6c9bfda42e5420a85391d24f7ebe8b1",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "showLoading",
@@ -47,7 +47,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "d82e28698f2a477ca8eb461260adee38",
+                    "kuid": "ffe8938244334e90b92326e4c9b11a0f",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "dismissLoading",
@@ -60,7 +60,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "f93cd984f53e4d229447b66439c7d069",
+                    "kuid": "dd09b7c3e20b444b9ed1ef71585bbd34",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "onTSSuccess",
@@ -88,7 +88,7 @@
                     "access": "Write",
                     "defaultValue": "SyamTest1",
                     "group": "General",
-                    "kuid": "ca877e531f554a46800350007855f9bc",
+                    "kuid": "d82bcbc98b97412da538dd7a2b3713f3",
                     "originalPropertyKey": "username",
                     "propertyIndex": 1,
                     "propertyKey": "username",
@@ -105,7 +105,7 @@
                     "access": "Write",
                     "defaultValue": "Sending amount transfers",
                     "group": "General",
-                    "kuid": "b2b4bcc7be094d88aef8d95f96d08595",
+                    "kuid": "e58df238fdc448719e5bfef13a1c9203",
                     "originalPropertyKey": "tds",
                     "propertyIndex": 2,
                     "propertyKey": "tds",
@@ -122,7 +122,7 @@
                     "access": "Write",
                     "defaultValue": false,
                     "group": "General",
-                    "kuid": "hef637612fcc4c9abda1604c9bb2bdf4",
+                    "kuid": "fa705f56339c4140969779eb811b0a67",
                     "originalPropertyKey": "isRMSEnabled",
                     "propertyIndex": 3,
                     "propertyKey": "isRMSEnabled",
@@ -139,7 +139,7 @@
                     "access": "Write",
                     "defaultValue": 35,
                     "group": "General",
-                    "kuid": "f5362f242dd8489b93c46f273a5c526f",
+                    "kuid": "b6b840d45a454e6fb0a182e445f5bfee",
                     "originalPropertyKey": "thresholdAmount",
                     "propertyIndex": 4,
                     "propertyKey": "thresholdAmount",
@@ -158,7 +158,7 @@
                     "access": "Write",
                     "defaultValue": "EUR",
                     "group": "General",
-                    "kuid": "cdc1c0dd80e14eed96ab9f0409594e53",
+                    "kuid": "d2c1b4a1493440a285b0280d1c10da00",
                     "originalPropertyKey": "currency",
                     "propertyIndex": 5,
                     "propertyKey": "currency",
@@ -176,7 +176,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "b320b6a74cc84ceca5d56b2fd1ca77c8",
+                    "kuid": "a5477eeb9f2a443f84e376ccf67adfc0",
                     "originalPropertyKey": "skin",
                     "propertyIndex": 8,
                     "propertyKey": "skin1",

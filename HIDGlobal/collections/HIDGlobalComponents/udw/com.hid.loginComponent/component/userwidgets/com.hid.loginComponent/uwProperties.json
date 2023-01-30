@@ -5,7 +5,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "a1e0361725274f48ab1ac09234c8ca0d",
+                    "kuid": "i1a99ca845af42ffadd85b02f39b0651",
                     "paramList": [],
                     "propertyKey": "setContext",
                     "pw": {
@@ -17,7 +17,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "d998deacd8594ce183e3ff4e7605aef6",
+                    "kuid": "c91d79b4148e44cfb034c8cb1bd017d8",
                     "paramList": [],
                     "propertyKey": "resetUI",
                     "pw": {
@@ -29,7 +29,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "j0b14cbd70014f95b23478449d7e776b",
+                    "kuid": "d001696a40b34bb99d19f4bef8571b57",
                     "paramList": [],
                     "propertyKey": "getUserName",
                     "pw": {
@@ -41,7 +41,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "i75f635487b44fe488d5b22eb3297f0a",
+                    "kuid": "c2683eff4888401da8528d7b10483257",
                     "paramList": [],
                     "propertyKey": "logoutOnClick",
                     "pw": {
@@ -53,7 +53,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "g25751f7da8b4936a679c98ea3805b7d",
+                    "kuid": "f40670613fb74c23bb1899dc3fbb4a12",
                     "paramList": [],
                     "propertyKey": "confirmationAlert",
                     "pw": {
@@ -65,7 +65,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "f3ddfff4576a43dc95603d79c0efa1e3",
+                    "kuid": "bf66a9964489467c8911822c8ea88595",
                     "paramList": [],
                     "propertyKey": "getRmsSessionId",
                     "pw": {
@@ -82,7 +82,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "c5ab942678494b3f89b0e156f87c37c9",
+                    "kuid": "gb74a075e19f4d09aeeaa83cc437573f",
                     "paramList": [
                         {
                             "name": "userprofileJSON"
@@ -99,7 +99,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "f22ddbde4a2142d2b02dbdf9a7f4b6a8",
+                    "kuid": "a93b396fae4c4362b2860b9279a9ed22",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "onFailureCallback",
@@ -112,7 +112,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "g09e554b4aa64d5e85458baeebcff2ed",
+                    "kuid": "g66a4573d46a4d359cd40e0ff45e0e7d",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "dismissLoading",
@@ -125,7 +125,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "hc325ec1e81247f1ab2d87392cee6a1b",
+                    "kuid": "bb33e3d6a3924522bfe291da4bc7585a",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "showLoading",
@@ -138,7 +138,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "eb20a1be88d24fae8b17f3a594b37d09",
+                    "kuid": "bbba0db206684894bcc50888ceb8238f",
                     "paramList": [],
                     "propertyIndex": 5,
                     "propertyKey": "changeContext",
@@ -164,26 +164,9 @@
             "custom": [
                 {
                     "access": "Write",
-                    "defaultValue": "APPROVE",
-                    "group": "General",
-                    "kuid": "id3b3619233048619e25c965dd82fff6",
-                    "originalPropertyKey": "MFA",
-                    "propertyIndex": 2,
-                    "propertyKey": "MFA",
-                    "pw": {
-                        "dependencyConditions": {},
-                        "displayName": "MFA",
-                        "uiRepresentation": "Label-Textbox"
-                    },
-                    "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "access": "Write",
                     "defaultValue": true,
                     "group": "General",
-                    "kuid": "ib68273a7679479ebcbeeeb3c4a2f178",
+                    "kuid": "ce2a908ab4d6478289e01fc637cd8c19",
                     "originalPropertyKey": "isRMSEnabled",
                     "propertyIndex": 3,
                     "propertyKey": "isRMSEnabled",
@@ -200,7 +183,7 @@
                     "access": "Write",
                     "defaultValue": "C8hDRqP6KY",
                     "group": "General",
-                    "kuid": "dc7f748f23b24dd4bce7c20d40172e5a",
+                    "kuid": "g460188ce43e4149b8ba634d6d744d71",
                     "originalPropertyKey": "tmCookieTag",
                     "propertyIndex": 4,
                     "propertyKey": "tmCookieTag",
@@ -217,7 +200,7 @@
                     "access": "Write",
                     "defaultValue": "TS01d4cc80",
                     "group": "General",
-                    "kuid": "ce9d1ab188ab4d67a1cf0c39f7a890f5",
+                    "kuid": "eb84130dffba4320b68079ef0171a142",
                     "originalPropertyKey": "tmCookieSid",
                     "propertyIndex": 5,
                     "propertyKey": "tmCookieSid",
@@ -234,7 +217,7 @@
                     "access": "Write",
                     "defaultValue": "{\n\"customAdaptiveAuth\": [\n{\n\"authType\": \"OTP_EML\",\n\"lowerLimit\": \"5\",\n\"upperLimit\": \"8\"\n},\n{\n\"authType\": \"APPROVE\",\n\"lowerLimit\": \"8\",\n\"upperLimit\": \"10\"\n}\n],\n\"default\": \"APPROVE\"\n}",
                     "group": "General",
-                    "kuid": "ca0f6a8aa85b484bb9d767eae896e2c8",
+                    "kuid": "f097d4a298964f6cb8a628b6ecab94fb",
                     "originalPropertyKey": "adaptiveAuth",
                     "propertyIndex": 6,
                     "propertyKey": "adaptiveAuth",
@@ -259,7 +242,7 @@
                     "access": "Write",
                     "defaultValue": false,
                     "group": "General",
-                    "kuid": "id2ff0d785dc40dfbf88a9e38e64ab01",
+                    "kuid": "ffe8b42ca04e485184a1e8b9bc353f89",
                     "originalPropertyKey": "isRMSReadOnly",
                     "propertyIndex": 7,
                     "propertyKey": "isRMSReadOnly",
@@ -271,6 +254,50 @@
                     "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
                     "type": "boolean",
                     "value": "true/false"
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "OTP_SMS_PIN",
+                    "group": "General",
+                    "kuid": "d312c7fd14b74796ac23f0b114692e3b",
+                    "originalPropertyKey": "FirstFactor",
+                    "propertyIndex": 8,
+                    "propertyKey": "FirstFactor",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "FirstFactor",
+                        "uiRepresentation": "Label-Combobox"
+                    },
+                    "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
+                    "type": "list selector",
+                    "value": [
+                        "STATIC_PWD",
+                        "OTP_SMS_PIN",
+                        "SECURE_CODE"
+                    ]
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "NO_MFA",
+                    "group": "General",
+                    "kuid": "e4737669ced9400cb3b53b170fbe94fd",
+                    "originalPropertyKey": "MFA",
+                    "propertyIndex": 9,
+                    "propertyKey": "MFA",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "MFA",
+                        "uiRepresentation": "Label-Combobox"
+                    },
+                    "srcWgtKUID": "i6dc887ee05944d699e88d11a7bb00ac",
+                    "type": "list selector",
+                    "value": [
+                        "APPROVE",
+                        "OTP_SMS",
+                        "OTP_EML",
+                        "OTP_HWT",
+                        "NO_MFA"
+                    ]
                 }
             ],
             "passthrough": []

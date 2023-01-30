@@ -4,12 +4,38 @@ define([], function() {
   globals.approveFlag = false;
   globals.approvePoll = false;
   var instance = null;
+  
+  const HIDAuthServiceConfig = {
+    "name" : "HIDAuthService",
+    "accessType" : {"access" : "online"}
+  };
   const serviceConfig = {
     "serviceName": "HIDObjects",
     "accessType": {
       "access": "online"
     }
   };
+  const RMSObjectServiceName = {
+    "name" : "HIDRMSService",
+    "accessType" : {"access" : "online"}
+  };
+  
+  const RMSObjectServices = {
+    getRepository: function(repoName) {
+      var objSvc = kony.sdk.getCurrentInstance().getObjectService(RMSObjectServiceName.name, RMSObjectServiceName.accessType);
+      return {
+        customVerb : function(customVerb, params, callback) {
+          var dataObject = new kony.sdk.dto.DataObject(repoName);         
+          for (let key in params){
+            dataObject.addField(key, params[key]);
+          }          
+          var options = { "dataObject" : dataObject};
+          objSvc.customVerb(customVerb, options, success => callback(true, success), error => callback(false, error));
+        }
+      };
+    }
+  };
+  
   const HIDObjectServices = {
     getRepository: function(repoName) {
       var objSvc = kony.sdk.getCurrentInstance().getObjectService(serviceConfig.serviceName, serviceConfig.accessType);
@@ -34,6 +60,32 @@ define([], function() {
       };
     }
   };
+  
+  const HIDAuthService = {
+    getRepository: function(repoName) {
+      var objSvc = kony.sdk.getCurrentInstance().getObjectService(HIDAuthServiceConfig.name, HIDAuthServiceConfig.accessType);
+      return {
+        customVerb: function(customVerb, params, commonCallback) {
+          var dataObject = new kony.sdk.dto.DataObject(repoName);
+          //kony.web.logger("debug", getLogTag("CustomVerb:"+customVerb + " params: "+JSON.stringify(params)));
+          for (let key in params) {
+            dataObject.addField(key, params[key]);
+          }
+          var options = {
+            "dataObject": dataObject
+          };
+          objSvc.customVerb(customVerb, options, success => {
+            //kony.web.logger("debug", getLogTag("CustomVerb:"+customVerb + " Response: "+JSON.stringify(success)));
+            commonCallback(true, success);
+          }, error => {
+            //kony.web.logger("debug", getLogTag("CustomVerb:"+customVerb + " Error: "+JSON.stringify(error)));
+            commonCallback(false, error);
+          });
+        }
+      };
+    }
+  };
+  
   const SCAEventConstants = {
         getLoginPayload: function(loginJSON) {
             // Using ES6 Template Literal
@@ -120,6 +172,8 @@ define([], function() {
   BusinessController.prototype.approveDeviceRegistration = function(params, S_CB, F_CB) {
     let objService = HIDObjectServices.getRepository("ApproveDeviceRegistration");
     const callback = (status, response) => {
+      kony.print("HID => Inside businessController.approveDeviceRegistration");
+      kony.print("HID => approveDeviceRegistration status : "+status+" and response : "+JSON.stringify(response));
       if (status) {
         S_CB(response);
       } else {
@@ -128,6 +182,35 @@ define([], function() {
     };
     objService.customVerb("getInviteCodeTDSV4B", params, callback);
   };
+  // Validate Secure OTP with RMS
+  BusinessController.prototype.validateSecureOTPWithRMS = function(username, password, S_CB, F_CB,rmsLoad=""){
+    let transactionId = Math.floor(Math.random() * 10000);    
+    let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0", 
+                    "currentRiskScore" : "2", "transactionId" : transactionId};    
+    
+    var client = KNYMobileFabric;
+    var serviceName = "customHIDLogin";
+    var identitySvc = client.getIdentityService(serviceName);
+    let loginPayload = SCAEventConstants.getLoginPayload(loginJson);
+    
+	if(rmsLoad){
+      let obj = JSON.parse(loginPayload) ;
+      obj.Meta.rmspayload = rmsLoad;
+      loginPayload = JSON.stringify(obj);
+    }
+    var options = {
+      "payload" : loginPayload,
+      "authType":"SECURE_CODE",
+      "isMfa":true
+    };
+
+    identitySvc.login(options, success=>{
+         var mfaDetails = identitySvc.getMfaDetails();
+         userName = loginJson.userid;
+         S_CB(mfaDetails);
+      },error=>{
+         F_CB(error);
+    });};  
   
   BusinessController.prototype.validateSecureOTP = function(username, password, S_CB, F_CB){
     let transactionId = Math.floor(Math.random() * 10000);    
@@ -138,6 +221,7 @@ define([], function() {
     var serviceName = "customHIDLogin";
     var identitySvc = client.getIdentityService(serviceName);
     let loginPayload = SCAEventConstants.getLoginPayload(loginJson);
+    
     var options = {
       "payload" : loginPayload,
       "authType":"SECURE_CODE",
@@ -145,13 +229,109 @@ define([], function() {
     };
 
     identitySvc.login(options, success=>{
-         //var mfaDetails = identitySvc.getMfaDetails();
-         //userName = loginJson.userid;
+//          var mfaDetails = identitySvc.getMfaDetails();
+//          userName = loginJson.userid;
          S_CB();
       },error=>{
          F_CB(error);
     });};  
 
+//Add OOBAuthenticator
+BusinessController.prototype.addOOBToUser = function(params, S_CB, F_CB) {
+    kony.print("RMS => Inside businessController.addOOBToUser");
+    let objService = HIDObjectServices.getRepository("AddOOBAuthenticator");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    objService.customVerb("addOOBAuthenticator", params, callback);
+  };
+  
+//Send OOB/OTP Authenticator  
+BusinessController.prototype.sendOOB = function(params, S_CB, F_CB){
+    try {
+      kony.print("RMS => Inside businessController.sendOOB");
+      var otpRequestDataModel = HIDAuthService.getRepository("OTPRequest");
+      const callback = (status, response) => {
+        kony.print("RMS => CallbackStatus :"+status);
+        if(status){
+          if(response.OTPRequest[0].OTP_SENT){
+            S_CB(response);
+          }
+          else { 
+            F_CB(response);}
+        } else {
+          F_CB(response);
+        }
+      };
+      otpRequestDataModel.customVerb("sendOTP", params, callback);
+    } catch (exception) {      
+    }      
+  };
+  
+//Second factor Authenticator    
+BusinessController.prototype.authenticateSecondFactor = function(username,factor,password,mfa_key, S_CB, F_CB){
+    kony.print("RMS => Inside businessController.authenticateSecondFactor");
+    var client = KNYMobileFabric;
+    var serviceName = "customHIDLogin";
+    var identitySvc = client.getIdentityService(serviceName);     
+    var mfaParams = {
+      "is_mfa_enabled": true,
+      "mfa_meta": {
+      },
+      "mfa_key" :mfa_key,
+      "password":password,
+      "authType":factor,
+      "userName": username
+    };
+    identitySvc.validateMfa(mfaParams, 
+                            success => S_CB(success),
+                            error => {      
+                                       F_CB(error);
+                                     });
+    };
+  BusinessController.prototype.updateRMSServiceEvent = function(authType, mfa_key, S_CB, F_CB){
+    kony.print("RMS => Inside businessController.updateRMSServiceEvent");
+    var client = KNYMobileFabric;
+    var serviceName = "customHIDLogin";
+    var identitySvc = client.getIdentityService(serviceName);
+    var mfaParams = {
+      "is_mfa_enabled": true,
+      "mfa_meta": {
+      },
+      "authType" : authType,
+      "password" : "123456",
+      "mfa_key" : mfa_key
+    };
+    identitySvc.validateMfa(mfaParams, success => S_CB(success), error => F_CB(error));
+  };
+  BusinessController.prototype.logout = function(S_CB, F_CB){
+    kony.print("----------Entering logout Function---------");
+    var serv = "customHIDLogin";
+    var identitySrv = KNYMobileFabric.getIdentityService(serv);
+    identitySrv.logout(success=>S_CB(success), error=>{
+      kony.print("Error occurred while logout, error : "+ JSON.stringify(error));
+      F_CB(error);
+    });
+    kony.print("----------Exiting logout Function---------");
+  };
+
+  BusinessController.prototype.rmsSessionLogout = function(params, S_CB, F_CB) {
+    kony.print("RMS => Inside businessController.rmsSessionLogout with Params : "+ JSON.stringify(params));
+    let rmsObjService = RMSObjectServices.getRepository("RMSSessionService");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    rmsObjService.customVerb("sessionLogout", params, callback);
+  };
+  
   
   return BusinessController.getInstance();
 });
