@@ -44,6 +44,9 @@ define([], function() {
         ControllerImplementation.prototype.updatePassword =function(oldPassword,newPassword){
           this.getNativeController().updatePassword(oldPassword,newPassword);
         };
+        ControllerImplementation.prototype.updatePasswordExplicit =function(oldPassword,newPassword){
+          this.getNativeController().updatePasswordExplicit(oldPassword,newPassword);
+        };
         ControllerImplementation.prototype.getPasswordPolicy =function(){
           return this.getNativeController().getPasswordPolicy();
         };
@@ -62,11 +65,11 @@ define([], function() {
         ControllerImplementation.prototype.checkForBioAvailability = function(){
            return this.getNativeController().checkForBioAvailability();
         };
-        ControllerImplementation.prototype.generateOTP = function(pwd,isBiometricEnabled){
-           return this.getNativeController().generateOTP(pwd,isBiometricEnabled);
+        ControllerImplementation.prototype.generateOTP = function(pwd,isBiometricEnabled,label = "hotp"){
+           return this.getNativeController().generateOTP(pwd,isBiometricEnabled,label);
         };
-        ControllerImplementation.prototype.generateOTPExplicit = function(pwd,isBiometricEnabled){
-           return this.getNativeController().generateOTPExplicit(pwd,isBiometricEnabled);
+        ControllerImplementation.prototype.generateOTPExplicit = function(pwd,isBiometricEnabled,label = "hotp"){
+           return this.getNativeController().generateOTPExplicit(pwd,isBiometricEnabled,label);
         };
         ControllerImplementation.prototype.renewContainer = function(password){
           return this.getNativeController().renewContainer(password);
@@ -76,6 +79,9 @@ define([], function() {
         };
         ControllerImplementation.prototype.deleteContainerWithAuth = function(password){
            this.getNativeController().deleteContainerWithAuth(password);
+        };
+        ControllerImplementation.prototype.verifyPassword = function(password,isBiometricEnabled,bioString){
+           this.getNativeController().verifyPassword(password,isBiometricEnabled,bioString);
         };
     };
     return ControllerImplementation;

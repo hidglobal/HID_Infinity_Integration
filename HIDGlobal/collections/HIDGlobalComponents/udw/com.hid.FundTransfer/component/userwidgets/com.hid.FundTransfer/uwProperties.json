@@ -22,7 +22,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "a9d89ba30d3c4d50b422090af522fb57",
+                    "kuid": "fdca2707017f45f281e11c118d36bf1b",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "onSuccess",
@@ -35,7 +35,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "cbbd15b9bc614a5e80e991bfcdc55412",
+                    "kuid": "jb950c8174444b1db3d9b12e0bc4bf71",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "showLoading",
@@ -48,12 +48,25 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "e4321cb4ef464c878e8ae69dc8cb9314",
+                    "kuid": "g59f7d4523004781b52ab0b883e4d92e",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "onPasswordPrompt",
                     "pw": {
                         "displayName": "onPasswordPrompt",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "fbf74de477544fcfbf2ee9c76f616b36",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "aefeee61ea3d41a58ce4c20cd2cc1caf",
+                    "paramList": [],
+                    "propertyIndex": 4,
+                    "propertyKey": "onConfirmationPrompt",
+                    "pw": {
+                        "displayName": "onConfirmationPrompt",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "fbf74de477544fcfbf2ee9c76f616b36",
@@ -105,6 +118,23 @@
                     "srcWgtKUID": "fbf74de477544fcfbf2ee9c76f616b36",
                     "type": "string",
                     "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": true,
+                    "group": "General",
+                    "kuid": "c6d862a109fa48f6b518d3a75c75e3fc",
+                    "originalPropertyKey": "isRMS",
+                    "propertyIndex": 10,
+                    "propertyKey": "isRMS",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "isRMS",
+                        "uiRepresentation": "Label-Radiobuttongroup"
+                    },
+                    "srcWgtKUID": "fbf74de477544fcfbf2ee9c76f616b36",
+                    "type": "boolean",
+                    "value": "true/false"
                 }
             ],
             "passthrough": [

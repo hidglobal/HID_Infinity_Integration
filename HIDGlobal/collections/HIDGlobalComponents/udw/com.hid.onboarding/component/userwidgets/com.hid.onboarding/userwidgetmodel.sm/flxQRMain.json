@@ -38,9 +38,7 @@
         "type": "string",
         "value": "50%"
     },
-    "children": [
-        "qrcodegeneratorNew"
-    ],
+    "children": [],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,

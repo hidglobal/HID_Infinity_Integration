@@ -4,7 +4,7 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       //this.resetUIFields();
       this.view.btnSignUp.onClick = this.btnLogin_onClick;
-      this.view.tbxPassword2.onDone = this.btnLogin_onClick;
+      //this.view.tbxPassword2.onDone = this.btnLogin_onClick;
       this.view.btnPwdSubmit.onClick = this.btnPwdSubmit_onClick;
       this.view.btnConfirmOTP.onClick = this.btnConfirmOTP_onClick;
       this.view.btnResendApprove.onClick = this.btnResendApproveNotification;
@@ -24,14 +24,38 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     },
     //Logic for getters/setters of custom properties
     initGettersSetters: function() {
+      defineGetter(this, "FirstFactor", function() {
+        return this._firstFactor;
+      });
+      defineSetter(this, "FirstFactor", function(val) {
+        if(!["STATIC_PWD","OTP_SMS_PIN","SECURE_CODE"].some(v=>v===val)){
+          throw {
+            "type": "CUSTOM",
+            "message": "FirstFactor property is Invalid"
+          };
+        }
+        this._firstFactor = val;
+      });
       defineGetter(this, "MFA", function() {
         return this._MFA;
       });
       defineSetter(this, "MFA", function(val) {
-        if(!["OTP_SMS","OTP_EML","APPROVE","OTP_HWT"].some(v=>v===val)){
+        if(!["OTP_SMS","OTP_EML","APPROVE","OTP_HWT","NO_MFA"].some(v=>v===val)){
           throw {
             "type": "CUSTOM",
             "message": "MFA property is Invalid"
+          };
+        }
+        if((val !=="NO_MFA" && this._firstFactor === "OTP_SMS_PIN") || ((val =="NO_MFA" && this._firstFactor != "OTP_SMS_PIN"))){
+          throw {
+            "type": "CUSTOM",
+            "message": "MFA property is Invalid.Please select MFA = NO_MFA for the selected FirstFactor"
+          };
+        }
+        if((this._firstFactor === "SECURE_CODE" && val != "APPROVE") ){
+          throw {
+            "type": "CUSTOM",
+            "message": "MFA property is Invalid.Please select MFA = APPROVE for the selected FirstFactor of SECURE_CODE"
           };
         }
         this._MFA = val;
@@ -45,11 +69,13 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     pwdMaxLength : 100,
     pwdNotUserAttribute : "true",
     deviceSerial : "",
+    pinMinLength : 4,
+    pinMaxLength : 100,
     updateOnboardingUI: function(UIObject) {
       switch (UIObject.state) {
         case "activationCodeSuccess":
           this.activationCodeSuccess(UIObject.response);
-          break;
+          return;
         case "activationCodeFailure":
           this.activationCodeFailure(UIObject.response);
           break;
@@ -70,7 +96,7 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
           break;
         case "approveDeviceRegistrationSuccess" :
           this.approveDeviceRegistrationSuccess(UIObject.response);
-          break;
+          return;
         case "approveDeviceRegistrationFailure" :
           this.approveDeviceRegistrationFailure(UIObject.response);
           break;
@@ -254,7 +280,42 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     activationCodeSuccess: function(response) {
       this.userId = response.userid;
       //alert(this.userId);
-      this.contextSwitch("ConfirmPassword");
+      this.navigateToFirstFactor();
+    },
+    navigateToFirstFactor : function(){
+       let firstFactor = this._firstFactor;
+       kony.print(`Savanth ---> firstfactor is ${firstFactor}`);
+       switch(firstFactor){
+         case "SECURE_CODE": 
+           this.navigateToProvisionMode();
+           break;
+         case "STATIC_PWD" :
+           this.navigateToPassword();
+           break;
+         case "OTP_SMS_PIN" :
+           this.navigateToSMSPIN();
+           break
+         default :
+           this.navigateToPassword();
+           break;
+       }
+    },
+    
+    navigateToProvisionMode : function(){
+        this.commonEventHandler(this.showLoading, "");
+        OnboardingPresentationController.approveDeviceRegistration(this.updateOnboardingUI);
+    },
+    navigateToPassword : function(){
+       this.configureSumbitPINButton("Password");
+       this.view.btnPwdSubmit.onClick = this.btnPwdSubmit_onClick;
+       this.contextSwitch("ConfirmPassword");
+       this.commonEventHandler(this.dismissLoading, "");
+    },
+    navigateToSMSPIN : function(){
+       this.configureSumbitPINButton("PIN");
+       this.view.btnPwdSubmit.onClick = this.btnSMSPIN_Onclick;
+       this.contextSwitch("ConfirmPassword");
+       this.commonEventHandler(this.dismissLoading, "");
     },
     activationCodeFailure: function({ActivationCodeError}) {
       this.resetUIFields();
@@ -265,6 +326,42 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     },
     addAndSendOOBFailure : function(){
       this.contextSwitch("Error");
+    },
+    configureSumbitPINButton : function(mode){
+       this.view.tbxPassword1.placeholder = mode;
+       this.view.tbxPassword2.placeholder = `Confirm ${mode}`;
+       this.view.btnPwdSubmit.onClick = mode == "Password" ? this.btnPwdSubmit_onClick : this.btnSMSPIN_Onclick;
+    },
+    btnSMSPIN_Onclick : function(){
+        if (this.view.tbxPassword1.text === "") {
+        this.view.lblErrorPassword.text = "Please enter the PIN";
+        this.view.lblErrorPassword.setVisibility(true);
+        return;
+      }
+      if (this.view.tbxPassword2.text === "") {
+        this.view.lblErrorPassword.text = "Please confirm the PIN";
+        this.view.lblErrorPassword.setVisibility(true);
+        return;
+      }
+      if (this.view.tbxPassword2.text !== this.view.tbxPassword1.text) {
+        this.view.lblErrorPassword.text = "Entered PINs Do not Match";
+        this.view.lblErrorPassword.setVisibility(true);
+        return;
+      }
+      var s = this.view.tbxPassword1.text;
+      if (s.length < this.pinMinLength || s.length > this.pinMaxLength) {
+        this.view.lblErrorPassword.text = "PIN Should be minimum 4 and maximum 100 Digits";
+        this.view.lblErrorPassword.setVisibility(true);
+        return;
+      }
+      if(isNaN(s)){
+        this.view.lblErrorPassword.text = "PIN should consists only Digits";
+        this.view.lblErrorPassword.setVisibility(true);
+        return;
+      }
+      var password = this.view.tbxPassword1.text;
+      this.commonEventHandler(this.showLoading, "");
+       OnboardingPresentationController.addOOBToUserWithPin(this.updateOnboardingUI, "OTP_SMS", password);
     },
     approveDeviceRegistrationSuccess : function(response){
       this.view.qrcodegeneratorNew.dataToEncode = response.inviteCodeString;
@@ -288,6 +385,7 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
         this.view.forceLayout();
       };
       this.contextSwitch("DeviceRegistration");
+      this.commonEventHandler(this.dismissLoading, "");
     },
     approveDeviceRegistrationFailure: function(response){
       //to show error message in case of failure of device registration.

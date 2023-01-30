@@ -4432,12 +4432,7 @@
                 "kony.mb.An.error.occurred.while.making.the.request.": ""
             },
             "isCustomLocale": false,
-            "isSelected": true,
-            "layoutConfig": {
-                "mirrorContentAlignment": false,
-                "mirrorFlexPositionProperties": false,
-                "mirrorFlowHorizontalAlignment": false
-            }
+            "isSelected": true
         },
         "de_DE": {
             "i18nStrings": {
@@ -8875,12 +8870,7 @@
                 "kony.mb.An.error.occurred.while.making.the.request.": ""
             },
             "isCustomLocale": false,
-            "isSelected": true,
-            "layoutConfig": {
-                "mirrorContentAlignment": false,
-                "mirrorFlexPositionProperties": false,
-                "mirrorFlowHorizontalAlignment": false
-            }
+            "isSelected": true
         },
         "en_GB": {
             "i18nStrings": {
@@ -15537,12 +15527,7 @@
                 "kony.mb.An.error.occurred.while.making.the.request.": ""
             },
             "isCustomLocale": false,
-            "isSelected": true,
-            "layoutConfig": {
-                "mirrorContentAlignment": false,
-                "mirrorFlexPositionProperties": false,
-                "mirrorFlowHorizontalAlignment": false
-            }
+            "isSelected": true
         },
         "es_ES": {
             "i18nStrings": {

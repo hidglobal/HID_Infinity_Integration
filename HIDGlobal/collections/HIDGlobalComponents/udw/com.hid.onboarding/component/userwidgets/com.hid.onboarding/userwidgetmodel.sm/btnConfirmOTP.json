@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sc07046c324c4f50984cf5b778dfb559",
+    "_skin_": "sc615c87f137463aac11015542a04860",
     "_text_": "Confirm",
     "_top_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s7cc801a45b24a0e9fc62cbf3a1c1316",
+    "focusskin": "s315841edbf64d49a42a60c52cf2424f",
     "id": "btnConfirmOTP",
     "info": null,
     "iscustomlayout": false,

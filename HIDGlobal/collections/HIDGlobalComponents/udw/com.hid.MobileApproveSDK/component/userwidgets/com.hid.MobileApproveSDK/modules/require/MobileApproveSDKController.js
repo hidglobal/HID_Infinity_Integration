@@ -2,7 +2,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
   var sdkConstants = {};
   sdkConstants.ERROR_USERNAME = `Please enter CustomerID`; 
   sdkConstants.ERROR_ACTIVATIONCODE = `Please enter Activation Code`;
-  sdkConstants.ERROR_GENERIC = `Something went wrong please try again later`;
+  sdkConstants.ERROR_GENERIC = `Something went wrong please try again`;
   sdkConstants.ERROR_LENGTH_MIN_PIN = `PIN length should be atleast #`;
   sdkConstants.ERROR_LENGTH_MIN = `Password length should be atleast #`;
   sdkConstants.ERROR_LENGTH_MAX = `Password length should be atmost #`;
@@ -19,8 +19,10 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
   sdkConstants.ERROR_PWD_MIN_SPL = `Password should contain atleast # special Characters`;
   sdkConstants.ERROR_PWD_MAX_SPL = `Password should contain atmost # special Characters`;
   sdkConstants.ERROR_PWD_NOT_ENTERED = `Please enter PIN`;
+  sdkConstants.ERROR_OOB_NOT_ENTERED = `Please enter OTP`;
   sdkConstants.ERROR_PWD_NOT_MATCH = `Entered PINs do not match`;
   sdkConstants.ERROR_PIN = `PIN is incorrect`;
+  sdkConstants.ERROR_OOB = `OTP is incorrect`;
   sdkConstants.ERROR_SAME_PIN = `Same PIN prohibited`;
   sdkConstants.ERROR_PIN_CHANGE = `PIN can be change after 24 hrs`;
   sdkConstants.DELETE_USER_CNF_TXT = `You are about to delete your user profile from Major Bank`;
@@ -32,14 +34,55 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
   sdkConstants.DELETE_UI_MODE_HIDE = 3
   sdkConstants.DELETE_UI_MODE_SHOW_PIN = 4;
   sdkConstants.DELETE_UI_MODE_ERROR_PIN =5;
-  var contexts = ["ActivationCode","SetPassword","Login","Biometric","Success","UpdatePassword","SetStandardPassword","ProfileResetUI","Users"];
+  sdkConstants.ERROR_USERBLOCK = `User is blocked for Login`;
+  sdkConstants.ERROR_OTP_SMS = `Failed to send OTP on the registered mobile number.`;
+  sdkConstants.ERROR_OTP_EML = `Failed to send OTP on the registered email.`;
+  sdkConstants.ERROR_INVALID_QR_CODE = `Invalid QR code. Do you want to retry?`;
+  sdkConstants.ERROR_ALREADY_CONSUMED_QR_CODE = `QR code already consumed.Do you want to retry with new QR code or manual onboarding?`;
+  sdkConstants.ERROR_INVALID_SERVICE_URL = `Please enter Service URL`;
+  sdkConstants.ERROR_INVALID_USERNAME = `Please enter Username`;
+  sdkConstants.ERROR_INVALID_INVITE_CODE = `Please enter Invite Code`;
+  sdkConstants.ERROR_INTERNET_CONNECTION = `The internet connection appears to be offline. Do you want to retry?`;
+  sdkConstants.ERROR_INTERNET_CONNECTION_GENERIC = `The internet connection appears to be offline.`;
+  sdkConstants.ERROR_INVALID_PARAMETER = `The service URL is not valid`
+  sdkConstants.ERROR_SERVER_AUTHENTICATION =`Either the User ID or Invite code is incorrect`;
+  sdkConstants.ERROR_REMOTE_EXCEPTION =`Either the service URL is incorrect or the service is currently unavailable`;
+  sdkConstants.ERROR_INVALID_PIN = `PIN Cannot be Empty`;
+  sdkConstants.ERROR_BIO_AUTH_NOT_AVAILABLE = `PIN Cannot be Empty`;
+  sdkConstants.ERROR_INVALID_PIN = `PIN Cannot be Empty`;
+  sdkConstants.ERROR_BIO_AUTH_NOT_AVAILABLE = `BiometricNotAvailable`;
+  sdkConstants.ERROR_INVALID_PIN = `PIN Cannot be Empty`;
+  sdkConstants.BIOMETRIC_ERROR_CODE = `5003`;
+  sdkConstants.AUTH_EXCEPTION_CODE = `5001`;
+  sdkConstants.DEFAULT_BIO_STRING = `Please complete your Biometrics to continue`;
+  sdkConstants.ERROR_PWD_MATCH = `New PIN cannot be same as old PIN`
+  sdkConstants.ERROR_INVALID_PIN_UPD = `Invalid PIN`
+  sdkConstants.ERROR_INVALID_PIN_UPD = `PIN Cannot be Empty`;
+  sdkConstants.EXCEPTION_NAME_INVALID_PIN_UPD = `InvalidPinException`;
+  sdkConstants.ERROR_CAMERA_ANDROID = `Could not find field WINDOW_FOCUSED_STATE_SET`;
+  sdkConstants.PERMISSION_DENIED = `50001`; 
+  sdkConstants.PERMISSION_GRANTED = `50002`;
+  sdkConstants.ENABLE_PERMISSION = `Please enable the permission in device settings to proceed. Do you want to open settings?`;
+  sdkConstants.PWD_CHANGE_TO_SOON = "PIN change is too soon, Please try after 1 day"
+  var contexts = ["ActivationCode","QRCode","Manual","SetPassword","Login","Biometric","Success","UpdatePassword","SetStandardPassword","ProfileResetUI","Users","OOB"];
   var getProfileAge = 0;
   var isRegister = false ;
+  var ip_url = `https://api.ipify.org/`;
   return {
     username : "",
+    app_session_id : "",
+    client_ip : "",
+    userId : "",
+    mfa_key : "",
+    TM_Cookie_Sid : "",
+    TM_Cookie_Tag : "",
+    isCookiesLoaded : true,
+    newRequest : "",
+    otp : "",
+    currentContext : "",
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       this.resetUI();
-      this.contextSwitch("ActivationCode");
+//       this.contextSwitch("ActivationCode");
       this.view.tbxPinLogin.onTouchStart= source=>this.showErrorPin(false);
       this.view.tbxActivationCode.onTouchStart = source=>this.showError(false);
       this.view.tbxUsername.onTouchStart = source=>this.showError(false);
@@ -79,10 +122,101 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.btnDeleteUserDone.onClick = source => {this.showDeleteUserPrompt();this.initiate();}
       this.view.PlusSquareLight.onTouchEnd = source => this.initActivationFlow();
       this.nativeController = new controllerImplemetation(this,baseConfig.id);
+      this.view.btnConfirmOOB.onClick=this.btnConfirmOOB_onClick;
+      this.view.lblResendOTP.onTouchEnd = this.resendOTP_onClick;
+      this.view.btnManualLink.onClick = this.initManualFlow;
+      this.view.btnValidate.onClick = this.btnValidate_onClick;
+      this.view.barcodeqrscanner.afterScan = this.afterScan;
+      this.view.barcodeqrscanner.errorCallback = this.errorCallback;
+      this.view.barcodeqrscanner.onClickClose = this.onClickClose;
+      this.view.btnYesScannerAlert.onClick = this.btnYesScannerAlert_onClick;
+      this.view.btnNoScannerAlert.onClick = this.btnNoScannerAlert_onClick;
+      this.view.flxScannerAlertUI.setVisibility(false);
     },
+
     //Logic for getters/setters of custom properties
     initGettersSetters: function() {
-
+      defineGetter(this, "MFA", function() {
+        return this._MFA;
+      });
+      defineSetter(this, "MFA", function(val) {
+        if(!["OTP_SMS","OTP_EML"].some(v=>v===val)){
+          throw {
+            "type": "CUSTOM",
+            "message": "MFA property is Invalid"
+          };
+        }
+        this._MFA = val;
+      });
+      //Check for RMS enabled or not.
+      defineGetter(this, "isRMSEnabled", function() {
+        return this._isRMSEnabled;
+      });
+      defineSetter(this, "isRMSEnabled", function(val){
+        if(!(val) || val === undefined){
+          this._isRMSEnabled = false;
+        }
+        else this._isRMSEnabled = val;
+      });
+      //Check for RMS Read Only or not.
+      defineGetter(this, "isRMSReadOnly", function() {
+        return this._isRMSReadOnly;
+      });
+      defineSetter(this, "isRMSReadOnly", function(val){
+        if(!(val) || val === undefined){
+          this._isRMSReadOnly = false;
+        }
+        else this._isRMSReadOnly = val;
+      });
+      //Check for RMS defined Cookies
+      defineGetter(this, "tmCookieSid", function() {
+        return this.TM_Cookie_Sid;
+      }); 
+      defineSetter(this, "tmCookieSid", function(val){
+        if(!(val) || val == undefined){
+          throw {
+            "type": "CUSTOM",
+            "message": "TM_COOKIE_SID property is Invalid"
+          };
+        }
+        this.TM_Cookie_Sid = val;
+      });//
+      defineGetter(this, "tmCookieTag", function(){
+        return this.TM_Cookie_Tag;
+      }); 
+      defineSetter(this, "tmCookieTag", function(val){
+        if(!(val) || val == undefined){
+          throw {
+            "type": "CUSTOM",
+            "message": "TM_COOKIE_SID property is Invalid"
+          };
+        }
+        this.TM_Cookie_Tag = val;
+      });
+      defineGetter(this, "provisionMode", function(){
+        return this._provisionMode;
+      }); 
+      defineSetter(this, "provisionMode", function(val){
+        if(!(val) || val == undefined){
+          throw {
+            "type": "CUSTOM",
+            "message": "ProvisionMode property is Invalid"
+          };
+        }
+        this._provisionMode = val;
+        });
+      defineGetter(this, "otpLabel", function(){
+        return this._otpLabel;
+      }); 
+      defineSetter(this, "otpLabel", function(val){
+        if(!["hotp","totp"].some(v=>v===val) ){
+          throw {
+            "type": "CUSTOM",
+            "message": "otpLabel property is Invalid"
+          };
+        }
+        this._otpLabel = val;
+      });
     },
     passwordExpire_atlogin : false,
     resetPassword : "false",
@@ -91,19 +225,24 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     pwdNotSequence : "true",
     pwdMaxLength : 100,
     pwdNotUserAttribute : "true",
+    state: "",
     initiate : function(){
-     this.resetUI();
-     this.setLoadingScreen(true);
+      this.resetUI();
+      this.setLoadingScreen(true);
       if(this.isAndroid() && !gblSDKNotificationManager){
         throw new Error("sdkNotificationManager.js not configured");
       }
       var pushIDFromManager = gblSDKNotificationManager.isUpdateRequired() ? gblSDKNotificationManager.getPushId() : "";
       var pushID = pushIDFromManager || "";
       let flowString = this.nativeController.getLoginFlow(pushID);
+      
       if(flowString == "Register"){
         isRegister = true ;		  
-        this.initActivationFlow();
-        return;
+        let flow = this._provisionMode;
+        let mode = flow === "ACTIVATION_CODE" ? "ActivationCode" : "QRCode" ; 
+        this.getModeFlow(mode);
+        this.setLoadingScreen(false);
+        return ;
       }
       let contentArray = flowString.split(",");
       let flow = contentArray[0];
@@ -118,6 +257,27 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
     },
     
+    getLoginFLowPublic : function(){
+      return this.nativeController.getLoginFlow("");
+    },
+    
+    getModeFlow : function(mode){
+      switch(mode){
+        case "ActivationCode":
+          this.initActivationFlow();
+          break;
+        case "QRCode":
+          try{
+            this.initQRCodeFlow();
+          }catch(e){
+            this.errorCallback(e);
+          }          
+          break;
+        default:
+          this.initActivationFlow();
+      }
+    },
+
     parseFlowStringForMultiUser : function(flowString){
       kony.print("ApproveSDK ---> parseFlowStringForMultiUser flowString is " + flowString);
       let users = flowString.split("|");
@@ -128,28 +288,52 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         row.avatar = "generic_avatar3.png";
         row.curnt_view = 1;
         row.flxTempRowWrapper = {
-           "left" : "0%"
-         };
-         usersJson.push(row);
+          "left" : "0%"
+        };
+        usersJson.push(row);
       }
       this.view.segUsers.widgetDataMap = {
-         "lblUsername" : "username",
-         "imgAvatar"  : "avatar",
-         "flxTempRowWrapper" : "flxTempRowWrapper"
+        "lblUsername" : "username",
+        "imgAvatar"  : "avatar",
+        "flxTempRowWrapper" : "flxTempRowWrapper"
       };
       this.view.segUsers.setData(usersJson);
     },
-    
+
     initMultiLoginFlow : function(flowString){
       this.parseFlowStringForMultiUser(flowString);
       this.contextSwitch("Users");
       this.setLoadingScreen(false);
     },
-    
+
     btnChangePassword_onClick(){
       this.contextSwitch("UpdatePassword");
     }, 
     
+    updatePassword : function(oldPassword, newPassword){
+      if(!this.passwordPolicy){
+        kony.print("HIDSDK => Fetching getPasswordPolicy");
+        var policy = this.nativeController.getPasswordPolicy();
+        if(policy){
+          this.passwordPolicy = JSON.parse(policy) || {};  
+        }
+      }
+      if(!oldPassword || !newPassword){
+        this.commonEventEmitter(this.updatePasswordFailure,[sdkConstants.EXCEPTION_NAME_INVALID_PIN_UPD,sdkConstants.ERROR_INVALID_PIN_UPD]);
+        return
+      }
+      if(oldPassword == newPassword){
+        this.commonEventEmitter(this.updatePasswordFailure,[sdkConstants.EXCEPTION_NAME_INVALID_PIN_UPD,sdkConstants.ERROR_PWD_MATCH]);
+        return;
+      }
+      if(!this.checkPasswordPolicy(newPassword)){
+        let error =   this.view.lblErrorPassword.text || sdkConstants.ERROR_INVALID_PIN_UPD;
+        this.commonEventEmitter(this.updatePasswordFailure,[sdkConstants.EXCEPTION_NAME_INVALID_PIN_UPD,error]);
+        return;
+      }
+      this.nativeController.updatePasswordExplicit(oldPassword,newPassword);
+    },
+
     getPinRemainingDays : function(username){
       if(username){
         this.username = username;
@@ -157,7 +341,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       var allpolicy = this.nativeController.getPasswordPolicy();
       this.passwordPolicy = JSON.parse(allpolicy);
       if(this.passwordPolicy.hasOwnProperty("profileExpiryDate")){
-         getProfileAge = +this.passwordPolicy.profileExpiryDate;
+        getProfileAge = +this.passwordPolicy.profileExpiryDate;
       }
       if(this.passwordPolicy.hasOwnProperty("currentAge") && this.passwordPolicy.currentAge <=this.passwordPolicy.maxAge){
         var remainingAge = this.passwordPolicy.maxAge - this.passwordPolicy.currentAge ;
@@ -167,16 +351,16 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         return 10000;
       }
     },  
-    
+
     btnUpdatePIN_onClick : function(){
-      kony.print("btnUpdatePIN_onClick");
+      kony.print("HIDSDK => btnUpdatePIN_onClick");
       this.showErrorPassword(false,"");
       this.setLoadingScreen(true);
       if(!this.passwordPolicy){
-        kony.print("Fetching getPasswordPolicy");
+        kony.print("HIDSDK => Fetching getPasswordPolicy");
         var policy = this.nativeController.getPasswordPolicy();
         if(policy){
-        this.passwordPolicy = JSON.parse(policy) || {};  
+          this.passwordPolicy = JSON.parse(policy) || {};  
         }
       }
       let oldPwd = this.view.tbxCurrentPIN.text;
@@ -196,36 +380,257 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         this.nativeController.updatePassword(oldPwd,newPwd);
       }
     },    
-    
+
     btnLogin_onClick(){
-       this.showErrorPin(false,sdkConstants.ERROR_PIN);
+      kony.print("HIDSDK => btnLogin_onClick");
+      this.showErrorPin(false,sdkConstants.ERROR_PIN);
       this.setLoadingScreen(true);
       var password = this.view.tbxPinLogin.text;
       if(password == "" || password == null) {
         //this.setLoadingScreen(false);
         this.showErrorPin(true,sdkConstants.ERROR_PWD_NOT_ENTERED);
         return;
-      }      
-      this.nativeController.generateOTP(password,false);
+      }
+      
+      this.nativeController.generateOTP(password,false,this._otpLabel);
     },
+    // Function to get Local IP address for RMS
+    getMyIpFunction: function(otp){
+      try{
+        this.otp = otp;
+        var url = ip_url;
+        var request = new kony.net.HttpRequest();
+        this.newRequest = request;
+        kony.print("RMS => LocalIP address : "+ this.newRequest);
+        request.onReadyStateChange = this.publicIPCallBackFunction;
+        request.open(constants.HTTP_METHOD_GET, url, true);
+        request.send();
+      }catch(ex){
+        kony.print(ex.message);
+      }
+    },  
+    // Callback function to receive client_ip for RMS
+    publicIPCallBackFunction: function(){
+      if(this.client_ip.trim() !=""){
+        return;
+      }
+      if(this.newRequest.readyState == constants.HTTP_READY_STATE_DONE){
+        var resString = this.newRequest.response;
+        kony.print("RMS => resString : "+resString);
+        this.client_ip = resString;
+        kony.print("RMS => Ip address from Kony.net " + resString);
+        this.rmsLogin(this.otp);
+      }
+    }, 
+    //Changes for RMS to capture risk score
     generateOTPSuccess : function(otp){
+      kony.print('HIDSDK => Inside generateOTPSuccess');
       this.setLoadingScreen(true);
-      businessController.validateSecureOTP(this.username,otp,this.validateSecureOTPSuccess,this.validateSecureOTPFailure);      
+      kony.print('HIDSDK => isRMSEnabled:'+this._isRMSEnabled);
+      if(this._isRMSEnabled === true) {
+        if(this.client_ip.trim() === ""){
+          this.getMyIpFunction(otp);
+        }else{
+          kony.print('RMS => rmsLogin flow called');
+          this.rmsLogin(otp);
+        }
+      }else{
+           businessController.validateSecureOTP(this.username,otp,this.validateSecureOTPSuccess,this.validateSecureOTPFailure);      
+     }
+    },
+    // Function for enabling RMS 
+    rmsLogin : function(otp){
+      kony.print("RMS => Inside rmsLogin");
+      this.app_session_id = String(Math.floor(Math.random()*100000));
+      HidRmsSDKManager.setRMSAppSessionId(this.app_session_id);
+      var tmCookieTAG = this.TM_Cookie_Tag;
+      var tmCookieSID = this.TM_Cookie_Sid;
+      var rmsInfo = {};
+      try{
+        kony.print("HIDRMS => Inside try rmsLogin ");
+        kony.print("HIDRMS => cookies from SDK " + HidRmsSDKManager.getCookieValues(tmCookieTAG,tmCookieSID));
+        rmsInfo = JSON.parse(HidRmsSDKManager.getCookieValues(tmCookieTAG,tmCookieSID));
+      }catch(e){
+        kony.print("HIDRMS => Inside catch rmsLogin exception :"+JSON.stringify(e));
+        rmsInfo = {};
+      }
+      if(rmsInfo === {} || !rmsInfo.hasOwnProperty(tmCookieTAG) || !rmsInfo.hasOwnProperty(tmCookieSID)){
+        this.isCookiesLoaded = false;
+      }
+//       this.client_ip = HidRmsSDKManager.getClientIP();
+      kony.print("RMS => RMS cookies status : "+this.isCookiesLoaded);
+      var platform = this.isAndroid() ? "android" : "ios";
+      const rmsLoad = {
+        "tm_sid" : rmsInfo[tmCookieSID],
+        "tm_tag" : rmsInfo[tmCookieTAG],
+        "client_ip" : this.client_ip,
+        "app_session_id" : this.app_session_id,
+        "platform" : platform
+      };
+       kony.print("RMS => rmsLoad : "+JSON.stringify(rmsLoad));
+      businessController.validateSecureOTPWithRMS(this.username,otp,this.validateSecureOTPRMSSuccess,this.validateSecureOTPRMSFailure,rmsLoad);      
     },
 
     generateOTPFailure : function(exceptionType,message){
-      if( exceptionType == "AuthenticationException"  || exceptionType == "InvalidPasswordException"){
+      if( exceptionType === "AuthenticationException"  || exceptionType === "InvalidPasswordException"){
         this.showErrorPin(true, sdkConstants.ERROR_PIN);
       }
-      if(exceptionType == "PasswordExpiredException"){
+      if(exceptionType === "PasswordExpiredException"){
         this.showErrorPin(true, sdkConstants.ERROR_PIN);
         // Change Password call
-//        let passwordExpire_atLogin = true;
+        // let passwordExpire_atLogin = true;
         this.passwordExpire_atlogin = true;
         this.resetPassword = "true";
         this.contextSwitch("UpdatePassword");        
       }  
-      //this.setLoadingScreen(false);
+    },  
+    // callback function for validating secure otp success while RMS enabled
+    validateSecureOTPRMSSuccess : function(response){
+      kony.print('RMS => Inside validateSecureOTPRMSSuccess');
+      alert(JSON.stringify(response.mfa_meta.rms));
+      this.mfa_key = response.mfa_meta.auth_id;
+      var status = response.mfa_meta.rms.RMSServiceStatus;
+      var noStepup = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "false";
+      var stepUp = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "true";
+      if(noStepup && status === "success"){
+        //If isRMSReadOnly then donot perform stepdown
+        kony.print("RMS => isRMSReadOnly:"+this._isRMSReadOnly);
+        //if(this._isRMSReadOnly == false){
+          this.updateRMSServiceEvent("STEP_DOWN");
+          return;
+        //}
+      }else{
+          if(this._isRMSReadOnly === false){
+           this.initiateSecondFactor();
+           this.client_ip = "";
+          }else{
+             //RMS ReadyOnly
+             this.updateRMSServiceEvent("STEP_DOWN");
+             return;
+          }
+      }
+    }, 
+     // callback function for receiving secure otp failure while RMS enabled
+    validateSecureOTPRMSFailure : function(error){
+      kony.print("RMS => Inside validateSecureOTPRMSFailure");
+      if(error){
+        if(error.details.message.includes("USER-BLOCK") && error.details.message.includes(-3)){
+        this.showErrorPin(true, sdkConstants.ERROR_USERBLOCK);
+        } else {
+        this.showErrorPin(true, sdkConstants.ERROR_PIN);
+        }
+      }else{
+        this.showErrorPin(true, sdkConstants.ERROR_GENERIC);
+      }
+    },
+    // Function to update RMS server about step down event
+    updateRMSServiceEvent : function(rmsevent){
+      if(rmsevent === "STEP_DOWN"){
+        businessController.updateRMSServiceEvent(rmsevent, this.mfa_key, this.onStepDownSuccessCB, this.onStepDownFailureCB );
+      } 
+    },
+    // Callback function to validate step down success with RMS
+    onStepDownSuccessCB : function(response){
+      this.mfa_key = "";
+      this.client_ip = "";
+      if(this.onSuccessCB){
+        this.onSuccessCB.call(this);
+      }
+      this.setLoadingScreen(false);
+      this.resetUI();
+    },
+    // Callback function to receive step down failure with RMS
+    onStepDownFailureCB : function(error){
+      this.view.lblErrorPasswordLogin.text = "Something went wrong Please after sometime " + error;
+      this.setLoadingScreen(false);
+    },
+    // Function to perform Step-Up in case of high risk score with RMS enabled by sending otp over mobile/email
+    initiateSecondFactor : function(){
+      kony.print("RMS => Inside initiateSecondFactor")
+      if(this._MFA === "OTP_SMS" || this._MFA === "OTP_EML"){
+        let factor = this._MFA;
+        let authType = factor === "OTP_SMS" ? "AT_OOBSMS":"AT_OOBEML";
+        if(this._MFA === "OTP_HWT"){
+            authenticatorType = "AT_OTP";
+        }
+        let params = {"username" : this.username,
+                  "AuthenticationType" : authType};
+//         alert(JSON.stringify(params));
+       businessController.sendOOB(params, this.sendOTPSuccess, this.sendOTPFailure);
+      }
+    }, 
+    // Function to resend otp(second factor) while performing Step-Up
+    resendOTP_onClick : function(){
+      this.setLoadingScreen(true);
+       this.initiateSecondFactor();
+       this.resetUI();
+    },
+    //Callback Function to validate send otp success for RMS
+    sendOTPSuccess : function(response){
+      this.setLoadingScreen(false);
+      this.resetUI();
+      kony.print("RMS => Inside sendOTPSuccess : "+JSON.stringify(response));
+      switch(this._MFA){
+        case "OTP_SMS":
+          this.view.lblOTPtext.text = "HID Out Of Band SMS OTP";
+          break;
+        case "OTP_EML":
+          this.view.lblOTPtext.text = "HID Out of Band Email OTP";
+          break;
+        default:
+          this.view.lblOTPtext.text = "HID Out Of Band SMS OTP";
+      }
+      this.contextSwitch("OOB");
+      
+    }, 
+    //Callback Function to receive send otp failure for RMS
+    sendOTPFailure : function(error){
+      kony.print("RMS => Inside sendOTPFailure : " +JSON.stringify(error));
+      var errorFunc = this.currentContext === "Login" ? this.showErrorPin : this.showErrorOOB;
+      switch(this._MFA){
+        case "OTP_SMS":
+          errorFunc.call(this,true, sdkConstants.ERROR_OTP_SMS);
+          break;
+        case "OTP_EML":
+          errorFunc.call(this,true, sdkConstants.ERROR_OTP_EML);
+          break;
+        default:
+          errorFunc.call(this,true, sdkConstants.ERROR_GENERIC);
+      }
+    }, 
+    btnConfirmOOB_onClick(){
+      kony.print("RMS => Inside btnConfirmOOB_onClick");
+      this.showErrorOOB(false,sdkConstants.ERROR_OOB);
+      this.setLoadingScreen(true);
+      var OOB = this.view.tbxOTP.text;
+      if(OOB === "" || OOB === null) {
+        this.showErrorOOB(true,sdkConstants.ERROR_OOB_NOT_ENTERED);
+        return;
+      } 
+      this.view.lblErrorOTP.text = "";
+      businessController.authenticateSecondFactor(this.username, this._MFA, OOB, this.mfa_key, this.AuthSuccess, this.AuthFailure);
+    },
+    // Callback function to validate second factor success for RMS
+    AuthSuccess : function(response){
+      kony.print("RMS => Inside AuthSuccess");
+      this.setLoadingScreen(false);
+      this.resetUI();
+      if(this.onSuccessCB){
+        this.onSuccessCB.call(this);
+      }
+      this.mfa_key = "";
+      this.client_ip = "";
+    }, 
+    // Callback function to receive second factor failure for RMS
+    AuthFailure : function(error){
+      this.setLoadingScreen(false);
+       this.resetUI();
+      kony.print("RMS => Inside AuthFailure error:"+JSON.stringify(error));           
+      this.showOTPError(true,sdkConstants.ERROR_OOB);
+    },
+    showOTPError : function(visible,msg = ""){
+      this.view.lblErrorOTP.text = msg;
+      this.view.flxErrOTP.setVisibility(visible);
     },
     validateSecureOTPSuccess : function(){
       this.setLoadingScreen(false);
@@ -233,14 +638,200 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       if(this.onSuccessCB){
         this.onSuccessCB.call(this);
       }
-    },
+    },   
     validateSecureOTPFailure : function(error){
-      this.setLoadingScreen(false);
-      alert(JSON.stringify(error));
+      this.showErrorPin(true, sdkConstants.ERROR_GENERIC);
     },
     initActivationFlow : function(){
+      this.state = "ActivationCode";
       this.contextSwitch("ActivationCode");
       this.setLoadingScreen(false);
+    },
+    initManualFlow : function(){
+      kony.print("ScanLib --> Inside initManualFlow method ");
+      this.state = "Manual";
+      this.view.barcodeqrscanner.stopScan();
+      this.view.flxScannerAlertUI.setVisibility(false);
+      this.contextSwitch("Manual");
+      this.setLoadingScreen(false);
+    },
+    btnValidate_onClick : function(){
+      this.resetUI();
+      kony.print("ScanLib --> Inside btnValidate_onClick method ");
+      let serviceUrl = this.view.tbxServiceUrl.text;
+      let username = this.view.tbxUsernameManual.text;
+      let inviteCode = this.view.tbxInviteCode.text;
+      
+      if(serviceUrl === null || serviceUrl ===""){
+        this.showErrorManual(true, sdkConstants.ERROR_INVALID_SERVICE_URL);
+        return;
+      }
+      if(username === null || username ===""){
+        this.showErrorManual(true, sdkConstants.ERROR_INVALID_USERNAME);
+        return;
+      }
+      if(inviteCode === null || inviteCode ===""){
+        this.showErrorManual(true, sdkConstants.ERROR_INVALID_INVITE_CODE);
+        return;
+      }
+      this.username =username;
+      var params = {
+        "serviceurl": serviceUrl,
+        "userid": username,
+        "invitecode": inviteCode
+       }; 
+      let activationCode = JSON.stringify(params);
+      kony.print(`ScanLib --> manual provisioning Object: ${activationCode}`);
+      this.setLoadingScreen(true);
+      let networkStatus = this.checkIfNetworkIsAvailable();
+      if(networkStatus === true){
+      this.nativeController.createContainer(activationCode);
+      } else{
+        this.showErrorManual(true,sdkConstants.ERROR_INTERNET_CONNECTION_GENERIC);
+        this.setLoadingScreen(false);
+      }
+    },
+    initQRCodeFlow : function(){
+      kony.print("ScanLib --> Inside initQRCodeFlow method ");
+      this.state = "QRCode";
+      this.contextSwitch("QRCode");
+      this.setLoadingScreen(false);
+      let networkStatus = this.checkIfNetworkIsAvailable();
+      if(networkStatus === true){
+      this.permissionCheck();
+      } else {
+          this.scannerAlertHandlerUI(sdkConstants.ERROR_INTERNET_CONNECTION);
+       }
+    },
+    permissionCheck : function(){
+      var permission = kony.application.checkPermission(kony.os.RESOURCE_CAMERA);
+      kony.print("ScanLib --> permission status :"+ permission.status);
+      kony.print("ScanLib --> can request permission :"+ permission.canRequestPermission);
+      if(permission.status === kony.application.PERMISSION_DENIED){
+        kony.print("ScanLib --> permission denied");
+        if(permission.canRequestPermission){
+          kony.application.requestPermission(kony.os.RESOURCE_CAMERA, this.permissionStatusCallback);
+        } else {
+          this.scannerAlertHandlerUI(sdkConstants.ENABLE_PERMISSION);
+        }
+      } else if(permission.status === kony.application.PERMISSION_GRANTED){
+          kony.print("ScanLib --> permission granted");
+          this.view.barcodeqrscanner.renderScan(this);         
+       }
+    },
+    permissionStatusCallback : function(response){
+      if(response.status === kony.application.PERMISSION_GRANTED){
+        kony.print("ScanLib --> permission granted");
+        this.initQRCodeFlow();        
+      } else {
+          this.scannerAlertHandlerUI(sdkConstants.ENABLE_PERMISSION);
+      }
+    },
+    permissionSettingCallback : function(resp){
+      if(resp){
+        kony.application.openApplicationSettings();
+      } else {
+        try{
+          this.initManualFlow();
+          this.view.barcodeqrscanner.stopScan();
+        } catch(err){
+          kony.print("Error while redirecting to Manual Onboarding: "+err);
+        }
+      }
+    },
+    scannerAlertHandler : function(resp){
+      if(resp){
+        this.initQRCodeFlow();
+      } else {
+         try{
+            kony.application.exit(0);
+          } catch(err){
+            kony.print("Error while closing the app: "+err);
+          }
+      }       
+    },
+    scannerAlertHandlerUI : function(message){
+      this.view.lblScannerAlertMessage.text = message;
+      this.view.flxScannerAlertUI.setVisibility(true);
+      this.view.forceLayout();
+    },
+    btnYesScannerAlert_onClick : function(){
+      let message = this.view.lblScannerAlertMessage.text;
+      if(message === sdkConstants.ENABLE_PERMISSION){
+        this.view.lblScannerAlertMessage.text = "";
+        this.view.flxScannerAlertUI.setVisibility(false);
+        this.permissionSettingCallback(true);        
+      }else{
+        this.view.lblScannerAlertMessage.text = "";
+        this.view.flxScannerAlertUI.setVisibility(false);
+        this.scannerAlertHandler(true);
+      }
+    },
+    btnNoScannerAlert_onClick : function(){
+      let message = this.view.lblScannerAlertMessage.text;
+      if(message === sdkConstants.ENABLE_PERMISSION){
+        this.view.lblScannerAlertMessage.text = "";
+        this.view.flxScannerAlertUI.setVisibility(false);
+        this.permissionSettingCallback(false);
+      }else{
+        this.view.lblScannerAlertMessage.text = "";
+        this.view.flxScannerAlertUI.setVisibility(false);
+        this.scannerAlertHandler(false);
+      }      
+    },
+    afterScan : function(result){
+      kony.print("ScanLib --> Inside afterScan Callback method ");
+      kony.print("ScanLib --> result from scanner"+JSON.stringify(result));
+      if(result !==null && result.includes("url") && result.includes("uid")){
+        let invCode = result;
+        kony.print("ScanLib --> QR provisioning Object :"+invCode);
+        this.setLoadingScreen(true);
+        let networkStatus = this.checkIfNetworkIsAvailable();
+        if(networkStatus === true){
+          this.nativeController.createContainer(invCode);
+        } else {
+          kony.print("ScanLib --> error internet connection");
+          this.scannerAlertHandlerUI(sdkConstants.ERROR_INTERNET_CONNECTION);
+        }                     			
+       } else {
+         kony.print("ScanLib --> error invalid qr code");
+         this.scannerAlertHandlerUI(sdkConstants.ERROR_INVALID_QR_CODE);
+        }       
+     },
+    errorHandler : function(resp){
+      kony.print("ScanLib --> Inside errorHandler");
+      if(resp){
+            this.initQRCodeFlow();   
+      } else {
+         try{
+            kony.application.exit(0);
+          } catch(err){
+            kony.print("Error while closing the app: "+err);
+          }
+      }  
+    },
+    errorCallback : function(error){
+      kony.print("ScanLib --> Inside errorCallback method: "+JSON.stringify(error));
+      if(this.isEmpty(error)){
+        kony.print("ScanLib --> Inside error isEmpty: true ");
+        this.errorHandler(true);
+      }else{
+        this.scannerAlertHandlerUI("Please click yes to continue..");
+      }    
+    },
+    onClickClose : function(){
+      try{
+        this.initManualFlow();
+        this.view.barcodeqrscanner.stopScan();
+      } catch(err){
+        kony.print("Error while redirecting to Manual Onboarding: "+err);
+      }
+    },
+    isEmpty : function(obj) {
+      if(obj === undefined || obj === null){
+        return true;
+      }
+      return JSON.stringify(obj) === JSON.stringify({});
     },
     initSingleLoginFlow : function(){
       this.view.tbxUsernameLogin.text = this.username;
@@ -257,12 +848,14 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       if(username){
         this.username = username;
       }
-      let isEnabled = this.nativeController.checkForBioAvailability();
-      if(pin == "" && !isEnabled){
-         kony.print("ApproveSDK ---> Biometric is not enabled for this user, so Staying with PIN Prompt")
-         return;
-      }
-      this.nativeController.generateOTPExplicit(pin,isEnabled);
+     let isEnabled = false;
+		if(pin === "" || pin === null){
+			isEnabled = this.nativeController.checkForBioAvailability();
+			if(!isEnabled){
+              return;
+			}
+		}
+      this.nativeController.generateOTPExplicit(pin,isEnabled,this._otpLabel);
     },
     secureCodeSuccess : function(otp){
       this.commonEventEmitter(this.secureCodeSuccess,[otp]);
@@ -270,28 +863,28 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     secureCodeFailure : function(exceptionType,message){
       this.commonEventEmitter(this.secureCodeFailure,[exceptionType,message]);
     },
-    
+
     btnSetStandardPassword_onClick: function() {
       this.setLoadingScreen(true);
       kony.print("btnSetStandardPassword_onClick init");
       var standardPassword = this.view.tbxStandardPassword.text;
       var cnfstandardPassword = this.view.tbxConfirmStandardPassword.text;
-      
-      if (standardPassword == "" || standardPassword == null) { 
+
+      if (standardPassword === "" || standardPassword === null) { 
         this.view.lblErrorStandardPassword.text = "Please enter the password";
         this.view.flxErrorStandardPassword.setVisibility(true);
         this.setLoadingScreen(false);
         return;
       }
-      if (cnfstandardPassword == "" || cnfstandardPassword == null ) {
+      if (cnfstandardPassword === "" || cnfstandardPassword === null ) {
         this.view.lblErrorStandardPassword.text = "Please confirm the password";
         this.view.flxErrorStandardPassword.setVisibility(true);
         this.setLoadingScreen(false);
         return;
       }
-      
-//      if(this.view.tbxStandardPassword.text && this.view.tbxConfirmStandardPassword.text){
-      
+
+      //      if(this.view.tbxStandardPassword.text && this.view.tbxConfirmStandardPassword.text){
+
       if (this.view.tbxConfirmStandardPassword.text !== this.view.tbxStandardPassword.text) {
         this.view.lblErrorStandardPassword.text = "Passwords do not match";
         this.view.flxErrorStandardPassword.setVisibility(true);
@@ -342,24 +935,30 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         "userId": this.userId
       };
       businessController.setStandardPassword(params,this.setStandardPasswordSucess,this.setStandardPasswordFailure);
- //     }
+      //     }
     },
     setStandardPasswordSucess: function(){
       this.setLoadingScreen(false);
       kony.print("In setStandardPasswordSucess");
       this.showSuccessScreen("Device registered successfully with standard password");
+      if(this._isRMSEnabled === true){
+          this.addOOBToUser(this.userId);
+      } 
     },
     setStandardPasswordFailure: function(){
       this.setLoadingScreen(false);
       this.showSuccessScreen("Device registered successfully without standard password");
+      if(this._isRMSEnabled === true){
+          this.addOOBToUser(this.userId);
+      } 
     },
     seqCheck: function(s) {
       // Check for sequential numerical characters
       for (let i in s)
-        if (+s[+i + 1] == +s[i] + 1 && +s[+i + 2] == +s[i] + 2) return false;
+        if (+s[+i + 1] === +s[i] + 1 && +s[+i + 2] === +s[i] + 2) return false;
       // Check for sequential alphabetical characters
       for (let i in s)
-        if (String.fromCharCode(s.charCodeAt(i) + 1) == s[+i + 1] && String.fromCharCode(s.charCodeAt(i) + 2) == s[+i + 2]) return false;
+        if (String.fromCharCode(s.charCodeAt(i) + 1) === s[+i + 1] && String.fromCharCode(s.charCodeAt(i) + 2) === s[+i + 2]) return false;
       return true;
     },
     UniqueCount: function(nonUnique) {
@@ -377,7 +976,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.setLoadingScreen(true);
       var username = this.view.tbxUsername.text;
       var activationCode = this.view.tbxActivationCode.text;
-      if(username == "") {
+      if(username === "") {
         this.setLoadingScreen(false);
         this.showError(true,sdkConstants.ERROR_USERNAME);
         return;
@@ -393,7 +992,13 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         "activationCode": activationCode,
         "username": username
       };
+      let networkStatus = this.checkIfNetworkIsAvailable();
+      if(networkStatus === true){
       businessController.validateActivatonCode(params,this.validateActivationCodeSucess,this.validateActivationCodeFailure);
+      } else {
+		this.showError(true,sdkConstants.ERROR_INTERNET_CONNECTION_GENERIC);
+        this.setLoadingScreen(false);
+       }  
     },
     validateActivationCodeSucess : function(success){
       this.userId = success.userid;
@@ -404,7 +1009,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         "UserId": userId,
         "username": username,
         "usernameWithRandomNo": `${username}.${randNo}`
-      }
+      };
       businessController.approveDeviceRegistration(params, this.approveDeviceRegistrationSuccess,this.approveDeviceRegistrationFailure);
     },
     validateActivationCodeFailure : function({ActivationCodeError}){
@@ -412,10 +1017,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.setLoadingScreen(false);
     },
     approveDeviceRegistrationSuccess : function(success){
+      
       let invCode = success.provisionMsg;
-      kony.print(this.username +` ---> ${invCode}`);
+      kony.print(`HID => Inside approveDeviceRegistrationSuccess : `+this.username +` ---> ${invCode}`);
       //let invCode = `${rawString}`;      
-      this.nativeController.createContainer(invCode);
+      this.nativeController.createContainer(invCode);         
     },
     approveDeviceRegistrationFailure : function(failure){
       this.showError(true, sdkConstants.ERROR_GENERIC);
@@ -426,6 +1032,12 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         this.view.lblErrActivationCode.text = message;
       }
       this.view.lblErrActivationCode.setVisibility(visible);
+    },
+    showErrorManual : function(visible, message = 'Something went wrong please try again'){
+      if(visible){
+        this.view.lblErrorManual.text = message;
+      }
+      this.view.flxErrManual.setVisibility(visible);
     },
     showErrorPassword : function(visible,message = 'Please enter Valid Password'){
       if(visible){
@@ -443,7 +1055,14 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
       this.view.flxErrLogin.setVisibility(visible);      
     },
-    
+    showErrorOOB : function(visible,message = 'Please enter valid OTP'){
+      this.setLoadingScreen(false);
+      if(visible){
+        this.view.lblErrorOTP.text = message;        
+      }  
+      this.view.flxErrOTP.setVisibility(visible);
+    },
+
     showErroProfileReset : function(visible,message = 'Please enter valid PIN'){
       this.setLoadingScreen(false);
       if(visible){
@@ -452,24 +1071,18 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.flxErrorConfirmPIN.setVisibility(visible);
     },
     
-    exceptionCallback : function(exceptionType,message){
-      this.setLoadingScreen(false);
-      if(message === "success"){
-        kony.print("ApproveSDKComponent ---> enableBioMetrics"); 
-        this.nativeController.enableBioMetrics(this.password);   
-        return;
-      }
-      if(exceptionType == "UpdatePassword"){
-        if(message == "updateSuccess"){
+    updatePwdCallbackInternalComponent : function(exceptionType,message){
+      if(exceptionType === "UpdatePassword"){
+        if(message === "updateSuccess"){
           this.view.flxErrorPwdPR.setVisibility(false);
           this.view.flxUpdatePassword.setVisibility(false);
           this.view.flxLogin.setVisibility(true);
-          
+
           if(this.onUpdatePasswordCB){ 
             this.onUpdatePasswordCB("success");  
           } 
         }
-      } else if(exceptionType == "InvalidPasswordException"){
+      } else if(exceptionType === "InvalidPasswordException"){
         kony.print("ApproveSDK ---> InvalidException");
         this.view.flxErrorPwdPR.setVisibility(true);
         if(message === "Same password prohibited")
@@ -486,7 +1099,105 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         if(this.onUpdatePasswordCB){
           this.onUpdatePasswordCB("invalidPassword");
         }
-      } else if(exceptionType == "AuthenticationException"){
+      }
+    },
+    
+    updatePwdCallbackInternal : function(exceptionType,message = "Something went wrong please try again"){
+        if(message.includes("104") || message.includes("too soon")){
+           message = sdkConstants.PWD_CHANGE_TO_SOON;
+        }
+        if(message == "updateSuccess"){
+          this.commonEventEmitter(this.updatePasswordSuccess,["success"]);
+        }else{
+          this.commonEventEmitter(this.updatePasswordFailure,[exceptionType,message])
+        }
+    },
+
+    exceptionCallback : function(exceptionType,message){
+      this.setLoadingScreen(false);
+      if(message === "success"){
+        kony.print("ApproveSDKComponent ---> enableBioMetrics"); 
+        this.nativeController.enableBioMetrics(this.password);   
+        return;
+      }
+      if(exceptionType === "UpdatePassword"){
+        if(message === "updateSuccess"){
+          this.view.flxErrorPwdPR.setVisibility(false);
+          this.view.flxUpdatePassword.setVisibility(false);
+          this.view.flxLogin.setVisibility(true);
+
+          if(this.onUpdatePasswordCB){ 
+            this.onUpdatePasswordCB("success");  
+          } 
+        }
+      } else if(exceptionType === "InvalidPasswordException"){
+        kony.print("ApproveSDK ---> InvalidException");
+        this.view.flxErrorPwdPR.setVisibility(true);
+        if(message === "Same password prohibited"){
+          this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_SAME_PIN;
+        }
+        else if(message ==="Password change is too soon (minimum age 1, current 0 days)"){
+          this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_PIN_CHANGE;
+        }else {
+          this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_GENERIC;
+        }
+        if(this.onUpdatePasswordCB){
+          this.onUpdatePasswordCB("invalidPassword");
+        }
+      } else if(exceptionType === "InvalidParameterException"){
+        kony.print("ApproveSDK ---> InvalidParameterException");
+        if(!this.isAndroid()){
+          if(this.state === "Manual"){
+            this.showErrorManual(true, sdkConstants.ERROR_INVALID_PARAMETER);
+          } else {
+            this.showErrorManual(true, sdkConstants.ERROR_GENERIC);
+          } 
+        }else{
+          if(this.state === "Manual"){
+          this.showErrorManual(true, sdkConstants.ERROR_INVALID_PARAMETER);
+          } else {
+            this.showErrorManual(true, sdkConstants.ERROR_GENERIC);
+          }
+        }
+      } else if(exceptionType === "RemoteException"){
+        kony.print("ApproveSDK ---> RemoteException");
+        if(!this.isAndroid()){
+          if(this.state === "Manual"){
+            this.showErrorManual(true, sdkConstants.ERROR_REMOTE_EXCEPTION);         
+            } else if(this.state === "QRCode"){
+              this.scannerAlertHandlerUI(sdkConstants.ERROR_INVALID_QR_Code);
+            } else {
+              this.showErrorManual(true, sdkConstants.ERROR_GENERIC);
+            }
+          }else{
+            if( this.state === "Manual"){
+            this.showErrorManual(true, sdkConstants.ERROR_REMOTE_EXCEPTION);         
+            }else if( this.state === "QRCode"){
+              this.scannerAlertHandlerUI(sdkConstants.ERROR_INVALID_QR_Code);
+            }else{
+              this.showErrorManual(true, sdkConstants.ERROR_GENERIC);
+            }
+          }
+      } else if(exceptionType === "ServerAuthenticationException"){
+        kony.print("ApproveSDK ---> ServerAuthenticationException");
+        if(!this.isAndroid()){
+          if(this.state === "Manual"){
+            this.showErrorManual(true, sdkConstants.ERROR_SERVER_AUTHENTICATION);         
+          }else if(this.state === "QRCode"){
+            this.scannerAlertHandlerUI(sdkConstants.ERROR_ALREADY_CONSUMED_QR_CODE);
+          }else{
+            this.showErrorManual(true, sdkConstants.ERROR_GENERIC);
+          }
+        }else{
+          if(this.state === "Manual"){
+            this.showErrorManual(true, sdkConstants.ERROR_SERVER_AUTHENTICATION);
+          }else if(this.state === "QRCode"){
+            this.scannerAlertHandlerUI(sdkConstants.ERROR_ALREADY_CONSUMED_QR_CODE);
+          }else{
+            this.showErrorManual(true, sdkConstants.ERROR_GENERIC);
+          }
+        }
+      } else if(exceptionType === "AuthenticationException"){
         kony.print("ApproveSDK ---> AuthenticationException");
         this.view.flxErrorPwdPR.setVisibility(true);
         if(message ==="Password is incorrect")
@@ -498,17 +1209,17 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         if(this.onUpdatePasswordCB){
           this.onUpdatePasswordCB("invalidPassword");
         }
-      }else {
+      } else {
         if(this.onUpdatePasswordCB){
           this.onUpdatePasswordCB("error");
         }
       }
-  },
-    
+    },
+
     checkForFingerPrintStatus(){
       var status = kony.localAuthentication.getStatusForAuthenticationMode(constants.LOCAL_AUTHENTICATION_MODE_TOUCH_ID);
       kony.print("ApproveSDKComponent ---> fingerPrint status " + status);
-      if(status != 5000){
+      if(status !== 5000){
         kony.print("Finger Print feature present but not working for the following reason " + status);
         return false;
       }
@@ -518,7 +1229,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       getProfileAge = message;
       kony.print("ApproveSDKWrapper return Profile Age " + getProfileAge);
     },
-    
+
     getKeyProfileAge : function(username){
       if(username){
         this.username = username;
@@ -528,19 +1239,19 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
       return getProfileAge;	  
     },
-    
+
     renewContainer : function(password,username){
       if(username){
         this.username = username;
       }  
       this.nativeController.renewContainer(password);
     },
-    
+
     renewContainerExceptionCB : function(tag, message){
       kony.print("ApproveSDKWrapper renewContainerExceptionCB "+ tag + message);
     },
-    
-// Reset User Profile after Expiry    
+
+    // Reset User Profile after Expiry    
     btnConfirmUserPIN_onClick(){
       let password = this.view.tbxPConfirmUserPIN.text; 
       if(password === "" || password === null) {
@@ -550,19 +1261,19 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
       this.NativeController.reNewContainer(password);            
     },    
-    
+
     passwordPromptCallback : function(passwordPolicyString, passwordPolicyObject){
       this.setLoadingScreen(false);
       this.passwordPolicy = JSON.parse(passwordPolicyObject) || {};
       if(this.passwordPolicy.hasOwnProperty("minAlpha") && +this.passwordPolicy.minAlpha === 0){
-       // this.view.tbxPassword.textInputMode = constants.TEXTBOX_INPUT_MODE_NUMERIC;
-       // this.view.tbxPassword.keyBoardStyle = constants.TEXTBOX_KEY_BOARD_STYLE_NUMBER_PAD;
+        // this.view.tbxPassword.textInputMode = constants.TEXTBOX_INPUT_MODE_NUMERIC;
+        // this.view.tbxPassword.keyBoardStyle = constants.TEXTBOX_KEY_BOARD_STYLE_NUMBER_PAD;
         this.view.tbxPassword.secureTextEntry = true;
-       // this.view.tbxConfirmPassword.textInputMode = constants.TEXTBOX_INPUT_MODE_NUMERIC;
+        // this.view.tbxConfirmPassword.textInputMode = constants.TEXTBOX_INPUT_MODE_NUMERIC;
         //this.view.tbxConfirmPassword.keyBoardStyle = constants.TEXTBOX_KEY_BOARD_STYLE_NUMBER_PAD;
         //this.view.tbxConfirmPassword.secureTextEntry = true;
       }
-      this.contextSwitch("SetPassword");
+        this.contextSwitch("SetPassword");  
     },
     policyCallback: function(passwordPolicyString, passwordPolicyObject){
       kony.print("PolicyCallback:"+JSON.parse(passwordPolicyObject));
@@ -581,7 +1292,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.setLoadingScreen(true);
       let pwd = this.view.tbxPassword.text;
       let confirmPwd = this.view.tbxConfirmPassword.text;
-      if(pwd == "" || confirmPwd == ""){
+      if(pwd === "" || confirmPwd === ""){
         let error = sdkConstants.ERROR_PWD_NOT_ENTERED;
         this.showErrorPassword(true,error);
         return;
@@ -609,42 +1320,58 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     btnBioYes_onClick : function(){
       this.view.flxBioPrompt.setVisibility(false);
       kony.print(`Biometric is enabled successfully`);
-      this.showStandardPasswordUI();
-//       this.showSuccessScreen("Device Registered Successfully with Biometrics");
-      
+      if(this.state === "QRCode" || this.state === "Manual"){
+         this.showSuccessScreen("Device Registered Successfully");
+      }else{
+        this.showStandardPasswordUI();  
+      }          
+      //       this.showSuccessScreen("Device Registered Successfully with Biometrics");
     },
     btnBioSkip_onClick : function(){
       this.view.flxBioPrompt.setVisibility(false);
       this.nativeController.disableBioMetrics();
-      this.showStandardPasswordUI();
-//       this.showSuccessScreen("Device Registered Successfully");
+      if(this.state === "QRCode" || this.state === "Manual"){
+         if(this._isRMSEnabled === true){
+              this.addOOBToUser(this.userId);
+         }
+         this.showSuccessScreen("Device Registered Successfully");
+      }else{
+        this.showStandardPasswordUI();
+      }
+            
+      //       this.showSuccessScreen("Device Registered Successfully");
     },
     bioStatusCallback : function(isEnabled,message){
       if(isEnabled){
         this.showBioMetricUI();
+      }else if(this.state === "QRCode" || this.state === "Manual"){
+         if(this._isRMSEnabled === true){
+              this.addOOBToUser(this.userId);
+          }
+         this.showSuccessScreen("Device Registered Successfully");
       }else{
         this.showStandardPasswordUI();
-//         this.showSuccessScreen("Device Registered Successfully");
+        //         this.showSuccessScreen("Device Registered Successfully");
         kony.print(`Biometric not enabled for the following reason ${message}`);
       }
     },
-    
+
     checkBioAvailablityPublic(username){
       if(username){
-         this.username = username;
+        this.username = username;
       }  
       return this.nativeController.checkForBioAvailability();
     },
     setBioStatusToEnable(password,username){
       if(username){
-         this.username = username;
+        this.username = username;
       }  
       kony.print("ApproveSDK ---> username while change Bio" + this.username);
       this.nativeController.enableBioMetrics(password);     
     },
     setBioStatusToDisable(username){
       if(username){
-         this.username = username;
+        this.username = username;
       } 
       this.nativeController.disableBioMetrics();     
     },
@@ -681,9 +1408,12 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     btnStandardPasswordYes_onClick : function(){
       this.view.flxStandardPasswordPrompt.setVisibility(false);
-//       this.showSuccessScreen("Device Registered Successful with Standard Password");
+      //       this.showSuccessScreen("Device Registered Successful with Standard Password");
     },
     btnStandardPasswordSkip_onClick : function(){
+      if(this._isRMSEnabled === true){
+          this.addOOBToUser(this.userId);
+      } 
       this.view.flxStandardPasswordPrompt.setVisibility(false);
       this.showSuccessScreen("Device registered successfully");
     },
@@ -805,6 +1535,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
           this.onLoginFlow.call(this);
         }
       }
+      this.currentContext = context;
       this.view.forceLayout();
     },
     setLoadingScreen : function(visible){
@@ -813,6 +1544,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     resetUI : function(){
       this.showError(false, "");
+      this.showErrorManual(false, "");
       this.view.tbxUsername.text = "";
       this.view.tbxActivationCode.text = "";
       this.view.tbxConfirmPassword.text = "";
@@ -820,7 +1552,9 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.tbxCurrentPIN.text = "";
       this.view.tbxPinLogin.text = "";
       this.view.tbxNewPIN.text = "";
+      this.view.tbxOTP.text = "";
       this.view.flxBioPrompt.setVisibility(false);
+      this.view.flxErrOTP.setVisibility(false);
     },
     segusers_onRowClick : function(){
       let username = this.view.segUsers.selectedRowItems[0].username;
@@ -833,12 +1567,12 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       return this.username;
     },
     deleteUserProfile : function(name){
-       kony.print("ApproveSDK ---> username to be deleted is " + name);
-       if(name){
-         this.username = name;
-       }  
-       let status = this.nativeController.deleteUserProfile();
-       return status;
+      kony.print("ApproveSDK ---> username to be deleted is " + name);
+      if(name){
+        this.username = name;
+      }  
+      let status = this.nativeController.deleteUserProfile();
+      return status;
     },
     deleteContainerCallback : function(status){
       kony.print("ApproveSDKWrapper ---> DeleteContainer Status is " + status);
@@ -853,11 +1587,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_ERROR_PIN);
       }
       else if(status === "NoBioAuth"){
-         this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_PIN);
+        this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_PIN);
       }else if(status === "FingerprintException"){
-         this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_PIN);
+        this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_PIN);
       }else {
-         this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_FAILURE);
+        this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_FAILURE);
       }
     },
     changeUIMode : function(mode){
@@ -945,10 +1679,10 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
     },
     deleteRowDetected:function(widgetInfo,rowData){      
-       var curRowData = this.view.segUsers.data[rowData.row];
-       kony.print("ApproveSDK  ----> rowData " + JSON.stringify(curRowData));
-       this.username = curRowData.username;
-       this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_CONSENSUS);
+      var curRowData = this.view.segUsers.data[rowData.row];
+      kony.print("ApproveSDK  ----> rowData " + JSON.stringify(curRowData));
+      this.username = curRowData.username;
+      this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_CONSENSUS);
     },
     showDeleteUserPrompt : function(mode=sdkConstants.DELETE_UI_MODE_HIDE){
       var config = {};
@@ -1017,17 +1751,24 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     btnDeleteUserOK_onClick : function(){
       //this.setLoadingScreen(true);
-//       if(this.isAndroid()){
-//         this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_PIN);
-//       } 
+      //       if(this.isAndroid()){
+      //         this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_SHOW_PIN);
+      //       } 
       this.nativeController.deleteContainerWithAuth("");
     },
     btnDeleteUserPINOk_onClick : function(){
       if(this.view.tbDeleteUserPin.text === "" || this.view.tbDeleteUserPin.text === null ){
-         this.view.lblErrorPinDeleteUser.text = sdkConstants.ERROR_PWD_NOT_ENTERED;
-         return;
+        this.view.lblErrorPinDeleteUser.text = sdkConstants.ERROR_PWD_NOT_ENTERED;
+        return;
       }
       this.nativeController.deleteContainerWithAuth(this.view.tbDeleteUserPin.text);
+    },
+    // To check if data network is available before hitting the api that requires internet
+    checkIfNetworkIsAvailable : function() {
+      var options = {
+        "requestWithPermission" : true
+        };
+      return kony.net.isNetworkAvailable(constants.NETWORK_TYPE_ANY, options);
     },
     isAndroid : function(){
       var deviceInfo = kony.os.deviceInfo();
@@ -1037,6 +1778,110 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       if(event){
         event.apply(this,args);
       }
+    },
+    konyAlertUI(alertHandlerMethod,message) {
+      let basicConfig = {
+            alertType : constants.ALERT_TYPE_CONFIRMATION,
+            message : message,
+            alertHandler : alertHandlerMethod
+          };
+            let pspConfig = {
+              "contentAlignment": constants.ALERT_CONTENT_ALIGN_CENTER
+            };
+            kony.ui.Alert(basicConfig, pspConfig);               
+    },
+    //Add OOB AUTH TOUSER
+    addOOBToUser : function(userId){
+      var authType = this._MFA;
+      var authenticatorType = authType === "OTP_SMS" ? "AT_OOBSMS" : "AT_OOBEML";
+      var authenticatorValue =  authType === "OTP_SMS" ? "DT_OOBSMS" : "DT_OOBEML";
+      if(authType === "OTP_HWT"){
+        authenticatorType = "AT_OTP";
+      }
+      let params = {
+        "AuthenticatorType": authenticatorType,
+        "userId": userId,
+        "AuthenticatorValue": authenticatorValue
+      };
+      businessController.addOOBToUser(params, this.addOOBToUserSuccess, this.addOOBToUserFailure);
+    },
+    addOOBToUserSuccess : function(response){
+      kony.print("RMS => Inside addOOBToUserSuccess");
+    },
+    addOOBToUserFailure : function(error){
+      kony.print("RMS => Inside addOOBToUserFailure: Error :"+JSON.stringify(error));
+      this.setLoadingScreen(false);
+    },
+    logout : function(username){
+      kony.print("RMS => Inside logout");
+      this.setLoadingScreen(true);
+      this.username = username;
+      businessController.logout(this.onLogoutSuccess.bind(this), this.onLogoutFailure.bind(this));
+    }, 
+    onLogoutSuccess : function(response){
+      kony.print("RMS => Inside onLogoutSuccess");
+      this.mfa_key = "";
+      this.client_ip ="";
+      if(this._isRMSEnabled === true){
+        this.rmsSessionLogout(this.username);
+      } else {
+        this.commonEventEmitter(this.onLogout, [response]);
+        this.setLoadingScreen(false);
+      }
+      this.contextSwitch("Login");
+      
+    }, 
+    onLogoutFailure : function(error){
+      kony.print("RMS => Inside onLogoutFailure: Error: "+JSON.stringify(error));
+      this.commonEventEmitter(this.onLogout, [error]);
+      this.setLoadingScreen(false);
+//       this.view.lblAuthStatus.text = "Failed to logout";
+//       return;
+    }, 
+    rmsSessionLogout : function(username){
+      kony.print("RMS => Inside rmsSessionLogout");
+      var session = HidRmsSDKManager.getRMSAppSessionId();
+      var platform  = this.isAndroid() ? "android" : "ios";
+      let params = {"username" : username, "session":session, "platform" : platform};
+      businessController.rmsSessionLogout(params,this.onRmsSessionLogoutSuccess,this.onRmsSessionLogoutFailure);
+    },
+    onRmsSessionLogoutSuccess: function(response){
+      kony.print("RMS => Inside onRmsSessionLogoutSuccess");
+      this.commonEventEmitter(this.onLogout, [response]);
+      this.setLoadingScreen(false);
+    },
+    onRmsSessionLogoutFailure: function(error){
+      kony.print("RMS => Inside onRmsSessionLogoutFailure: Error:"+JSON.stringify(error));
+      this.commonEventEmitter(this.onLogout, [error]);
+      this.setLoadingScreen(false);
+    },
+    
+    //Public Function to verify Password
+    verifyPassword : function(password,isBioRequired,bioString = sdkConstants.DEFAULT_BIO_STRING){
+       let isBioEnabled = this.nativeController.checkForBioAvailability()
+       if(isBioRequired){
+          if(!isBioEnabled){
+              this.commonEventEmitter(this.verifyPasswordCallback,["error",  sdkConstants.ERROR_BIO_AUTH_NOT_AVAILABLE, sdkConstants.BIOMETRIC_ERROR_CODE]);
+          }else{
+              this.nativeController.verifyPassword(null,true,bioString);
+          }
+       }else{
+         if(password == null || password == ""){
+             this.commonEventEmitter(this.verifyPasswordCallback,["error", sdkConstants.ERROR_INVALID_PIN, sdkConstants.AUTH_EXCEPTION_CODE]);
+         }else{
+             this.nativeController.verifyPassword(password,false,bioString);
+         }
+       }
+    },
+    verifyPasswordCallbackInternal : function(status, exception, exception_code){
+       this.commonEventEmitter(this.verifyPasswordCallback,[status, exception, exception_code]);
+    },
+    
+    throwCustomError : function(msg){
+      throw {
+            "type": "HID CUSTOM ERROR",
+            "message": msg
+      };
     }
-  };
+ };
 }); 

@@ -1,12 +1,12 @@
 {
     "assetPlatform": "Visualizer",
-    "assetVersion": "1.0.0",
-    "createdBy": "manishkumar.patel@hidglobal.com",
-    "createdVizVersion": "9.2.15",
-    "currentVizVersion": "9.2.15",
+    "assetVersion": "7.0.0",
+    "createdBy": "dinesh.madan@hidglobal.com",
+    "createdVizVersion": "9.2.37",
+    "currentVizVersion": "9.2.37",
     "itemCategory": "collection",
     "itemGuid": "gfaa77f37e0d4526b4c48b6412bd936f",
     "itemName": "HIDGlobalComponent",
     "libraryVersion": "libver4",
-    "modifiedBy": "savanth.andey@hidglobal.com"
+    "modifiedBy": "dinesh.madan@hidglobal.com"
 }

@@ -37,14 +37,18 @@
     "children": [
         "flxBiometric",
         "flxActivationCode",
+        "flxQRCode",
+        "flxManual",
         "flxSetPassword",
         "flxLogin",
+        "flxOOB",
         "flxUsers",
         "flxLoading",
         "flxSuccess",
         "flxUpdatePassword",
         "flxSetStandardPassword",
         "flxProfileResetUI",
+        "flxScannerAlertUI",
         "imgBg",
         "flxOpaqueBGNew"
     ],

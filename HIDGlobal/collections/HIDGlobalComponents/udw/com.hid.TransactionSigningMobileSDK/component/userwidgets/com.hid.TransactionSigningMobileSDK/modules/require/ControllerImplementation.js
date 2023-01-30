@@ -33,8 +33,8 @@ define([], function() {
            }
            nativeController.updateUsername(username);
         };
-    ControllerImplementation.prototype.signTransaction = function(values){
-         this.getNativeController().signTransaction(values);
+    ControllerImplementation.prototype.signTransaction = function(values,label = "hotp"){
+         this.getNativeController().signTransaction(values,label);
     };
     ControllerImplementation.prototype.notifyPassword = function(password,mode){
          this.getNativeController().notifyPassword(password,mode);

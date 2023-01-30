@@ -1,15 +1,15 @@
 {
     "assetPlatform": "Visualizer",
     "assetVersion": "1.0.0",
-    "createdBy": "subramanya.heggaraepaneendra@hidglobal.com",
-    "createdMFVersion": "9.5.0.0",
-    "createdVizVersion": "9.2.37",
-    "currentMFVersion": "9.5.0.0",
-    "currentVizVersion": "9.2.37",
-    "description": "",
+    "createdBy": "chakradhar.reddypakala@hidglobal.com",
+    "createdMFVersion": "9.2.2.2",
+    "createdVizVersion": "9.1.8",
+    "currentMFVersion": "9.2.2.2",
+    "currentVizVersion": "9.1.8",
+    "description": "Web Component",
     "itemCategory": "udw",
-    "itemGuid": "b85e39ab574a48748d5041e3f02c94b5",
+    "itemGuid": "cf3b99254bf143c2bc1fc6a159c52bfa",
     "itemName": "com.hid.userManagement",
     "libraryVersion": "libver4",
-    "modifiedBy": "subramanya.heggaraepaneendra@hidglobal.com"
+    "modifiedBy": "chakradhar.reddypakala@hidglobal.com"
 }

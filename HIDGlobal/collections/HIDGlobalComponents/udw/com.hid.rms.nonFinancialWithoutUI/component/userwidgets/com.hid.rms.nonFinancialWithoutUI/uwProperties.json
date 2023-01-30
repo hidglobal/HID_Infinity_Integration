@@ -1,0 +1,158 @@
+{
+    "classname": "nonFinancialWithoutUI",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "e2cff35f6b8e47aea51457421015881c",
+                    "paramList": [],
+                    "propertyKey": "actionCreate",
+                    "pw": {
+                        "displayName": "actionCreate",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "jc96efc6f2b54feca05a013314a34689",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "abadd4d92c214c25b0fbf440467adf38",
+                    "paramList": [],
+                    "propertyKey": "actionSign",
+                    "pw": {
+                        "displayName": "actionSign",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "jc96efc6f2b54feca05a013314a34689",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "d89861c22f274120a56812cd7524ca14",
+                    "paramList": [],
+                    "propertyKey": "actionUpdate",
+                    "pw": {
+                        "displayName": "actionUpdate",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "jc96efc6f2b54feca05a013314a34689",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "e0caebb4111b4480a1fdd499ec68aa29",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "actionCreateSuccess",
+                    "pw": {
+                        "displayName": "actionCreateSuccess",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "jc96efc6f2b54feca05a013314a34689",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "g35bd46a2bab41af9126218f9d351579",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "actionCreateFailure",
+                    "pw": {
+                        "displayName": "actionCreateFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "jc96efc6f2b54feca05a013314a34689",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "a285cf6a2e0c4b728d8614fe8fca8d18",
+                    "paramList": [],
+                    "propertyIndex": 3,
+                    "propertyKey": "actionSignSuccess",
+                    "pw": {
+                        "displayName": "actionSignSuccess",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "jc96efc6f2b54feca05a013314a34689",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "f606a870ba264e3f83be3750c58f5ef0",
+                    "paramList": [],
+                    "propertyIndex": 4,
+                    "propertyKey": "actionSignFailure",
+                    "pw": {
+                        "displayName": "actionSignFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "jc96efc6f2b54feca05a013314a34689",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "C8hDRqP6KY",
+                    "group": "General",
+                    "kuid": "jdb50df5e34541c38da2ae1f146b8319",
+                    "originalPropertyKey": "tmCookieTag",
+                    "propertyIndex": 1,
+                    "propertyKey": "tmCookieTag",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "tmCookieTag",
+                        "toolTip": "RMS Device Cookie Key",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "jc96efc6f2b54feca05a013314a34689",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "TS01d4cc80",
+                    "group": "General",
+                    "kuid": "e272b610afd446ac83830a89e6b76133",
+                    "originalPropertyKey": "tmCookieSid",
+                    "propertyIndex": 2,
+                    "propertyKey": "tmCookieSid",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "tmCookieSid",
+                        "toolTip": "RMS Device Cookie Value",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "jc96efc6f2b54feca05a013314a34689",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hid.rms",
+    "version": "1.0.0"
+}

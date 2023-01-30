@@ -1,0 +1,21 @@
+{
+    "AS_Button_ee4da82774ec4d16b1f75e3fc52c4404": {
+        "id": "AS_Button_ee4da82774ec4d16b1f75e3fc52c4404",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_e538245c3f534b9f94edbe8532acfbd8",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "loginPassword",
+            "display": "loginPassword",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

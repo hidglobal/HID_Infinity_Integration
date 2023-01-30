@@ -1,0 +1,214 @@
+{
+    "classname": "payments",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "h2396afcdaa341b29c598d3a47432543",
+                    "paramList": [],
+                    "propertyKey": "paymentCreate",
+                    "pw": {
+                        "displayName": "paymentCreate",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "ha31ff0cf0d246f1a81452a05f87ad22",
+                    "paramList": [],
+                    "propertyKey": "paymentSign",
+                    "pw": {
+                        "displayName": "paymentSign",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "faddb0eae9964c8481b7e1a5dc3ec68e",
+                    "paramList": [],
+                    "propertyKey": "paymentUpdate",
+                    "pw": {
+                        "displayName": "paymentUpdate",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "c1511747ac9c4985b059fb883b439a3c",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onRMSPaymentAccept",
+                    "pw": {
+                        "displayName": "onRMSPaymentAccept",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "bdd57764f96c48a39fe59a0b5e28133b",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onRMSPaymentDecline",
+                    "pw": {
+                        "displayName": "onRMSPaymentDecline",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "j249c25bc6fd4deaad384c95f5b588be",
+                    "paramList": [],
+                    "propertyIndex": 3,
+                    "propertyKey": "onRMSFailure",
+                    "pw": {
+                        "displayName": "onRMSFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "bbca3b18d3bb4f97abc2e4b52e39c3ea",
+                    "paramList": [],
+                    "propertyIndex": 4,
+                    "propertyKey": "onRMSSignSuccess",
+                    "pw": {
+                        "displayName": "onRMSSignSuccess",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "a3bab06bd4794c6e891152db8a799272",
+                    "paramList": [],
+                    "propertyIndex": 5,
+                    "propertyKey": "onRMSSignFailure",
+                    "pw": {
+                        "displayName": "onRMSSignFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "web",
+                    "group": "General",
+                    "kuid": "a20f375d50b24300b3b241ae62f54be1",
+                    "originalPropertyKey": "platform",
+                    "propertyIndex": 2,
+                    "propertyKey": "platform",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "platform",
+                        "uiRepresentation": "Label-Combobox"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "list selector",
+                    "value": [
+                        "web",
+                        "mobile"
+                    ]
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "{}",
+                    "group": "General",
+                    "kuid": "a44b839e740f491c87180b2d443c3eaf",
+                    "originalPropertyKey": "customPaymentDeclineTags",
+                    "propertyIndex": 5,
+                    "propertyKey": "customPaymentDeclineTags",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "customPaymentDeclineTags",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "jsonEditor-Retriever",
+                                "dataUpdaterId": "jsonEditor-Updater",
+                                "popupId": "jsonEditor-Popup",
+                                "type": "jsonEditor"
+                            }
+                        },
+                        "uiRepresentation": "Label-Button"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "json",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "C8hDRqP6KY",
+                    "group": "General",
+                    "kuid": "a47998a1634249209b25cad08068eba7",
+                    "originalPropertyKey": "tmCookieTag",
+                    "propertyIndex": 6,
+                    "propertyKey": "tmCookieTag",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "tmCookieTag",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "TS01d4cc80",
+                    "group": "General",
+                    "kuid": "ea2e55b494064bc3811e5d8cb7c42c6c",
+                    "originalPropertyKey": "tmCookieSid",
+                    "propertyIndex": 7,
+                    "propertyKey": "tmCookieSid",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "tmCookieSid",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "j98aa7c71599415caefb847269256980",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hid.rms",
+    "version": "1.0.0"
+}

@@ -52,12 +52,17 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
       return false;
     } 
   };
-  NativeControllerIOS.prototype.generateOTP = function(pwd,isBiometricEnabled){
+  NativeControllerIOS.prototype.generateOTP = function(pwd,isBiometricEnabled,otpLabel = "hotp"){
     kony.print("ApproveSDK ---> inside generateOTP");
-    this.approveSDKWrapper.generateOTPIsBioEnabledWithSuccessCBFailureCB(pwd,isBiometricEnabled,this.componentInstance.generateOTPSuccess,this.componentInstance.generateOTPFailure);
+    //this.approveSDKWrapper.generateOTPIsBioEnabledWithSuccessCBFailureCB(pwd,isBiometricEnabled,this.componentInstance.generateOTPSuccess,this.componentInstance.generateOTPFailure);
+    this.approveSDKWrapper.generateOTPIsBioEnabledWithSuccessCBFailureCBWithOTPLabel(pwd,isBiometricEnabled,this.componentInstance.generateOTPSuccess,this.componentInstance.generateOTPFailure,otpLabel);
+    //this.approveSDKWrapper.generateOTPIsBioEnabledWithSuccessCBFailureCBWithOTPLabel(password, bioEnabled, success_CB, failure_CB, otpLabel)
   };
   NativeControllerIOS.prototype.updatePassword = function(oldPassword,newPassword){
-    this.approveSDKWrapper.updatePasswordNewPasswordExceptionCallbackIsPasswordPolicy(oldPassword,newPassword,this.componentInstance.exceptionCallback,true);
+    this.approveSDKWrapper.updatePasswordNewPasswordExceptionCallbackIsPasswordPolicy(oldPassword,newPassword,this.componentInstance.updatePwdCallbackInternalComponent,true);
+  };
+  NativeControllerIOS.prototype.updatePasswordExplicit = function(oldPassword,newPassword){
+    this.approveSDKWrapper.updatePasswordNewPasswordExceptionCallbackIsPasswordPolicy(oldPassword,newPassword,this.componentInstance.updatePwdCallbackInternal,true);
   };
   NativeControllerIOS.prototype.getPasswordPolicy = function(){
      return this.approveSDKWrapper.getPasswordPolicy();
@@ -68,11 +73,16 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
   NativeControllerIOS.prototype.deleteUserProfile = function(){
       return this.approveSDKWrapper.deleteContainer();
   };
-  NativeControllerIOS.prototype.generateOTPExplicit = function(pwd,isBiometricEnabled){
-      return this.approveSDKWrapper.generateOTPIsBioEnabledWithSuccessCBFailureCB(pwd,isBiometricEnabled,this.componentInstance.secureCodeSuccess,this.componentInstance.secureCodeFailure);
+  NativeControllerIOS.prototype.generateOTPExplicit = function(pwd,isBiometricEnabled,otpLabel = "hotp"){
+     // return this.approveSDKWrapper.generateOTPIsBioEnabledWithSuccessCBFailureCB(pwd,isBiometricEnabled,this.componentInstance.secureCodeSuccess,this.componentInstance.secureCodeFailure);
+    return this.approveSDKWrapper.generateOTPIsBioEnabledWithSuccessCBFailureCBWithOTPLabel(pwd,isBiometricEnabled,this.componentInstance.secureCodeSuccess,this.componentInstance.secureCodeFailure,otpLabel);
   };
   NativeControllerIOS.prototype.deleteContainerWithAuth = function(password){
      this.approveSDKWrapper.deleteContainerWithAuthWithCallback(password, this.componentInstance.deleteContainerCallback);
+  };
+  NativeControllerIOS.prototype.verifyPassword = function(password, isBiometricEnabled){
+    // this.sdkWrapperObj.verifyPassword(password,isBiometricEnabled,this.componentInstance.verifyPasswordCallbackInternal);   
+     this.approveSDKWrapper.verifyPasswordIsBioEnabledWithCallback(password,isBiometricEnabled,this.componentInstance.verifyPasswordCallbackInternal);
   }
   return NativeControllerIOS;
 

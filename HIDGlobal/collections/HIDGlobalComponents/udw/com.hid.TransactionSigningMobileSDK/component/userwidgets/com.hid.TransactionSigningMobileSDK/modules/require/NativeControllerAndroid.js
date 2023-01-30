@@ -8,8 +8,8 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
           NativeController(componentInstance);
     };
     Inherits(NativeControllerAndroid, NativeController);
-    NativeControllerAndroid.prototype.signTransaction =function(values){
-       this.sdkWrapperObj.signTransaction(values,this.componentInstance.pwdPromtCallback,this.componentInstance.SCB_signTransaction,this.componentInstance.FCB_signTransaction,this.konyContext);
+    NativeControllerAndroid.prototype.signTransaction =function(values,label = "hotp"){
+       this.sdkWrapperObj.signTransaction(values,this.componentInstance.pwdPromtCallback,this.componentInstance.SCB_signTransaction,this.componentInstance.FCB_signTransaction,this.konyContext,label);
     };
     NativeControllerAndroid.prototype.updateUsername =function(username){
       this.sdkWrapperObj.setUsername(username);

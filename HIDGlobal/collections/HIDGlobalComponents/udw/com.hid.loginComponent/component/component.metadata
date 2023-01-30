@@ -11,7 +11,7 @@
             [
                 "desktop",
                 "segments",
-                "CopyCopyCopytmpPushDevice"
+                "CopyCopyCopyCopytmpPushDevice"
             ]
         ],
         "actions": {
@@ -40,16 +40,22 @@
                     "actionName": "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d",
                     "key": "ide_onClick"
                 },
-                "AS_Button_c3f0065bccf94e0c91298e9f6485b3b0": {
-                    "channel": "common",
-                    "actionId": "AS_Button_c3f0065bccf94e0c91298e9f6485b3b0",
-                    "actionName": "AS_Button_c3f0065bccf94e0c91298e9f6485b3b0",
-                    "key": "ide_onClick"
-                },
                 "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279": {
                     "channel": "common",
                     "actionId": "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279",
                     "actionName": "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_ee4da82774ec4d16b1f75e3fc52c4404": {
+                    "channel": "common",
+                    "actionId": "AS_Button_ee4da82774ec4d16b1f75e3fc52c4404",
+                    "actionName": "AS_Button_ee4da82774ec4d16b1f75e3fc52c4404",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_fdebf8844b7f4e3585f246f8c2fe78e7": {
+                    "channel": "common",
+                    "actionId": "AS_Button_fdebf8844b7f4e3585f246f8c2fe78e7",
+                    "actionName": "AS_Button_fdebf8844b7f4e3585f246f8c2fe78e7",
                     "key": "ide_onClick"
                 },
                 "AS_Button_b0ebddf304d6460b905404d6b496e0df": {
@@ -85,40 +91,58 @@
             }
         },
         "skins": [
-            "CopyCopyCopyCopyCopyCopyslFontAwesomeIcon",
+            "CopyCopyCopyCopyCopyCopyCopyslFontAwesomeIcon",
+            "CopysknLockIcon2",
+            "CopysknFontIconUsername2",
+            "CopyslFontUsernameIcon",
             "slForm",
-            "CopyCopyCopysknCancelButton",
-            "CopyCopyCopyCopybtnBlueFocus0fda65088e3244d",
-            "CopyCopyCopybtnBlueFocus0a808daafcb5c4f",
-            "CopyCopyCopysknButton",
-            "CopyCopyCopybtnWHiteFocus0f82335ba342f42",
-            "CopyCopyCopyCopyCopybtnBlueFocus2",
-            "CopyCopyCopyCopybtnWHiteFocus4",
-            "CopyCopyCopyCopybtnWHiteFocus5",
+            "CopyCopyCopyCopysknCancelButton",
+            "CopyCopyCopyCopyCopybtnBlueFocus0jaae1bfbae4043",
+            "CopyCopyCopyCopybtnBlueFocus0g4190fdbba9a4c",
+            "CopyCopyCopyCopysknButton",
+            "CopyCopyCopyCopybtnWHiteFocus0f4ca203221a54a",
+            "CopyCopyCopyCopyCopyCopybtnBlueFocus4",
+            "CopyCopyCopyCopyCopybtnWHiteFocus0f7547ced1b6d44",
+            "CopysknLoginButton2",
+            "CopyCopyCopyCopyCopybtnWHiteFocus0f3ba9a7d5f4d42",
             "slFbox",
-            "CopyCopyCopyCopyCopyslFbox0d4250a64e56d4a",
-            "CopyCopyCopyCopyCopyslFbox0b717d0b323c449",
-            "CopyCopyCopyCopyCopyslFbox0a580b60c6f4948",
-            "CopyCopyCopyCopyslFbox0bb3be3cd6b354f",
-            "CopyCopyCopyCopyCopyslFbox0f8fd990e9b8f43",
-            "CopyCopyCopysknHIDNotification4",
-            "CopyCopyCopysknHIDError",
-            "CopyCopyCopyCopyCopydefLabel0g82ecf83107842",
-            "CopyCopyCopylblWelcome",
-            "CopyCopyCopyCopyCopydefLabel0ibe7183181b649",
-            "CopyCopyCopyslFbox0fbc5abd14d1a42",
+            "CopyCopyCopyCopyCopyCopyslFbox0j0924207057348",
+            "CopyCopyCopyCopyCopyCopyslFbox0f464389f22b840",
+            "CopyCopyCopyCopyCopyCopyslFbox0c2e80ac404ee41",
+            "CopysknFlxLoginButton2",
+            "CopyCopyCopyCopyCopyslFbox0ddedad4a96604e",
+            "CopysknFlxPIN2",
+            "CopyCopyCopyCopyCopyCopyslFbox0a14f694915b343",
+            "CopysknFlxSecureCode",
+            "CopysknFlxUserNameOOBPIN2",
+            "CopysknFlxUsernameSecure",
+            "CopyCopyCopyCopysknHIDNotification",
+            "CopyCopyCopyCopysknHIDError",
+            "CopysknHIDLoginError",
+            "CopysknHIDError",
+            "CopyCopyCopyCopyCopyCopydefLabel0f666a70d62814e",
+            "CopysknLblSigntoAccOOBPIN2",
+            "CopysknLblSigntoAccSecure",
+            "CopylblWelcome",
+            "CopyCopyCopyCopyCopyCopydefLabel0a3fd74bebc7c4c",
+            "CopylblWelcomeOOBPIN2",
+            "CopyCopyCopyCopyslFbox0a3ea383920ed47",
             "seg2Focus",
-            "CopyCopyCopyseg5",
+            "CopyCopyCopyCopyseg",
             "sliPhoneSegmentHeader",
-            "CopyCopyCopyCopyCopydefTextBoxNormal",
-            "CopyCopyCopyCopydefTextBoxNormal3",
+            "CopysknTbxPIN2",
+            "CopyCopyCopyCopyCopytbxPassword0d8a5539f9f4b49",
+            "CopyCopyCopyCopyCopyCopytbxPassword0c1008efcf6354c",
+            "CopyCopyCopyCopyCopyCopydefTextBoxNormal",
+            "CopyCopyCopyCopyCopydefTextBoxNormal3",
             "defTextBoxFocus",
-            "CopyCopyCopyCopyCopytbxPassword1",
-            "CopyCopyCopyCopytbxPassword0a45450a5f07643",
-            "CopyCopyCopyCopyCopytbxPassword2",
-            "CopyCopyCopyCopyslFbox0af82a66e1e414c",
+            "CopyCopyCopyCopyCopyCopytbxPassword0e702c0df1eba42",
+            "CopysknTbxSecure",
+            "CopysknTbxPassword2",
+            "CopyskntbxUsernameSecure",
+            "CopyCopyCopyCopyCopyslFbox0d3dbb89843c145",
             "defLabel",
-            "CopyCopyCopyCopydefLabel0fd69bd354bde40"
+            "CopyCopyCopyCopyCopydefLabel0f16ba160b4be45"
         ],
         "images": [
             "pageoffdot.png",
@@ -136,7 +160,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2022-08-03T06:13:38.565Z",
+    "createdOn": "2023-01-24T09:45:57.889Z",
     "createdVizVersion": "9.2.37",
     "project_version": "sprint39"
 }

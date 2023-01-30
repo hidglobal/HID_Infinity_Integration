@@ -1,0 +1,29 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid.rms",
+        "uw_classname": "nonFinancialWithoutUI",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.rms.nonFinancialWithoutUI"
+        ],
+        "templates": [],
+        "actions": {},
+        "skins": [
+            "slForm",
+            "slFbox"
+        ],
+        "images": [],
+        "fonts": [],
+        "nativeApis": 0,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2023-01-27T06:00:32.085Z",
+    "createdVizVersion": "9.2.37",
+    "project_version": "sprint39"
+}

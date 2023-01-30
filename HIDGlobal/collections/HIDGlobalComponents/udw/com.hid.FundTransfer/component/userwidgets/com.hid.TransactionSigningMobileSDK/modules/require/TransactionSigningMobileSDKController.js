@@ -22,11 +22,23 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       defineSetter(this, "mode", function(val) {
         this._mode = val;
       });
+      defineGetter(this, "otpLabel", function(){
+        return this._otpLabel;
+      }); 
+      defineSetter(this, "otpLabel", function(val){
+        if(!["hotp","totp"].some(v=>v===val) ){
+          throw {
+            "type": "CUSTOM",
+            "message": "otpLabel property is Invalid"
+          };
+        }
+        this._otpLabel = val;
+      });
     },
     signTransaction(values){
       this.valueArray = values;
       let valueStr = values.join(sdkConstants.TS_VALUES_SEPERATOR);
-      this.nativeController.signTransaction(valueStr);
+      this.nativeController.signTransaction(valueStr,this._otpLabel);
     },
     
     pwdPromtCallback : function(eventType,eventCode){

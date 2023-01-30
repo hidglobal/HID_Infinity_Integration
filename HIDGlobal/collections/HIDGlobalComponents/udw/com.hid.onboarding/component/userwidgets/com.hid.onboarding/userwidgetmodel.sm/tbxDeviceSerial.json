@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "Device Serial Number",
-    "_skin_": "sa648abd704e40bf882d0fd2b6768183",
+    "_skin_": "sf34806e61634623b0e9b9abe07a5207",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -46,10 +46,10 @@
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {
-        "placeholderSkin": "sdb7003a2b2a4ea9a280e9c7791f114d"
+        "placeholderSkin": "sd0d1c6d1c804739ae9350462e2da5d3"
     },
     "disabledSkins": {
-        "focusSkin": "s1e077dd84a84b7c93c28295531cf4e7"
+        "focusSkin": "sab7a9bd953f441586e7969431b1e047"
     },
     "focusskin": null,
     "id": "tbxDeviceSerial",
@@ -62,7 +62,7 @@
     "name": "kony.ui.TextBox2",
     "parent": "flxHWdevicenumber",
     "pf": "userwidgetmodel",
-    "placeholderskin": "sdb7003a2b2a4ea9a280e9c7791f114d",
+    "placeholderskin": "sd0d1c6d1c804739ae9350462e2da5d3",
     "responsiveData": {},
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

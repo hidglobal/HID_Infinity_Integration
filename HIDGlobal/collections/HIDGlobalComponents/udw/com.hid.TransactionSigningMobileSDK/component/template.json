@@ -6,6 +6,7 @@
     "sourceChannel": "common",
     "templateDef": {
         "DNDConfig": null,
+        "__parentReadjusting__": false,
         "_height_": {
             "type": "string",
             "value": "100%"
@@ -64,5 +65,5 @@
         "wType": "FlexContainer",
         "widgetalignment": 1
     },
-    "userwidgetKUID": "u6e201278526489db4090a4f321e7232"
+    "userwidgetKUID": "u36a03bac339445a91e6434fac6abf57"
 }

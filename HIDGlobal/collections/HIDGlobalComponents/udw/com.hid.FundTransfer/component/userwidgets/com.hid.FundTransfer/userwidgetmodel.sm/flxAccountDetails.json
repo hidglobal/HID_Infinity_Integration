@@ -53,7 +53,7 @@
     "kuid": "ff8e9e5481ce4e5b9ac02162e1d02105",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
-    "parent": "FundTransfer",
+    "parent": "flxNonRMS",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

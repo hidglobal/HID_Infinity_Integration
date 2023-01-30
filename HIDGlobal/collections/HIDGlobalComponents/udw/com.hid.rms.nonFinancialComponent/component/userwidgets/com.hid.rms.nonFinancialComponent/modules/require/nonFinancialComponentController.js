@@ -81,7 +81,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
           this.tm_tag = decodeCookie[i].split('=')[1];
         }
       }
-      if(this.client_ip.trim() != ""){
+   //   if(this.client_ip.trim() != ""){
         const rmsLoad = {
           "tm_sid" : this.tm_sid,
           "tm_tag" : this.tm_tag,
@@ -89,9 +89,9 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
           "app_session_id" : this.app_session_id,
         };
         NonFinancialPresentationController.rmsActionCreate(this.username,this.actionType,this.rmsActionSucess,this.rmsActionFailure,rmsLoad);
-      }else{
-         this.GetMyIpFunction();
-      }
+     // }else{
+     //    this.GetMyIpFunction();
+     // }
     },
     GetMyIpFunction: function(){
       try{

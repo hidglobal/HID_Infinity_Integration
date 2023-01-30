@@ -44,6 +44,35 @@
                     "nfiversion": "3.0",
                     "enable": false
                 }
+            },
+            "15.0": {
+                "HIDRMSWrapper-iOS-15.0": {
+                    "title": "HIDRMSWrapper",
+                    "platform": "iOS",
+                    "os": "15.0",
+                    "isDefault": false,
+                    "filename": "HIDRMSWrapper-iOS-15.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": false
+                },
+                "HID_Approve_SDK-iOS-15.0": {
+                    "title": "HID_Approve_SDK",
+                    "platform": "iOS",
+                    "os": "15.0",
+                    "isDefault": false,
+                    "filename": "HID_Approve_SDK-iOS-15.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": false
+                },
+                "HIDApproveSDKWrapper-iOS-15.0": {
+                    "title": "HIDApproveSDKWrapper",
+                    "platform": "iOS",
+                    "os": "15.0",
+                    "isDefault": false,
+                    "filename": "HIDApproveSDKWrapper-iOS-15.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": false
+                }
             }
         },
         "Android": {

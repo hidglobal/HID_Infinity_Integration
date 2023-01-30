@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s882bb1aea9c4b1392357880ad3d15be",
+    "_skin_": "s416270386f24585a6be8d6fe14029c7",
     "_text_": "Cancel",
     "_top_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s979024f00df42b0a404417ba5d8953a",
+    "focusskin": "sd78ea668f0943089604d52e73950c5e",
     "id": "btnCancelApprove",
     "ide_onClick": "AS_Button_f81a7a839abc4b228e68d33a1cd170b7",
     "info": null,
