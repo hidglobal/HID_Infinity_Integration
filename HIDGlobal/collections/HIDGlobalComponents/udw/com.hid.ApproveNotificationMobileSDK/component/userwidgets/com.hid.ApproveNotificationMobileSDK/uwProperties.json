@@ -34,7 +34,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "ad0f8830211b487f824b467b1fc6966a",
+                    "kuid": "e48959a10e2143a6a4dfbb2757f04196",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "onCompletion",
@@ -47,12 +47,25 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "c266f6502561450b9a7bba0bacf6edf2",
+                    "kuid": "e6ff7552a80044e48acee8f15a2027bc",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "onRetrieveNotificationsCallback",
                     "pw": {
                         "displayName": "onRetrieveNotificationsCallback",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "f6763bd5ab62441b99d945b85b10f5d2",
+                    "paramList": [],
+                    "propertyIndex": 3,
+                    "propertyKey": "onUpdatePasswordCB",
+                    "pw": {
+                        "displayName": "onUpdatePasswordCB",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",

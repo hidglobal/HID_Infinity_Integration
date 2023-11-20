@@ -11,6 +11,22 @@ define([`com/hid/userManagement/UserManagementBusinessController`], function(Use
     let params = {"DeviceId" : deviceId, "status" : status };
     UserManagementBusinessController.updateDeviceStatus(params, S_CB, F_CB);
   };
+  
+  UserManagementPresentationController.prototype.deleteDevice = function(deviceId, S_CB, F_CB){
+    let params = {"deviceId" : deviceId};
+    UserManagementBusinessController.deleteDevice(params, S_CB, F_CB);
+  };
+  
+  UserManagementPresentationController.prototype.unassignDevice = function(deviceId,status,owner, S_CB, F_CB){
+    let params = {"deviceId" : deviceId , "status" : status , "owner" : owner};
+    UserManagementBusinessController.assignUnassignDevice(params, S_CB, F_CB);
+  };
+  
+  UserManagementPresentationController.prototype.assignDevice = function(deviceId, S_CB, F_CB){
+    let params = {"deviceId" : deviceId , "status" : status , "owner" : owner};
+    UserManagementBusinessController.assignUnassignDevice(params, S_CB, F_CB);
+  };
+
 
   UserManagementPresentationController.prototype.updateFriendlyName = function(deviceId, newName, S_CB, F_CB){
     let params = {"deviceId" : deviceId, "friendlyName" : newName};

@@ -43,6 +43,12 @@ define([], function() {
     ControllerImplementation.prototype.retrievePendingNotifications = function(){
       return this.getNativeController().retrievePendingNotifications();
     };
+    ControllerImplementation.prototype.updatePassword =function(oldPassword,newPassword){
+      this.getNativeController().updatePassword(oldPassword,newPassword);
+    };
+    ControllerImplementation.prototype.getPasswordPolicy =function(){
+      return this.getNativeController().getPasswordPolicy();
+    };
   };
   return ControllerImplementation;
 });

@@ -30,7 +30,12 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
       alert("Error " + JSON.stringify(e));
     }
   };
-  
+  NativeControllerIOS.prototype.updatePassword = function(oldPassword,newPassword){
+    this.approveSDKWrapper.updatePasswordNewPasswordExceptionCallbackIsPasswordPolicy(oldPassword,newPassword,this.componentInstance.updatePwdCallbackInternalComponent,true);
+  };
+  NativeControllerIOS.prototype.getPasswordPolicy = function(){
+     return this.approveSDKWrapper.getPasswordPolicy();
+  };
   NativeControllerIOS.prototype.updateUsername =function(username){
       this.approveSDKWrapper.setUsername(username);
   };

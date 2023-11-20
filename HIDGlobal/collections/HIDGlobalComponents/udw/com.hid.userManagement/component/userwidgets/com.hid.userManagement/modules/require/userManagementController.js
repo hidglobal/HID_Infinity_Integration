@@ -1,4 +1,22 @@
 define([`com/hid/userManagement/UserManagementPresentationController`], function(UserManagementPresentationController) {
+  const EventEmitter = {
+      mandatoryEvent : {
+        emit : function(event, eventName, args){
+            if(!event){
+              throwCustomException(`Configuration Error, ${eventName} is not subscribed`);
+              return;
+            }
+            event.apply(this, args);
+        }
+      },
+      optionalEvent : {
+        emit : function(event, eventName,args){
+           if(event){
+             event.apply(this,args);
+           }
+        }
+      }
+  };
   return {
     constructor: function(baseConfig, layoutConfig, pspConfig) {        
       this.view.segmentDevices.data = [];
@@ -22,8 +40,10 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
       });
     },
     policy : "",
-
-    loadUserManagement : function(){
+    sessionId : "",
+	actionType :"",
+    loadUserManagement : function(sessionId){
+      this.sessionId = sessionId;
       this.commonEventHandler(this.showLoading, "");
       this.getPasswordPolicy(this.getUserDevices);
     },
@@ -47,7 +67,8 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
             "skin" : data.active ? "sknSuspend" : "sknActive"},
           "edit" : {"isVisible" : true},
           "imgOk" : {"isVisible" : false},
-          "imgCancel" : {"isVisible" : false}
+          "imgCancel" : {"isVisible" : false},
+          "imgDeleteDevice" : {"isVisible": true}
         }));       
 
         let widgetDataMap = {
@@ -60,7 +81,8 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
           "btnChangeStatus" : "changeStatus",
           "Edit" : "edit",
           "imgOk" : "imgOk",
-          "imgCancel" : "imgCancel"
+          "imgCancel" : "imgCancel",
+          "imgDeleteDevice": "imgDeleteDevice"
         };
         this.view.segmentDevices.widgetDataMap = widgetDataMap;         
         this.view.segmentDevices.data = deviceData;        
@@ -91,17 +113,122 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
       rowData.imgCancel = {"isVisible" : false};
       this.view.segmentDevices.setDataAt(rowData, context.row, context.section);
     },
+    
+    deletedeviceButtonClick: function(context){
+		if (this.view.segmentDevices.data.length === 1){
+          EventEmitter.mandatoryEvent.emit(this.deleteFailure, "deleteFailure", ["Delete Device Failed, Only One Device left!"]);
+
+        }
+		else{
+            var rowData = this.view.segmentDevices.data[context.row];
+            this.commonEventHandler(this.showLoading, "");
+            this.actionType = "Delete_Device";
+            this.view.nonFinancialComponent.rmsDeleteStatus = status => {
+              this.commonEventHandler(this.dismissLoading, "");
+              if (status.status === "USER-BLOCK"){
+                alert("Cannot delete device User Blocked");
+                }
+              else if (status.status === "STEP-DOWN"){
+                this.unassignDevice(rowData.deviceId);
+                }
+              else{
+                var mapData = this.view.segmentDevices.data;
+                var listData = [];
+                for (let data = 0; data < mapData.length ; data++){
+                    if (mapData[data].deviceId !== rowData.deviceId){
+                        if (mapData[data].status1.isVisible === true){
+                            listData.push(mapData[data]);
+                            }
+                        }
+                    }
+                if (listData.length === 0){
+                    EventEmitter.mandatoryEvent.emit(this.deleteFailure, "deleteFailure", ["No Active Device To Send Approve Notification"]);
+                    }
+                else{
+                    var rowDataObject = {deviceId : rowData.deviceId};
+                    listData.unshift(rowDataObject);
+                    EventEmitter.mandatoryEvent.emit(this.setDevice, "setDevice", [listData]);
+                    }
+                }
+
+            };
+            this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId);
+        }
+    },
+    
+    //Public Method
+    unassignDevice: function(deviceId){
+      this.commonEventHandler(this.showLoading, "");
+      UserManagementPresentationController.unassignDevice(deviceId,"SUSPENDED","",
+                                                         success => this.unassignDeviceSuccess(deviceId,success),
+                                                         error => this.unassignDeviceError(error)
+                                                         );
+      
+    },
+    
+    unassignDeviceSuccess: function(deviceId,response){
+      this.deleteDevice(deviceId);
+    },
+    
+    unassignDeviceError: function(error){
+      this.commonEventHandler(this.dismissLoading, "");
+      EventEmitter.mandatoryEvent.emit(this.deleteFailure, "deleteFailure", ["Delete Device Failed, Something Went Wrong!!"]);
+
+    },
+    
+    assignDevice: function(deviceId){
+      UserManagementPresentationController.assignDevice(deviceId,"ACTIVE",this._username,
+                                                        success => {this.commonEventHandler(this.dismissLoading, "");
+                                                                    },
+                                                        error => {this.commonEventHandler(this.dismissLoading, "");
+                                                                   alert(JSON.stringify(error));
+                                                                 }
+                                                         );
+      
+    },
+    
+    
+    deleteDevice : function(deviceId){
+      UserManagementPresentationController.deleteDevice(deviceId,
+                                                        success => this.deleteDeviceSuccess(success), 
+                                                        error =>  this.deleteDeviceError(deviceId,error)
+                                                        );
+      
+    },
+    
+    deleteDeviceSuccess : function(response){
+      this.getUserDevices();
+      EventEmitter.mandatoryEvent.emit(this.deleteSuccess, "deleteSuccess", []);
+    },
+    
+    deleteDeviceError : function(deviceId,response){
+      this.assignDevice(deviceId);
+      EventEmitter.mandatoryEvent.emit(this.deleteFailure, "deleteFailure", ["Can not Delete Device, Something went wrong!"]);
+    },
 
     editFriendlyName : function(context){
       this.commonEventHandler(this.showLoading, "");
       let rowData = this.view.segmentDevices.data[context.row];
       let newfriendlyName = rowData.friendlyName.text;
+      this.actionType = "device_rename";
+      this.view.nonFinancialComponent.stepUpRequired = status => { this.view.flxNonFinancialComponent.setVisibility(true);
+                                                                  this.commonEventHandler(this.dismissLoading, "");};
+      this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
       UserManagementPresentationController.updateFriendlyName(rowData.deviceId, newfriendlyName, 
-                                                              success =>this .editFriendlyNameSuccess(context, success), 
-                                                              error => {
-        alert("Failed to update device friendly name");
-         this.commonEventHandler(this.dismissLoading, "");
-      });      
+                                                              success =>this.editFriendlyNameSuccess(context, success), 
+                                                              error => { alert("Failed to update device friendly name");
+                                                                        this.commonEventHandler(this.dismissLoading, "");}
+                                                             );};
+      this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
+      rowData = this.view.segmentDevices.data[context.row];      
+      rowData.friendlyName = {"text" : this.friendlyName, "enable" : false};
+      rowData.edit = {"isVisible" : true};
+      rowData.imgOk = {"isVisible" : false};
+      rowData.imgCancel = {"isVisible" : false};
+      this.view.segmentDevices.setDataAt(rowData, context.row, context.section);
+      this.commonEventHandler(this.dismissLoading, "");
+      alert(status);};
+      this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId);
     },
 
     editFriendlyNameSuccess : function(context, response){
@@ -110,19 +237,42 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
       rowData.edit = {"isVisible" : true};
       rowData.imgOk = {"isVisible" : false};
       rowData.imgCancel = {"isVisible" : false};
-      this.view.segmentDevices.setDataAt(rowData, context.row, context.section);    
-       this.commonEventHandler(this.dismissLoading, "");
+      this.view.segmentDevices.setDataAt(rowData, context.row, context.section); 
+      this.view.nonFinancialComponent.updateActionInRMS();
+      this.commonEventHandler(this.dismissLoading, "");
     },
 
     changeDeviceStatusOnClick : function(context){
-       this.commonEventHandler(this.showLoading, "");
+      this.commonEventHandler(this.showLoading, "");
       var rowData = this.view.segmentDevices.data[context.row];
       let newStatus = rowData.changeStatus.text;
       if (newStatus === "SUSPEND"){
-        newStatus = "SUSPENDED";
+        const deviceList = this.view.segmentDevices.data;
+        let l = 0;
+        for(let a=0;a < deviceList.length;a++){
+          if (deviceList[a].changeStatus.text !== "SUSPEND"){
+            l++;
+          }
+        }
+        if (l === deviceList.length-1){
+          this.commonEventHandler(this.dismissLoading, "");
+          EventEmitter.mandatoryEvent.emit(this.suspendFailure, "suspendFailure", []);
+          return;
+        }
       }
-      UserManagementPresentationController.updateDeviceStatus(rowData.deviceId, newStatus, success => this.onUpdateDeviceStatusSuccess(context, success),
-                                                              this.onUpdateDeviceStatusFailure);      
+      this.actionType = "device_active";
+      if (newStatus === "SUSPEND"){
+        newStatus = "SUSPENDED";
+        this.actionType = "device_suspend";
+      }
+      this.view.nonFinancialComponent.stepUpRequired = status => { this.view.flxNonFinancialComponent.setVisibility(true);
+                                                                  this.commonEventHandler(this.dismissLoading, "");};
+      this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                        UserManagementPresentationController.updateDeviceStatus(rowData.deviceId, newStatus, success => this.onUpdateDeviceStatusSuccess(context, success),
+                                                                                                                                this.onUpdateDeviceStatusFailure);};
+      this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                       this.commonEventHandler(this.dismissLoading, "");alert(status);};
+      this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId);
     },
 
     onUpdateDeviceStatusSuccess : function(context, response){
@@ -134,6 +284,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
         "text" : deviceStatusResponse.active  ? "SUSPEND" : "ACTIVE",
         "skin" : deviceStatusResponse.active  ? "sknSuspend" : "sknActive"};      
       this.view.segmentDevices.setDataAt(rowData, context.row, context.section);
+      this.view.nonFinancialComponent.updateActionInRMS();
        this.commonEventHandler(this.dismissLoading, "");
     },
 
@@ -176,7 +327,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
         this.view.tabSelfService.lblChangePwdNotification.text = "Password should not contain username";
         return;
       }
-       this.commonEventHandler(this.showLoading, "");
+      this.commonEventHandler(this.showLoading, "");
       UserManagementPresentationController.changeUserPassword(this._username, this.view.tabSelfService.txtOldPassword.text, newPassword,
                                                               this.onPasswordChangeSuccess, this.onPasswordChangeFailure);
     },
@@ -192,6 +343,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
         this.view.tabSelfService.lblChangePwdNotification.skin = "sknHIDNotification";
       } else {this.onPasswordChangeFailure("error");}
        this.commonEventHandler(this.dismissLoading, "");
+       
     },
 
     onPasswordChangeFailure : function(error){
@@ -214,8 +366,8 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
     onDeviceRegSuccess : function(response) {
       this.view.tabSelfService.flxRegisterDevice0.setVisibility(false);
       this.view.tabSelfService.flxRegisterDevice1.setVisibility(true);
-      this.view.tabSelfService.qrcodegenerator.dataToEncode = response.provisioningMsg;
-      this.view.tabSelfService.qrcodegenerator.generate();
+      this.view.tabSelfService.qrcodegeneratorNew.dataToEncode = response.provisioningMsg;
+      this.view.tabSelfService.qrcodegeneratorNew.generate();
       this.view.tabSelfService.txtUserIdValue.text = response.username;
       this.view.tabSelfService.txtInviteCodeValue.text = response.inviteCode;
       this.view.tabSelfService.txtServiceUrlValue.text = response.url;

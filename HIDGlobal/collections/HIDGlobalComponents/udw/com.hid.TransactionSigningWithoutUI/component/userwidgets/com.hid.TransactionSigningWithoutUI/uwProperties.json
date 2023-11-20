@@ -5,7 +5,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "g23c229db0ac448a8e84827a5fb58d23",
+                    "kuid": "fac9ff6a77974018a595cf75c8f4a973",
                     "paramList": [],
                     "propertyKey": "approveInitiate",
                     "pw": {
@@ -17,11 +17,11 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a8de7a12cc664a028b7eb178691d7d86",
+                    "kuid": "j7ce2023d561494cba7a7daf3f04bcee",
                     "paramList": [],
-                    "propertyKey": "offlineTS",
+                    "propertyKey": "validateOfflineOTP",
                     "pw": {
-                        "displayName": "offlineTS",
+                        "displayName": "validateOfflineOTP",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "eab665dad71b4da3945a895c097a44e6",
@@ -29,7 +29,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "ee871395e5554080855a09e2956ab5d7",
+                    "kuid": "e4cd2b6f1198495996e0d83106a0c0d7",
                     "paramList": [],
                     "propertyKey": "generateChallenge",
                     "pw": {
@@ -41,7 +41,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a4b6deafa96f4669ad74f1c9dc23e04b",
+                    "kuid": "f171744f816040bca0069900feb2ab58",
                     "paramList": [],
                     "propertyKey": "validateChallenge",
                     "pw": {
@@ -53,7 +53,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "cf05492bc66a4ee3b98915ff604ccae6",
+                    "kuid": "jc18bc09f19e4320bf0ec919711d3ed6",
                     "paramList": [],
                     "propertyKey": "sendSMSOTP",
                     "pw": {
@@ -65,7 +65,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "e9ac5acd82f34c3996e5faa53b1edb92",
+                    "kuid": "a861f7ee58884075a4856f00447c1851",
                     "paramList": [],
                     "propertyKey": "validateOTP",
                     "pw": {
@@ -77,7 +77,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "i8082d3f4f5542278f9429077bce3607",
+                    "kuid": "h6b293ccf3d64eb098d1e5a153b62803",
                     "paramList": [],
                     "propertyKey": "generateQRDataForHIDApprove",
                     "pw": {
@@ -89,11 +89,11 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "c04bcd269ee0471bad06d6fdeea4ac38",
+                    "kuid": "d2ca4c0195514c258875e7dc6aeb380b",
                     "paramList": [],
-                    "propertyKey": "generateQRDataForDemoApp",
+                    "propertyKey": "generateQRDataForSDK",
                     "pw": {
-                        "displayName": "generateQRDataForDemoApp",
+                        "displayName": "generateQRDataForSDK",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "eab665dad71b4da3945a895c097a44e6",
@@ -101,11 +101,23 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "h984867ca1274a62bb4e09d1c9890b79",
+                    "kuid": "d6bd67731b7146b1b7ef82a2e06b7890",
                     "paramList": [],
                     "propertyKey": "getServiceURL",
                     "pw": {
                         "displayName": "getServiceURL",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "eab665dad71b4da3945a895c097a44e6",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "j0477d0aa75b42148ed1898dd4165652",
+                    "paramList": [],
+                    "propertyKey": "approveDeleteInitiate",
+                    "pw": {
+                        "displayName": "approveDeleteInitiate",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "eab665dad71b4da3945a895c097a44e6",
@@ -345,6 +357,58 @@
                     "propertyKey": "getServiceURLFailure",
                     "pw": {
                         "displayName": "getServiceURLFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "eab665dad71b4da3945a895c097a44e6",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "adbe15df3b9c45faaceca4cf29829c69",
+                    "paramList": [],
+                    "propertyIndex": 24,
+                    "propertyKey": "approveDeleteStatusAccept",
+                    "pw": {
+                        "displayName": "approveDeleteStatusAccept",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "eab665dad71b4da3945a895c097a44e6",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "e15f924894d04b6481b428fc6790e75c",
+                    "paramList": [],
+                    "propertyIndex": 25,
+                    "propertyKey": "approveDeleteStatusReject",
+                    "pw": {
+                        "displayName": "approveDeleteStatusReject",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "eab665dad71b4da3945a895c097a44e6",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "hba211215cdb47959e45d87884707963",
+                    "paramList": [],
+                    "propertyIndex": 26,
+                    "propertyKey": "approveDeleteInitiateSuccess",
+                    "pw": {
+                        "displayName": "approveDeleteInitiateSuccess",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "eab665dad71b4da3945a895c097a44e6",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "a966b563277040c6aeb7a82897fe2d2e",
+                    "paramList": [],
+                    "propertyIndex": 27,
+                    "propertyKey": "approveDeleteInitiateFailure",
+                    "pw": {
+                        "displayName": "approveDeleteInitiateFailure",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "eab665dad71b4da3945a895c097a44e6",

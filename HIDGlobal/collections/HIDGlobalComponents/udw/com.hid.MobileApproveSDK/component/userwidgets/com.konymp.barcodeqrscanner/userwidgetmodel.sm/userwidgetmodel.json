@@ -39,10 +39,7 @@
     "device": "iPhoneXS",
     "displayorientation": 3,
     "enabledforidletimeout": false,
-    "globalUserWidgetRefs": [
-        "u3c8107e9b134469922ae472b499573a",
-        "uba5baa4c67240fa8ce495b13f2e0852"
-    ],
+    "globalUserWidgetRefs": [],
     "id": "userwidgetmodel",
     "info": null,
     "initdone": false,

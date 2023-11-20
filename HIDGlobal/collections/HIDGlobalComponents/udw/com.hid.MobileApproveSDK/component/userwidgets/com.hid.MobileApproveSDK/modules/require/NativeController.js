@@ -36,6 +36,9 @@ define([],function () {
   };
   NativeController.prototype.renewContainer = function(){
     throw new Error('reNewContainer function is not implemented');
-  }
+  };
+  NativeController.prototype.getContainerRenewableDate = function(){
+    throw new Error('getContainerRenewableDate function is not implemented');
+  };
   return NativeController;
 });

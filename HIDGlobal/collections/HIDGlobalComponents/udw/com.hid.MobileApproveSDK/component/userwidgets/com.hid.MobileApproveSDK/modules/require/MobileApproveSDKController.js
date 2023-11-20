@@ -19,11 +19,13 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
   sdkConstants.ERROR_PWD_MIN_SPL = `Password should contain atleast # special Characters`;
   sdkConstants.ERROR_PWD_MAX_SPL = `Password should contain atmost # special Characters`;
   sdkConstants.ERROR_PWD_NOT_ENTERED = `Please enter PIN`;
+  sdkConstants.ERROR_NEW_PWD_NOT_ENTERED = `Please enter the new PIN`;
+  sdkConstants.ERROR_CNF_PWD = "Please confirm the new PIN";
   sdkConstants.ERROR_OOB_NOT_ENTERED = `Please enter OTP`;
   sdkConstants.ERROR_PWD_NOT_MATCH = `Entered PINs do not match`;
   sdkConstants.ERROR_PIN = `PIN is incorrect`;
   sdkConstants.ERROR_OOB = `OTP is incorrect`;
-  sdkConstants.ERROR_SAME_PIN = `Same PIN prohibited`;
+  sdkConstants.ERROR_PWD_MATCH = `New PIN cannot be same as old PIN`
   sdkConstants.ERROR_PIN_CHANGE = `PIN can be change after 24 hrs`;
   sdkConstants.DELETE_USER_CNF_TXT = `You are about to delete your user profile from Major Bank`;
   sdkConstants.DELETE_USER_SUCCESS = "Your profile has been deleted successfuly from Major Bank";
@@ -31,7 +33,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
   sdkConstants.DELETE_UI_MODE_SHOW_CONSENSUS = 0;
   sdkConstants.DELETE_UI_MODE_SHOW_SUCCESS = 1;
   sdkConstants.DELETE_UI_MODE_SHOW_FAILURE = 2;
-  sdkConstants.DELETE_UI_MODE_HIDE = 3
+  sdkConstants.DELETE_UI_MODE_HIDE = 3;
   sdkConstants.DELETE_UI_MODE_SHOW_PIN = 4;
   sdkConstants.DELETE_UI_MODE_ERROR_PIN =5;
   sdkConstants.ERROR_USERBLOCK = `User is blocked for Login`;
@@ -44,26 +46,25 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
   sdkConstants.ERROR_INVALID_INVITE_CODE = `Please enter Invite Code`;
   sdkConstants.ERROR_INTERNET_CONNECTION = `The internet connection appears to be offline. Do you want to retry?`;
   sdkConstants.ERROR_INTERNET_CONNECTION_GENERIC = `The internet connection appears to be offline.`;
-  sdkConstants.ERROR_INVALID_PARAMETER = `The service URL is not valid`
+  sdkConstants.ERROR_INVALID_PARAMETER = `The service URL is not valid`;
   sdkConstants.ERROR_SERVER_AUTHENTICATION =`Either the User ID or Invite code is incorrect`;
   sdkConstants.ERROR_REMOTE_EXCEPTION =`Either the service URL is incorrect or the service is currently unavailable`;
   sdkConstants.ERROR_INVALID_PIN = `PIN Cannot be Empty`;
   sdkConstants.ERROR_BIO_AUTH_NOT_AVAILABLE = `PIN Cannot be Empty`;
-  sdkConstants.ERROR_INVALID_PIN = `PIN Cannot be Empty`;
   sdkConstants.ERROR_BIO_AUTH_NOT_AVAILABLE = `BiometricNotAvailable`;
-  sdkConstants.ERROR_INVALID_PIN = `PIN Cannot be Empty`;
+  sdkConstants.ERROR_PIN_EXPIRED = `The PIN to protect this service has expired, you must change it`;
   sdkConstants.BIOMETRIC_ERROR_CODE = `5003`;
   sdkConstants.AUTH_EXCEPTION_CODE = `5001`;
   sdkConstants.DEFAULT_BIO_STRING = `Please complete your Biometrics to continue`;
-  sdkConstants.ERROR_PWD_MATCH = `New PIN cannot be same as old PIN`
-  sdkConstants.ERROR_INVALID_PIN_UPD = `Invalid PIN`
+  sdkConstants.ERROR_PWD_MATCH = `New PIN cannot be same as old PIN`;
+  sdkConstants.ERROR_INVALID_PIN_UPD = `Invalid PIN`;
   sdkConstants.ERROR_INVALID_PIN_UPD = `PIN Cannot be Empty`;
   sdkConstants.EXCEPTION_NAME_INVALID_PIN_UPD = `InvalidPinException`;
   sdkConstants.ERROR_CAMERA_ANDROID = `Could not find field WINDOW_FOCUSED_STATE_SET`;
   sdkConstants.PERMISSION_DENIED = `50001`; 
   sdkConstants.PERMISSION_GRANTED = `50002`;
   sdkConstants.ENABLE_PERMISSION = `Please enable the permission in device settings to proceed. Do you want to open settings?`;
-  sdkConstants.PWD_CHANGE_TO_SOON = "PIN change is too soon, Please try after 1 day"
+  sdkConstants.PWD_CHANGE_TO_SOON = "PIN change is too soon, Please try after 1 day";
   var contexts = ["ActivationCode","QRCode","Manual","SetPassword","Login","Biometric","Success","UpdatePassword","SetStandardPassword","ProfileResetUI","Users","OOB"];
   var getProfileAge = 0;
   var isRegister = false ;
@@ -119,7 +120,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.btnDeleteUserPinCancel.onClick = source => this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_HIDE);
       this.view.btnDeleteUserOK.onClick = this.btnDeleteUserOK_onClick;
       this.view.btnDeleteUserCancel.onClick = source => this.showDeleteUserPrompt(sdkConstants.DELETE_UI_MODE_HIDE);
-      this.view.btnDeleteUserDone.onClick = source => {this.showDeleteUserPrompt();this.initiate();}
+      this.view.btnDeleteUserDone.onClick = source => {this.showDeleteUserPrompt();this.initiate();};
       this.view.PlusSquareLight.onTouchEnd = source => this.initActivationFlow();
       this.nativeController = new controllerImplemetation(this,baseConfig.id);
       this.view.btnConfirmOOB.onClick=this.btnConfirmOOB_onClick;
@@ -132,6 +133,8 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.btnYesScannerAlert.onClick = this.btnYesScannerAlert_onClick;
       this.view.btnNoScannerAlert.onClick = this.btnNoScannerAlert_onClick;
       this.view.flxScannerAlertUI.setVisibility(false);
+      this.view.flxUpdatePassword.setVisibility(false);
+      this.view.flxOpaqueBGNew.onTouchStart = source => {}
     },
 
     //Logic for getters/setters of custom properties
@@ -236,7 +239,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       var pushID = pushIDFromManager || "";
       let flowString = this.nativeController.getLoginFlow(pushID);
       
-      if(flowString == "Register"){
+      if(flowString === "Register"){
         isRegister = true ;		  
         let flow = this._provisionMode;
         let mode = flow === "ACTIVATION_CODE" ? "ActivationCode" : "QRCode" ; 
@@ -246,12 +249,12 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
       let contentArray = flowString.split(",");
       let flow = contentArray[0];
-      if(flow == "SingleLogin"){
+      if(flow === "SingleLogin"){
         this.username = contentArray[1];
         this.initSingleLoginFlow();
         return;
       }
-      if(flow == "MultiLogin"){
+      if(flow === "MultiLogin"){
         // TODO : Multiple Login flow
         this.initMultiLoginFlow(contentArray[1]);
       }
@@ -320,9 +323,9 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
       if(!oldPassword || !newPassword){
         this.commonEventEmitter(this.updatePasswordFailure,[sdkConstants.EXCEPTION_NAME_INVALID_PIN_UPD,sdkConstants.ERROR_INVALID_PIN_UPD]);
-        return
+        return;
       }
-      if(oldPassword == newPassword){
+      if(oldPassword === newPassword){
         this.commonEventEmitter(this.updatePasswordFailure,[sdkConstants.EXCEPTION_NAME_INVALID_PIN_UPD,sdkConstants.ERROR_PWD_MATCH]);
         return;
       }
@@ -366,13 +369,30 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       let oldPwd = this.view.tbxCurrentPIN.text;
       let newPwd = this.view.tbxNewPIN.text;
       let cnfPwd = this.view.tbxConfirmUpdPwd.text;
-      if(oldPwd == "" || newPwd == "" || cnfPwd == ""){
+      
+      if(oldPwd == "" || oldPwd == " " || oldPwd == undefined || oldPwd === null){
         let error = sdkConstants.ERROR_PWD_NOT_ENTERED;
         this.showErrorPassword(true,error);
         return;
       }
-      if(newPwd !== cnfPwd){
-        this.showErrorPassword(true,sdkConstants.ERROR_PWD_NOT_MATCH);
+      if(newPwd == "" || newPwd == " " || newPwd == undefined || newPwd === null){
+        let error = sdkConstants.ERROR_NEW_PWD_NOT_ENTERED;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      if(cnfPwd == "" || cnfPwd == " " || cnfPwd == undefined || cnfPwd === null){
+        let error = sdkConstants.ERROR_CNF_PWD;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      if(oldPwd == newPwd ){ 
+        let error = sdkConstants.ERROR_PWD_MATCH;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      if(newPwd != cnfPwd){
+        let error = sdkConstants.ERROR_PWD_NOT_MATCH;
+        this.showErrorPassword(true,error);
         return;
       }
       this.password = newPwd;
@@ -386,7 +406,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.showErrorPin(false,sdkConstants.ERROR_PIN);
       this.setLoadingScreen(true);
       var password = this.view.tbxPinLogin.text;
-      if(password == "" || password == null) {
+      if(password === "" || password === null) {
         //this.setLoadingScreen(false);
         this.showErrorPin(true,sdkConstants.ERROR_PWD_NOT_ENTERED);
         return;
@@ -411,10 +431,10 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },  
     // Callback function to receive client_ip for RMS
     publicIPCallBackFunction: function(){
-      if(this.client_ip.trim() !=""){
+      if(this.client_ip.trim() !==""){
         return;
       }
-      if(this.newRequest.readyState == constants.HTTP_READY_STATE_DONE){
+      if(this.newRequest.readyState === constants.HTTP_READY_STATE_DONE){
         var resString = this.newRequest.response;
         kony.print("RMS => resString : "+resString);
         this.client_ip = resString;
@@ -487,7 +507,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     // callback function for validating secure otp success while RMS enabled
     validateSecureOTPRMSSuccess : function(response){
       kony.print('RMS => Inside validateSecureOTPRMSSuccess');
-      alert(JSON.stringify(response.mfa_meta.rms));
+//       alert(JSON.stringify(response.mfa_meta.rms));
       this.mfa_key = response.mfa_meta.auth_id;
       var status = response.mfa_meta.rms.RMSServiceStatus;
       var noStepup = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "false";
@@ -513,13 +533,15 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
      // callback function for receiving secure otp failure while RMS enabled
     validateSecureOTPRMSFailure : function(error){
       kony.print("RMS => Inside validateSecureOTPRMSFailure");
-      if(error){
+      if(error.details){
         if(error.details.message.includes("USER-BLOCK") && error.details.message.includes(-3)){
         this.showErrorPin(true, sdkConstants.ERROR_USERBLOCK);
         } else {
         this.showErrorPin(true, sdkConstants.ERROR_PIN);
         }
-      }else{
+       }else{
+         //Please customize this message as user will not able to login
+        // based on the above functionality failure
         this.showErrorPin(true, sdkConstants.ERROR_GENERIC);
       }
     },
@@ -546,7 +568,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     // Function to perform Step-Up in case of high risk score with RMS enabled by sending otp over mobile/email
     initiateSecondFactor : function(){
-      kony.print("RMS => Inside initiateSecondFactor")
+      kony.print("RMS => Inside initiateSecondFactor");
       if(this._MFA === "OTP_SMS" || this._MFA === "OTP_EML"){
         let factor = this._MFA;
         let authType = factor === "OTP_SMS" ? "AT_OOBSMS":"AT_OOBEML";
@@ -640,6 +662,8 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
     },   
     validateSecureOTPFailure : function(error){
+      //Please customize this message as user will not able to login
+     // based on the above functionality failure
       this.showErrorPin(true, sdkConstants.ERROR_GENERIC);
     },
     initActivationFlow : function(){
@@ -648,16 +672,16 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.setLoadingScreen(false);
     },
     initManualFlow : function(){
-      kony.print("ScanLib --> Inside initManualFlow method ");
+      kony.print("ApproveSDK --> Inside initManualFlow method ");
       this.state = "Manual";
-      this.view.barcodeqrscanner.stopScan();
       this.view.flxScannerAlertUI.setVisibility(false);
       this.contextSwitch("Manual");
       this.setLoadingScreen(false);
+      this.view.forceLayout();
     },
     btnValidate_onClick : function(){
       this.resetUI();
-      kony.print("ScanLib --> Inside btnValidate_onClick method ");
+      kony.print("ApproveSDK --> Inside btnValidate_onClick method ");
       let serviceUrl = this.view.tbxServiceUrl.text;
       let username = this.view.tbxUsernameManual.text;
       let inviteCode = this.view.tbxInviteCode.text;
@@ -681,7 +705,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         "invitecode": inviteCode
        }; 
       let activationCode = JSON.stringify(params);
-      kony.print(`ScanLib --> manual provisioning Object: ${activationCode}`);
+      kony.print(`ApproveSDK --> manual provisioning Object: ${activationCode}`);
       this.setLoadingScreen(true);
       let networkStatus = this.checkIfNetworkIsAvailable();
       if(networkStatus === true){
@@ -692,7 +716,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
     },
     initQRCodeFlow : function(){
-      kony.print("ScanLib --> Inside initQRCodeFlow method ");
+      kony.print("ApproveSDK --> Inside initQRCodeFlow method ");
       this.state = "QRCode";
       this.contextSwitch("QRCode");
       this.setLoadingScreen(false);
@@ -705,37 +729,39 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     permissionCheck : function(){
       var permission = kony.application.checkPermission(kony.os.RESOURCE_CAMERA);
-      kony.print("ScanLib --> permission status :"+ permission.status);
-      kony.print("ScanLib --> can request permission :"+ permission.canRequestPermission);
+      kony.print("ApproveSDK --> permission status :"+ permission.status);
+      kony.print("ApproveSDK --> can request permission :"+ permission.canRequestPermission);
       if(permission.status === kony.application.PERMISSION_DENIED){
-        kony.print("ScanLib --> permission denied");
+        kony.print("ApproveSDK --> permission denied");
         if(permission.canRequestPermission){
           kony.application.requestPermission(kony.os.RESOURCE_CAMERA, this.permissionStatusCallback);
         } else {
           this.scannerAlertHandlerUI(sdkConstants.ENABLE_PERMISSION);
         }
       } else if(permission.status === kony.application.PERMISSION_GRANTED){
-          kony.print("ScanLib --> permission granted");
+          kony.print("ApproveSDK --> permission granted");
           this.view.barcodeqrscanner.renderScan(this);         
        }
     },
     permissionStatusCallback : function(response){
       if(response.status === kony.application.PERMISSION_GRANTED){
-        kony.print("ScanLib --> permission granted");
+        kony.print("ApproveSDK --> permission granted");
         this.initQRCodeFlow();        
       } else {
           this.scannerAlertHandlerUI(sdkConstants.ENABLE_PERMISSION);
       }
     },
     permissionSettingCallback : function(resp){
+      kony.print("ApproveSDK --> In permissionSettingCallback");
       if(resp){
         kony.application.openApplicationSettings();
       } else {
         try{
+          kony.print("ApproveSDK --> In try permissionSettingCallback");
           this.initManualFlow();
-          this.view.barcodeqrscanner.stopScan();
+          this.view.forceLayout();
         } catch(err){
-          kony.print("Error while redirecting to Manual Onboarding: "+err);
+          kony.print("ApproveSDK --> Error while redirecting to Manual Onboarding: "+err);
         }
       }
     },
@@ -746,7 +772,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
          try{
             kony.application.exit(0);
           } catch(err){
-            kony.print("Error while closing the app: "+err);
+            kony.print("ApproveSDK --> Error while closing the app: "+err);
           }
       }       
     },
@@ -756,6 +782,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.forceLayout();
     },
     btnYesScannerAlert_onClick : function(){
+      kony.print("ApproveSDK --> In btnYesScannerAlert_onClick");
       let message = this.view.lblScannerAlertMessage.text;
       if(message === sdkConstants.ENABLE_PERMISSION){
         this.view.lblScannerAlertMessage.text = "";
@@ -768,52 +795,54 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
     },
     btnNoScannerAlert_onClick : function(){
+      kony.print("ApproveSDK --> In btnNoScannerAlert_onClick");
       let message = this.view.lblScannerAlertMessage.text;
       if(message === sdkConstants.ENABLE_PERMISSION){
         this.view.lblScannerAlertMessage.text = "";
         this.view.flxScannerAlertUI.setVisibility(false);
         this.permissionSettingCallback(false);
       }else{
+        kony.print("ApproveSDK --> In else btnNoScannerAlert_onClick");
         this.view.lblScannerAlertMessage.text = "";
         this.view.flxScannerAlertUI.setVisibility(false);
         this.scannerAlertHandler(false);
       }      
     },
     afterScan : function(result){
-      kony.print("ScanLib --> Inside afterScan Callback method ");
-      kony.print("ScanLib --> result from scanner"+JSON.stringify(result));
+      kony.print("ApproveSDK --> Inside afterScan Callback method ");
+      kony.print("ApproveSDK --> result from scanner"+JSON.stringify(result));
       if(result !==null && result.includes("url") && result.includes("uid")){
         let invCode = result;
-        kony.print("ScanLib --> QR provisioning Object :"+invCode);
+        kony.print("ApproveSDK --> QR provisioning Object :"+invCode);
         this.setLoadingScreen(true);
         let networkStatus = this.checkIfNetworkIsAvailable();
         if(networkStatus === true){
           this.nativeController.createContainer(invCode);
         } else {
-          kony.print("ScanLib --> error internet connection");
+          kony.print("ApproveSDK --> error internet connection");
           this.scannerAlertHandlerUI(sdkConstants.ERROR_INTERNET_CONNECTION);
         }                     			
        } else {
-         kony.print("ScanLib --> error invalid qr code");
+         kony.print("ApproveSDK --> error invalid qr code");
          this.scannerAlertHandlerUI(sdkConstants.ERROR_INVALID_QR_CODE);
         }       
      },
     errorHandler : function(resp){
-      kony.print("ScanLib --> Inside errorHandler");
+      kony.print("ApproveSDK --> Inside errorHandler");
       if(resp){
             this.initQRCodeFlow();   
       } else {
          try{
             kony.application.exit(0);
           } catch(err){
-            kony.print("Error while closing the app: "+err);
+            kony.print("ApproveSDK --> Error while closing the app: "+err);
           }
       }  
     },
     errorCallback : function(error){
-      kony.print("ScanLib --> Inside errorCallback method: "+JSON.stringify(error));
+      kony.print("ApproveSDK --> Inside errorCallback method: "+JSON.stringify(error));
       if(this.isEmpty(error)){
-        kony.print("ScanLib --> Inside error isEmpty: true ");
+        kony.print("ApproveSDK --> Inside error isEmpty: true ");
         this.errorHandler(true);
       }else{
         this.scannerAlertHandlerUI("Please click yes to continue..");
@@ -824,7 +853,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         this.initManualFlow();
         this.view.barcodeqrscanner.stopScan();
       } catch(err){
-        kony.print("Error while redirecting to Manual Onboarding: "+err);
+        kony.print("ApproveSDK --> Error while redirecting to Manual Onboarding: "+err);
       }
     },
     isEmpty : function(obj) {
@@ -866,7 +895,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
 
     btnSetStandardPassword_onClick: function() {
       this.setLoadingScreen(true);
-      kony.print("btnSetStandardPassword_onClick init");
+      kony.print("ApproveSDK --> In btnSetStandardPassword_onClick");
       var standardPassword = this.view.tbxStandardPassword.text;
       var cnfstandardPassword = this.view.tbxConfirmStandardPassword.text;
 
@@ -961,6 +990,77 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         if (String.fromCharCode(s.charCodeAt(i) + 1) === s[+i + 1] && String.fromCharCode(s.charCodeAt(i) + 2) === s[+i + 2]) return false;
       return true;
     },
+    seqCheckPin: function(numberString) {
+      if(this.sameSequence(numberString)){
+        return true;
+      }
+      if(this.haveSequence(numberString)){
+        return true;
+      }
+      return false;
+    },
+    sameSequence : function(s){
+      let count = 0;
+      let cur = 0;
+      let prev = 0;
+      let l = s.length;
+      for(let i = 1;i < l;i++){
+        cur = +s[i];
+        prev = +s[i-1];
+        if (cur-prev === 0){
+          count += 1;
+          }
+        else{
+          count = 0;
+          }
+
+        if (count === 3){
+          return true;
+          }
+        }
+      return false;
+    },
+    haveSequence : function(s){
+      let l = s.length;
+      let one = 0;
+      let negativeone = 0;
+      let cur = 0;
+      let prev = 0;
+      let currem = 0;
+      let prevrem = 0;
+      for(let i = 1;i < l; i ++){
+        cur = +s[i];
+        prev = +s[i-1];
+        if(i < 4){
+          if (cur - prev === 1){
+            one += 1;
+            }
+          else if (cur - prev === -1){
+            negativeone += 1;
+            }
+          }
+        else{
+          currem = +s[i-3];
+          prevrem = +s[i-4];
+          if (currem - prevrem === 1){
+            one -= 1;
+            }
+          else if (currem - prevrem === -1){
+            negativeone -= 1;
+            }
+          if (cur - prev === 1){
+            one += 1;
+            }
+          else if (cur - prev === -1){
+            negativeone += 1;
+            }
+          }
+        if (one === 3 || negativeone === 3){
+          return true;
+          }
+        }
+    return false;
+  },
     UniqueCount: function(nonUnique) {
       var unique = nonUnique.split('').filter(function(item, i, ar) {
         return ar.indexOf(item) === i;
@@ -1040,6 +1140,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.flxErrManual.setVisibility(visible);
     },
     showErrorPassword : function(visible,message = 'Please enter Valid Password'){
+      kony.print(`In showErrorPassword method with message: ${message}`);
       if(visible){
         this.view.lblErrorPassword.text = message;
         this.view.lblErrorPasswordPR.text = message;
@@ -1072,10 +1173,14 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     
     updatePwdCallbackInternalComponent : function(exceptionType,message){
+      kony.print("ApproveSDK ---> updatePwdCallbackInternalComponent with exceptionType: "+exceptionType);
+      kony.print("ApproveSDK ---> updatePwdCallbackInternalComponent with message: "+message);
       if(exceptionType === "UpdatePassword"){
         if(message === "updateSuccess"){
           this.view.flxErrorPwdPR.setVisibility(false);
           this.view.flxUpdatePassword.setVisibility(false);
+          this.setLoadingScreen(false);
+          this.view.lblErrorPasswordLogin.setVisibility(false);
           this.view.flxLogin.setVisibility(true);
 
           if(this.onUpdatePasswordCB){ 
@@ -1083,7 +1188,6 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
           } 
         }
       } else if(exceptionType === "InvalidPasswordException"){
-        kony.print("ApproveSDK ---> InvalidException");
         this.view.flxErrorPwdPR.setVisibility(true);
         if(message === "Same password prohibited")
         {
@@ -1099,21 +1203,41 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         if(this.onUpdatePasswordCB){
           this.onUpdatePasswordCB("invalidPassword");
         }
+      } else if(exceptionType === "AuthenticationException"){
+          this.view.flxErrorPwdPR.setVisibility(true);
+          if(message ==="Password is incorrect")
+          {
+            this.setLoadingScreen(false);
+            this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_PIN;
+          }else {
+            this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_GENERIC;
+          }
+          if(this.onUpdatePasswordCB){
+            this.onUpdatePasswordCB("invalidPassword");
+          }
+      } else {
+        if(this.onUpdatePasswordCB){
+          this.onUpdatePasswordCB("error");
+        }
       }
     },
     
     updatePwdCallbackInternal : function(exceptionType,message = "Something went wrong please try again"){
+      kony.print("ApproveSDK ---> updatePwdCallbackInternal with exceptionType: "+exceptionType);
+      kony.print("ApproveSDK ---> updatePwdCallbackInternal with message: "+message);
         if(message.includes("104") || message.includes("too soon")){
            message = sdkConstants.PWD_CHANGE_TO_SOON;
         }
-        if(message == "updateSuccess"){
+        if(message === "updateSuccess"){
           this.commonEventEmitter(this.updatePasswordSuccess,["success"]);
         }else{
-          this.commonEventEmitter(this.updatePasswordFailure,[exceptionType,message])
+          this.commonEventEmitter(this.updatePasswordFailure,[exceptionType,message]);
         }
     },
 
     exceptionCallback : function(exceptionType,message){
+      kony.print("ApproveSDK ---> exceptionCallback with exceptionType: "+exceptionType);
+      kony.print("ApproveSDK ---> exceptionCallback with message: "+message);
       this.setLoadingScreen(false);
       if(message === "success"){
         kony.print("ApproveSDKComponent ---> enableBioMetrics"); 
@@ -1124,6 +1248,8 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         if(message === "updateSuccess"){
           this.view.flxErrorPwdPR.setVisibility(false);
           this.view.flxUpdatePassword.setVisibility(false);
+          this.setLoadingScreen(false);
+          this.view.lblErrorPasswordLogin.setVisibility(false);
           this.view.flxLogin.setVisibility(true);
 
           if(this.onUpdatePasswordCB){ 
@@ -1131,7 +1257,6 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
           } 
         }
       } else if(exceptionType === "InvalidPasswordException"){
-        kony.print("ApproveSDK ---> InvalidException");
         this.view.flxErrorPwdPR.setVisibility(true);
         if(message === "Same password prohibited"){
           this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_SAME_PIN;
@@ -1145,7 +1270,6 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
           this.onUpdatePasswordCB("invalidPassword");
         }
       } else if(exceptionType === "InvalidParameterException"){
-        kony.print("ApproveSDK ---> InvalidParameterException");
         if(!this.isAndroid()){
           if(this.state === "Manual"){
             this.showErrorManual(true, sdkConstants.ERROR_INVALID_PARAMETER);
@@ -1160,7 +1284,6 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
           }
         }
       } else if(exceptionType === "RemoteException"){
-        kony.print("ApproveSDK ---> RemoteException");
         if(!this.isAndroid()){
           if(this.state === "Manual"){
             this.showErrorManual(true, sdkConstants.ERROR_REMOTE_EXCEPTION);         
@@ -1179,7 +1302,6 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
             }
           }
       } else if(exceptionType === "ServerAuthenticationException"){
-        kony.print("ApproveSDK ---> ServerAuthenticationException");
         if(!this.isAndroid()){
           if(this.state === "Manual"){
             this.showErrorManual(true, sdkConstants.ERROR_SERVER_AUTHENTICATION);         
@@ -1198,10 +1320,10 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
           }
         }
       } else if(exceptionType === "AuthenticationException"){
-        kony.print("ApproveSDK ---> AuthenticationException");
         this.view.flxErrorPwdPR.setVisibility(true);
         if(message ==="Password is incorrect")
         {
+          this.setLoadingScreen(false);
           this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_PIN;
         }else {
           this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_GENERIC;
@@ -1215,7 +1337,20 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         }
       }
     },
-
+    resetUpdatePasswordUI : function(){
+      this.view.tbxCurrentPIN.text = "";
+      this.view.tbxNewPIN.text = "";
+      this.view.tbxConfirmUpdPwd.text = "";
+      this.showUpdatePINError(false);
+      this.view.flxMainUpdatePwd.setVisibility(true);
+      this.view.flxUpdatePwdSuccess.setVisibility(false);
+    },
+    showUpdatePINError : function(visible,msg = ""){
+      this.view.lblErrorPasswordPR.text  = msg;
+      this.view.flxErrorPwdPR.setVisibility(visible);
+      this.view.flxLoading.setVisibility(false);
+      this.view.forceLayout();
+    },
     checkForFingerPrintStatus(){
       var status = kony.localAuthentication.getStatusForAuthenticationMode(constants.LOCAL_AUTHENTICATION_MODE_TOUCH_ID);
       kony.print("ApproveSDKComponent ---> fingerPrint status " + status);
@@ -1321,9 +1456,16 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.flxBioPrompt.setVisibility(false);
       kony.print(`Biometric is enabled successfully`);
       if(this.state === "QRCode" || this.state === "Manual"){
-         this.showSuccessScreen("Device Registered Successfully");
+        if(this._isRMSEnabled === true){
+           this.addOOBToUser(this.userId);
+         }
+        this.showSuccessScreen("Device Registered Successfully");
       }else{
-        this.showStandardPasswordUI();  
+        if(this._isRMSEnabled === true){
+           this.addOOBToUser(this.userId);
+         }
+        this.showSuccessScreen("Device Registered Successfully");
+//         this.showStandardPasswordUI();  
       }          
       //       this.showSuccessScreen("Device Registered Successfully with Biometrics");
     },
@@ -1332,11 +1474,15 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.nativeController.disableBioMetrics();
       if(this.state === "QRCode" || this.state === "Manual"){
          if(this._isRMSEnabled === true){
-              this.addOOBToUser(this.userId);
+           this.addOOBToUser(this.userId);
          }
          this.showSuccessScreen("Device Registered Successfully");
       }else{
-        this.showStandardPasswordUI();
+        if(this._isRMSEnabled === true){
+           this.addOOBToUser(this.userId);
+         }
+        this.showSuccessScreen("Device Registered Successfully");
+//         this.showStandardPasswordUI();
       }
             
       //       this.showSuccessScreen("Device Registered Successfully");
@@ -1346,12 +1492,15 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         this.showBioMetricUI();
       }else if(this.state === "QRCode" || this.state === "Manual"){
          if(this._isRMSEnabled === true){
-              this.addOOBToUser(this.userId);
+           this.addOOBToUser(this.userId);
           }
          this.showSuccessScreen("Device Registered Successfully");
       }else{
-        this.showStandardPasswordUI();
-        //         this.showSuccessScreen("Device Registered Successfully");
+//         this.showStandardPasswordUI();
+        if(this._isRMSEnabled === true){
+          this.addOOBToUser(this.userId);
+        }
+        this.showSuccessScreen("Device Registered Successfully");
         kony.print(`Biometric not enabled for the following reason ${message}`);
       }
     },
@@ -1488,6 +1637,9 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
     },
     checkPinPolicy : function(pin){
+      kony.print("ApproveSDK --> Inside checkPinPolicy method")
+      let isSequencePresent = this.seqCheckPin(pin);
+//       alert(isSequencePresent);
       if(isNaN(pin)){
         let error = sdkConstants.ERROR_PWD_NO_ALPHA;
         this.showErrorPassword(true,error);
@@ -1500,6 +1652,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
       if(this.passwordPolicy.hasOwnProperty("maxNumeric") && pin.length > +this.passwordPolicy.maxNumeric){
         let error = sdkConstants.ERROR_LENGTH_MAX_PIN.replace(/#/,this.passwordPolicy.maxNumeric );
+        this.showErrorPassword(true,error);
+        return false;
+      }      
+      if((isSequencePresent)){
+        let error = "no sequential characters allowed";
         this.showErrorPassword(true,error);
         return false;
       }
@@ -1595,7 +1752,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
     },
     changeUIMode : function(mode){
-      let modes = ["SetStandardPassword","UpdatePassword","Login","ActivationCode"];
+      let modes = ["SetStandardPassword","UpdatePassword","Login","ActivationCode","QRCode"];
       for(let i of modes){
         this.view[`flx${i}`].setVisibility(i===mode);
       }
@@ -1806,20 +1963,20 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       businessController.addOOBToUser(params, this.addOOBToUserSuccess, this.addOOBToUserFailure);
     },
     addOOBToUserSuccess : function(response){
-      kony.print("RMS => Inside addOOBToUserSuccess");
+      kony.print("ApproveSDK --> Inside addOOBToUserSuccess");
     },
     addOOBToUserFailure : function(error){
-      kony.print("RMS => Inside addOOBToUserFailure: Error :"+JSON.stringify(error));
+      kony.print("ApproveSDK --> Inside addOOBToUserFailure: Error :"+JSON.stringify(error));
       this.setLoadingScreen(false);
     },
     logout : function(username){
-      kony.print("RMS => Inside logout");
+      kony.print("ApproveSDK --> Inside logout");
       this.setLoadingScreen(true);
       this.username = username;
       businessController.logout(this.onLogoutSuccess.bind(this), this.onLogoutFailure.bind(this));
     }, 
     onLogoutSuccess : function(response){
-      kony.print("RMS => Inside onLogoutSuccess");
+      kony.print("ApproveSDK --> Inside onLogoutSuccess");
       this.mfa_key = "";
       this.client_ip ="";
       if(this._isRMSEnabled === true){
@@ -1832,26 +1989,26 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       
     }, 
     onLogoutFailure : function(error){
-      kony.print("RMS => Inside onLogoutFailure: Error: "+JSON.stringify(error));
+      kony.print("ApproveSDK --> Inside onLogoutFailure: Error: "+JSON.stringify(error));
       this.commonEventEmitter(this.onLogout, [error]);
       this.setLoadingScreen(false);
 //       this.view.lblAuthStatus.text = "Failed to logout";
 //       return;
     }, 
     rmsSessionLogout : function(username){
-      kony.print("RMS => Inside rmsSessionLogout");
+      kony.print("ApproveSDK --> Inside rmsSessionLogout");
       var session = HidRmsSDKManager.getRMSAppSessionId();
       var platform  = this.isAndroid() ? "android" : "ios";
       let params = {"username" : username, "session":session, "platform" : platform};
       businessController.rmsSessionLogout(params,this.onRmsSessionLogoutSuccess,this.onRmsSessionLogoutFailure);
     },
     onRmsSessionLogoutSuccess: function(response){
-      kony.print("RMS => Inside onRmsSessionLogoutSuccess");
+      kony.print("ApproveSDK --> Inside onRmsSessionLogoutSuccess");
       this.commonEventEmitter(this.onLogout, [response]);
       this.setLoadingScreen(false);
     },
     onRmsSessionLogoutFailure: function(error){
-      kony.print("RMS => Inside onRmsSessionLogoutFailure: Error:"+JSON.stringify(error));
+      kony.print("ApproveSDK --> Inside onRmsSessionLogoutFailure: Error:"+JSON.stringify(error));
       this.commonEventEmitter(this.onLogout, [error]);
       this.setLoadingScreen(false);
     },
@@ -1875,6 +2032,20 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     verifyPasswordCallbackInternal : function(status, exception, exception_code){
        this.commonEventEmitter(this.verifyPasswordCallback,[status, exception, exception_code]);
+    },
+    
+    //Public Function for Renew Container
+    isContainerRenewalRequired : function(){
+      let days = this.nativeController.getContainerRenewableDate();
+      kony.print("Approve SDK --> getContainerRenewableDate: "+days);
+      if(days > 0 ){
+        //renew container
+        kony.print(" ApproveSDK --> Renew Days: "+days);
+        return true;
+      }else{
+        kony.print(" ApproveSDK --> No need to renew the container.");
+        return false;
+      }
     },
     
     throwCustomError : function(msg){

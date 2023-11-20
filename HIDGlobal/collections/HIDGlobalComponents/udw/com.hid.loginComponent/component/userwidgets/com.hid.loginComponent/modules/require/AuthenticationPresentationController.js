@@ -72,6 +72,10 @@ define(['com/hid/loginComponent/AuthenticationBusinessController'], function(Aut
     let params = {"username" : username, "session":session };
     AuthenticationBusinessController.rmsSessionLogout(params, S_CB, F_CB);
   };
+  
+  AuthenticationPresentationController.prototype.getClientIp = function(S_CB,F_CB){
+    AuthenticationBusinessController.getClientIp(S_CB, F_CB);
+  };
 
   function AuthenticationPresentationController(){
 

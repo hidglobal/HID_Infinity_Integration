@@ -35,7 +35,13 @@
     },
     "canUpdateUI": true,
     "containerweight": 0,
-    "data": {},
+    "data": {
+        "cameraToggleVisibility": true,
+        "closeButtonVisibility": true,
+        "enableContinuousScanning": false,
+        "flashButtonVisibility": true,
+        "renderAutomatic": false
+    },
     "id": "barcodeqrscanner",
     "info": null,
     "iscustomlayout": false,

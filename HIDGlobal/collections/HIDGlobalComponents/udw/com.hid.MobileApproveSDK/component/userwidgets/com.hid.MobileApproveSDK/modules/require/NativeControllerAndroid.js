@@ -39,16 +39,16 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
       this.sdkWrapperObj.disableBioMetrics();
     };
     NativeControllerAndroid.prototype.setBiometricPrompt = function(msg){
-      this.sdkWrapperObj.setBiometricPrompt(this.konyContext,msg);
+      this.sdkWrapperObj.setBiometricPrompt(this.konyActivity,msg);
     };
     NativeControllerAndroid.prototype.checkForBioAvailability = function(){
       return this.sdkWrapperObj.checkForBioAvailability(this.konyContext);
     };
     NativeControllerAndroid.prototype.generateOTP = function(pwd,isBiometricEnabled,label = "hotp"){
-      return this.sdkWrapperObj.generateOTP(pwd,isBiometricEnabled,this.componentInstance.generateOTPSuccess,this.componentInstance.generateOTPFailure,label);
+      return this.sdkWrapperObj.generateOTP(this.konyActivity,pwd,isBiometricEnabled,this.componentInstance.generateOTPSuccess,this.componentInstance.generateOTPFailure,label);
     };
     NativeControllerAndroid.prototype.generateOTPExplicit = function(pwd,isBiometricEnabled, label = "hotp"){
-      return this.sdkWrapperObj.generateOTP(pwd,isBiometricEnabled,this.componentInstance.secureCodeSuccess,this.componentInstance.secureCodeFailure,label);
+      return this.sdkWrapperObj.generateOTP(this.konyActivity,pwd,isBiometricEnabled,this.componentInstance.secureCodeSuccess,this.componentInstance.secureCodeFailure,label);
     };
     NativeControllerAndroid.prototype.renewContainer = function(password){
       this.sdkWrapperObj.renewContainer(password,this.konyContext,this.componentInstance.renewContainercallback,this.componentInstance.renewContainerExceptionCB);
@@ -57,10 +57,13 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
       return this.sdkWrapperObj.deleteContainer(this.konyContext);
     };
     NativeControllerAndroid.prototype.deleteContainerWithAuth = function(password){
-      this.sdkWrapperObj.deleteContainerWithAuth(this.konyContext,password,this.componentInstance.deleteContainerCallback);   
-    }
+      this.sdkWrapperObj.deleteContainerWithAuth(this.konyContext,this.konyActivity,password,this.componentInstance.deleteContainerCallback);   
+    };
     NativeControllerAndroid.prototype.verifyPassword = function(password, isBiometricEnabled,bioString){
-      this.sdkWrapperObj.verifyPassword(this.konyContext,password,isBiometricEnabled,bioString,this.componentInstance.verifyPasswordCallbackInternal);   
-    }
+      this.sdkWrapperObj.verifyPassword(this.konyContext,this.konyActivity,password,isBiometricEnabled,bioString,this.componentInstance.verifyPasswordCallbackInternal);   
+    };
+    NativeControllerAndroid.prototype.getContainerRenewableDate = function(){
+      return this.sdkWrapperObj.getContainerRenewableDate();
+    };
     return NativeControllerAndroid;
 });

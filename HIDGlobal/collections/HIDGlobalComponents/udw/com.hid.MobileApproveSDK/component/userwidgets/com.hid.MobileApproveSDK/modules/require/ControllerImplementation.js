@@ -83,6 +83,9 @@ define([], function() {
         ControllerImplementation.prototype.verifyPassword = function(password,isBiometricEnabled,bioString){
            this.getNativeController().verifyPassword(password,isBiometricEnabled,bioString);
         };
+        ControllerImplementation.prototype.getContainerRenewableDate = function(){
+          return this.getNativeController().getContainerRenewableDate();
+        };
     };
     return ControllerImplementation;
 });

@@ -95,9 +95,32 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
           case "getServiceURLFailure" :
             eventEmitter.emit(this.getServiceURLFailure, eventName, args);
             return;
+          case "approveDeleteStatusAccept" :
+            eventEmitter.emit(this.approveDeleteStatusAccept, eventName, args);
+            return;
+          case "approveDeleteStatusReject" :
+            eventEmitter.emit(this.approveDeleteStatusReject, eventName, args);
+            return;
+          case "approveDeleteInitiateSuccess" :
+            eventEmitter.emit(this.approveDeleteInitiateSuccess, eventName, args);
+            return;
+          case "approveDeleteInitiateFailure" :
+            eventEmitter.emit(this.approveDeleteInitiateFailure, eventName, args);
+            return;
           default :
             throwCustomException(transactionSigningConstants.UNREGISTERED_EVENT);
         }
+    },
+    
+    //public function
+    approveDeleteInitiate : function(username, tds, deviceId){
+       if(username === null){
+         throwCustomException(transactionSigningConstants.INVALID_USERNAME);
+       }
+       if(tds === null){
+         throwCustomException(transactionSigningConstants.INVALID_TDS);
+       }
+       transactionSigningPresentationController.aprroveDeleteInitiate(this.commonEventHandler,username,tds,deviceId);
     },
     
     //public function
@@ -111,7 +134,7 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
        transactionSigningPresentationController.aprroveTransactInitiate(this.commonEventHandler,username,tds,deviceId);
     },
     
-    offlineTS : function(username,signContent,OTP){
+    validateOfflineOTP : function(username,signContent,OTP){
       if(username === null){
         throwCustomException(transactionSigningConstants.INVALID_USERNAME);
       }      
@@ -121,7 +144,7 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
       if(OTP === "" || isNaN(OTP)){
         throwCustomException(transactionSigningConstants.INVALID_OTP);
       }
-      transactionSigningPresentationController.OfflineTS(this.commonEventHandler,username,signContent,OTP);
+      transactionSigningPresentationController.validateOfflineOTP(this.commonEventHandler,username,signContent,OTP);
     },
     
     generateChallenge : function(username,toAccount,amount,desc){
@@ -187,7 +210,7 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
       let qrData = `ocra://S:${serviceURL}&${user};5:${account};6:${amount};7:${remarks};;`
       return qrData;
     },
-    generateQRDataForDemoApp : function(account,amount,remarks,user){
+    generateQRDataForSDK : function(account,amount,remarks,user){
       let qrData = {
         "username" : this.user, 
         "data": [account,amount,remarks]

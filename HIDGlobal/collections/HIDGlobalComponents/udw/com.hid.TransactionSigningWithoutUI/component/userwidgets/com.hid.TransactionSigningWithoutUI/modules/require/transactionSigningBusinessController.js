@@ -70,7 +70,7 @@ define([], function() {
     };
     objService.customVerb("aprroveTransactInitiate", params, callback);
   };
-  transactionSigningBusinessController.prototype.OfflineTS = function(params, S_CB, F_CB) {
+  transactionSigningBusinessController.prototype.validateOfflineOTP = function(params, S_CB, F_CB) {
     let objService = HIDObjectServices.getRepository("SignatureValidation");
     const callback = (status, response) => {
       if (status) {

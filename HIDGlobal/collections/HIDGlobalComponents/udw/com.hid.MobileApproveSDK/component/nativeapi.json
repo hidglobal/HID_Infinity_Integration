@@ -34,17 +34,7 @@
                     "enable": true
                 }
             },
-            "14.0": {
-                "KonyBarcodeDetector-iOS-14.0": {
-                    "title": "KonyBarcodeDetector",
-                    "platform": "iOS",
-                    "os": "14.0",
-                    "isDefault": false,
-                    "filename": "KonyBarcodeDetector-iOS-14.0.zip",
-                    "nfiversion": "3.0",
-                    "enable": true
-                }
-            },
+            "14.0": {},
             "15.0": {
                 "HIDRMSWrapper-iOS-15.0": {
                     "title": "HIDRMSWrapper",
@@ -55,36 +45,39 @@
                     "nfiversion": "3.0",
                     "enable": true
                 },
-                "HID_Approve_SDK-iOS-15.0": {
-                    "title": "HID_Approve_SDK",
+                "KonyBarcodeDetector-iOS-15.0": {
+                    "title": "KonyBarcodeDetector",
                     "platform": "iOS",
                     "os": "15.0",
                     "isDefault": false,
-                    "filename": "HID_Approve_SDK-iOS-15.0.zip",
-                    "nfiversion": "3.0",
-                    "enable": false
-                },
-                "HIDApproveSDKWrapper-iOS-15.0": {
-                    "title": "HIDApproveSDKWrapper",
-                    "platform": "iOS",
-                    "os": "15.0",
-                    "isDefault": false,
-                    "filename": "HIDApproveSDKWrapper-iOS-15.0.zip",
+                    "filename": "KonyBarcodeDetector-iOS-15.0.zip",
                     "nfiversion": "3.0",
                     "enable": true
+                }
+            },
+            "16.0": {
+                "HIDApproveSDKWrapper-iOS-16.0": {
+                    "title": "HIDApproveSDKWrapper",
+                    "platform": "iOS",
+                    "os": "16.0",
+                    "isDefault": false,
+                    "filename": "HIDApproveSDKWrapper-iOS-16.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                },
+                "HID_Approve_SDK-iOS-16.0": {
+                    "title": "HID_Approve_SDK",
+                    "platform": "iOS",
+                    "os": "16.0",
+                    "isDefault": false,
+                    "filename": "HID_Approve_SDK-iOS-16.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": false
                 }
             }
         },
         "Android": {
             "4.0": {
-                "HIDApproveSDKWrapper-Android-4.0": {
-                    "title": "HIDApproveSDKWrapper",
-                    "platform": "Android",
-                    "os": "4.0",
-                    "isDefault": false,
-                    "filename": "HIDApproveSDKWrapper-Android-4.0.zip",
-                    "enable": false
-                },
                 "Kony_FileStorage-Android-4.0": {
                     "title": "Kony_FileStorage",
                     "platform": "Android",

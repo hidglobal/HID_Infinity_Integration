@@ -10,10 +10,10 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
     Inherits(NativeControllerAndroid, NativeController);
      NativeControllerAndroid.prototype.setNotificationStatus =function(txID,status,password){
        kony.print("ApproveSDK ---> Android Controller " + txID);
-       this.sdkWrapperObj.setNotificationStatus(txID,status,password,this.componentInstance.onCompletionCallback, this.componentInstance.pwdPromtCallback,this.konyContext);
+       this.sdkWrapperObj.setNotificationStatus(txID,status,password,this.componentInstance.onCompletionCallback, this.componentInstance.pwdPromtCallback,this.konyContext,this.konyActivity);
     };
     NativeControllerAndroid.prototype.retriveTransaction =function(txID,password,isBioEnabled){
-       return this.sdkWrapperObj.retriveTransaction(txID,this.konyContext,password,isBioEnabled,this.componentInstance.retriveTransactionCallback);
+       return this.sdkWrapperObj.retriveTransaction(txID,this.konyContext,this.konyActivity,password,isBioEnabled,this.componentInstance.retriveTransactionCallback);
     };
     NativeControllerAndroid.prototype.notifyPassword =function(password,mode){
        this.sdkWrapperObj.notifyPassword(password,mode);
@@ -29,6 +29,12 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
     };
     NativeControllerAndroid.prototype.updateUsername =function(username){
       this.sdkWrapperObj.setUsername(username);
+    };
+    NativeControllerAndroid.prototype.getPasswordPolicy =function(){
+      return this.sdkWrapperObj.getPasswordPolicy(this.konyContext);
+    };
+    NativeControllerAndroid.prototype.updatePassword =function(oldPassword,newPassword){
+      this.sdkWrapperObj.updatePassword(oldPassword,newPassword,this.konyContext,this.componentInstance.updatePwdCallbackInternalComponent,true);
     };
 
     return NativeControllerAndroid;

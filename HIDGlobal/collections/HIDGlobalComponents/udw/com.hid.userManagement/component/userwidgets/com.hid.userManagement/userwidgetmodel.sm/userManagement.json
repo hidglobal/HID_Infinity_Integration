@@ -35,7 +35,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxDevices"
+        "flxDevices",
+        "flxNonFinancialComponent"
     ],
     "clipbounds": true,
     "containerweight": 100,

@@ -5,7 +5,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "j5db04b67fbd45f2b88070c94d2dcfe9",
+                    "kuid": "a0880c6e8c234af3bc0a123128aeb49b",
                     "paramList": [],
                     "propertyKey": "initiate",
                     "pw": {
@@ -17,7 +17,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "d042199266d24e01ae5d85c0247bb123",
+                    "kuid": "f2dd57e800424938976de9cf44816d9d",
                     "paramList": [],
                     "propertyKey": "changeUIMode",
                     "pw": {
@@ -29,7 +29,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "b0f892bf0e1e49b5a45a28d5558a7e01",
+                    "kuid": "g7992be4d0c64fbd9bc7340e8515890f",
                     "paramList": [],
                     "propertyKey": "getUsername",
                     "pw": {
@@ -41,7 +41,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "aeb3112b1aa646fba82eac9bf9484d64",
+                    "kuid": "ba568efde9084bfd94c5b5dcbe682924",
                     "paramList": [],
                     "propertyKey": "checkBioAvailablityPublic",
                     "pw": {
@@ -53,7 +53,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a582145273ac4cb398eba51529c0a348",
+                    "kuid": "g9d8160d095b4c46b570ea8ec3aeea53",
                     "paramList": [],
                     "propertyKey": "setBioStatusToEnable",
                     "pw": {
@@ -65,7 +65,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "cc8f57fff1944c3387b7147a741a7a3e",
+                    "kuid": "d25dc469b1ad4a15afa6ea8fa37f2359",
                     "paramList": [],
                     "propertyKey": "setBioStatusToDisable",
                     "pw": {
@@ -77,7 +77,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "bb75468212754f1c871ec3a88e9f427d",
+                    "kuid": "d290916b892d443f90871e84237e7d85",
                     "paramList": [],
                     "propertyKey": "getPinRemainingDays",
                     "pw": {
@@ -89,7 +89,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a944d867675f4d32b298d9a7ab7da9f9",
+                    "kuid": "id20555b02ea407fb29dd8a46d00dd2e",
                     "paramList": [],
                     "propertyKey": "getKeyProfileAge",
                     "pw": {
@@ -101,7 +101,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "i9a9bfa891c6434eae66d155b3f9915a",
+                    "kuid": "c98da3dfdf174b99b676c69015d097ca",
                     "paramList": [],
                     "propertyKey": "renewContainer",
                     "pw": {
@@ -113,7 +113,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a2ac174856f44207ad19f05c6adda939",
+                    "kuid": "c6a102553fe24ba891f5ba811f3baa9b",
                     "paramList": [],
                     "propertyKey": "deleteUserProfile",
                     "pw": {
@@ -125,7 +125,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "ad58b75e2ab34ca1b7b46da34f7f0ea9",
+                    "kuid": "dec2c5364f7d4fedb910fd552bbd3821",
                     "paramList": [],
                     "propertyKey": "getSecureCode",
                     "pw": {
@@ -137,7 +137,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "ce9e9dad50174b9f8afefcbfbac12b85",
+                    "kuid": "fc26baa1266741408108560dd9c8be5d",
                     "paramList": [],
                     "propertyKey": "logout",
                     "pw": {
@@ -149,7 +149,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "he5dd1233dcd4c5e871927ab9bf6f4e8",
+                    "kuid": "bdc06149bd1e4d108c2ef4a34cb9ef57",
                     "paramList": [],
                     "propertyKey": "getLoginFLowPublic",
                     "pw": {
@@ -161,7 +161,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "g7e67e05367a495fa8821670095b588d",
+                    "kuid": "a3f07e356cc34ec5b6d85538a10bfadc",
                     "paramList": [],
                     "propertyKey": "verifyPassword",
                     "pw": {
@@ -173,11 +173,23 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a7c47e4f25ba4a7ca8571192e7824a2d",
+                    "kuid": "ed128708c23f44ab962fcb3ec732e2c4",
                     "paramList": [],
                     "propertyKey": "updatePassword",
                     "pw": {
                         "displayName": "updatePassword",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "j88c246af55446fd8679c9277c58d140",
+                    "paramList": [],
+                    "propertyKey": "isContainerRenewalRequired",
+                    "pw": {
+                        "displayName": "isContainerRenewalRequired",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
@@ -190,7 +202,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "i232f44596af4668af8d31ab282b7f45",
+                    "kuid": "hf6395ae016f48b5b3c0b3a4cbe55b4e",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "onSuccessCB",
@@ -203,7 +215,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "fb1e397d783e4c3a9b82eba29bad2e6a",
+                    "kuid": "ce7509c4e84240e8b2e02d32eb3e4fb6",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "onUpdatePasswordCB",
@@ -216,7 +228,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "g979499ed06647aca839d79b803c0ca7",
+                    "kuid": "a7b13905461f4f92bf7b0431b9d597a2",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "onLoginFlow",
@@ -229,7 +241,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "b35a14646dfe4e43bc9b0bf92f9dba29",
+                    "kuid": "b44cfb150dd14b268047096a1030eb00",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "bioStatusCallback",
@@ -242,7 +254,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "f45c9c5c5fc14064a7b55a56f6468867",
+                    "kuid": "e8e867dafd984df791792c40b5948a2d",
                     "paramList": [],
                     "propertyIndex": 5,
                     "propertyKey": "renewContainerExceptionCB",
@@ -255,7 +267,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "dc0a08aaf8fd4f71a23d3d7eaef1a400",
+                    "kuid": "g2df19809cae46969b50847b8621dde1",
                     "paramList": [],
                     "propertyIndex": 6,
                     "propertyKey": "genearateOTPSuccess",
@@ -268,7 +280,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "d45c7016f69f431b947836503623a584",
+                    "kuid": "e3123608858742339f70089d4e5ca10d",
                     "paramList": [],
                     "propertyIndex": 7,
                     "propertyKey": "genearateOTPFailure",
@@ -281,7 +293,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a37a850a2fc94416a1207eee27645bcd",
+                    "kuid": "gc2d23a07f264624ab35d9260f905a6e",
                     "paramList": [],
                     "propertyIndex": 8,
                     "propertyKey": "secureCodeSuccess",
@@ -294,7 +306,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "ba495ea3a1b3429d9a18c0009fd51afa",
+                    "kuid": "a5ee290778764349bfed11d48ccccc33",
                     "paramList": [],
                     "propertyIndex": 9,
                     "propertyKey": "secureCodeFailure",
@@ -307,7 +319,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "b177e398697e48bca84b5e3565f4406f",
+                    "kuid": "c2e06713a71440b5b0b678f0f9ef0901",
                     "paramList": [],
                     "propertyIndex": 10,
                     "propertyKey": "onLogout",
@@ -320,7 +332,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "i3ad777693d844aeaffd28318b6c0103",
+                    "kuid": "a835d2a0c3e84100babda2a4a3dd176b",
                     "paramList": [],
                     "propertyIndex": 11,
                     "propertyKey": "verifyPasswordCallback",
@@ -333,7 +345,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a8791de171fd4239b1bfff5bec5bed31",
+                    "kuid": "be7eb0c793e24c8f846aa0793e57dcd7",
                     "paramList": [],
                     "propertyIndex": 12,
                     "propertyKey": "updatePasswordSuccess",
@@ -346,12 +358,25 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a349c95efdd24a9c818871cb1a56607f",
+                    "kuid": "h33cc180d78f4a118511cca8bd6aa111",
                     "paramList": [],
                     "propertyIndex": 13,
                     "propertyKey": "updatePasswordFailure",
                     "pw": {
                         "displayName": "updatePasswordFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "a5690c76a5ce4ac1b3de726006556df4",
+                    "paramList": [],
+                    "propertyIndex": 14,
+                    "propertyKey": "renewContainerCallback",
+                    "pw": {
+                        "displayName": "renewContainerCallback",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",

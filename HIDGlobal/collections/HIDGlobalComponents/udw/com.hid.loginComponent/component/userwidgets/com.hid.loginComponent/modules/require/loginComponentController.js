@@ -10,18 +10,17 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.view.btnLoginSecure.onClick = this.loginSecureCode;
       this.view.tbxSecureCode.onDone = this.loginSecureCode;
       this.view.btnConfirmOTP.onClick = this.btnConfirmOTP_onClick;
-//        alert(this._FirstFactor)
-//       switch(this._FirstFactor){
-//         case "STATIC_PWD":
-//           this.contextSwitch("Login");
-//           break;
-//         case "OTP_SMS_PIN":
-//           this.contextSwitch("OOBPIN");
-//           break;
-//         case "SECURE_CODE":
-//           this.contextSwitch("Secure");
-//           break;
-//       }
+      switch(this._FirstFactor){
+        case "STATIC_PWD":
+          this.contextSwitch("Login");
+          break;
+        case "OTP_SMS_PIN":
+          this.contextSwitch("OOBPIN");
+          break;
+        case "SECURE_CODE":
+          this.contextSwitch("Secure");
+          break;
+      }
       this.TM_Cookie_Sid = "";
       this.TM_Cookie_Tag = "";
       this.tm_sid = "";
@@ -100,18 +99,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
             "message": "FirstFactor property is Invalid"
           };
         }
-      this._FirstFactor = val;
-      switch(this._FirstFactor){
-          case "STATIC_PWD":
-            this.contextSwitch("Login");
-            break;
-          case "OTP_SMS_PIN":
-            this.contextSwitch("OOBPIN");
-            break;
-          case "SECURE_CODE":
-            this.contextSwitch("Secure");
-            break;
-       }
+        this._FirstFactor = val;
       });
       defineGetter(this, "MFA", function() {
         return this._MFA;
@@ -243,15 +231,41 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       if(this.client_ip.trim() !== ""){
         this.rmsLoginApiCall(username,password);
       }else{
-        const url = "https://api.ipify.org/?format=json"
-        fetch(url)
-          .then(response => response.json())
-          .then(data =>{ 
-          self.client_ip = data.ip;
-          self.rmsLoginApiCall(username,password);
-        });
+        
+        this.getClientIp();
+//         const url = "https://api.ipify.org/?format=json"
+//         fetch(url)
+//           .then(response => response.json())
+//           .then(data =>{ 
+//           self.client_ip = data.ip;
+//           self.rmsLoginApiCall(username,password);
+//         });
       }
-    },     
+    }, 
+    
+    getClientIp: function(){
+      AuthenticationPresentationController.getClientIp(this.getClientIpSuccess,this.getClientIpFailure);  
+    },
+    
+    
+    getClientIpSuccess: function(response){
+      kony.print(JSON.stringify(response));
+      if (response){
+		this.client_ip = response.GetClientIp[0].clientIp;
+      }
+      else{
+        this.client_ip = "";
+      }
+      
+      this.rmsLoginApiCall(this.username,this.password);
+      
+    },
+    
+    getClientIpFailure: function(response){
+      this.client_ip = "";
+      this.rmsLoginApiCall(this.username,this.password);
+      kony.print(JSON.stringify(response));
+    },
     
     rmsLoginApiCall : function(username,password){
       let randomValue = Math.floor(Math.random()*100000);
@@ -296,7 +310,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       var noStepup = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "false";
       var stepUp = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "true";
       this.currentThreat = +response.mfa_meta.rms.currentThreat || 10;
-      if(noStepup && this.isKnownDevice){
+      if(noStepup){
         //If isRMSReadOnly then donot perform stepdown
         kony.print("RMS => isRMSReadOnly:"+this._isRMSReadOnly);
         if(this._isRMSReadOnly === false){
@@ -344,7 +358,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       var noStepup = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "false";
       var stepUp = response.mfa_meta.rms.hasOwnProperty("stepUp") && response.mfa_meta.rms.stepUp === "true";
       this.currentThreat = +response.mfa_meta.rms.currentThreat || 10;
-      if(noStepup && this.isKnownDevice){
+      if(noStepup){
         //If isRMSReadOnly then donot perform stepdown
         kony.print("RMS => isRMSReadOnly:"+this._isRMSReadOnly);
         if(this._isRMSReadOnly === false){
@@ -412,9 +426,9 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     },
     onStepDownSuccessCB : function(response){
       this.mfa_key = "";
-      if(!this.isKnownDevice){
-        this.confirmationAlert(this.deviceTag);
-      }
+//       if(!this.isKnownDevice){
+//         this.confirmationAlert(this.deviceTag);
+//       }
       this.client_ip = "";      
       this.commonEventHandler(this.onSuccessCallback,response);
       this.commonEventHandler(this.dismissLoading, "");
@@ -572,9 +586,9 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         clearInterval(this.gblTimer);
       }
       this.mfa_key = "";
-      if((this._isRMSEnabled == true) && !this.isKnownDevice){
-        this.confirmationAlert(this.deviceTag);
-      }
+//       if((this._isRMSEnabled == true) && !this.isKnownDevice){
+//         this.confirmationAlert(this.deviceTag);
+//       }
       this.client_ip = "";
       this.commonEventHandler(this.onSuccessCallback,response);
       this.commonEventHandler(this.dismissLoading, "");

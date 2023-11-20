@@ -58,7 +58,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "gb7a346020734b4ead878fec064cac65",
+                    "kuid": "gb4b529380fe437bbf70f5d3fc6dcc12",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "signTransactionSuccess",
@@ -71,7 +71,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "d32b7fb955c746bea9d949371a09a83e",
+                    "kuid": "dbb4e7af91224f559cd147a5b9e61aa9",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "signTransactionFailure",
@@ -84,7 +84,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "e44e3158f40d46319706579e3634bcc9",
+                    "kuid": "bfbe70cbdf8d4ee491ba91d156707b9d",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "onPasswordPrompt",
@@ -97,7 +97,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "g36af136ae3449f1a686185e611a673e",
+                    "kuid": "ga1ffecc22184c5bbad4e16a9741612a",
                     "paramList": [],
                     "propertyIndex": 5,
                     "propertyKey": "passwordUpdateSuccess",
@@ -110,12 +110,38 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "f44ef78b117a4e5cba2116060eb11be4",
+                    "kuid": "d129fdf9186a4595961147e5e8ae5884",
                     "paramList": [],
                     "propertyIndex": 6,
                     "propertyKey": "passwordUpdateError",
                     "pw": {
                         "displayName": "passwordUpdateError",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "gbdfa40a64c9457eb298666af4804ada",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "a43cd2c0fabe42c2ae43742b26564f3e",
+                    "paramList": [],
+                    "propertyIndex": 7,
+                    "propertyKey": "onNotifyPassword",
+                    "pw": {
+                        "displayName": "onNotifyPassword",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "gbdfa40a64c9457eb298666af4804ada",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "i96f72a727cd4208ab75de04d83c1ca0",
+                    "paramList": [],
+                    "propertyIndex": 8,
+                    "propertyKey": "onUpdatePasswordCB",
+                    "pw": {
+                        "displayName": "onUpdatePasswordCB",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "gbdfa40a64c9457eb298666af4804ada",

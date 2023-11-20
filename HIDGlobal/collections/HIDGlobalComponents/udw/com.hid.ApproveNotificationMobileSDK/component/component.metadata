@@ -21,6 +21,12 @@
                     "actionId": "AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36",
                     "actionName": "AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36",
                     "key": "ide_onClick"
+                },
+                "AS_Image_e9734aafa6e2486f9ad1d23184ae8215": {
+                    "channel": "common",
+                    "actionId": "AS_Image_e9734aafa6e2486f9ad1d23184ae8215",
+                    "actionName": "AS_Image_e9734aafa6e2486f9ad1d23184ae8215",
+                    "key": "ide_onTouchStart"
                 }
             }
         },
@@ -28,13 +34,20 @@
             "CopyCopyslFbox5",
             "slImage",
             "slFbox",
+            "CopyCopyCopyslFbox0bc0e95f8e5b94d",
             "sknLblDeny",
+            "CopyCopysknMajorBank3",
+            "CopyCopysknCustomerId3",
+            "CopyCopysknLblHideConfirmPin3",
             "CopyCopyCopysknMajorBank1",
+            "CopyCopysknLblConfirmPin3",
             "CopyCopysknLblPwdPromptNormal",
             "slForm",
             "defBtnNormal",
             "defBtnFocus",
             "CopyCopyCopysknBtnCreate1",
+            "sknBtnMobileComponent",
+            "sknBtnFocusMobileComponent",
             "CopyCopyslFbox0bd5411173c1440",
             "sknApproveLineFocus",
             "sknApproveLineNormal",
@@ -46,26 +59,39 @@
             "sknDenyLineFocus",
             "CopyslFbox0gd1c7572f5f54e",
             "sknDenyFlxNew",
+            "slFbox0a69700c9c2c446",
+            "CopyCopyCopyflxError3",
             "CopysknflxNotification",
+            "sknFlxMainComponentOpaque",
             "CopyCopyCopysknScreenBgColor2",
             "CopyCopyCopysknScreenBgColor3",
             "sknApproveFlxFocus",
             "sknDenyFlxFocus",
             "CopyCopyslFbox0cb5ec2ca8ab640",
+            "CopyCopysknScreen3",
             "CopyCopydefLabel5",
             "CopyCopysknLblPwdPromptNormal1",
+            "CopyCopyCopyCopydefLabel0fab9151c80b847",
+            "CopyCopyCopyCopydefLabel3",
+            "sknTbxComponent",
+            "sknTbxPHComponent",
             "CopyCopyCopysknActiCode1",
             "CopyCopyCopysknCustomeId1",
             "CopyCopyCopysknTbxCustomerPH1"
         ],
         "images": [
             "password1_1.png",
+            "imgshape140421490125936_3_4_1.png",
+            "bank_portal_logo_blue.png",
             "imgpicture11140421490155184_3_3_1.png",
             "image_732_2_1.gif",
-            "transaction5_1.png"
+            "transaction5_1.png",
+            "closeicon_1_3_4_1.png"
         ],
         "fonts": [
-            "Helvetica"
+            "Helvetica",
+            "Gotham-Book",
+            "default"
         ],
         "nativeApis": 0,
         "mfbundle": "services/services.zip",
@@ -75,7 +101,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2023-01-25T11:17:02.278Z",
-    "createdVizVersion": "9.2.37",
+    "createdOn": "2023-11-17T08:27:03.569Z",
+    "createdVizVersion": "9.2.73",
     "project_version": "sprint39"
 }

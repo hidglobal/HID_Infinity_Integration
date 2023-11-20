@@ -6,7 +6,6 @@
     "sourceChannel": "common",
     "templateDef": {
         "DNDConfig": null,
-        "__parentReadjusting__": false,
         "_height_": {
             "type": "string",
             "value": "100%"
@@ -29,7 +28,7 @@
             0
         ],
         "_percent_": true,
-        "_skin_": "s3d02bb3bd17411c8b1c03e22f91065b",
+        "_skin_": "s2a4a882160b4f989fc2bca6f8fe0e07",
         "_top_": {
             "type": "string",
             "value": "0dp"
@@ -56,7 +55,6 @@
         "enablescrolling": true,
         "flxApprove": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "101.11%"
@@ -129,7 +127,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sfb5d4318eb141a291f0f1129206bb66",
+                "_skin_": "s2ac91a3a93c40a1afed8c99f67f3ddb",
                 "_top_": {
                     "type": "string",
                     "value": "7%"
@@ -163,7 +161,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s416270386f24585a6be8d6fe14029c7",
+                    "_skin_": "s882bb1aea9c4b1392357880ad3d15be",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -181,7 +179,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sd78ea668f0943089604d52e73950c5e",
+                    "focusskin": "s979024f00df42b0a404417ba5d8953a",
                     "id": "btnCancelApprove",
                     "ide_onClick": "AS_Button_f81a7a839abc4b228e68d33a1cd170b7",
                     "info": null,
@@ -195,7 +193,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "DsHvxlf2SgCiucGZWCx89giCkTI="
+                        "md5": "i5l6Hh9nSJI+MpUqFilXbmuGAjs="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -223,7 +221,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s23d35230f95425aaef0c434fc3eaeb9",
+                    "_skin_": "s78430ddcbc8472885c7a57efb4fad5f",
                     "_text_": "Try Secure Code",
                     "_top_": {
                         "type": "string",
@@ -241,7 +239,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sfdff4346baa4c94a3fd325a0b0a5390",
+                    "focusskin": "s8aeec7f44bf4618bff84818263a5139",
                     "id": "btnTryOTP",
                     "ide_onClick": "AS_Button_f5c1e87f46f341d1807d9a5f75939001",
                     "info": null,
@@ -255,7 +253,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "TOlRvainZdt9hK6k1JaM64Czsbw="
+                        "md5": "nFBBNiFOov+qZot8quL38iLlHac="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -287,7 +285,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "7QVTGmaoWR0v3yNNTFYE4KrkQJ4="
+                    "md5": "+kqflmYq7OD0yL3OJc5UtsXkGVE="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -318,7 +316,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sfb5d4318eb141a291f0f1129206bb66",
+                "_skin_": "s2ac91a3a93c40a1afed8c99f67f3ddb",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -370,7 +368,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s616bb9c360e4729903f6c2d9ee77772",
+                    "_skin_": "s04e934e10ec40858bf79b1e0837b410",
                     "_text_": "Resend",
                     "_top_": {
                         "type": "string",
@@ -416,7 +414,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "NLL1HGG8QXaAfWfOCZH9EVpUCPs="
+                        "md5": "ZezfDYoEZY2yZ/KyiyUXGa8aC14="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -445,7 +443,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s616bb9c360e4729903f6c2d9ee77772",
+                    "_skin_": "s04e934e10ec40858bf79b1e0837b410",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -490,7 +488,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "77AMRdBCvqJUpGiNcvkAM8z6u1c="
+                        "md5": "TiFUmn+qrLP8eyNxQsiDVAMJ7Xg="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -505,7 +503,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "Z4Q1BKHFXj1+Goo+XDhdVNz78E0="
+                    "md5": "yWmux24sdNEkymzv2C3MbhfxiqE="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -541,7 +539,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s616bb9c360e4729903f6c2d9ee77772",
+                "_skin_": "s04e934e10ec40858bf79b1e0837b410",
                 "_text_": "We've sent a notification to your device. Approve the notification to continue.",
                 "_top_": {
                     "type": "string",
@@ -587,7 +585,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "kYDPi3ohBKYkfOgB60Qb5Ki04Pg="
+                    "md5": "JBtXetKZfNeV2ii+RFgZR4bSDP0="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -616,7 +614,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s0cfb91a6fc844a9a9fb399065b11c43",
+                "_skin_": "sa0bf0a81c874548b91b96ec3eb17165",
                 "_text_": "Label",
                 "_top_": {
                     "type": "string",
@@ -662,7 +660,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "3SUH2tjmtguMgA1cW5EiVpzFkZw="
+                    "md5": "55NYH5qiRF5Qh0jMJBC1dJzqZ6A="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -691,7 +689,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s87a2fd49883407f9f6abbad7c45437f",
+                "_skin_": "s215b310c31a49f09034838f1d5c3224",
                 "_text_": "HID Approve Notification",
                 "_top_": {
                     "type": "string",
@@ -737,7 +735,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "9GtUf48h89jfvGgwIUX+kT/YuGA="
+                    "md5": "4Uk53/+2/XKMeuUPdaN49aJe9N0="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -760,7 +758,6 @@
         },
         "flxLogin": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -815,12 +812,11 @@
             "containerweight": 100,
             "desktopweb": {},
             "disabledSkins": {
-                "blockedUISkin": "s6212e074e314724bd6d71587d9c5b8e"
+                "blockedUISkin": "s937a910380e4689b4d9c5eafb46ac78"
             },
             "enablescrolling": true,
             "flxButtons": {
                 "DNDConfig": null,
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "8%"
@@ -843,7 +839,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s7e51aa0a5e8408ba7b083b2be612dc4",
+                "_skin_": "sbe37ad4be064f46818650d5b7d645ca",
                 "_top_": {
                     "type": "string",
                     "value": "6%"
@@ -857,7 +853,6 @@
                 "btnLogin": {
                     "@class": "com.kony.gen.viz.model.component.KVizButton",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "100%"
@@ -878,7 +873,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s23d35230f95425aaef0c434fc3eaeb9",
+                    "_skin_": "s78430ddcbc8472885c7a57efb4fad5f",
                     "_text_": "LOGIN",
                     "_top_": {
                         "type": "string",
@@ -900,11 +895,11 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "desktopweb": {
-                        "blockedUISkin": "s94053b8411442e485418f7604285de0"
+                        "blockedUISkin": "sf23dcdf64f1465fa059f270305e2f72"
                     },
                     "disabledSkins": {},
                     "displaytext": true,
-                    "focusskin": "s06a15366f72476c8e250d6596cf8a1b",
+                    "focusskin": "s57d3330c7fa42e4be4eed7656d674b6",
                     "id": "btnLogin",
                     "ide_onClick": "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279",
                     "info": null,
@@ -917,7 +912,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "PwFj1CsY2P+V9DgJhYVwtbRk7yU="
+                        "md5": "WynlnbsM4qLhgT2axUnvqBVfXaI="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -947,7 +942,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "jFzOa5hGzO9biAfLiT7KB+8EfXs="
+                    "md5": "whHp0/XWATgxpVRrVu1b1uIx+wk="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -959,7 +954,6 @@
                 "Lock": {
                     "@class": "com.kony.gen.viz.model.component.KVizLabel",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "ref",
                         "value": "preferred"
@@ -980,7 +974,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s2d001b47b5b40418a909cbf68f92143",
+                    "_skin_": "sb2a76253f0f4dc9b02354621d14e645",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -1023,13 +1017,12 @@
                     "parent": "flxPassword",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
                     "snapshot": {
-                        "md5": "dNaC9HM8mknU0rYNbmFU+koG9A0="
+                        "md5": "2KS9FJ8+XnTSAl45m6d3ejoq/Fk="
                     },
                     "tooltip": "",
                     "wType": "Label",
                     "zindex": 1
                 },
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "8.50%"
@@ -1052,7 +1045,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sfb62f9470424d5893eb142950435750",
+                "_skin_": "s1263bf6997349f69e9a35ffbb404d9c",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -1089,13 +1082,12 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "Q8gkXf6eSMNfvyhhUI1+8M6phEY="
+                    "md5": "WP3mWSIWU8TMVEJgV4SqRTFxeKI="
                 },
                 "snaptogrid": true,
                 "tbxPassword": {
                     "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "100%"
@@ -1117,7 +1109,7 @@
                         0
                     ],
                     "_placeholder_": "Password",
-                    "_skin_": "sc0af20620ff4d80975f671bfebcf3f3",
+                    "_skin_": "secee78da8064b55a0d9194686ab38a8",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -1141,10 +1133,10 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s76a728af62b4b9a87e87b4a1262ebd8"
+                        "placeholderSkin": "s6f7b7c545ce444a86ee3d3d517caddd"
                     },
                     "disabledSkins": {},
-                    "focusskin": "s9f74f6308954d8e8d23a82fc54c38e9",
+                    "focusskin": "s5daebabfa9a498999d654d102ba26ac",
                     "id": "tbxPassword",
                     "info": null,
                     "iscustomlayout": false,
@@ -1155,12 +1147,12 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxPassword",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
-                    "placeholderskin": "s76a728af62b4b9a87e87b4a1262ebd8",
+                    "placeholderskin": "s6f7b7c545ce444a86ee3d3d517caddd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "5AQ7vQt+jaA3NRTSJGaTIaP0RLg="
+                        "md5": "FAlN3VrbYFVWxF4qZKdrYB02emE="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -1177,7 +1169,6 @@
                 "User": {
                     "@class": "com.kony.gen.viz.model.component.KVizLabel",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "ref",
                         "value": "preferred"
@@ -1198,7 +1189,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s2d001b47b5b40418a909cbf68f92143",
+                    "_skin_": "sb2a76253f0f4dc9b02354621d14e645",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -1245,13 +1236,12 @@
                     "parent": "flxUserName",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
                     "snapshot": {
-                        "md5": "r5wrmDUr/sqUHQJyomCW9Tohzt8="
+                        "md5": "3Mmv13Xa1+axuQFDnH9fv1XjZOM="
                     },
                     "tooltip": "",
                     "wType": "Label",
                     "zindex": 1
                 },
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "8.50%"
@@ -1274,7 +1264,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sfb62f9470424d5893eb142950435750",
+                "_skin_": "s1263bf6997349f69e9a35ffbb404d9c",
                 "_top_": {
                     "type": "string",
                     "value": "6%"
@@ -1311,13 +1301,12 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "Yos7XX1sEgj3ghjGx3NdiVXDvJU="
+                    "md5": "GmK6y/ZYe4uw//Q0eqHARpG7bt0="
                 },
                 "snaptogrid": true,
                 "tbxUser": {
                     "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
                     "DNDConfig": null,
-                    "__parentReadjusting__": false,
                     "_height_": {
                         "type": "string",
                         "value": "100%"
@@ -1339,7 +1328,7 @@
                         0
                     ],
                     "_placeholder_": "Username",
-                    "_skin_": "s9f74f6308954d8e8d23a82fc54c38e9",
+                    "_skin_": "s5daebabfa9a498999d654d102ba26ac",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -1359,10 +1348,10 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s76a728af62b4b9a87e87b4a1262ebd8"
+                        "placeholderSkin": "s6f7b7c545ce444a86ee3d3d517caddd"
                     },
                     "disabledSkins": {},
-                    "focusskin": "s9f74f6308954d8e8d23a82fc54c38e9",
+                    "focusskin": "s5daebabfa9a498999d654d102ba26ac",
                     "id": "tbxUser",
                     "info": null,
                     "iscustomlayout": false,
@@ -1373,12 +1362,12 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxUserName",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
-                    "placeholderskin": "s76a728af62b4b9a87e87b4a1262ebd8",
+                    "placeholderskin": "s6f7b7c545ce444a86ee3d3d517caddd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": false,
                     "snapshot": {
-                        "md5": "4EUgJorXaPAZ8PWBO4PI1nK4WvU="
+                        "md5": "hGiAhpc3hXQqoxdFD0CUkur2RoA="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -1399,7 +1388,6 @@
             "lblErrorLogin": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
                 "DNDConfig": null,
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "string",
                     "value": "15%"
@@ -1420,7 +1408,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s0cfb91a6fc844a9a9fb399065b11c43",
+                "_skin_": "sa0bf0a81c874548b91b96ec3eb17165",
                 "_text_": "Label",
                 "_top_": {
                     "type": "string",
@@ -1465,7 +1453,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "lH+yIMHfrYMVEYPZkfqNxW1TcBQ="
+                    "md5": "MpQUChr2gJGzTXROs5wsABEPHwc="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -1474,7 +1462,6 @@
             "lblSigntoAcc": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
                 "DNDConfig": null,
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "ref",
                     "value": "preferred"
@@ -1495,7 +1482,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s4e57970cc964e2cb767fe6749cb239d",
+                "_skin_": "sff92fc3c1e1416c8eb71f471f9239c8",
                 "_text_": "Login to your account",
                 "_top_": {
                     "type": "string",
@@ -1540,7 +1527,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "kkMu2ker3xgNay2BqbGR7qv0FWU="
+                    "md5": "ktiDQDm+MA/M4v7t9j50hGkh0YU="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -1549,7 +1536,6 @@
             "lblWelcome": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
                 "DNDConfig": null,
-                "__parentReadjusting__": false,
                 "_height_": {
                     "type": "ref",
                     "value": "preferred"
@@ -1570,7 +1556,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s87a2fd49883407f9f6abbad7c45437f",
+                "_skin_": "s215b310c31a49f09034838f1d5c3224",
                 "_text_": "Welcome!",
                 "_top_": {
                     "type": "string",
@@ -1615,7 +1601,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "Ggn9/MAmx4uglzafDdSwLaQasBQ="
+                    "md5": "h779FY2GIqdGPzIgkQXEM82Vyks="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -1629,7 +1615,7 @@
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "s6R9e9bglWs+4sJIzWJzmgqB7i4="
+                "md5": "NHVc2FXM+1cXlr58d6Bu/7KPYy8="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -1638,7 +1624,6 @@
         },
         "flxOOBPIN": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -1693,7 +1678,7 @@
             "containerweight": 100,
             "desktopweb": {},
             "disabledSkins": {
-                "blockedUISkin": "s6212e074e314724bd6d71587d9c5b8e"
+                "blockedUISkin": "s937a910380e4689b4d9c5eafb46ac78"
             },
             "enablescrolling": true,
             "flxLoginButton": {
@@ -1720,7 +1705,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sb49b906cb5d4fda84358b712e1a4212",
+                "_skin_": "sa5d53e385704ae0993523b87cb925e8",
                 "_top_": {
                     "type": "string",
                     "value": "6%"
@@ -1754,7 +1739,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s778e934ad6a4265a64b0a3232c2d648",
+                    "_skin_": "s96965f413d74f3590900b18d34dd23c",
                     "_text_": "LOGIN",
                     "_top_": {
                         "type": "string",
@@ -1776,11 +1761,11 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "desktopweb": {
-                        "blockedUISkin": "s94053b8411442e485418f7604285de0"
+                        "blockedUISkin": "sf23dcdf64f1465fa059f270305e2f72"
                     },
                     "disabledSkins": {},
                     "displaytext": true,
-                    "focusskin": "s06a15366f72476c8e250d6596cf8a1b",
+                    "focusskin": "s57d3330c7fa42e4be4eed7656d674b6",
                     "id": "btnLoginOOBPIN",
                     "ide_onClick": "AS_Button_ee4da82774ec4d16b1f75e3fc52c4404",
                     "info": null,
@@ -1793,7 +1778,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "0AHV5f9jviL5a2k3050vhUxsYFw="
+                        "md5": "CHE0MbzCqhtXx51LoxqJJTBjPnQ="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -1823,7 +1808,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "QrnokK4gZzZB1lob9RZ4xsa+syc="
+                    "md5": "OcJNk6owdLdPHNL2CnIUp8kxijQ="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -1855,7 +1840,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s9e22225dde7483d87bba9bc4f68b746",
+                    "_skin_": "sf9e8d1957ab41a7bc1099b986492463",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -1898,7 +1883,7 @@
                     "parent": "flxPIN",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
                     "snapshot": {
-                        "md5": "4gTH0rt8fiW8u9MYfac9R0cypvw="
+                        "md5": "MFy/ta1+BKOLI2XTQ1R6/9C5hcg="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -1926,7 +1911,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s773a58ab3a04032992310abe753a554",
+                "_skin_": "sa429f7ab52d439da0841818fd53645a",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -1963,7 +1948,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "QpKgUTmD/s8Kd6iKlDeuBzmbVkA="
+                    "md5": "m9z7WycZyRR2M0EvFoFt1d8Oylo="
                 },
                 "snaptogrid": true,
                 "tbxOOBPIN": {
@@ -1990,7 +1975,7 @@
                         0
                     ],
                     "_placeholder_": "PIN",
-                    "_skin_": "s3e65d62d259417087f3a288ad8156ab",
+                    "_skin_": "s94535ab0eac4053a2412158ba7278cf",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -2014,10 +1999,10 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s76a728af62b4b9a87e87b4a1262ebd8"
+                        "placeholderSkin": "s6f7b7c545ce444a86ee3d3d517caddd"
                     },
                     "disabledSkins": {},
-                    "focusskin": "s9f74f6308954d8e8d23a82fc54c38e9",
+                    "focusskin": "s5daebabfa9a498999d654d102ba26ac",
                     "id": "tbxOOBPIN",
                     "info": null,
                     "iscustomlayout": false,
@@ -2028,12 +2013,12 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxPIN",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
-                    "placeholderskin": "s76a728af62b4b9a87e87b4a1262ebd8",
+                    "placeholderskin": "s6f7b7c545ce444a86ee3d3d517caddd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "JkO/Hp0VZMDX7VrlaAhQCMb4gZQ="
+                        "md5": "mxAby8aIbbQS+TDmLdY6Id1CUjs="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -2070,7 +2055,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sa750d04dee94d59bc65854315b53175",
+                    "_skin_": "sedafe7b86ab41a8b51ff97c8e57ecf0",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -2117,7 +2102,7 @@
                     "parent": "flxUserNameOOBPIN",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
                     "snapshot": {
-                        "md5": "cwnFSONDCvop1iGbMAw6NyZrq9E="
+                        "md5": "2n/v1TsE5bt2dgKwRAYzPhp9ksY="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -2145,7 +2130,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "se70c585a4e145008cc8aded92590fd7",
+                "_skin_": "s5b958258c8f4fffbdac110b997139eb",
                 "_top_": {
                     "type": "string",
                     "value": "6%"
@@ -2182,7 +2167,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "ZBfVudkWcS9s8SjBWRT4dHfcSR4="
+                    "md5": "baf2KM9Ac1VJi3NpAcntNXJe1Mo="
                 },
                 "snaptogrid": true,
                 "tbxUserOOBPIN": {
@@ -2209,7 +2194,7 @@
                         0
                     ],
                     "_placeholder_": "Username",
-                    "_skin_": "s067e7a0b29e48a785afcb61cb8494e7",
+                    "_skin_": "s53a52cd414e410ba0b11d4156c7a71a",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -2229,10 +2214,10 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s76a728af62b4b9a87e87b4a1262ebd8"
+                        "placeholderSkin": "s6f7b7c545ce444a86ee3d3d517caddd"
                     },
                     "disabledSkins": {},
-                    "focusskin": "s9f74f6308954d8e8d23a82fc54c38e9",
+                    "focusskin": "s5daebabfa9a498999d654d102ba26ac",
                     "id": "tbxUserOOBPIN",
                     "info": null,
                     "iscustomlayout": false,
@@ -2243,12 +2228,12 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxUserNameOOBPIN",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
-                    "placeholderskin": "s76a728af62b4b9a87e87b4a1262ebd8",
+                    "placeholderskin": "s6f7b7c545ce444a86ee3d3d517caddd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": false,
                     "snapshot": {
-                        "md5": "Kk979IAliaZpalk0YFqhpVSShZg="
+                        "md5": "xLiYf1yHzpoUn2T7+1XDVjUJBsU="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -2289,7 +2274,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s604410edd5a4a5da8c5ad132ad1b92e",
+                "_skin_": "sa94386bfbfb436c9193e7780f6803b0",
                 "_text_": "Label",
                 "_top_": {
                     "type": "string",
@@ -2334,7 +2319,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "Y96EzvCkUM8ohdgT7KwiyEpgNYI="
+                    "md5": "DoKqujyMC5NvinkzFesj5rS/TjQ="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -2363,7 +2348,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s5ac908d1fb343f89c70b05befcea15b",
+                "_skin_": "sb2a1a2b4b464a9793d3e0ebb4bf88e0",
                 "_text_": "Login to your account",
                 "_top_": {
                     "type": "string",
@@ -2408,7 +2393,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "xHsBCwwOLum0CR27w3VVPAzB2YU="
+                    "md5": "3gzU2P9lw/n+b4wL6SDHlRl6aC8="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -2437,7 +2422,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sc2747da0af14d9eafba07187dd8363b",
+                "_skin_": "s2ebc8a1142e4b15ace9a09fa6360869",
                 "_text_": "Welcome!",
                 "_top_": {
                     "type": "string",
@@ -2482,7 +2467,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "N/Ol33CKJDEN57+dlpCkMvBWkOg="
+                    "md5": "U70SF62qC7/MzJ6Mh4Zpm8Z3oc0="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -2496,7 +2481,7 @@
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "nxUludE65+ULvAZnXlU03UFYHK4="
+                "md5": "E7/dt0CVEYuXMY4XEvDEgkwhQRc="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -2505,7 +2490,6 @@
         },
         "flxOTP": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -2616,7 +2600,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s416270386f24585a6be8d6fe14029c7",
+                    "_skin_": "s882bb1aea9c4b1392357880ad3d15be",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -2634,7 +2618,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s9d82930a9ac441fb456c8b77f441169",
+                    "focusskin": "sb249c9bc522428bab7c233453af7e71",
                     "id": "btnCancelOTP",
                     "ide_onClick": "AS_Button_ffe0ec05544948ef91a32ecc076d045c",
                     "info": null,
@@ -2647,7 +2631,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "6WeqTye7KnX4ZwYbYVe0jAvYvs0="
+                        "md5": "I5EuGnSsKuaWtDs24k3XSrhRvoc="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -2675,7 +2659,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s23d35230f95425aaef0c434fc3eaeb9",
+                    "_skin_": "s78430ddcbc8472885c7a57efb4fad5f",
                     "_text_": "Confirm",
                     "_top_": {
                         "type": "string",
@@ -2693,7 +2677,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s3cc10627d204946a7be66bda4980415",
+                    "focusskin": "saa6283eb9e942d8b7e1c3036d4c94d0",
                     "id": "btnConfirmOTP",
                     "info": null,
                     "iscustomlayout": false,
@@ -2705,7 +2689,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "w5JVUGuTxQhDm8wTUj6QRjn3/hg="
+                        "md5": "osC1krZwJIAjWbKDANCxDO0zv+M="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -2772,7 +2756,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s6b073050a584e24b8d97fea9c814603",
+                "_skin_": "s03d0f09280e420294035737e9e7a1a5",
                 "_text_": "invalid OTP entered \n Please enter valid OTP",
                 "_top_": {
                     "type": "string",
@@ -2817,7 +2801,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "PLKOnoWPLJcRadAzpkjlMQN7mc8="
+                    "md5": "oZUVk16HnSzfAcNolamuEZja3kc="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -2846,7 +2830,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s4e57970cc964e2cb767fe6749cb239d",
+                "_skin_": "sff92fc3c1e1416c8eb71f471f9239c8",
                 "_text_": "Please enter your One-Time Password",
                 "_top_": {
                     "type": "string",
@@ -2891,7 +2875,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "Y6eC4tWtGIrLxjdwx48hY/UP58s="
+                    "md5": "F73j3XAp4TM/XLhoP7VcsPJosi8="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -2920,7 +2904,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s87a2fd49883407f9f6abbad7c45437f",
+                "_skin_": "s215b310c31a49f09034838f1d5c3224",
                 "_text_": "HID Approve Secure Code",
                 "_top_": {
                     "type": "string",
@@ -2965,7 +2949,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "E5RwLcWHVhIENpTo7CBery6HOSM="
+                    "md5": "ijeu0hNUVJRDmNfW4BhtDlQ1VnI="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3006,7 +2990,7 @@
                     0
                 ],
                 "_placeholder_": "Enter OTP",
-                "_skin_": "s3250a9794554bc594256c0e9405624b",
+                "_skin_": "sfc3e668a3e141fabbfc5a48736bbc53",
                 "_text_": "",
                 "_top_": {
                     "type": "string",
@@ -3030,7 +3014,7 @@
                 "containerweight": 100,
                 "contentalignment": 5,
                 "desktopweb": {
-                    "placeholderSkin": "s31a1f35c8284a56953a06877abbeade"
+                    "placeholderSkin": "s260fbbe824840ee96a5f73a0bddd207"
                 },
                 "disabledSkins": {
                     "focusSkin": "sc9e29acbce8409c971ab4aba77d9d0f"
@@ -3046,12 +3030,12 @@
                 "name": "kony.ui.TextBox2",
                 "parent": "flxOTP",
                 "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
-                "placeholderskin": "s31a1f35c8284a56953a06877abbeade",
+                "placeholderskin": "s260fbbe824840ee96a5f73a0bddd207",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "securetextentry": false,
                 "snapshot": {
-                    "md5": "TFCCDEzKBeRjuqhTxNVODepv2u8="
+                    "md5": "E4sxjqwZ22zOU33NmmhoQJ44kTo="
                 },
                 "textinputmode": "A",
                 "tooltip": "",
@@ -3065,7 +3049,6 @@
         },
         "flxOTPError": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -3140,7 +3123,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s443fe9f9e8a4a169ddbfdabf8a2b654",
+                "_skin_": "s8c6ce54ca304ecd986b9045825cd720",
                 "_top_": {
                     "type": "string",
                     "value": "10%"
@@ -3174,7 +3157,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s416270386f24585a6be8d6fe14029c7",
+                    "_skin_": "s882bb1aea9c4b1392357880ad3d15be",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -3192,7 +3175,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s9d82930a9ac441fb456c8b77f441169",
+                    "focusskin": "sb249c9bc522428bab7c233453af7e71",
                     "id": "btnCancelSendOTP",
                     "ide_onClick": "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d",
                     "info": null,
@@ -3205,7 +3188,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "3F9atrptsI0yKVJ5pMRqAiO+PdM="
+                        "md5": "Ex5ME/96Da6nuWsXFBu+fsMc0/U="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3233,7 +3216,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s23d35230f95425aaef0c434fc3eaeb9",
+                    "_skin_": "s78430ddcbc8472885c7a57efb4fad5f",
                     "_text_": "Send OTP",
                     "_top_": {
                         "type": "string",
@@ -3251,7 +3234,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s3cc10627d204946a7be66bda4980415",
+                    "focusskin": "saa6283eb9e942d8b7e1c3036d4c94d0",
                     "id": "btnSendOTP",
                     "ide_onClick": "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130",
                     "info": null,
@@ -3264,7 +3247,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "+/Zyg8SWr7i5xi/5rpMx12l5uGk="
+                        "md5": "6W62tMMnODCt0XBCSrL0tbmpClI="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3295,7 +3278,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "Snj83U6LrIBcl4xqSHfGGkFsytI="
+                    "md5": "AQxccz74CvNLftpUKmcFeJ6PUic="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -3331,7 +3314,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s0cfb91a6fc844a9a9fb399065b11c43",
+                "_skin_": "sa0bf0a81c874548b91b96ec3eb17165",
                 "_text_": "Failed to send OTP on Registered Device. \n Please retry to send OTP.",
                 "_top_": {
                     "type": "string",
@@ -3376,7 +3359,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "DpBXXdrTU4am1nANQbZXPKHkFb8="
+                    "md5": "yQsb2FthXRaAzRJj0lFz99plRq0="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3405,7 +3388,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s87a2fd49883407f9f6abbad7c45437f",
+                "_skin_": "s215b310c31a49f09034838f1d5c3224",
                 "_text_": "HID Secure Code",
                 "_top_": {
                     "type": "string",
@@ -3450,7 +3433,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "kIcXrpJtBoviMhISlPmi0yfU//M="
+                    "md5": "kdNoQR1GrQK/lzmPddmKNGHdc30="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3473,7 +3456,6 @@
         },
         "flxPushDevices": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -3545,7 +3527,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sfb5d4318eb141a291f0f1129206bb66",
+                "_skin_": "s2ac91a3a93c40a1afed8c99f67f3ddb",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -3579,7 +3561,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s416270386f24585a6be8d6fe14029c7",
+                    "_skin_": "s882bb1aea9c4b1392357880ad3d15be",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -3597,7 +3579,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sd78ea668f0943089604d52e73950c5e",
+                    "focusskin": "s979024f00df42b0a404417ba5d8953a",
                     "id": "btnCancelPush",
                     "ide_onClick": "AS_Button_i594f2e364034e6591171be6255642d7",
                     "info": null,
@@ -3610,7 +3592,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "7G7ReuytfoosEdnJKTQ4Gr7DXyM="
+                        "md5": "VTSI37UwCHsG2dO5CPhMs5x17MI="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3638,7 +3620,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s23d35230f95425aaef0c434fc3eaeb9",
+                    "_skin_": "s78430ddcbc8472885c7a57efb4fad5f",
                     "_text_": "Try Secure Code",
                     "_top_": {
                         "type": "string",
@@ -3656,7 +3638,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sfdff4346baa4c94a3fd325a0b0a5390",
+                    "focusskin": "s8aeec7f44bf4618bff84818263a5139",
                     "id": "btnSecureCode",
                     "ide_onClick": "AS_Button_b0ebddf304d6460b905404d6b496e0df",
                     "info": null,
@@ -3669,7 +3651,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "gP5HGfOCDeyLW06fYdSuHGtkboU="
+                        "md5": "lbW6NX+6YfLqD6EFifkfGQoOoS8="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3700,7 +3682,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "9Jg4viPxj5Hkral6aU6iEqNYOiY="
+                    "md5": "SAFkBcetQZury1Yp9uJC/PdNQMk="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -3736,7 +3718,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s616bb9c360e4729903f6c2d9ee77772",
+                "_skin_": "s04e934e10ec40858bf79b1e0837b410",
                 "_text_": "Please select one of the following device to send Push notification",
                 "_top_": {
                     "type": "string",
@@ -3781,7 +3763,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "x4K0kEXbcP0sLu76fC/u7TMth0U="
+                    "md5": "2k1KYdlDIfZOA904w6Uy/OYgBU4="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3810,7 +3792,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s27c81e86cdc48bfad440293a8a16e01",
+                "_skin_": "s3d10ce857b047de95bb8a07731fc4d6",
                 "_text_": "HID Approve Notification",
                 "_top_": {
                     "type": "string",
@@ -3855,7 +3837,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "D6YZ0kyf46TxbiUYbtk6d5rDsOo="
+                    "md5": "y25bvI90a562EuJzLshNkOhU0/4="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3935,7 +3917,7 @@
                             }
                         }
                     ],
-                    "rowTemplateId": "a292cc0f165248bb83b95cd5857413a8",
+                    "rowTemplateId": "g5e48c15e38e46358925f1daa2765d1b",
                     "rowtemplate": "Flex0d3d7ae1b5dea4c",
                     "selectionBehaviorConfig": {},
                     "widgetdatamap": {
@@ -3978,7 +3960,7 @@
                 "retainselection": false,
                 "rowcounter": 1,
                 "rowfocusskin": "sc7e34ba70a64c0c9bd178e3b14b51a7",
-                "rowskin": "sbd59e08611c4b03b294beb0a6ee0d4c",
+                "rowskin": "sd56641984ae497ea7e2796aead22453",
                 "rowtemplate": "Flex0d3d7ae1b5dea4c",
                 "screenlevelwidget": false,
                 "seccounter": 0,
@@ -3995,7 +3977,7 @@
                 "separatorthickness": 2,
                 "showscrollbars": false,
                 "snapshot": {
-                    "md5": "bUoWgt1fIYKEVbis7t2Ti9sYIoY="
+                    "md5": "qSj5XRdmJP4gMWMGfhW1P1cLI2A="
                 },
                 "viewtype": "tableview",
                 "vizProps": {},
@@ -4017,7 +3999,6 @@
         },
         "flxSecure": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -4072,7 +4053,7 @@
             "containerweight": 100,
             "desktopweb": {},
             "disabledSkins": {
-                "blockedUISkin": "s6212e074e314724bd6d71587d9c5b8e"
+                "blockedUISkin": "s937a910380e4689b4d9c5eafb46ac78"
             },
             "enablescrolling": true,
             "flxButtonsSecure": {
@@ -4099,7 +4080,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s7e51aa0a5e8408ba7b083b2be612dc4",
+                "_skin_": "sbe37ad4be064f46818650d5b7d645ca",
                 "_top_": {
                     "type": "string",
                     "value": "6%"
@@ -4133,7 +4114,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s23d35230f95425aaef0c434fc3eaeb9",
+                    "_skin_": "s78430ddcbc8472885c7a57efb4fad5f",
                     "_text_": "LOGIN",
                     "_top_": {
                         "type": "string",
@@ -4155,11 +4136,11 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "desktopweb": {
-                        "blockedUISkin": "s94053b8411442e485418f7604285de0"
+                        "blockedUISkin": "sf23dcdf64f1465fa059f270305e2f72"
                     },
                     "disabledSkins": {},
                     "displaytext": true,
-                    "focusskin": "s06a15366f72476c8e250d6596cf8a1b",
+                    "focusskin": "s57d3330c7fa42e4be4eed7656d674b6",
                     "id": "btnLoginSecure",
                     "ide_onClick": "AS_Button_fdebf8844b7f4e3585f246f8c2fe78e7",
                     "info": null,
@@ -4172,7 +4153,7 @@
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "EbW8U9T832Zd1J1JA5OxZvMWQcg="
+                        "md5": "D6HKL2B5nWgS6kobckjaedWKATU="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -4202,7 +4183,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "fhBW9JANne/uaxZmAfbEA185NpA="
+                    "md5": "Uuqy6C5DkT8acZ0hebjQv/czxeQ="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -4234,7 +4215,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s2d001b47b5b40418a909cbf68f92143",
+                    "_skin_": "sb2a76253f0f4dc9b02354621d14e645",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -4277,7 +4258,7 @@
                     "parent": "flxSecureCode",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
                     "snapshot": {
-                        "md5": "Fxn7fKRqZAkmPzhDVGCHShFWvOM="
+                        "md5": "N/n+mxlHl87HISqcwNzNaJFf9Yk="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -4305,7 +4286,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s6145b9dea7640308d18b428a6fa58c9",
+                "_skin_": "s99b4bc098054741834b5b1f48a8ee71",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -4342,7 +4323,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "PSBI69tGj8ux7ZSX387eMUJ4iM0="
+                    "md5": "V8xMkGkIAz53gRngvCNC9pORrbE="
                 },
                 "snaptogrid": true,
                 "tbxSecureCode": {
@@ -4369,7 +4350,7 @@
                         0
                     ],
                     "_placeholder_": "Secure Code",
-                    "_skin_": "s703ce50433e42e8b75d37c1b2ebbc55",
+                    "_skin_": "s11a0db0731d48ccb366f067120ad3c0",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -4393,10 +4374,10 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s76a728af62b4b9a87e87b4a1262ebd8"
+                        "placeholderSkin": "s6f7b7c545ce444a86ee3d3d517caddd"
                     },
                     "disabledSkins": {},
-                    "focusskin": "s9f74f6308954d8e8d23a82fc54c38e9",
+                    "focusskin": "s5daebabfa9a498999d654d102ba26ac",
                     "id": "tbxSecureCode",
                     "info": null,
                     "iscustomlayout": false,
@@ -4407,12 +4388,12 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxSecureCode",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
-                    "placeholderskin": "s76a728af62b4b9a87e87b4a1262ebd8",
+                    "placeholderskin": "s6f7b7c545ce444a86ee3d3d517caddd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "Hexj7Te73GVDbR6VBg9qDL9yAlk="
+                        "md5": "dKv++ynecQwHZyPS0f9/VmSCsBg="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -4449,7 +4430,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "sa946e2f60c943a380653ef0bc274943",
+                    "_skin_": "s277f1bd32884e678da93d735917dff4",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -4496,7 +4477,7 @@
                     "parent": "flxUserNameSecure",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
                     "snapshot": {
-                        "md5": "CPG2xvnR8a2zoQe+uX6d9PHNghY="
+                        "md5": "T/8r+94+iqDDphgX3btrqlc64cE="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -4524,7 +4505,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sd169976449c41f8a57b2c74a2fb4af4",
+                "_skin_": "s8cca707da5d4ec08fc73d5ab5797e93",
                 "_top_": {
                     "type": "string",
                     "value": "6%"
@@ -4561,7 +4542,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "oA9aycsG41MieKhfHrzrpoSAnoI="
+                    "md5": "DGfzaWjs13L/Sz5G9NaqRkBnveQ="
                 },
                 "snaptogrid": true,
                 "tbxUserSecure": {
@@ -4588,7 +4569,7 @@
                         0
                     ],
                     "_placeholder_": "Username",
-                    "_skin_": "s7d69888729045c3a3e0563018061f0f",
+                    "_skin_": "sa2503561f4b4ce2926d489304172b91",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -4608,10 +4589,10 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s76a728af62b4b9a87e87b4a1262ebd8"
+                        "placeholderSkin": "s6f7b7c545ce444a86ee3d3d517caddd"
                     },
                     "disabledSkins": {},
-                    "focusskin": "s9f74f6308954d8e8d23a82fc54c38e9",
+                    "focusskin": "s5daebabfa9a498999d654d102ba26ac",
                     "id": "tbxUserSecure",
                     "info": null,
                     "iscustomlayout": false,
@@ -4622,12 +4603,12 @@
                     "name": "kony.ui.TextBox2",
                     "parent": "flxUserNameSecure",
                     "pf": "uwu145a18e5af34b58ac4f81c0d874ff71",
-                    "placeholderskin": "s76a728af62b4b9a87e87b4a1262ebd8",
+                    "placeholderskin": "s6f7b7c545ce444a86ee3d3d517caddd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": false,
                     "snapshot": {
-                        "md5": "15GKQAnmX0mG9o1Vc2tkzjPqrlU="
+                        "md5": "g323CSqMWyPp4lP8Dv6Z9zo8BX0="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -4668,7 +4649,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s0cfb91a6fc844a9a9fb399065b11c43",
+                "_skin_": "sa0bf0a81c874548b91b96ec3eb17165",
                 "_text_": "Label",
                 "_top_": {
                     "type": "string",
@@ -4713,7 +4694,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "1feIIknUy1LUK3KGbjxFX0jp2iU="
+                    "md5": "OVZr/mRzIEdf8yhnzNLWNaCEpJI="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4742,7 +4723,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sa22774372c245d4a7f651f9b955f19b",
+                "_skin_": "s0a401af5a23416c9c7edfbd0cdafdf6",
                 "_text_": "Login to your account",
                 "_top_": {
                     "type": "string",
@@ -4787,7 +4768,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "EfNgPJ8K6iEUMmroROXUxLtEgRg="
+                    "md5": "mZYT/6lxXToPxIRJTSYMF6tZ7+c="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4816,7 +4797,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s87a2fd49883407f9f6abbad7c45437f",
+                "_skin_": "s215b310c31a49f09034838f1d5c3224",
                 "_text_": "Welcome!",
                 "_top_": {
                     "type": "string",
@@ -4861,7 +4842,7 @@
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "BDbfBkvCGJug0EQXWJBmzS1a58A="
+                    "md5": "9icxsH8YKhbJhx+8YreERaRsjPQ="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4875,7 +4856,7 @@
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "CXZ4putsx7MRrjBNoWzbfQrPgQk="
+                "md5": "ETRzGJDsL1P32heC5+zEN1GOtnc="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -4897,12 +4878,12 @@
         "retainflowhorizontalalignment": false,
         "snapgridsize": 10,
         "snapshot": {
-            "md5": "0hQ5NPAv9G4q4T9pkmbk9am9TJA="
+            "md5": "42sftnTiWV5iwdGOAEptfMIqsrI="
         },
         "snaptogrid": true,
         "wType": "FlexContainer",
         "widgetalignment": 1,
         "winphone8": {}
     },
-    "userwidgetKUID": "ud4d9a59795a407f9a6e8880edc051a2"
+    "userwidgetKUID": "u3a91f9f24e04aa2b9fa45a746a4b94b"
 }

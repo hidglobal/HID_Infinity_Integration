@@ -1,14 +1,22 @@
 define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(businessController,controllerImplemetation) {
   var sdkConstants = {};
-  var contexts = ["Loading","Main","Password","PasswordTimeout"];
+  var contexts = ["Loading","Main","Password","PasswordTimeout","UpdatePassword"];
   sdkConstants.TITLE_MSG = "Dear #,";
   sdkConstants.STATUS_APPROVE = "accept";
   sdkConstants.STATUS_DENY = "deny";
   sdkConstants.NOTIFY_PASSWORD_MODE = "NOTIFICATION_FLOW";
-  sdkConstants.ERROR_PIN = "Invalid PIN";
+  sdkConstants.ERROR_PIN = `PIN is incorrect`; 
   sdkConstants.PIN_EMPTY = "Please enter your PIN to continue";
   sdkConstants.PRE_PIN_MESSAGE = "Please enter your PIN to view your transaction";
   sdkConstants.AUTHENTICATION_EXCEPTION = "AuthenticationException";
+  sdkConstants.ERROR_PWD_NOT_ENTERED = `Please enter PIN`;
+  sdkConstants.ERROR_PWD_NOT_MATCH = `Entered PINs do not match`;
+  sdkConstants.ERROR_PIN = `PIN is incorrect`; 
+  sdkConstants.ERROR_SAME_PIN = `New PIN cannot be same as old PIN`;
+  sdkConstants.ERROR_NEW_PWD_NOT_ENTERED = `Please enter the new PIN`;
+  sdkConstants.ERROR_CNF_PWD = "Please confirm the new PIN";
+  sdkConstants.ERROR_PWD_MATCH = `New PIN cannot be same as old PIN`;
+  sdkConstants.ERROR_MESSAGE =`Password change is required`;
   var deviceHeight = kony.os.deviceInfo().screenHeight;
   var deviceWidth = kony.os.deviceInfo().screenWidth;
   var heightFactor = 0.060;
@@ -56,7 +64,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.flxDenySliderMain.onTouchMove = (source,x,y,changedObj) => this.denySlide(x);
       this.view.flxConsensusMain.onTouchEnd = this.resetSlide;
       this.view.flxApproveSliderMain.onTouchEnd = this.resetApproveSlider;
-      this.view.flxDenySliderMain.onTouchEnd = this.resetDenySlider; 
+      this.view.flxDenySliderMain.onTouchEnd = this.resetDenySlider;
+      this.view.btnUpdatePIN.onClick = this.btnUpdatePIN_onClick;
+      this.view.flxUpdatePassword.setVisibility(false);
+      this.view.setVisibility(true);
+      this.view.flxIosBack.setVisibility(false);
       this.view.flxOpaque.onTouchStart = source => {}; //Do Noting event to stop click Liseners of the widgets back of the componenet;
       if(!this.isAndroid()){
          this.view.flxIosBack.onTouchEnd = source => this.onCompletionCallback(false);
@@ -88,20 +100,22 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     showAuthentication : function(){
         this.contextSwitch("Loading");
-        this.view.forceLayout();
+      kony.print(`ApproveSDK --> Inside showAuthentication ApproveNotification isVisible: ${this.view.isVisible}`);
         if(!this.isAndroid()){
-          kony.timer.schedule("timer",()=>{
+           kony.timer.schedule("timer",()=>{
              var txID = this._transactionID;
              let str = this.nativeController.retriveTransaction(txID,"",true);
+            kony.print(`ApproveSDK --> Value for str from retrieveTransaction: ${str}`);
              if(str == "false"){
                 this.contextSwitch("Password");
              }
-          },0.5,false); 
+           },0.5,false); 
         }else{
           var txID = this._transactionID;
           this.contextSwitch("Password");
           this.nativeController.retriveTransaction(txID,"",true);
-        }  
+        }
+      
     },
     btnSubmitPassword_onClick : function(){
       kony.print("Password Clicked");
@@ -117,6 +131,9 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     retriveTransactionCallback : function(status,message,txInfo){
       kony.print(`ApproveSDK ---> retriveTransactionCallback ${status} ${message} ${txInfo}`);
+      if(status == "error"){
+        this.contextSwitch("UpdatePassword");
+      }
       if(message == sdkConstants.AUTHENTICATION_EXCEPTION){
         this.view.lblErrorPIN.text = sdkConstants.ERROR_PIN;
         this.view.lblErrorPIN.setVisibility(true);
@@ -134,6 +151,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         }
         this.view.postShow();
         this.contextSwitch("Main");
+        if(this.view.isVisible === false){
+          this.view.setVisibility(true);
+        }
+		kony.print("ApproveSDK --> Flow Completed");
+        this.view.forceLayout();
       }
     },
     retrieveTransactionIds : function(username,isAscendingFlag = true){
@@ -145,6 +167,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         this.nativeController.retrievePendingNotifications();
     },    
     onRecievedNotificationsCallback : function(message,ids){
+      kony.print("message in recievedNotificationCallback: "+message);
       if(message == "success"){
         var obj = JSON.parse(ids);
         var txIDArray = obj.txIDs;
@@ -162,10 +185,15 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.tbxPasswordTimeout = "";
       kony.print("ApproveSDK ----> Success Status is "+status)
       this.resetSlide();
+      this.view.setVisibility(false);
       this.commonEventEmitter(this.onCompletion, [statusRegistered]);
       statusRegistered = "";
     },
     pwdPromtCallback : function(eventType,eventCode){
+      kony.print(`In pwdPromtCallback with eventCode: ${eventCode} and eventType: ${eventType}`);
+      if(eventCode == "5002"){
+        this.contextSwitch("UpdatePassword");
+      }
       if(eventCode == "5001"){
         this.view.lblErrorPINTimeout.text = sdkConstants.ERROR_PIN;
         this.view.lblErrorPINTimeout.setVisibility(true);
@@ -437,6 +465,301 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.resetApproveSlider();
       this.resetDenySlider();
     },
+    ////////   Update Password method called here .............
+    btnUpdatePIN_onClick : function(){
+      kony.print("ApproveSDK ---> btnUpdatePIN_onClick");
+      this.showErrorPassword(false, "");
+      this.setLoadingScreen(true)
+      
+      if(!this.passwordPolicy){
+        kony.print("HIDSDK => Fetching getPasswordPolicy");
+        var policy = this.nativeController.getPasswordPolicy();
+ 
+        if(policy) {
+          this.passwordPolicy = JSON.parse(policy) || {};
+          kony.print(JSON.stringify(this.passwordPolicy)); 
+        }
+        kony.print("ApproveSDKWrapper this.PasswordPolicy:"+JSON.stringify(this.passwordPolicy));                
+      }
+
+      let oldPwd = this.view.tbxCurrentPIN.text;
+      let newPwd = this.view.tbxNewPIN.text;
+      let cnfPwd = this.view.tbxConfirmUpdPwd.text;
+      
+      if(oldPwd == "" || oldPwd == " " || oldPwd == undefined || oldPwd === null){
+        let error = sdkConstants.ERROR_PWD_NOT_ENTERED;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      if(newPwd == "" || newPwd == " " || newPwd == undefined || newPwd === null){
+        let error = sdkConstants.ERROR_NEW_PWD_NOT_ENTERED;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      if(cnfPwd == "" || cnfPwd == " " || cnfPwd == undefined || cnfPwd === null){
+        let error = sdkConstants.ERROR_CNF_PWD;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      if(oldPwd == newPwd ){ 
+        let error = sdkConstants.ERROR_PWD_MATCH;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      if(newPwd != cnfPwd){
+        let error = sdkConstants.ERROR_PWD_NOT_MATCH;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      
+      this.password = newPwd;
+      kony.print("ApproveSDKWrapper : "+this.checkPasswordPolicy(newPwd));
+
+      if(this.checkPasswordPolicy(newPwd)){      
+        kony.print("ApproveSDKWrapper Updating my Password");
+        this.nativeController.updatePassword(oldPwd,newPwd);
+      }
+    }, 
+    updatePwdCallbackInternalComponent : function(exceptionType,message){
+      kony.print("ApproveSDK ---> updatePwdCallbackInternalComponent with exceptionType: "+exceptionType);
+      kony.print("ApproveSDK ---> updatePwdCallbackInternalComponent with message: "+message);
+      if(exceptionType === "UpdatePassword"){
+        if(message === "updateSuccess"){
+          this.view.flxErrorPwdPR.setVisibility(false);
+          this.view.flxUpdatePassword.setVisibility(false);
+          this.view.flxOpaque.setVisibility(false);
+          this.view.setVisibility(false);
+          this.setLoadingScreen(false);
+
+          if(this.onUpdatePasswordCB){ 
+//             this.onUpdatePasswordCB("success");
+            this.commonEventEmitter(this.onUpdatePasswordCB,["success"]);
+          } 
+        }
+      } else if(exceptionType === "InvalidPasswordException"){
+        this.view.flxErrorPwdPR.setVisibility(true);
+        if(message === "Same password prohibited")
+        {
+          this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_SAME_PIN;
+        }
+        else if(message == "Password change is too soon (minimum age 1, current 0 days)")
+        {
+          this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_PIN_CHANGE;
+        }else {
+          this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_GENERIC;
+        }
+
+        if(this.onUpdatePasswordCB){
+          this.onUpdatePasswordCB("invalidPassword");
+        }
+      } else if(exceptionType === "AuthenticationException"){
+          this.view.flxErrorPwdPR.setVisibility(true);
+          if(message ==="Password is incorrect")
+          {
+            this.setLoadingScreen(false);
+            this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_PIN;
+          }else {
+            this.view.lblErrorPasswordPR.text = sdkConstants.ERROR_GENERIC;
+          }
+          if(this.onUpdatePasswordCB){
+            this.onUpdatePasswordCB("invalidPassword");
+          }
+      } else {
+        if(this.onUpdatePasswordCB){
+          this.onUpdatePasswordCB("error");
+//           this.commonEventEmitter(this.onUpdatePasswordCB,["error"]);
+        }
+      }
+    },
+    checkPasswordPolicy : function(pwd){
+      if(this.passwordPolicy.hasOwnProperty("minAlpha") && +this.passwordPolicy.minAlpha === 0){
+        return this.checkPinPolicy(pwd);
+      }
+      let noOfAlpha = this.countAlphacountAlphabets(pwd);
+      let noOfNumeric = this.countNumeric(pwd);
+      let noOfLowerCase = this.countLowerCase(pwd);
+      let noOfUpperCase = this.countUpperCase(pwd);
+      let noOfSpl = this.countSplCharacter(pwd);
+      if(this.passwordPolicy.hasOwnProperty("minLength") && pwd.length < +this.passwordPolicy.minLength){
+        let error = sdkConstants.ERROR_PWD_MIN_SPL.replace(/#/,this.passwordPolicy.minLength );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("maxLength") && pwd.length > +this.passwordPolicy.maxLength){
+        let error = sdkConstants.ERROR_LENGTH_MAX.replace(/#/,this.passwordPolicy.maxLength );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("minAlpha") && noOfAlpha < +this.passwordPolicy.minAlpha){
+        let error = sdkConstants.ERROR_PWD_MIN_ALPHA.replace(/#/,this.passwordPolicy.minAlpha );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("maxAlpha") && noOfAlpha > +this.passwordPolicy.maxAlpha){
+        let error = sdkConstants.ERROR_PWD_MAX_ALPHA.replace(/#/,this.passwordPolicy.maxAlpha );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("minNumeric") && noOfNumeric < +this.passwordPolicy.minNumeric){
+        let error = sdkConstants.ERROR_PWD_MIN_NUM.replace(/#/,this.passwordPolicy.minNumeric );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("maxNumeric") && noOfNumeric > +this.passwordPolicy.maxNumeric){
+        let error = sdkConstants.ERROR_PWD_MAX_NUM.replace(/#/,this.passwordPolicy.maxNumeric );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("minUpperCase") && noOfUpperCase < +this.passwordPolicy.minUpperCase){
+        let error = sdkConstants.ERROR_PWD_MIN_UPPER.replace(/#/,this.passwordPolicy.minUpperCase );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("maxUpperCase") && noOfUpperCase > +this.passwordPolicy.maxUpperCase){
+        let error = sdkConstants.ERROR_PWD_MAX_UPPER.replace(/#/,this.passwordPolicy.maxUpperCase );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("minLowerCase") && noOfLowerCase < +this.passwordPolicy.minLowerCase){
+        let error = sdkConstants.ERROR_PWD_MIN_LOWER.replace(/#/,this.passwordPolicy.minLowerCase );
+        this.showErrorPassword(true,error); 
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("maxLowerCase") &&  noOfLowerCase > +this.passwordPolicy.maxLowerCase){
+        let error = sdkConstants.ERROR_PWD_MAX_LOWER.replace(/#/,this.passwordPolicy.maxLowerCase );
+        this.showErrorPassword(true,error); 
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("minSpl") && noOfSpl < +this.passwordPolicy.minSpl){
+        let error = sdkConstants.ERROR_PWD_MIN_SPL.replace(/#/,this.passwordPolicy.minSpl );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("maxSpl") && noOfSpl > +this.passwordPolicy.maxSpl){
+        let error = sdkConstants.ERROR_PWD_MAX_SPL.replace(/#/,this.passwordPolicy.maxSpl );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+    },
+    seqCheckPin: function(numberString) {
+      if(this.sameSequence(numberString)){
+        return true;
+      }
+      if(this.haveSequence(numberString)){
+        return true;
+      }
+      return false;
+    },
+    sameSequence : function(s){
+      let count = 0;
+      let cur = 0;
+      let prev = 0;
+      let l = s.length;
+      for(let i = 1;i < l;i++){
+        cur = +s[i];
+        prev = +s[i-1];
+        if (cur-prev === 0){
+          count += 1;
+          }
+        else{
+          count = 0;
+          }
+
+        if (count === 3){
+          return true;
+          }
+        }
+      return false;
+    },
+    haveSequence : function(s){
+      let l = s.length;
+      let one = 0;
+      let negativeone = 0;
+      let cur = 0;
+      let prev = 0;
+      let currem = 0;
+      let prevrem = 0;
+      for(let i = 1;i < l; i ++){
+        cur = +s[i];
+        prev = +s[i-1];
+        if(i < 4){
+          if (cur - prev === 1){
+            one += 1;
+            }
+          else if (cur - prev === -1){
+            negativeone += 1;
+            }
+          }
+        else{
+          currem = +s[i-3];
+          prevrem = +s[i-4];
+          if (currem - prevrem === 1){
+            one -= 1;
+            }
+          else if (currem - prevrem === -1){
+            negativeone -= 1;
+            }
+          if (cur - prev === 1){
+            one += 1;
+            }
+          else if (cur - prev === -1){
+            negativeone += 1;
+            }
+          }
+        if (one === 3 || negativeone === 3){
+          return true;
+          }
+        }
+      return false;
+    },
+    checkPinPolicy : function(pin){
+      kony.print("Inside checkPinPolicy method")
+      let isSequencePresent = this.seqCheckPin(pin);
+//       alert(isSequencePresent);
+      if(isNaN(pin)){
+        let error = sdkConstants.ERROR_PWD_NO_ALPHA;
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("minNumeric") && pin.length < +this.passwordPolicy.minNumeric){
+        let error = sdkConstants.ERROR_LENGTH_MIN_PIN.replace(/#/,this.passwordPolicy.minNumeric );
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      if(this.passwordPolicy.hasOwnProperty("maxNumeric") && pin.length > +this.passwordPolicy.maxNumeric){
+        let error = sdkConstants.ERROR_LENGTH_MAX_PIN.replace(/#/,this.passwordPolicy.maxNumeric );
+        this.showErrorPassword(true,error);
+        return false;
+      }      
+      if((isSequencePresent)){
+        let error = "no sequential characters allowed";
+        this.showErrorPassword(true,error);
+        return false;
+      }
+      return true;
+    },
+    countAlphabets : function(pwd){
+      return  pwd.replace(/[^a-zA-Z]/g, '').length;
+    },
+    countNumeric : function(pwd){
+      return  pwd.replace(/[^0-9]/g, '').length;
+    },
+    countUpperCase : function(pwd){
+      return pwd.replace(/[^A-Z]/g,'').length;
+    },
+    countLowerCase : function(pwd){
+      return pwd.replace(/[^a-z]/g,'').length;
+    },
+    countSplCharacter : function(pwd){
+      return pwd.replace(/[a-zA-Z0-9]/g,'').length;
+    },
+    showErrorPassword : function(visible,message = 'Please enter PIN'){
+      if(visible){
+        this.view.lblErrorPasswordPR.text = message;
+      }
+      this.view.flxErrorPwdPR.setVisibility(visible);
+      this.setLoadingScreen(false);
+    }, 
     resetDenySlider : function(){
       prevXDpDeny = mainFullWidth - approveSliderMinLeft - circleRadius;// = mainFullWidth-circleDiameter-approveSliderMinLeft;
       prevXDeny =-1.1;
@@ -461,21 +784,42 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       approveMaxReached = false;
       approveListenerActive = false;
     },
+    resetUpdatePasswordUI : function(){
+      this.view.tbxCurrentPIN.text = "";
+      this.view.tbxNewPIN.text = "";
+      this.view.tbxConfirmUpdPwd.text = "";
+      this.showUpdatePINError(false);
+      this.view.flxMainUpdatePwd.setVisibility(true);
+      // this.view.flxUpdatePwdSuccess.setVisibility(false);
+    },
+    showUpdatePINError : function(visible,msg = ""){
+      this.view.lblErrorPasswordPR.text  = msg;
+      this.view.flxErrorPwdPR.setVisibility(visible);
+      this.view.forceLayout();
+    },
     approveSlider_onTouchEnd: function(){
       this.resetApproveSlider();
+      this.resetUpdatePasswordUI();
     },
     setDefaultFeilds : function(){
        this.view.lblPwd.text = sdkConstants.PRE_PIN_MESSAGE;
     },
     contextSwitch : function(context){
+      kony.print(`ApproveSDK --> Inside contextSwitch with context: ${context}`);
       for(let i of contexts){
         this.view[`flx${i}`].setVisibility(i === context);
       }
+      kony.print("ApproveSDK -->  context isVisible:"+ this.view[`flx${context}`].isVisible);
+      kony.print(`ApproveSDK -->  ApproveNotificationMobileSDK isVisible: ${this.view.isVisible}`);
       this.view.forceLayout();
     },
     isAndroid : function(){
        var deviceInfo = kony.os.deviceInfo();
        return deviceInfo.name.toLowerCase() === 'android';
+    },
+    setLoadingScreen : function(visible){
+      this.view.flxLoading.setVisibility(visible);
+      this.view.forceLayout();
     },
     commonEventEmitter(event,args){
       if(event){

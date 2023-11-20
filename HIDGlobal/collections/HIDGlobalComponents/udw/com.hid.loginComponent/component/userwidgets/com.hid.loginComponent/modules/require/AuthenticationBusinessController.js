@@ -5,6 +5,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
   globals.startTime =0;
   globals.approveFlag = false;
   globals.approvePoll = false;
+  globals.auth_req_id = "";
   var userName = "";
   var instance = null;
   var pollCounter = 2;
@@ -131,7 +132,9 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
 
   AuthenticationBusinessController.prototype.authenticateSecondFactor = function(factor,password,mfa_key, S_CB, F_CB){
     konymp.logger.trace("----------Entering authenticateSecondFactor Function---------", konymp.logger.FUNCTION_ENTRY);
-    if(factor === "APPROVE" && !globals.approvePoll){      
+    if(factor === "APPROVE" && !globals.approvePoll){
+      globals.auth_req_id = password;
+      pollCounter = 2;
       this.pollForConsensus(password,"second",mfa_key, S_CB, F_CB);
       return;
     }    
@@ -229,8 +232,12 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
   };
 
   AuthenticationBusinessController.prototype.pollForConsensus = function(auth_req_id, factor, mfa_key, S_CB, F_CB){
+    if (globals.auth_req_id !== auth_req_id) return;
     pollCounter--;
     const successCB = response => {
+      kony.print("Sushant "+pollCounter+" "+auth_req_id);
+      kony.print("Sushant "+pollCounter+" "+globals.auth_req_id);
+      if (globals.auth_req_id !== auth_req_id) return;
       pollCounter =2;
       if(response.ApproveStatus[0].auth_status === "accept"){
         this.authenticateApprove(factor,auth_req_id,mfa_key, S_CB, F_CB);
@@ -240,6 +247,9 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
       }           
     };
     const failureCB =  error => {
+      kony.print("Sushant "+pollCounter+" "+auth_req_id);
+      kony.print("Sushant "+pollCounter+" "+globals.auth_req_id);
+      if (globals.auth_req_id !== auth_req_id) return;
       if(pollCounter <= 0){
         F_CB({"message":"Approve poll Time Expired"});
         pollCounter = 2;
@@ -361,6 +371,18 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
       }
     };
     rmsObjService.customVerb("sessionLogout", params, callback);
+  };
+  
+   AuthenticationBusinessController.prototype.getClientIp = function(S_CB, F_CB) {
+    let getClientIp = ObjectServices.getDataModel("GetClientIp");
+    const callback = (status,response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    getClientIp.customVerb("getClientIp", "" , callback);
   };
 
   function AuthenticationBusinessController() {

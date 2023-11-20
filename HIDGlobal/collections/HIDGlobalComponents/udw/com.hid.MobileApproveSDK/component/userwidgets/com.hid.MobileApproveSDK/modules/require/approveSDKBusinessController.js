@@ -175,9 +175,9 @@ define([], function() {
       kony.print("HID => Inside businessController.approveDeviceRegistration");
       kony.print("HID => approveDeviceRegistration status : "+status+" and response : "+JSON.stringify(response));
       if (status) {
-        S_CB(response);
+        S_CB(response.ApproveDeviceRegistration[0]);
       } else {
-        F_CB(response);
+        F_CB(response.ApproveDeviceRegistration[0]);
       }
     };
     objService.customVerb("getInviteCodeTDSV4B", params, callback);

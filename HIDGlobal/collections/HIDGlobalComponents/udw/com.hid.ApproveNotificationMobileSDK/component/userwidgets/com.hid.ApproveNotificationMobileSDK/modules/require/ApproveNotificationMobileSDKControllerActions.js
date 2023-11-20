@@ -124,5 +124,10 @@ define({
         }, {
             "animationEnd": ROTATE_ACTION_d05d002b36634d6aa90171406a5a5f91_Callback
         });
+    },
+    /** onTouchStart defined for imgClosePR **/
+    AS_Image_e9734aafa6e2486f9ad1d23184ae8215: function AS_Image_e9734aafa6e2486f9ad1d23184ae8215(eventobject, x, y) {
+        var self = this;
+        this.view.flxErrorPwdPR.setVisibility(false);
     }
 });

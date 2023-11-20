@@ -5,7 +5,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "e1313d5b61a9472f837141fe5fa6067c",
+                    "kuid": "j2f6c91b877d4ca5ac4978d19c8b1adc",
                     "paramList": [],
                     "propertyKey": "resumeScan",
                     "pw": {
@@ -17,7 +17,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "a6abbdb9e060419bbdc4e1da8fe14517",
+                    "kuid": "c6a2ed1464934a5faf603f7f7792042b",
                     "paramList": [],
                     "propertyKey": "flashControl",
                     "pw": {
@@ -29,7 +29,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "i4bb0704340c4f6d8f7b0061138a1dd2",
+                    "kuid": "fb47537ffe734694bba2fea6abb8b53a",
                     "paramList": [],
                     "propertyKey": "renderScan",
                     "pw": {
@@ -41,7 +41,7 @@
                 },
                 {
                     "group": "General",
-                    "kuid": "fca6dc7823e9485887be576ed3dca4b0",
+                    "kuid": "d31a4341a977480b87d5c33c14da6c93",
                     "paramList": [],
                     "propertyKey": "stopScan",
                     "pw": {

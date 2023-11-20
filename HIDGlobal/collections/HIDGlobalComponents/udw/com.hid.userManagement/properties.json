@@ -1,15 +1,15 @@
 {
     "assetPlatform": "Visualizer",
     "assetVersion": "1.0.0",
-    "createdBy": "chakradhar.reddypakala@hidglobal.com",
-    "createdMFVersion": "9.2.2.2",
-    "createdVizVersion": "9.1.8",
-    "currentMFVersion": "9.2.2.2",
-    "currentVizVersion": "9.1.8",
-    "description": "Web Component",
+    "createdBy": "sushant.dubey@hidglobal.com",
+    "createdMFVersion": "9.7.1.0",
+    "createdVizVersion": "9.2.37",
+    "currentMFVersion": "9.7.1.0",
+    "currentVizVersion": "9.2.37",
+    "description": "Delete device and suspend device changes.",
     "itemCategory": "udw",
-    "itemGuid": "cf3b99254bf143c2bc1fc6a159c52bfa",
+    "itemGuid": "f9ac2f3e88794d59b95143316fbf49a4",
     "itemName": "com.hid.userManagement",
     "libraryVersion": "libver4",
-    "modifiedBy": "chakradhar.reddypakala@hidglobal.com"
+    "modifiedBy": "sushant.dubey@hidglobal.com"
 }

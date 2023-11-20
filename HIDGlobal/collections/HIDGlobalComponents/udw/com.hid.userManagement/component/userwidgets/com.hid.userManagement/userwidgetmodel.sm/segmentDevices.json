@@ -64,19 +64,23 @@
                 },
                 "imgActive": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "tickgreen.png"
+                    "src": "tick_2_1.png"
                 },
                 "imgCancel": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "clear_black_24dp_2_2.png"
+                    "src": "clear_black_24dp_2_1.png"
+                },
+                "imgDeleteDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "delete_77_512.png"
                 },
                 "imgOk": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "done_black_24dp_2_2.png"
+                    "src": "done_black_24dp_2_1.png"
                 },
                 "imgSuspend": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "clear_black_24dp_2_2.png"
+                    "src": "cross_2_1.png"
                 },
                 "lblDeviceId": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -92,6 +96,7 @@
                 },
                 "txtDeviceName": {
                     "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
+                    "placeholder": "",
                     "text": ""
                 }
             },
@@ -106,19 +111,23 @@
                 },
                 "imgActive": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "tickgreen.png"
+                    "src": "tick_2_1.png"
                 },
                 "imgCancel": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "clear_black_24dp_2_2.png"
+                    "src": "clear_black_24dp_2_1.png"
+                },
+                "imgDeleteDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "delete_77_512.png"
                 },
                 "imgOk": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "done_black_24dp_2_2.png"
+                    "src": "done_black_24dp_2_1.png"
                 },
                 "imgSuspend": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "clear_black_24dp_2_2.png"
+                    "src": "cross_2_1.png"
                 },
                 "lblDeviceId": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -134,6 +143,7 @@
                 },
                 "txtDeviceName": {
                     "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
+                    "placeholder": "",
                     "text": ""
                 }
             },
@@ -148,19 +158,23 @@
                 },
                 "imgActive": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "tickgreen.png"
+                    "src": "tick_2_1.png"
                 },
                 "imgCancel": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "clear_black_24dp_2_2.png"
+                    "src": "clear_black_24dp_2_1.png"
+                },
+                "imgDeleteDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "delete_77_512.png"
                 },
                 "imgOk": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "done_black_24dp_2_2.png"
+                    "src": "done_black_24dp_2_1.png"
                 },
                 "imgSuspend": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                    "src": "clear_black_24dp_2_2.png"
+                    "src": "cross_2_1.png"
                 },
                 "lblDeviceId": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -176,21 +190,27 @@
                 },
                 "txtDeviceName": {
                     "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
+                    "placeholder": "",
                     "text": ""
                 }
             }
         ],
-        "rowTemplateId": "f142f6f0df6343d7a9bb4fe2daea4b19",
-        "rowtemplate": "CopyCopyflxDevicesSegment1",
+        "rowTemplateId": "b46b7b40120444e0b50b7269a52b41a9",
+        "rowtemplate": "CopyCopyflxDevicesSegment",
         "sectionHeaderTemplateId": null,
         "widgetdatamap": {
-            "CopyCopyflxDevicesSegment1": "CopyCopyflxDevicesSegment1",
+            "CopyCopyflxDevicesSegment": "CopyCopyflxDevicesSegment",
             "Edit": "Edit",
             "btnChangeStatus": "btnChangeStatus",
+            "flxDeviceName": "flxDeviceName",
             "flxEditButtons": "flxEditButtons",
             "flxStatus": "flxStatus",
+            "flxValidFromValue": "flxValidFromValue",
+            "flxValidToValue": "flxValidToValue",
+            "flxdeviceAction": "flxdeviceAction",
             "imgActive": "imgActive",
             "imgCancel": "imgCancel",
+            "imgDeleteDevice": "imgDeleteDevice",
             "imgOk": "imgOk",
             "imgSuspend": "imgSuspend",
             "lblDeviceId": "lblDeviceId",
@@ -254,7 +274,7 @@
     "wType": "Segment",
     "widgetalignment": 5,
     "widgetdatamap": {
-        "CopyCopyflxDevicesSegment1": "CopyCopyflxDevicesSegment1",
+        "CopyCopyflxDevicesSegment": "CopyCopyflxDevicesSegment",
         "Edit": "Edit",
         "btnChangeStatus": "btnChangeStatus",
         "flxEditButtons": "flxEditButtons",

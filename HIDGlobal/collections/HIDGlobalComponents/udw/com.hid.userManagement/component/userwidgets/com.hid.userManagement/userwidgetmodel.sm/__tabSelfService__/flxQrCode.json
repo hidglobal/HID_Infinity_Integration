@@ -25,7 +25,7 @@
     "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
     "_top_": {
         "type": "string",
-        "value": "7%"
+        "value": "10%"
     },
     "_width_": {
         "type": "string",
@@ -35,7 +35,7 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "qrcodegenerator"
+        "qrcodegeneratorNew"
     ],
     "clipbounds": false,
     "containerweight": 100,

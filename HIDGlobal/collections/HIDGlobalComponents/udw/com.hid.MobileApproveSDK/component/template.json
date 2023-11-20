@@ -6,7 +6,6 @@
     "sourceChannel": "common",
     "templateDef": {
         "DNDConfig": null,
-        "__parentReadjusting__": false,
         "_height_": {
             "type": "string",
             "value": "100%"
@@ -64,7 +63,6 @@
         "enablescrolling": true,
         "flxActivationCode": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -1380,7 +1378,6 @@
         },
         "flxBiometric": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -1758,7 +1755,6 @@
         },
         "flxLoading": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -2082,7 +2078,6 @@
         },
         "flxLogin": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -3311,7 +3306,6 @@
         },
         "flxManual": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -4817,7 +4811,6 @@
         },
         "flxOOB": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -6000,7 +5993,6 @@
         },
         "flxOpaqueBGNew": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -6062,7 +6054,6 @@
         },
         "flxProfileResetUI": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -7049,7 +7040,6 @@
         },
         "flxQRCode": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -7397,10 +7387,10 @@
                         "__childrenGenerated__": true,
                         "__convertedToKUID__": true,
                         "_children_": [
-                            "bf23c24316764e3aae750dec289b5d84",
-                            "b23b265cc8b2459e8929912f9d40d4c8",
-                            "df1cba3f571f40ecb9d94909ece6d144",
-                            "gaccfe9b1613428c9976c7b35e3cc833"
+                            "e952606db57c442eb1d207ff96ed2032",
+                            "f4a01f67af1c45768d3c3f8cbec4f655",
+                            "da187cc753bf485793361b129b11817d",
+                            "be59711949ff4b9aa17a184f841a70e8"
                         ],
                         "_height_": {
                             "type": "string",
@@ -7434,18 +7424,157 @@
                             "value": "100%"
                         },
                         "autogrowmode": 0,
-                        "b23b265cc8b2459e8929912f9d40d4c8": {
+                        "be59711949ff4b9aa17a184f841a70e8": {
                             "DNDConfig": null,
                             "__UDWInstanceModelForRender__": true,
                             "__instanceKUID__": "g30f419752a546e6b80b7102fb8245a6",
-                            "__srcKUID__": "i8e3ee0e833a4c27a44421f8178e31af",
+                            "__srcKUID__": "a1baa3a2701b4c8e85b5ea2c405d395a",
                             "_height_": {
                                 "type": "string",
                                 "value": "12.50%"
                             },
                             "_left_": {
                                 "type": "string",
+                                "value": "86%"
+                            },
+                            "_margin_": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            "_orientation_": 6,
+                            "_padding_": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            "_percent_": true,
+                            "_responsiveData_": {},
+                            "_skin_": "s18a492191874719b241c9a655e4389b",
+                            "_top_": {
+                                "type": "string",
                                 "value": "1%"
+                            },
+                            "_width_": {
+                                "type": "string",
+                                "value": "12.50%"
+                            },
+                            "a196b946df27410097083689bc7b39a3": {
+                                "@class": "com.kony.gen.viz.model.component.KVizImage2",
+                                "DNDConfig": null,
+                                "__UDWInstanceModelForRender__": true,
+                                "__instanceKUID__": "g30f419752a546e6b80b7102fb8245a6",
+                                "__srcKUID__": "g1a15b6b2e8e42a0b113bd8ac6bae066",
+                                "_base64_": null,
+                                "_height_": {
+                                    "type": "string",
+                                    "value": "100%"
+                                },
+                                "_left_": {
+                                    "type": "string",
+                                    "value": "0dp"
+                                },
+                                "_margin_": [
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "_padding_": [
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "_responsiveData_": {},
+                                "_skin_": "s0110c6e51734175b4910209b5c5b877",
+                                "_src_": "flash.png",
+                                "_top_": {
+                                    "type": "string",
+                                    "value": "0dp"
+                                },
+                                "_width_": {
+                                    "type": "string",
+                                    "value": "100%"
+                                },
+                                "canUpdateUI": true,
+                                "containerweight": 100,
+                                "displayName": "imgFlash",
+                                "id": "a196b946df27410097083689bc7b39a3",
+                                "imagescalemode": 1,
+                                "info": null,
+                                "iscustomlayout": false,
+                                "isvisible": true,
+                                "kuid": "a196b946df27410097083689bc7b39a3",
+                                "name": "kony.ui.Image2",
+                                "parent": "be59711949ff4b9aa17a184f841a70e8",
+                                "pf": "uwudf637f759e64eaa943af27248e39362",
+                                "responsiveData": {},
+                                "retaincontentalignment": false,
+                                "retainflexpositionproperties": false,
+                                "snapshot": {
+                                    "md5": "YJ8ggqLQzyNxQRvkh1Hn7PkbtRM="
+                                },
+                                "srcType": 1,
+                                "wType": "Image",
+                                "widgetalignment": 5,
+                                "zindex": 1
+                            },
+                            "allboxes": [],
+                            "autogrowmode": 0,
+                            "canUpdateUI": true,
+                            "children": [
+                                "a196b946df27410097083689bc7b39a3"
+                            ],
+                            "clipbounds": true,
+                            "containerweight": 100,
+                            "displayName": "flxFlash",
+                            "enablescrolling": true,
+                            "id": "be59711949ff4b9aa17a184f841a70e8",
+                            "ide_onClick": "AS_FlexContainer_j654c960f92a4e1ba498d832bde17d7f",
+                            "info": null,
+                            "iscustomlayout": false,
+                            "isvisible": true,
+                            "kuid": "be59711949ff4b9aa17a184f841a70e8",
+                            "layouttype": 2,
+                            "name": "kony.ui.FlexContainer",
+                            "parent": "barcodeqrscanner",
+                            "pf": "uwudf637f759e64eaa943af27248e39362",
+                            "responsiveData": {},
+                            "retaincontentalignment": false,
+                            "retainflexpositionproperties": false,
+                            "retainflowhorizontalalignment": false,
+                            "snapgridsize": 10,
+                            "snapshot": {
+                                "md5": "19npSEGImgazvB0J4ev4It2c8Bo="
+                            },
+                            "snaptogrid": true,
+                            "wType": "FlexContainer",
+                            "widgetalignment": 1,
+                            "zindex": 1
+                        },
+                        "canUpdateUI": true,
+                        "clipbounds": true,
+                        "componentState": {
+                            "instanceModified": false,
+                            "sourceModified": false,
+                            "synced": true
+                        },
+                        "containerweight": 0,
+                        "da187cc753bf485793361b129b11817d": {
+                            "DNDConfig": null,
+                            "__UDWInstanceModelForRender__": true,
+                            "__instanceKUID__": "g30f419752a546e6b80b7102fb8245a6",
+                            "__srcKUID__": "da90b2c8ebc4423f8eb01035a2b538af",
+                            "_height_": {
+                                "type": "string",
+                                "value": "12.50%"
+                            },
+                            "_left_": {
+                                "type": "string",
+                                "value": "73%"
                             },
                             "_margin_": [
                                 0,
@@ -7474,12 +7603,19 @@
                             "allboxes": [],
                             "autogrowmode": 0,
                             "canUpdateUI": true,
-                            "ce43618d248c4ae89f4917f172320093": {
+                            "children": [
+                                "h82810e77b7740788fadf03f3fde1077"
+                            ],
+                            "clipbounds": true,
+                            "containerweight": 100,
+                            "displayName": "flxCamera",
+                            "enablescrolling": true,
+                            "h82810e77b7740788fadf03f3fde1077": {
                                 "@class": "com.kony.gen.viz.model.component.KVizImage2",
                                 "DNDConfig": null,
                                 "__UDWInstanceModelForRender__": true,
                                 "__instanceKUID__": "g30f419752a546e6b80b7102fb8245a6",
-                                "__srcKUID__": "fb8452b8a1a647eba8a089faf22e90bd",
+                                "__srcKUID__": "e61974f0c5bd4839a982aafd3dff8632",
                                 "_base64_": null,
                                 "_height_": {
                                     "type": "string",
@@ -7503,7 +7639,7 @@
                                 ],
                                 "_responsiveData_": {},
                                 "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                                "_src_": "close.png",
+                                "_src_": "switch_cam.png",
                                 "_top_": {
                                     "type": "string",
                                     "value": "0dp"
@@ -7514,40 +7650,33 @@
                                 },
                                 "canUpdateUI": true,
                                 "containerweight": 100,
-                                "displayName": "imgClose",
-                                "id": "ce43618d248c4ae89f4917f172320093",
+                                "displayName": "imgCamera",
+                                "id": "h82810e77b7740788fadf03f3fde1077",
                                 "imagescalemode": 1,
                                 "info": null,
                                 "iscustomlayout": false,
                                 "isvisible": true,
-                                "kuid": "ce43618d248c4ae89f4917f172320093",
+                                "kuid": "h82810e77b7740788fadf03f3fde1077",
                                 "name": "kony.ui.Image2",
-                                "parent": "b23b265cc8b2459e8929912f9d40d4c8",
+                                "parent": "da187cc753bf485793361b129b11817d",
                                 "pf": "uwudf637f759e64eaa943af27248e39362",
                                 "responsiveData": {},
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "snapshot": {
-                                    "md5": "jWFa5yRGo3ysQodOiITkkph4QsY="
+                                    "md5": "gY0CFbROZzL13Lnv6Sm5Y7Gsqrg="
                                 },
                                 "srcType": 1,
                                 "wType": "Image",
                                 "widgetalignment": 5,
                                 "zindex": 1
                             },
-                            "children": [
-                                "ce43618d248c4ae89f4917f172320093"
-                            ],
-                            "clipbounds": true,
-                            "containerweight": 100,
-                            "displayName": "flxClose",
-                            "enablescrolling": true,
-                            "id": "b23b265cc8b2459e8929912f9d40d4c8",
-                            "ide_onClick": "AS_FlexContainer_f186359e1a1e4774a434bd5e475c21bf",
+                            "id": "da187cc753bf485793361b129b11817d",
+                            "ide_onClick": "AS_FlexContainer_c0b4981f42204767b8c06781f1d6e016",
                             "info": null,
                             "iscustomlayout": false,
-                            "isvisible": false,
-                            "kuid": "b23b265cc8b2459e8929912f9d40d4c8",
+                            "isvisible": true,
+                            "kuid": "da187cc753bf485793361b129b11817d",
                             "layouttype": 2,
                             "name": "kony.ui.FlexContainer",
                             "parent": "barcodeqrscanner",
@@ -7558,14 +7687,21 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "73G8sz6zlK/+vsuLT4mRNRgnrNg="
+                                "md5": "qEnTaX3NQmIoHDVF20yAcJzEvcQ="
                             },
                             "snaptogrid": true,
                             "wType": "FlexContainer",
                             "widgetalignment": 1,
                             "zindex": 1
                         },
-                        "bf23c24316764e3aae750dec289b5d84": {
+                        "data": {
+                            "cameraToggleVisibility": true,
+                            "closeButtonVisibility": true,
+                            "enableContinuousScanning": false,
+                            "flashButtonVisibility": true,
+                            "renderAutomatic": false
+                        },
+                        "e952606db57c442eb1d207ff96ed2032": {
                             "@class": "com.kony.gen.viz.model.component.KVizNativeContainer",
                             "DNDConfig": null,
                             "__UDWInstanceModelForRender__": true,
@@ -7609,7 +7745,7 @@
                                 "render": false
                             },
                             "displayName": "ncScan",
-                            "id": "bf23c24316764e3aae750dec289b5d84",
+                            "id": "e952606db57c442eb1d207ff96ed2032",
                             "ide_onCleanup": "AS_NativeContainer_ib1d2a18722c4a269eb3cc8152749836",
                             "ide_onCreated": "AS_NativeContainer_d9228af85144405da7da7c3201ed7354",
                             "info": null,
@@ -7618,7 +7754,7 @@
                             "kiosk": {
                                 "render": false
                             },
-                            "kuid": "bf23c24316764e3aae750dec289b5d84",
+                            "kuid": "e952606db57c442eb1d207ff96ed2032",
                             "name": "kony.ui.NativeContainer",
                             "parent": "barcodeqrscanner",
                             "pf": "uwudf637f759e64eaa943af27248e39362",
@@ -7626,7 +7762,7 @@
                             "retaincontentalignment": false,
                             "retainflexpositionproperties": false,
                             "snapshot": {
-                                "md5": "BKyPqMX9oKjq9YLwHBXORpEOaPs="
+                                "md5": "YrPjcuO5s1qwp21Paqt/dazj/lA="
                             },
                             "spaan": {
                                 "render": false
@@ -7667,159 +7803,19 @@
                             },
                             "zindex": 1
                         },
-                        "canUpdateUI": true,
-                        "clipbounds": true,
-                        "componentState": {
-                            "instanceModified": false,
-                            "sourceModified": false,
-                            "synced": true
-                        },
-                        "containerweight": 0,
-                        "data": {},
-                        "df1cba3f571f40ecb9d94909ece6d144": {
-                            "DNDConfig": null,
-                            "__UDWInstanceModelForRender__": true,
-                            "__instanceKUID__": "g30f419752a546e6b80b7102fb8245a6",
-                            "__srcKUID__": "da90b2c8ebc4423f8eb01035a2b538af",
-                            "_height_": {
-                                "type": "string",
-                                "value": "12.50%"
-                            },
-                            "_left_": {
-                                "type": "string",
-                                "value": "73%"
-                            },
-                            "_margin_": [
-                                0,
-                                0,
-                                0,
-                                0
-                            ],
-                            "_orientation_": 6,
-                            "_padding_": [
-                                0,
-                                0,
-                                0,
-                                0
-                            ],
-                            "_percent_": true,
-                            "_responsiveData_": {},
-                            "_skin_": "s18a492191874719b241c9a655e4389b",
-                            "_top_": {
-                                "type": "string",
-                                "value": "1%"
-                            },
-                            "_width_": {
-                                "type": "string",
-                                "value": "12.50%"
-                            },
-                            "allboxes": [],
-                            "autogrowmode": 0,
-                            "canUpdateUI": true,
-                            "children": [
-                                "i8bf74ff981a42d5b32078f035e67078"
-                            ],
-                            "clipbounds": true,
-                            "containerweight": 100,
-                            "displayName": "flxCamera",
-                            "enablescrolling": true,
-                            "i8bf74ff981a42d5b32078f035e67078": {
-                                "@class": "com.kony.gen.viz.model.component.KVizImage2",
-                                "DNDConfig": null,
-                                "__UDWInstanceModelForRender__": true,
-                                "__instanceKUID__": "g30f419752a546e6b80b7102fb8245a6",
-                                "__srcKUID__": "e61974f0c5bd4839a982aafd3dff8632",
-                                "_base64_": null,
-                                "_height_": {
-                                    "type": "string",
-                                    "value": "100%"
-                                },
-                                "_left_": {
-                                    "type": "string",
-                                    "value": "0dp"
-                                },
-                                "_margin_": [
-                                    0,
-                                    0,
-                                    0,
-                                    0
-                                ],
-                                "_padding_": [
-                                    0,
-                                    0,
-                                    0,
-                                    0
-                                ],
-                                "_responsiveData_": {},
-                                "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                                "_src_": "switch_cam.png",
-                                "_top_": {
-                                    "type": "string",
-                                    "value": "0dp"
-                                },
-                                "_width_": {
-                                    "type": "string",
-                                    "value": "100%"
-                                },
-                                "canUpdateUI": true,
-                                "containerweight": 100,
-                                "displayName": "imgCamera",
-                                "id": "i8bf74ff981a42d5b32078f035e67078",
-                                "imagescalemode": 1,
-                                "info": null,
-                                "iscustomlayout": false,
-                                "isvisible": true,
-                                "kuid": "i8bf74ff981a42d5b32078f035e67078",
-                                "name": "kony.ui.Image2",
-                                "parent": "df1cba3f571f40ecb9d94909ece6d144",
-                                "pf": "uwudf637f759e64eaa943af27248e39362",
-                                "responsiveData": {},
-                                "retaincontentalignment": false,
-                                "retainflexpositionproperties": false,
-                                "snapshot": {
-                                    "md5": "uk2QZTidY9SGpsnEodnJ9qID9Gs="
-                                },
-                                "srcType": 1,
-                                "wType": "Image",
-                                "widgetalignment": 5,
-                                "zindex": 1
-                            },
-                            "id": "df1cba3f571f40ecb9d94909ece6d144",
-                            "ide_onClick": "AS_FlexContainer_c0b4981f42204767b8c06781f1d6e016",
-                            "info": null,
-                            "iscustomlayout": false,
-                            "isvisible": false,
-                            "kuid": "df1cba3f571f40ecb9d94909ece6d144",
-                            "layouttype": 2,
-                            "name": "kony.ui.FlexContainer",
-                            "parent": "barcodeqrscanner",
-                            "pf": "uwudf637f759e64eaa943af27248e39362",
-                            "responsiveData": {},
-                            "retaincontentalignment": false,
-                            "retainflexpositionproperties": false,
-                            "retainflowhorizontalalignment": false,
-                            "snapgridsize": 10,
-                            "snapshot": {
-                                "md5": "5rmUx80cSWs91BCAvu2+OuRNf90="
-                            },
-                            "snaptogrid": true,
-                            "wType": "FlexContainer",
-                            "widgetalignment": 1,
-                            "zindex": 1
-                        },
                         "enablescrolling": true,
-                        "gaccfe9b1613428c9976c7b35e3cc833": {
+                        "f4a01f67af1c45768d3c3f8cbec4f655": {
                             "DNDConfig": null,
                             "__UDWInstanceModelForRender__": true,
                             "__instanceKUID__": "g30f419752a546e6b80b7102fb8245a6",
-                            "__srcKUID__": "a1baa3a2701b4c8e85b5ea2c405d395a",
+                            "__srcKUID__": "i8e3ee0e833a4c27a44421f8178e31af",
                             "_height_": {
                                 "type": "string",
                                 "value": "12.50%"
                             },
                             "_left_": {
                                 "type": "string",
-                                "value": "86%"
+                                "value": "1%"
                             },
                             "_margin_": [
                                 0,
@@ -7845,12 +7841,22 @@
                                 "type": "string",
                                 "value": "12.50%"
                             },
-                            "a6e6383ef5194e4db4563aabfad0e963": {
+                            "allboxes": [],
+                            "autogrowmode": 0,
+                            "canUpdateUI": true,
+                            "children": [
+                                "i9d405fe419e4c458dba8284469257dd"
+                            ],
+                            "clipbounds": true,
+                            "containerweight": 100,
+                            "displayName": "flxClose",
+                            "enablescrolling": true,
+                            "i9d405fe419e4c458dba8284469257dd": {
                                 "@class": "com.kony.gen.viz.model.component.KVizImage2",
                                 "DNDConfig": null,
                                 "__UDWInstanceModelForRender__": true,
                                 "__instanceKUID__": "g30f419752a546e6b80b7102fb8245a6",
-                                "__srcKUID__": "g1a15b6b2e8e42a0b113bd8ac6bae066",
+                                "__srcKUID__": "fb8452b8a1a647eba8a089faf22e90bd",
                                 "_base64_": null,
                                 "_height_": {
                                     "type": "string",
@@ -7874,7 +7880,7 @@
                                 ],
                                 "_responsiveData_": {},
                                 "_skin_": "s0110c6e51734175b4910209b5c5b877",
-                                "_src_": "flash.png",
+                                "_src_": "close.png",
                                 "_top_": {
                                     "type": "string",
                                     "value": "0dp"
@@ -7885,43 +7891,33 @@
                                 },
                                 "canUpdateUI": true,
                                 "containerweight": 100,
-                                "displayName": "imgFlash",
-                                "id": "a6e6383ef5194e4db4563aabfad0e963",
+                                "displayName": "imgClose",
+                                "id": "i9d405fe419e4c458dba8284469257dd",
                                 "imagescalemode": 1,
                                 "info": null,
                                 "iscustomlayout": false,
                                 "isvisible": true,
-                                "kuid": "a6e6383ef5194e4db4563aabfad0e963",
+                                "kuid": "i9d405fe419e4c458dba8284469257dd",
                                 "name": "kony.ui.Image2",
-                                "parent": "gaccfe9b1613428c9976c7b35e3cc833",
+                                "parent": "f4a01f67af1c45768d3c3f8cbec4f655",
                                 "pf": "uwudf637f759e64eaa943af27248e39362",
                                 "responsiveData": {},
                                 "retaincontentalignment": false,
                                 "retainflexpositionproperties": false,
                                 "snapshot": {
-                                    "md5": "LyhavfGw0zrA/dndlzOhOTXnceA="
+                                    "md5": "jWFa5yRGo3ysQodOiITkkph4QsY="
                                 },
                                 "srcType": 1,
                                 "wType": "Image",
                                 "widgetalignment": 5,
                                 "zindex": 1
                             },
-                            "allboxes": [],
-                            "autogrowmode": 0,
-                            "canUpdateUI": true,
-                            "children": [
-                                "a6e6383ef5194e4db4563aabfad0e963"
-                            ],
-                            "clipbounds": true,
-                            "containerweight": 100,
-                            "displayName": "flxFlash",
-                            "enablescrolling": true,
-                            "id": "gaccfe9b1613428c9976c7b35e3cc833",
-                            "ide_onClick": "AS_FlexContainer_j654c960f92a4e1ba498d832bde17d7f",
+                            "id": "f4a01f67af1c45768d3c3f8cbec4f655",
+                            "ide_onClick": "AS_FlexContainer_f186359e1a1e4774a434bd5e475c21bf",
                             "info": null,
                             "iscustomlayout": false,
-                            "isvisible": false,
-                            "kuid": "gaccfe9b1613428c9976c7b35e3cc833",
+                            "isvisible": true,
+                            "kuid": "f4a01f67af1c45768d3c3f8cbec4f655",
                             "layouttype": 2,
                             "name": "kony.ui.FlexContainer",
                             "parent": "barcodeqrscanner",
@@ -7932,7 +7928,7 @@
                             "retainflowhorizontalalignment": false,
                             "snapgridsize": 10,
                             "snapshot": {
-                                "md5": "saVO6hogULkDHcTmPXHEFscFGrM="
+                                "md5": "4zusX3pDpr3XRzF96Y6HC64Jp9Y="
                             },
                             "snaptogrid": true,
                             "wType": "FlexContainer",
@@ -7954,7 +7950,7 @@
                         "retainflowhorizontalalignment": false,
                         "snapgridsize": 10,
                         "snapshot": {
-                            "md5": "grnRDJ4xLM0fCX7A/NubWhayOMs="
+                            "md5": "Cld3b86WcQ7FgjURY87af8fqI64="
                         },
                         "snaptogrid": true,
                         "sourceUserWidget": "h7b25e6eebc34de98edf7a77c8ad29ab",
@@ -8272,7 +8268,7 @@
             "id": "flxQRCode",
             "info": null,
             "iscustomlayout": false,
-            "isvisible": false,
+            "isvisible": true,
             "kuid": "b7f813d1abf6462b82fdda4a7623739c",
             "layouttype": 2,
             "name": "kony.ui.FlexContainer",
@@ -8283,7 +8279,7 @@
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "63UmcUSOASa5zc4Cc56c5tp4jlM="
+                "md5": "oh2SkWoCMdZ2qoiOWcewxu5n6U0="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -8292,7 +8288,6 @@
         },
         "flxScannerAlertUI": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "25%"
@@ -8939,7 +8934,6 @@
         },
         "flxSetPassword": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -11086,7 +11080,6 @@
         },
         "flxSetStandardPassword": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -13443,7 +13436,6 @@
                 "zindex": 6
             },
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "52%"
@@ -13715,7 +13707,6 @@
         },
         "flxUpdatePassword": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -15971,7 +15962,6 @@
         },
         "flxUsers": {
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_height_": {
                 "type": "string",
                 "value": "100%"
@@ -18799,7 +18789,6 @@
         "imgBg": {
             "@class": "com.kony.gen.viz.model.component.KVizImage2",
             "DNDConfig": null,
-            "__parentReadjusting__": false,
             "_base64_": null,
             "_height_": {
                 "type": "string",
@@ -18833,13 +18822,6 @@
             },
             "canUpdateUI": true,
             "containerweight": 100,
-            "context": {
-                "channel": "mobile",
-                "formID": "uwudf637f759e64eaa943af27248e39362",
-                "platform": "android",
-                "templateType": "userwidgets",
-                "topLevelBox": null
-            },
             "id": "imgBg",
             "imagescalemode": 0,
             "info": null,
@@ -18878,5 +18860,5 @@
         "wType": "FlexContainer",
         "widgetalignment": 1
     },
-    "userwidgetKUID": "u6e61965df144d3fbe796f286f86d176"
+    "userwidgetKUID": "u1924a5f7ebe4907bda9447c839a9b0c"
 }

@@ -1,0 +1,29 @@
+{
+  "android": {},
+  "androidwearos": {},
+  "background_color": "1d6af000",
+  "bg_type": "one",
+  "border_color": "000000ff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 0,
+  "desktopweb": {
+    "font_name": "Gotham-Book"
+  },
+  "ipad": {},
+  "iphone": {},
+  "isDefaultSkin": false,
+  "kiosk": {},
+  "kuid": "s4b907947d7c40e2826ca26cb6eb3ffb",
+  "spaan": {},
+  "spaandroidtablet": {},
+  "spaip": {},
+  "spaipad": {},
+  "spawindowstablet": {},
+  "spawinphone8": {},
+  "tabrcandroid": {},
+  "wType": "FlexContainer",
+  "watchos": {},
+  "windows8": {},
+  "winphone8": {}
+}

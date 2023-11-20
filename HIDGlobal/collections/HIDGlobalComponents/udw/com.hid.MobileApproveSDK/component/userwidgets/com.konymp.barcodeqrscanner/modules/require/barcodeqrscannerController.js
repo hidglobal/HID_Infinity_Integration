@@ -148,17 +148,18 @@ define(['./ControllerImplementation.js', './KonyLogger'], function(ControllerImp
           this.formref=formrefernce;
             try {
                 if (!this.isCameaAdded) {
-                    var eventobject = this.view.ncScan.getContainerView();
-                    this.handler.scan(eventobject, this._cameraFacing);
-                    this.isCameaAdded = true;
-                    this.view.flxClose.isVisible = true;
-                    this.view.flxFlash.isVisible = true;
-                    this.view.flxCamera.isVisible = true;
-                    this.view.forceLayout();
+                  var eventobject = this.view.ncScan.getContainerView();
+                  if(eventobject && !this.isEmpty(eventobject)){
+                    this.addScanner(eventobject);
+                  } else if(this.isEmpty(eventobject)){
+                      kony.print("ScanLib --> eventobject is empty, restarting camera..");
+                      this.restartCamera();            
+                    }
                 }
             } catch (e) {
                 this.isCameaAdded = false;
-                this.errorCallback(e);
+                kony.print("ScanLib --> Inside catch in renderScan: "+JSON.stringify(e));
+                this.restartCamera();
             }
         },
         stopScan: function() {
@@ -207,7 +208,13 @@ define(['./ControllerImplementation.js', './KonyLogger'], function(ControllerImp
          * @description: event when any error is thrown in the component
          */
         errorCallback: function(error) {
-          this.formref.errorCallback(error);
+          kony.print("ScanLib --> Inside barcodeqrscanner errorCallback: "+JSON.stringify(error));
+          if(this.isEmpty(error)){
+            kony.print("ScanLib --> Inside isEmpty in errorCallback")
+            this.restartCamera();
+          }else{
+            this.formref.errorCallback(error);
+          }         
         },
         /**
          * @function onClickClose
@@ -216,6 +223,43 @@ define(['./ControllerImplementation.js', './KonyLogger'], function(ControllerImp
          */
         onClickClose: function() {
           this.formref.onClickClose();
-        }
+        },
+        isEmpty : function(obj) {
+          if(obj === undefined || obj === null){
+            return true;
+          }
+          return JSON.stringify(obj) === JSON.stringify({});
+       },
+      /**
+         * @function addScanner
+         * @private
+         * @description: For adding scanner if it got lost from the form
+         */
+        addScanner : function(eventobject){
+          this.handler.scan(eventobject, this._cameraFacing);
+          this.isCameraAdded = true;
+          this.view.flxClose.isVisible = true;
+          this.view.flxFlash.isVisible = true;
+          this.view.flxCamera.isVisible = true;
+          this.view.forceLayout();
+        },
+    /**
+         * @function restartCamera
+         * @private
+         * @description: For restarting the camera in case of hard close
+         */
+       restartCamera : function(){
+         this.cameraFacing = "Front";
+         var eventobject = this.view.ncScan.getContainerView();
+         this.release(eventobject);
+         let timername = "timer"+ Math.floor(Math.random()*1000);
+         kony.timer.schedule(timername, function() {
+           this.cameraFacing = "Back";
+           eventobject = this.view.ncScan.getContainerView();
+           this.release(eventobject);
+           this.addScanner(eventobject);
+         }.bind(this), 1, false);  
+         this.view.forceLayout();
+       }
     };
 });

@@ -6,7 +6,6 @@
     "sourceChannel": "common",
     "templateDef": {
         "DNDConfig": null,
-        "__parentReadjusting__": false,
         "_height_": {
             "type": "string",
             "value": "100%"
@@ -59,11 +58,11 @@
         "retainflowhorizontalalignment": false,
         "snapgridsize": 10,
         "snapshot": {
-            "md5": "UrAAzAxZObaDHGhj4Xg5jj+2yjs="
+            "md5": "hBJIRX06FDIxTxEAWZGYyio7+j8="
         },
         "snaptogrid": true,
         "wType": "FlexContainer",
         "widgetalignment": 1
     },
-    "userwidgetKUID": "u36a03bac339445a91e6434fac6abf57"
+    "userwidgetKUID": "ud303fe836254fd2b60a0b3e55572cd6"
 }
