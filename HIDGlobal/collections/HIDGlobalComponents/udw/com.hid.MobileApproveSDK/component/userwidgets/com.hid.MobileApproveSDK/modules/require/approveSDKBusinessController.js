@@ -4,7 +4,7 @@ define([], function() {
   globals.approveFlag = false;
   globals.approvePoll = false;
   var instance = null;
-  
+  var msgId = "";
   const HIDAuthServiceConfig = {
     "name" : "HIDAuthService",
     "accessType" : {"access" : "online"}
@@ -185,6 +185,7 @@ define([], function() {
   // Validate Secure OTP with RMS
   BusinessController.prototype.validateSecureOTPWithRMS = function(username, password, S_CB, F_CB,rmsLoad=""){
     let transactionId = Math.floor(Math.random() * 10000);    
+    msgId = transactionId;
     let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0", 
                     "currentRiskScore" : "2", "transactionId" : transactionId};    
     
@@ -214,6 +215,7 @@ define([], function() {
   
   BusinessController.prototype.validateSecureOTP = function(username, password, S_CB, F_CB){
     let transactionId = Math.floor(Math.random() * 10000);    
+    msgId = transactionId;
     let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0", 
                     "currentRiskScore" : "2", "transactionId" : transactionId};    
     
@@ -234,7 +236,21 @@ define([], function() {
          S_CB();
       },error=>{
          F_CB(error);
-    });};  
+    });}; 
+  
+  //Search User
+BusinessController.prototype.searchUser = function(params, S_CB, F_CB) {
+    kony.print("RMS => Inside businessController.searchUser");
+    let objService = HIDAuthService.getRepository("SearchUser");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    objService.customVerb("searchUser", params, callback);
+  };
 
 //Add OOBAuthenticator
 BusinessController.prototype.addOOBToUser = function(params, S_CB, F_CB) {
@@ -254,6 +270,7 @@ BusinessController.prototype.addOOBToUser = function(params, S_CB, F_CB) {
 BusinessController.prototype.sendOOB = function(params, S_CB, F_CB){
     try {
       kony.print("RMS => Inside businessController.sendOOB");
+      params.msgId = msgId;
       var otpRequestDataModel = HIDAuthService.getRepository("OTPRequest");
       const callback = (status, response) => {
         kony.print("RMS => CallbackStatus :"+status);
@@ -267,7 +284,8 @@ BusinessController.prototype.sendOOB = function(params, S_CB, F_CB){
           F_CB(response);
         }
       };
-      otpRequestDataModel.customVerb("sendOTP", params, callback);
+   //   otpRequestDataModel.customVerb("sendOTP", params, callback); // Existing Object service
+      otpRequestDataModel.customVerb("sendOTPLogin", params, callback); // New Object service for Security fix
     } catch (exception) {      
     }      
   };

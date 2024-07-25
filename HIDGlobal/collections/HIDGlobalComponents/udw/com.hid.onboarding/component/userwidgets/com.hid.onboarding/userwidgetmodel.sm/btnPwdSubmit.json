@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sdb7efb3e0a0477e9232db849f693291",
+    "_skin_": "sc11bf425f32446fb385713b805a6b78",
     "_text_": "SUBMIT",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s5875058131b4b3bb357729842db87b8",
+    "focusskin": "s2da2fa487264da1aef371b2c6bb64fb",
     "id": "btnPwdSubmit",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c48bf04a54714769b8b60c8d0e3ef384",
+    "kuid": "u617c405ba034e3ebcc62db4b548daee",
     "name": "kony.ui.Button",
     "parent": "flxPasswordButtons",
     "pf": "userwidgetmodel",

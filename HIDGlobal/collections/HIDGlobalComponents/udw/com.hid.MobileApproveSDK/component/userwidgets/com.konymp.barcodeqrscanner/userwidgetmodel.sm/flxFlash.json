@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s18a492191874719b241c9a655e4389b",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "1%"
@@ -41,11 +41,11 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxFlash",
-    "ide_onClick": "AS_FlexContainer_j654c960f92a4e1ba498d832bde17d7f",
+    "ide_onClick": "AS_FlexContainer_e5592a9e311647208b8e429e6bcb19de",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a1baa3a2701b4c8e85b5ea2c405d395a",
+    "kuid": "uf8161f3154841249785e2fa734ac817",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "barcodeqrscanner",

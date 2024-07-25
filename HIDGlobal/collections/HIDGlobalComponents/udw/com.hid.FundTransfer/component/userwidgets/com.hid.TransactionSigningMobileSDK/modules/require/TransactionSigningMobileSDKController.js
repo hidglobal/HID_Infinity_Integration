@@ -56,49 +56,61 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
     
     exceptionCallback : function(exceptionType,message){
+      kony.print(`ApproveSDK --> In exceptionCallback with exceptionType: ${exceptionType} and message: ${message}`);
       if(exceptionType == "UpdatePassword"){
         if(message == "updateSuccess"){
           kony.print("UpdatePassword Success");
           this.passwordUpdateSuccess();
+          if(this.onUpdatePasswordCB){ 
+//             this.onUpdatePasswordCB("success");
+            this.commonEventEmitter(this.onUpdatePasswordCB,["success"]);
+          } 
         } 
       } else if(exceptionType == "InvalidPasswordException"){
-			this.passwordUpdateError();	
+        this.onUpdatePasswordCB("InvalidPassword");
+		this.passwordUpdateError(exceptionType,message);	
       } else if(exceptionType == "AuthenticationException"){
-			this.passwordUpdateError();
+        this.onUatePasswordCB("InvalidPassword");
+		this.passwordUpdateError(exceptionType,message);
       }else {
-        this.passwordUpdateError();
+        this.onUpdatePasswordCB("error");
+        this.passwordUpdateError(exceptionType,message);
       }
-  },
-    
-    
+    },  
     passwordUpdateSuccess : function(){
+      kony.print("ApproveSDK --> in passwordUpdateSuccess: ");
       this.commonEventEmitter(this.passwordUpdateSuccess, ["success"]);      
     },
     
-    passwordUpdateError : function(){
-      this.commonEventEmitter(this.passwordUpdateError, ["InvalidPassword"]);  
+    passwordUpdateError : function(exceptionType,message){
+      kony.print("ApproveSDK --> in passwordUpdateError: ");
+      this.commonEventEmitter(this.passwordUpdateError, [exceptionType,message]);  
     },
     
     validatePassword : function(password){
-       this.nativeController.notifyPassword(password,sdkConstants.TS_NOTIFY_PASSWORD_MODE);
+      kony.print("ApproveSDK --> in validatePassword:  OTP "+ password);
+        this.nativeController.notifyPassword(password,sdkConstants.TS_NOTIFY_PASSWORD_MODE);
+        this.commonEventEmitter(this.onNotifyPassword, [""]); 
     },
     
     SCB_signTransaction(otp){
-      kony.print("ApproveSDK in SCB_SignTransaction:  Validate Transaction OTP "+ otp);
       if(this._mode == "OTP")
-        {
-          this.commonEventEmitter(this.signTransactionSuccess, [otp]);        
-        }
-      else{
-           this.validateTransactionOTP(otp);
+      {
+        kony.print("ApproveSDK --> in SCB_SignTransaction:  OTP "+ otp);
+        this.commonEventEmitter(this.signTransactionSuccess, [otp]);        
       }
-      
+      else{
+        kony.print("ApproveSDK --> in SCB_SignTransaction:  Validate Transaction OTP "+ otp);
+        this.validateTransactionOTP(otp);
+      }
     },
     FCB_signTransaction(exception,message){
-      kony.print("in SCB_SignTransaction:"+exception + " " + message);
+      kony.print("ApproveSDK --> in FCB_signTransaction: "+exception + " " + message);
+      this.commonEventEmitter(this.signTransactionFailure, [exception,message]);
     },
    
     validateTransactionOTP : function(otp){
+     kony.print("ApproveSDK --> in validateTransactionOTP: "+otp);
      let values = this.valueArray;
      if(otp === "" || isNaN(otp)){ 
         return;
@@ -121,12 +133,13 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     },
    
     validateTransactionOTPSuccess : function(success){
+      kony.print("ApproveSDK --> validateTransactionOTPSuccess: ");
       this.commonEventEmitter(this.signTransactionSuccess, [success]);
 //       alert(JSON.stringify(success));
     },
    
     validateTransactionOTPFailure : function(error){
-      kony.print("ApproveSDK " + JSON.stringify(error));
+      kony.print("ApproveSDK --> validateTransactionOTPFailure: " + JSON.stringify(error));
       this.commonEventEmitter(this.signTransactionFailure, [error]);
     },
     getUsername : function(){

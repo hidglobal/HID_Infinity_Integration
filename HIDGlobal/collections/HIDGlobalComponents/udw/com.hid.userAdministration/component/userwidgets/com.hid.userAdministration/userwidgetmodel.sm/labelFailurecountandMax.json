@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s266247eb50f4336976556bced70014d",
+    "_skin_": "s965ac95ff5d4d239a6524a32fc9b397",
     "_text_": "Failure count/Max",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ce2c507bcf1449eebbbfd7a7b54e4dae",
+    "kuid": "u7ec07d2648d4cfca48a7481cc39fe23",
     "name": "kony.ui.Label",
     "parent": "flexFailurecountandMax",
     "pf": "userwidgetmodel",

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sb65a3fbeb924314bf4823ffb561fdce",
+    "_skin_": "s99713a405b74d0cb29af7dda1c999db",
     "_top_": {
         "type": "string",
         "value": "0.00%"
@@ -39,11 +39,11 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "sb65a3fbeb924314bf4823ffb561fdce",
+    "focusskin": "s99713a405b74d0cb29af7dda1c999db",
     "id": "flxActivationCode",
     "info": null,
     "isvisible": false,
-    "kuid": "aa8eb511a8e3479284449222df8449c6",
+    "kuid": "u1651a1aaf774b6a9ec3304fbe31cff6",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "MobileApproveSDK",

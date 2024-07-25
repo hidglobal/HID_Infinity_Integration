@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sbec08744d80489ea3deaf3fae009c5c",
+    "_skin_": "s47a31fdbdb04f03a9ecc1bdcf5eb881",
     "_text_": "Invite Code",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s7003745cbcb4f8a97356ae1b3fdc991",
+    "focusskin": "s4b32e5d0ae4463ea26b002114b2b0f7",
     "id": "lblInviteCode",
     "info": null,
     "ipad": {
@@ -68,7 +68,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "ce57c45a9988492a82ebfcf87faa8265",
+    "kuid": "u536084624924665813e0b8fb43d8e1b",
     "name": "kony.ui.Label",
     "parent": "flxInviteCode",
     "pf": "userwidgetmodel",

@@ -22,8 +22,8 @@
         0,
         0
     ],
-    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
-    "_src_": "approveicon_3_5.png",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
+    "_src_": "approveicon_3.png",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -40,7 +40,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c8adc69979c44bb5b69a74ce071b1f32",
+    "kuid": "u953f8a460834f4cae2b102f64a1fd61",
     "name": "kony.ui.Image2",
     "parent": "flxDiffAuthOOBPIN",
     "pf": "userwidgetmodel",

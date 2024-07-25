@@ -29,7 +29,8 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialBusinessController'], fun
   };
   
   NonFinancialPresentationController.prototype.initiateApprove = function(username, deviceId, S_CB, F_CB){    
-    let pushMsg ="Please validate logon to Infinity Demo App";
+    let pushMsg = "Please validate the action on the Infinity App.";
+        //"Please validate the action to Infinity Demo App";
     let params = {"username" : username, "deviceId" : deviceId, "pushMessage" : pushMsg};
     NonFinancialBusinessController.initiateApproveNotification(params, S_CB, F_CB);
   };
@@ -98,7 +99,20 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialBusinessController'], fun
     };
     NonFinancialBusinessController.rmsActionComplete(status,params, S_CB, F_CB);
   };
-  
+
+  /*
+  change password flow with MFA: static password as First factor
+  */
+  NonFinancialPresentationController.prototype.validatePasswordforChangePwd = function(params,S_CB,F_CB){
+    NonFinancialBusinessController.validatePasswordforChangePwd(params, S_CB, F_CB);
+  };
+  /*
+  change password flow with 2nf factor MFA: OTP_SMS
+  */
+  NonFinancialPresentationController.prototype.validateOTPforChangePwd = function(params,S_CB,F_CB){
+    NonFinancialBusinessController.validateOTPforChangePwd(params, S_CB, F_CB);
+  };
+
   function NonFinancialPresentationController(){
 
   }

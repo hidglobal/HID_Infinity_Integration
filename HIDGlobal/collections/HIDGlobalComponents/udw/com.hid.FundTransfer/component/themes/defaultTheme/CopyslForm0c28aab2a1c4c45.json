@@ -1,10 +1,10 @@
 {
-  "background_color": "ffffff",
-  "bg_type": "one",
-  "border_color": "ffffffff",
-  "border_style": "plain",
-  "border_width": 0,
-  "isDefaultSkin": false,
-  "kuid": "s9edf46b45a64b21bd2fe9f799e0bd06",
-  "wType": "Form"
+    "background_color": "ffffff",
+    "bg_type": "one",
+    "border_color": "ffffffff",
+    "border_style": "plain",
+    "border_width": 0,
+    "isDefaultSkin": false,
+    "kuid": "s97049b5a740479189b09613fbfc7ba0",
+    "wType": "Form"
 }

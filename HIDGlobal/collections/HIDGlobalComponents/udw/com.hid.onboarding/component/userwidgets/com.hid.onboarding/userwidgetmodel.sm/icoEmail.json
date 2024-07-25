@@ -22,8 +22,8 @@
         0,
         0
     ],
-    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
-    "_src_": "emailotpicon_3_3_4.png",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
+    "_src_": "emailotpicon_3_3.png",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -40,7 +40,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e9361aa78e384aacb1a815454a86e8e2",
+    "kuid": "ue7a3397826e42239f2ddb17f533e67b",
     "name": "kony.ui.Image2",
     "parent": "flxDiffAuth",
     "pf": "userwidgetmodel",

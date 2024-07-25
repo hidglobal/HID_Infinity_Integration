@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s18a492191874719b241c9a655e4389b",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "5%"
@@ -48,7 +48,7 @@
     "id": "flxConfirmUserPINinput",
     "info": null,
     "isvisible": true,
-    "kuid": "a5125d783e494486aeb9b6ca2808d7e1",
+    "kuid": "udfe2652b40b45f8b4208a291d094c25",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxMainConfirmPIN",

@@ -24,7 +24,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s133881a11ee4d4d9ab6fd01dd6bcaa3",
+    "_skin_": "sa4820875003433f880a288b821e6e69",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -48,7 +48,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e66074f0dc844bc281fa08d06f54ba31",
+    "kuid": "u55754c76a1446108c4626706007bc49",
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
     "parent": "flxNonFinancialComponent",
@@ -56,7 +56,7 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "sourceUserWidget": "f07c751b2246424b9f006f4ab5605fb5",
+    "sourceUserWidget": "u1215c39d12444f5b19c86b701764fa2",
     "wType": "UserWidgetInstance",
     "zindex": 1
 }

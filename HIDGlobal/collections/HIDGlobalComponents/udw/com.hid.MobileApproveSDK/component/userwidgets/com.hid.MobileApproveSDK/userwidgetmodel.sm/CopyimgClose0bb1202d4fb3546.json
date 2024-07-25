@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s0110c6e51734175b4910209b5c5b877",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "closeicon_1_3_4_1.png",
     "_top_": {
         "type": "number",
@@ -43,12 +43,12 @@
     },
     "containerweight": 100,
     "id": "CopyimgClose0bb1202d4fb3546",
-    "ide_onTouchStart": "AS_Image_f6ea5ac3c98c48188d38afa6053fc4f2",
+    "ide_onTouchStart": "AS_Image_c07010e4c8a540cb9acdb02ae58f57e8",
     "imagescalemode": 1,
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "abb9de36d19a48d0be43fbcad221045a",
+    "kuid": "ua521c221f04463796cb1ccb8b04d2b3",
     "name": "kony.ui.Image2",
     "parent": "flxErrorPwd1",
     "pf": "userwidgetmodel",

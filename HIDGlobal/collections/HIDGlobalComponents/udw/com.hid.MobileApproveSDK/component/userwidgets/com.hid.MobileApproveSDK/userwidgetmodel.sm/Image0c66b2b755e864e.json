@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s0110c6e51734175b4910209b5c5b877",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "image_732.gif",
     "_top_": {
         "type": "string",
@@ -43,7 +43,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f8836babdbff441c8add294f6e71f022",
+    "kuid": "ubb654fcbb7d4b5c8c28220da37db0be",
     "name": "kony.ui.Image2",
     "parent": "flxPopUp",
     "pf": "userwidgetmodel",

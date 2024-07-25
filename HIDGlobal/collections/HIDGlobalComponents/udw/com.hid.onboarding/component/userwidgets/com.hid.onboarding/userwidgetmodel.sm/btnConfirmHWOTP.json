@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7ab8cad768844369867819025819a00",
+    "_skin_": "s13f75d74c144fbebd450f0e81665ae9",
     "_text_": "Confirm",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "saf8301fbab14a819da32f3b47b68886",
+    "focusskin": "s7015215cec0443c8580624eb93b6c81",
     "id": "btnConfirmHWOTP",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d9418363c5df4a478f2997396ad0f09a",
+    "kuid": "u0c0461fe1bf45dcb92cae08a4e4027f",
     "name": "kony.ui.Button",
     "parent": "flxHWOTPButtons",
     "pf": "userwidgetmodel",

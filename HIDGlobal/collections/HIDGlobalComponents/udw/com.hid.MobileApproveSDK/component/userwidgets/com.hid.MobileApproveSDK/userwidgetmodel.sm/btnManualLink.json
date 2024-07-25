@@ -25,7 +25,7 @@
         "type": "string",
         "value": "10dp"
     },
-    "_skin_": "sb74229a549348bb88dfbeb3dd55d6e2",
+    "_skin_": "s6303476451b4d74a4c8c54b942f0040",
     "_text_": "enter invite code manually",
     "_top_": {
         "type": "string",
@@ -43,11 +43,11 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s01ef0a541cd446bb9d472fe0ffb973c",
+    "focusskin": "s25407cc19f448b58636e76be81413fd",
     "id": "btnManualLink",
     "info": null,
     "isvisible": true,
-    "kuid": "f6148cfaf0644957a4a757e25c4db485",
+    "kuid": "u0f5973d44164ed5a3f7aa828e7388d5",
     "masterType": 1,
     "name": "kony.ui.Button",
     "parent": "flxManualLink",

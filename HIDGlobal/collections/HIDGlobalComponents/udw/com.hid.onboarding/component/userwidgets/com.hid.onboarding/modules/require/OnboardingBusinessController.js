@@ -109,8 +109,9 @@ define([], function() {
     };
     objService.customVerb("addPasswordAuthenticator", params, callback);
   };
-  OnboardingBusinessController.prototype.addOOBToUser = function(params, S_CB, F_CB) {
-    let objService = HIDObjectServices.getRepository("AddOOBAuthenticator");
+  OnboardingBusinessController.prototype.addOOBToUser = function(params, S_CB, F_CB) { //Karthiga changes
+  //  let objService = HIDObjectServices.getRepository("AddOOBAuthenticator"); //existing
+    let objService = HIDObjectServices.getRepository("AddAllOOBAuthNew");
     const callback = (status, response) => {
       if (status) {
         S_CB(response);
@@ -118,7 +119,8 @@ define([], function() {
         F_CB(response);
       }
     };
-    objService.customVerb("addOOBAuthenticator", params, callback);
+    objService.customVerb("addAllOOBAuthenticators", params, callback);
+   // objService.customVerb("addOOBAuthenticator", params, callback); existing
   };
   OnboardingBusinessController.prototype.sendOOB = function(params, S_CB, F_CB) {
     let objService = HIDObjectServices.getRepository("SendOOB");
@@ -190,6 +192,34 @@ define([], function() {
     };
     objService.customVerb("addHardwareDeviceToUser", params, callback);
   };
+  
+  OnboardingBusinessController.prototype.fidoDeviceRegistration
+    = function(params, S_CB, F_CB)
+  {    
+    let objService = HIDObjectServices.getRepository("FIDOOnboarding");
+    let cb = (status, response) => {
+      if (status)
+        S_CB(response);
+      else
+        F_CB(response);
+    };
+    
+    objService.customVerb("getCredentialOptions", params, cb);
+  };
+  
+  OnboardingBusinessController.prototype.registerFidoDevice
+    = function(params, S_CB, F_CB)
+  {
+    let objService = HIDObjectServices.getRepository("FIDOOnboarding");
+    let cb = (status, response) => {
+      if (status)
+        S_CB(response);
+      else
+        F_CB(response);
+    };
+    
+    objService.customVerb("registerCredential", params, cb);
+  }
   
   OnboardingBusinessController.getInstance = function() {
     instance = instance === null ? new OnboardingBusinessController() : instance;

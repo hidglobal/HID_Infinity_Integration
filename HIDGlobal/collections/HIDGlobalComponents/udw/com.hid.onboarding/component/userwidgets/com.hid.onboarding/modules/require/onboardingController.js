@@ -1,5 +1,5 @@
 define([`com/hid/onboarding/OnboardingPresentationController`], function(OnboardingPresentationController) {
-  var contexts = ["Login", "ConfirmPassword","OTP","DeviceRegistration","HW","HWOTP","Approve","RegistrationSuccess","Error"];
+  var contexts = ["Login", "ConfirmPassword","OTP","DeviceRegistration","HW","HWOTP","Approve","RegistrationSuccess","Error","LoginFIDO"];
   return {
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       //this.resetUIFields();
@@ -28,7 +28,7 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
         return this._firstFactor;
       });
       defineSetter(this, "FirstFactor", function(val) {
-        if(!["STATIC_PWD","OTP_SMS_PIN","SECURE_CODE"].some(v=>v===val)){
+        if(!["STATIC_PWD","OTP_SMS_PIN","SECURE_CODE", "FIDO"].some(v=>v===val)){
           throw {
             "type": "CUSTOM",
             "message": "FirstFactor property is Invalid"
@@ -46,12 +46,12 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
             "message": "MFA property is Invalid"
           };
         }
-        if((val !=="NO_MFA" && this._firstFactor === "OTP_SMS_PIN") || ((val =="NO_MFA" && this._firstFactor != "OTP_SMS_PIN"))){
-          throw {
-            "type": "CUSTOM",
-            "message": "MFA property is Invalid.Please select MFA = NO_MFA for the selected FirstFactor"
-          };
-        }
+//         if((val !=="NO_MFA" && this._firstFactor === "OTP_SMS_PIN") || ((val =="NO_MFA" && this._firstFactor != "OTP_SMS_PIN"))){
+//           throw {
+//             "type": "CUSTOM",
+//             "message": "MFA property is Invalid.Please select MFA = NO_MFA for the selected FirstFactor"
+//           };
+//         }
         if((this._firstFactor === "SECURE_CODE" && val != "APPROVE") ){
           throw {
             "type": "CUSTOM",
@@ -150,6 +150,12 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
           break;
         case "addHardwareDeviceToUserFailure" :
           this.addHardwareDeviceToUserFailure(UIObject.response);
+          break;
+        case "fidoDeviceRegistrationSuccess":
+          this.fidoRegistrationSuccess(UIObject.response);
+          break;
+        case "fidoDeviceRegistrationFailure":
+          this.fidoRegistrationFailure(UIObject.response);
           break;
         default:
           alert("Object state unavailable: "+UIObject.state);
@@ -279,12 +285,11 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     },
     activationCodeSuccess: function(response) {
       this.userId = response.userid;
-      //alert(this.userId);
+      this.Auth_Key = response.Auth_Key;
       this.navigateToFirstFactor();
     },
     navigateToFirstFactor : function(){
        let firstFactor = this._firstFactor;
-       kony.print(`Savanth ---> firstfactor is ${firstFactor}`);
        switch(firstFactor){
          case "SECURE_CODE": 
            this.navigateToProvisionMode();
@@ -295,6 +300,9 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
          case "OTP_SMS_PIN" :
            this.navigateToSMSPIN();
            break
+         case "FIDO":
+           this.navigateToFIDO();
+           break;
          default :
            this.navigateToPassword();
            break;
@@ -317,6 +325,11 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
        this.contextSwitch("ConfirmPassword");
        this.commonEventHandler(this.dismissLoading, "");
     },
+    
+    navigateToFIDO() {
+      OnboardingPresentationController.fidoDeviceRegistration(this.updateOnboardingUI);
+    },
+    
     activationCodeFailure: function({ActivationCodeError}) {
       this.resetUIFields();
       this.view.lblErrorLogin.text = ActivationCodeError;
@@ -506,6 +519,19 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     resetUI : function(){
        this.contextSwitch("Login");
     },
+    
+    fidoRegistrationSuccess(response) {
+      // this.contextSwitch("Login");
+      // alert(JSON.stringify(response));
+      this.contextSwitch("RegistrationSuccess");
+      this.commonEventHandler(this.dismissLoading, "");
+    },
+     
+    fidoRegistrationFailure(response) {
+      this.resetUIFields();
+      this.contextSwitch("Error");
+      this.commonEventHandler(this.dismissLoading, "");
+    }
   };
 
 });

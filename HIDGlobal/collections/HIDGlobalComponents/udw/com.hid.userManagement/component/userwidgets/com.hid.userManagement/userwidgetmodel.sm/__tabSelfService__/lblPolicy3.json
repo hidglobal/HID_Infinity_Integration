@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s2d05ed30d75488484852df90751709d",
+    "_skin_": "see853cd15344ba79f405ec855b153cd",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bf641b77e51f411fa64b5f3610986828",
+    "kuid": "ue00200a60b64716ad4d6e013866a00c",
     "name": "kony.ui.Label",
     "parent": "flxPasswordPolicy",
     "pf": "userwidgetmodel",

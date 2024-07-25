@@ -86,6 +86,10 @@ define([], function() {
         ControllerImplementation.prototype.getContainerRenewableDate = function(){
           return this.getNativeController().getContainerRenewableDate();
         };
+      ControllerImplementation.prototype.setNotificationStatus = function(txtId, status, pin){
+          return this.getNativeController().setNotificationStatus(txtId, status, pin);
+        };
+      
     };
     return ControllerImplementation;
 });

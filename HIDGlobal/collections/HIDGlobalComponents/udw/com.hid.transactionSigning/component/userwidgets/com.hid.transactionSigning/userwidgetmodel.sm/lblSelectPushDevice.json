@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s952107a80a640c29e909a233fe52345",
+    "_skin_": "s90976d6d9974f5bb6b6a6a10061151b",
     "_text_": "Please select one of the following device to send Push notification",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c98a79bc2b4943b4b72d8caa8e6f71e2",
+    "kuid": "u581414e918940ccbda11c27d3932e9b",
     "name": "kony.ui.Label",
     "parent": "flxPushDevices",
     "pf": "userwidgetmodel",

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s6373b08261d46cc91e3e6d854a61f3c",
+    "_skin_": "sf6225bc097b48dca0dab07a17d1f68b",
     "_top_": {
         "type": "string",
         "value": "45dp"
@@ -48,7 +48,7 @@
     "id": "flxContactImg",
     "info": null,
     "isvisible": true,
-    "kuid": "j1d0e688aa124b2eba446a5bf782578f",
+    "kuid": "fd5f335c85b54fce914c622e4bf159b8",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxRowWrapper",

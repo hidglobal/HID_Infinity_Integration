@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "se589a932f6446c98254493ceb98098f",
+    "_skin_": "s6e333a3b9824ef4a0d31eacb0e22e91",
     "_text_": "LOGIN",
     "_top_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s880364557d44ee988ad542856ec1155",
+    "focusskin": "sc020060659b421394411a782442388c",
     "id": "btnValidateActivationCode",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a5036f36d4e342509a32ce7299cfcdb4",
+    "kuid": "ub0a6420f122485ab876be4273924a9a",
     "name": "kony.ui.Button",
     "parent": "flxBtn",
     "pf": "userwidgetmodel",

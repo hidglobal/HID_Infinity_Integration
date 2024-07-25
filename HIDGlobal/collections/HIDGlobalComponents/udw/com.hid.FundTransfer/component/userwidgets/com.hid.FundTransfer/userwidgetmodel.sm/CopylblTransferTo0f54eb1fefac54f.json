@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sc9ee66bd2ac40d39974c7bd5f9dcae3",
+    "_skin_": "sbf48a596bd1428592a455c5af796a2d",
     "_text_": "Country",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a06183c252c240fdb0baa3932c9316a1",
+    "kuid": "ue4b6a26421f493990d1bf3b70241882",
     "name": "kony.ui.Label",
     "parent": "flxPatCountry",
     "pf": "userwidgetmodel",

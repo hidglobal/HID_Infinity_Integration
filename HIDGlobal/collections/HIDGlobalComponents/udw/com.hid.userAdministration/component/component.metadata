@@ -16,36 +16,36 @@
         ],
         "actions": {
             "desktop": {
-                "AS_Button_fe3866847f5245c291528e5ea5180991": {
+                "AS_Button_fd714249923446af893aa4bb5126e92c": {
                     "channel": "desktop",
-                    "actionId": "AS_Button_fe3866847f5245c291528e5ea5180991",
-                    "actionName": "AS_Button_fe3866847f5245c291528e5ea5180991",
+                    "actionId": "AS_Button_fd714249923446af893aa4bb5126e92c",
+                    "actionName": "AS_Button_fd714249923446af893aa4bb5126e92c",
                     "key": "ide_onClick"
                 },
-                "AS_Button_c617f47e37544409b8f562fede7a5cb2": {
+                "AS_Button_a10950f2f02648968da7a915c6c56e86": {
                     "channel": "desktop",
-                    "actionId": "AS_Button_c617f47e37544409b8f562fede7a5cb2",
-                    "actionName": "AS_Button_c617f47e37544409b8f562fede7a5cb2",
+                    "actionId": "AS_Button_a10950f2f02648968da7a915c6c56e86",
+                    "actionName": "AS_Button_a10950f2f02648968da7a915c6c56e86",
                     "key": "ide_onClick"
                 }
             },
             "common": {
-                "AS_Button_eaffdff4ddc04f6895091f8bdd3f90d3": {
+                "AS_Button_ca3d0fd440b14f0fb80301124341d26b": {
                     "channel": "common",
-                    "actionId": "AS_Button_eaffdff4ddc04f6895091f8bdd3f90d3",
-                    "actionName": "AS_Button_eaffdff4ddc04f6895091f8bdd3f90d3",
+                    "actionId": "AS_Button_ca3d0fd440b14f0fb80301124341d26b",
+                    "actionName": "AS_Button_ca3d0fd440b14f0fb80301124341d26b",
                     "key": "ide_onClick"
                 },
-                "AS_Button_eeee3988647a4ddca1c101645771c05b": {
+                "AS_Button_gfc720f537ab47df8e6c3ef84eeedef0": {
                     "channel": "common",
-                    "actionId": "AS_Button_eeee3988647a4ddca1c101645771c05b",
-                    "actionName": "AS_Button_eeee3988647a4ddca1c101645771c05b",
+                    "actionId": "AS_Button_gfc720f537ab47df8e6c3ef84eeedef0",
+                    "actionName": "AS_Button_gfc720f537ab47df8e6c3ef84eeedef0",
                     "key": "ide_onClick"
                 },
-                "AS_FlexContainer_c6277a3ee564450c806aaf07e185bd15": {
+                "AS_FlexContainer_c2636f9f19654d90839ab49cb3b6d8ca": {
                     "channel": "common",
-                    "actionId": "AS_FlexContainer_c6277a3ee564450c806aaf07e185bd15",
-                    "actionName": "AS_FlexContainer_c6277a3ee564450c806aaf07e185bd15",
+                    "actionId": "AS_FlexContainer_c2636f9f19654d90839ab49cb3b6d8ca",
+                    "actionName": "AS_FlexContainer_c2636f9f19654d90839ab49cb3b6d8ca",
                     "key": "ide_onTouchEnd"
                 }
             }
@@ -83,9 +83,10 @@
             "pageondot.png"
         ],
         "fonts": [
-            "FontAwesome"
+            "FontAwesome",
+            "Gotham-Book"
         ],
-        "nativeApis": 0,
+        "nativeApis": 3,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -93,7 +94,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2021-07-09T16:54:42.684Z",
-    "createdVizVersion": "9.1.8",
-    "project_version": "sprint38"
+    "createdOn": "2024-07-08T08:50:26.192Z",
+    "createdVizVersion": "9.5.28",
+    "project_version": "sprint42"
 }

@@ -81,6 +81,88 @@ define([`com/hid/userManagement/UserManagementBusinessController`], function(Use
   UserManagementPresentationController.prototype.getPasswordPolicy = function(S_CB, F_CB){
     UserManagementBusinessController.getPasswordPolicy(S_CB, F_CB);
   };
+  
+  function arrayBufferToBase64url(buffer) {
+    let binary = '';
+    let bytes = new Uint8Array(buffer);
+    let len = bytes.byteLength;
+    for (let i = 0; i < len; i++) {
+        binary += String.fromCharCode( bytes[ i ] );
+    }
+    return window.btoa(binary)
+      .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+  }
+  
+  UserManagementPresentationController.prototype.registerFIDODevice
+    = function(username, S_CB, F_CB)
+  {
+    let params = { "username": username };
+    
+    let s_cb = success => {
+      const request_uri = success.FIDORegistration[0].request_uri;
+      const csrf = success.FIDORegistration[0]["server-csrf-token"];
+      let publicKey = success.FIDORegistration[0].publicKeyCredentialOptions[0];
+      
+      publicKey = {
+        challenge: Uint8Array.from(window.atob(publicKey.challenge.replace(/_/g, '/').replace(/-/g, '+')), (c) => c.charCodeAt(0)),
+        rp: {
+          id: publicKey.rp[0].id,
+          name: "localhost"
+        },
+        user: {
+          id: Uint8Array.from(window.atob(publicKey.user[0].id.replace(/_/g, '/').replace(/-/g, '+')), (c) => c.charCodeAt(0)),
+          name: publicKey.user[0].name,
+          displayName: publicKey.user[0].displayName
+        },
+        authenticatorSelection: publicKey.authenticatorSelection[0],
+        pubKeyCredParams: publicKey.pubKeyCredParams
+      };
+      
+      for (p in publicKey.pubKeyCredParams) {
+        publicKey.pubKeyCredParams[p].alg = parseInt(publicKey.pubKeyCredParams[p].alg);
+      }
+      
+      navigator.credentials.create({publicKey})
+      .then(pubKeyCred => {
+        
+      	let credential = {
+          type: pubKeyCred.type,
+          id: pubKeyCred.id ? pubKeyCred.id : null,
+          rawId: arrayBufferToBase64url(pubKeyCred.rawId),
+          response: {
+            clientDataJSON: arrayBufferToBase64url(pubKeyCred.response.clientDataJSON),
+            attestationObject: arrayBufferToBase64url(pubKeyCred.response.attestationObject)
+          }
+        };
+        
+        let successCallback = success => {
+          
+        };
+        
+        let failureCallback = err => {
+          
+        };
+        
+        const inpParams = {
+          "csrf": csrf,
+          "username": username,
+          "request_uri": request_uri,
+          "id": credential.id,
+          "rawId": credential.rawId,
+          "clientDataJSON": credential.response.clientDataJSON,
+          "attestationObject": credential.response.attestationObject
+        };
+        
+        UserManagementBusinessController.registerFIDODevice(inpParams, S_CB, F_CB);
+      })
+      .catch(err => {
+      	F_CB(err);
+      });
+    };
+    
+    UserManagementBusinessController.getFIDORegistrationOptions(
+      params, s_cb, F_CB);
+  }
 
   function UserManagementPresentationController(){
   }

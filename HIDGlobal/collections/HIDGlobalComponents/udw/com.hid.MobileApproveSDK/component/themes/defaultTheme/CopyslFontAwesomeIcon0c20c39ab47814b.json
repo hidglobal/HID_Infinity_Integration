@@ -1,67 +1,67 @@
 {
-  "android": {
-    "font_name": "FontAwesome"
-  },
-  "androidwearos": {
-    "font_name": "FontAwesome"
-  },
-  "background_color": "00000000",
-  "bg_type": "one",
-  "border_color": "424242ff",
-  "border_style": "plain",
-  "border_type": 0,
-  "border_width": 0,
-  "desktopweb": {
-    "font_name": "FontAwesome"
-  },
-  "font_color": "002d56ff",
-  "font_name": "Helvetica",
-  "font_size": 215,
-  "font_style": "normal",
-  "font_weight": "normal",
-  "ipad": {
-    "font_name": "FontAwesome"
-  },
-  "iphone": {
-    "font_name": "FontAwesome"
-  },
-  "isDefaultSkin": false,
-  "kiosk": {
-    "font_name": "FontAwesome"
-  },
-  "kuid": "s3be691c1b9541b5b55f4ba1aaf5965b",
-  "spaan": {
-    "font_name": "FontAwesome"
-  },
-  "spaandroidtablet": {
-    "font_name": "FontAwesome"
-  },
-  "spabb": {
-    "font_name": "FontAwesome"
-  },
-  "spaip": {
-    "font_name": "FontAwesome"
-  },
-  "spaipad": {
-    "font_name": "FontAwesome"
-  },
-  "spawindowstablet": {
-    "font_name": "FontAwesome"
-  },
-  "spawinphone8": {
-    "font_name": "FontAwesome"
-  },
-  "tabrcandroid": {
-    "font_name": "FontAwesome"
-  },
-  "wType": "Label",
-  "watchos": {
-    "font_name": "FontAwesome"
-  },
-  "windows8": {
-    "font_name": "FontAwesome"
-  },
-  "winphone8": {
-    "font_name": "FontAwesome"
-  }
+    "android": {
+        "font_name": "FontAwesome"
+    },
+    "androidwearos": {
+        "font_name": "FontAwesome"
+    },
+    "background_color": "00000000",
+    "bg_type": "one",
+    "border_color": "424242ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "desktopweb": {
+        "font_name": "FontAwesome"
+    },
+    "font_color": "002d56ff",
+    "font_name": "Helvetica",
+    "font_size": 215,
+    "font_style": "normal",
+    "font_weight": "normal",
+    "ipad": {
+        "font_name": "FontAwesome"
+    },
+    "iphone": {
+        "font_name": "FontAwesome"
+    },
+    "isDefaultSkin": false,
+    "kiosk": {
+        "font_name": "FontAwesome"
+    },
+    "kuid": "se449157bf8a4115b4765952815da4b8",
+    "spaan": {
+        "font_name": "FontAwesome"
+    },
+    "spaandroidtablet": {
+        "font_name": "FontAwesome"
+    },
+    "spabb": {
+        "font_name": "FontAwesome"
+    },
+    "spaip": {
+        "font_name": "FontAwesome"
+    },
+    "spaipad": {
+        "font_name": "FontAwesome"
+    },
+    "spawindowstablet": {
+        "font_name": "FontAwesome"
+    },
+    "spawinphone8": {
+        "font_name": "FontAwesome"
+    },
+    "tabrcandroid": {
+        "font_name": "FontAwesome"
+    },
+    "wType": "Label",
+    "watchos": {
+        "font_name": "FontAwesome"
+    },
+    "windows8": {
+        "font_name": "FontAwesome"
+    },
+    "winphone8": {
+        "font_name": "FontAwesome"
+    }
 }

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sdb7efb3e0a0477e9232db849f693291",
+    "_skin_": "sc11bf425f32446fb385713b805a6b78",
     "_text_": "Done",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "sb87d74fb4ea4dbaa1bf44bb891ef47a",
+    "focusskin": "s8d0e6c74a2e4e259013e4cab51aea2f",
     "id": "btnPushDone",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bd01e81b038a456aa03b846fefbda257",
+    "kuid": "u4ef40beb0a74c0ea58ed5d1fd24fc1a",
     "name": "kony.ui.Button",
     "parent": "flxbuttonsQR",
     "pf": "userwidgetmodel",

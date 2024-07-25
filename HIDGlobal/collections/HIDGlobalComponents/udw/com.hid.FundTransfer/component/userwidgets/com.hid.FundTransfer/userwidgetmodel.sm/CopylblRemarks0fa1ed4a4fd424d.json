@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s51c6d3aefdf4027992f5fef5b36023d",
+    "_skin_": "s35a27f819b642dea52b4d2acb731056",
     "_text_": "Remarks",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "g1744bef0dc34f45b33ce1b5f3817154",
+    "kuid": "u461ee82e0d6472eabf383bf785bfae5",
     "name": "kony.ui.Label",
     "parent": "flxRMSPayments",
     "pf": "userwidgetmodel",

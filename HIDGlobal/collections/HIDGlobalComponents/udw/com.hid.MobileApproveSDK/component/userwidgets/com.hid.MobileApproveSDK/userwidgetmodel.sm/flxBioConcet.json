@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sa09fccfc1ae416c8e4cfeccf5c9bc0a",
+    "_skin_": "s5692d2c76794e92a816442fd77a6480",
     "_top_": {
         "type": "string",
         "value": "244dp"
@@ -54,7 +54,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "fcebd23470094322a4f508de4d67a7c4",
+    "kuid": "u53cb7d6f8184934886fe98579c4e16d",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxBgbio",

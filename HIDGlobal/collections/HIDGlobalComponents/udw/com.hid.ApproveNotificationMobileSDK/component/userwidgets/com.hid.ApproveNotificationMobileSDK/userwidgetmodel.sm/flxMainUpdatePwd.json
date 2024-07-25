@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21f90a327824f5182c8dcbd70d333f4",
+    "_skin_": "sfd36825179444e9965c205d8487a46b",
     "_top_": {
         "type": "string",
         "value": "25.86%"
@@ -56,7 +56,7 @@
     "id": "flxMainUpdatePwd",
     "info": null,
     "isvisible": true,
-    "kuid": "g69ad6240c994a52a916d7e31ad143b0",
+    "kuid": "u7ff06e8f7344d74b24f1ec9ef134763",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxUpdatePassword",

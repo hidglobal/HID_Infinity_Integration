@@ -51,7 +51,7 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
       return this.sdkWrapperObj.generateOTP(this.konyActivity,pwd,isBiometricEnabled,this.componentInstance.secureCodeSuccess,this.componentInstance.secureCodeFailure,label);
     };
     NativeControllerAndroid.prototype.renewContainer = function(password){
-      this.sdkWrapperObj.renewContainer(password,this.konyContext,this.componentInstance.renewContainercallback,this.componentInstance.renewContainerExceptionCB);
+      this.sdkWrapperObj.renewContainer(password,this.konyContext,this.konyActivity,this.componentInstance.renewContainerCallback,this.componentInstance.renewContainerExceptionCB);
     };
     NativeControllerAndroid.prototype.deleteUserProfile = function(){
       return this.sdkWrapperObj.deleteContainer(this.konyContext);
@@ -64,6 +64,9 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
     };
     NativeControllerAndroid.prototype.getContainerRenewableDate = function(){
       return this.sdkWrapperObj.getContainerRenewableDate();
+    };
+  NativeControllerAndroid.prototype.setNotificationStatus = function(txtId, status, pin){
+      return this.sdkWrapperObj.setNotificationStatus(txtId,status,pin,this.componentInstance.scanToApproveCompletionCallback, this.componentInstance.pwdPromptCallback, this.konyContext, this.konyActivity);   
     };
     return NativeControllerAndroid;
 });

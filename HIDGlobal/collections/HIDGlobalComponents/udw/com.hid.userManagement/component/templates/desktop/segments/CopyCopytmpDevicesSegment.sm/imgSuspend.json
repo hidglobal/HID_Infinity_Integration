@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "cross_2_1.png",
     "_top_": {
         "type": "string",
@@ -49,7 +49,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "i24276d5e3074bbfaa5024d29b77ba93",
+    "kuid": "d09df0da93ab445eb3a39ba222e2c795",
     "name": "kony.ui.Image2",
     "parent": "flxStatus",
     "pf": "CopyCopytmpDevicesSegment",

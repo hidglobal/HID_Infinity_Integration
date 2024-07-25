@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "4%"
@@ -49,7 +49,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "dff1de6943834915b4e90a66350be547",
+    "kuid": "u2d14b288248408da751ca06b1018b4f",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxTSChallenge",

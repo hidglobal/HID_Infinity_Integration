@@ -1,15 +1,15 @@
 {
     "assetPlatform": "Visualizer",
     "assetVersion": "1.0.0",
-    "createdBy": "sushant.dubey@hidglobal.com",
-    "createdMFVersion": "9.7.1.0",
-    "createdVizVersion": "9.2.37",
-    "currentMFVersion": "9.7.1.0",
-    "currentVizVersion": "9.2.37",
-    "description": "Delete Device Changes",
+    "createdBy": "gagandeep.kaur1@hidglobal.com",
+    "createdMFVersion": "9.7.1.3",
+    "createdVizVersion": "9.5.28",
+    "currentMFVersion": "9.7.1.3",
+    "currentVizVersion": "9.5.28",
+    "description": "V9 Components",
     "itemCategory": "udw",
-    "itemGuid": "a95662da69ca4ebb94b9541982f2add6",
+    "itemGuid": "ib26a44da33c447c8efd63d33eda851f",
     "itemName": "com.hid.TransactionSigningWithoutUI",
     "libraryVersion": "libver4",
-    "modifiedBy": "sushant.dubey@hidglobal.com"
+    "modifiedBy": "gagandeep.kaur1@hidglobal.com"
 }

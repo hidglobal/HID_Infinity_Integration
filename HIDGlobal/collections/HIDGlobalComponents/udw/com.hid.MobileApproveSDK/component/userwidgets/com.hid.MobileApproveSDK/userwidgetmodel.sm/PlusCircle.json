@@ -21,7 +21,7 @@
         "type": "string",
         "value": "5.00%"
     },
-    "_skin_": "s3be691c1b9541b5b55f4ba1aaf5965b",
+    "_skin_": "se449157bf8a4115b4765952815da4b8",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -58,7 +58,7 @@
         }
     },
     "isvisible": false,
-    "kuid": "ddba3e333976450c85ba9b2e30202cb7",
+    "kuid": "uabd49f1731e4f1eb10e35eca99f33d9",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxUserSubHeader",

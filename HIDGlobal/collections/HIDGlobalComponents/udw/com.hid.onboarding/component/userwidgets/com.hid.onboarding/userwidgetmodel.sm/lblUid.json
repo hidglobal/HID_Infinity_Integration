@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s9974616e7cd4b11aef28f450fee34f3",
+    "_skin_": "s4061cec3905492b94f555ba07935162",
     "_text_": "<p>RichText</p>",
     "_top_": {
         "type": "string",
@@ -39,8 +39,8 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c1f96dcae7e24ea19b70fa147c70227d",
-    "linkskin": "s14f251960df4c05be4103aaea8bf0bb",
+    "kuid": "u9558fa9f277460eabc66282f9322c4a",
+    "linkskin": "sad0578063dc4a7eb8587ce0914f84c4",
     "name": "kony.ui.RichText",
     "parent": "flxManualMain",
     "pf": "userwidgetmodel",

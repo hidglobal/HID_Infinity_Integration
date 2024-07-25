@@ -38,6 +38,18 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
         }
         this._username = val;
       });
+      //isRMSEnabled true or false
+      defineGetter(this, "isRMSEnabled", function() {
+        kony.print('isRMSEnabled:'+this._isRMSEnabled);
+        return this._isRMSEnabled;
+      });
+      defineSetter(this, "isRMSEnabled", function(val){
+        if(!(val) || val == undefined){
+          this._isRMSEnabled = false;
+        }else {
+          this._isRMSEnabled = val;
+        }
+      });
     },
     policy : "",
     sessionId : "",
@@ -55,21 +67,43 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
     getDevicesSuccess : function(response){      
       if(response.SearchDevices.length>0){
         let dataSet = response.SearchDevices;
-        let deviceData = dataSet.map((data,index)=>({
-          "friendlyName" : {"text" : data.friendlyName, "enable" : false},
-          "deviceId" : data.deviceId,
-          "status1" :  {"isVisible" : data.active},
-          "status2" : {"isVisible" : !data.active},
-          "validFrom" : data.startDate.substring(0,10),
-          "validTo" : data.expiryDate.substring(0,10),
-          "changeStatus" : {
-            "text" : data.active ? "SUSPEND" : "ACTIVE",
-            "skin" : data.active ? "sknSuspend" : "sknActive"},
-          "edit" : {"isVisible" : true},
-          "imgOk" : {"isVisible" : false},
-          "imgCancel" : {"isVisible" : false},
-          "imgDeleteDevice" : {"isVisible": true}
-        }));       
+        let deviceData = [];       
+        for(var i=0; i<dataSet.length; i++){
+          if(dataSet[i].friendlyName && dataSet[i].friendlyName !== null) {
+           let devices = {
+              "friendlyName" : { "text" : dataSet[i].friendlyName, "enable" : false},
+          deviceId : (dataSet[i].deviceId && dataSet[i].deviceId !== null && dataSet[i].deviceId !== "") ? dataSet[i].deviceId : "",
+           "status1" :  {"isVisible" : dataSet[i].active},
+           "status2" : {"isVisible" : !dataSet[i].active},
+           validFrom : (dataSet[i].startDate && dataSet[i].startDate !== null && dataSet[i].startDate !== "") ? dataSet[i].startDate.slice(0,10): "",
+           validTo : (dataSet[i].expiryDate && dataSet[i].expiryDate !== null && dataSet[i].expiryDate !== "") ? dataSet[i].expiryDate.slice(0,10) : "",
+           changeStatus : {
+           "text" : dataSet[i].active ? "SUSPEND" : "ACTIVE",
+            "skin" : dataSet[i].active ? "sknSuspend" : "sknActive"},
+           edit : {"isVisible" : true},
+           imgOk : {"isVisible" : false},
+           imgCancel : {"isVisible" : false},
+           imgDeleteDevice : {"isVisible": true},
+            }
+           deviceData.push(devices);
+        }
+        }
+        //V9 Changes
+//         let deviceData = dataSet.map((data,index)=>({
+//           "friendlyName" : {"text" : data.friendlyName, "enable" : false},
+//           "deviceId" : (data.deviceId && data.deviceId !== null && data.deviceId !== "") ? data.deviceId : "",
+//           "status1" :  {"isVisible" : data.active},
+//           "status2" : {"isVisible" : !data.active},
+//           "validFrom" : (data.startDate && data.startDate !== null && data.startDate !== "") ? data.startDate.slice(0,10): "",
+//           "validTo" : (data.expiryDate && data.expiryDate !== null && data.expiryDate !== "") ? data.expiryDate.slice(0,10) : "",
+//           "changeStatus" : {
+//             "text" : data.active ? "SUSPEND" : "ACTIVE",
+//             "skin" : data.active ? "sknSuspend" : "sknActive"},
+//           "edit" : {"isVisible" : true},
+//           "imgOk" : {"isVisible" : false},
+//           "imgCancel" : {"isVisible" : false},
+//           "imgDeleteDevice" : {"isVisible": true}
+//         }));       
 
         let widgetDataMap = {
           "txtDeviceName" : "friendlyName",
@@ -120,39 +154,53 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
 
         }
 		else{
-            var rowData = this.view.segmentDevices.data[context.row];
-            this.commonEventHandler(this.showLoading, "");
-            this.actionType = "Delete_Device";
+          var rowData = this.view.segmentDevices.data[context.row];
+          this.commonEventHandler(this.showLoading, "");
+          this.actionType = "Delete_Device";
+          if(this._isRMSEnabled){
             this.view.nonFinancialComponent.rmsDeleteStatus = status => {
               this.commonEventHandler(this.dismissLoading, "");
               if (status.status === "USER-BLOCK"){
                 alert("Cannot delete device User Blocked");
-                }
+              }
               else if (status.status === "STEP-DOWN"){
                 this.unassignDevice(rowData.deviceId);
-                }
+              }
               else{
                 var mapData = this.view.segmentDevices.data;
                 var listData = [];
                 for (let data = 0; data < mapData.length ; data++){
-                    if (mapData[data].deviceId !== rowData.deviceId){
-                        if (mapData[data].status1.isVisible === true){
-                            listData.push(mapData[data]);
-                            }
-                        }
+                  if (mapData[data].deviceId !== rowData.deviceId){
+                    if (mapData[data].status1.isVisible === true){
+                      listData.push(mapData[data]);
                     }
-                if (listData.length === 0){
-                    EventEmitter.mandatoryEvent.emit(this.deleteFailure, "deleteFailure", ["No Active Device To Send Approve Notification"]);
-                    }
-                else{
-                    var rowDataObject = {deviceId : rowData.deviceId};
-                    listData.unshift(rowDataObject);
-                    EventEmitter.mandatoryEvent.emit(this.setDevice, "setDevice", [listData]);
-                    }
+                  }
                 }
-
+                if (listData.length === 0){
+                  EventEmitter.mandatoryEvent.emit(this.deleteFailure, "deleteFailure", ["No Active Device To Send Approve Notification"]);
+                }
+                else{
+                  var rowDataObject = {deviceId : rowData.deviceId};
+                  listData.unshift(rowDataObject);
+                  EventEmitter.mandatoryEvent.emit(this.setDevice, "setDevice", [listData]);
+                }
+              }
             };
             this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId);
+          } else{
+            /*
+            Karthiga-BNF changes for Push and Secure code when RMS is disabled
+            */
+            this.view.flxNonFinancialComponent.setVisibility(true);
+            this.commonEventHandler(this.dismissLoading, "");        
+            this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                              this.unassignDevice(rowData.deviceId);};
+            this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                             this.commonEventHandler(this.dismissLoading, "");};
+      
+            this.view.nonFinancialComponent.stepUpAuthentication(this._username, "");            
+            this.view.flxNonFinancialComponent.forceLayout();
+          }
         }
     },
     
@@ -211,6 +259,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
       let rowData = this.view.segmentDevices.data[context.row];
       let newfriendlyName = rowData.friendlyName.text;
       this.actionType = "device_rename";
+      if(this._isRMSEnabled){
       this.view.nonFinancialComponent.stepUpRequired = status => { this.view.flxNonFinancialComponent.setVisibility(true);
                                                                   this.commonEventHandler(this.dismissLoading, "");};
       this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
@@ -229,6 +278,27 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
       this.commonEventHandler(this.dismissLoading, "");
       alert(status);};
       this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId);
+      } else{
+        this.view.flxNonFinancialComponent.setVisibility(true);
+        this.commonEventHandler(this.dismissLoading, "");
+        this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                          UserManagementPresentationController.updateFriendlyName(rowData.deviceId, newfriendlyName, 
+                                                                                                                                  success =>this.editFriendlyNameSuccess(context, success), 
+                                                                                                                                  error => { alert("Failed to update device friendly name");
+                                                                                                                                            this.commonEventHandler(this.dismissLoading, "");}
+                                                                                                                                 );};
+        this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                         rowData = this.view.segmentDevices.data[context.row];      
+                                                                         rowData.friendlyName = {"text" : this.friendlyName, "enable" : false};
+                                                                         rowData.edit = {"isVisible" : true};
+                                                                         rowData.imgOk = {"isVisible" : false};
+                                                                         rowData.imgCancel = {"isVisible" : false};
+                                                                         this.view.segmentDevices.setDataAt(rowData, context.row, context.section);
+                                                                         this.commonEventHandler(this.dismissLoading, "");
+                                                                         alert(status);}; 
+        this.view.nonFinancialComponent.stepUpAuthentication(this._username, "");
+        this.view.flxNonFinancialComponent.forceLayout();
+      }
     },
 
     editFriendlyNameSuccess : function(context, response){
@@ -238,7 +308,9 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
       rowData.imgOk = {"isVisible" : false};
       rowData.imgCancel = {"isVisible" : false};
       this.view.segmentDevices.setDataAt(rowData, context.row, context.section); 
-      this.view.nonFinancialComponent.updateActionInRMS();
+      if(this._isRMSEnabled){
+        this.view.nonFinancialComponent.updateActionInRMS();
+      }
       this.commonEventHandler(this.dismissLoading, "");
     },
 
@@ -265,14 +337,26 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
         newStatus = "SUSPENDED";
         this.actionType = "device_suspend";
       }
-      this.view.nonFinancialComponent.stepUpRequired = status => { this.view.flxNonFinancialComponent.setVisibility(true);
-                                                                  this.commonEventHandler(this.dismissLoading, "");};
-      this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
-                                                                        UserManagementPresentationController.updateDeviceStatus(rowData.deviceId, newStatus, success => this.onUpdateDeviceStatusSuccess(context, success),
-                                                                                                                                this.onUpdateDeviceStatusFailure);};
-      this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
-                                                                       this.commonEventHandler(this.dismissLoading, "");alert(status);};
-      this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId);
+      if(this._isRMSEnabled){
+        this.view.flxNonFinancialComponent.setVisibility(true);
+        this.commonEventHandler(this.dismissLoading, "");
+        this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                          UserManagementPresentationController.updateDeviceStatus(rowData.deviceId, newStatus, success => this.onUpdateDeviceStatusSuccess(context, success),
+                                                                                                                                  this.onUpdateDeviceStatusFailure);};
+        this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                         this.commonEventHandler(this.dismissLoading, "");alert(status);};
+        this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId);
+      } else{       
+        this.view.flxNonFinancialComponent.setVisibility(true);
+        this.commonEventHandler(this.dismissLoading, "");        
+        this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                          UserManagementPresentationController.updateDeviceStatus(rowData.deviceId, newStatus, success => this.onUpdateDeviceStatusSuccess(context, success),
+                                                                                                                                  this.onUpdateDeviceStatusFailure);};
+        this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                         this.commonEventHandler(this.dismissLoading, "");alert(status);};
+        this.view.nonFinancialComponent.stepUpAuthentication(this._username, "");
+        this.view.flxNonFinancialComponent.forceLayout();
+      }
     },
 
     onUpdateDeviceStatusSuccess : function(context, response){
@@ -284,7 +368,9 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
         "text" : deviceStatusResponse.active  ? "SUSPEND" : "ACTIVE",
         "skin" : deviceStatusResponse.active  ? "sknSuspend" : "sknActive"};      
       this.view.segmentDevices.setDataAt(rowData, context.row, context.section);
-      this.view.nonFinancialComponent.updateActionInRMS();
+      if(this._isRMSEnabled){
+        this.view.nonFinancialComponent.updateActionInRMS();
+      }
        this.commonEventHandler(this.dismissLoading, "");
     },
 
@@ -328,8 +414,24 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
         return;
       }
       this.commonEventHandler(this.showLoading, "");
-      UserManagementPresentationController.changeUserPassword(this._username, this.view.tabSelfService.txtOldPassword.text, newPassword,
+      /* Implementation for Change customer password with MFAs
+      Note: Step 1: Below Block can be uncommented if any MFA is required for change password flow. 
+     step 2: comment below line (which is direct call without MFA)
+      */
+     /* UserManagementPresentationController.changeUserPassword(this._username, this.view.tabSelfService.txtOldPassword.text, newPassword,
                                                               this.onPasswordChangeSuccess, this.onPasswordChangeFailure);
+      */   
+      this.view.flxNonFinancialComponent.setVisibility(true);
+      this.commonEventHandler(this.dismissLoading, "");        
+      this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                        UserManagementPresentationController.changeUserPassword(this._username, this.view.tabSelfService.txtOldPassword.text, newPassword,
+                                                               this.onPasswordChangeSuccess, this.onPasswordChangeFailure);};
+      this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                       this.commonEventHandler(this.dismissLoading, "");};
+
+      this.view.nonFinancialComponent.stepUpAuthentication(this._username, "Change_Password");
+      //this.view.nonFinancialComponent.MFA = "STD_PWD"; 
+      this.view.flxNonFinancialComponent.forceLayout();
     },
 
     cancelChangePasswordOnClick : function(){
@@ -454,6 +556,23 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
       if(event){
         event(intent);
       }
+    },
+    
+    onRegisterFIDOSuccess: function(s) {
+      this.commonEventHandler(this.dismissLoading, "");
+      this.view.tabSelfService.flxRegisterDevice0.setVisibility(true);
+      this.view.tabSelfService.flxRegisterDevice1.setVisibility(false);
+      this.getUserDevices();
+    },
+    
+    onRegisterFIDOFailure: function(e) {
+      alert("Registration failed. Please try again. " + e);
+      this.commonEventHandler(this.dismissLoading, "");
+    },
+    
+    registerFIDOOnClick: function() {
+      UserManagementPresentationController.registerFIDODevice(
+        this._username, this.onRegisterFIDOSuccess, this.onRegisterFIDOFailure);
     }
   };
 });

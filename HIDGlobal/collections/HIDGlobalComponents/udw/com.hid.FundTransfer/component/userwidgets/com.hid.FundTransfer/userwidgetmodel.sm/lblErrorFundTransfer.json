@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s39a7c06ff6b48379e5160416dafaf24",
+    "_skin_": "sab6af3a6e8942ec89dbd5b39e345bcb",
     "_text_": "Fund Transfer Failed",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a53f4fa6003a4359a607f103bb6eb326",
+    "kuid": "u3f4557ff11e4c5b96904c6d373cb01f",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxTransferError",

@@ -5,36 +5,37 @@
         "uw_classname": "transactionSigning",
         "isLocked": false,
         "userwidgets": [
-            "com.hid.transactionSigning"
+            "com.hid.transactionSigning",
+            "com.konymp.qrcodegeneratorNew"
         ],
         "templates": [
             [
                 "desktop",
                 "segments",
-                "CopyCopyCopyCopytmpPushDevice1"
+                "CopyCopyCopytmpPushDevice"
             ]
         ],
         "actions": {
             "common": {
-                "AS_Button_dff7d086809c48dbbd946e49e701e048": {
+                "AS_Button_a9e2a8a76fdc4a68bb453fc2154d068e": {
                     "channel": "common",
-                    "actionId": "AS_Button_dff7d086809c48dbbd946e49e701e048",
-                    "actionName": "AS_Button_dff7d086809c48dbbd946e49e701e048",
+                    "actionId": "AS_Button_a9e2a8a76fdc4a68bb453fc2154d068e",
+                    "actionName": "AS_Button_a9e2a8a76fdc4a68bb453fc2154d068e",
                     "key": "ide_onClick"
                 },
-                "AS_Segment_c12f758c4311436baf01c9930ee1095f": {
+                "AS_Segment_e1c42d1e98114e4dafb66f69a6104dec": {
                     "channel": "common",
-                    "actionId": "AS_Segment_c12f758c4311436baf01c9930ee1095f",
-                    "actionName": "AS_Segment_c12f758c4311436baf01c9930ee1095f",
+                    "actionId": "AS_Segment_e1c42d1e98114e4dafb66f69a6104dec",
+                    "actionName": "AS_Segment_e1c42d1e98114e4dafb66f69a6104dec",
                     "key": "ide_onRowClick"
                 }
             }
         },
         "skins": [
             "slForm",
-            "CopyCopyCopyCopyCopyCopyCopybtnBlueFocus4",
-            "CopyCopyCopyCopyCopyCopyCopyCopybtnBlueFocus",
-            "CopyCopyCopyCopyCopyCopyCopybtnWHiteFocus",
+            "CopyCopyCopyCopyCopyCopybtnBlueFocus1",
+            "CopyCopyCopyCopyCopyCopyCopybtnBlueFocus",
+            "CopyCopyCopyCopyCopyCopybtnWHiteFocus",
             "CopyCopyCopyCopyslFbox0g26f9ff38ff64e",
             "slFbox",
             "CopyslFbox0af86d06d07524e",
@@ -45,16 +46,16 @@
             "CopydefLabel0de468d81936f42",
             "CopydefLabel0add337f0f8df4b",
             "CopydefLabel0eff9184e469d4d",
-            "CopyCopyCopyCopysknHIDNotification1",
-            "CopyCopyCopyCopyCopyCopydefLabel0e9c076046b5a4e",
+            "CopyCopyCopysknHIDNotification4",
+            "CopyCopyCopyCopyCopydefLabel0ibe7183181b649",
             "seg2Focus",
-            "CopyCopyCopyCopyseg1",
+            "CopyCopyCopyseg5",
             "sliPhoneSegmentHeader",
             "CopyCopyCopyCopysknTbxHIDBLUE1",
             "CopyCopyCopyCopyCopysknTbxHIDBLUE",
-            "CopyCopyCopyCopyCopyslFbox0h954927985cc44",
+            "CopyCopyCopyCopyslFbox0af82a66e1e414c",
             "defLabel",
-            "CopyCopyCopyCopyCopydefLabel0c803265e388040"
+            "CopyCopyCopyCopydefLabel0fd69bd354bde40"
         ],
         "images": [
             "pageoffdot.png",
@@ -63,15 +64,15 @@
         "fonts": [
             "Gotham-Book"
         ],
-        "nativeApis": 0,
+        "nativeApis": 3,
         "mfbundle": "services/services.zip",
-        "localFiles": [],
+        "localFiles": true,
         "cordova": [],
         "forms": {},
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2023-01-24T10:50:02.964Z",
-    "createdVizVersion": "9.2.37",
-    "project_version": "sprint39"
+    "createdOn": "2024-07-08T08:41:24.418Z",
+    "createdVizVersion": "9.5.28",
+    "project_version": "sprint42"
 }

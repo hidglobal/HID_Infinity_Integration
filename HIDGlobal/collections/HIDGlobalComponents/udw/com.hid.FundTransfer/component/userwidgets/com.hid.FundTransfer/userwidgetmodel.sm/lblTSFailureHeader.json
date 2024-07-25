@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s5861387c1cf4dcab6014ef42c92cffd",
+    "_skin_": "s83995fcba984ad3b0e28e1ca6b1a54b",
     "_text_": "Failure",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ff4fbab7232940fa9e331da6de18fd63",
+    "kuid": "ud5ed60aef03496990fd6665569308a9",
     "name": "kony.ui.Label",
     "parent": "flxTransferDeclined",
     "pf": "userwidgetmodel",

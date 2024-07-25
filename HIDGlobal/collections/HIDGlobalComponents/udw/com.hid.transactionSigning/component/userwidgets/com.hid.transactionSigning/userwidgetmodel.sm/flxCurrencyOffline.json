@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "40%"
@@ -49,7 +49,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "d33c1315e5c74704956b0cc3adcc46bc",
+    "kuid": "ud138a703a3347809d218dcdcf8e3103",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxOfflineFields",

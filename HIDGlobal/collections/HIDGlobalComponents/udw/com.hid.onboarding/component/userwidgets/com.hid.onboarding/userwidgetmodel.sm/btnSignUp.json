@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "see4fd9d9ea649c8b7ddf1a4a647b0bc",
+    "_skin_": "sfa39ffdbc494b789509121a0456e264",
     "_text_": "REGISTER",
     "_top_": {
         "type": "string",
@@ -43,12 +43,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "sc38d983a17d4db398f58d4999b9d0b7",
+    "focusskin": "sa55e9e413b046cf97c0889bf804cd77",
     "id": "btnSignUp",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "h2e2541946a348e1a5882755ea91cada",
+    "kuid": "ua6e6cec033442168b807bd41bf1017e",
     "name": "kony.ui.Button",
     "parent": "flxButtons",
     "pf": "userwidgetmodel",

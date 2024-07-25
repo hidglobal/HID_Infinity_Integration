@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s5875058131b4b3bb357729842db87b8",
+    "_skin_": "s2da2fa487264da1aef371b2c6bb64fb",
     "_text_": "CANCEL",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "sdb7efb3e0a0477e9232db849f693291",
+    "focusskin": "sc11bf425f32446fb385713b805a6b78",
     "id": "btnPwdCancel",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "feb015b3ed7641008218a38e5bb2b954",
+    "kuid": "uc98636651004df4bc4af689e947fe07",
     "name": "kony.ui.Button",
     "parent": "flxPasswordButtons",
     "pf": "userwidgetmodel",

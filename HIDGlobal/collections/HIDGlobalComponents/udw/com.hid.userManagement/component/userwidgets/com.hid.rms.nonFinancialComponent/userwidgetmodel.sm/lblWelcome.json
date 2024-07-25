@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s678a35e19c54b3ca4be774a7357a889",
+    "_skin_": "s214cac99d3c47cb95a0097d2eea07f8",
     "_text_": "Enter your Password",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b8eb4f9c4fde4ff990c8061a1b8676e2",
+    "kuid": "u2bd4a55875d42579c83bf2e72ef8ce3",
     "name": "kony.ui.Label",
     "parent": "flxLogin",
     "pf": "userwidgetmodel",

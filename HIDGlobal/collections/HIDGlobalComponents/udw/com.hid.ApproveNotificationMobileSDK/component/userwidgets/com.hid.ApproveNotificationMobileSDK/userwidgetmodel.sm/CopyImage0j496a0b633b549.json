@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s0110c6e51734175b4910209b5c5b877",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "password1_1.png",
     "_top_": {
         "type": "string",
@@ -43,7 +43,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d3abb565156d4cc3a6808e60cb035677",
+    "kuid": "u5f4e5cf25434a02bd761b33e64fdeee",
     "name": "kony.ui.Image2",
     "parent": "flxPasswordTimeout",
     "pf": "userwidgetmodel",

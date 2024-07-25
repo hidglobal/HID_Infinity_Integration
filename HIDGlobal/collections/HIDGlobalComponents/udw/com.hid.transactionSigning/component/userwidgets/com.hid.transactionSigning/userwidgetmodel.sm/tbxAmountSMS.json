@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "",
-    "_skin_": "s9cbaa8c66d04f95896dda47f0a92ba8",
+    "_skin_": "sa39576b8ba243d89ce4706489ce7f57",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -42,20 +42,20 @@
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {
-        "placeholderSkin": "sda8420e1f934b4c9b412b79ceb80607"
+        "placeholderSkin": "sde669b110fb41db8c97f6f774d6f886"
     },
-    "focusskin": "s9cbaa8c66d04f95896dda47f0a92ba8",
+    "focusskin": "sa39576b8ba243d89ce4706489ce7f57",
     "id": "tbxAmountSMS",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "dabf75cf85b64034bb25a12f0675bebf",
+    "kuid": "u861bed0da614a72b76c2c34db8e2a62",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "flxAmountSMS",
     "pf": "userwidgetmodel",
-    "placeholderskin": "sda8420e1f934b4c9b412b79ceb80607",
+    "placeholderskin": "sde669b110fb41db8c97f6f774d6f886",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": false,

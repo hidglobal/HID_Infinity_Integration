@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "tick_2_1.png",
     "_top_": {
         "type": "string",
@@ -49,7 +49,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ec6a56057a934dd586c8fb7d31dd6734",
+    "kuid": "b2e2553f117548768cae9f9b6d66a2f1",
     "name": "kony.ui.Image2",
     "parent": "flxStatus",
     "pf": "CopyCopytmpDevicesSegment",

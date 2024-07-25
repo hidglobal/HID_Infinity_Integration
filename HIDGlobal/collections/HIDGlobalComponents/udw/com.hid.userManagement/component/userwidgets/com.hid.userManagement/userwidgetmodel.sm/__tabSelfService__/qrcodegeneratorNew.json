@@ -24,7 +24,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "5%"
@@ -43,14 +43,14 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bc6a8c9f802945ee8fa0c0cb9918c67f",
+    "kuid": "uefd84142f804cd88c0d23736c03d75c",
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
     "parent": "flxQrCode",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "sourceUserWidget": "u54db38a67cd4dc292b47bce4b74b9d4",
+    "sourceUserWidget": "u2b00ece259b4ef9b819dafa38ca6aed",
     "tabpaneId": "tabSelfService",
     "wType": "UserWidgetInstance"
 }

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "see4fd9d9ea649c8b7ddf1a4a647b0bc",
+    "_skin_": "sfa39ffdbc494b789509121a0456e264",
     "_text_": "SUBMIT",
     "_top_": {
         "type": "string",
@@ -43,16 +43,16 @@
     "containerweight": 100,
     "contentalignment": 5,
     "desktopweb": {
-        "blockedUISkin": "s9fe6a0715994897a347edfee974658b"
+        "blockedUISkin": "scc74d1dc15b4558933850f00d58b4c9"
     },
     "disabledSkins": {},
     "displaytext": true,
-    "focusskin": "sc38d983a17d4db398f58d4999b9d0b7",
+    "focusskin": "sa55e9e413b046cf97c0889bf804cd77",
     "id": "btnLogin",
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "ed914251a4b74c2a846909cee5569a27",
+    "kuid": "u178a625e83f405584a1bdfd048408d5",
     "name": "kony.ui.Button",
     "parent": "flxButtons",
     "pf": "userwidgetmodel",

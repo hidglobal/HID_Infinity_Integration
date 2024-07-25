@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfd4eed393234a6383066050cabe4327",
+    "_skin_": "sa6f2e0b26c44294a194b831c43ea416",
     "_text_": "SUBMIT",
     "_top_": {
         "type": "string",
@@ -43,16 +43,16 @@
     "containerweight": 100,
     "contentalignment": 5,
     "desktopweb": {
-        "blockedUISkin": "s1f00020b2cf4db1a830bc59d869c056"
+        "blockedUISkin": "sa63feada78a409ebe56cd1659f4e352"
     },
     "disabledSkins": {},
     "displaytext": true,
-    "focusskin": "s41d151b37a44d358dd461d456e28eab",
+    "focusskin": "s052f33d0ae7412a8deb4462388f4a91",
     "id": "btnLoginChallenge",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "cf4b08a95ed945c59864d4c689d5b3ab",
+    "kuid": "ub5254180594495aa4360145255aacd4",
     "name": "kony.ui.Button",
     "parent": "flxTSChallenge",
     "pf": "userwidgetmodel",

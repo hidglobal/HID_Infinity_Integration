@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s0110c6e51734175b4910209b5c5b877",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "close.png",
     "_top_": {
         "type": "string",
@@ -39,7 +39,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "fb8452b8a1a647eba8a089faf22e90bd",
+    "kuid": "ud23f46842834a13ac1d5c0786e52789",
     "name": "kony.ui.Image2",
     "parent": "flxClose",
     "pf": "userwidgetmodel",

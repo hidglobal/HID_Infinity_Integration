@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s0110c6e51734175b4910209b5c5b877",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "avatar2.png",
     "_top_": {
         "type": "string",
@@ -45,7 +45,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ba470a5d7ee44ba4971a38c194c8a435",
+    "kuid": "d9aa0ff0f4e74649a2f1b1eaeccdfa9c",
     "name": "kony.ui.Image2",
     "parent": "flxContactImg",
     "pf": "HIDUsersTemplate",

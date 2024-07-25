@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7d6a5536460492f990facb604ebee70",
+    "_skin_": "sb0fa6b59c4842c4978b90dec42f6689",
     "_text_": "Test Registered Approve Device",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a931c5ea6f764dce85381dac0b1f9e0e",
+    "kuid": "u4723e2e8b6d45ef85f914ac079afba5",
     "name": "kony.ui.Label",
     "parent": "flxApprove",
     "pf": "userwidgetmodel",

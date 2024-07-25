@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -54,14 +54,14 @@
     "containerweight": 100,
     "desktopweb": {},
     "disabledSkins": {
-        "blockedUISkin": "s86d99a0dae5492a9e3dd054f17b019f"
+        "blockedUISkin": "s1d7708a920d42ad9d6116efe4c56504"
     },
     "enablescrolling": true,
     "id": "flxLogin",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "fa39572332c043cd99624c6a5b0b75de",
+    "kuid": "u5c2c569491e404c80bd969f3eff143f",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "nonFinancialComponent",

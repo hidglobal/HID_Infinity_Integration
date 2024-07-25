@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s78623dcd36b4fbb86a143b5d160f76a",
+    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
     "_text_": "Message*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c24c022b83244e028fa4b6ee7f7fdb60",
+    "kuid": "u1687026d0f24c1bb316d7e098a0e5ad",
     "name": "kony.ui.Label",
     "parent": "flxMessageSMS",
     "pf": "userwidgetmodel",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfd4eed393234a6383066050cabe4327",
+    "_skin_": "sa6f2e0b26c44294a194b831c43ea416",
     "_text_": "Add Beneficiary",
     "_top_": {
         "type": "string",
@@ -43,17 +43,17 @@
     "containerweight": 100,
     "contentalignment": 5,
     "desktopweb": {
-        "blockedUISkin": "s1f00020b2cf4db1a830bc59d869c056"
+        "blockedUISkin": "sa63feada78a409ebe56cd1659f4e352"
     },
     "disabledSkins": {},
     "displaytext": true,
-    "focusskin": "s41d151b37a44d358dd461d456e28eab",
+    "focusskin": "s052f33d0ae7412a8deb4462388f4a91",
     "id": "btnAddBeneficiary",
-    "ide_onClick": "AS_Button_dff7d086809c48dbbd946e49e701e048",
+    "ide_onClick": "AS_Button_a9e2a8a76fdc4a68bb453fc2154d068e",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "g4f1dc0bf12a49f387aacb3e29d8271d",
+    "kuid": "u326f97ca72a452f8764a9405704745d",
     "name": "kony.ui.Button",
     "parent": "flxAddBeneficiary",
     "pf": "userwidgetmodel",

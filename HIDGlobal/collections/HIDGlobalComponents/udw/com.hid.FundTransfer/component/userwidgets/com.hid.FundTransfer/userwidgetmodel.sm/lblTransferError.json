@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7cd0cd58c094b8391ff2e48c6dfa483",
+    "_skin_": "sd1eea7bb74540ccb704325225e20317",
     "_text_": "Transfer Error",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "i9d9eae7f968404591c5c26c4bef4dee",
+    "kuid": "u4ce6f52e36b434c97c535f6e47186a8",
     "name": "kony.ui.Label",
     "parent": "flxEnterPassword",
     "pf": "userwidgetmodel",

@@ -55,6 +55,20 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
         }
         this.TM_Cookie_Tag = val;
       });
+      
+      /* Second Factor property*/
+      defineGetter(this, 'SecondFactor', () => {
+        return this._SecondFactor;
+      });
+      defineSetter(this, 'SecondFactor', value => {
+        if(!["OTP_SMS","OTP_EML","APPROVE","OTP_HWT","NO_MFA"].some(v=>v===value)){
+          throw {
+            "type": "CUSTOM",
+            "message": "MFA property is Invalid"
+          };
+        }
+        this._SecondFactor = value;
+      });
     },
     isRMSEnabled: false,
     gblTimer : null,
@@ -123,30 +137,34 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
     rmsActionSucess : function(response){
       if (this.actionType === "Delete_Device"){
         var scores = response.currentThreat;
-        var tagsRes = response.tags || "[]";
-        var tag = JSON.parse(tagsRes);
-        var respData = {};
-        if(tag && tag.some(v=>v==="USER-BLOCK")){
-           respData = {status: "USER-BLOCK"};
-           }
-        else if (scores>=this._thresholdScore){
-          respData = {status: "STEP-UP"};
-        }
-        else{
-          respData = {status: "STEP-DOWN"};
-        }
+        var tagsResp = (response.tags && response.tags[0] && response.tags[0] !== null) ? response.tags[0] : "STEP-UP";
+//         var tagsRes = response.tags || "[]";
+//         var tag = JSON.parse(tagsRes);
+         var respData = {};
+//         if(tag && tag.some(v=>v==="USER-BLOCK")){
+//            respData = {status: "USER-BLOCK"};
+//            }
+         if (scores>=this._thresholdScore){
+           respData = {status: "STEP-UP"};
+         }
+         else{
+           respData = {status: "STEP-DOWN"};
+         }
         this.mandatoryEventHandler("rmsDeleteStatus", this.rmsDeleteStatus, [respData]);
       }
       else{
         var score = response.currentThreat;
-        var tagsResp = response.tags || "[]";
-        var tags = JSON.parse(tagsResp);
+        var tagsResp = (response.tags && response.tags[0] && response.tags[0] !== null) ? response.tags[0] : "STEP-UP";
+       /*
+       V9 Changes
+       var tags = JSON.parse(tagsResp);
         if(tags && tags.some(v=>v==="USER-BLOCK")){
            this.commonEventHandler(this.dismissLoading, "");
            this.mandatoryEventHandler("analyzeActionFailure", this.analyzeActionFailure, ["User Blocked"]);
            return;
         }
-        if(score>=this._thresholdScore){
+        */
+        if(score >= this._thresholdScore){
           this.stepUpAuthentication(this.username, this.actionType);
         } else {
           this.mandatoryEventHandler("analyzeActionSuccess", this.analyzeActionSuccess, ["Score < thresholdScore"]);
@@ -173,12 +191,19 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
     },
     stepUpAuthentication : function(username, actionType){
       this.username = username;
+      this.actionType = actionType;
       if(this._MFA == "STD_PWD"){
         this.view.tbxUser.text = username;
         this.commonEventHandler(this.stepUpRequired, "true");
         this.contextSwitch("Login");
         return;
-      }
+      } else if(this._MFA == "APPROVE"){
+		  this.commonEventHandler(this.stepUpRequired, "true");
+		  NonFinancialPresentationController.getApproveDevices(this.username,  this.getDeviceSuccess, this.getDeviceFailure); 
+		//   this.contextSwitch("PushDevices");
+		   return;
+		   }
+		this.resetUIFields();
       this.initiateSecondFactor();
     },  
     loginPassword : function(){
@@ -186,8 +211,16 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
         this.view.lblErrorLogin.text = "Please enter Password";
         return;
       }
+      if(this.actionType && this.actionType !== null && this.actionType === "Change_Password"){
+        var inputParams = {
+          "username": this.username,
+          "password": this.view.tbxPassword.text.trim()
+        };
+        this.validatePassword(inputParams);
+      } else{
 //       this.username = this.view.tbxUser.text;
       this.loginPasswordWithoutRMS();
+      }
     },
 
     loginPasswordWithoutRMS : function(){
@@ -253,15 +286,40 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
     validateOTP : function(){
       this.commonEventHandler(this.showLoading, "");
       this.view.lblErrorOTP.text = "";
-      NonFinancialPresentationController.validateOTP(this.username,this._MFA, this.view.tbxOTP.text, this.mfa_key, this.AuthSuccess,
-                                                     this.onValidateOTPFailure);
+      if(this._SecondFactor === "OTP_SMS" || this._SecondFactor === "OTP_EML"){
+        let authType = (this._SecondFactor === "OTP_SMS") ? "AT_OOBSMS":"AT_OOBEML";
+        var inputPayload = {
+          "username": this.username,
+          "password": this.view.tbxOTP.text.trim(),
+          "authType": authType
+        };
+        NonFinancialPresentationController.validateOTPforChangePwd(inputPayload, this.validateOTPSuccessforCP,
+                                                                   this.validateOTPFailureForCP);
+      } else{
+        NonFinancialPresentationController.validateOTP(this.username,this._MFA, this.view.tbxOTP.text, this.mfa_key, this.AuthSuccess,
+                                                       this.onValidateOTPFailure);
+      }
     }, 
+    
+    validateOTPSuccessforCP: function(response){
+      this.commonEventHandler(this.showLoading, "");
+      this.mandatoryEventHandler("analyzeActionSuccess", this.analyzeActionSuccess, [""]);
+    },
+
+    validateOTPFailureForCP: function(error){
+       if(!this.validateFailureCallbackScenario(error)){
+        this.view.lblErrorOTP.text = "Invalid OTP entered, please enter valid OTP";
+        this.commonEventHandler(this.dismissLoading, "");
+      }
+    },
     cancelOnClick : function(){
       this.mfa_key = "";
       if(this._MFA === "APPROVE"){
         clearInterval(this.gblTimer);
       }
+      if(this._isRMSEnabled == true){
       NonFinancialPresentationController.rmsActionComplete(false,this.SCB_updateActionInRMS,this.FCB_updateActionInRMS);
+      } 
       this.mandatoryEventHandler("actionCancel", this.analyzeActionFailure, ["Action cancelled"]);
     },
 
@@ -272,9 +330,14 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
       this.mfa_key = "";
       if(this._isRMSEnabled && !this.isKnownDevice){
         this.confirmationAlert(this.deviceTag);
-      }
+      } else{
+		    this.mandatoryEventHandler("analyzeActionSuccess", this.analyzeActionSuccess, [""]);
+      this.commonEventHandler(this.dismissLoading, "");
+	  }
       // this.onSuccessCallback(response);
+	  if(this._isRMSEnabled){
       NonFinancialPresentationController.rmsActionSign(this.username,this._MFA,this.rmsActionSignSuccess, this.rmsActionSignFailure);
+	  }
       //this.contextSwitch("Login");
     }, 
     
@@ -296,10 +359,10 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
     }, 
     validateFailureCallbackScenario : function(error){
       let errorMessage = "";
-      if(error.message.includes("Previous Identity Token expired in backend.")){
+      if(error.hasOwnProperty("message") && error.message.includes("Previous Identity Token expired in backend.")){
         errorMessage = "Login timed out, please try again";
       }
-      if(error.details.errmsg.includes("Failed to get user identity attributes")){
+      if(error.hasOwnProperty("details") && error.details.errmsg.includes("Failed to get user identity attributes")){
         errorMessage = "Error occurred while login, please contact your administrator";
       }
       if(errorMessage !== ""){
@@ -333,6 +396,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
         this.commonEventHandler(this.dismissLoading, ""); } 
       else {
           this.deviceId = "";
+          this.contextSwitch("Approve");
           NonFinancialPresentationController.initiateApprove(this.username, "", this.initiateApproveSuccess,
                                                              this.initiateApproveFailure);
         }
@@ -358,21 +422,30 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
     }, 
     onApproveFailure : function(response){
       let status = false;
+      if(this._MFA === "APPROVE"){
+        clearInterval(this.gblTimer);
+      }
+      this.mfa_key = "";
       if(response !== "deny"){
         status = this.validateFailureCallbackScenario(response);
       }
-      if(!status){
+      if(!status){  
         this.approveView(false,"Approve");
         let errorText = "";
         if(response === "deny"){
+			 if(this._isRMSEnabled == true){
           NonFinancialPresentationController.rmsActionComplete(false,this.SCB_updateActionInRMS,this.FCB_updateActionInRMS);
-          this.mandatoryEventHandler("analyzeActionFailure", this.analyzeActionFailure, ["Action Denied"]);
+			 }
+        //  this.mandatoryEventHandler("analyzeActionFailure", this.analyzeActionFailure, ["Action Denied"]);
           errorText = "Approve has been declined, please try again";
+          
           //Approve Failure API call to RMS 
           if(this._isRMSEnabled == true){
             this.updateRMSServiceEvent("APPROVE_DENY");
           }
-        }else if(response.message === "Approve poll Time Expired"){
+        } else if(response.includes("UNKNOWN")){
+          errorText = "Approve timeout please try resend or try login using Approve secure code";
+        } else if(response.message === "Approve poll Time Expired"){
           errorText = "Approve timeout please try resend or try login using Approve secure code";
           //Approve Timeout call to RMS
           if(this._isRMSEnabled == true){
@@ -384,8 +457,9 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
           this.onFailureCallback(response);
         }
         if(errorText !== ""){
+          this.view.lblErrorApprove.isVisible = true;
           this.view.lblErrorApprove.text = errorText;
-        }
+        }       
         this.commonEventHandler(this.dismissLoading, "");
       }
     },    
@@ -472,7 +546,43 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
       this.view.lblErrorApprove.text = "";
       this.view.lblTimerNot.text = "";
     },
+	
+    initiateApprove : function(rowNumber){
+      this.view.flxPushDevices.setVisibility(false);
+      this.view.lblErrorApprove.setVisibility(false);
+      this.view.lblErrorApprove.text = "";
+      let totalData = this.view.segmentPushDevices.data.slice();
+      let data = totalData[rowNumber];
+      this.deviceId = data.deviceId;
+      NonFinancialPresentationController.initiateApprove(this.username, this.deviceId, this.initiateApproveSuccess,
+                                                         this.initiateApproveFailure);
+    },   
+    
+    validatePassword : function(inputPayload){
+      this.commonEventHandler(this.showLoading, "");
+      NonFinancialPresentationController.validatePasswordforChangePwd(inputPayload, this.validatePasswordSuccessforCP,
+                                                         this.validatePasswordFailureForCP);
+    },
+    validatePasswordSuccessforCP: function(response){
+      this.commonEventHandler(this.dismissLoading, "");
+      if(this._SecondFactor === "OTP_SMS" || this._SecondFactor === "OTP_EML"){
+        NonFinancialPresentationController.sendOTP(this._SecondFactor, this.username, this.sendOTPSuccess, this.sendOTPFailure);
+      } else if (this._SecondFactor === "APPROVE") {
+         this.deviceId = "";
+          NonFinancialPresentationController.initiateApprove(this.username, "", this.initiateApproveSuccess,
+                                                             this.initiateApproveFailure);
+      }else if (this._SecondFactor === "OTP_HWT") {
+        this._SecondFactor = "APPROVE";
+        this.sendOTPSuccess("OTP_HWT");
+      } else {
+      this.mandatoryEventHandler("analyzeActionSuccess", this.analyzeActionSuccess, [""]);
+      }
+    },
 
+    validatePasswordFailureForCP: function(error){
+      this.view.lblErrorLogin.text = "Password is Incorrect";
+      this.commonEventHandler(this.dismissLoading, "");
+    },
   };
 
 });

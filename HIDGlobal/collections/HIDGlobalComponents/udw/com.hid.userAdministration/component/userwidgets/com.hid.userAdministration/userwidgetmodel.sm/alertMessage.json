@@ -22,7 +22,7 @@
         0
     ],
     "_render_": true,
-    "_skin_": "s403ae317b974e8dab0a992ae3f960d7",
+    "_skin_": "s5462f5a30384ed7ba8bb02547cb580d",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -66,7 +66,7 @@
     "kiosk": {
         "render": true
     },
-    "kuid": "j614a70f481c476eb73d28e285b176ce",
+    "kuid": "uce6761f12cd43809ef4ecfb77df5cc8",
     "name": "kony.ui.Label",
     "parent": "userAdministration",
     "pf": "userwidgetmodel",

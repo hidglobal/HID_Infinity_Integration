@@ -1,9 +1,9 @@
 define({
     /*
-          This is an auto generated file and any modifications to it may result in corruption of the action sequence.
-        */
+      This is an auto generated file and any modifications to it may result in corruption of the action sequence.
+    */
     /** postShow defined for ApproveNotificationMobileSDK **/
-    AS_FlexContainer_b28664e367bd46ed96955707153510d8: function AS_FlexContainer_b28664e367bd46ed96955707153510d8(eventobject) {
+    AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766: function AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766(eventobject) {
         var self = this;
 
         function ROTATE_ACTION_eb49d1d8c42e4dd7beacfbd8868e45d4_Callback() {}
@@ -15,7 +15,8 @@ define({
         function ROTATE_ACTION_c44a0eccb9b24bf99cb66222f20479a5_Callback() {}
         var trans100 = kony.ui.makeAffineTransform();
         trans100.rotate(45);
-        self.view.flxApproveLineUp.animate(kony.ui.createAnimation({
+        self.view.flxApproveLineUp.animate(
+        kony.ui.createAnimation({
             "100": {
                 "anchorPoint": {
                     "x": 1,
@@ -36,7 +37,8 @@ define({
         });
         var trans100 = kony.ui.makeAffineTransform();
         trans100.rotate(315);
-        self.view.flxApproveLineDown.animate(kony.ui.createAnimation({
+        self.view.flxApproveLineDown.animate(
+        kony.ui.createAnimation({
             "100": {
                 "anchorPoint": {
                     "x": 1,
@@ -57,7 +59,8 @@ define({
         });
         var trans100 = kony.ui.makeAffineTransform();
         trans100.rotate(45);
-        self.view.flxDenyLineUp.animate(kony.ui.createAnimation({
+        self.view.flxDenyLineUp.animate(
+        kony.ui.createAnimation({
             "100": {
                 "anchorPoint": {
                     "x": 0.01,
@@ -78,7 +81,8 @@ define({
         });
         var trans100 = kony.ui.makeAffineTransform();
         trans100.rotate(315);
-        self.view.flxDenyLineDown.animate(kony.ui.createAnimation({
+        self.view.flxDenyLineDown.animate(
+        kony.ui.createAnimation({
             "100": {
                 "anchorPoint": {
                     "x": 0.01,
@@ -99,13 +103,14 @@ define({
         });
     },
     /** onClick defined for flxSliderMain **/
-    AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36: function AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36(eventobject) {
+    AS_FlexContainer_f6ba12005b004a388e7d594123f4a82d: function AS_FlexContainer_f6ba12005b004a388e7d594123f4a82d(eventobject) {
         var self = this;
 
         function ROTATE_ACTION_d05d002b36634d6aa90171406a5a5f91_Callback() {}
         var trans100 = kony.ui.makeAffineTransform();
         trans100.rotate(45);
-        self.view.flxSlider.animate(kony.ui.createAnimation({
+        self.view.flxSlider.animate(
+        kony.ui.createAnimation({
             "100": {
                 "anchorPoint": {
                     "x": 1,
@@ -126,7 +131,7 @@ define({
         });
     },
     /** onTouchStart defined for imgClosePR **/
-    AS_Image_e9734aafa6e2486f9ad1d23184ae8215: function AS_Image_e9734aafa6e2486f9ad1d23184ae8215(eventobject, x, y) {
+    AS_Image_h24046e7338b493fa03d1744d10c61e1: function AS_Image_h24046e7338b493fa03d1744d10c61e1(eventobject, x, y) {
         var self = this;
         this.view.flxErrorPwdPR.setVisibility(false);
     }

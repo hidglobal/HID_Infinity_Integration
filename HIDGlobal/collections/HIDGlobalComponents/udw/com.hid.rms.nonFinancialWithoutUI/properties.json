@@ -1,15 +1,15 @@
 {
     "assetPlatform": "Visualizer",
     "assetVersion": "1.0.0",
-    "createdBy": "rohit.singh@hidglobal.com",
-    "createdMFVersion": "9.6.0.2",
-    "createdVizVersion": "9.2.37",
-    "currentMFVersion": "9.6.0.2",
-    "currentVizVersion": "9.2.37",
-    "description": "",
+    "createdBy": "gagandeep.kaur1@hidglobal.com",
+    "createdMFVersion": "9.7.1.3",
+    "createdVizVersion": "9.5.28",
+    "currentMFVersion": "9.7.1.3",
+    "currentVizVersion": "9.5.28",
+    "description": "V9 Components",
     "itemCategory": "udw",
-    "itemGuid": "ec27309877fb4aedbaf1bfb0d8df2926",
+    "itemGuid": "e864e74997c94db68d5177af661d7708",
     "itemName": "com.hid.rms.nonFinancialWithoutUI",
     "libraryVersion": "libver4",
-    "modifiedBy": "rohit.singh@hidglobal.com"
+    "modifiedBy": "gagandeep.kaur1@hidglobal.com"
 }

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfeb10be9de04cdfa50616580dce4e99",
+    "_skin_": "s4fbd31c14fd471787dae80a5afd5c00",
     "_text_": "Scan the QR code to generate a secure code",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "g677f40f29a149ecae651ac02403f147",
+    "kuid": "ub6c24d505374e5e99c099629c4215ed",
     "name": "kony.ui.Label",
     "parent": "flxQRCodeScan",
     "pf": "userwidgetmodel",

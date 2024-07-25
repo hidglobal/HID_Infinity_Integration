@@ -20,7 +20,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s672f7c00c8842b9b5aa6b31d2897a3a",
+    "_skin_": "s1b338e88a8948d28b4e5416a51a469b",
     "_width_": {
         "type": "string",
         "value": "100%"
@@ -37,7 +37,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "hd897c057d2c4bd29dcf33367b25f9b7",
+    "kuid": "uadd2a531eed412891b5dc0f8cfb63e7",
     "layouttype": 2,
     "margininpixel": false,
     "name": "kony.ui.Tab",

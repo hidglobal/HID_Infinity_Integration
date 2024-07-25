@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s2e1525d623449e196ebb75774e5340b",
+    "_skin_": "s82647d72b0a4a2a88d30ee66cb1dbf0",
     "_text_": "Forgot Customer ID?",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s2e1525d623449e196ebb75774e5340b",
+    "focusskin": "s82647d72b0a4a2a88d30ee66cb1dbf0",
     "id": "flxForgotCustomerId",
     "info": null,
     "ipad": {
@@ -72,7 +72,7 @@
         }
     },
     "isvisible": false,
-    "kuid": "j63eeb10fda44960bc7f6cb2c8f5efdb",
+    "kuid": "ub3772a939f848ec89389edf78c50af0",
     "name": "kony.ui.Label",
     "parent": "flxMainUI",
     "pf": "userwidgetmodel",

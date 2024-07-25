@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s9159b711ba64198a25c586f2c731074",
+    "_skin_": "s2e57c5654024189a6d753e06ac733fe",
     "_text_": "Savings Account",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ba2d79a4ab974df78a11018078dc1f8e",
+    "kuid": "u16698ce062b4689bc2cf229b00fc7ed",
     "name": "kony.ui.Label",
     "parent": "CopyflxChecAccInner0d960a3cf8cff44",
     "pf": "userwidgetmodel",

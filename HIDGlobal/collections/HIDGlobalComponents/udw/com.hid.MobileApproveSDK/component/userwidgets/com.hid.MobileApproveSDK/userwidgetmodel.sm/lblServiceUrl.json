@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s627d92d2f3146839c654b340d1ffe31",
+    "_skin_": "sb5a196f8dab4f39b31f15d5699c2edc",
     "_text_": "Service URL",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s7003745cbcb4f8a97356ae1b3fdc991",
+    "focusskin": "s4b32e5d0ae4463ea26b002114b2b0f7",
     "id": "lblServiceUrl",
     "info": null,
     "ipad": {
@@ -68,7 +68,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "fa7423c1fb6e4008ab578e0a4e88d63d",
+    "kuid": "u8202bdad2674e9e9246be09b14f4241",
     "name": "kony.ui.Label",
     "parent": "flxServiceUrl",
     "pf": "userwidgetmodel",

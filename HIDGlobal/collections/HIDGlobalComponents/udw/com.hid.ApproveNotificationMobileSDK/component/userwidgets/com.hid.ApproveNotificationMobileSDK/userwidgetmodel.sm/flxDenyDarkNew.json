@@ -22,7 +22,7 @@
         "type": "string",
         "value": "0dp"
     },
-    "_skin_": "s8a89d03df1b479e9ce78285ce9e4bff",
+    "_skin_": "s3007234f41e4bd9bf141731d3675fee",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -46,7 +46,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c6e0ec3cd9e84e199814dfd1824b19de",
+    "kuid": "u627e3f21a54414fa3fb7a04722bcb9c",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxDenySliderMain",

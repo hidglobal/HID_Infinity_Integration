@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s277f1bd32884e678da93d735917dff4",
+    "_skin_": "seaf7d031a474eb98f89b2df34808367",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -62,7 +62,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "f7b85b16e83b4897bb350a966c37e092",
+    "kuid": "u46724b96c0f40098d071ab5110b59ca",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxUserNameSecure",

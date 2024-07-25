@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s762924f29fe4d718672fb5f9043cbb7",
+    "_skin_": "s54026b39fd844c3853887b9a5a5dcf6",
     "_top_": {
         "type": "string",
         "value": "1%"
@@ -40,11 +40,11 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "s762924f29fe4d718672fb5f9043cbb7",
+    "focusskin": "s54026b39fd844c3853887b9a5a5dcf6",
     "id": "flxTbxPINLogin",
     "info": null,
     "isvisible": true,
-    "kuid": "dd039ccbad654e64865e13d2cac3b50d",
+    "kuid": "u7a28f6be42442c9944cfdaf3a917b2c",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxPinLogin",

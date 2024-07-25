@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s695ba84d46a43d58ee15bd29e09d627",
+    "_skin_": "s78f45b221c34eb9a5b39e448172713c",
     "_text_": "Enter the details to Onboard User",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b4261e1b007a41caa569a74743d57627",
+    "kuid": "u636aabe194e470fbc6a5631558a6a3c",
     "name": "kony.ui.Label",
     "parent": "flxManualMain",
     "pf": "userwidgetmodel",

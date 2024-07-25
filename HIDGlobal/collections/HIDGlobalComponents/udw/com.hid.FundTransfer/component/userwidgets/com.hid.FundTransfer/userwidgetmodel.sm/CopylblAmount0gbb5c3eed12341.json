@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "saa82dcd633442dbbfc42996a89881b4",
+    "_skin_": "s418dbaba2374cdca816e446ca5f1dfb",
     "_text_": "Amount",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c62dddcc965348039972e44791706108",
+    "kuid": "udae58127821481b84593529cdaee582",
     "name": "kony.ui.Label",
     "parent": "flxRMSAccount",
     "pf": "userwidgetmodel",

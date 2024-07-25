@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "8.40%"
+        "value": "7%"
     },
     "_margin_": [
         0,
@@ -25,11 +25,11 @@
     "_skin_": "s45c156b58704397a04d1eb8aab7f509",
     "_top_": {
         "type": "string",
-        "value": "5%"
+        "value": "2%"
     },
     "_width_": {
         "type": "string",
-        "value": "40%"
+        "value": "80%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -39,7 +39,8 @@
         "value": "50%"
     },
     "children": [
-        "lblResendOTP"
+        "lblResendOTP",
+        "lblTimer"
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -47,7 +48,7 @@
     "id": "flxResendOTPBtn",
     "info": null,
     "isvisible": true,
-    "kuid": "ff3fee5e915c4e728ef5dad56439b6ef",
+    "kuid": "u5e3eae2fbd0450887f7980b5d5a0e5a",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxMainPageOOB",

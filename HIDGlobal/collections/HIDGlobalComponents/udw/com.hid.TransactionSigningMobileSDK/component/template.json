@@ -28,7 +28,7 @@
             0
         ],
         "_percent_": true,
-        "_skin_": "s18a492191874719b241c9a655e4389b",
+        "_skin_": "s56527b3cb1a429e98b414863fab2297",
         "_top_": {
             "type": "string",
             "value": "0dp"
@@ -48,21 +48,21 @@
         "info": null,
         "iscustomlayout": false,
         "isvisible": true,
-        "kuid": "gbdfa40a64c9457eb298666af4804ada",
+        "kuid": "u5a5bec8bce14849b39ae377fbca6788",
         "layouttype": 2,
         "name": "kony.ui.FlexContainer",
-        "parent": "uwi3f1a49516b14d7289817bf3bac034b0",
-        "pf": "uwi3f1a49516b14d7289817bf3bac034b0",
+        "parent": "uwu93279be04ef4dd8bb340a7b10607693",
+        "pf": "uwu93279be04ef4dd8bb340a7b10607693",
         "retaincontentalignment": false,
         "retainflexpositionproperties": false,
         "retainflowhorizontalalignment": false,
         "snapgridsize": 10,
         "snapshot": {
-            "md5": "hBJIRX06FDIxTxEAWZGYyio7+j8="
+            "md5": "Glm3bF7oZ9r362U3X4NIFDADY0c="
         },
         "snaptogrid": true,
         "wType": "FlexContainer",
         "widgetalignment": 1
     },
-    "userwidgetKUID": "ud303fe836254fd2b60a0b3e55572cd6"
+    "userwidgetKUID": "uc339ddb7f9a433893a467059e040c2c"
 }

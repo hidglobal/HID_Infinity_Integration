@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sbdfe5b86c5043d4b22c4362056a431d",
+    "_skin_": "s3570b0243064b88bc84e7379c79dc79",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -58,7 +58,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "gfaebf30513a467b99676f5cff20bbfc",
+    "kuid": "ub3a889221c24263884518572e24b11c",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxPIN",

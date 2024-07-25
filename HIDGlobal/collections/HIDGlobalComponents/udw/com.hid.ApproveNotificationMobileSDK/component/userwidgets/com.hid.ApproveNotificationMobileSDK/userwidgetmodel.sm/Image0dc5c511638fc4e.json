@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s0110c6e51734175b4910209b5c5b877",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "transaction5_1.png",
     "_top_": {
         "type": "string",
@@ -43,7 +43,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ea514d309ee3488c8ca3950cc3dbf09b",
+    "kuid": "uab794d1f457465091c1293b1e344dec",
     "name": "kony.ui.Image2",
     "parent": "flxMain",
     "pf": "userwidgetmodel",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s361f4b5d08d429f8d51e735bddb97d5",
+    "_skin_": "sd9b76fa42aa47c097213463f907a272",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -58,7 +58,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "g68238fbe0c043d58124b356f324aff7",
+    "kuid": "uc67cde273b74e9aa42ee35fe6f9d0c4",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxRM",

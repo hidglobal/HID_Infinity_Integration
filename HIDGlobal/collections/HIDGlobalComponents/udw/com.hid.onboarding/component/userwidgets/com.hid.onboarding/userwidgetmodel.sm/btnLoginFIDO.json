@@ -1,0 +1,64 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s62c06c9d97a409a9244f4a5c4e199c9",
+    "_text_": "LOGIN",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "number",
+        "value": ""
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "desktopweb": {
+        "blockedUISkin": "sc9fe4c317c54f5b83c8aff69b2dad42"
+    },
+    "disabledSkins": {},
+    "displaytext": true,
+    "focusskin": "s43268be1bbd4abbb8df6d259924ff41",
+    "id": "btnLoginFIDO",
+    "ide_onClick": "AS_Button_j8c5c3cf1566421891f133339878b442",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "u6c908622d2e4c129345f8fac1ef59d2",
+    "name": "kony.ui.Button",
+    "parent": "flxButtonsFIDO",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

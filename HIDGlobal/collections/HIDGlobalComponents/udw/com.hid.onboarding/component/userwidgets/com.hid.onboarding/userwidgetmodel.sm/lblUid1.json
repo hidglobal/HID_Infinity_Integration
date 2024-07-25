@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s93603b0ec794d67b31f833ec2ab5a7f",
+    "_skin_": "s3eb4c1fef8448588cfebdafc8f3e5ed",
     "_text_": "username : RonladoCR7",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "aa21a885083a4ca8a9cc8575362f86af",
+    "kuid": "u74f4a0564a64aca924446f7787a55dd",
     "name": "kony.ui.Label",
     "parent": "flxManualMain",
     "pf": "userwidgetmodel",

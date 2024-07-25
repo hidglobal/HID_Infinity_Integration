@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s78623dcd36b4fbb86a143b5d160f76a",
+    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
     "_text_": "Amount*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f88ed965b73441068e955b445266fe8d",
+    "kuid": "u87cf8c080e846d0b404fdb5df95bf2b",
     "name": "kony.ui.Label",
     "parent": "flxAmountOffline",
     "pf": "userwidgetmodel",

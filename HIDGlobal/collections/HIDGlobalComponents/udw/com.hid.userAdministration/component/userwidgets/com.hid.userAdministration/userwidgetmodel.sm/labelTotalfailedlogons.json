@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s266247eb50f4336976556bced70014d",
+    "_skin_": "s965ac95ff5d4d239a6524a32fc9b397",
     "_text_": "Total failed logons",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ccfd37d9746d450da7b72f10042267f6",
+    "kuid": "u491283abb3e42c3aa7d7e151977b6f9",
     "name": "kony.ui.Label",
     "parent": "flexTotalfailedlogons",
     "pf": "userwidgetmodel",

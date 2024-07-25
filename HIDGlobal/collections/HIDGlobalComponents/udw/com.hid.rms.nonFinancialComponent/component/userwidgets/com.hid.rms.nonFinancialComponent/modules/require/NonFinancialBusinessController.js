@@ -51,6 +51,28 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
     }
   };
   
+  const UserManagementObjectName = {
+    "name" : "HIDUserManagement",
+    "accessType" : {"access" : "online"}
+  };
+  
+   const UserManagementObjectServices = {
+    getDataModel : function (objectName){
+      var objectInstance = KNYMobileFabric.getObjectService(UserManagementObjectName.name,UserManagementObjectName.accessType );
+      return {
+        customVerb : function(customVerb, params, callback) {
+          var dataObject = new kony.sdk.dto.DataObject(objectName);         
+          for (let key in params){
+            dataObject.addField(key, params[key]);
+          }          
+          var options = { "dataObject" : dataObject};
+          objectInstance.customVerb(customVerb, options, success => callback(true, success), error => callback(false, error));
+        }
+      };
+    }
+  };
+  
+  
   const SCAEventConstants = {
         getLoginPayload: function(loginJSON) {
             // Using ES6 Template Literal
@@ -76,7 +98,7 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
   NonFinancialBusinessController.prototype.validatePassword = function(loginJson, S_CB, F_CB,rmsLoad=null){
     konymp.logger.trace("----------Entering validatePassword Function---------", konymp.logger.FUNCTION_ENTRY);
     var client = KNYMobileFabric;
-    var serviceName = "customHIDLogin";
+    var serviceName = "customHIDLoginWithoutMFA";//"customHIDLogin";
     var identitySvc = client.getIdentityService(serviceName);
     let loginPayload = SCAEventConstants.getLoginPayload(loginJson);
 
@@ -228,12 +250,13 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
   NonFinancialBusinessController.prototype.getApproveDevices = function(params, S_CB, F_CB){
     konymp.logger.trace("----------Entering getApproveDevices Function---------", konymp.logger.FUNCTION_ENTRY);
     try {
-      var deviceDataModel = ObjectServices.getDataModel("Devices");
+     // var deviceDataModel = ObjectServices.getDataModel("Devices");
+      var deviceDataModel = UserManagementObjectServices.getDataModel("SearchDevices");
       const callback = (status, response) => {
         if (status){
-          if(response.Devices.length > 0)
+          if(response.SearchDevices.length > 0)
           {
-            var devices = this.fetchFriendlyName(response.Devices);            
+            var devices = this.fetchFriendlyName(response.SearchDevices);            
             S_CB(devices);           
           } else {
             konymp.logger.debug("User has no device", konymp.logger.ERROR_CALLBACK);
@@ -243,7 +266,7 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
           konymp.logger.debug("Error occurred while calling service to get approve devices, response : "+JSON.stringify(response), konymp.logger.ERROR_CALLBACK);
           F_CB(response);}
       };
-      deviceDataModel.customVerb("searchDevices", params, callback);
+      deviceDataModel.customVerb("SearchDevices", params, callback);
       konymp.logger.trace("----------Exiting getApproveDevices Function---------", konymp.logger.FUNCTION_EXIT);
     } catch (exception) {
       konymp.logger.error("Exception in getApproveDevices function : " + exception.message, konymp.logger.EXCEPTION);  
@@ -313,6 +336,38 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
       }
     };
     rmsObjService.customVerb(customVerb, params, callback);
+  };
+  
+  /*
+  Change password flow with MFA: static password
+  Validate the password
+  */
+  NonFinancialBusinessController.prototype.validatePasswordforChangePwd = function(params, S_CB, F_CB) {
+    let objectServices = ObjectServices.getDataModel("ValidatePassword");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    objectServices.customVerb("validatePassword", params, callback);
+  };  
+  
+  /*
+  Change password flow with 2nd factor MFA: OTP_SMS
+  Validate the OTP
+  */
+  NonFinancialBusinessController.prototype.validateOTPforChangePwd = function(params, S_CB, F_CB) {
+    let objectServices = ObjectServices.getDataModel("ValidateOTP");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    objectServices.customVerb("validateOtp", params, callback);
   };
   
    function NonFinancialBusinessController() {

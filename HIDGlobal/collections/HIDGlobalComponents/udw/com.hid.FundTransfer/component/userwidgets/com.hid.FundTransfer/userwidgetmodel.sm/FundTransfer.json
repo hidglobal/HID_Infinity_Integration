@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s8f9b73ead1140868ddc347cb30e069a",
+    "_skin_": "sd5bb9e32a394e8da9df356c854476d5",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -45,11 +45,12 @@
         "flxConfirmPrompt",
         "TransactionSigningMobileSDK",
         "flxLoading",
-        "flxUpdatePasswordTrans",
         "flxSecureCodePin",
         "flxNonRMS",
         "flxRMS",
-        "payments"
+        "payments",
+        "flxIosBack",
+        "flxUpdatePassword"
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -58,7 +59,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "fbf74de477544fcfbf2ee9c76f616b36",
+    "kuid": "u3b0d02dae0d4c2988d1da12d3eb77f3",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "userwidgetmodel",

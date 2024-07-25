@@ -22,7 +22,7 @@
         "type": "string",
         "value": "7.50%"
     },
-    "_skin_": "s18a492191874719b241c9a655e4389b",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "5%"
@@ -43,7 +43,7 @@
     "id": "flxConfirmBtn",
     "info": null,
     "isvisible": true,
-    "kuid": "c9c87d7fd06b44f1906fefb564cd4e71",
+    "kuid": "u411d14bae1d4708b37dc44c80733e44",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxMainPageOOB",

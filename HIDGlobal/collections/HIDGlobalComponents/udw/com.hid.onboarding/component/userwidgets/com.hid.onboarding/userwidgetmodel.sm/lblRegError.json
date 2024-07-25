@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s4c5a881738242c9a02610d60e3f9e85",
+    "_skin_": "sa99825b840c4876962da400668be575",
     "_text_": "Registration has been failed. Please contact support",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i697eb95e09344c08fca221e52819874",
+    "kuid": "u720d7fc80cd44bd8d64951beb9ab26c",
     "name": "kony.ui.Label",
     "parent": "flxError",
     "pf": "userwidgetmodel",

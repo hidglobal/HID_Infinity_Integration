@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s03d0f09280e420294035737e9e7a1a5",
+    "_skin_": "s9d0889836974c9c9b80c1cbb393555a",
     "_text_": "invalid OTP entered \n Please enter valid OTP",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bc8f2d3ee57b46aea48779b8ee23b464",
+    "kuid": "u293237fa8554c0b99a987b938dbee5d",
     "name": "kony.ui.Label",
     "parent": "flxOTP",
     "pf": "userwidgetmodel",

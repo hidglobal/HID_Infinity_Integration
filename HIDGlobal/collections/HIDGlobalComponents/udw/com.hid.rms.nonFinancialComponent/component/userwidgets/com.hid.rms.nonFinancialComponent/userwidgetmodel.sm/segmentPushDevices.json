@@ -54,23 +54,32 @@
     "desktop": {
         "_data_": [
             {
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
                 "lblDeviceName": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                     "text": "PushDevice1"
                 }
             },
             {
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
                 "lblDeviceName": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                     "text": "PushDevice2"
                 }
             }
         ],
-        "rowTemplateId": "a699886ee6ba4e64b302fe20cf31b8ad",
+        "rowTemplateId": "f2496144eb2b43128c5f239ea6cc12bc",
         "rowtemplate": "Flex0d3d7ae1b5dea4c",
         "selectionBehaviorConfig": {},
         "widgetdatamap": {
-            "flxSegPushDevices": "flxSegPushDevices",
+            "CopyCopyCopyCopyflxSegPushDevices": "CopyCopyCopyCopyflxSegPushDevices",
+            "lblDeviceId": "lblDeviceId",
             "lblDeviceName": "lblDeviceName"
         }
     },
@@ -79,7 +88,7 @@
     "groupcells": false,
     "hasSections": false,
     "id": "segmentPushDevices",
-    "ide_onRowClick": "AS_Segment_b9b5531430854e448f977e756e2e4eff",
+    "ide_onRowClick": "AS_Segment_b2cb9ac6cbb647189abfdd0477957f35",
     "info": null,
     "ipad": {
         "psp": {
@@ -93,7 +102,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e8bccceafed24d4db118f9ff40597da8",
+    "kuid": "ue451a3547ac4fb0a0e741f3e23dff5c",
     "masterdata": {},
     "name": "kony.ui.SegmentedUI2",
     "needpageindicator": true,
@@ -108,12 +117,12 @@
     "retainflexpositionproperties": false,
     "retainselection": false,
     "rowcounter": 1,
-    "rowfocusskin": "sc7e34ba70a64c0c9bd178e3b14b51a7",
-    "rowskin": "s58e4de929e849b7b375427c80657e58",
+    "rowfocusskin": "s26da85cb7714910ab688fbe4937495f",
+    "rowskin": "sb4ba075d0b64a7bb8d821028cc775c6",
     "rowtemplate": "Flex0d3d7ae1b5dea4c",
     "screenlevelwidget": false,
     "seccounter": 0,
-    "sectionheaderskin": "se3e2f70dddc4f0ab77ea7f34882169a",
+    "sectionheaderskin": "sae92d78880f4cb087cad5c9504fa1ce",
     "selectedRows": null,
     "selectedState": false,
     "selectedindex": null,

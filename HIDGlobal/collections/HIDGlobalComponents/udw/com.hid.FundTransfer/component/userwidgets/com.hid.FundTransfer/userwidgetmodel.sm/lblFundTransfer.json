@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s55205fc4422441caf767a92b28798ef",
+    "_skin_": "sfcae69d7530482f8acc920a7934b01b",
     "_text_": "Fund Transfer",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a92286db634349e1b740b731ac75955f",
+    "kuid": "ub9ebdd933eb402ba0b166c635681ad8",
     "name": "kony.ui.Label",
     "parent": "flxLblFundTransfer",
     "pf": "userwidgetmodel",

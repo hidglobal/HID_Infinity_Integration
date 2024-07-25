@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfa8161f7d654aa080d045cd1bde4932",
+    "_skin_": "sfe8f6e53aaa43908e02dbc6897055d0",
     "_text_": "Patner Account",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "dc1220091c3747a8ae04389d710fddf8",
+    "kuid": "uc812112067942bebf9068f51b93300f",
     "name": "kony.ui.Label",
     "parent": "flxPatHeader",
     "pf": "userwidgetmodel",

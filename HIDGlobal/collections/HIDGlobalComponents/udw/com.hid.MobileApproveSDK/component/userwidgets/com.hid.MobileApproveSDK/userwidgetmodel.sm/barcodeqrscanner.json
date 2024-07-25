@@ -24,7 +24,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s18a492191874719b241c9a655e4389b",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -46,7 +46,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "g30f419752a546e6b80b7102fb8245a6",
+    "kuid": "ud59ffc91fd644218561c96cb9377e0a",
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
     "parent": "flxQRScanner",
@@ -54,6 +54,6 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "sourceUserWidget": "h7b25e6eebc34de98edf7a77c8ad29ab",
+    "sourceUserWidget": "uaec0dbd1a7d42469e2e9ef34e155daf",
     "wType": "UserWidgetInstance"
 }

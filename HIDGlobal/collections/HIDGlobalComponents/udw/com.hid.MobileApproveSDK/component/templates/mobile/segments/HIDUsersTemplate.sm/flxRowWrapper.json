@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sd4c01c7fc9f438fa889cd0fa6c0a9c4",
+    "_skin_": "s40d684cecc243bca26730f4c323bdf2",
     "_top_": {
         "type": "string",
         "value": "0.00%"
@@ -45,7 +45,7 @@
     "id": "flxRowWrapper",
     "info": null,
     "isvisible": true,
-    "kuid": "e442957d630041d7bebabac76ee5e115",
+    "kuid": "j48d80cb97fc4aa0a349905ffc76c88b",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxTempRowWrapper",

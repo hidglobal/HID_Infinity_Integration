@@ -22,7 +22,7 @@
         "type": "number",
         "value": "0"
     },
-    "_skin_": "s04b9ea9d6594ff89744d8cd20c5b991",
+    "_skin_": "s5d1fb82e63a4ef48f6a45daf56352e6",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -44,7 +44,7 @@
     "id": "flxHideNewPIN",
     "info": null,
     "isvisible": false,
-    "kuid": "j489fcda4fa74fd9ac879e570dd5ea09",
+    "kuid": "u8e552f5e1954d8392ce82d9bf99d6c0",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxNewPIN",
