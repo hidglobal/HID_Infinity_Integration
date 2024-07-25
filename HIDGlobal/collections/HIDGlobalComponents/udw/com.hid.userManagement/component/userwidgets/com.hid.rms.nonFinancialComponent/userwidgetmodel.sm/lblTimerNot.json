@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s53a499ef0ff415c8a0e0c242bd118f1",
+    "_skin_": "s75c9179d7de4ba39e5d9d23dfe2f860",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "50.00%"
     },
     "containerweight": 100,
     "contentalignment": 4,
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f8888ee3a68747be9683629b6684a99e",
+    "kuid": "u464372f7ee04a3293a987f8b85f4c36",
     "name": "kony.ui.Label",
     "parent": "flxTimer",
     "pf": "userwidgetmodel",

@@ -38,15 +38,15 @@
         "render": false
     },
     "id": "ncScan",
-    "ide_onCleanup": "AS_NativeContainer_ib1d2a18722c4a269eb3cc8152749836",
-    "ide_onCreated": "AS_NativeContainer_d9228af85144405da7da7c3201ed7354",
+    "ide_onCleanup": "AS_NativeContainer_f3071f9b54c44300a73c31c8407e7f3f",
+    "ide_onCreated": "AS_NativeContainer_i0aa6e12dd444a568ecde45bdc979f1d",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "kiosk": {
         "render": false
     },
-    "kuid": "h91c2fa7a5064e80b0177ec4d56f0c9d",
+    "kuid": "u9e97228df1549b297c5132ad3a3f995",
     "name": "kony.ui.NativeContainer",
     "parent": "barcodeqrscanner",
     "pf": "userwidgetmodel",

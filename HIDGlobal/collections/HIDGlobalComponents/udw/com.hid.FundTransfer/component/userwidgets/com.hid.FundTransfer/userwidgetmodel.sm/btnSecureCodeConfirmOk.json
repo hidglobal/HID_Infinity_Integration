@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb646ab80a9943c69209f6a80463e4d5",
+    "_skin_": "s42d0b82a5024d359c6846b27c379545",
     "_text_": "OK",
     "_top_": {
         "type": "string",
@@ -36,12 +36,12 @@
     "contentalignment": 5,
     "disabledSkins": {},
     "displaytext": true,
-    "focusskin": "s36a366349124a5ead651a4065b1de75",
+    "focusskin": "s31e6138eed94ed9b3cc6e3270da03c2",
     "id": "btnSecureCodeConfirmOk",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d6bf7aa0e148477f95adfb45cafe3d5a",
+    "kuid": "u2ce8eb13f5849969e25279cfdcea35a",
     "name": "kony.ui.Button",
     "parent": "flxSecureCodeConfirmButton",
     "pf": "userwidgetmodel",

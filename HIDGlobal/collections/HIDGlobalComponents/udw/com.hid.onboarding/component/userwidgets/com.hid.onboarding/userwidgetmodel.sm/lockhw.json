@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb65ccbb6edc496690ed0eaf118149c4",
+    "_skin_": "s3d8eb264add409c8c8e75a060271d7c",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -58,7 +58,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "b1098b42c06e44058dfd42bdf2df0f38",
+    "kuid": "u868c2fdc88d4f1492453d3d666beddb",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxHWdevicenumber",

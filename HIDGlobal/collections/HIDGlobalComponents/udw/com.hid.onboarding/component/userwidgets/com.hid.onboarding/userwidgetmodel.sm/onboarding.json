@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -44,7 +44,8 @@
         "flxRegistrationSuccess",
         "flxError",
         "flxDeviceRegistration",
-        "flxOOBPIN"
+        "flxOOBPIN",
+        "flxLoginFIDO"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -53,7 +54,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d91d5cd8a88d41bfba21c94628626572",
+    "kuid": "u2c2e1b1666a402b8b36c46b9813bf6e",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "userwidgetmodel",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb706d6d45354849845006688c9749ec",
+    "_skin_": "s9e95f48448a490dad21b7e5649e4246",
     "_text_": "Transfer Funds To",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e959533cb69647ba8561ad1bd8b0945e",
+    "kuid": "ud2e53f090c5434aa21252d38aa63373",
     "name": "kony.ui.Label",
     "parent": "flxTransferTo",
     "pf": "userwidgetmodel",

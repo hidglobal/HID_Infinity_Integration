@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s0110c6e51734175b4910209b5c5b877",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "imgpicture11140421490155184_3_3_1.png",
     "_top_": {
         "type": "string",
@@ -43,7 +43,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "hada2197646948e3ab18e99738ab52b5",
+    "kuid": "u95864f2d3b248aaafc8e517ecfc912a",
     "name": "kony.ui.Image2",
     "parent": "CopyflxHeader0e2bb22c909b244",
     "pf": "userwidgetmodel",

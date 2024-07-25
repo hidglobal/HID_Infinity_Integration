@@ -225,7 +225,36 @@ define(function () {
     };    
     passwordPolicyModel.customVerb("getPolicy", {}, callback);
   };
-
+  
+  UserManagementBusinessController.prototype.getFIDORegistrationOptions
+    = function(params, S_CB, F_CB)
+  {
+    let fidoRegObjSvc = ObjectServices.getDataModel("FIDORegistration");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    
+    fidoRegObjSvc.customVerb("getRegistrationOptions", params, callback);
+  };
+  
+  UserManagementBusinessController.prototype.registerFIDODevice
+    = function(params, S_CB, F_CB)
+  {
+    let fidoRegObjSvc = ObjectServices.getDataModel("FIDORegistration");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    
+    fidoRegObjSvc.customVerb("registerCredential", params, callback);
+  };
 
   function UserManagementBusinessController() {
 

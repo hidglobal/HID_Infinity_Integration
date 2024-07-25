@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sf45a4b9f48148438a950aef731eebb9",
+    "_skin_": "s2d202e67ead427884b202958bd80ab2",
     "_text_": "Device Registration Success",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i55e5abb852b42db944976cf84ef9501",
+    "kuid": "u0440daaa70343f7a064589967166833",
     "name": "kony.ui.Label",
     "parent": "flxSuccessMain",
     "pf": "userwidgetmodel",

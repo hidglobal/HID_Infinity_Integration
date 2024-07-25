@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa75d059884e4b3bada88bb2a9220378",
+    "_skin_": "s3ab671f458c46c5bffcfdda9ec9cd62",
     "_text_": "Last failed logon",
     "_top_": {
         "type": "number",
@@ -56,7 +56,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d3840087c27d4b188f696cfed0dd1fa2",
+    "kuid": "b2b05c5b498343e68e3ab96018256819",
     "name": "kony.ui.Label",
     "parent": "flexSegmentAuth",
     "pf": "segmentAuth",

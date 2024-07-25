@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s80cd0a9ae7d4a61a94cb6c797f3c0f9",
+    "_skin_": "s23ac570d5804a2c8732948b6b84c8e5",
     "_text_": "Activate using QR code",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "hdc7eb09004e4c35b44af4a06eae02aa",
+    "kuid": "u6a4ee2f3ed3471da9437a21167d5898",
     "name": "kony.ui.Label",
     "parent": "flxRegisterDevice1",
     "pf": "userwidgetmodel",

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sea7341a5bbd4bf8821111fc48189476",
+    "_skin_": "sc4527cded60467db88541f0234d7cf3",
     "_width_": {
         "type": "string",
         "value": "16.60%"
@@ -43,10 +43,10 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxDelRow",
-    "ide_onClick": "AS_FlexContainer_i248052d736e4aee9028a9b92cb9cb12",
+    "ide_onClick": "AS_FlexContainer_f726167456314f77859f6e1310209e25",
     "info": null,
     "isvisible": true,
-    "kuid": "c2dbf10cccea4109a3dab5167f097d67",
+    "kuid": "fd239fcb90a24d3985e612cdf69c9a6e",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxTempRowWrapper",

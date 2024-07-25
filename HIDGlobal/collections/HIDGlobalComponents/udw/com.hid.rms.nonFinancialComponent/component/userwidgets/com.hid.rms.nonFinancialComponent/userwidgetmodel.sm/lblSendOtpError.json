@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s6b9c436cd6345d5911323bbf8f995a6",
+    "_skin_": "sc2dd372b44141be86c779113aba6391",
     "_text_": "Failed to send OTP on Registered Device. \n Please retry to send OTP.",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ga9f4a1caafb423894d46a3be1ec96d0",
+    "kuid": "uadd062495114b598b6321cc47963047",
     "name": "kony.ui.Label",
     "parent": "flxOTPError",
     "pf": "userwidgetmodel",

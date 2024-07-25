@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s04e934e10ec40858bf79b1e0837b410",
+    "_skin_": "s90976d6d9974f5bb6b6a6a10061151b",
     "_text_": "We've sent a notification to your device. Approve the notification to continue.",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "fbeca4703bdb4c21ab6af3b597ce875c",
+    "kuid": "u6e6cca96f5f4672ba0abcddea22bd86",
     "name": "kony.ui.Label",
     "parent": "flxApprove",
     "pf": "userwidgetmodel",

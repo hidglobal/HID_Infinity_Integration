@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s215b310c31a49f09034838f1d5c3224",
+    "_skin_": "s9114b82fbe04e8ab9c59b6cfc479797",
     "_text_": "Welcome!",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "h74d4b41e399448ca7d3f240dcc7d515",
+    "kuid": "ua312f5619f24d59a4153dcc0f859602",
     "name": "kony.ui.Label",
     "parent": "flxSecure",
     "pf": "userwidgetmodel",

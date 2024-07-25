@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s78623dcd36b4fbb86a143b5d160f76a",
+    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
     "_text_": "Name*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a379e37fe06d46fe85572406e3dd6d46",
+    "kuid": "u76ae1ff874d4e76b04921a434a807e2",
     "name": "kony.ui.Label",
     "parent": "flxBnfName",
     "pf": "userwidgetmodel",

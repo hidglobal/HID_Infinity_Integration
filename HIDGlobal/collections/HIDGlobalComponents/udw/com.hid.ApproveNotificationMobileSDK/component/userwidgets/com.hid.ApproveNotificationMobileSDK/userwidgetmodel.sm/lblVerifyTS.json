@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7ab1bb0b20c4897baf684b976675330",
+    "_skin_": "s1143c41c15843139afe754e17098529",
     "_text_": "Dear User ",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "jed6aeb3e57549ac8a1a7cb2ca9c1fe3",
+    "kuid": "u0febb41323740ea84673a2235610c37",
     "name": "kony.ui.Label",
     "parent": "flxMain",
     "pf": "userwidgetmodel",

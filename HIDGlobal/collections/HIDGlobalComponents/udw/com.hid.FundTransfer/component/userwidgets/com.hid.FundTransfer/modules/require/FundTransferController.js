@@ -1,7 +1,8 @@
 define(function() {
 
-  var contexts = ["NonRMS","TransferSuccess","UpdatePasswordTrans","RMS","TransferDeclined"];
+  var contexts = ["NonRMS","TransferSuccess","UpdatePassword","PasswordPrompt","RMS","TransferDeclined"];
   var sdkConstants = {};
+  var isRMSTrans = false;
   sdkConstants.ERROR_LENGTH_MIN = `PIN length should be atleast #`;
   sdkConstants.ERROR_LENGTH_MAX = `PIN length should be atmost #`;
   sdkConstants.ERROR_PWD_MIN_NUM = `PIN should contain atleast # numbers`;
@@ -15,13 +16,21 @@ define(function() {
   sdkConstants.ERROR_PWD_MAX_LOWER = `Password should contain atmost # Lowercase letters`;  
   sdkConstants.ERROR_PWD_MIN_SPL = `Password should contain atleast # special Characters`;
   sdkConstants.ERROR_PWD_MAX_SPL = `Password should contain atmost # special Characters`;
-  sdkConstants.ERROR_PWD_NOT_ENTERED = `Please Enter PIN`;
-  sdkConstants.ERROR_PIN = `PIN is incorrect`;  
+  sdkConstants.ERROR_PIN = `PIN is incorrect`; 
+  sdkConstants.ERROR_SAME_PIN = `New PIN cannot be same as old PIN`;
+  sdkConstants.ERROR_NEW_PWD_NOT_ENTERED = `Please enter the new PIN`;
+  sdkConstants.ERROR_CNF_PWD = "Please confirm the new PIN";
+  sdkConstants.ERROR_PWD_MATCH = `New PIN cannot be same as old PIN`
+  sdkConstants.ERROR_INVALID_PWD_UPD = `Invalid PIN`
+  sdkConstants.ERROR_INVALID_PIN = `PIN Cannot be Empty`;
+  sdkConstants.ERROR_PWD_NOT_ENTERED = `Please enter PIN`;
+  sdkConstants.ERROR_PWD_NOT_MATCH = `Entered PINs do not match`;
   var uiConstants  = {};
   uiConstants.ERROR_INVALID_ACCOUNT = `Please enter valid Account`;
   uiConstants.ERROR_INVALID_AMOUNT = `Please enter valid Amount`;
   uiConstants.ERROR_INVALID_REMARKS = `Please enter valid Remarks`;
   uiConstants.ERROR_TRANSACTION_FAILED = `Transfer confirmation failed please try again`;
+  uiConstants.ERROR_TRANSACTION_FAILED_NONRMS = `Transfer failed please try again`;
   uiConstants.EMPTY_PIN = `Please enter PIN`;
   uiConstants.SUCCESS_SCREEN_TIMEOUT = 5;
   return {
@@ -45,6 +54,8 @@ define(function() {
       this.view.TransactionSigningMobileSDK.signTransactionFailure = this.FCB_signTransaction;
       this.view.TransactionSigningMobileSDK.passwordUpdateSuccess = this.SCB_passwordUpdate;
       this.view.TransactionSigningMobileSDK.passwordUpdateError = this.FCB_passwordUpdate;
+      this.view.TransactionSigningMobileSDK.onNotifyPassword = this.onNotifyPassword;
+      this.view.TransactionSigningMobileSDK.onUpdatePasswordCB = this.onUpdatePasswordCB;
       this.view.payments.onRMSPaymentAccept = this.onRMSPaymentAccept;
       this.view.payments.onRMSPaymentDecline = this.onRMSPaymentDecline;
       this.view.payments.onRMSFailure = this.onRMSFailure;
@@ -52,12 +63,23 @@ define(function() {
       this.view.payments.onRMSSignFailure = this.onRMSSignFailure;
       this.view.btnPasswordSubmit.onClick = this.btnPasswordSubmit_onClick;      
       //      this.view.MobileApproveSDK.onUpdatePasswordSuccess = this.onUpdatePasswordSuccess;
-      this.view.btnUpdatePINtrans.onClick = this.btnUpdatePINtrans_onClick;
+      this.view.btnUpdatePIN.onClick = this.btnUpdatePIN_onClick;
       this.view.flxConfirmPrompt.setVisibility(false);
       this.view.tbxcurrency.setEnabled(false);   
       this.view.tbxCurrencyRMS.setEnabled(false);
       this.view.btnSecureCodeConfirmOk.onClick  = this.btnSecureCodeConfirmOk_onClick;
-      this.view.btnTransferSubmitRMS.onClick = this.btnTransferSubmitRMS_onClick
+      this.view.btnTransferSubmitRMS.onClick = this.btnTransferSubmitRMS_onClick;
+      this.view.flxMainUpdatePwd.onTouchEnd = source => {
+        
+      };
+      this.view.flxOpaqueUpdatePassword.onTouchEnd = source => {
+      }
+      this.view.flxIosBack.setVisibility(false);
+      if(!this.isAndroid()){
+         this.view.flxIosBack.onTouchEnd = source => this.onCompletionCallback(false);
+      }
+      this.resetUpdatePasswordUI();
+      this.view.flxUpdatePassword.setVisibility(false);
     },
     //Logic for getters/setters of custom properties
     initGettersSetters: function() {
@@ -100,17 +122,17 @@ define(function() {
     },
     interval : 59,
     pwdPromtCallback : function(eventType, eventCode){
+      kony.print(`ApproveSDK --> Inside pwdPromtCallback with eventType: ${eventType} and eventCode: ${eventCode}`);
       this.view.txtEnterPin.text = "";
       this.setLoadingScreen(false);
       if(eventCode == "5000"){
-        //this.contextSwitch("PasswordPrompt");
         this.setPasswordScreen(true);
       } if (eventCode == "5001"){
+        this.setPasswordScreen(true);
         this.showPwdPromptError(true, sdkConstants.ERROR_PIN);
       }
       if(eventCode == "5002"){
-        // call Update Password flex.
-        this.contextSwitch("UpdatePasswordTrans");        
+        this.contextSwitch("UpdatePassword");        
       }
       this.view.forceLayout();
     },
@@ -302,19 +324,40 @@ define(function() {
     },
 
     ////////   Update Password method called here .............
-    btnUpdatePINtrans_onClick : function(){
-      kony.print("btnUpdatePINtrans_onClick");
+    btnUpdatePIN_onClick : function(){
+      kony.print("ApproveSDK ---> btnUpdatePIN_onClick");
       this.showErrorPassword(false, "");
       this.setLoadingScreen(true)
 
       let oldPwd = this.view.tbxCurrentPIN.text;
       let newPwd = this.view.tbxNewPIN.text;
-      if(oldPwd == "" || newPwd == "" || !newPwd || !oldPwd){ 
+      let cnfPwd = this.view.tbxConfirmUpdPwd.text;
+      
+      if(oldPwd == "" || oldPwd == " " || oldPwd == undefined || oldPwd === null){
         let error = sdkConstants.ERROR_PWD_NOT_ENTERED;
         this.showErrorPassword(true,error);
         return;
-      }      
-
+      }
+      if(newPwd == "" || newPwd == " " || newPwd == undefined || newPwd === null){
+        let error = sdkConstants.ERROR_NEW_PWD_NOT_ENTERED;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      if(cnfPwd == "" || cnfPwd == " " || cnfPwd == undefined || cnfPwd === null){
+        let error = sdkConstants.ERROR_CNF_PWD;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      if(oldPwd == newPwd ){ 
+        let error = sdkConstants.ERROR_PWD_MATCH;
+        this.showErrorPassword(true,error);
+        return;
+      }
+      if(newPwd != cnfPwd){
+        let error = sdkConstants.ERROR_PWD_NOT_MATCH;
+        this.showErrorPassword(true,error);
+        return;
+      }
       var policy = this.view.TransactionSigningMobileSDK.getPasswordPolicy() ;  
       if(policy) {
         this.passwordPolicy = JSON.parse(policy) || {};
@@ -332,7 +375,7 @@ define(function() {
       }
     },    
 
-    showErrorPassword : function(visible,message = 'Please enter Valid PIN'){
+    showErrorPassword : function(visible,message = 'Please enter PIN'){
       if(visible){
         //       this.view.lblErrorPassword.text = message;
         this.view.lblErrorPasswordPR.text = message;
@@ -356,16 +399,18 @@ define(function() {
 
     //this.view.flxSecureCodePin.setVisibility(true);
     btnTransferSubmit_onClick : function(){
-      kony.print("Savanth ---> Inside btnTransferSubmit_onClick ");
+      kony.print("ApproveSDK ---> Inside btnTransferSubmit_onClick ");
        if(this._isRMS) {
+         this.isRMSTrans = true;
          this.btnTransferSubmit_onClick_RMS();
        }else{
+         this.isRMSTrans = false;
          this.btnTransferSubmit_onClickNonRMS();
        } 
     },
     
     btnTransferSubmit_onClickNonRMS : function(){
-      kony.print("Savanth ---> Inside btnTransferSubmit_onClickNonRMS ");
+      kony.print("ApproveSDK ---> Inside btnTransferSubmit_onClickNonRMS ");
       this.view.TransactionSigningMobileSDK.mode = this._mode;
       this.view.flxConfirmPrompt.setVisibility(false);
       this.showError(false,"");
@@ -381,7 +426,7 @@ define(function() {
     },
     
     btnTransferSubmit_onClick_RMS : function(){
-      kony.print("Savanth ---> Inside btnTransferSubmit_onClick_RMS ");
+      kony.print("ApproveSDK ---> Inside btnTransferSubmit_onClick_RMS ");
       this.setLoadingScreen(true);
       const getReqModes = source=>{
         switch(source){
@@ -393,9 +438,9 @@ define(function() {
       let sourceMode = getReqModes(this.srcPaymentMode);
       let patnerMode = getReqModes(this.patPaymentMode);
       let request  = this.getPaymentRequest(sourceMode, patnerMode);
-      kony.print("Savanth --> payment Payload " + JSON.stringify(request));
+      kony.print("ApproveSDK ---> payment Payload " + JSON.stringify(request));
       let sessionID = HidRmsSDKManager.getRMSAppSessionId() || null;
-      kony.print("Savanth ---> sessionID " + sessionID);
+      kony.print("ApproveSDK ---> sessionID " + sessionID);
       this.view.payments.paymentCreate(request,sourceMode, patnerMode,sessionID);
       this.view.flxConfirmPrompt.setVisibility(false);
     },
@@ -435,9 +480,10 @@ define(function() {
       this.view.TransactionSigningMobileSDK.validatePassword(this.password);
     }, 
 
-    FCB_passwordUpdate : function(){
-      //      this.view.flxUpdatePasswordTrans.setVisibility(false);
+    FCB_passwordUpdate : function(eventType,message){
+      kony.print(`ApproveSDK --> In FCB_passwordUpdate with eventType: ${eventType} and eventCode: ${message}`);
       this.setLoadingScreen(false);
+      let error = sdkConstants.ERROR_PIN;
       this.showErrorPassword(true,error);
     },
 
@@ -456,7 +502,7 @@ define(function() {
       }
       let screen = "NonRMS"
       if(this._isRMS){
-         kony.print("Savanth ---> Sign Payment")
+         kony.print("ApproveSDK ---> Sign Payment")
          this.view.payments.paymentSign("otp", "accepted");
          this.paymentStatus = "closed_accepted";
          screen = "RMS";
@@ -487,7 +533,8 @@ define(function() {
       let cnfTxt = `$${amountTxt} has been successfully transfered to account ${toAccTxt}`;
       return cnfTxt;
     },
-    FCB_signTransaction : function(error){
+    FCB_signTransaction : function(eventType,message){
+      kony.print("ApproveSDK ---> FCB_signTransaction with eventType: "+eventType);
       this.setLoadingScreen(false);
       this.setPasswordScreen(false);
       if(this._isRMS){
@@ -496,8 +543,8 @@ define(function() {
         this.showRMSFailureScreen(uiConstants.ERROR_TRANSACTION_FAILED);
         return;
       }
-      this.contextSwitch("NonRMS");     
-      this.showError(true,uiConstants.ERROR_TRANSACTION_FAILED);
+      this.contextSwitch("NonRMS");
+      this.showError(true,uiConstants.ERROR_TRANSACTION_FAILED_NONRMS);
     },
     timerFun : function(sec){   
       if(sec === 0){
@@ -580,6 +627,9 @@ define(function() {
     },    
 
     checkPinPolicy : function(pin){
+      kony.print("Inside checkPinPolicy method")
+      let isSequencePresent = this.seqCheckPin(pin);
+      //       alert(isSequencePresent);
       if(isNaN(pin)){
         let error = sdkConstants.ERROR_PWD_NO_ALPHA;
         this.showErrorPassword(true,error);
@@ -594,9 +644,100 @@ define(function() {
         let error = sdkConstants.ERROR_LENGTH_MAX.replace(/#/,this.passwordPolicy.minLength );
         this.showErrorPassword(true,error);
         return false;
+      }      
+      if((isSequencePresent)){
+        let error = "no sequential characters allowed";
+        this.showErrorPassword(true,error);
+        return false;
       }
       return true;
-    },       
+    },
+    countAlphabets : function(pwd){
+      return  pwd.replace(/[^a-zA-Z]/g, '').length;
+    },
+    countNumeric : function(pwd){
+      return  pwd.replace(/[^0-9]/g, '').length;
+    },
+    countUpperCase : function(pwd){
+      return pwd.replace(/[^A-Z]/g,'').length;
+    },
+    countLowerCase : function(pwd){
+      return pwd.replace(/[^a-z]/g,'').length;
+    },
+    countSplCharacter : function(pwd){
+      return pwd.replace(/[a-zA-Z0-9]/g,'').length;
+    },
+    seqCheckPin: function(numberString) {
+      if(this.sameSequence(numberString)){
+        return true;
+      }
+      if(this.haveSequence(numberString)){
+        return true;
+      }
+      return false;
+    },
+    sameSequence : function(s){
+      let count = 0;
+      let cur = 0;
+      let prev = 0;
+      let l = s.length;
+      for(let i = 1;i < l;i++){
+        cur = +s[i];
+        prev = +s[i-1];
+        if (cur-prev === 0){
+          count += 1;
+        }
+        else{
+          count = 0;
+        }
+
+        if (count === 3){
+          return true;
+        }
+      }
+      return false;
+    },
+    haveSequence : function(s){
+      let l = s.length;
+      let one = 0;
+      let negativeone = 0;
+      let cur = 0;
+      let prev = 0;
+      let currem = 0;
+      let prevrem = 0;
+      for(let i = 1;i < l; i ++){
+        cur = +s[i];
+        prev = +s[i-1];
+        if(i < 4){
+          if (cur - prev === 1){
+            one += 1;
+          }
+          else if (cur - prev === -1){
+            negativeone += 1;
+          }
+        }
+        else{
+          currem = +s[i-3];
+          prevrem = +s[i-4];
+          if (currem - prevrem === 1){
+            one -= 1;
+          }
+          else if (currem - prevrem === -1){
+            negativeone -= 1;
+          }
+          if (cur - prev === 1){
+            one += 1;
+          }
+          else if (cur - prev === -1){
+            negativeone += 1;
+          }
+        }
+        if (one === 3 || negativeone === 3){
+          return true;
+        }
+      }
+      return false;
+    },  
 
     contextSwitch : function(context){
       for(let i of contexts){
@@ -639,9 +780,10 @@ define(function() {
       this.view.tbxTransferTo.text = "";
       this.view.tbxAmount.text = "";
       this.view.tbxRemarks.text = "";
-      this.view.flxUpdatePasswordTrans.setVisibility(false);
+      this.view.flxUpdatePassword.setVisibility(false);
       this.view.flxConfirmPrompt.setVisibility(false);
       this.resetRMSUI();
+      this.resetUpdatePasswordUI();
     },
     resetSecureCodeUI : function(){
       this.view.flxSecureCodePin.setVisibility(false);
@@ -649,9 +791,26 @@ define(function() {
       this.view.flxEnableSecureCode.setVisibility(false);
       this.view.lblSecureCodeText.text = "";
       this.view.tbxOtpEnterPin.text = "";
-      kony.timer.cancel("timer");
+      try{
+        kony.timer.cancel("timer");
+      }catch(e){
+          //Don't do anything
+        } 
       this.interval = 59;
       this.view.lblSecureCodeTimeout.text =`This code will be display for ${this.interval} more secs..`;
+    },
+    resetUpdatePasswordUI : function(){
+      this.view.tbxCurrentPIN.text = "";
+      this.view.tbxNewPIN.text = "";
+      this.view.tbxConfirmUpdPwd.text = "";
+      this.showUpdatePINError(false);
+      this.view.flxMainUpdatePwd.setVisibility(true);
+      // this.view.flxUpdatePwdSuccess.setVisibility(false);
+    },
+    showUpdatePINError : function(visible,msg = ""){
+      this.view.lblErrorPasswordPR.text  = msg;
+      this.view.flxErrorPwdPR.setVisibility(visible);
+      this.view.forceLayout();
     },
     btnSecureCodeConfirmOk_onClick : function(){
       this.resetSecureCodeUI();
@@ -750,11 +909,11 @@ define(function() {
     },
     
     onRMSPaymentAccept : function(success){
-      kony.print("Savanth ---> RMS Accepted");
+      kony.print("ApproveSDK ---> RMS Accepted");
      this.signTransactionSDK();
     },
     onRMSPaymentDecline : function(){
-      kony.print("Savanth ---> RMS Rejected");
+      kony.print("ApproveSDK ---> RMS Rejected");
       this.view.payments.paymentUpdate("closed_rejected");
       this.showRMSFailureScreen("Payment Declined");
 
@@ -778,13 +937,28 @@ define(function() {
       this.view.TransactionSigningMobileSDK.signTransaction(values); 
     },
     onRMSSignSuccess : function(success){
-      kony.print("Savanth ---> onRMSSignSuccess"+ JSON.stringify(success));
+      kony.print("ApproveSDK ---> onRMSSignSuccess"+ JSON.stringify(success));
       this.view.payments.paymentUpdate(this.paymentStatus);
     },
     onRMSSignFailure : function(error){
-      kony.print("Savanth ---> onRMSSignFailure "+ JSON.stringify(error));
+      kony.print("ApproveSDK ---> onRMSSignFailure "+ JSON.stringify(error));
     },
+    onNotifyPassword : function(){
+      kony.print("ApproveSDK ---> FundTransfer onNotifyPassword ");
+      this.isRMSTrans === false ? this.contextSwitch("NonRMS"):this.contextSwitch("RMS");
+    },
+    isAndroid : function(){
+       var deviceInfo = kony.os.deviceInfo();
+       return deviceInfo.name.toLowerCase() === 'android';
+    },
+    onUpdatePasswordCB: function(response){
+    if(response === "success"){
+      this.resetUI();
+    } 
+    this.view.forceLayout();
+  },
     showRMSFailureScreen : function(msg){
+      this.view.flxLoading.setVisibility(false);
       this.contextSwitch("TransferDeclined");
       this.view.lblTSFailure.text = msg;
       kony.timer.schedule("switchTimerNew", ()=> {
@@ -793,6 +967,5 @@ define(function() {
         this.contextSwitch("RMS");
       },uiConstants.SUCCESS_SCREEN_TIMEOUT, false);
     }
-
   };
 });

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s4bab0e9172243339f10ae58fa4bddd1",
+    "_skin_": "sa9a71a6eb6d40ba9af2ebc8868d3e62",
     "_text_": "Label",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "hfc52032bf9647e4a1191230dcce5f04",
+    "kuid": "ueafa4e7958a4532a6bb3310b74c3eb0",
     "name": "kony.ui.Label",
     "parent": "flxLogin",
     "pf": "userwidgetmodel",

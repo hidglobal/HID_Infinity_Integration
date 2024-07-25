@@ -5,26 +5,26 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "b7893afffde54b25adfb103555f46b0e",
+                    "kuid": "g36a71062eb545de994d7fbff3a4a383",
                     "paramList": [],
                     "propertyKey": "resetUI",
                     "pw": {
                         "displayName": "resetUI",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d91d5cd8a88d41bfba21c94628626572",
+                    "srcWgtKUID": "u2c2e1b1666a402b8b36c46b9813bf6e",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "iaed0f025077449a8e76448cf1625e12",
+                    "kuid": "bf70433de3434dcda81a0ebb79e9bb7d",
                     "paramList": [],
                     "propertyKey": "getUserId",
                     "pw": {
                         "displayName": "getUserId",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d91d5cd8a88d41bfba21c94628626572",
+                    "srcWgtKUID": "u2c2e1b1666a402b8b36c46b9813bf6e",
                     "type": "event"
                 }
             ],
@@ -34,7 +34,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "fced9ccdffbb4e068fc3b5e3035e9846",
+                    "kuid": "h068cd82c11c4c8ca1fde6dec52137e4",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "showLoading",
@@ -42,12 +42,12 @@
                         "displayName": "showLoading",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d91d5cd8a88d41bfba21c94628626572",
+                    "srcWgtKUID": "u2c2e1b1666a402b8b36c46b9813bf6e",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "a3932af589f245539bef97c9ab9799e3",
+                    "kuid": "i32b37f9d47d48a2ab21920f917ad786",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "dismissLoading",
@@ -55,12 +55,12 @@
                         "displayName": "dismissLoading",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d91d5cd8a88d41bfba21c94628626572",
+                    "srcWgtKUID": "u2c2e1b1666a402b8b36c46b9813bf6e",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "jc74999bc47041618268d8516e64941e",
+                    "kuid": "d6198e0f12ec4abea8591b4cc5f1b54f",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "changeContext",
@@ -68,12 +68,12 @@
                         "displayName": "changeContext",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d91d5cd8a88d41bfba21c94628626572",
+                    "srcWgtKUID": "u2c2e1b1666a402b8b36c46b9813bf6e",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "ed346edbfbff4258bf392b9a0479c032",
+                    "kuid": "cf5f44d5ba8f426592ee1704e1d44712",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "switchLogin",
@@ -81,12 +81,12 @@
                         "displayName": "switchLogin",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d91d5cd8a88d41bfba21c94628626572",
+                    "srcWgtKUID": "u2c2e1b1666a402b8b36c46b9813bf6e",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "h62861118f764961893ab5fa60bdbc7b",
+                    "kuid": "ib99d08bcacb40f8bfc5eb511f0bf4a5",
                     "paramList": [],
                     "propertyIndex": 5,
                     "propertyKey": "passwordPolicy",
@@ -94,7 +94,7 @@
                         "displayName": "passwordPolicy",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d91d5cd8a88d41bfba21c94628626572",
+                    "srcWgtKUID": "u2c2e1b1666a402b8b36c46b9813bf6e",
                     "type": "event"
                 }
             ],
@@ -112,9 +112,9 @@
             "custom": [
                 {
                     "access": "Write",
-                    "defaultValue": "OTP_SMS_PIN",
+                    "defaultValue": "FIDO",
                     "group": "General",
-                    "kuid": "f4fd4fe5577a4edc9e6b4a17db7cbcc8",
+                    "kuid": "e46f745c5e224751af8a47036a19faea",
                     "originalPropertyKey": "FirstFactor",
                     "propertyIndex": 2,
                     "propertyKey": "FirstFactor",
@@ -123,19 +123,20 @@
                         "displayName": "FirstFactor",
                         "uiRepresentation": "Label-Combobox"
                     },
-                    "srcWgtKUID": "d91d5cd8a88d41bfba21c94628626572",
+                    "srcWgtKUID": "u2c2e1b1666a402b8b36c46b9813bf6e",
                     "type": "list selector",
                     "value": [
                         "STATIC_PWD",
                         "SECURE_CODE",
-                        "OTP_SMS_PIN"
+                        "OTP_SMS_PIN",
+                        "FIDO"
                     ]
                 },
                 {
                     "access": "Write",
-                    "defaultValue": "APPROVE",
+                    "defaultValue": "NO_MFA",
                     "group": "General",
-                    "kuid": "e34e627a18e14eb59795249695705a24",
+                    "kuid": "b654137a021a432e9eff348e0e3ee43f",
                     "originalPropertyKey": "MFA",
                     "propertyIndex": 3,
                     "propertyKey": "MFA",
@@ -144,7 +145,7 @@
                         "displayName": "MFA",
                         "uiRepresentation": "Label-Combobox"
                     },
-                    "srcWgtKUID": "d91d5cd8a88d41bfba21c94628626572",
+                    "srcWgtKUID": "u2c2e1b1666a402b8b36c46b9813bf6e",
                     "type": "list selector",
                     "value": [
                         "APPROVE",

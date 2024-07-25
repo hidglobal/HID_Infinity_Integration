@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "saa67881a7c5437390cdea3c291aea8e",
+    "_skin_": "s4f4a6af564b4efc8e794344f9e2a90f",
     "_text_": "invalid OTP entered \n You have 3 attempts before account is blocked",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "fe5d018c8b66408e8b3114611eb8297c",
+    "kuid": "ubabc5182238452fa3f2f3349767bc12",
     "name": "kony.ui.Label",
     "parent": "flxOTP",
     "pf": "userwidgetmodel",

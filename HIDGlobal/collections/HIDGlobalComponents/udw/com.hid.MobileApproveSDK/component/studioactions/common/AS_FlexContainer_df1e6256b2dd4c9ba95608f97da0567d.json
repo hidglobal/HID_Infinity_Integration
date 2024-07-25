@@ -1,0 +1,23 @@
+{
+    "AS_FlexContainer_df1e6256b2dd4c9ba95608f97da0567d": {
+        "id": "AS_FlexContainer_df1e6256b2dd4c9ba95608f97da0567d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "u22ff7afea9c451c8b747314a0a00b39",
+            "name": "userwidgetmodel",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__c259c8cee6014012950a94c68d1a1b8e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.toggleCamera();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

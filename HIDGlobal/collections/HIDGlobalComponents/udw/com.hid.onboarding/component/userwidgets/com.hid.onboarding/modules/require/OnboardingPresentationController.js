@@ -11,6 +11,7 @@ define([`com/hid/onboarding/OnboardingBusinessController`], function(OnboardingB
   OnboardingPresentationController.prototype.validateActivationCode = function(updateOnboardingUI,username,activationCode){
     let Success_CB = success => {
       this.userId =  success.ActivationCodeValidation[0].userid;
+      this.auth_key = success.ActivationCodeValidation[0].Auth_Key; // Karthiga changes
       this.username = username;
       let UIObject = {
         "state" : "activationCodeSuccess",
@@ -111,7 +112,8 @@ define([`com/hid/onboarding/OnboardingBusinessController`], function(OnboardingB
     let params = {
       "username": this.username,
       "password": password,
-      "userId": this.userId
+      "userId": this.userId,
+      "Auth_Key": this.auth_key
     };
     //alert(JSON.stringify(params));
     OnboardingBusinessController.addPasswordtoUser(params, Success_CB,Failure_CB);
@@ -125,26 +127,31 @@ define([`com/hid/onboarding/OnboardingBusinessController`], function(OnboardingB
     this.authType = authenticatorType;
     let Success_CB = success => {
       let UIObject = {
-        "state" : "addOOBToUserSuccess",
+        "state" : "addAndSendOOBSuccess",//"addOOBToUserSuccess",
         "response" : {
           "response" : success
         }
       };
-      this.sendOOB(updateOnboardingUI,authenticatorType);
+      updateOnboardingUI(UIObject);
+ //     this.sendOOB(updateOnboardingUI,authenticatorType);
     }; 
     let Failure_CB = error => {
       //       alert(JSON.stringify(error));
       let UIObject = {
-        "state" : "addOOBToUserFailure",
+        "state" : "addAndSendOOBFailure",//"addOOBToUserFailure",
         "response" : {
           "response" : error
         }
       };
+      updateOnboardingUI(UIObject);
     };
     let params = {
       "AuthenticatorType": authenticatorType,
       "userId": userId,
-      "AuthenticatorValue": authenticatorValue
+      "username": this.username,
+      "AuthenticatorValue": authenticatorValue,
+      "Auth_Key": this.auth_key,
+      "AuthenticationType": authenticatorType 
     };
     //     alert(JSON.stringify(params));
     OnboardingBusinessController.addOOBToUser(params, Success_CB,Failure_CB);
@@ -177,7 +184,7 @@ define([`com/hid/onboarding/OnboardingBusinessController`], function(OnboardingB
       "userId": userId,
       "AuthenticatorValue": authenticatorValue,
       "OOB_PIN" : PIN,
-      "isPasswordRequired" : true
+      "isPasswordRequired" : true,
     };
      // alert(JSON.stringify(params));
     OnboardingBusinessController.addOOBToUser(params, Success_CB,Failure_CB);
@@ -284,7 +291,8 @@ define([`com/hid/onboarding/OnboardingBusinessController`], function(OnboardingB
     let params = {
       "UserId": userId,
       "username": username,
-      "usernameWithRandomNo": `${username}.${randNo}`
+      "usernameWithRandomNo": `${username}.${randNo}`,
+      "Auth_Key": this.auth_key,
     };
     //     alert(JSON.stringify(params));
     OnboardingBusinessController.approveDeviceRegistration(params, Success_CB,Failure_CB);
@@ -463,6 +471,110 @@ define([`com/hid/onboarding/OnboardingBusinessController`], function(OnboardingB
     };
     OnboardingBusinessController.addHardwareDeviceToUser(params, Success_CB,Failure_CB);
   };
+  
+  function arrayBufferToBase64url(buffer) {
+    let binary = '';
+    let bytes = new Uint8Array(buffer);
+    let len = bytes.byteLength;
+    for (let i = 0; i < len; i++) {
+        binary += String.fromCharCode( bytes[ i ] );
+    }
+    return window.btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+  }
+  
+  function generateCredential(updateOnboardingUI, request_uri, publicKey, csrf, username) {
+    navigator.credentials.create({publicKey})
+      .then(pubKeyCred => {
+        
+      	let credential = {
+          type: pubKeyCred.type,
+          id: pubKeyCred.id ? pubKeyCred.id : null,
+          rawId: arrayBufferToBase64url(pubKeyCred.rawId),
+          response: {
+            clientDataJSON: arrayBufferToBase64url(pubKeyCred.response.clientDataJSON),
+            attestationObject: arrayBufferToBase64url(pubKeyCred.response.attestationObject)
+          }
+        };
+        
+        let successCallback = success => {
+          updateOnboardingUI({
+            "state": "fidoDeviceRegistrationSuccess",
+            "response": success
+          })
+        };
+        
+        let failureCallback = err => {
+          updateOnboardingUI({
+            "state": "fidoDeviceRegistrationFailure",
+            "response": err
+          })
+        };
+        
+        const inpParams = {
+          "csrf": csrf,
+          "username": username,
+          "request_uri": request_uri,
+          "id": credential.id,
+          "rawId": credential.rawId,
+          "clientDataJSON": credential.response.clientDataJSON,
+          "attestationObject": credential.response.attestationObject
+        };
+        
+        OnboardingBusinessController.registerFidoDevice(inpParams, successCallback, failureCallback);
+      })
+      .catch(err => {
+      	alert(err);
+        updateOnboardingUI({
+          "state": "fidoDeviceRegistrationFailure",
+          "response": err
+        })
+      });
+  }
+  
+  OnboardingPresentationController.prototype.fidoDeviceRegistration = function(updateOnboardingUI, username=this.username) {
+    let success_CB = success => {
+      const request_uri = success.FIDOOnboarding[0].request_uri;
+      const csrf = success.FIDOOnboarding[0]["server-csrf-token"];
+      let pubKey = success.FIDOOnboarding[0].publicKeyCredentialOptions[0];
+      
+      pubKey = {
+        challenge: Uint8Array.from(window.atob(pubKey.challenge.replace(/_/g, '/').replace(/-/g, '+')), (c) => c.charCodeAt(0)),
+        rp: {
+          id: pubKey.rp[0].id,
+          name: "localhost"
+        },
+        user: {
+          id: Uint8Array.from(window.atob(pubKey.user[0].id.replace(/_/g, '/').replace(/-/g, '+')), (c) => c.charCodeAt(0)),
+          name: pubKey.user[0].name,
+          displayName: pubKey.user[0].displayName
+        },
+        authenticatorSelection: pubKey.authenticatorSelection[0],
+        pubKeyCredParams: pubKey.pubKeyCredParams
+      };
+      
+      for (p in pubKey.pubKeyCredParams) {
+        pubKey.pubKeyCredParams[p].alg = parseInt(pubKey.pubKeyCredParams[p].alg);
+      }
+      
+      generateCredential(updateOnboardingUI, request_uri, pubKey, csrf, username);
+    };
+    
+    let failure_CB = err => {
+      let uiObject = {
+        "state": "fidoDeviceRegistrationFailure",
+        "response": err
+      };
+      
+      updateOnboardingUI(uiObject);
+    };
+    
+    let params = {
+      "username": username,
+      "Auth_Key": this.auth_key
+    };
+    
+    OnboardingBusinessController.fidoDeviceRegistration(params, success_CB, failure_CB);
+  }
  
   OnboardingPresentationController.getInstance = function(){
     instance = instance === null ? new OnboardingPresentationController() : instance;

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sda464ba1f7840f0a50e6656075d9b4c",
+    "_skin_": "sa6163728d864c48a770ef7082a8c3bd",
     "_text_": "Success!",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ddffe56801f949f2b33d99f49df5168a",
+    "kuid": "udf5cc85f1524920b9a71193dd15339d",
     "name": "kony.ui.Label",
     "parent": "flxTransferSuccess",
     "pf": "userwidgetmodel",

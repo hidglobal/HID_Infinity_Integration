@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb197f60ed6e4c66a4b4972077095059",
+    "_skin_": "s232ae8e43374249a08486f61439a4b2",
     "_text_": "Invalid PIN",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "db12585b488a47188f98f250ecc86d96",
+    "kuid": "ub94f46551344e8bbebaa1ee1cfb66aa",
     "name": "kony.ui.Label",
     "parent": "flxPassword",
     "pf": "userwidgetmodel",

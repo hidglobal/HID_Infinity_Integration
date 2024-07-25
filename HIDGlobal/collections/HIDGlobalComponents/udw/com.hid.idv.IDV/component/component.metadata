@@ -1,0 +1,31 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid.idv",
+        "uw_classname": "webSubmission",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.idv.webSubmission"
+        ],
+        "templates": [],
+        "actions": {},
+        "skins": [
+            "slForm",
+            "slFbox"
+        ],
+        "images": [],
+        "fonts": [
+            "Gotham-Book"
+        ],
+        "nativeApis": 3,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2024-07-24T10:50:32.926Z",
+    "createdVizVersion": "9.5.28",
+    "project_version": "sprint42"
+}

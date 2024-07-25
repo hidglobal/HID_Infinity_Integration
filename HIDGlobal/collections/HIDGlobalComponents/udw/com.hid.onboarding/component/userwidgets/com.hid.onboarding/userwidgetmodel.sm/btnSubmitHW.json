@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s2f9eecfebb543b385efc6429ed17122",
+    "_skin_": "s8f0b76e220c4eac8d74fe3e662daea4",
     "_text_": "SUBMIT",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s046489d3d8f4ab39079be57e13461ee",
+    "focusskin": "s272266c52194ee5b03413fbc0e3ba4f",
     "id": "btnSubmitHW",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e7a3a3db3af44368a73b9bfdd204b49c",
+    "kuid": "u931b93016b04ac4abf27cbdaaa81acb",
     "name": "kony.ui.Button",
     "parent": "flxsumbitbuttons",
     "pf": "userwidgetmodel",

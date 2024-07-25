@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s78623dcd36b4fbb86a143b5d160f76a",
+    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
     "_text_": "Currency",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "h88feb12211443a1b271389de280654a",
+    "kuid": "uf232d6e8eb3428ca6200387a461c464",
     "name": "kony.ui.Label",
     "parent": "flxCurrencyChallenge",
     "pf": "userwidgetmodel",

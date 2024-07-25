@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sc5b2fca45154d8c8abdb2b623812596",
+    "_skin_": "s3239185c2a847d69dc247cf5b775785",
     "_top_": {
         "type": "string",
         "value": "10%"
@@ -55,7 +55,7 @@
             "verticalScrollIndicator": false
         }
     },
-    "kuid": "d7905b48b1564114b87d35f78dbca479",
+    "kuid": "u8d7662efded429daf31efd564604cdf",
     "layouttype": 2,
     "name": "kony.ui.FlexScrollContainer",
     "pagingenabled": false,

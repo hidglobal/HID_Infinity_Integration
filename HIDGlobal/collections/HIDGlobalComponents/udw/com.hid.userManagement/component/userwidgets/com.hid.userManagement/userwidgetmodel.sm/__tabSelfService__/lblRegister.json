@@ -21,8 +21,8 @@
         0,
         0
     ],
-    "_skin_": "s4105368a4d241a0b30b838214ded369",
-    "_text_": "Do you want to register a new HID Approve Device?",
+    "_skin_": "s4a5f4f9f6cf4014a1ad23a2ec7d3952",
+    "_text_": "Do you want to register a new HID Device?",
     "_top_": {
         "type": "string",
         "value": "10%"
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bb148697b3a8465e90ca8011c68eac96",
+    "kuid": "u0a9931dfe784be1ae7380b59b9c7a69",
     "name": "kony.ui.Label",
     "parent": "flxRegisterDevice0",
     "pf": "userwidgetmodel",

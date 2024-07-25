@@ -68,7 +68,7 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
      return this.approveSDKWrapper.getPasswordPolicy();
   };
   NativeControllerIOS.prototype.renewContainer = function(password){
-    this.approveSDKWrapper.renewContainerWithPwdCallBackWithExceptionCallBack(password,this.componentInstance.renewContainercallback,this.componentInstance.renewContainerExceptionCB);
+    this.approveSDKWrapper.renewContainerWithPwdCallBackWithExceptionCallBack(password,this.componentInstance.renewContainerCallback,this.componentInstance.renewContainerExceptionCB);
   };
   NativeControllerIOS.prototype.deleteUserProfile = function(){
       return this.approveSDKWrapper.deleteContainer();
@@ -86,6 +86,9 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
   };
   NativeControllerIOS.prototype.getContainerRenewableDate = function(){
     return this.approveSDKWrapper.getContainerRenewableDate();
+  };
+  NativeControllerIOS.prototype.setNotificationStatus = function(txtId, status, pin){
+    this.approveSDKWrapper.setNotificationStatusWithStatusWithPasswordWithJSCallbackWithPwdPromptCB(txtId,status,pin,this.componentInstance.scanToApproveCompletionCallback, this.componentInstance.pwdPromptCallback);   
   };
   return NativeControllerIOS;
 

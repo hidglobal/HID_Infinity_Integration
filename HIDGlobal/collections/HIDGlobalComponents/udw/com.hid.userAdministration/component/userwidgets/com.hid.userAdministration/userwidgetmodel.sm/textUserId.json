@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "User ID",
-    "_skin_": "s54d36725b074fd0b78a227e63e9023f",
+    "_skin_": "sea58b88fe124447a3f1028b8329a4de",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -46,10 +46,10 @@
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {
-        "placeholderSkin": "s44afc0538ab465db9182f801ad32821"
+        "placeholderSkin": "sea29345fd0c4c3789b30236c120db77"
     },
     "disabledSkins": {
-        "focusSkin": "s3ecea6374d649fa8d50a41e198d95ed"
+        "focusSkin": "s9a9ccff0687429d9c9c1f2a03daf326"
     },
     "focusskin": null,
     "id": "textUserId",
@@ -57,12 +57,12 @@
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "jde54c457d664c3b9ca11bf0a08e7b28",
+    "kuid": "u2ccc3cd45fb44a9bf233ac55ff3c48d",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "userid",
     "pf": "userwidgetmodel",
-    "placeholderskin": "s44afc0538ab465db9182f801ad32821",
+    "placeholderskin": "sea29345fd0c4c3789b30236c120db77",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": false,

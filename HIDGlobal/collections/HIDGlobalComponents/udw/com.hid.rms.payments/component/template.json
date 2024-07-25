@@ -6,7 +6,6 @@
     "sourceChannel": "common",
     "templateDef": {
         "DNDConfig": null,
-        "__parentReadjusting__": false,
         "_height_": {
             "type": "string",
             "value": "100%"
@@ -29,7 +28,7 @@
             0
         ],
         "_percent_": true,
-        "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+        "_skin_": "s56527b3cb1a429e98b414863fab2297",
         "_top_": {
             "type": "string",
             "value": "0dp"
@@ -49,22 +48,22 @@
         "info": null,
         "iscustomlayout": false,
         "isvisible": true,
-        "kuid": "j98aa7c71599415caefb847269256980",
+        "kuid": "uda9970e0f1144c5aa5f82157403dacc",
         "layouttype": 2,
         "name": "kony.ui.FlexContainer",
-        "parent": "uwu582419bc0434fcca23d3c2cfeff3467",
-        "pf": "uwu582419bc0434fcca23d3c2cfeff3467",
+        "parent": "uwu4e1d8a6698e4145a656181e4e2488e3",
+        "pf": "uwu4e1d8a6698e4145a656181e4e2488e3",
         "retaincontentalignment": false,
         "retainflexpositionproperties": false,
         "retainflowhorizontalalignment": false,
         "snapgridsize": 10,
         "snapshot": {
-            "md5": "+7Yeugh1GxXJFvMjkbmo3vR8acw="
+            "md5": "YVV2/CsR9s7oi5JvcrX9PUIsBbo="
         },
         "snaptogrid": true,
         "wType": "FlexContainer",
         "widgetalignment": 1,
         "zindex": 1
     },
-    "userwidgetKUID": "u3d2e1e70a974874bc16471f99631c7e"
+    "userwidgetKUID": "u130053556a5476d9f50e2ae94a721c9"
 }

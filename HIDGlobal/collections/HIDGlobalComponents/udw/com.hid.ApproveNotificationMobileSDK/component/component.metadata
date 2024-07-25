@@ -10,22 +10,22 @@
         "templates": [],
         "actions": {
             "common": {
-                "AS_FlexContainer_b28664e367bd46ed96955707153510d8": {
+                "AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766": {
                     "channel": "common",
-                    "actionId": "AS_FlexContainer_b28664e367bd46ed96955707153510d8",
-                    "actionName": "AS_FlexContainer_b28664e367bd46ed96955707153510d8",
+                    "actionId": "AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766",
+                    "actionName": "AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766",
                     "key": "ide_postShow"
                 },
-                "AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36": {
+                "AS_FlexContainer_f6ba12005b004a388e7d594123f4a82d": {
                     "channel": "common",
-                    "actionId": "AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36",
-                    "actionName": "AS_FlexContainer_h109c711c2ba4858b4663ca5bba35b36",
+                    "actionId": "AS_FlexContainer_f6ba12005b004a388e7d594123f4a82d",
+                    "actionName": "AS_FlexContainer_f6ba12005b004a388e7d594123f4a82d",
                     "key": "ide_onClick"
                 },
-                "AS_Image_e9734aafa6e2486f9ad1d23184ae8215": {
+                "AS_Image_h24046e7338b493fa03d1744d10c61e1": {
                     "channel": "common",
-                    "actionId": "AS_Image_e9734aafa6e2486f9ad1d23184ae8215",
-                    "actionName": "AS_Image_e9734aafa6e2486f9ad1d23184ae8215",
+                    "actionId": "AS_Image_h24046e7338b493fa03d1744d10c61e1",
+                    "actionName": "AS_Image_h24046e7338b493fa03d1744d10c61e1",
                     "key": "ide_onTouchStart"
                 }
             }
@@ -89,11 +89,11 @@
             "closeicon_1_3_4_1.png"
         ],
         "fonts": [
-            "Helvetica",
             "Gotham-Book",
-            "default"
+            "default",
+            "Helvetica"
         ],
-        "nativeApis": 0,
+        "nativeApis": 3,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -101,7 +101,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2023-11-17T08:27:03.569Z",
-    "createdVizVersion": "9.2.73",
-    "project_version": "sprint39"
+    "createdOn": "2024-07-08T08:21:24.164Z",
+    "createdVizVersion": "9.5.28",
+    "project_version": "sprint42"
 }

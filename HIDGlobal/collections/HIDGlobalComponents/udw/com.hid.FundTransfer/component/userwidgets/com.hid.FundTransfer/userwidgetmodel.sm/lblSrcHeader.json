@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfa8161f7d654aa080d045cd1bde4932",
+    "_skin_": "sfe8f6e53aaa43908e02dbc6897055d0",
     "_text_": "Source Account",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e708a11046ae45c8a5c4491767d30508",
+    "kuid": "udfd2b9842104fd59b5d6b9b2ac4c8d6",
     "name": "kony.ui.Label",
     "parent": "flxSrcHeader",
     "pf": "userwidgetmodel",

@@ -1,0 +1,36 @@
+{
+    "AS_Segment_e2b37beb9d254b6ebcbb3721dc62f336": {
+        "id": "AS_Segment_e2b37beb9d254b6ebcbb3721dc62f336",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u9657723ead14416b2b607f60803b232"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___c006e5030e3c43baa51305a2a12f63e1",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "initiateApprove",
+            "display": "initiateApprove",
+            "inputparams": [{
+                "name": "rowNumber",
+                "value": " rowNumber"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

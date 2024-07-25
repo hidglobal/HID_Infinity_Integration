@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s1e973d7141d4c49a9092c4dfbdfcc21",
+    "_skin_": "s20cdd704bf04b0a9bf6f190aeb6a004",
     "_text_": "Incorrect PIN",
     "_top_": {
         "type": "number",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e0642e54de39419bb6f946d91993c5d6",
+    "kuid": "u694af76a19a4a23acd32ec0ea295336",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxErrorConfirmPIN",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7ab1bb0b20c4897baf684b976675330",
+    "_skin_": "s1143c41c15843139afe754e17098529",
     "_text_": "Please Confirm the Transaction with amount 11404722 , amount 200 and with reference testing",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d223ebaad4af44dfb9b7076adcea2b30",
+    "kuid": "u4be0daebb61442b9f95e57b00825ed6",
     "name": "kony.ui.Label",
     "parent": "flxMain",
     "pf": "userwidgetmodel",

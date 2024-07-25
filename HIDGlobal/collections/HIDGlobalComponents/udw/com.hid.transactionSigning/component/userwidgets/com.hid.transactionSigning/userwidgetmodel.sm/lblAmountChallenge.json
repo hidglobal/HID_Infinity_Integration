@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s78623dcd36b4fbb86a143b5d160f76a",
+    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
     "_text_": "Amount*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f96246a5397442e6b07a00930251f544",
+    "kuid": "ud3a14c5b2b24a4db1ac8fe91b5fdc5d",
     "name": "kony.ui.Label",
     "parent": "flxAmountChallenge",
     "pf": "userwidgetmodel",

@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s964a11f6fa344b0ad58556d0db8c307",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "passwordicon_3_2.png",
     "_top_": {
         "type": "string",
@@ -40,7 +40,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "f7cc10095f0c4b32852a3bf65b09585e",
+    "kuid": "u46c87afe13e47a6b61a33de2a8d50bd",
     "name": "kony.ui.Image2",
     "parent": "flxChangePassword",
     "pf": "userwidgetmodel",

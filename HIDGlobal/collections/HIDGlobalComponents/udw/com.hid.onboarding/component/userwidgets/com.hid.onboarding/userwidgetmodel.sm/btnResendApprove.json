@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "see4fd9d9ea649c8b7ddf1a4a647b0bc",
+    "_skin_": "sfa39ffdbc494b789509121a0456e264",
     "_text_": "Resend Push Notification",
     "_top_": {
         "type": "string",
@@ -43,12 +43,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "sc38d983a17d4db398f58d4999b9d0b7",
+    "focusskin": "sa55e9e413b046cf97c0889bf804cd77",
     "id": "btnResendApprove",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ha0f1a3db13f4d1baeb5502bf368f71b",
+    "kuid": "ua2a6889dbcd43c89f03ca74c6696f90",
     "name": "kony.ui.Button",
     "parent": "flxButtonsApprove",
     "pf": "userwidgetmodel",

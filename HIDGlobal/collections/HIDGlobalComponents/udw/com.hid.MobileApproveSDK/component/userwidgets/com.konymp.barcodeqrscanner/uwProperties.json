@@ -5,50 +5,50 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "j2f6c91b877d4ca5ac4978d19c8b1adc",
+                    "kuid": "e7362534d850452397f3eb9a8bb9cd13",
                     "paramList": [],
                     "propertyKey": "resumeScan",
                     "pw": {
                         "displayName": "resumeScan",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "h7b25e6eebc34de98edf7a77c8ad29ab",
+                    "srcWgtKUID": "uaec0dbd1a7d42469e2e9ef34e155daf",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "c6a2ed1464934a5faf603f7f7792042b",
+                    "kuid": "h4bb5bfd2fca488db928b815ea827fd2",
                     "paramList": [],
                     "propertyKey": "flashControl",
                     "pw": {
                         "displayName": "flashControl",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "h7b25e6eebc34de98edf7a77c8ad29ab",
+                    "srcWgtKUID": "uaec0dbd1a7d42469e2e9ef34e155daf",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "fb47537ffe734694bba2fea6abb8b53a",
+                    "kuid": "db9a620044604ece84538ac9e8b90801",
                     "paramList": [],
                     "propertyKey": "renderScan",
                     "pw": {
                         "displayName": "renderScan",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "h7b25e6eebc34de98edf7a77c8ad29ab",
+                    "srcWgtKUID": "uaec0dbd1a7d42469e2e9ef34e155daf",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "d31a4341a977480b87d5c33c14da6c93",
+                    "kuid": "h88f648b5fbd4885a63f44937071b4ef",
                     "paramList": [],
                     "propertyKey": "stopScan",
                     "pw": {
                         "displayName": "stopScan",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "h7b25e6eebc34de98edf7a77c8ad29ab",
+                    "srcWgtKUID": "uaec0dbd1a7d42469e2e9ef34e155daf",
                     "type": "event"
                 }
             ],
@@ -58,7 +58,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "f4d196795094487eae82b87ab7b20f4f",
+                    "kuid": "d2a62ad743104ff2b9b140e46a92bea6",
                     "paramList": [
                         {
                             "name": "result"
@@ -73,12 +73,12 @@
                         "displayName": "afterScan",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "h7b25e6eebc34de98edf7a77c8ad29ab",
+                    "srcWgtKUID": "uaec0dbd1a7d42469e2e9ef34e155daf",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "i6bb5e83c5d44211b485e74c933fe512",
+                    "kuid": "fa451c5a8c9d43c8a0b611f2a7a8a758",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "onClickClose",
@@ -86,12 +86,12 @@
                         "displayName": "onClickClose",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "h7b25e6eebc34de98edf7a77c8ad29ab",
+                    "srcWgtKUID": "uaec0dbd1a7d42469e2e9ef34e155daf",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "c911c075b32246879e52eacbb2cea7c4",
+                    "kuid": "b530130136824eb6b76602a34aefe5ca",
                     "paramList": [
                         {
                             "name": "error"
@@ -103,7 +103,7 @@
                         "displayName": "errorCallback",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "h7b25e6eebc34de98edf7a77c8ad29ab",
+                    "srcWgtKUID": "uaec0dbd1a7d42469e2e9ef34e155daf",
                     "type": "event"
                 }
             ],
@@ -123,7 +123,7 @@
                     "access": "Write",
                     "defaultValue": "Back",
                     "group": "General",
-                    "kuid": "f7a3baf4683e4aa49828aa16110e175a",
+                    "kuid": "a8a8890a63f94996b05dbccfc3b6de58",
                     "originalPropertyKey": "cameraFacing",
                     "propertyIndex": 1,
                     "propertyKey": "cameraFacing",
@@ -131,7 +131,7 @@
                         "displayName": "Camera Facing",
                         "uiRepresentation": "Label-Combobox"
                     },
-                    "srcWgtKUID": "h7b25e6eebc34de98edf7a77c8ad29ab",
+                    "srcWgtKUID": "uaec0dbd1a7d42469e2e9ef34e155daf",
                     "type": "list selector",
                     "value": [
                         "Front",
@@ -142,7 +142,7 @@
                     "access": "Write",
                     "defaultValue": false,
                     "group": "General",
-                    "kuid": "g7275124c99f4771bccb3da1e1ef63c8",
+                    "kuid": "ae6d4f43d6fd4dcba8cbfbb09fbb966b",
                     "originalPropertyKey": "renderAutomatic",
                     "propertyIndex": 2,
                     "propertyKey": "renderAutomatic",
@@ -150,7 +150,7 @@
                         "displayName": "Render Automatic",
                         "uiRepresentation": "Label-Radiobuttongroup"
                     },
-                    "srcWgtKUID": "h7b25e6eebc34de98edf7a77c8ad29ab",
+                    "srcWgtKUID": "uaec0dbd1a7d42469e2e9ef34e155daf",
                     "type": "boolean",
                     "value": "true/false"
                 },
@@ -158,7 +158,7 @@
                     "access": "Write",
                     "defaultValue": false,
                     "group": "General",
-                    "kuid": "a6a9067848b24430b68e0e0dfc7fc38a",
+                    "kuid": "c148cad46ef141adbe9673bd027350b0",
                     "originalPropertyKey": "enableContinuousScanning",
                     "propertyIndex": 3,
                     "propertyKey": "enableContinuousScanning",
@@ -166,7 +166,7 @@
                         "displayName": "Enable Continuous Scanning",
                         "uiRepresentation": "Label-Radiobuttongroup"
                     },
-                    "srcWgtKUID": "h7b25e6eebc34de98edf7a77c8ad29ab",
+                    "srcWgtKUID": "uaec0dbd1a7d42469e2e9ef34e155daf",
                     "type": "boolean",
                     "value": "true/false"
                 }
@@ -175,7 +175,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "db3d9c24ca5545248b47b9b43258d73f",
+                    "kuid": "febe22d7a5a54e6496ba6c6abb074b58",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 4,
                     "propertyKey": "closeButtonVisibility",
@@ -189,12 +189,12 @@
                         "uiRepresentation": "Label-Radiobuttongroup",
                         "wType": "FlexContainer"
                     },
-                    "srcWgtKUID": "i8e3ee0e833a4c27a44421f8178e31af"
+                    "srcWgtKUID": "ud56ed207c35407a8a7754155e2e0652"
                 },
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "j586dff3f0824031aac9352fb26a679d",
+                    "kuid": "dc13ce41494041558f27764e1b6cc674",
                     "originalPropertyKey": "src",
                     "propertyIndex": 5,
                     "propertyKey": "closeButtonImage",
@@ -217,12 +217,12 @@
                         "uiRepresentation": "Label-Label-Button",
                         "wType": "Image"
                     },
-                    "srcWgtKUID": "fb8452b8a1a647eba8a089faf22e90bd"
+                    "srcWgtKUID": "ud23f46842834a13ac1d5c0786e52789"
                 },
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "c710bb37f59e467689928d1d25b3a198",
+                    "kuid": "j8afed71894c44dd89cb76cf28c3dd10",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 6,
                     "propertyKey": "cameraToggleVisibility",
@@ -236,12 +236,12 @@
                         "uiRepresentation": "Label-Radiobuttongroup",
                         "wType": "FlexContainer"
                     },
-                    "srcWgtKUID": "da90b2c8ebc4423f8eb01035a2b538af"
+                    "srcWgtKUID": "ua1fea0d12eb4183afb181464f6c60df"
                 },
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "c40ae100857346fb99c18833348eec37",
+                    "kuid": "fcd233efeb2f4ff9819883f3ad31abb7",
                     "originalPropertyKey": "src",
                     "propertyIndex": 7,
                     "propertyKey": "cameraToggleImage",
@@ -264,12 +264,12 @@
                         "uiRepresentation": "Label-Label-Button",
                         "wType": "Image"
                     },
-                    "srcWgtKUID": "e61974f0c5bd4839a982aafd3dff8632"
+                    "srcWgtKUID": "ubb28b9800194cef823c7fbaadaf649b"
                 },
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "gba25449c3a648769a8e38ef25eb2d0c",
+                    "kuid": "a5ee5b235a9541b492f882aac09c0a22",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 8,
                     "propertyKey": "flashButtonVisibility",
@@ -283,12 +283,12 @@
                         "uiRepresentation": "Label-Radiobuttongroup",
                         "wType": "FlexContainer"
                     },
-                    "srcWgtKUID": "a1baa3a2701b4c8e85b5ea2c405d395a"
+                    "srcWgtKUID": "uf8161f3154841249785e2fa734ac817"
                 },
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "i20427b4271545048ed09c411a83ea40",
+                    "kuid": "d0efa05dfd9b46b49cdfa972d6d4380b",
                     "originalPropertyKey": "src",
                     "propertyIndex": 9,
                     "propertyKey": "flashButtonImage",
@@ -311,7 +311,7 @@
                         "uiRepresentation": "Label-Label-Button",
                         "wType": "Image"
                     },
-                    "srcWgtKUID": "g1a15b6b2e8e42a0b113bd8ac6bae066"
+                    "srcWgtKUID": "ue0a7d1b701c476d93a6a8dbbe202817"
                 }
             ]
         },

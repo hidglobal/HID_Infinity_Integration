@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s6d41fbb8a0a46af9988850a1bf05912",
+    "_skin_": "s6ca5685dfa54a4887d4f3645513cd85",
     "_text_": "Please enter your PIN to continue.",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f10ea449a65541acba49cb37e9f6d9b5",
+    "kuid": "u931c24b3db64db78736efab35f828b2",
     "name": "kony.ui.Label",
     "parent": "flxEnterPassword",
     "pf": "userwidgetmodel",

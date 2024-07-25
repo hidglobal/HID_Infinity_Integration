@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s0110c6e51734175b4910209b5c5b877",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "checkingico.png",
     "_top_": {
         "type": "string",
@@ -44,7 +44,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e9b6ab61d1e745d6be3914727af8ccae",
+    "kuid": "ub799f5b77c541d897a24f48ff47d843",
     "name": "kony.ui.Image2",
     "parent": "flxChecAccInner",
     "pf": "userwidgetmodel",

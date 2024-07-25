@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -43,7 +43,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a2ce8ffef7584ad6b37f0d12074e8aac",
+    "kuid": "uf0b48715d644e9b935a52c3fcaf1381",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxForgotPassword",

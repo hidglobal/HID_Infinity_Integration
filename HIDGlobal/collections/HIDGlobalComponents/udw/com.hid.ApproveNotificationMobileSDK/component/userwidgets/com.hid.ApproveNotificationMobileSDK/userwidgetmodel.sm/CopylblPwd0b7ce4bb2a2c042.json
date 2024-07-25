@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7ab1bb0b20c4897baf684b976675330",
+    "_skin_": "s1143c41c15843139afe754e17098529",
     "_text_": "Please Enter the password to continue",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a7a3cf1c7b074731a5ca61909f256941",
+    "kuid": "ue6a13865f034bd0b37693c5848ab014",
     "name": "kony.ui.Label",
     "parent": "flxPasswordTimeout",
     "pf": "userwidgetmodel",

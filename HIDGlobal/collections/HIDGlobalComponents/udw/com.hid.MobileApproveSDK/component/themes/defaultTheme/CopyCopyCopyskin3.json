@@ -1,97 +1,97 @@
 {
-  "android": {
-    "font_name": "NeueHaasUnica-Medium",
-    "font_size": 130,
-    "isForked": false
-  },
-  "androidwearos": {
+    "android": {
+        "font_name": "NeueHaasUnica-Medium",
+        "font_size": 130,
+        "isForked": false
+    },
+    "androidwearos": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "background_color": "00000000",
+    "bg_type": "one",
+    "border_color": "00000000",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "desktopweb": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "fontSizeInPx": false,
+    "font_color": "333333ff",
     "font_name": "Helvetica",
     "font_size": 130,
-    "isForked": false
-  },
-  "background_color": "00000000",
-  "bg_type": "one",
-  "border_color": "00000000",
-  "border_style": "plain",
-  "border_type": 0,
-  "border_width": 0,
-  "desktopweb": {
-    "font_name": "Helvetica",
-    "font_size": 130,
-    "isForked": false
-  },
-  "fontSizeInPx": false,
-  "font_color": "333333ff",
-  "font_name": "Helvetica",
-  "font_size": 130,
-  "font_style": "normal",
-  "font_weight": "normal",
-  "ipad": {
-    "font_name": "Helvetica",
-    "font_size": 130,
-    "isForked": false
-  },
-  "iphone": {
-    "font_name": "NeueHaasUnica-Medium",
-    "font_size": 130,
-    "isForked": false
-  },
-  "isDefaultSkin": false,
-  "kiosk": {
-    "font_name": "None",
-    "font_size": 130,
-    "isForked": false
-  },
-  "kuid": "s1a7107643764141a0c76b6fc5dfd6c9",
-  "spaan": {
-    "font_name": "Helvetica",
-    "font_size": 130,
-    "isForked": false
-  },
-  "spaandroidtablet": {
-    "font_name": "Helvetica",
-    "font_size": 130,
-    "isForked": false
-  },
-  "spaip": {
-    "font_name": "Helvetica",
-    "font_size": 130,
-    "isForked": false
-  },
-  "spaipad": {
-    "font_name": "Helvetica",
-    "font_size": 130,
-    "isForked": false
-  },
-  "spawindowstablet": {
-    "font_name": "Helvetica",
-    "font_size": 130,
-    "isForked": false
-  },
-  "spawinphone8": {
-    "font_name": "Helvetica",
-    "font_size": 130,
-    "isForked": false
-  },
-  "tabrcandroid": {
-    "font_name": "Helvetica",
-    "font_size": 130,
-    "isForked": false
-  },
-  "wType": "Label",
-  "watchos": {
-    "font_name": "Helvetica",
-    "font_size": 130,
-    "isForked": false
-  },
-  "windows8": {
-    "font_name": "None",
-    "font_size": 130,
-    "isForked": false
-  },
-  "winphone8": {
-    "font_name": "None",
-    "font_size": 130,
-    "isForked": false
-  }
+    "font_style": "normal",
+    "font_weight": "normal",
+    "ipad": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "iphone": {
+        "font_name": "NeueHaasUnica-Medium",
+        "font_size": 130,
+        "isForked": false
+    },
+    "isDefaultSkin": false,
+    "kiosk": {
+        "font_name": "None",
+        "font_size": 130,
+        "isForked": false
+    },
+    "kuid": "sb17e5efe87049a0882d6ba7cd8eeba8",
+    "spaan": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "spaandroidtablet": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "spaip": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "spaipad": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "spawindowstablet": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "spawinphone8": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "tabrcandroid": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "wType": "Label",
+    "watchos": {
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "isForked": false
+    },
+    "windows8": {
+        "font_name": "None",
+        "font_size": 130,
+        "isForked": false
+    },
+    "winphone8": {
+        "font_name": "None",
+        "font_size": 130,
+        "isForked": false
+    }
 }

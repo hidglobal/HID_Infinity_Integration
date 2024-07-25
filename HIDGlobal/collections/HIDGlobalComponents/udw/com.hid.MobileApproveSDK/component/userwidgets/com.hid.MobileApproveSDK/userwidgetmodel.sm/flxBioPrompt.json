@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s337b9957af0451981809b4abc6798f0",
+    "_skin_": "sbc6966da3664aa5a5a2d2696b57dc87",
     "_top_": {
         "type": "string",
         "value": "27.75%"
@@ -49,7 +49,7 @@
     "id": "flxBioPrompt",
     "info": null,
     "isvisible": false,
-    "kuid": "j940994aa9474842b4b835f3a021671d",
+    "kuid": "u397494d249d454bb2e68e0bff496782",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxSetPassword",

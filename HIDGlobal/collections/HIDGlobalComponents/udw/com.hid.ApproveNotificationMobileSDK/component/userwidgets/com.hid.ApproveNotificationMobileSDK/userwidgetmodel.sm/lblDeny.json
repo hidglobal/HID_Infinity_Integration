@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb48a212353a414f975a9a7e65d3d0bc",
+    "_skin_": "s3fc2a2c630a43eea12139314d051b75",
     "_text_": "Deny",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d7e1c3ffdf65448a9f274586b12a57a5",
+    "kuid": "uad16ae0048a462a9b931e3f35d042fc",
     "name": "kony.ui.Label",
     "parent": "flxDenyLight",
     "pf": "userwidgetmodel",

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sfa20c6b3c1e4e9a8958024d3626d62e",
+    "_skin_": "sd99e35b20984fa88ef2199b28675fcd",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -45,7 +45,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a8c088392d014643bdf3a3a5b0ba0341",
+    "kuid": "e8333988b3cf4288826ebc65fc9ef7ee",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "CopyCopyflxDevicesSegment",

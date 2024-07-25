@@ -24,7 +24,7 @@
         0,
         0
     ],
-    "_skin_": "s6bb46c09a91419a978c77e8d9573d6b",
+    "_skin_": "s9dd057547d441aea388f454903b364c",
     "_text_": "Please enter your PIN to delete your Profile",
     "_top_": {
         "type": "string",
@@ -58,7 +58,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bce34e0da7d740d2bb8845b16eaf8e9c",
+    "kuid": "u382bebfdccf449c842fb6f0fdc61ae7",
     "name": "kony.ui.Label",
     "parent": "flxEnterPin",
     "pf": "userwidgetmodel",

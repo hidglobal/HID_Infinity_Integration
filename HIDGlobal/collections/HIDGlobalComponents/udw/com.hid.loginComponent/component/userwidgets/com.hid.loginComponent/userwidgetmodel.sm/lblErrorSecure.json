@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa0bf0a81c874548b91b96ec3eb17165",
+    "_skin_": "sf50ae94183d4f98a4bdd208816dc3a3",
     "_text_": "Label",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "cb1f76d0698240c5b1b7548a29c991ea",
+    "kuid": "u6a4a1fe0b374d8ca65a357fce5616f5",
     "name": "kony.ui.Label",
     "parent": "flxSecure",
     "pf": "userwidgetmodel",

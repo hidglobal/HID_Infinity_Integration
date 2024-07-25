@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s3af52d400744bad8336967476df4645",
+    "_skin_": "se328b1f6288450eb52920649eba1a5f",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -44,7 +44,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "e39afe102ffa4e25b83b0d58475c9420",
+    "kuid": "ue9164bd813f43abad8ad104abadb061",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "FundTransfer",

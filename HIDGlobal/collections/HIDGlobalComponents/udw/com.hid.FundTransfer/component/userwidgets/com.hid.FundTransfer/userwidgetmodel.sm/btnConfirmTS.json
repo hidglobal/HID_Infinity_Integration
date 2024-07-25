@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb646ab80a9943c69209f6a80463e4d5",
+    "_skin_": "s42d0b82a5024d359c6846b27c379545",
     "_text_": "CONFIRM",
     "_top_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s36a366349124a5ead651a4065b1de75",
+    "focusskin": "s31e6138eed94ed9b3cc6e3270da03c2",
     "id": "btnConfirmTS",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ef29e9ab8db84d328b06a7efb2e1944f",
+    "kuid": "u34e7d9f8d6d47d1b543c36123a2c13b",
     "name": "kony.ui.Button",
     "parent": "FlexContainer0af9571b4e0cd4f",
     "pf": "userwidgetmodel",

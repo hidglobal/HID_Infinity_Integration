@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s8d78f34326c4d89b053185b09dacd9a",
+    "_skin_": "sf2b0afe3c5742ac8d85e73e770f40f2",
     "_top_": {
         "type": "string",
         "value": "26.39%"
@@ -57,7 +57,7 @@
     "id": "flxManualMain",
     "info": null,
     "isvisible": true,
-    "kuid": "ed54d9db0b3c468faa1d3dafe7b69f5f",
+    "kuid": "u1b0bfed7032471da9b1e9ccb776c797",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxManual",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s215b310c31a49f09034838f1d5c3224",
+    "_skin_": "s9114b82fbe04e8ab9c59b6cfc479797",
     "_text_": "HID Approve Secure Code",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ed11d9356a3c481a8f5f436103349403",
+    "kuid": "u414623580ce425aaac50cb0fb3213eb",
     "name": "kony.ui.Label",
     "parent": "flxOTP",
     "pf": "userwidgetmodel",

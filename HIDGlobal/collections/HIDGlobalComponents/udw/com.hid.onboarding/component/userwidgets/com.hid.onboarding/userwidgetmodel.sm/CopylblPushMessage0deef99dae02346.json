@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s14f8f5c445c4881afe471933de924af",
+    "_skin_": "s595007a349c4b6f811e1cf9c16553cd",
     "_text_": "Dear user registration process is completed successfully. Please Login to experience the Digital Banking",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b38d21451c2a4d5cb62e827c9c93350f",
+    "kuid": "ue61fe8c2a024b219dd8e78dde632f16",
     "name": "kony.ui.Label",
     "parent": "flxRegistrationSuccess",
     "pf": "userwidgetmodel",

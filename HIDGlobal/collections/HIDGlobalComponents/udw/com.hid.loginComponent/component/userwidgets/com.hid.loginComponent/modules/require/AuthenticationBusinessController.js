@@ -6,9 +6,14 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
   globals.approveFlag = false;
   globals.approvePoll = false;
   globals.auth_req_id = "";
+  globals.scan_auth_req_id = "";
+  globals.scanApprovePoll = false;
+  globals.ScanApproveFlag = false;
+
   var userName = "";
   var instance = null;
   var pollCounter = 2;
+  var ScanToApprovePollCounter = 2;
 
   const objectServiceName = {
     "name" : "HIDAuthService",
@@ -71,8 +76,37 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
                       "password": "${loginJSON.password}"
                   }
             }`;
-        }
-    };   
+    },
+    getLoginPayloadFIDO: function(loginJSON) {
+      // Using ES6 Template Literal
+      return `{
+                  "Meta": {
+                      "EventType": "urn:com:temenos:security:event:login:v1",  
+                      "RiskScore": {
+                          "Required": "${loginJSON.requiredRiskScore}",
+                          "Current": "${loginJSON.currentRiskScore}"
+                      },
+                      "TransactionId": "${loginJSON.transactionId}"
+                  },
+                  "urn:com:temenos:security:event:login:v1": {
+                      "Scope": "LOGIN" ,
+                      "Name": "Temenos Internet Banking",
+                      "userid": "${loginJSON.userid}",
+                      "request_uri": "${loginJSON.request_uri}",
+                      "csrf": "${loginJSON.csrf}",
+                      "password": {
+                          "id": "${loginJSON.password.id}",
+                          "response": {
+                              "clientDataJSON": "${loginJSON.password.response.clientDataJSON}",
+                              "authenticatorData": "${loginJSON.password.response.authenticatorData}",
+                              "signature": "${loginJSON.password.response.signature}",
+                              "userHandle": "${loginJSON.password.response.userHandle}"
+                          }
+                      }
+                   }
+           	   }`;
+      }
+  };   
 
   
   AuthenticationBusinessController.prototype.validatePassword = function(loginJson, S_CB, F_CB,rmsLoad=null){
@@ -88,8 +122,12 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     var client = KNYMobileFabric;
     var serviceName = "customHIDLogin";
     var identitySvc = client.getIdentityService(serviceName);
-    let loginPayload = SCAEventConstants.getLoginPayload(loginJson);
-
+    let loginPayload = {};
+    if(authType == "FIDO"){
+      loginPayload = SCAEventConstants.getLoginPayloadFIDO(loginJson);
+    } else {
+      loginPayload = SCAEventConstants.getLoginPayload(loginJson);
+    }
     if(rmsLoad){
       let obj = JSON.parse(loginPayload) ;
       obj.Meta.rmspayload = rmsLoad;
@@ -231,12 +269,10 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     konymp.logger.trace("----------Exiting pollForConsensus Function---------", konymp.logger.FUNCTION_EXIT);
   };
 
-  AuthenticationBusinessController.prototype.pollForConsensus = function(auth_req_id, factor, mfa_key, S_CB, F_CB){
+  AuthenticationBusinessController.prototype.pollForConsensus = function(auth_req_id, factor,mfa_key, S_CB, F_CB){
     if (globals.auth_req_id !== auth_req_id) return;
     pollCounter--;
     const successCB = response => {
-      kony.print("Sushant "+pollCounter+" "+auth_req_id);
-      kony.print("Sushant "+pollCounter+" "+globals.auth_req_id);
       if (globals.auth_req_id !== auth_req_id) return;
       pollCounter =2;
       if(response.ApproveStatus[0].auth_status === "accept"){
@@ -247,14 +283,102 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
       }           
     };
     const failureCB =  error => {
-      kony.print("Sushant "+pollCounter+" "+auth_req_id);
-      kony.print("Sushant "+pollCounter+" "+globals.auth_req_id);
       if (globals.auth_req_id !== auth_req_id) return;
       if(pollCounter <= 0){
         F_CB({"message":"Approve poll Time Expired"});
         pollCounter = 2;
       } else{
         this.pollForConsensus(auth_req_id, factor, mfa_key, S_CB, F_CB);
+      }
+    };
+    var params = {
+      "mfa_key": auth_req_id
+    };
+    this.approveStatusPolling(params, successCB, failureCB)
+  };
+
+  AuthenticationBusinessController.prototype.approveStatusPolling = function(params, S_CB, F_CB) {
+    let objService = ObjectServices.getDataModel("ApproveStatus");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    objService.customVerb("poll", params, callback);
+  };
+  
+  AuthenticationBusinessController.prototype.scanToApproveFirstFactor = function(username,password,authType, S_CB, F_CB,rmsLoad=null){
+    kony.print("Business Controller authtype "+ authType);
+    konymp.logger.trace("----------Entering scanToApproveFirstFactor Function---------", konymp.logger.FUNCTION_ENTRY);
+    if(authType === "APPROVE" && !globals.scanApprovePoll){
+      globals.scan_auth_req_id = password;
+      ScanToApprovePollCounter = 2;
+      this.pollForScanToApprove(username,password,authType, S_CB, F_CB,rmsLoad);
+      return;
+    }    
+    globals.scanApprovePoll = false;
+    konymp.logger.trace("----------Entering authenticateFirstFactor Function---------", konymp.logger.FUNCTION_ENTRY);
+    var client = KNYMobileFabric;
+    let transactionId = Math.floor(Math.random() * 10000);
+    kony.print("username : "+ username);
+    var loginJson = {
+			"userid" : username, "password" : password, "requiredRiskScore" : "0", 
+                     "currentRiskScore" : "2", "transactionId" : transactionId
+    }
+    var serviceName = "customHIDLogin";
+    var identitySvc = client.getIdentityService(serviceName);
+    let loginPayload = SCAEventConstants.getLoginPayload(loginJson);
+	
+    kony.print("RMSLOAD BUISNESS "+ JSON.stringify(rmsLoad))
+    if(rmsLoad){
+      let obj = JSON.parse(loginPayload) ;
+      obj.Meta.rmspayload = rmsLoad;
+      loginPayload = JSON.stringify(obj);
+    }
+    var options = {
+      "payload" : loginPayload,
+      "authType":authType,
+      "isMfa":true
+    };
+
+    identitySvc.login(options,
+      success=>{
+        var mfaDetails = identitySvc.getMfaDetails();
+        konymp.logger.debug("authenticateFirstFactor Function success", konymp.logger.SUCCESS_CALLBACK);
+        userName = loginJson.userid;
+        S_CB(mfaDetails,username);
+      },
+      error=>{
+        konymp.logger.debug("authenticateFirstFactor function error : "+ JSON.stringify(error), konymp.logger.ERROR_CALLBACK);
+        F_CB(error);
+      });
+    konymp.logger.trace("----------Exiting authenticateFirstFactor Function---------", konymp.logger.FUNCTION_EXIT);
+  }
+  
+    AuthenticationBusinessController.prototype.pollForScanToApprove = function(username,auth_req_id, authType, S_CB, F_CB,rmsLoad=null){
+    if (globals.scan_auth_req_id !== auth_req_id) return;
+    ScanToApprovePollCounter--;
+    const successCB = response => {
+      if (globals.scan_auth_req_id !== auth_req_id) return;
+      ScanToApprovePollCounter = 2;
+      if(response.ApproveStatus[0].auth_status === "accept"){
+        globals.scanApprovePoll = true;
+      	username = response.ApproveStatus[0].usercode;
+        this.scanToApproveFirstFactor(username,auth_req_id,authType, S_CB, F_CB,rmsLoad);
+      }else if(response.ApproveStatus[0].auth_status === "deny"){
+        konymp.logger.debug("Scan to Approve Notification status for authID : "+auth_req_id+ "is :"+response.ApproveStatus[0].auth_status, konymp.logger.ERROR_CALLBACK);
+        F_CB(response.ApproveStatus[0].auth_status);
+      }           
+    };
+    const failureCB =  error => {
+      if (globals.scan_auth_req_id !== auth_req_id) return;
+      if(ScanToApprovePollCounter <= 0){
+        F_CB({"message":"Approve poll Time Expired"});
+        ScanToApprovePollCounter = 2;
+      } else{
+        this.pollForScanToApprove(username,auth_req_id, authType, S_CB, F_CB,rmsLoad);
       }
     };
     var params = {
@@ -302,7 +426,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
         }
       };
 
-      otpRequestDataModel.customVerb("sendOTP", params, callback);
+      otpRequestDataModel.customVerb("sendOTPLogin", params, callback); // Karthiga Changes
       konymp.logger.trace("----------Exiting sendOTP Function---------", konymp.logger.FUNCTION_EXIT);
     } catch (exception) {
       konymp.logger.error("Exception in sendOTP function : " + exception.message, konymp.logger.EXCEPTION);       
@@ -384,6 +508,62 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     };
     getClientIp.customVerb("getClientIp", "" , callback);
   };
+  
+  AuthenticationBusinessController.prototype.getClientIpScanToApprove = function(qrDataResponse,S_CB, F_CB) {
+    let getClientIp = ObjectServices.getDataModel("GetClientIp");
+    const callback = (status,response) => {
+      if (status) {
+        S_CB(qrDataResponse,response);
+      } else {
+        F_CB(qrDataResponse,response);
+      }
+    };
+    getClientIp.customVerb("getClientIp", "" , callback);
+  };
+  
+  AuthenticationBusinessController.prototype.getScanToApproveQrData = function(S_CB,F_CB){
+    
+    let getScanToApproveQrData = ObjectServices.getDataModel("getScanToApproveQrData");
+    const callback = (status,response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    getScanToApproveQrData.customVerb("getScanToApproveQrData", "" , callback);
+
+  }
+    
+  AuthenticationBusinessController.prototype.getFIDOAuthenticationOptions
+  	= function(params, S_CB, F_CB)
+  {
+    let objSvc = ObjectServices.getDataModel("FIDOAuthentication");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    
+    objSvc.customVerb("getAuthenticationOptions", params, callback);
+  }
+  
+  AuthenticationBusinessController.prototype.authenticateFIDO
+  	= function(params, S_CB, F_CB)
+  {
+    let objSvc = ObjectServices.getDataModel("FIDOAuthentication");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
+    };
+    
+    objSvc.customVerb("authenticate", params, callback);
+  }
 
   function AuthenticationBusinessController() {
 

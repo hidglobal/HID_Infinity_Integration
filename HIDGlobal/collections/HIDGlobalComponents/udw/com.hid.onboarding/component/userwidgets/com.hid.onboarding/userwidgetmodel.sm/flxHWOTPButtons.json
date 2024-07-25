@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s03e2b2ec7e14e19a5b5ee5510daec85",
+    "_skin_": "sdf600bf4efe46ae99842ff056cd38df",
     "_top_": {
         "type": "string",
         "value": "2%"
@@ -49,7 +49,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d43bb97f65bd497ba120b1fce7674a0f",
+    "kuid": "ua9dcc048a824dd0a73475cb25cdcacd",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxHWOTP",

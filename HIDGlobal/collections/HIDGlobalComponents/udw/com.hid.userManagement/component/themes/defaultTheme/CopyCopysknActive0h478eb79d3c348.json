@@ -1,8 +1,8 @@
 {
-  "applicableblockedUIWidget": "Button",
-  "background_color": "388e3cff",
-  "bg_type": "one",
-  "isDefaultSkin": false,
-  "kuid": "sc6dead74398418695a947f398604aa6",
-  "wType": "Blocked UI"
+    "applicableblockedUIWidget": "Button",
+    "background_color": "388e3cff",
+    "bg_type": "one",
+    "isDefaultSkin": false,
+    "kuid": "s78fe0649558442095cc9e549982e9f2",
+    "wType": "Blocked UI"
 }

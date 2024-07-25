@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s21e66de00fa4cc68070da9dff310cc2",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -38,7 +38,9 @@
         "type": "string",
         "value": "50%"
     },
-    "children": [],
+    "children": [
+        "qrcodegeneratorNew"
+    ],
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
@@ -46,7 +48,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d721bb9d7b93498780159146578e5842",
+    "kuid": "u551a27c7220472bb35e91d015b0d734",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxRegOptions",

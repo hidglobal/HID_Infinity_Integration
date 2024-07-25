@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s2a4a882160b4f989fc2bca6f8fe0e07",
+    "_skin_": "s9dc944366b34be5b86575dd1ceea0f3",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -36,12 +36,15 @@
     "canUpdateUI": true,
     "children": [
         "flxLogin",
+        "flxLoginFIDO",
         "flxOTP",
         "flxOTPError",
         "flxPushDevices",
         "flxApprove",
         "flxOOBPIN",
-        "flxSecure"
+        "flxSecure",
+        "flxScanToApprove",
+        "flxScanToApproveMain"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -52,7 +55,7 @@
     "iphone": {},
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i6dc887ee05944d699e88d11a7bb00ac",
+    "kuid": "u3bd4bd0c4f04df3a5e3be7361298f91",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "userwidgetmodel",

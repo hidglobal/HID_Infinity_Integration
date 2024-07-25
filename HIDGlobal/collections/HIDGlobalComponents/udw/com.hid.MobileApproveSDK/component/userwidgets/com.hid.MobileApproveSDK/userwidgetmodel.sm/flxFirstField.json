@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s18a492191874719b241c9a655e4389b",
+    "_skin_": "s56527b3cb1a429e98b414863fab2297",
     "_top_": {
         "type": "string",
         "value": "5%"
@@ -48,7 +48,7 @@
     "id": "flxFirstField",
     "info": null,
     "isvisible": true,
-    "kuid": "ef58d7b9ecf349dcbc94a74934d3fadb",
+    "kuid": "uc5f0b1731574380b6eb7bbd36d4275f",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxMainUI",

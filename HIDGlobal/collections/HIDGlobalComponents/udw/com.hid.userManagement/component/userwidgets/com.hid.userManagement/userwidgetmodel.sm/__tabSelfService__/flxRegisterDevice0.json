@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sbf2d20374ca401d85839de109ca23be",
+    "_skin_": "s259a9f13bb44c1f8dfca7092ef758a0",
     "_top_": {
         "type": "string",
         "value": "2%"
@@ -36,7 +36,8 @@
     "canUpdateUI": true,
     "children": [
         "lblRegister",
-        "btnRegisterDevice"
+        "btnRegisterDevice",
+        "btnRegisterFIDODevice"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -45,7 +46,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f8b15c3564f54599823f0cfcaa6fef0f",
+    "kuid": "uc3a0555330f4a2cb7945636d15a7904",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "tabRegisterDevice",

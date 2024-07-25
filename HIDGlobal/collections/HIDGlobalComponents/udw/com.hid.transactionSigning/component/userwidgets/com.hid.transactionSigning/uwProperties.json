@@ -5,26 +5,26 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "e928aa0b961a4685af8c5f669940d186",
+                    "kuid": "e762cdae5e624225a49187bfd91a8e49",
                     "paramList": [],
                     "propertyKey": "initiate",
                     "pw": {
                         "displayName": "initiate",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "srcWgtKUID": "u378b0545c2d4a5297809c07c18dcb9c",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "de2c11b93dd34601bdde61c730fd6145",
+                    "kuid": "a5ffd9a7fd1a4153b896fe0361094ed1",
                     "paramList": [],
                     "propertyKey": "changeTSMode",
                     "pw": {
                         "displayName": "changeTSMode",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "srcWgtKUID": "u378b0545c2d4a5297809c07c18dcb9c",
                     "type": "event"
                 }
             ],
@@ -34,7 +34,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "i6c9bfda42e5420a85391d24f7ebe8b1",
+                    "kuid": "afc89f5389174af584136b465a5e847e",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "showLoading",
@@ -42,12 +42,12 @@
                         "displayName": "showLoading",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "srcWgtKUID": "u378b0545c2d4a5297809c07c18dcb9c",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "ffe8938244334e90b92326e4c9b11a0f",
+                    "kuid": "ef009a3e4ab949c197d132a8aa40def8",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "dismissLoading",
@@ -55,12 +55,12 @@
                         "displayName": "dismissLoading",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "srcWgtKUID": "u378b0545c2d4a5297809c07c18dcb9c",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "dd09b7c3e20b444b9ed1ef71585bbd34",
+                    "kuid": "hd20f5da4b784cab8c6d9da7f5a2d119",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "onTSSuccess",
@@ -68,7 +68,7 @@
                         "displayName": "onTSSuccess",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "srcWgtKUID": "u378b0545c2d4a5297809c07c18dcb9c",
                     "type": "event"
                 }
             ],
@@ -88,7 +88,7 @@
                     "access": "Write",
                     "defaultValue": "SyamTest1",
                     "group": "General",
-                    "kuid": "d82bcbc98b97412da538dd7a2b3713f3",
+                    "kuid": "ie7fd8df0c574a2bade4c1e59d406a24",
                     "originalPropertyKey": "username",
                     "propertyIndex": 1,
                     "propertyKey": "username",
@@ -97,7 +97,7 @@
                         "displayName": "username",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "srcWgtKUID": "u378b0545c2d4a5297809c07c18dcb9c",
                     "type": "string",
                     "value": ""
                 },
@@ -105,7 +105,7 @@
                     "access": "Write",
                     "defaultValue": "Sending amount transfers",
                     "group": "General",
-                    "kuid": "e58df238fdc448719e5bfef13a1c9203",
+                    "kuid": "cbc46d44e99747dabfd74a9106ba96cc",
                     "originalPropertyKey": "tds",
                     "propertyIndex": 2,
                     "propertyKey": "tds",
@@ -114,7 +114,7 @@
                         "displayName": "tds",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "srcWgtKUID": "u378b0545c2d4a5297809c07c18dcb9c",
                     "type": "string",
                     "value": ""
                 },
@@ -122,7 +122,7 @@
                     "access": "Write",
                     "defaultValue": false,
                     "group": "General",
-                    "kuid": "fa705f56339c4140969779eb811b0a67",
+                    "kuid": "cf51a914dfa24c52ae9a0b80ebfc4f18",
                     "originalPropertyKey": "isRMSEnabled",
                     "propertyIndex": 3,
                     "propertyKey": "isRMSEnabled",
@@ -131,7 +131,7 @@
                         "displayName": "isRMSEnabled",
                         "uiRepresentation": "Label-Radiobuttongroup"
                     },
-                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "srcWgtKUID": "u378b0545c2d4a5297809c07c18dcb9c",
                     "type": "boolean",
                     "value": "true/false"
                 },
@@ -139,7 +139,7 @@
                     "access": "Write",
                     "defaultValue": 35,
                     "group": "General",
-                    "kuid": "b6b840d45a454e6fb0a182e445f5bfee",
+                    "kuid": "bc3af80c64094f8a8388a411e0cdc6cd",
                     "originalPropertyKey": "thresholdAmount",
                     "propertyIndex": 4,
                     "propertyKey": "thresholdAmount",
@@ -150,7 +150,7 @@
                         "uiRepresentation": "Label-Textbox",
                         "validationData": "^(\\+|-)?\\d+$"
                     },
-                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "srcWgtKUID": "u378b0545c2d4a5297809c07c18dcb9c",
                     "type": "integer",
                     "value": ""
                 },
@@ -158,7 +158,7 @@
                     "access": "Write",
                     "defaultValue": "EUR",
                     "group": "General",
-                    "kuid": "d2c1b4a1493440a285b0280d1c10da00",
+                    "kuid": "f31a5f2846974ab7962e79f703aa6f9a",
                     "originalPropertyKey": "currency",
                     "propertyIndex": 5,
                     "propertyKey": "currency",
@@ -167,7 +167,7 @@
                         "displayName": "currency",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "a4c6316cb0aa4c509b6bb332eb379120",
+                    "srcWgtKUID": "u378b0545c2d4a5297809c07c18dcb9c",
                     "type": "string",
                     "value": ""
                 }
@@ -176,7 +176,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "a5477eeb9f2a443f84e376ccf67adfc0",
+                    "kuid": "ace2f45823d4419292bfdf4d7f955396",
                     "originalPropertyKey": "skin",
                     "propertyIndex": 8,
                     "propertyKey": "skin1",
@@ -190,7 +190,7 @@
                         "srcWidget": "flxPushDevices",
                         "wType": "FlexContainer"
                     },
-                    "srcWgtKUID": "abf79cfb98dc49f7bd47bb2fe7dfcf02"
+                    "srcWgtKUID": "u680d9340c8b406ab6bfbd0d34f1a33e"
                 }
             ]
         },

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s92b97bf300042f8a7015bea89deae8f",
+    "_skin_": "s629808dd43e454186fe3b81b58bcdc3",
     "_text_": "Please enter your Customer ID and Activation Code to register your account",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d0995fd95a754f67991be5babda10d24",
+    "kuid": "ubd3f1210aad481899655582b60b49db",
     "name": "kony.ui.Label",
     "parent": "flxMainUI",
     "pf": "userwidgetmodel",

@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "Username",
-    "_skin_": "s5daebabfa9a498999d654d102ba26ac",
+    "_skin_": "s506a3a919294ab4a5008767536cae28",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -42,21 +42,21 @@
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {
-        "placeholderSkin": "s6f7b7c545ce444a86ee3d3d517caddd"
+        "placeholderSkin": "s607bd7431e8457b944d8a819784cdb3"
     },
     "disabledSkins": {},
-    "focusskin": "s5daebabfa9a498999d654d102ba26ac",
+    "focusskin": "s506a3a919294ab4a5008767536cae28",
     "id": "tbxUser",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "f6c6c36f9ab34d2a8d6a91afa165dd97",
+    "kuid": "u877ae9dd64e4777b6ed3304c5d4dd90",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "flxUserName",
     "pf": "userwidgetmodel",
-    "placeholderskin": "s6f7b7c545ce444a86ee3d3d517caddd",
+    "placeholderskin": "s607bd7431e8457b944d8a819784cdb3",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": false,

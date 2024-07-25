@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s78623dcd36b4fbb86a143b5d160f76a",
+    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
     "_text_": "Secure Code*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bb8116d1323b47db94477b6573c62dad",
+    "kuid": "u0e34e6394f245fdb7badba496d53fab",
     "name": "kony.ui.Label",
     "parent": "flxOTPChallenge",
     "pf": "userwidgetmodel",

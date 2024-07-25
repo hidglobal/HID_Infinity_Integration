@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s4c9a6885e5f46fc953051c06155e45e",
+    "_skin_": "s85e5e95f60544e0a7833427e77b237c",
     "_text_": "Error Message",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "iec1e6f5536a4d289fc7b28dd41bb428",
+    "kuid": "u2c5f9bdceec4dec80aaa422cb2a6789",
     "name": "kony.ui.Label",
     "parent": "flxSecureCodeEnterPin",
     "pf": "userwidgetmodel",

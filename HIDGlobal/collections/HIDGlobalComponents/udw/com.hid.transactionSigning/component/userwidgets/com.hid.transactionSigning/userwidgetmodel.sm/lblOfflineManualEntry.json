@@ -25,7 +25,7 @@
         0,
         0
     ],
-    "_skin_": "scc4523849d04ca09adb54235e971cda",
+    "_skin_": "saca13ee6c02469bb9860ab31036a688",
     "_text_": "Click here to enter the fields manually",
     "_width_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "hbfd4be5984d42ec8511d713dabce5a8",
+    "kuid": "u4d15ea0eccf4663b35b93cbdf20cd88",
     "name": "kony.ui.Label",
     "parent": "flxQRCodeScan",
     "pf": "userwidgetmodel",

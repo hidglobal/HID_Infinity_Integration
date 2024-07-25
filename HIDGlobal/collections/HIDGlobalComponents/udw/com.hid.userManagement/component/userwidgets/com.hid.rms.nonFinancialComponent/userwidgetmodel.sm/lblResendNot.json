@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s53a499ef0ff415c8a0e0c242bd118f1",
+    "_skin_": "s75c9179d7de4ba39e5d9d23dfe2f860",
     "_text_": "Resend",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "id": "lblResendNot",
-    "ide_onTouchEnd": "AS_Label_becc74f5c00547259e65a033629a5d48",
+    "ide_onTouchEnd": "AS_Label_dc688f81f82c4ebf8286a8bc055e6e06",
     "info": null,
     "ipad": {
         "psp": {
@@ -60,7 +60,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "adc1c313b02747aa95fcf8bcb3d27945",
+    "kuid": "uc34959edadd4c94a119d65b6a07be91",
     "name": "kony.ui.Label",
     "parent": "flxTimer",
     "pf": "userwidgetmodel",

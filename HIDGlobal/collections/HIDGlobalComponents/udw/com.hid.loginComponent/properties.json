@@ -1,15 +1,15 @@
 {
     "assetPlatform": "Visualizer",
     "assetVersion": "1.0.0",
-    "createdBy": "sushant.dubey@hidglobal.com",
-    "createdMFVersion": "9.7.1.0",
-    "createdVizVersion": "9.2.37",
-    "currentMFVersion": "9.7.1.0",
-    "currentVizVersion": "9.2.37",
-    "description": "version 8 component",
+    "createdBy": "gagandeep.kaur1@hidglobal.com",
+    "createdMFVersion": "9.7.1.3",
+    "createdVizVersion": "9.5.28",
+    "currentMFVersion": "9.7.1.3",
+    "currentVizVersion": "9.5.28",
+    "description": "V9 Components",
     "itemCategory": "udw",
-    "itemGuid": "c15f62746d74402fbe2e5687063255ba",
+    "itemGuid": "f660a1b8214e406e9701e7e744d433c9",
     "itemName": "com.hid.loginComponent",
     "libraryVersion": "libver4",
-    "modifiedBy": "sushant.dubey@hidglobal.com"
+    "modifiedBy": "gagandeep.kaur1@hidglobal.com"
 }

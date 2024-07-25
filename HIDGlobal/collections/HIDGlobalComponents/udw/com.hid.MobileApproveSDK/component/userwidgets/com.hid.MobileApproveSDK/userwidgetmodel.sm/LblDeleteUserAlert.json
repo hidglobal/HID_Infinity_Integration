@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sbef21208c2049c083799db47ac80541",
+    "_skin_": "s3b273b79344474a8550d437feaf41cb",
     "_text_": "Alert",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e35f747baa43460a8d0379a0407aecb9",
+    "kuid": "u43ba014f2ed4871aee98aa0f51cb0c5",
     "name": "kony.ui.Label",
     "parent": "flxDeleteConsensusHeader",
     "pf": "userwidgetmodel",

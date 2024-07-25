@@ -14,8 +14,10 @@
             "slForm"
         ],
         "images": [],
-        "fonts": [],
-        "nativeApis": 0,
+        "fonts": [
+            "Gotham-Book"
+        ],
+        "nativeApis": 3,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -23,7 +25,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2023-11-17T08:29:12.909Z",
-    "createdVizVersion": "9.2.73",
-    "project_version": "sprint39"
+    "createdOn": "2024-07-08T08:45:05.099Z",
+    "createdVizVersion": "9.5.28",
+    "project_version": "sprint42"
 }

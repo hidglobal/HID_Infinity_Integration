@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "se589a932f6446c98254493ceb98098f",
+    "_skin_": "s6e333a3b9824ef4a0d31eacb0e22e91",
     "_text_": "UPDATE",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s880364557d44ee988ad542856ec1155",
+    "focusskin": "sc020060659b421394411a782442388c",
     "id": "btnUpdatePIN",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ae65dcba143049a6860cb741ba45c1be",
+    "kuid": "u86b3ddc0d2046809e3dfc439a8604b5",
     "name": "kony.ui.Button",
     "parent": "flxbtnUpdatePIN",
     "pf": "userwidgetmodel",

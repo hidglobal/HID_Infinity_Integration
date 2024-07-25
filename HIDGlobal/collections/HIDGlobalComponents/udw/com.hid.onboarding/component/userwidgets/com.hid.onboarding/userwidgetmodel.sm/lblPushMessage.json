@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "se6d03727e224684b2d0b25d5b1fe4aa",
+    "_skin_": "sf07fa1516aa44c9a043f449f14dea70",
     "_text_": "A Push notification have been sent to your registered Approve Device. Please Approve the notification to complete the registration.",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ddddf56c080a420b8269b7472c3e79ac",
+    "kuid": "ufd62c76a3f54f4e932e78dbf05a5607",
     "name": "kony.ui.Label",
     "parent": "flxApprove",
     "pf": "userwidgetmodel",

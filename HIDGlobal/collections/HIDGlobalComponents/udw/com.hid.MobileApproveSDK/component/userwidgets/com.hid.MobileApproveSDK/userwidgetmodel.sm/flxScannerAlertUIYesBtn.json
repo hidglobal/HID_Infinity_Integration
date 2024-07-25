@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s9c06a9e0de94f319f07cc13c4699371",
+    "_skin_": "s6e916ac0e864259a00c90b87c06c2d4",
     "_top_": {
         "type": "string",
         "value": "0"
@@ -44,7 +44,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e3c57d5d68984519883374d0c4e58160",
+    "kuid": "u54c1f3c50b64b80947d4865a474aaa7",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxScannerAlertUIButtons",

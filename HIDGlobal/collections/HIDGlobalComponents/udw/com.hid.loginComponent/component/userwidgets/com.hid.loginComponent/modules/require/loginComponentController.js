@@ -1,5 +1,7 @@
 define(['com/hid/loginComponent/AuthenticationPresentationController'], function(AuthenticationPresentationController) {
-  var contexts = ["Login","OTP","OTPError","PushDevices", "Approve","OOBPIN","Secure"];
+
+  var contexts = ["Login","OTP","OTPError","PushDevices", "Approve","OOBPIN","Secure","ScanToApprove","ScanToApproveMain","LoginFIDO"];
+
   return {
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       this.resetUIFields();
@@ -10,6 +12,11 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.view.btnLoginSecure.onClick = this.loginSecureCode;
       this.view.tbxSecureCode.onDone = this.loginSecureCode;
       this.view.btnConfirmOTP.onClick = this.btnConfirmOTP_onClick;
+      this.view.btnGenerate.onClick = this.generateQr;
+      //this.view.lblSwitchLoginOption.onTouchStart = this.switchQr;
+      kony.print("constructor firstfactor"+this._FirstFactor);
+      this.view.btnLoginFIDO.onClick = this.loginFIDO;
+
       switch(this._FirstFactor){
         case "STATIC_PWD":
           this.contextSwitch("Login");
@@ -19,6 +26,14 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
           break;
         case "SECURE_CODE":
           this.contextSwitch("Secure");
+          break;
+        case "USER_ID_LESS": {
+          this.contextSwitch("ScanToApproveMain");
+          //this.getScanToApproveQrData();
+          break;
+        }
+        case "FIDO":
+          this.contextSwitch("LoginFIDO");
           break;
       }
       this.TM_Cookie_Sid = "";
@@ -93,13 +108,20 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         return this._FirstFactor;
       });
       defineSetter(this, "FirstFactor", function(val) {
-        if(!["OTP_SMS_PIN","STATIC_PWD","SECURE_CODE"].some(v=>v===val)){
+
+        if(!["OTP_SMS_PIN","STATIC_PWD","SECURE_CODE","USER_ID_LESS","FIDO"].some(v=>v===val)){
           throw {
             "type": "CUSTOM",
             "message": "FirstFactor property is Invalid"
           };
         }
+        kony.print("firstfactor called"+ val);
+        if (val === "USER_ID_LESS"){
+          this._FirstFactor = "APPROVE";
+        }
+        else{
         this._FirstFactor = val;
+        }
       });
       defineGetter(this, "MFA", function() {
         return this._MFA;
@@ -117,7 +139,8 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
             "message": "MFA property is Invalid.Please select MFA = NO_MFA for the selected FirstFactor"
           };
         }
-        if(val === "NO_MFA" && this._FirstFactor !== "OTP_SMS_PIN" ){
+
+        if(val === "NO_MFA" && !(["OTP_SMS_PIN","APPROVE","USER_ID_LESS","FIDO"].some(x => x === this.FirstFactor))){
           throw {
             "type": "CUSTOM",
             "message": "MFA property is Invalid.Cannot set MFA value = NO_MFA for selected FirstFactor"
@@ -128,6 +151,8 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     },
     username : "",
     password : "",
+    request_uri : "",
+    csrf : "",
     gblTimer : null, 
     deviceTag : "",
     isKnownDevice : false,
@@ -162,6 +187,71 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.password = this.view.tbxSecureCode.text;
       this.login(this._isRMSEnabled,this.username,this.password);
       
+    },
+    
+    loginFIDO : function() {
+      this.username = this.view.tbxUserFIDO.text;
+      this.commonEventHandler(this.showLoading, "");
+      AuthenticationPresentationController.getFIDOAuthentication(this.username, this.getFIDOAuthenticationSuccess,this.getFIDOAuthenticationFailure);
+    },
+    
+    getFIDOAuthenticationFailure: function(error) {
+      // alert(error);
+      this.commonEventHandler(this.dismissLoading, "");
+      this.view.lblErrorLoginFIDO.text
+        = "Authentication failed. Please try again.";
+      this.view.lblErrorLoginFIDO.setVisibility(true);
+      this.contextSwitch("LoginFIDO");
+    },
+    
+    getFIDOAuthenticationSuccess: function(success) {
+      this.view.lblErrorLoginFIDO.setVisibility(false);
+      let response = success.FIDOAuthentication[0];
+      const csrf = response["server-csrf-token"];
+      let request_uri = response["request_uri"];
+      let publicKey = response;
+      
+      publicKey.challenge = Uint8Array.from(
+        window.atob(publicKey.challenge.replace(/_/g, '/').replace(/-/g, '+')),
+        (c) => c.charCodeAt(0));
+      
+      publicKey.allowCredentials.forEach(cred =>
+      {
+        cred.id = Uint8Array.from(
+          window.atob(cred.id.replace(/_/g, '/').replace(/-/g, '+')),
+          (c) => c.charCodeAt(0));
+      });
+      
+      publicKey.timeout = 60000;
+      
+      navigator.credentials.get({publicKey})
+      .then(assertion => {
+        const credential = {
+          type: assertion.type,
+          id: assertion.id,
+          rawId: this.arrayBufferToBase64url(assertion.rawId),
+          clientDataJSON: this.arrayBufferToBase64url(assertion.response.clientDataJSON),
+          authenticatorData: this.arrayBufferToBase64url(assertion.response.authenticatorData),
+          signature: this.arrayBufferToBase64url(assertion.response.signature),
+          userHandle: this.arrayBufferToBase64url(assertion.response.userHandle)
+        };
+        let password = {
+          "id": assertion.id,
+          "response": {
+            "clientDataJSON": credential.clientDataJSON,
+            "authenticatorData": credential.authenticatorData,
+            "signature": credential.signature,
+            "userHandle": credential.userHandle
+          }
+        };
+        this.password = password;
+        this.request_uri = request_uri;
+        this.csrf = csrf;
+        this.login(this._isRMSEnabled,this.username, this.password, this.request_uri,this.csrf);
+      })
+      .catch((err) => {
+        this.getFIDOAuthenticationFailure(err);
+      });             
     },
     loginSMSOTP : function(){
       if(this.view.tbxUserOOBPIN.text === ""){
@@ -200,14 +290,18 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       }    
     },
     
-    login : function(isEnabled,username,password){
+    login : function(isEnabled,username,password,request_uri="",csrf=""){
       if(isEnabled === true){
-        this.loginPasswordwithRMS(username,password);
+        this._FirstFactor == "FIDO" ? this.loginPasswordwithRMS(username,password,request_uri,csrf)
+        :this.loginPasswordwithRMS(username,password);
       } else {
-        this.loginPasswordWithoutRMS(username,password);
+        this._FirstFactor == "FIDO" ? this.loginPasswordWithoutRMS(username,password,request_uri,csrf)
+        :this.loginPasswordWithoutRMS(username,password);
       }
     },
-    loginPasswordwithRMS : function(username,password) {
+    loginPasswordwithRMS : function(username,password, request_uri="",csrf="") {
+      this.request_uri = request_uri;
+      this.csrf = csrf;
       let decodeCookie = document.cookie.split(";");
       for(var i=0; i<decodeCookie.length; i++) {
         cookiename = decodeCookie[i].split('=')[0].replace(/\s/g, "");
@@ -230,16 +324,8 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       var self = this;
       if(this.client_ip.trim() !== ""){
         this.rmsLoginApiCall(username,password);
-      }else{
-        
+      }else{        
         this.getClientIp();
-//         const url = "https://api.ipify.org/?format=json"
-//         fetch(url)
-//           .then(response => response.json())
-//           .then(data =>{ 
-//           self.client_ip = data.ip;
-//           self.rmsLoginApiCall(username,password);
-//         });
       }
     }, 
     
@@ -256,7 +342,9 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       else{
         this.client_ip = "";
       }
-      
+      if(this._FirstFactor == "FIDO"){
+        this.rmsLoginApiCall(this.username,this.password,this.request_uri,this.csrf);
+      }
       this.rmsLoginApiCall(this.username,this.password);
       
     },
@@ -266,8 +354,179 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.rmsLoginApiCall(this.username,this.password);
       kony.print(JSON.stringify(response));
     },
+   
+    switchQr: function(){
+      if (this.view.flxLogin.isVisible === true){
+        
+        this.view.flxLogin.setVisibility(false);
+        this.view.flxScanToApprove.setVisibility(true);
+        this.view.forceLayout();
+        this.getScanToApproveQrData();
+ 
+      }
+      else{
+        this.view.flxLogin.setVisibility(true);
+        this.resetQrUi();
+        this.view.forceLayout();
+      }
+      //this.view.authentication.resetUI();
+    },
     
-    rmsLoginApiCall : function(username,password){
+    
+    generateQr: function(){
+		this.contextSwitch("ScanToApprove");
+		this.getScanToApproveQrData();
+    },
+    
+    
+    getScanToApproveQrData: function(){
+		this.commonEventHandler(this.showLoading, "");
+    	AuthenticationPresentationController.getScanToApproveQrData(this.getScanToApproveQrDataSuccess,this.getScanToApproveQrDataFailure);
+    },
+	
+	
+	getScanToApproveQrDataSuccess: function(response){
+      this.commonEventHandler(this.dismissLoading, "");
+      kony.application.getCurrentForm().lblSwitchSignIn.setVisibility(false);
+      this.view.qrcodegeneratorNew.dataToEncode = response.getScanToApproveQrData[0].txid;
+      this.view.qrcodegeneratorNew.generate();
+      this.view.forceLayout();
+      kony.print("firstfactor after logout" + this._Firstfactor);
+      if (this._isRMSEnabled === true){
+        kony.print("rms enabled");
+        let decodeCookie = document.cookie.split(";");
+      for(var i=0; i<decodeCookie.length; i++) {
+        cookiename = decodeCookie[i].split('=')[0].replace(/\s/g, "");
+        if (cookiename === this.TM_Cookie_Sid){
+          this.tm_sid = decodeCookie[i].split('=')[1];
+        }
+        if (cookiename === this.TM_Cookie_Tag){
+          this.tm_tag = decodeCookie[i].split('=')[1];
+        }
+      }
+      this.deviceTag = localStorage.getItem(`HID_deviceTag_${username}`); 
+      if(this.deviceTag === null){
+        this.isKnownDevice = false;
+        this.deviceTag = this.tm_tag;
+      }
+      else{ 
+        this.isKnownDevice = this.deviceTag===this.tm_tag;
+      } 
+      
+      kony.print("RMS => isKnownDevice:"+this.isKnownDevice);
+      var self = this;
+      if(this.client_ip.trim() !== ""){
+      let randomValue = Math.floor(Math.random()*100000);
+      this.app_session_id = String(randomValue);
+      kony.print("app_session_id" + this.app_session_id);
+      const rmsLoad = {
+        "tm_sid" : this.tm_sid,
+        "tm_tag" : this.tm_tag,
+        "client_ip" : this.client_ip,
+        "app_session_id" : this.app_session_id
+      };
+      //this.commonEventHandler(this.showLoading, "");
+      AuthenticationPresentationController.pollForScanToApprove("",response.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure,rmsLoad);
+       
+      }else{
+        
+        this.getClientIpForScanToApprove(response);
+//         const url = "https://api.ipify.org/?format=json"
+//         fetch(url)
+//           .then(response => response.json())
+//           .then(data =>{ 
+//           self.client_ip = data.ip;
+//           self.rmsLoginApiCall(username,password);
+//         });
+      }
+        
+      }
+      else{
+      kony.print("rms not enabled");
+      AuthenticationPresentationController.pollForScanToApprove("",response.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure);
+      }
+    },
+    
+    
+    getClientIpForScanToApprove: function(response){
+      AuthenticationPresentationController.getClientIpScanToApprove(response,this.getClientIpForScanToApproveSuccess,this.getClientIpForScanToApproveFailure);  
+    },
+    
+    
+    getClientIpForScanToApproveSuccess: function(qrDataResponse,response){
+      kony.print(JSON.stringify(response));
+      if (response){
+		this.client_ip = response.GetClientIp[0].clientIp;
+      }
+      else{
+        this.client_ip = "";
+      }
+      let randomValue = Math.floor(Math.random()*100000);
+      this.app_session_id = String(randomValue);
+      kony.print("app_session_id" + this.app_session_id);
+      const rmsLoad = {
+        "tm_sid" : this.tm_sid,
+        "tm_tag" : this.tm_tag,
+        "client_ip" : this.client_ip,
+        "app_session_id" : this.app_session_id
+      };
+      
+      AuthenticationPresentationController.pollForScanToApprove("",qrDataResponse.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure,rmsLoad);
+      
+    },
+    
+    getClientIpForScanToApproveFailure: function(qrDataResponse,response){
+      this.commonEventHandler(this.dismissLoading, "");
+      this.client_ip = "";
+      let randomValue = Math.floor(Math.random()*100000);
+      this.app_session_id = String(randomValue);
+      kony.print("app_session_id" + this.app_session_id);
+      const rmsLoad = {
+        "tm_sid" : this.tm_sid,
+        "tm_tag" : this.tm_tag,
+        "client_ip" : this.client_ip,
+        "app_session_id" : this.app_session_id
+      };
+      AuthenticationPresentationController.pollForScanToApprove("",qrDataResponse.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure,rmsLoad);
+      //kony.print(JSON.stringify(response));
+    },
+   
+    
+    getScanToApproveQrDataFailure: function(response){
+      kony.print("qr data failure"+ response);
+      this.view.lblError.text = "Failed to generate Qr code, Someting went wrong. Click on button below to Genetrate Qr to try login again"
+      this.view.lblError.skin = "sknHIDError";
+      this.view.qrcodegeneratorNew.dataToEncode = " ";
+      this.view.qrcodegeneratorNew.generate();
+      this.commonEventHandler(this.dismissLoading, "");
+      this.contextSwitch("ScanToApproveMain");
+    },
+    
+    
+    pollForScanToApproveSuccess: function(response,usercode){
+      //kony.print("poll for scan to approve failure:" + response);
+      this.view.lblError.skin = "sknScanToApproveNotfication";
+      this.view.lblError.text = "Click on the Button below to generate a QR to login."
+      this.username = usercode;
+      this.mfa_key = response.mfa_meta.auth_id;
+      this.initiateSecondFactor();
+    },
+	pollForScanToApproveFailure: function(response){
+      kony.print("poll for scan to approve failure:" + response);
+      if (response == "deny"){
+        this.view.lblError.text = "Login Denied by User. Click on button below to Genetrate Qr to try login again."
+      }
+      else{
+        this.view.lblError.text = "Login failed, Something went wrong. Click on button below to Genetrate Qr to try login again."
+      } 
+      this.view.lblError.skin = "sknScanToApproveError";
+      this.view.qrcodegeneratorNew.dataToEncode = " ";
+      this.view.qrcodegeneratorNew.generate();
+      this.contextSwitch("ScanToApproveMain");
+    },
+    
+   
+    rmsLoginApiCall : function(username,password,request_uri="",csrf=""){
       let randomValue = Math.floor(Math.random()*100000);
       this.app_session_id = String(randomValue) ;
 
@@ -280,6 +539,8 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.commonEventHandler(this.showLoading, "");
       if(this._FirstFactor ==="STATIC_PWD"){
         AuthenticationPresentationController.validatePassword(username, password, this.onValidatePasswordRMSSuccess, this.onValidatePasswordRMSFailure,rmsLoad);
+      } else if(this._FirstFactor ==="FIDO"){
+        AuthenticationPresentationController.authenticateFido(username, password, request_uri,csrf, this.firstFactorRMSSuccess, this.firstFactorRMSFailure,rmsLoad);
       } else {
         AuthenticationPresentationController.authenticateFirstFactor(username, password, this._FirstFactor, this.firstFactorRMSSuccess, this.firstFactorRMSFailure,rmsLoad);              
       }
@@ -292,6 +553,9 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         case "SECURE_CODE":
           this.authenticateSecureRMSSuccess(response);
           break;
+        case "FIDO":
+          this.authenticateFidoRMSSuccess(response);
+          break;
       }      
     },
     firstFactorRMSFailure : function(error){
@@ -301,6 +565,9 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
           break;
         case "SECURE_CODE":
           this.authenticateSecureRMSFailure(error);
+          break;
+        case "FIDO":
+          this.authenticateFidoRMSFailure(error);
           break;
       }   
     },
@@ -344,6 +611,14 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       kony.print("authenticateSecureRMSFailure error:"+JSON.stringify(error));
       this.rmsScoreFailure(error);
     },
+    authenticateFidoRMSSuccess : function(response){
+      kony.print("authenticateFidoRMSSuccess response:"+JSON.stringify(response.mfa_meta.rms));
+      this.rmsScoreSuccess(response);
+    },
+    authenticateFidoRMSFailure : function(error){
+      kony.print("authenticateFidoRMSFailure error:"+JSON.stringify(error));
+      this.rmsScoreFailure(error);
+    },
     onValidatePasswordRMSSuccess : function(response){
       kony.print("onValidatePasswordRMSSuccess response:"+JSON.stringify(response.mfa_meta.rms));
       this.rmsScoreSuccess(response);
@@ -369,24 +644,6 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.factorType = response.mfa_meta.rms.hasOwnProperty("factorType") ;
       this.commonEventHandler(this.dismissLoading, "");
       var adaptiveMFA = this._MFA;
-      if(this._adaptiveAuth){     
-        if(stepUp && this._adaptiveAuth.hasOwnProperty("default")){
-          adaptiveMFA = this._adaptiveAuth.default;
-        }
-        var isValidCustomString = !this._adaptiveAuth.hasOwnProperty("customAdaptiveAuth") ||this._adaptiveAuth.customAdaptiveAuth.filter(v=> !v.hasOwnProperty("authType") || !v.hasOwnProperty("lowerLimit") || !v.hasOwnProperty("upperLimit")).length !=0;
-        if(isValidCustomString){
-          throw {
-            "type": "CUSTOM",
-            "message": "adaptiveAuth object is not valid"
-          };
-        }
-        var ct = this.currentThreat
-        var filteredArray = this._adaptiveAuth.customAdaptiveAuth.filter(v=> ct >= v.lowerLimit && ct < v.upperLimit);
-        if(filteredArray.length>0){
-          adaptiveMFA = filteredArray[0].authType;
-        } 
-      }
-      this._MFA = adaptiveMFA;
       this.initiateSecondFactor();
       this.client_ip="";
     },
@@ -398,7 +655,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
           this.view.lblErrorSecure.text = "User is blocked for Login";
         }
       } else {
-        if(this._FirstFactor === "STATIC_PWD"){
+        if(this._FirstFactor === "STATIC_PWD" || this._FirstFactor === "FIDO"){
           this.view.lblErrorLogin.text = "Username or Password is invalid";
         } else {
           this.view.lblErrorSecure.text = "Username or Secure code is invalid";
@@ -426,9 +683,6 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     },
     onStepDownSuccessCB : function(response){
       this.mfa_key = "";
-//       if(!this.isKnownDevice){
-//         this.confirmationAlert(this.deviceTag);
-//       }
       this.client_ip = "";      
       this.commonEventHandler(this.onSuccessCallback,response);
       this.commonEventHandler(this.dismissLoading, "");
@@ -466,10 +720,12 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       kony.ui.Alert(basicConf, pspConfig);
     },
 
-    loginPasswordWithoutRMS : function(username,password){
+    loginPasswordWithoutRMS : function(username,password,request_uri="",csrf=""){
       this.commonEventHandler(this.showLoading, "");
       if(this._FirstFactor ==="STATIC_PWD"){
         AuthenticationPresentationController.validatePassword(username, password, this.onValidatePasswordSuccess, this.onValidatePasswordFailure);
+      } else if(this._FirstFactor ==="FIDO"){
+        AuthenticationPresentationController.authenticateFido(username, password, request_uri,csrf, this.firstFactorSuccess, this.firstFactorFailure);
       } else {
         AuthenticationPresentationController.authenticateFirstFactor(username, password, this._FirstFactor, this.firstFactorSuccess, this.firstFactorFailure);             
       }
@@ -482,6 +738,9 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         case "SECURE_CODE":
           this.authenticateSecureSuccess(response);
           break;
+        case "FIDO":
+          this.authenticateFidoSuccess(response);
+          break;
       }      
     },
     firstFactorFailure : function(error){
@@ -491,6 +750,9 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
           break;
         case "SECURE_CODE":
           this.authenticateSecureFailure(error);
+          break;
+        case "FIDO":
+          this.authenticateFidoFailure(error);
           break;
       }
     },   
@@ -511,6 +773,14 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     authenticateSecureFailure : function(error){
       this.view.lblErrorSecure.text = "Username or Secure code is invalid";
       this.commonEventHandler(this.dismissLoading, "");
+    },
+    authenticateFidoSuccess : function(response){
+      this.mfa_key = response.mfa_meta.auth_id;
+      this.initiateSecondFactor();
+	},
+    authenticateFidoFailure : function(error){
+      this.commonEventHandler(this.dismissLoading, "");
+		alert(JSON.stringify(error));
     },
     onValidatePasswordSuccess : function(response){
       this.mfa_key = response.mfa_meta.auth_id;
@@ -537,8 +807,13 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
           break;
         case "NO_MFA":
           if(this._isRMSEnabled === true){
-            this._MFA = "STEP_DOWN";
-          }
+	    AuthenticationPresentationController.validateOTP("STEP_DOWN", this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure);
+          } else {
+	    AuthenticationPresentationController.validateOTP(this._MFA, this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure);
+	  }
+          break;
+          
+        case "STEP_DOWN":
           AuthenticationPresentationController.validateOTP(this._MFA, this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure);
           break;
       }
@@ -586,13 +861,10 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         clearInterval(this.gblTimer);
       }
       this.mfa_key = "";
-//       if((this._isRMSEnabled == true) && !this.isKnownDevice){
-//         this.confirmationAlert(this.deviceTag);
-//       }
       this.client_ip = "";
+      this.resetQrUi();
       this.commonEventHandler(this.onSuccessCallback,response);
       this.commonEventHandler(this.dismissLoading, "");
-      //this.contextSwitch("Login");
     }, 
     onValidateOTPFailure : function(error) {
       if(!this.validateFailureCallbackScenario(error)){
@@ -627,6 +899,9 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
             if(this._MFA === "APPROVE"){
               clearInterval(this.gblTimer);
             }
+            break;
+          case "FIDO":
+            this.contextSwitch("LoginFIDO");
             break;
         }        
         this.commonEventHandler(this.onFailureCallback,errorMessage);
@@ -664,8 +939,6 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
           "lblDeviceId" : "deviceId"
         };
         this.view.segmentPushDevices.widgetDataMap = widetDataMap;
-        //let finalData = [ {"lblEnableDiasbleHeader" : "Edit","lblTotalFailureHeader" : "Total Failures","lblAuthHeader" : "Authenticator","lblStatusHeader":"Status","lblTotalSuccessHeader":"Total Success","template":"flxAuthHeader"}];
-        //inalData.push(authData);
         this.view.segmentPushDevices.data = deviceData;
         this.commonEventHandler(this.dismissLoading, ""); } 
        else {
@@ -764,13 +1037,10 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.client_ip ="";
       this.resetUIFields();
       return;
-      //this.contextSwitch("Login");
     }, 
     onLogoutFailure : function(error){
       this.view.lblAuthStatus.text = "Failed to logout";
       return;
-      // this.view.lblAuthStatus.skin = "sknHIDError";
-      // this.view.flxAuthSuccess.forceLayout();
     }, 
     rmsSessionLogout : function(){
       kony.print("In RMS Session Logout")
@@ -830,7 +1100,12 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
                                                            this.initiateApproveFailure);
     }, 
     contextSwitch: function(context) {
-      this.commonEventHandler(this.changeContext,context+"Auth");
+      if (context === "ScanToApproveMain"){
+        this.commonEventHandler(this.changeContext,"ScanToApproveAuth");
+      }
+      else{
+      	this.commonEventHandler(this.changeContext,context+"Auth");
+      }
       this.resetUIFields();
       for (let i of contexts) {
         this.view[`flx${i}`].setVisibility(i === context);
@@ -859,16 +1134,44 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         this.contextSwitch("Login");
       } else if(this._FirstFactor === "OTP_SMS_PIN"){
         this.contextSwitch("OOBPIN");
-      } else{
+      } else if (this._FirstFactor === "SECURE_CODE"){
         this.contextSwitch("Secure");
-      }
+      } else if (this._FirstFactor === "FIDO") {
+        this.contextSwitch("LoginFIDO");
+      } 
+      else if (this._FirstFactor === "APPROVE" || this._FirstFactor === "USER_ID_LESS"){
+        this.contextSwitch("ScanToApproveMain");
+        //this.getScanToApproveQrData();
+      }    
     },
+    
+    resetQrUi: function(){
+      //this.view.flxScanToApprove.setVisibility(false);
+      //this.contextSwitch("ScanToApproveMain");
+      this.view.lblError.skin = "sknScanToApproveNotfication";
+      this.view.lblError.text = "Click on the Button below to generate a QR to login."
+      this.view.qrcodegeneratorNew.dataToEncode = " ";
+      this.view.qrcodegeneratorNew.generate();
+    },
+    
     getUserName : function(){
       return this.username;
     },
     getRmsSessionId : function(){
       return this.app_session_id;
-    },
+    },      
+    arrayBufferToBase64url : function(buffer) {
+    let binary = '';
+    let bytes = new Uint8Array(buffer);
+    let len = bytes.byteLength;
+    for (let i = 0; i < len; i++) {
+        binary += String.fromCharCode( bytes[ i ] );
+    }
+    
+    return window.btoa(binary)
+      .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+  	},
+    
     commonEventHandler(event,intent){
       if(event){
         event(intent);

@@ -1,0 +1,52 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "15%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "43.90%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s68cfbd898754298b4cdcae078a6fe33",
+    "_text_": "Register FIDO Device",
+    "_top_": {
+        "type": "string",
+        "value": "29.99%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "20%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s4357d43bef545f693c49eada3977395",
+    "id": "btnRegisterFIDODevice",
+    "ide_onClick": "AS_Button_f1b1aa0d8d7d4a979aab76c0549eb57a",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "u50f6f99620e4545b0edc62afff73ad5",
+    "name": "kony.ui.Button",
+    "parent": "flxRegisterDevice0",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "tabpaneId": "tabSelfService",
+    "wType": "Button"
+}

@@ -5,7 +5,8 @@
         "uw_classname": "loginComponent",
         "isLocked": false,
         "userwidgets": [
-            "com.hid.loginComponent"
+            "com.hid.loginComponent",
+            "com.konymp.qrcodegeneratorNew"
         ],
         "templates": [
             [
@@ -16,76 +17,82 @@
         ],
         "actions": {
             "common": {
-                "AS_Button_f81a7a839abc4b228e68d33a1cd170b7": {
+                "AS_Button_g613a200f57447eebfb8e32809d78033": {
                     "channel": "common",
-                    "actionId": "AS_Button_f81a7a839abc4b228e68d33a1cd170b7",
-                    "actionName": "AS_Button_f81a7a839abc4b228e68d33a1cd170b7",
+                    "actionId": "AS_Button_g613a200f57447eebfb8e32809d78033",
+                    "actionName": "AS_Button_g613a200f57447eebfb8e32809d78033",
                     "key": "ide_onClick"
                 },
-                "AS_Button_ffe0ec05544948ef91a32ecc076d045c": {
+                "AS_Button_f24fee44a771436587ebe0c49b78e867": {
                     "channel": "common",
-                    "actionId": "AS_Button_ffe0ec05544948ef91a32ecc076d045c",
-                    "actionName": "AS_Button_ffe0ec05544948ef91a32ecc076d045c",
+                    "actionId": "AS_Button_f24fee44a771436587ebe0c49b78e867",
+                    "actionName": "AS_Button_f24fee44a771436587ebe0c49b78e867",
                     "key": "ide_onClick"
                 },
-                "AS_Button_i594f2e364034e6591171be6255642d7": {
+                "AS_Button_ieb0c4297e67480393b1f6128beb4a9c": {
                     "channel": "common",
-                    "actionId": "AS_Button_i594f2e364034e6591171be6255642d7",
-                    "actionName": "AS_Button_i594f2e364034e6591171be6255642d7",
+                    "actionId": "AS_Button_ieb0c4297e67480393b1f6128beb4a9c",
+                    "actionName": "AS_Button_ieb0c4297e67480393b1f6128beb4a9c",
                     "key": "ide_onClick"
                 },
-                "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d": {
+                "AS_Button_a691c0ad29c94f71ae377ec9eaebbdcc": {
                     "channel": "common",
-                    "actionId": "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d",
-                    "actionName": "AS_Button_h9e3e1daad9c491b8fa9ef0359929a4d",
+                    "actionId": "AS_Button_a691c0ad29c94f71ae377ec9eaebbdcc",
+                    "actionName": "AS_Button_a691c0ad29c94f71ae377ec9eaebbdcc",
                     "key": "ide_onClick"
                 },
-                "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279": {
+                "AS_Button_h38ea8aa08704f1db094ac82c174181b": {
                     "channel": "common",
-                    "actionId": "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279",
-                    "actionName": "AS_Button_i0e4d4109cdf4398b2795a9cd4f8f279",
+                    "actionId": "AS_Button_h38ea8aa08704f1db094ac82c174181b",
+                    "actionName": "AS_Button_h38ea8aa08704f1db094ac82c174181b",
                     "key": "ide_onClick"
                 },
-                "AS_Button_ee4da82774ec4d16b1f75e3fc52c4404": {
+                "AS_Button_f09aba1e7f774f8898dfe1fdd0369a57": {
                     "channel": "common",
-                    "actionId": "AS_Button_ee4da82774ec4d16b1f75e3fc52c4404",
-                    "actionName": "AS_Button_ee4da82774ec4d16b1f75e3fc52c4404",
+                    "actionId": "AS_Button_f09aba1e7f774f8898dfe1fdd0369a57",
+                    "actionName": "AS_Button_f09aba1e7f774f8898dfe1fdd0369a57",
                     "key": "ide_onClick"
                 },
-                "AS_Button_fdebf8844b7f4e3585f246f8c2fe78e7": {
+                "AS_Button_e965f2f4de0e4456b573e7ede582623e": {
                     "channel": "common",
-                    "actionId": "AS_Button_fdebf8844b7f4e3585f246f8c2fe78e7",
-                    "actionName": "AS_Button_fdebf8844b7f4e3585f246f8c2fe78e7",
+                    "actionId": "AS_Button_e965f2f4de0e4456b573e7ede582623e",
+                    "actionName": "AS_Button_e965f2f4de0e4456b573e7ede582623e",
                     "key": "ide_onClick"
                 },
-                "AS_Button_b0ebddf304d6460b905404d6b496e0df": {
+                "AS_Button_fc7a1f582284443b8b03c2a5ec0d0ad0": {
                     "channel": "common",
-                    "actionId": "AS_Button_b0ebddf304d6460b905404d6b496e0df",
-                    "actionName": "AS_Button_b0ebddf304d6460b905404d6b496e0df",
+                    "actionId": "AS_Button_fc7a1f582284443b8b03c2a5ec0d0ad0",
+                    "actionName": "AS_Button_fc7a1f582284443b8b03c2a5ec0d0ad0",
                     "key": "ide_onClick"
                 },
-                "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130": {
+                "AS_Button_gd89b500dafb46bcb8e4f11d01d8b1f9": {
                     "channel": "common",
-                    "actionId": "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130",
-                    "actionName": "AS_Button_c055f0ea0eaa4c9ea917ed52a1c93130",
+                    "actionId": "AS_Button_gd89b500dafb46bcb8e4f11d01d8b1f9",
+                    "actionName": "AS_Button_gd89b500dafb46bcb8e4f11d01d8b1f9",
                     "key": "ide_onClick"
                 },
-                "AS_Button_f5c1e87f46f341d1807d9a5f75939001": {
+                "AS_Button_fd4c1132c85a4b2694499c61d8fa346d": {
                     "channel": "common",
-                    "actionId": "AS_Button_f5c1e87f46f341d1807d9a5f75939001",
-                    "actionName": "AS_Button_f5c1e87f46f341d1807d9a5f75939001",
+                    "actionId": "AS_Button_fd4c1132c85a4b2694499c61d8fa346d",
+                    "actionName": "AS_Button_fd4c1132c85a4b2694499c61d8fa346d",
                     "key": "ide_onClick"
                 },
-                "AS_Label_fb87b28254404c7d89891f35a2ef3df7": {
+                "AS_Button_be7d1b2fcb864ebb90c6e258db6e8478": {
                     "channel": "common",
-                    "actionId": "AS_Label_fb87b28254404c7d89891f35a2ef3df7",
-                    "actionName": "AS_Label_fb87b28254404c7d89891f35a2ef3df7",
+                    "actionId": "AS_Button_be7d1b2fcb864ebb90c6e258db6e8478",
+                    "actionName": "AS_Button_be7d1b2fcb864ebb90c6e258db6e8478",
+                    "key": "ide_onClick"
+                },
+                "AS_Label_e0f65b60282044c1a72f2f79dbdc293a": {
+                    "channel": "common",
+                    "actionId": "AS_Label_e0f65b60282044c1a72f2f79dbdc293a",
+                    "actionName": "AS_Label_e0f65b60282044c1a72f2f79dbdc293a",
                     "key": "ide_onTouchEnd"
                 },
-                "AS_Segment_b665927de68c4985b4b97a4f0a939bfc": {
+                "AS_Segment_e2b37beb9d254b6ebcbb3721dc62f336": {
                     "channel": "common",
-                    "actionId": "AS_Segment_b665927de68c4985b4b97a4f0a939bfc",
-                    "actionName": "AS_Segment_b665927de68c4985b4b97a4f0a939bfc",
+                    "actionId": "AS_Segment_e2b37beb9d254b6ebcbb3721dc62f336",
+                    "actionName": "AS_Segment_e2b37beb9d254b6ebcbb3721dc62f336",
                     "key": "ide_onRowClick"
                 }
             }
@@ -101,6 +108,7 @@
             "CopyCopyCopybtnBlueFocus0a808daafcb5c4f",
             "CopyCopyCopysknButton",
             "CopyCopyCopybtnWHiteFocus0f82335ba342f42",
+            "CopydefBtnNormal0i742b40bc2f04a",
             "CopyCopyCopyCopyCopybtnBlueFocus2",
             "CopyCopyCopyCopybtnWHiteFocus4",
             "sknLoginButton",
@@ -117,15 +125,19 @@
             "sknFlxUserNameOOBPIN",
             "sknFlxUsernameSecure",
             "CopyCopyCopysknHIDNotification4",
+            "CopydefLabel0f383a28222a64c",
             "CopyCopyCopysknHIDError",
             "sknHIDLoginError",
             "sknHIDError",
             "CopyCopyCopyCopyCopydefLabel0g82ecf83107842",
+            "CopylblWelcome0bc55a10a869e4a",
             "sknLblSigntoAccOOBPIN",
+            "CopyCopyCopyCopyCopydefLabel0fd3f67400a1c4d",
             "sknLblSigntoAccSecure",
             "lblWelcome",
             "CopyCopyCopyCopyCopydefLabel0ibe7183181b649",
             "lblWelcomeOOBPIN",
+            "CopylblWelcome0c47d650795af4c",
             "CopyCopyCopyslFbox0fbc5abd14d1a42",
             "seg2Focus",
             "CopyCopyCopyseg5",
@@ -152,15 +164,15 @@
             "FontAwesome",
             "Gotham-Book"
         ],
-        "nativeApis": 0,
+        "nativeApis": 3,
         "mfbundle": "services/services.zip",
-        "localFiles": [],
+        "localFiles": true,
         "cordova": [],
         "forms": {},
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2023-11-17T13:25:59.349Z",
-    "createdVizVersion": "9.2.37",
-    "project_version": "sprint39"
+    "createdOn": "2024-07-08T08:25:26.090Z",
+    "createdVizVersion": "9.5.28",
+    "project_version": "sprint42"
 }

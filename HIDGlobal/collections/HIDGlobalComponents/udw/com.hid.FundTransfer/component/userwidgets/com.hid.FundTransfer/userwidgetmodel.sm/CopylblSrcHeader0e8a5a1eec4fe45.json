@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfa8161f7d654aa080d045cd1bde4932",
+    "_skin_": "sfe8f6e53aaa43908e02dbc6897055d0",
     "_text_": "Transfer Details",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "j0c41c80d3b74ad3b18f26f7d7b84971",
+    "kuid": "ubbbb0b15e1a468c8a5f32fecc724608",
     "name": "kony.ui.Label",
     "parent": "flxTransferHeader",
     "pf": "userwidgetmodel",

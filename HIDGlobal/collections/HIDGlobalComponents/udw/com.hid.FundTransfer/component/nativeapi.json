@@ -1,6 +1,43 @@
 {
     "NativeFunctionAPI": {
-        "iOS": {},
-	"Android": {},
-    "Metadata": {}
+        "iOS": {
+            "17.0": {
+                "HIDApproveSDKWrapper-iOS-17.0": {
+                    "title": "HIDApproveSDKWrapper",
+                    "platform": "iOS",
+                    "os": "17.0",
+                    "isDefault": false,
+                    "filename": "HIDApproveSDKWrapper-iOS-17.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                },
+                "KonyBarcodeDetector-iOS-17.0": {
+                    "title": "KonyBarcodeDetector",
+                    "platform": "iOS",
+                    "os": "17.0",
+                    "isDefault": false,
+                    "filename": "KonyBarcodeDetector-iOS-17.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                }
+            },
+            "16.0": {
+                "HID_Approve_SDK-iOS-16.0": {
+                    "title": "HID_Approve_SDK",
+                    "platform": "iOS",
+                    "os": "16.0",
+                    "isDefault": false,
+                    "filename": "HID_Approve_SDK-iOS-16.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                }
+            }
+        },
+        "Android": {}
+    },
+    "Metadata": {
+        "Version": {
+            "iOS": "3.0"
+        }
+    }
 }

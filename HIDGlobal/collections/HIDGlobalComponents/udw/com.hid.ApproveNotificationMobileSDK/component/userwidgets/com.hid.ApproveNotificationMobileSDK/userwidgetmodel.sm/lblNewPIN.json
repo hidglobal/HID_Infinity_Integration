@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7003745cbcb4f8a97356ae1b3fdc991",
+    "_skin_": "s4b32e5d0ae4463ea26b002114b2b0f7",
     "_text_": "New PIN",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s2efa7fbd245431e8fc1cd44ad032b8a",
+    "focusskin": "s806eaa4f75b416aaf065eb605a77726",
     "id": "lblNewPIN",
     "info": null,
     "ipad": {
@@ -68,7 +68,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "a06928bed7424c20975d9a4539952f65",
+    "kuid": "uf29afa2f66545a088426c6b965cb3e1",
     "name": "kony.ui.Label",
     "parent": "flxNewPINInner",
     "pf": "userwidgetmodel",

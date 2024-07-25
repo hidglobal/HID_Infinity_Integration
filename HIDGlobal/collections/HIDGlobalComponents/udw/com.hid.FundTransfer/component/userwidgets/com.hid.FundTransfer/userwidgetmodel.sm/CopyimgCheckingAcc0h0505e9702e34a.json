@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "s0110c6e51734175b4910209b5c5b877",
+    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
     "_src_": "piggyblack.png",
     "_top_": {
         "type": "string",
@@ -44,7 +44,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c07f712b70f649b4ab85f0e7357240a5",
+    "kuid": "uef3d9341be94869a501c70145eb48f2",
     "name": "kony.ui.Image2",
     "parent": "CopyflxChecAccInner0d960a3cf8cff44",
     "pf": "userwidgetmodel",

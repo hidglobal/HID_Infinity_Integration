@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sc3e77010cb648bfb71248f822eabf32",
+    "_skin_": "s15a6db26fa64b66a098dd09d25e15f7",
     "_text_": "You are about tio make  $100 to account 123 with remarks 123",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "h654cec2b8544561a04f20471c5d2b2e",
+    "kuid": "u82a48ee2f8849e396c6b1b23193fa74",
     "name": "kony.ui.Label",
     "parent": "flxConfirmation",
     "pf": "userwidgetmodel",

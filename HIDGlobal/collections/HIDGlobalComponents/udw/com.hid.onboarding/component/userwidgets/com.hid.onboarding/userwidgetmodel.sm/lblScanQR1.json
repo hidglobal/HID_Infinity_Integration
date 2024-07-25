@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s93603b0ec794d67b31f833ec2ab5a7f",
+    "_skin_": "s3eb4c1fef8448588cfebdafc8f3e5ed",
     "_text_": "Scan your QR Code using HID Approve app on your  mobile device",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "ffe5407eddab45cd9ddfba18b35f0e6b",
+    "kuid": "ueb924a1dfa0454988540692d696d71c",
     "name": "kony.ui.Label",
     "parent": "flxDeviceRegistration",
     "pf": "userwidgetmodel",

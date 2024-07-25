@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "se1d8005116b43c790ecb8573710b0d6",
+    "_skin_": "s5e0682746a0423591c09b4e642d2a57",
     "_text_": "Label",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i10b727ea7e0474fbc744eb372c268ec",
+    "kuid": "ubc7358fc215409da6784c72875f13d5",
     "name": "kony.ui.Label",
     "parent": "flxTSChallenge",
     "pf": "userwidgetmodel",

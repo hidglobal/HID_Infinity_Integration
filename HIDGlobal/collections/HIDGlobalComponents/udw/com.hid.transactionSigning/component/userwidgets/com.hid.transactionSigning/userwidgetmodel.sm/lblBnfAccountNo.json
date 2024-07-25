@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s78623dcd36b4fbb86a143b5d160f76a",
+    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
     "_text_": "Account No*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "fe24e9dda2364049904b5cf9b6b07ad6",
+    "kuid": "u22586b219b846b7ae109a80cd9ba357",
     "name": "kony.ui.Label",
     "parent": "flxBnfAccountNo",
     "pf": "userwidgetmodel",

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sd327e55cd43465eb890f8f758f599bf",
+    "_skin_": "s1046c7b3a6c4ad9a0e1ccc0701a3505",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -39,11 +39,11 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "se51df26289c42508d9503988d879781",
+    "focusskin": "s76edb7e754244f692f86be6d8821caf",
     "id": "flxOpaque",
     "info": null,
     "isvisible": true,
-    "kuid": "d9d3fca4cba743e19f7029b40d3af3ba",
+    "kuid": "u415c97f39aa4f948f97ffe97f1e1967",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxLoading",

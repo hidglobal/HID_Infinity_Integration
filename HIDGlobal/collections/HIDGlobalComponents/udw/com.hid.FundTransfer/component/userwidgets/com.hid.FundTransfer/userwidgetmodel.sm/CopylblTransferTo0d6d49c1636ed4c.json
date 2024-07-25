@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sc9ee66bd2ac40d39974c7bd5f9dcae3",
+    "_skin_": "sbf48a596bd1428592a455c5af796a2d",
     "_text_": "Bank code",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c84efe4511a94ff9a05a15c742881013",
+    "kuid": "uc46e61f433546c9a79c36bcfd1bdf72",
     "name": "kony.ui.Label",
     "parent": "flxSrcBankCode",
     "pf": "userwidgetmodel",

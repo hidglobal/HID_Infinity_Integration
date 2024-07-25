@@ -40,5 +40,8 @@ define([],function () {
   NativeController.prototype.getContainerRenewableDate = function(){
     throw new Error('getContainerRenewableDate function is not implemented');
   };
+  NativeController.prototype.setNotificationStatus = function(){
+    throw new Error('setNotificationStatus function is not implemented');
+  };
   return NativeController;
 });

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s9478bae30e545f69245755a11c2a7f8",
+    "_skin_": "se90fdb0aa82470fbdb9046b8a9ddf14",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -41,11 +41,11 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "ApproveNotificationMobileSDK",
-    "ide_postShow": "AS_FlexContainer_b28664e367bd46ed96955707153510d8",
+    "ide_postShow": "AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c84b9a13f1354b82954aa33b6c8acf2f",
+    "kuid": "ub8b95979df34b81a488a5b9cffe6cae",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "userwidgetmodel",

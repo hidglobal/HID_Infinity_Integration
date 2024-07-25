@@ -5,194 +5,218 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "a0880c6e8c234af3bc0a123128aeb49b",
+                    "kuid": "caafcc13f86c4fc0ad4614c411ba9081",
                     "paramList": [],
                     "propertyKey": "initiate",
                     "pw": {
                         "displayName": "initiate",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "f2dd57e800424938976de9cf44816d9d",
+                    "kuid": "i6844ee190dc405da85630114165adbb",
                     "paramList": [],
                     "propertyKey": "changeUIMode",
                     "pw": {
                         "displayName": "changeUIMode",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "g7992be4d0c64fbd9bc7340e8515890f",
+                    "kuid": "bb90a2543eb141749437ebb62f0fb7a9",
                     "paramList": [],
                     "propertyKey": "getUsername",
                     "pw": {
                         "displayName": "getUsername",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "ba568efde9084bfd94c5b5dcbe682924",
+                    "kuid": "f837761cf79543ec96b1ad632f4bdd3d",
                     "paramList": [],
                     "propertyKey": "checkBioAvailablityPublic",
                     "pw": {
                         "displayName": "checkBioAvailablityPublic",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "g9d8160d095b4c46b570ea8ec3aeea53",
+                    "kuid": "e02f42c95c2946e0a17c9c2ff717a15f",
                     "paramList": [],
                     "propertyKey": "setBioStatusToEnable",
                     "pw": {
                         "displayName": "setBioStatusToEnable",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "d25dc469b1ad4a15afa6ea8fa37f2359",
+                    "kuid": "bb72a1b7c10449f98555f81f0214088f",
                     "paramList": [],
                     "propertyKey": "setBioStatusToDisable",
                     "pw": {
                         "displayName": "setBioStatusToDisable",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "d290916b892d443f90871e84237e7d85",
+                    "kuid": "gd41e89527b84d7d9b505235ac4ee974",
                     "paramList": [],
                     "propertyKey": "getPinRemainingDays",
                     "pw": {
                         "displayName": "getPinRemainingDays",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "id20555b02ea407fb29dd8a46d00dd2e",
+                    "kuid": "eee13f19d4dc470abe91da78b63014c4",
                     "paramList": [],
                     "propertyKey": "getKeyProfileAge",
                     "pw": {
                         "displayName": "getKeyProfileAge",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "c98da3dfdf174b99b676c69015d097ca",
+                    "kuid": "ba7602db760745f4a8e2d5fdb85723a1",
                     "paramList": [],
                     "propertyKey": "renewContainer",
                     "pw": {
                         "displayName": "renewContainer",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "c6a102553fe24ba891f5ba811f3baa9b",
+                    "kuid": "i03c10efb5054bdc8a9be2da23acd4d3",
                     "paramList": [],
                     "propertyKey": "deleteUserProfile",
                     "pw": {
                         "displayName": "deleteUserProfile",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "dec2c5364f7d4fedb910fd552bbd3821",
+                    "kuid": "fd82d77c86f74e4b810142bd740989c1",
                     "paramList": [],
                     "propertyKey": "getSecureCode",
                     "pw": {
                         "displayName": "getSecureCode",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "fc26baa1266741408108560dd9c8be5d",
+                    "kuid": "c23c30d5a188477d9c8314709ca969dc",
                     "paramList": [],
                     "propertyKey": "logout",
                     "pw": {
                         "displayName": "logout",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "bdc06149bd1e4d108c2ef4a34cb9ef57",
+                    "kuid": "ac5dc7090afd4c9ea0ddf88fc39a17c4",
                     "paramList": [],
                     "propertyKey": "getLoginFLowPublic",
                     "pw": {
                         "displayName": "getLoginFLowPublic",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "a3f07e356cc34ec5b6d85538a10bfadc",
+                    "kuid": "a2ebb6ee8bfb4e299c84129f19e97500",
                     "paramList": [],
                     "propertyKey": "verifyPassword",
                     "pw": {
                         "displayName": "verifyPassword",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "ed128708c23f44ab962fcb3ec732e2c4",
+                    "kuid": "c280f50f2c2a4854af2ccfa38d366164",
                     "paramList": [],
                     "propertyKey": "updatePassword",
                     "pw": {
                         "displayName": "updatePassword",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "j88c246af55446fd8679c9277c58d140",
+                    "kuid": "h0186d36b2b944059a470fb1fcc8dbe9",
                     "paramList": [],
                     "propertyKey": "isContainerRenewalRequired",
                     "pw": {
                         "displayName": "isContainerRenewalRequired",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "b8458f2dc518476495a8d0ca448dd44b",
+                    "paramList": [],
+                    "propertyKey": "setNotificationStatus",
+                    "pw": {
+                        "displayName": "setNotificationStatus",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "b14430ea55f94037a812bb2df8be05be",
+                    "paramList": [],
+                    "propertyKey": "getPasswordPolicy",
+                    "pw": {
+                        "displayName": "getPasswordPolicy",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 }
             ],
@@ -202,7 +226,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "hf6395ae016f48b5b3c0b3a4cbe55b4e",
+                    "kuid": "e4da1c054c19413db816789422e00873",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "onSuccessCB",
@@ -210,12 +234,12 @@
                         "displayName": "onSuccessCB",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "ce7509c4e84240e8b2e02d32eb3e4fb6",
+                    "kuid": "c02ed57911a1421fa3734c586955d736",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "onUpdatePasswordCB",
@@ -223,12 +247,12 @@
                         "displayName": "onUpdatePasswordCB",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "a7b13905461f4f92bf7b0431b9d597a2",
+                    "kuid": "eabd1c70e06049739c5821bb5bf452c3",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "onLoginFlow",
@@ -236,12 +260,12 @@
                         "displayName": "onLoginFlow",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "b44cfb150dd14b268047096a1030eb00",
+                    "kuid": "g026536438a840f790f88a3a7fa40ae4",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "bioStatusCallback",
@@ -249,12 +273,12 @@
                         "displayName": "bioStatusCallback",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "e8e867dafd984df791792c40b5948a2d",
+                    "kuid": "d3dacefb88034548aef1dd65e2f6fe23",
                     "paramList": [],
                     "propertyIndex": 5,
                     "propertyKey": "renewContainerExceptionCB",
@@ -262,12 +286,12 @@
                         "displayName": "renewContainerExceptionCB",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "g2df19809cae46969b50847b8621dde1",
+                    "kuid": "h867c842000c48e9ac76f0f831c4bf0b",
                     "paramList": [],
                     "propertyIndex": 6,
                     "propertyKey": "genearateOTPSuccess",
@@ -275,12 +299,12 @@
                         "displayName": "genearateOTPSuccess",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "e3123608858742339f70089d4e5ca10d",
+                    "kuid": "e490097dc5624cc0ab878702f405df6c",
                     "paramList": [],
                     "propertyIndex": 7,
                     "propertyKey": "genearateOTPFailure",
@@ -288,12 +312,12 @@
                         "displayName": "genearateOTPFailure",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "gc2d23a07f264624ab35d9260f905a6e",
+                    "kuid": "dd822c99e604428fbec2bc88f29a81dd",
                     "paramList": [],
                     "propertyIndex": 8,
                     "propertyKey": "secureCodeSuccess",
@@ -301,12 +325,12 @@
                         "displayName": "secureCodeSuccess",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "a5ee290778764349bfed11d48ccccc33",
+                    "kuid": "hf219aa56ff0423b941d9d171cf19e81",
                     "paramList": [],
                     "propertyIndex": 9,
                     "propertyKey": "secureCodeFailure",
@@ -314,12 +338,12 @@
                         "displayName": "secureCodeFailure",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "c2e06713a71440b5b0b678f0f9ef0901",
+                    "kuid": "b93babe7035346ac9d4b7b51784c5ee8",
                     "paramList": [],
                     "propertyIndex": 10,
                     "propertyKey": "onLogout",
@@ -327,12 +351,12 @@
                         "displayName": "onLogout",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "a835d2a0c3e84100babda2a4a3dd176b",
+                    "kuid": "f9a02477e8a7468da2a50d00610a89e5",
                     "paramList": [],
                     "propertyIndex": 11,
                     "propertyKey": "verifyPasswordCallback",
@@ -340,12 +364,12 @@
                         "displayName": "verifyPasswordCallback",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "be7eb0c793e24c8f846aa0793e57dcd7",
+                    "kuid": "b414a4d2dc304e758fff28769d282375",
                     "paramList": [],
                     "propertyIndex": 12,
                     "propertyKey": "updatePasswordSuccess",
@@ -353,12 +377,12 @@
                         "displayName": "updatePasswordSuccess",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "h33cc180d78f4a118511cca8bd6aa111",
+                    "kuid": "i14915104d09488097a52bf36dd640c7",
                     "paramList": [],
                     "propertyIndex": 13,
                     "propertyKey": "updatePasswordFailure",
@@ -366,12 +390,12 @@
                         "displayName": "updatePasswordFailure",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "a5690c76a5ce4ac1b3de726006556df4",
+                    "kuid": "hbf62fe773a9491cae0a18ac4755b977",
                     "paramList": [],
                     "propertyIndex": 14,
                     "propertyKey": "renewContainerCallback",
@@ -379,7 +403,33 @@
                         "displayName": "renewContainerCallback",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "je185e879aa944e082d5fdd63497943a",
+                    "paramList": [],
+                    "propertyIndex": 15,
+                    "propertyKey": "setNotificationStatusSuccessCB",
+                    "pw": {
+                        "displayName": "setNotificationStatusSuccessCB",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "fd8343a6d0bc4ad58a4f7226bf5a46c6",
+                    "paramList": [],
+                    "propertyIndex": 16,
+                    "propertyKey": "onPasswordPrompt",
+                    "pw": {
+                        "displayName": "onPasswordPrompt",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "event"
                 }
             ],
@@ -397,9 +447,9 @@
             "custom": [
                 {
                     "access": "Write",
-                    "defaultValue": false,
+                    "defaultValue": true,
                     "group": "General",
-                    "kuid": "aba5245b31b84e06a52ca24432f5a50f",
+                    "kuid": "i2ff30b1a43c4d83b6d523f2ac1bb474",
                     "originalPropertyKey": "isRMSEnabled",
                     "propertyIndex": 2,
                     "propertyKey": "isRMSEnabled",
@@ -408,7 +458,7 @@
                         "displayName": "isRMSEnabled",
                         "uiRepresentation": "Label-Radiobuttongroup"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "boolean",
                     "value": "true/false"
                 },
@@ -416,7 +466,7 @@
                     "access": "Write",
                     "defaultValue": "OTP_SMS",
                     "group": "General",
-                    "kuid": "b2729c1c491044d992a67a4b84d61d37",
+                    "kuid": "dabde5744b4b490d93c007394b1e18e6",
                     "originalPropertyKey": "MFA",
                     "propertyIndex": 3,
                     "propertyKey": "MFA",
@@ -425,7 +475,7 @@
                         "displayName": "MFA",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "string",
                     "value": ""
                 },
@@ -433,7 +483,7 @@
                     "access": "Write",
                     "defaultValue": false,
                     "group": "General",
-                    "kuid": "fe7bb3c48ebb41bead6c72cb0b27a19f",
+                    "kuid": "e5feca855ba848cda2e45cc66a9ccebf",
                     "originalPropertyKey": "isRMSReadOnly",
                     "propertyIndex": 4,
                     "propertyKey": "isRMSReadOnly",
@@ -442,7 +492,7 @@
                         "displayName": "isRMSReadOnly",
                         "uiRepresentation": "Label-Radiobuttongroup"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "boolean",
                     "value": "true/false"
                 },
@@ -450,7 +500,7 @@
                     "access": "Write",
                     "defaultValue": "TS01d4cc80",
                     "group": "General",
-                    "kuid": "h661fcc495a34221a52070256dbf4213",
+                    "kuid": "f34dfb24ef19451b8742c643709306ae",
                     "originalPropertyKey": "tmCookieSid",
                     "propertyIndex": 5,
                     "propertyKey": "tmCookieSid",
@@ -459,7 +509,7 @@
                         "displayName": "tmCookieSid",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "string",
                     "value": ""
                 },
@@ -467,7 +517,7 @@
                     "access": "Write",
                     "defaultValue": "C8hDRqP6KY",
                     "group": "General",
-                    "kuid": "a8b39e84889f49b78f9f6bab27ad098e",
+                    "kuid": "d69dcb79b79445e9b8a0954b84188cfa",
                     "originalPropertyKey": "tmCookieTag",
                     "propertyIndex": 6,
                     "propertyKey": "tmCookieTag",
@@ -476,7 +526,7 @@
                         "displayName": "tmCookieTag",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "string",
                     "value": ""
                 },
@@ -484,7 +534,7 @@
                     "access": "Write",
                     "defaultValue": "hotp",
                     "group": "General",
-                    "kuid": "be23e04b161f46eda260f3bec00f3181",
+                    "kuid": "cfd9a26dbca0446fba13752411ad1796",
                     "originalPropertyKey": "otpLabel",
                     "propertyIndex": 8,
                     "propertyKey": "otpLabel",
@@ -493,7 +543,7 @@
                         "displayName": "otpLabel",
                         "uiRepresentation": "Label-Combobox"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "list selector",
                     "value": [
                         "hotp",
@@ -504,7 +554,7 @@
                     "access": "Write",
                     "defaultValue": "QR_SCAN",
                     "group": "General",
-                    "kuid": "he1c03a06bef49e59186276d0c3e7ed1",
+                    "kuid": "h3741a368eed43cc91931e148697412c",
                     "originalPropertyKey": "provisionMode",
                     "propertyIndex": 8,
                     "propertyKey": "provisionMode",
@@ -513,7 +563,7 @@
                         "displayName": "provisionMode",
                         "uiRepresentation": "Label-Combobox"
                     },
-                    "srcWgtKUID": "d197a90c0019423295e3e404c84d4a83",
+                    "srcWgtKUID": "u368c2032ed640ca9638497a36bfcc17",
                     "type": "list selector",
                     "value": [
                         "ACTIVATION_CODE",
@@ -525,7 +575,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "b36ce5cea0214ba0947e48d3de2f15dc",
+                    "kuid": "jef682eda3454d249d696f77e7dcc6b9",
                     "originalPropertyKey": "skin",
                     "propertyIndex": 1,
                     "propertyKey": "skin1",
@@ -539,12 +589,12 @@
                         "srcWidget": "flxErrorConfirmPIN",
                         "wType": "FlexContainer"
                     },
-                    "srcWgtKUID": "g238db5fe8624f1da502a546f6191168"
+                    "srcWgtKUID": "ubb39971589846aa81bb640fc130ef61"
                 },
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "ee1d688aebdf46d1ac4f3086a3a2d65d",
+                    "kuid": "a257be31afc9401bafb1b480980f2627",
                     "originalPropertyKey": "skin",
                     "propertyIndex": 7,
                     "propertyKey": "skin2",
@@ -558,7 +608,7 @@
                         "srcWidget": "flxOOB",
                         "wType": "FlexContainer"
                     },
-                    "srcWgtKUID": "f6f3ea3b19904b06bba252c1a9f2d9e5"
+                    "srcWgtKUID": "u2b320697c6749bab23e6934f04b8b6e"
                 }
             ]
         },

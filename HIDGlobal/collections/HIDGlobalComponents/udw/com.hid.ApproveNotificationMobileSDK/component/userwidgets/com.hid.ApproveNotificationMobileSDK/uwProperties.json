@@ -5,26 +5,26 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "d2c89f7265024b83af14c57f9e3b198b",
+                    "kuid": "b7233f2eadbd47aeb2227bde2057e641",
                     "paramList": [],
                     "propertyKey": "retrieveTransactionIds",
                     "pw": {
                         "displayName": "retrieveTransactionIds",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "srcWgtKUID": "ub8b95979df34b81a488a5b9cffe6cae",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "d10d2f1d7f4046a2b65418d63587ca42",
+                    "kuid": "ea1d5ebcfd274f2187f62da144ab71fa",
                     "paramList": [],
                     "propertyKey": "showAuthentication",
                     "pw": {
                         "displayName": "showAuthentication",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "srcWgtKUID": "ub8b95979df34b81a488a5b9cffe6cae",
                     "type": "event"
                 }
             ],
@@ -34,7 +34,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "e48959a10e2143a6a4dfbb2757f04196",
+                    "kuid": "a5835cadfbfe4f288819266c60bb723f",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "onCompletion",
@@ -42,12 +42,12 @@
                         "displayName": "onCompletion",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "srcWgtKUID": "ub8b95979df34b81a488a5b9cffe6cae",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "e6ff7552a80044e48acee8f15a2027bc",
+                    "kuid": "id17310acf004433b62524d2d945b532",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "onRetrieveNotificationsCallback",
@@ -55,12 +55,12 @@
                         "displayName": "onRetrieveNotificationsCallback",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "srcWgtKUID": "ub8b95979df34b81a488a5b9cffe6cae",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "f6763bd5ab62441b99d945b85b10f5d2",
+                    "kuid": "d1691271294d46b3bc0359293589d2b9",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "onUpdatePasswordCB",
@@ -68,7 +68,7 @@
                         "displayName": "onUpdatePasswordCB",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "srcWgtKUID": "ub8b95979df34b81a488a5b9cffe6cae",
                     "type": "event"
                 }
             ],
@@ -88,7 +88,7 @@
                     "access": "Write",
                     "defaultValue": "",
                     "group": "General",
-                    "kuid": "d9f5c8c2918b452e9ddc63fec046fdc9",
+                    "kuid": "a7af54bf68dc4bb188180fa63615460b",
                     "originalPropertyKey": "transactionID",
                     "propertyIndex": 1,
                     "propertyKey": "transactionID",
@@ -97,7 +97,7 @@
                         "displayName": "transactionID",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "c84b9a13f1354b82954aa33b6c8acf2f",
+                    "srcWgtKUID": "ub8b95979df34b81a488a5b9cffe6cae",
                     "type": "string",
                     "value": ""
                 }

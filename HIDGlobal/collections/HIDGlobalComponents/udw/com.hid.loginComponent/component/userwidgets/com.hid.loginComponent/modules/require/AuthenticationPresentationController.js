@@ -1,23 +1,43 @@
 define(['com/hid/loginComponent/AuthenticationBusinessController'], function(AuthenticationBusinessController)  {
 
   var instance = null;
-
+  var msgId = "";
   AuthenticationPresentationController.prototype.validatePassword = function(username, password, S_CB, F_CB,rmsLoad=null){
-    let transactionId = Math.floor(Math.random() * 10000);    
+    let transactionId = Math.floor(Math.random() * 10000); 
+    msgId = transactionId;
     let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0", 
                      "currentRiskScore" : "2", "transactionId" : transactionId};
     
     AuthenticationBusinessController.validatePassword(loginJson, S_CB, F_CB,rmsLoad);
   };
   
-  AuthenticationPresentationController.prototype.authenticateFirstFactor = function(username, password,authType, S_CB, F_CB,rmsLoad=null){
+   AuthenticationPresentationController.prototype.authenticateFido = function(username, password,request_uri,csrf, S_CB, F_CB,rmsLoad=null){
+    let transactionId = Math.floor(Math.random() * 10000); 
+    msgId = transactionId;
+    let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0",
+                     "currentRiskScore" : "2", "transactionId" : transactionId,
+                    "request_uri": request_uri,"csrf":csrf};
+    
+    AuthenticationBusinessController
+      .authenticateFirstFactor(loginJson, "FIDO", S_CB, F_CB, rmsLoad);
+  };
+  
+  AuthenticationPresentationController.prototype.authenticateFirstFactor
+    = function(username, password, authType, S_CB, F_CB, rmsLoad=null)
+  {
     if(authType === "OTP_SMS_PIN"){
       authType = "OTP_SMS";
     }
-    let transactionId = Math.floor(Math.random() * 10000);    
-    let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0", 
-                     "currentRiskScore" : "2", "transactionId" : transactionId};
-    AuthenticationBusinessController.authenticateFirstFactor(loginJson,authType, S_CB, F_CB,rmsLoad);
+    let transactionId = Math.floor(Math.random() * 10000);  
+    msgId = transactionId;
+    let loginJson = {
+      "userid": username, "password": password,
+      "requiredRiskScore": "0", "currentRiskScore": "2",
+      "transactionId" : transactionId
+    };
+    
+    AuthenticationBusinessController
+      .authenticateFirstFactor(loginJson, authType, S_CB, F_CB, rmsLoad);
   };
 
   AuthenticationPresentationController.prototype.updateRMSServiceEvent = function(authType , mfa_key, S_CB , F_CB,password="12345"){
@@ -31,7 +51,8 @@ define(['com/hid/loginComponent/AuthenticationBusinessController'], function(Aut
     let authType = factor === "OTP_SMS" ? "AT_OOBSMS":"AT_OOBEML";
     let params = {"username" : username,
                   "AuthenticationType" : authType,
-                 "isPasswordRequired": isPasswordRequired};
+                 "isPasswordRequired": isPasswordRequired,
+                 "msgId": msgId};
     if(isPasswordRequired){
       params.password = password;
     }
@@ -63,9 +84,16 @@ define(['com/hid/loginComponent/AuthenticationBusinessController'], function(Aut
   AuthenticationPresentationController.prototype.cancelApprovePolling = function(){
     AuthenticationBusinessController.cancelApprovePolling();
   };
+  
+  AuthenticationPresentationController.prototype.pollForScanToApprove = function(username, password,authType, S_CB, F_CB,rmsLoad=null){
+    kony.print("rmsload " + rmsLoad);
+    AuthenticationBusinessController.scanToApproveFirstFactor(username,password, authType,S_CB, F_CB,rmsLoad);
+    
+  }
 
   AuthenticationPresentationController.prototype.getApproveDevices = function(username, S_CB, F_CB){
-    let params = {"username" : username};
+    let params = {"username" : username,
+                 "msgId": msgId};
     AuthenticationBusinessController.getApproveDevices(params, S_CB, F_CB);
   };
   AuthenticationPresentationController.prototype.rmsSessionLogout = function(username,session,S_CB,F_CB){
@@ -75,6 +103,35 @@ define(['com/hid/loginComponent/AuthenticationBusinessController'], function(Aut
   
   AuthenticationPresentationController.prototype.getClientIp = function(S_CB,F_CB){
     AuthenticationBusinessController.getClientIp(S_CB, F_CB);
+  };
+  
+  AuthenticationPresentationController.prototype.getClientIpScanToApprove = function(qrDataResponse,S_CB,F_CB){
+    AuthenticationBusinessController.getClientIpScanToApprove(qrDataResponse,S_CB, F_CB);
+  };
+  
+  AuthenticationPresentationController.prototype.getScanToApproveQrData = function(S_CB,F_CB){
+  
+    AuthenticationBusinessController.getScanToApproveQrData(S_CB, F_CB);
+
+    };
+    
+AuthenticationPresentationController.prototype.getFIDOAuthentication = function(username, S_CB,F_CB){
+    const params = {username: username}
+    AuthenticationBusinessController.getFIDOAuthenticationOptions(params, S_CB, F_CB);
+  };
+  
+  AuthenticationPresentationController.prototype.authenticateFIDOExplicit = function(username, id, clientDataJSON, authenticatorData, signature, userHandle, request_uri, csrf, S_CB, F_CB){
+    let params = {
+      "username" : username, 
+      "id" : id,
+      "clientDataJSON" : clientDataJSON,
+      "authenticatorData" : authenticatorData,
+      "signature" : signature,
+      "userHandle" : userHandle,
+      "request_uri" : request_uri,
+      "csrf" : csrf
+    };
+    AuthenticationBusinessController.authenticateFIDO(params, S_CB, F_CB);
   };
 
   function AuthenticationPresentationController(){
