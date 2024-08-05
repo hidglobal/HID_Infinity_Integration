@@ -53,14 +53,14 @@
     "containerweight": 100,
     "desktopweb": {},
     "disabledSkins": {
-        "blockedUISkin": "sf5c004426b14e779e0de619db4df846"
+        "blockedUISkin": "s83f3a449d464afa906a0e97f09b4843"
     },
     "enablescrolling": true,
     "id": "flxLoginFIDO",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u647185f8503440badda05c63b8cd944",
+    "kuid": "u15716414f2144de8918b4ae10b5ece4",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "loginComponent",

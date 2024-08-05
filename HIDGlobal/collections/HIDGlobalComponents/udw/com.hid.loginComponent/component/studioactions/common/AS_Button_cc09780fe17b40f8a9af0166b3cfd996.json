@@ -1,6 +1,6 @@
 {
-    "AS_Button_be7d1b2fcb864ebb90c6e258db6e8478": {
-        "id": "AS_Button_be7d1b2fcb864ebb90c6e258db6e8478",
+    "AS_Button_cc09780fe17b40f8a9af0166b3cfd996": {
+        "id": "AS_Button_cc09780fe17b40f8a9af0166b3cfd996",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -9,14 +9,14 @@
         "contextObj": {
             "name": "userwidgetmodel",
             "type": "userwidgets",
-            "KUID": "u9657723ead14416b2b607f60803b232"
+            "KUID": "u7d6a783d580496e98c53d16673e6a2b"
         },
         "language": "js",
         "actions": [{
-            "id": "INVOKE_FUNCTION___j5fee499124042cf9068abe493da006e",
+            "id": "INVOKE_FUNCTION___f421a248343645e98155945bf25cb723",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "trySecureCodeOnClick",
-            "display": "trySecureCodeOnClick",
+            "sequenceKUID": "cancelOnClick",
+            "display": "cancelOnClick",
             "inputparams": [],
             "parentId": null,
             "callbackType": null,

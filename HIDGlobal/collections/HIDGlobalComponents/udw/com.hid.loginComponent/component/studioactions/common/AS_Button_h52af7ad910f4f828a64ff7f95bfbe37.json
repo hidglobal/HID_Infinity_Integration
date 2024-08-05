@@ -1,6 +1,6 @@
 {
-    "AS_Button_f24fee44a771436587ebe0c49b78e867": {
-        "id": "AS_Button_f24fee44a771436587ebe0c49b78e867",
+    "AS_Button_h52af7ad910f4f828a64ff7f95bfbe37": {
+        "id": "AS_Button_h52af7ad910f4f828a64ff7f95bfbe37",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -9,14 +9,14 @@
         "contextObj": {
             "name": "userwidgetmodel",
             "type": "userwidgets",
-            "KUID": "u9657723ead14416b2b607f60803b232"
+            "KUID": "u7d6a783d580496e98c53d16673e6a2b"
         },
         "language": "js",
         "actions": [{
-            "id": "INVOKE_FUNCTION___af43756c9c7b448883628c498f16be8f",
+            "id": "INVOKE_FUNCTION___i173ffe4a8b74f2ea57c3fa31ee53ac4",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "cancelOnClick",
-            "display": "cancelOnClick",
+            "sequenceKUID": "initiateSecondFactor",
+            "display": "initiateSecondFactor",
             "inputparams": [],
             "parentId": null,
             "callbackType": null,

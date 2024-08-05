@@ -2,68 +2,68 @@ define({
     /*
       This is an auto generated file and any modifications to it may result in corruption of the action sequence.
     */
-    /** onClick defined for btnCancelSendOTP **/
-    AS_Button_a691c0ad29c94f71ae377ec9eaebbdcc: function AS_Button_a691c0ad29c94f71ae377ec9eaebbdcc(eventobject) {
-        var self = this;
-        return self.cancelOnClick.call(this);
-    },
-    /** onClick defined for btnTryOTP **/
-    AS_Button_be7d1b2fcb864ebb90c6e258db6e8478: function AS_Button_be7d1b2fcb864ebb90c6e258db6e8478(eventobject) {
-        var self = this;
-        return self.trySecureCodeOnClick.call(this);
-    },
-    /** onClick defined for btnLoginOOBPIN **/
-    AS_Button_e965f2f4de0e4456b573e7ede582623e: function AS_Button_e965f2f4de0e4456b573e7ede582623e(eventobject) {
-        var self = this;
-        return self.loginPassword.call(this);
-    },
-    /** onClick defined for btnLoginFIDO **/
-    AS_Button_f09aba1e7f774f8898dfe1fdd0369a57: function AS_Button_f09aba1e7f774f8898dfe1fdd0369a57(eventobject) {
-        var self = this;
-        return self.loginPassword.call(this);
-    },
-    /** onClick defined for btnCancelOTP **/
-    AS_Button_f24fee44a771436587ebe0c49b78e867: function AS_Button_f24fee44a771436587ebe0c49b78e867(eventobject) {
-        var self = this;
-        return self.cancelOnClick.call(this);
-    },
     /** onClick defined for btnLoginSecure **/
-    AS_Button_fc7a1f582284443b8b03c2a5ec0d0ad0: function AS_Button_fc7a1f582284443b8b03c2a5ec0d0ad0(eventobject) {
+    AS_Button_c0571ca786f14b69abf3527f4774f6f0: function AS_Button_c0571ca786f14b69abf3527f4774f6f0(eventobject) {
         var self = this;
         return self.loginPassword.call(this);
     },
-    /** onClick defined for btnSendOTP **/
-    AS_Button_fd4c1132c85a4b2694499c61d8fa346d: function AS_Button_fd4c1132c85a4b2694499c61d8fa346d(eventobject) {
+    /** onClick defined for btnCancelSendOTP **/
+    AS_Button_cc09780fe17b40f8a9af0166b3cfd996: function AS_Button_cc09780fe17b40f8a9af0166b3cfd996(eventobject) {
         var self = this;
-        return self.initiateSecondFactor.call(this);
+        return self.cancelOnClick.call(this);
     },
     /** onClick defined for btnCancelApprove **/
-    AS_Button_g613a200f57447eebfb8e32809d78033: function AS_Button_g613a200f57447eebfb8e32809d78033(eventobject) {
+    AS_Button_d21daa4ce3894f5c887f0f7692602d7f: function AS_Button_d21daa4ce3894f5c887f0f7692602d7f(eventobject) {
         var self = this;
         return self.cancelOnClick.call(this);
     },
-    /** onClick defined for btnSecureCode **/
-    AS_Button_gd89b500dafb46bcb8e4f11d01d8b1f9: function AS_Button_gd89b500dafb46bcb8e4f11d01d8b1f9(eventobject) {
-        var self = this;
-        return self.trySecureCodeOnClick.call(this);
-    },
-    /** onClick defined for btnLogin **/
-    AS_Button_h38ea8aa08704f1db094ac82c174181b: function AS_Button_h38ea8aa08704f1db094ac82c174181b(eventobject) {
+    /** onClick defined for btnLoginFIDO **/
+    AS_Button_da8c211a1c9847e683cb13a85540b5eb: function AS_Button_da8c211a1c9847e683cb13a85540b5eb(eventobject) {
         var self = this;
         return self.loginPassword.call(this);
     },
     /** onClick defined for btnCancelPush **/
-    AS_Button_ieb0c4297e67480393b1f6128beb4a9c: function AS_Button_ieb0c4297e67480393b1f6128beb4a9c(eventobject) {
+    AS_Button_ddfb51a0bf4a4d4db7c0b0a77113abf1: function AS_Button_ddfb51a0bf4a4d4db7c0b0a77113abf1(eventobject) {
         var self = this;
         return self.cancelOnClick.call(this);
     },
+    /** onClick defined for btnLoginOOBPIN **/
+    AS_Button_e5fc942f88524610bda9a770ae4aa4ca: function AS_Button_e5fc942f88524610bda9a770ae4aa4ca(eventobject) {
+        var self = this;
+        return self.loginPassword.call(this);
+    },
+    /** onClick defined for btnTryOTP **/
+    AS_Button_f912a45ccab34a798f11781c9c080106: function AS_Button_f912a45ccab34a798f11781c9c080106(eventobject) {
+        var self = this;
+        return self.trySecureCodeOnClick.call(this);
+    },
+    /** onClick defined for btnLogin **/
+    AS_Button_f93a709663ee4106a9cc6bb2d4f02f56: function AS_Button_f93a709663ee4106a9cc6bb2d4f02f56(eventobject) {
+        var self = this;
+        return self.loginPassword.call(this);
+    },
+    /** onClick defined for btnCancelOTP **/
+    AS_Button_g714298b76774421ba52d1286c6163c4: function AS_Button_g714298b76774421ba52d1286c6163c4(eventobject) {
+        var self = this;
+        return self.cancelOnClick.call(this);
+    },
+    /** onClick defined for btnSendOTP **/
+    AS_Button_h52af7ad910f4f828a64ff7f95bfbe37: function AS_Button_h52af7ad910f4f828a64ff7f95bfbe37(eventobject) {
+        var self = this;
+        return self.initiateSecondFactor.call(this);
+    },
+    /** onClick defined for btnSecureCode **/
+    AS_Button_j0e9071821004aeb86e05cde100780ae: function AS_Button_j0e9071821004aeb86e05cde100780ae(eventobject) {
+        var self = this;
+        return self.trySecureCodeOnClick.call(this);
+    },
     /** onTouchEnd defined for lblResendNot **/
-    AS_Label_e0f65b60282044c1a72f2f79dbdc293a: function AS_Label_e0f65b60282044c1a72f2f79dbdc293a(eventobject, x, y) {
+    AS_Label_fac522fd4fff4a97bef584645cb796c5: function AS_Label_fac522fd4fff4a97bef584645cb796c5(eventobject, x, y) {
         var self = this;
         return self.resendPushTouchEnd.call(this);
     },
     /** onRowClick defined for segmentPushDevices **/
-    AS_Segment_e2b37beb9d254b6ebcbb3721dc62f336: function AS_Segment_e2b37beb9d254b6ebcbb3721dc62f336(eventobject, sectionNumber, rowNumber) {
+    AS_Segment_d24a638397e847c1938fee698d4a7ef1: function AS_Segment_d24a638397e847c1938fee698d4a7ef1(eventobject, sectionNumber, rowNumber) {
         var self = this;
         return self.initiateApprove.call(this, rowNumber);
     }

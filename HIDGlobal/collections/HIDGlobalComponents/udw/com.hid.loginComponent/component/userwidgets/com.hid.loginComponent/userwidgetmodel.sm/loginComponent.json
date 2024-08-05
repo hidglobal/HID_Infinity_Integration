@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s9dc944366b34be5b86575dd1ceea0f3",
+    "_skin_": "s5fdaf849f6a42e284c5947f45aab163",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -55,7 +55,7 @@
     "iphone": {},
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u3bd4bd0c4f04df3a5e3be7361298f91",
+    "kuid": "u20acf87d5b6458089f2eee11e08f98f",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "userwidgetmodel",

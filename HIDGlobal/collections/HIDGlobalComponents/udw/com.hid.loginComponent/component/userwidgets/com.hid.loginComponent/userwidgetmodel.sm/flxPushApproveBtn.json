@@ -18,7 +18,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sab070817aff4f92b6f92187e7fb0392",
+    "_skin_": "s2aa0079dfb64bb4b2c7f776943aacb1",
     "_top_": {
         "type": "string",
         "value": "3%"
@@ -45,7 +45,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u80e8388204e4d98a00b315d2d2e5b8f",
+    "kuid": "u2289e5125694c4db2af0b4f2a379551",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxPushDevices",

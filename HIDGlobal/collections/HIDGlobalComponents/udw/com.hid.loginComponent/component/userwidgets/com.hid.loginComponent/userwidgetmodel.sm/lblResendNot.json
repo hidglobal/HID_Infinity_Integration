@@ -46,7 +46,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "id": "lblResendNot",
-    "ide_onTouchEnd": "AS_Label_e0f65b60282044c1a72f2f79dbdc293a",
+    "ide_onTouchEnd": "AS_Label_fac522fd4fff4a97bef584645cb796c5",
     "info": null,
     "ipad": {
         "psp": {
@@ -60,7 +60,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ucc0c5d42ca24566b14b232134c90f3e",
+    "kuid": "ued5a76961364ec784db045d7944d91c",
     "name": "kony.ui.Label",
     "parent": "flxTimer",
     "pf": "userwidgetmodel",

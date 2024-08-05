@@ -28,7 +28,7 @@
             0
         ],
         "_percent_": true,
-        "_skin_": "s9dc944366b34be5b86575dd1ceea0f3",
+        "_skin_": "s5fdaf849f6a42e284c5947f45aab163",
         "_top_": {
             "type": "string",
             "value": "0dp"
@@ -130,7 +130,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sab070817aff4f92b6f92187e7fb0392",
+                "_skin_": "s2aa0079dfb64bb4b2c7f776943aacb1",
                 "_top_": {
                     "type": "string",
                     "value": "7%"
@@ -164,7 +164,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s56720058c7d4599b3894059610143d0",
+                    "_skin_": "sa02904431704721a32205eaa8b8734f",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -182,21 +182,21 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sd3b3282ef074fef8fc6c247e9798f20",
+                    "focusskin": "s6b1e2fc8e3c4117886fc0d56c4876a4",
                     "id": "btnCancelApprove",
-                    "ide_onClick": "AS_Button_g613a200f57447eebfb8e32809d78033",
+                    "ide_onClick": "AS_Button_d21daa4ce3894f5c887f0f7692602d7f",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u2c19ed1928a47a0824733fa13ebf3b2",
+                    "kuid": "u2860d44470e409983e826251b054edb",
                     "name": "kony.ui.Button",
                     "parent": "flxApproveBtns",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "responsiveData": {},
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "I8ys1Pt78dvDfcdRwKnnpcqEkl8="
+                        "md5": "7TLXMtLjfE3yNe9UIclR75ces/U="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -242,21 +242,21 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sb8ca82745994cf28b282cdfb4810fca",
+                    "focusskin": "sac94c7032c14932a45b2955adc52e66",
                     "id": "btnTryOTP",
-                    "ide_onClick": "AS_Button_be7d1b2fcb864ebb90c6e258db6e8478",
+                    "ide_onClick": "AS_Button_f912a45ccab34a798f11781c9c080106",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u783fe377018490082b873d9c4ea9790",
+                    "kuid": "u0d4abc4d4974d6fa768708bc4d2c4e3",
                     "name": "kony.ui.Button",
                     "parent": "flxApproveBtns",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "responsiveData": {},
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "q0zTpMczgYsf1B5MgJ5zEGW2jto="
+                        "md5": "lNUed+yyG7+yFYLtUMJ6FYQiZiE="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -277,18 +277,18 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u0a023b4d4dc43aab66ff50372f0b2d3",
+                "kuid": "u657693e38094968bc654c4871a23c96",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxApprove",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "responsiveData": {},
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "Z5qMcGFlzyPryil+WWprc0CCI4I="
+                    "md5": "OdziDz/FgyhgLzaDTRZlmGEbuMY="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -319,7 +319,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sab070817aff4f92b6f92187e7fb0392",
+                "_skin_": "s2aa0079dfb64bb4b2c7f776943aacb1",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -346,7 +346,7 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u8a5e59848504487bc4145da5a6a1371",
+                "kuid": "u610e790a72b4d4ba4b82ce433bb95bd",
                 "layouttype": 2,
                 "lblResendNot": {
                     "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -396,7 +396,7 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "id": "lblResendNot",
-                    "ide_onTouchEnd": "AS_Label_e0f65b60282044c1a72f2f79dbdc293a",
+                    "ide_onTouchEnd": "AS_Label_fac522fd4fff4a97bef584645cb796c5",
                     "info": null,
                     "ipad": {
                         "psp": {
@@ -410,14 +410,14 @@
                     },
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "ucc0c5d42ca24566b14b232134c90f3e",
+                    "kuid": "ued5a76961364ec784db045d7944d91c",
                     "name": "kony.ui.Label",
                     "parent": "flxTimer",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "66QOsSxrNvD1L5+DMiqJw8UCoE8="
+                        "md5": "JJ0EsX50ZcoMsw0QW9Icmffptkg="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -484,14 +484,14 @@
                     },
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u73d097f9fcf436090ce13c694f1aea9",
+                    "kuid": "ud3ebdc8c5f34aca8e5caad2e92303a0",
                     "name": "kony.ui.Label",
                     "parent": "flxTimer",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "2lntoxbLncMSl0cRClFEfGldJLI="
+                        "md5": "aW7+/F46h/nqH8mUC2koGMOmkdI="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -499,14 +499,14 @@
                 },
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxApprove",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "responsiveData": {},
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "at8dDScTeBSabjXn5GZYngdZD1Q="
+                    "md5": "weZhEMagmXQMoIdGEUN2TFVPRBg="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -517,7 +517,7 @@
             "info": null,
             "iscustomlayout": false,
             "isvisible": false,
-            "kuid": "u44cab5bacbd48d790c089a3194e9932",
+            "kuid": "ufb0de75700949dfafca8bf1d4a7fbeb",
             "layouttype": 4,
             "lblApproveNot": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -580,15 +580,15 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u6e6cca96f5f4672ba0abcddea22bd86",
+                "kuid": "ude2482d7b604d0fb94fdc98ab070c41",
                 "name": "kony.ui.Label",
                 "parent": "flxApprove",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "responsiveData": {},
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "Is/Y3Znj6Y42oAerHUeOoDZHLsA="
+                    "md5": "NXdta9tNBjNKHX+RMkqa2hCvW2Y="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -655,15 +655,15 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ubdb728a78cb4573b71902f316cd07c2",
+                "kuid": "u3fde132b7fa43bdbe5374a373b0db84",
                 "name": "kony.ui.Label",
                 "parent": "flxApprove",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "responsiveData": {},
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "oLVYtEweR8CMhkSu/CvtHeFSwNs="
+                    "md5": "4WWX2TAGebDcBx5oOBUINdAuTYY="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -730,15 +730,15 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u3f1b83b11a84f739cf94383f1e96a50",
+                "kuid": "u9998836bda044e0b539fe64ddf14084",
                 "name": "kony.ui.Label",
                 "parent": "flxApprove",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "responsiveData": {},
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "jiC2fbC9HlM508qtWCG1CgD7yjk="
+                    "md5": "dTxiJtKsJOvgQBDMUyDkQStd2iw="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -746,13 +746,13 @@
             },
             "name": "kony.ui.FlexContainer",
             "parent": "loginComponent",
-            "pf": "uwu9657723ead14416b2b607f60803b232",
+            "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "kY60VHuo9tNh6SMKzHvysecSAxM="
+                "md5": "Iesu5kwE73aOiLykeHNVHtN6aPA="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -815,7 +815,7 @@
             "containerweight": 100,
             "desktopweb": {},
             "disabledSkins": {
-                "blockedUISkin": "sf5c004426b14e779e0de619db4df846"
+                "blockedUISkin": "s83f3a449d464afa906a0e97f09b4843"
             },
             "enablescrolling": true,
             "flxButtons": {
@@ -898,24 +898,24 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "desktopweb": {
-                        "blockedUISkin": "sc9fe4c317c54f5b83c8aff69b2dad42"
+                        "blockedUISkin": "sb4052daabfa44a08fe8db0819e055cb"
                     },
                     "disabledSkins": {},
                     "displaytext": true,
                     "focusskin": "s43268be1bbd4abbb8df6d259924ff41",
                     "id": "btnLogin",
-                    "ide_onClick": "AS_Button_h38ea8aa08704f1db094ac82c174181b",
+                    "ide_onClick": "AS_Button_f93a709663ee4106a9cc6bb2d4f02f56",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u6d5f23f9abd488c95f8f0b87c2416ac",
+                    "kuid": "u52d663d84a3435eb95f4782ced27ac6",
                     "name": "kony.ui.Button",
                     "parent": "flxButtons",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "No2pvXUdSZZPmYFvJDYeNJmMSKE="
+                        "md5": "+RbM7WANItlkzWHtioqe3fRERVI="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -935,17 +935,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u202c08cfbbc4890b51128374f28ceae",
+                "kuid": "u0233c5ddec748408073f789fcaf0a66",
                 "layouttype": 2,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxLogin",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "rDrGVOn0tbJIxxqQZnP4Plvr2wE="
+                    "md5": "nf9YoaJgSe1O4gUV53OHXuTR4/c="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -1014,13 +1014,13 @@
                         }
                     },
                     "isvisible": true,
-                    "kuid": "ub445519837941349d1b45ab30ecd446",
+                    "kuid": "u1cc938d3a8d4b01ac62cdcbcc964f7e",
                     "masterType": 1,
                     "name": "kony.ui.Label",
                     "parent": "flxPassword",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "snapshot": {
-                        "md5": "boAt7khfK06/yqiEOhQ+NPmqdAc="
+                        "md5": "azqK2/kqenCbOW16kpzHTBkSGTU="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -1075,17 +1075,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u51743829f324bd486f3a6bbe079ead6",
+                "kuid": "u2d4a840a9754d71a89332c67b361111",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxLogin",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "9kDrPolcmUHAwV6NUp5QsvD7Y+0="
+                    "md5": "c7NAjfB8IqsGCcE66C36ikr8jFk="
                 },
                 "snaptogrid": true,
                 "tbxPassword": {
@@ -1112,7 +1112,7 @@
                         0
                     ],
                     "_placeholder_": "Password",
-                    "_skin_": "s1b1fe1836d84d29b815f64b1b6e761b",
+                    "_skin_": "sf32faa3c3364ef98167781c39ec25ea",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -1136,7 +1136,7 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s607bd7431e8457b944d8a819784cdb3"
+                        "placeholderSkin": "s992958069154bfd87f88e98f0b642cd"
                     },
                     "disabledSkins": {},
                     "focusskin": "s506a3a919294ab4a5008767536cae28",
@@ -1145,17 +1145,17 @@
                     "iscustomlayout": false,
                     "isvisible": true,
                     "keyboardtype": "A",
-                    "kuid": "ucbfd7f03bd94ae49a79c267672aec28",
+                    "kuid": "u75b2bdb76574c889be610d9b3af2233",
                     "mode": "A",
                     "name": "kony.ui.TextBox2",
                     "parent": "flxPassword",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
-                    "placeholderskin": "s607bd7431e8457b944d8a819784cdb3",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
+                    "placeholderskin": "s992958069154bfd87f88e98f0b642cd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "uNGMzwyv7NC/iQc4UhOZayJfVXc="
+                        "md5": "eVrEmtIFnysMKxZQ+g4W6PiUEgE="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -1233,13 +1233,13 @@
                         }
                     },
                     "isvisible": true,
-                    "kuid": "u69c67ecb8d746e8bcf59b3885a87e4f",
+                    "kuid": "u6ab09d6b9a542188e018f82f031d140",
                     "masterType": 1,
                     "name": "kony.ui.Label",
                     "parent": "flxUserName",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "snapshot": {
-                        "md5": "i6SLnR5ki3DidhqF+4Td6q1J4No="
+                        "md5": "uLyMWaQhQacQNE7CUJ0Y+QJ44Ak="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -1294,17 +1294,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u9d4f1f6984a42b588684b4757b90870",
+                "kuid": "u2b2a87d3172422bb482d7bab4742b79",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxLogin",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "djhQ2L3WgYd2sckE5znHCB9W68s="
+                    "md5": "H80GgyQtGQvccfdMSS74fNsJeb0="
                 },
                 "snaptogrid": true,
                 "tbxUser": {
@@ -1351,7 +1351,7 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s607bd7431e8457b944d8a819784cdb3"
+                        "placeholderSkin": "s992958069154bfd87f88e98f0b642cd"
                     },
                     "disabledSkins": {},
                     "focusskin": "s506a3a919294ab4a5008767536cae28",
@@ -1360,17 +1360,17 @@
                     "iscustomlayout": false,
                     "isvisible": true,
                     "keyboardtype": "A",
-                    "kuid": "u877ae9dd64e4777b6ed3304c5d4dd90",
+                    "kuid": "u81437c7c37346dc89457b1ab10539e1",
                     "mode": "A",
                     "name": "kony.ui.TextBox2",
                     "parent": "flxUserName",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
-                    "placeholderskin": "s607bd7431e8457b944d8a819784cdb3",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
+                    "placeholderskin": "s992958069154bfd87f88e98f0b642cd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": false,
                     "snapshot": {
-                        "md5": "fSE0yN4+oLUasbfS1aWLO3D1np4="
+                        "md5": "C+b7pEIjtyAYdcm4Q6MzBxR9etA="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -1386,7 +1386,7 @@
             "info": null,
             "iscustomlayout": false,
             "isvisible": true,
-            "kuid": "ub4edb8a3c7144fea66f7d18831e479a",
+            "kuid": "u2a1ed72dd8f4977986f6722947c6eee",
             "layouttype": 4,
             "lblErrorLogin": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -1449,14 +1449,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ue291096654f4257b078a6d717138379",
+                "kuid": "u087491a4b4446778e8bc37986f1fd47",
                 "name": "kony.ui.Label",
                 "parent": "flxLogin",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "kC7IgrtTBo48vAGdwt1ql4dK4cs="
+                    "md5": "toJeoorO6elAytFFSbEXdbNKMKE="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -1523,14 +1523,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u929b337b7d54883902fa8e7af054aa9",
+                "kuid": "u4181094a2fc44a1a06d470f6ac83086",
                 "name": "kony.ui.Label",
                 "parent": "flxLogin",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "5E6CJ7424tzaAeslT1q9YynsPIY="
+                    "md5": "L/4Z812L3i5dG9Nd9diZpqCYHa8="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -1597,14 +1597,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u42031a92b2b4bf1a8e5d142e558c0f2",
+                "kuid": "ua0e6fa8f96b4937ad944f44732cb2f8",
                 "name": "kony.ui.Label",
                 "parent": "flxLogin",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "6PGTI+ZXnRzc7zMowzxnbl2Tfq0="
+                    "md5": "qElMNk0kRucr3EH5uEwLQQhLdoo="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -1612,13 +1612,13 @@
             },
             "name": "kony.ui.FlexContainer",
             "parent": "loginComponent",
-            "pf": "uwu9657723ead14416b2b607f60803b232",
+            "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "6yLPeWCv7KloZunH++bHPjECmw8="
+                "md5": "CTOVViNrM0js5i+otwZdCqBDE0s="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -1680,7 +1680,7 @@
             "containerweight": 100,
             "desktopweb": {},
             "disabledSkins": {
-                "blockedUISkin": "sf5c004426b14e779e0de619db4df846"
+                "blockedUISkin": "s83f3a449d464afa906a0e97f09b4843"
             },
             "enablescrolling": true,
             "flxButtonsFIDO": {
@@ -1763,24 +1763,24 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "desktopweb": {
-                        "blockedUISkin": "sc9fe4c317c54f5b83c8aff69b2dad42"
+                        "blockedUISkin": "sb4052daabfa44a08fe8db0819e055cb"
                     },
                     "disabledSkins": {},
                     "displaytext": true,
                     "focusskin": "s43268be1bbd4abbb8df6d259924ff41",
                     "id": "btnLoginFIDO",
-                    "ide_onClick": "AS_Button_f09aba1e7f774f8898dfe1fdd0369a57",
+                    "ide_onClick": "AS_Button_da8c211a1c9847e683cb13a85540b5eb",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "ud62d23c53ab4c6db93d65ad3dbd634c",
+                    "kuid": "uff274354ef74b36a20b4fe7fb95b080",
                     "name": "kony.ui.Button",
                     "parent": "flxButtonsFIDO",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "xpjmQaxVc5k/1SQWKm4Rg/UDu54="
+                        "md5": "rV/EARC9jhM32cKOfHlbLNHhARk="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -1800,17 +1800,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ua6b61cd2d7040b8921df1b3f2043536",
+                "kuid": "u518b96307af4ba5a1112b2dd9be0ca9",
                 "layouttype": 2,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxLoginFIDO",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "V1DcjyzWz3nlbdPKbYX1CduJUvY="
+                    "md5": "GifaaSn1wbdQhSrluYyYIJseX0U="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -1883,13 +1883,13 @@
                         }
                     },
                     "isvisible": true,
-                    "kuid": "u12d5f96938e49d09d3c876994a706e9",
+                    "kuid": "u30fb4f271a6458e89432768de9a043d",
                     "masterType": 1,
                     "name": "kony.ui.Label",
                     "parent": "flxUserNameFIDO",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "snapshot": {
-                        "md5": "fjtTQG74huYGVhD2uqpbX1T0WQc="
+                        "md5": "ZZ/X34LNCsbijkrWaTq4rscGluM="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -1944,17 +1944,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ua9354c94b7e4683951214b339adbda3",
+                "kuid": "u7a0542609964568abf40483353ee403",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxLoginFIDO",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "tKyLZglFiP67dWgx2KLnMJ6p6go="
+                    "md5": "vj+ryMG7hTjbL08/Fa+YAPkvZEs="
                 },
                 "snaptogrid": true,
                 "tbxUserFIDO": {
@@ -2001,7 +2001,7 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s607bd7431e8457b944d8a819784cdb3"
+                        "placeholderSkin": "s992958069154bfd87f88e98f0b642cd"
                     },
                     "disabledSkins": {},
                     "focusskin": "s506a3a919294ab4a5008767536cae28",
@@ -2010,17 +2010,17 @@
                     "iscustomlayout": false,
                     "isvisible": true,
                     "keyboardtype": "A",
-                    "kuid": "ue8ac414763447058713a273c6489b7b",
+                    "kuid": "u4d0c843b0c04644ab620fed6ed2d410",
                     "mode": "A",
                     "name": "kony.ui.TextBox2",
                     "parent": "flxUserNameFIDO",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
-                    "placeholderskin": "s607bd7431e8457b944d8a819784cdb3",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
+                    "placeholderskin": "s992958069154bfd87f88e98f0b642cd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": false,
                     "snapshot": {
-                        "md5": "PEoK/dUX1O+V9/WfuFuKgMFIjIQ="
+                        "md5": "1W1Qf0gC5o574hUokf3XB0CjjbU="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -2036,7 +2036,7 @@
             "info": null,
             "iscustomlayout": false,
             "isvisible": true,
-            "kuid": "u647185f8503440badda05c63b8cd944",
+            "kuid": "u15716414f2144de8918b4ae10b5ece4",
             "layouttype": 4,
             "lblErrorLoginFIDO": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -2099,14 +2099,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": false,
-                "kuid": "ua7566121b014e5ca20b07bb79164fc2",
+                "kuid": "uaaec6937acc4fe893dea95cdc8e8c8e",
                 "name": "kony.ui.Label",
                 "parent": "flxLoginFIDO",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "X0Xj1zPT1/Jci9sjQ5LZ50TS1Xo="
+                    "md5": "VWNE3PuPJE7Lb2j3Ft4MXTs375w="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -2173,14 +2173,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "udec34cff48046d28ba5eebf4a1a3d38",
+                "kuid": "uf345b326ff94beea7d9d9b96568f367",
                 "name": "kony.ui.Label",
                 "parent": "flxLoginFIDO",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "xRjrPxoOJKZSIg6Iz76bFNkSITo="
+                    "md5": "v9AJKDuf8pYkQ4TF0duWaR4lN8s="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -2247,14 +2247,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u04f3aa76c44441c85ed25e073ad56d1",
+                "kuid": "u6294c45b00e4ed28c5be73e4cbf6b8c",
                 "name": "kony.ui.Label",
                 "parent": "flxLoginFIDO",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "gjbRv8kz2udyUJdw4ri250HjEU4="
+                    "md5": "Gdo131KDv14MN6CzPSzbxwjcDL8="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -2262,13 +2262,13 @@
             },
             "name": "kony.ui.FlexContainer",
             "parent": "loginComponent",
-            "pf": "uwu9657723ead14416b2b607f60803b232",
+            "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "3fO58RWDprHRfGYWQaygUBOKaRY="
+                "md5": "HvSVf/1ToRWsJVM6ailw4tpsdZM="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -2331,7 +2331,7 @@
             "containerweight": 100,
             "desktopweb": {},
             "disabledSkins": {
-                "blockedUISkin": "sf5c004426b14e779e0de619db4df846"
+                "blockedUISkin": "s83f3a449d464afa906a0e97f09b4843"
             },
             "enablescrolling": true,
             "flxLoginButton": {
@@ -2414,24 +2414,24 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "desktopweb": {
-                        "blockedUISkin": "sc9fe4c317c54f5b83c8aff69b2dad42"
+                        "blockedUISkin": "sb4052daabfa44a08fe8db0819e055cb"
                     },
                     "disabledSkins": {},
                     "displaytext": true,
                     "focusskin": "s43268be1bbd4abbb8df6d259924ff41",
                     "id": "btnLoginOOBPIN",
-                    "ide_onClick": "AS_Button_e965f2f4de0e4456b573e7ede582623e",
+                    "ide_onClick": "AS_Button_e5fc942f88524610bda9a770ae4aa4ca",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u6e4c41e39544094a52b0aeca77f694a",
+                    "kuid": "ub7429a5daad4658885d911baae72e57",
                     "name": "kony.ui.Button",
                     "parent": "flxLoginButton",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "v88DybLb4B4eQYxNo7CRZkha50k="
+                        "md5": "vY/BohwLzlbWFdQ6TGdRZfkIg34="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -2451,17 +2451,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "uedc49c106074fc1baf1d599b5e40b22",
+                "kuid": "uc58dfd116da4d0ba65e332e70bc30af",
                 "layouttype": 2,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxOOBPIN",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "g65o0nY3rPvaBkjI+0wdwe1leQU="
+                    "md5": "vyTzn2cVQjRmypfjglJzTBBVZck="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -2530,13 +2530,13 @@
                         }
                     },
                     "isvisible": true,
-                    "kuid": "u832983655ca487485cbb708a0981a42",
+                    "kuid": "u1dc57e8890145bc93d2ccea1ebe28ef",
                     "masterType": 1,
                     "name": "kony.ui.Label",
                     "parent": "flxPIN",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "snapshot": {
-                        "md5": "PSBOy9DKjPRQGn5q0a5uIo5rlZM="
+                        "md5": "8TFCCMAqoYo/7NE1MTCcBvWddjQ="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -2591,17 +2591,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u9116d3b37fa4ed5bef0fbdf5da68fef",
+                "kuid": "u291aa8820684cc297dce493ae23f1ea",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxOOBPIN",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "TOnbEmSeLnr8au/gSfwLJ13wPTw="
+                    "md5": "xzTjiZYifYsrb3gDTFcBKCx0l1g="
                 },
                 "snaptogrid": true,
                 "tbxOOBPIN": {
@@ -2652,7 +2652,7 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s607bd7431e8457b944d8a819784cdb3"
+                        "placeholderSkin": "s992958069154bfd87f88e98f0b642cd"
                     },
                     "disabledSkins": {},
                     "focusskin": "s506a3a919294ab4a5008767536cae28",
@@ -2661,17 +2661,17 @@
                     "iscustomlayout": false,
                     "isvisible": true,
                     "keyboardtype": "A",
-                    "kuid": "u0c2504769c74419aa4e92da06dbd481",
+                    "kuid": "u0f3a780141341c2948159a2a2ec80b2",
                     "mode": "A",
                     "name": "kony.ui.TextBox2",
                     "parent": "flxPIN",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
-                    "placeholderskin": "s607bd7431e8457b944d8a819784cdb3",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
+                    "placeholderskin": "s992958069154bfd87f88e98f0b642cd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "o9gdZbTErYBNJs5Fd1XLcZSn4dY="
+                        "md5": "kKVrZYZbmtrSrrZ6qaGYWB9cmZY="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -2749,13 +2749,13 @@
                         }
                     },
                     "isvisible": true,
-                    "kuid": "u40e2c1f82084f23950e4e948d30b584",
+                    "kuid": "u272df5963a84c9f9261256a37bfe0c7",
                     "masterType": 1,
                     "name": "kony.ui.Label",
                     "parent": "flxUserNameOOBPIN",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "snapshot": {
-                        "md5": "o3IpVZ0uAkbJ8YI8IHFaLTaKgYA="
+                        "md5": "hDBSfvMcscCbigtK/d2GZmd/ofQ="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -2810,17 +2810,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u29e1edc6ea846a1bf2d9c46068120d0",
+                "kuid": "uc00b0cb92c0478aaa72da0d9ead2da3",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxOOBPIN",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "PqXwYo9O2fonfeZRwqxOqJO2oF0="
+                    "md5": "NeSfa990mZumpxWl9ZDua3eRBpY="
                 },
                 "snaptogrid": true,
                 "tbxUserOOBPIN": {
@@ -2867,7 +2867,7 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s607bd7431e8457b944d8a819784cdb3"
+                        "placeholderSkin": "s992958069154bfd87f88e98f0b642cd"
                     },
                     "disabledSkins": {},
                     "focusskin": "s506a3a919294ab4a5008767536cae28",
@@ -2876,17 +2876,17 @@
                     "iscustomlayout": false,
                     "isvisible": true,
                     "keyboardtype": "A",
-                    "kuid": "ue51fda6350e4010a50f487ddf46c2fc",
+                    "kuid": "u24b9782bccc465a92747ade0ca3d428",
                     "mode": "A",
                     "name": "kony.ui.TextBox2",
                     "parent": "flxUserNameOOBPIN",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
-                    "placeholderskin": "s607bd7431e8457b944d8a819784cdb3",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
+                    "placeholderskin": "s992958069154bfd87f88e98f0b642cd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": false,
                     "snapshot": {
-                        "md5": "paS4IO2+uNUkU+WMPVa3DwCKek0="
+                        "md5": "5/gkB3Wc0WjcWiSBHQ4DYPLS9ZM="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -2902,7 +2902,7 @@
             "info": null,
             "iscustomlayout": false,
             "isvisible": false,
-            "kuid": "ub8a5b5cd09340f3a493bfbc466d4035",
+            "kuid": "uf3e7ebe51ff430484f6830e09c07923",
             "layouttype": 4,
             "lblErrorOOBPIN": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -2927,7 +2927,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s4dff787501b4dceafac7741e3530984",
+                "_skin_": "s7b1e7e0ec104b99864b30bd378df68e",
                 "_text_": "Label",
                 "_top_": {
                     "type": "string",
@@ -2965,14 +2965,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ud09f686564c4e029944fe43a1168c5b",
+                "kuid": "u6d4743a6fd843b3853fa04955108980",
                 "name": "kony.ui.Label",
                 "parent": "flxOOBPIN",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "WFaEQE2ePV6x+Tk26jTkrUxZYl0="
+                    "md5": "8KZdgAokiuJJj+OdCbk79bG3JJY="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3039,14 +3039,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ubbaa27cc5e440d8a1a4452d528fcce4",
+                "kuid": "uf0ae14388474345abcc33c1b2c1a2e5",
                 "name": "kony.ui.Label",
                 "parent": "flxOOBPIN",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "RCO5MHtPuSyv6nh7fb0i92TfAOM="
+                    "md5": "JZg/mozsVOWwagXgYatFc5u4V7M="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3113,14 +3113,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "uc87fe563a0c4ce8b1c358f23fac2ce3",
+                "kuid": "ub840292b757466fb633ec05deed6a8c",
                 "name": "kony.ui.Label",
                 "parent": "flxOOBPIN",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "Ucj8HXgA5bmfymr4kTAvFM8tN3Y="
+                    "md5": "GegXsnYKcLRbVRZ4nN15B+Pt7eI="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3128,13 +3128,13 @@
             },
             "name": "kony.ui.FlexContainer",
             "parent": "loginComponent",
-            "pf": "uwu9657723ead14416b2b607f60803b232",
+            "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "rXG4Cf7Xrvsn+d92g59jVT9PWTw="
+                "md5": "qpTu2wqtXW5EZkNXbrfPa38Swck="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -3253,7 +3253,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s56720058c7d4599b3894059610143d0",
+                    "_skin_": "sa02904431704721a32205eaa8b8734f",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -3271,20 +3271,20 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s9061c85497f40abae2e58f31285bb5a",
+                    "focusskin": "s7f0d14c5f9a497587d372ee6d7cd4ca",
                     "id": "btnCancelOTP",
-                    "ide_onClick": "AS_Button_f24fee44a771436587ebe0c49b78e867",
+                    "ide_onClick": "AS_Button_g714298b76774421ba52d1286c6163c4",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u5372fcf5c4741aea30ac0814edf710e",
+                    "kuid": "ufe4a0401f0c4a15a2d09deb34e734d0",
                     "name": "kony.ui.Button",
                     "parent": "flxOTPButtons",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "Am5tst2GDzSEe50TGA645Q6JOdU="
+                        "md5": "dPp4YnotTMR1uQauK7cayu8phqU="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3330,19 +3330,19 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s4fcd9ab6b8340809e0f20de22c16aae",
+                    "focusskin": "s684cf293a1f4149ae4bea6aa52b842f",
                     "id": "btnConfirmOTP",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u217bec30ac145a5a0c6b9b00aeb373b",
+                    "kuid": "u882d06ee9ea4d218bc0c1ccbb8aa244",
                     "name": "kony.ui.Button",
                     "parent": "flxOTPButtons",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "S3TvZDsIAWKvaTfXgokPwViYSxA="
+                        "md5": "UNF8+i3BNE7U+BfnOAbJZyH4KRw="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3363,17 +3363,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u934d068622b4dbeb3353010ed8fa534",
+                "kuid": "uc30f48079a8412d866013a5e1ba2903",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxOTP",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "HXF6jm9oHBz/YiRNyP/25thA+LA="
+                    "md5": "HzVZh6lweUYc8RJmh0hzm1EClUk="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -3384,7 +3384,7 @@
             "info": null,
             "iscustomlayout": false,
             "isvisible": false,
-            "kuid": "u79a36de77c84b8685ea39bac0239535",
+            "kuid": "u919b8cc96e44f7a80383163e97869d2",
             "layouttype": 4,
             "lblErrorOTP": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -3447,14 +3447,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u293237fa8554c0b99a987b938dbee5d",
+                "kuid": "u2e7d000835047489fae5cd0d099c3c3",
                 "name": "kony.ui.Label",
                 "parent": "flxOTP",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "4tdcs0jkVsaiZrbEOX3HwYgpPYc="
+                    "md5": "C/Mq8IGANEcwxSfVW3kW9l0mhNE="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3521,14 +3521,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u3abbb913e394261a914cb4dfc31aedb",
+                "kuid": "u0c79ce5fb084569b3d5317899e834e3",
                 "name": "kony.ui.Label",
                 "parent": "flxOTP",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "9dd3y+WunHIe3znsX7nK9hbXbt4="
+                    "md5": "bjZVpQZstZCvFxKwEjYAe4PMUuo="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3595,14 +3595,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u414623580ce425aaac50cb0fb3213eb",
+                "kuid": "u18788bcde90428fb2dcd95c0a8fcebc",
                 "name": "kony.ui.Label",
                 "parent": "flxOTP",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "aK1+nFWLVtO9IGS/u6RLFAFYnL0="
+                    "md5": "PqgTe4Muo5cnZyVdRl0r9bXngdM="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -3610,13 +3610,13 @@
             },
             "name": "kony.ui.FlexContainer",
             "parent": "loginComponent",
-            "pf": "uwu9657723ead14416b2b607f60803b232",
+            "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "RkbRVp/GA+Pi1aUFz+g7BH0abp4="
+                "md5": "iUy0GQHgW1XMaJxSzML1ShfSXsk="
             },
             "snaptogrid": true,
             "tbxOTP": {
@@ -3643,7 +3643,7 @@
                     0
                 ],
                 "_placeholder_": "Enter OTP",
-                "_skin_": "sf794bc65e3c4e4dbf7d87af471863e8",
+                "_skin_": "s466c64e51d64fb69a3e8efb01d95363",
                 "_text_": "",
                 "_top_": {
                     "type": "string",
@@ -3667,7 +3667,7 @@
                 "containerweight": 100,
                 "contentalignment": 5,
                 "desktopweb": {
-                    "placeholderSkin": "sf3fda2c211e4ed9b3cf6cf48d83a393"
+                    "placeholderSkin": "s1df29f1ce0c43b2a7571d1ab2492937"
                 },
                 "disabledSkins": {
                     "focusSkin": "s29505abf266419bbe3bbf1161eece31"
@@ -3678,17 +3678,17 @@
                 "isvisible": true,
                 "keyboardstyle": "A",
                 "keyboardtype": "A",
-                "kuid": "ub190c66bcb74432a41c9b1e98d519c3",
+                "kuid": "u2bec9fdd7d6435ab05de2c0502cd770",
                 "mode": "A",
                 "name": "kony.ui.TextBox2",
                 "parent": "flxOTP",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
-                "placeholderskin": "sf3fda2c211e4ed9b3cf6cf48d83a393",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
+                "placeholderskin": "s1df29f1ce0c43b2a7571d1ab2492937",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "securetextentry": false,
                 "snapshot": {
-                    "md5": "YU5qNrNdtwNHJjWur0DQmD5+8PU="
+                    "md5": "qTYodV+/nQxNeT+rWPFJ0Jduujw="
                 },
                 "textinputmode": "A",
                 "tooltip": "",
@@ -3776,7 +3776,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sb6165f7e517403fbccef451e6bccb2f",
+                "_skin_": "sb55f8349f574f4eb44bead089ff8735",
                 "_top_": {
                     "type": "string",
                     "value": "10%"
@@ -3810,7 +3810,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s56720058c7d4599b3894059610143d0",
+                    "_skin_": "sa02904431704721a32205eaa8b8734f",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -3828,20 +3828,20 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s9061c85497f40abae2e58f31285bb5a",
+                    "focusskin": "s7f0d14c5f9a497587d372ee6d7cd4ca",
                     "id": "btnCancelSendOTP",
-                    "ide_onClick": "AS_Button_a691c0ad29c94f71ae377ec9eaebbdcc",
+                    "ide_onClick": "AS_Button_cc09780fe17b40f8a9af0166b3cfd996",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u06f496fc7d34607a55243c0d9bcae47",
+                    "kuid": "u261247dcf26460cbe516b4ac70dd613",
                     "name": "kony.ui.Button",
                     "parent": "flxOTPErrorButtons",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "JQR1SWhxSUGDTHenfNNYgVXAbAY="
+                        "md5": "d3gFV5ZbT8csmhEosnX/DZrSwWY="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3887,20 +3887,20 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "s4fcd9ab6b8340809e0f20de22c16aae",
+                    "focusskin": "s684cf293a1f4149ae4bea6aa52b842f",
                     "id": "btnSendOTP",
-                    "ide_onClick": "AS_Button_fd4c1132c85a4b2694499c61d8fa346d",
+                    "ide_onClick": "AS_Button_h52af7ad910f4f828a64ff7f95bfbe37",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u1dcffef36614d99bbb605200f6904e0",
+                    "kuid": "ua35354e2818441381172748bb539501",
                     "name": "kony.ui.Button",
                     "parent": "flxOTPErrorButtons",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "UuyAb2KpMfyXiVt0HKdqd8MXXoA="
+                        "md5": "NaCPRiOOL5MZ+UO6sbdqYmD6yaM="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -3921,17 +3921,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u7bd2c23e0614d96ad82b6b322cde946",
+                "kuid": "u40e80927d2042c0b89d5b639eb8d099",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxOTPError",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "m7tfsyAdUJixD5vXUKSJXRLAc/s="
+                    "md5": "FptjE/U+OkgjZ7TqIWRp3GqmaOQ="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -3942,7 +3942,7 @@
             "info": null,
             "iscustomlayout": false,
             "isvisible": false,
-            "kuid": "u3a10284d5c24ba1ba26931ad031a8c8",
+            "kuid": "u212e39ae44247d789f37f3568159bec",
             "layouttype": 4,
             "lblSendOtpError": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -4005,14 +4005,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ue4e00ee05a9426c90511408113a5ef9",
+                "kuid": "u4e2dfcc1d5941519c81db004212c934",
                 "name": "kony.ui.Label",
                 "parent": "flxOTPError",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "eEYmMWhe6cTRK5Nf+zlZ29e+p/A="
+                    "md5": "020fjJVrLOmTKDkolGHS7KQIyHw="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4079,14 +4079,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ub3cf606e5154f5b8121e6da1c1886fd",
+                "kuid": "u4427c7192c64b6fb2df32163109f857",
                 "name": "kony.ui.Label",
                 "parent": "flxOTPError",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "3bAhXp8hjC12ME5gmqY/NEueGpQ="
+                    "md5": "fFOp+mlSQXnUpnbCslpaoanoPvc="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4094,13 +4094,13 @@
             },
             "name": "kony.ui.FlexContainer",
             "parent": "loginComponent",
-            "pf": "uwu9657723ead14416b2b607f60803b232",
+            "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "gTpWR0BhYnuursunTT99WZccgFA="
+                "md5": "yEHPz9iu8sz2GQBlz5I5aLEsOhs="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -4180,7 +4180,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "sab070817aff4f92b6f92187e7fb0392",
+                "_skin_": "s2aa0079dfb64bb4b2c7f776943aacb1",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -4214,7 +4214,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "s56720058c7d4599b3894059610143d0",
+                    "_skin_": "sa02904431704721a32205eaa8b8734f",
                     "_text_": "Cancel",
                     "_top_": {
                         "type": "string",
@@ -4232,20 +4232,20 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sd3b3282ef074fef8fc6c247e9798f20",
+                    "focusskin": "s6b1e2fc8e3c4117886fc0d56c4876a4",
                     "id": "btnCancelPush",
-                    "ide_onClick": "AS_Button_ieb0c4297e67480393b1f6128beb4a9c",
+                    "ide_onClick": "AS_Button_ddfb51a0bf4a4d4db7c0b0a77113abf1",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u78d8d9d7e4f4df5ac890fa185a9479d",
+                    "kuid": "ua929eba396f49508849b93b68b70665",
                     "name": "kony.ui.Button",
                     "parent": "flxPushApproveBtn",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "dXTE1PyLUCH/f9tuj2dLWm1ZSCM="
+                        "md5": "uN9NsjcL62kzHbh5I/V+qpfVz5k="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -4291,20 +4291,20 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "displaytext": true,
-                    "focusskin": "sb8ca82745994cf28b282cdfb4810fca",
+                    "focusskin": "sac94c7032c14932a45b2955adc52e66",
                     "id": "btnSecureCode",
-                    "ide_onClick": "AS_Button_gd89b500dafb46bcb8e4f11d01d8b1f9",
+                    "ide_onClick": "AS_Button_j0e9071821004aeb86e05cde100780ae",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "ue909b0621cc4527a63d0cc8252f0280",
+                    "kuid": "ubc87d19e017446b9259b70577f5e9d8",
                     "name": "kony.ui.Button",
                     "parent": "flxPushApproveBtn",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "GcaId9MsfaIhP47JIX2l5hZ5kjg="
+                        "md5": "K4dmD3c179oVgUpqvp+WsCc1Krs="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -4325,17 +4325,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u80e8388204e4d98a00b315d2d2e5b8f",
+                "kuid": "u2289e5125694c4db2af0b4f2a379551",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxPushDevices",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "vNwzZMz3Qajn+42+NBM7Q0cwcbM="
+                    "md5": "hVt1aVaek4NzXNOYi++cvynGQo8="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -4346,7 +4346,7 @@
             "info": null,
             "iscustomlayout": false,
             "isvisible": false,
-            "kuid": "u67304948e0e4967bf5916441485112d",
+            "kuid": "u7042f132f43400ebb63f9b5367e0419",
             "layouttype": 4,
             "lblSelectPushDevice": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -4409,14 +4409,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "uc2b6d224cf94ba0a83454c8ac72c636",
+                "kuid": "u3168ea7116c4840a1082350a81bf3ef",
                 "name": "kony.ui.Label",
                 "parent": "flxPushDevices",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "gzXDU5kmg2QihdSMmH5ew8g/4t8="
+                    "md5": "XrbeBmmKBGbDZBoweV5CJF5xgGA="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4483,14 +4483,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u10f603c3e884718b0cbb41758bdda10",
+                "kuid": "ud377616c8aa480f9f42cbfc813b35ed",
                 "name": "kony.ui.Label",
                 "parent": "flxPushDevices",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "HKQiNz4VANT2+LximJDWBHWj5VM="
+                    "md5": "F8u7tg5kHD7SRqT07wD4g5+yWxU="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -4498,7 +4498,7 @@
             },
             "name": "kony.ui.FlexContainer",
             "parent": "loginComponent",
-            "pf": "uwu9657723ead14416b2b607f60803b232",
+            "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "retainflowhorizontalalignment": false,
@@ -4558,20 +4558,12 @@
                 "desktop": {
                     "_data_": [
                         {
-                            "lblDeviceId": {
-                                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                                "text": "Label"
-                            },
                             "lblDeviceName": {
                                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                                 "text": "PushDevice1"
                             }
                         },
                         {
-                            "lblDeviceId": {
-                                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                                "text": "Label"
-                            },
                             "lblDeviceName": {
                                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                                 "text": "PushDevice2"
@@ -4582,8 +4574,7 @@
                     "rowtemplate": "Flex0d3d7ae1b5dea4c",
                     "selectionBehaviorConfig": {},
                     "widgetdatamap": {
-                        "CopyCopyCopyflxSegPushDevices": "CopyCopyCopyflxSegPushDevices",
-                        "lblDeviceId": "lblDeviceId",
+                        "flxSegPushDevices": "flxSegPushDevices",
                         "lblDeviceName": "lblDeviceName"
                     }
                 },
@@ -4592,7 +4583,7 @@
                 "groupcells": false,
                 "hasSections": false,
                 "id": "segmentPushDevices",
-                "ide_onRowClick": "AS_Segment_e2b37beb9d254b6ebcbb3721dc62f336",
+                "ide_onRowClick": "AS_Segment_d24a638397e847c1938fee698d4a7ef1",
                 "info": null,
                 "ipad": {
                     "psp": {
@@ -4606,7 +4597,7 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ua3291d117ee4a85826b0c1379ee1bcd",
+                "kuid": "u142288905964a1e82580f1fb1d81358",
                 "masterdata": {},
                 "name": "kony.ui.SegmentedUI2",
                 "needpageindicator": true,
@@ -4616,13 +4607,13 @@
                     "position": "bottom"
                 },
                 "parent": "flxPushDevices",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainselection": false,
                 "rowcounter": 1,
                 "rowfocusskin": "s26da85cb7714910ab688fbe4937495f",
-                "rowskin": "s8b31e60f52a4c9d90615ca92cebe199",
+                "rowskin": "s357e1992b7d401e8b374684e2bd5c7b",
                 "rowtemplate": "Flex0d3d7ae1b5dea4c",
                 "screenlevelwidget": false,
                 "seccounter": 0,
@@ -4639,7 +4630,7 @@
                 "separatorthickness": 2,
                 "showscrollbars": false,
                 "snapshot": {
-                    "md5": "RxkimWNu4K7ZvH+TvzcY32q8TUU="
+                    "md5": "Tqmmb/mD9GGeK+zkkVMksVbq1jE="
                 },
                 "viewtype": "tableview",
                 "vizProps": {},
@@ -4652,7 +4643,7 @@
             },
             "snapgridsize": "10",
             "snapshot": {
-                "md5": "/z9EPdOatROR7aOp1BQmznNyETk="
+                "md5": "d02DioFhMTd755rKp6lOaxrBBv0="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -4749,18 +4740,18 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u1b05129ba484330a20a4019378b05f8",
+                "kuid": "u0bf0c6f9af4464f8fb34bfd79f8bcdf",
                 "layouttype": 2,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxScanToApprove",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "qrcodegeneratorNew": {
                     "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
                     "DNDConfig": null,
                     "__childrenGenerated__": true,
                     "__convertedToKUID__": true,
                     "_children_": [
-                        "e2ddbd850af84cf6808046680e1f36dd"
+                        "b65ffc44b2f84b16a03aac640c2333d1"
                     ],
                     "_height_": {
                         "type": "string",
@@ -4794,34 +4785,11 @@
                         "value": "100%"
                     },
                     "autogrowmode": 0,
-                    "canUpdateUI": true,
-                    "centerx": {
-                        "type": "string",
-                        "value": "50%"
-                    },
-                    "centery": {
-                        "type": "string",
-                        "value": "50%"
-                    },
-                    "clipbounds": true,
-                    "componentState": {
-                        "instanceModified": false,
-                        "sourceModified": false,
-                        "synced": true
-                    },
-                    "containerweight": 0,
-                    "data": {
-                        "colorDark": "#333333",
-                        "colorLight": "#ffffff",
-                        "correctLevel": "Level L",
-                        "qrcodeHeight": "200",
-                        "qrcodeWidth": "200"
-                    },
-                    "e2ddbd850af84cf6808046680e1f36dd": {
+                    "b65ffc44b2f84b16a03aac640c2333d1": {
                         "@class": "com.kony.gen.viz.model.component.KVizBrowser",
                         "DNDConfig": null,
                         "__UDWInstanceModelForRender__": true,
-                        "__instanceKUID__": "u217ccb166754e28a3f291b6c478e946",
+                        "__instanceKUID__": "uc72cbaf94434d4dadb70e3397fb62dd",
                         "__srcKUID__": "u010af9c168545bfadf1e5f52bcaa5a1",
                         "_height_": {
                             "type": "string",
@@ -4859,18 +4827,18 @@
                         "displayName": "brsrQRCodeGenerator",
                         "enablenativecommunication": true,
                         "htmlstring": "Browser",
-                        "id": "e2ddbd850af84cf6808046680e1f36dd",
+                        "id": "b65ffc44b2f84b16a03aac640c2333d1",
                         "info": null,
                         "iscustomlayout": false,
                         "isvisible": true,
-                        "kuid": "e2ddbd850af84cf6808046680e1f36dd",
+                        "kuid": "b65ffc44b2f84b16a03aac640c2333d1",
                         "localurl": "w6b332e0682a47f083e0f72cad71472f",
                         "margininpixel": false,
                         "method": "get",
                         "name": "kony.ui.Browser",
                         "paddinginpixel": false,
                         "parent": "qrcodegeneratorNew",
-                        "pf": "uwu9657723ead14416b2b607f60803b232",
+                        "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                         "requesturlconfig": {
                             "URL": "",
                             "requestMethod": "get"
@@ -4886,22 +4854,45 @@
                         "wType": "Browser",
                         "zindex": 1
                     },
+                    "canUpdateUI": true,
+                    "centerx": {
+                        "type": "string",
+                        "value": "50%"
+                    },
+                    "centery": {
+                        "type": "string",
+                        "value": "50%"
+                    },
+                    "clipbounds": true,
+                    "componentState": {
+                        "instanceModified": false,
+                        "sourceModified": false,
+                        "synced": true
+                    },
+                    "containerweight": 0,
+                    "data": {
+                        "colorDark": "#333333",
+                        "colorLight": "#ffffff",
+                        "correctLevel": "Level L",
+                        "qrcodeHeight": "200",
+                        "qrcodeWidth": "200"
+                    },
                     "enablescrolling": true,
                     "id": "qrcodegeneratorNew",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u217ccb166754e28a3f291b6c478e946",
+                    "kuid": "uc72cbaf94434d4dadb70e3397fb62dd",
                     "layouttype": 2,
                     "masterType": 1,
                     "name": "kony.ui.UserWidgetInstance",
                     "parent": "flxQrMain",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapgridsize": 10,
                     "snapshot": {
-                        "md5": "jMEibdgmiFV4bkLBR3VO62DwNM8="
+                        "md5": "oazOOz/jaPQx/XSzre0ssRrtQjs="
                     },
                     "snaptogrid": true,
                     "sourceUserWidget": "u2b00ece259b4ef9b819dafa38ca6aed",
@@ -4912,7 +4903,7 @@
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "rHBnqtSdLVe7F4p4igxoOImXH7k="
+                    "md5": "FMrbEGmhLieupK3qHIYn1Bind/o="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -4923,7 +4914,7 @@
             "info": null,
             "iscustomlayout": false,
             "isvisible": false,
-            "kuid": "u5e0ce085e824d7a8adb3e196693ccad",
+            "kuid": "u8e3d9d53bde440ba4ed19d6a2e88ee8",
             "layouttype": 4,
             "lblSigntoAccQr": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -4948,7 +4939,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s7e092bcbe0f4a1aa113a9b8160ae8d8",
+                "_skin_": "s56771aad8b14301ac08afdd3b2b461f",
                 "_text_": "Login to your account",
                 "_top_": {
                     "type": "string",
@@ -4986,14 +4977,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u1b83e01e29b47d5aa0415abf6fabb65",
+                "kuid": "u9485e05feb34e0ab17c43bac97f58c7",
                 "name": "kony.ui.Label",
                 "parent": "flxScanToApprove",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "2wybduml1YHRdnynaR0NqZBVoco="
+                    "md5": "Wn+cpkbex6WB8lcdcOmnX+SGbTc="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -5022,7 +5013,7 @@
                     0,
                     0
                 ],
-                "_skin_": "s69c7229c84a4eaaaa973522a07733e1",
+                "_skin_": "s95f0773dd7a47d49edcaad3f348882a",
                 "_text_": "Welcome!",
                 "_top_": {
                     "type": "string",
@@ -5060,14 +5051,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u54beab799b74d12a3acd99c87a06ef5",
+                "kuid": "u9d47c395ac14a64ae24578b34066bf9",
                 "name": "kony.ui.Label",
                 "parent": "flxScanToApprove",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "m+D+0MZq5gI29Gx0kCPW30K7uBg="
+                    "md5": "iloCrpqELgnrQPiQHZ35J34JHJ0="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -5075,13 +5066,13 @@
             },
             "name": "kony.ui.FlexContainer",
             "parent": "loginComponent",
-            "pf": "uwu9657723ead14416b2b607f60803b232",
+            "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "cDNS3Q2ZuxgmYlLbLmOqyxvU1/I="
+                "md5": "I8ukRerM0bLLvKIevh7RfnBN5RI="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -5141,7 +5132,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sfb238618e5240149e9f58474e5e4925",
+                "_skin_": "s89776dd0eb84f8192cec7199301263a",
                 "_text_": "Generate Qr",
                 "_top_": {
                     "type": "string",
@@ -5164,14 +5155,14 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u1fb255f858a4263ab8c3fc777a43483",
+                "kuid": "udde5d30a929429ba9042877e60fdbe1",
                 "name": "kony.ui.Button",
                 "parent": "flxScanToApproveMain",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "t9CXhX50ix0Gfh1rDU+E1Y3Zj/Q="
+                    "md5": "uJrRv0QOEglRCiN+2pbfrKvQQoE="
                 },
                 "wType": "Button",
                 "zindex": 1
@@ -5197,7 +5188,7 @@
             "info": null,
             "iscustomlayout": false,
             "isvisible": false,
-            "kuid": "uf55d7ec10f743c49f5731e372c9cda7",
+            "kuid": "u3a1d08eaef34dfb9f72b7f99245f6fe",
             "layouttype": 4,
             "lblError": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -5222,7 +5213,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sab01eab66c04c0c9ad3c48e9c3b7732",
+                "_skin_": "s7217ce2e24a4d8380eacf40e5f68fd6",
                 "_text_": "Click on the Button below to generate a QR to login.",
                 "_top_": {
                     "type": "string",
@@ -5260,14 +5251,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ud71efb8496449088b7647da59f5ff9c",
+                "kuid": "u3bb5abc098d43019e84ab8ee33b8fcc",
                 "name": "kony.ui.Label",
                 "parent": "flxScanToApproveMain",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "Aqd/4IknSfhSpk/gP/f1tlR0L6E="
+                    "md5": "eM8g/gGUjlzQgcta96oto7jRNT4="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -5292,7 +5283,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sd7a1836d17946949ee53f8407f6ba23",
+                "_skin_": "sfeb3c2b26b741268765e3efd36ea14c",
                 "_text_": "Welcome!",
                 "_top_": {
                     "type": "string",
@@ -5330,14 +5321,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u624f8f308444ffda3e75a428cd84264",
+                "kuid": "u1893141540a4b15b25941c8648ab23e",
                 "name": "kony.ui.Label",
                 "parent": "flxScanToApproveMain",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "1Bu+OwkTv/usgnO9NRKgTNZHRAw="
+                    "md5": "d5MzMNogqhbaedGuBPEtmCg6tQ4="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -5345,13 +5336,13 @@
             },
             "name": "kony.ui.FlexContainer",
             "parent": "loginComponent",
-            "pf": "uwu9657723ead14416b2b607f60803b232",
+            "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "pf4qV3wIQXsJvnUBtU2bgpIHVg0="
+                "md5": "COx/aKJKv8M+kUmBKOeUi2VBjiI="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -5414,7 +5405,7 @@
             "containerweight": 100,
             "desktopweb": {},
             "disabledSkins": {
-                "blockedUISkin": "sf5c004426b14e779e0de619db4df846"
+                "blockedUISkin": "s83f3a449d464afa906a0e97f09b4843"
             },
             "enablescrolling": true,
             "flxButtonsSecure": {
@@ -5497,24 +5488,24 @@
                     "containerweight": 100,
                     "contentalignment": 5,
                     "desktopweb": {
-                        "blockedUISkin": "sc9fe4c317c54f5b83c8aff69b2dad42"
+                        "blockedUISkin": "sb4052daabfa44a08fe8db0819e055cb"
                     },
                     "disabledSkins": {},
                     "displaytext": true,
                     "focusskin": "s43268be1bbd4abbb8df6d259924ff41",
                     "id": "btnLoginSecure",
-                    "ide_onClick": "AS_Button_fc7a1f582284443b8b03c2a5ec0d0ad0",
+                    "ide_onClick": "AS_Button_c0571ca786f14b69abf3527f4774f6f0",
                     "info": null,
                     "iscustomlayout": false,
                     "isvisible": true,
-                    "kuid": "u8eb151103184a2c926788e597901d6c",
+                    "kuid": "ue413294919140febf3db447e1f5d3c4",
                     "name": "kony.ui.Button",
                     "parent": "flxButtonsSecure",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "snapshot": {
-                        "md5": "lwBSHOEWzrm8pZtJH3hBrBY6u0o="
+                        "md5": "qN8lKrxZURZa8uMxV6yW1xRx/Zo="
                     },
                     "wType": "Button",
                     "zindex": 1
@@ -5534,17 +5525,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ube2fc8cc1694d2291a50266c38dfe7c",
+                "kuid": "uf041d14f17d4c0d8536a7140e9a0b21",
                 "layouttype": 2,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxSecure",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "fnTBp3DtrhgKgZpb+FhhjhP/bZk="
+                    "md5": "HdbrwKZu/TWHVd7iwm+8X31XJhM="
                 },
                 "snaptogrid": true,
                 "wType": "FlexContainer",
@@ -5613,13 +5604,13 @@
                         }
                     },
                     "isvisible": true,
-                    "kuid": "udb823f03d5942a88f36924b0eca7e61",
+                    "kuid": "u805ca3f38c44f07824de8e9d4a7eace",
                     "masterType": 1,
                     "name": "kony.ui.Label",
                     "parent": "flxSecureCode",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "snapshot": {
-                        "md5": "6VovFfmiArB6TgFGtt3w8byK/Vo="
+                        "md5": "LnCKfSto4Hz5LoJpK9txu4nPh90="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -5647,7 +5638,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s0b799284505433b98b327875ffe2128",
+                "_skin_": "s03926a7e05e49988367726b9d7f8b58",
                 "_top_": {
                     "type": "string",
                     "value": "3%"
@@ -5674,17 +5665,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ubff148b59ec49b5b4820a81fb6ebdf0",
+                "kuid": "u86dfb80000c414cae261e003296a436",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxSecure",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "odVP3vM+IlLHmDgoj+RWAXFOAWw="
+                    "md5": "Dh41ZolprKv+Ng77iZlG3x37jH0="
                 },
                 "snaptogrid": true,
                 "tbxSecureCode": {
@@ -5711,7 +5702,7 @@
                         0
                     ],
                     "_placeholder_": "Secure Code",
-                    "_skin_": "s790452d9b3f467a8ed38fa20ac1ab3f",
+                    "_skin_": "s061d417edb1490f80e0dd3c842a7b3b",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -5735,7 +5726,7 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s607bd7431e8457b944d8a819784cdb3"
+                        "placeholderSkin": "s992958069154bfd87f88e98f0b642cd"
                     },
                     "disabledSkins": {},
                     "focusskin": "s506a3a919294ab4a5008767536cae28",
@@ -5744,17 +5735,17 @@
                     "iscustomlayout": false,
                     "isvisible": true,
                     "keyboardtype": "A",
-                    "kuid": "u2459d4ba8bf4c75bdd91f4cd3939d05",
+                    "kuid": "u995abcd407c42a288b4a0e7bf0b09e6",
                     "mode": "A",
                     "name": "kony.ui.TextBox2",
                     "parent": "flxSecureCode",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
-                    "placeholderskin": "s607bd7431e8457b944d8a819784cdb3",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
+                    "placeholderskin": "s992958069154bfd87f88e98f0b642cd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": true,
                     "snapshot": {
-                        "md5": "NrdU6cJgTE+zf7kGpH9ok/Q3M7Y="
+                        "md5": "zkH8KMZFUAKtlqzeNfxylbMkCBE="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -5791,7 +5782,7 @@
                         0,
                         0
                     ],
-                    "_skin_": "seaf7d031a474eb98f89b2df34808367",
+                    "_skin_": "sd2a83c48586451b8bce790637275ccc",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -5832,13 +5823,13 @@
                         }
                     },
                     "isvisible": true,
-                    "kuid": "u46724b96c0f40098d071ab5110b59ca",
+                    "kuid": "u6525c57f2b34b8393d6005a58f4ae44",
                     "masterType": 1,
                     "name": "kony.ui.Label",
                     "parent": "flxUserNameSecure",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                     "snapshot": {
-                        "md5": "cz9PtxOEWTACMMQbKBsMvcujQBU="
+                        "md5": "gW9AYWRIPWrnaAIvj7fbL6g/cdo="
                     },
                     "tooltip": "",
                     "wType": "Label",
@@ -5866,7 +5857,7 @@
                     0
                 ],
                 "_percent_": true,
-                "_skin_": "s215c020a16646419abed3684a29b09e",
+                "_skin_": "sb2f4d9bedf248e4b669eee41f900f68",
                 "_top_": {
                     "type": "string",
                     "value": "6%"
@@ -5893,17 +5884,17 @@
                 "info": null,
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u8a27d16a8ef4db4b73b2ff271ef4d87",
+                "kuid": "ud4f0eedc9874eaa9d4faa1ef20fceaa",
                 "layouttype": 3,
                 "name": "kony.ui.FlexContainer",
                 "parent": "flxSecure",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "retainflowhorizontalalignment": false,
                 "snapgridsize": 10,
                 "snapshot": {
-                    "md5": "+01vPaB1OrkHDK5s+qB0SwaIWqI="
+                    "md5": "1sL/8CQMMsvKqTuU01nvvtYyG4s="
                 },
                 "snaptogrid": true,
                 "tbxUserSecure": {
@@ -5930,7 +5921,7 @@
                         0
                     ],
                     "_placeholder_": "Username",
-                    "_skin_": "s082cecd2bc449e6b5cf45bb35cf0534",
+                    "_skin_": "s6688ac5c14f4ca997ae19b2e1770787",
                     "_text_": "",
                     "_top_": {
                         "type": "string",
@@ -5950,7 +5941,7 @@
                     "containerweight": 100,
                     "contentalignment": 4,
                     "desktopweb": {
-                        "placeholderSkin": "s607bd7431e8457b944d8a819784cdb3"
+                        "placeholderSkin": "s992958069154bfd87f88e98f0b642cd"
                     },
                     "disabledSkins": {},
                     "focusskin": "s506a3a919294ab4a5008767536cae28",
@@ -5959,17 +5950,17 @@
                     "iscustomlayout": false,
                     "isvisible": true,
                     "keyboardtype": "A",
-                    "kuid": "u2c8c0a00f4c4a25a10846fee2a90012",
+                    "kuid": "u5e86f96b69348c8a53a3eb0d5762e0c",
                     "mode": "A",
                     "name": "kony.ui.TextBox2",
                     "parent": "flxUserNameSecure",
-                    "pf": "uwu9657723ead14416b2b607f60803b232",
-                    "placeholderskin": "s607bd7431e8457b944d8a819784cdb3",
+                    "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
+                    "placeholderskin": "s992958069154bfd87f88e98f0b642cd",
                     "retaincontentalignment": false,
                     "retainflexpositionproperties": false,
                     "securetextentry": false,
                     "snapshot": {
-                        "md5": "b/woyVWlV/4crlix+zk4e17szLs="
+                        "md5": "oPp26LaspX5HS8cMbalskuX7/tM="
                     },
                     "textinputmode": "A",
                     "tooltip": "",
@@ -5985,7 +5976,7 @@
             "info": null,
             "iscustomlayout": false,
             "isvisible": false,
-            "kuid": "uf0f3b6e03ef4af7801f72edd32b86c9",
+            "kuid": "u8d41256fc9d4de3aba41be56d247cd6",
             "layouttype": 4,
             "lblErrorSecure": {
                 "@class": "com.kony.gen.viz.model.component.KVizLabel",
@@ -6048,14 +6039,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "u6a4a1fe0b374d8ca65a357fce5616f5",
+                "kuid": "ua51304c6fe540c19bb755d9e687ca43",
                 "name": "kony.ui.Label",
                 "parent": "flxSecure",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "c81Qz3r6TFvRNNwcP7V/aV01JJY="
+                    "md5": "KYLKBkIlUSTv5gbiP7BDstRkavk="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -6084,7 +6075,7 @@
                     0,
                     0
                 ],
-                "_skin_": "sc52d1955d894742af4ce0e8c8603156",
+                "_skin_": "sdaefeb225074193ab8f30298abc7d7b",
                 "_text_": "Login to your account",
                 "_top_": {
                     "type": "string",
@@ -6122,14 +6113,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ube36212db644ef3a3d9c9c69d6758a7",
+                "kuid": "ua3d8dc487d846a08dc46943c84f795a",
                 "name": "kony.ui.Label",
                 "parent": "flxSecure",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "emFa138aOflmAHX79apHkI/mt00="
+                    "md5": "CBaPlwZiMRzAglzhOtx16mvoiWU="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -6196,14 +6187,14 @@
                 },
                 "iscustomlayout": false,
                 "isvisible": true,
-                "kuid": "ua312f5619f24d59a4153dcc0f859602",
+                "kuid": "u875300a10584e07a20418ab51560b18",
                 "name": "kony.ui.Label",
                 "parent": "flxSecure",
-                "pf": "uwu9657723ead14416b2b607f60803b232",
+                "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
                 "retaincontentalignment": false,
                 "retainflexpositionproperties": false,
                 "snapshot": {
-                    "md5": "pPsgRTEu0asnyVBgozpB7SsK7Qw="
+                    "md5": "i3Nl+pj03OLEV44rQCuubK9cnWQ="
                 },
                 "tooltip": "",
                 "wType": "Label",
@@ -6211,13 +6202,13 @@
             },
             "name": "kony.ui.FlexContainer",
             "parent": "loginComponent",
-            "pf": "uwu9657723ead14416b2b607f60803b232",
+            "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
             "retaincontentalignment": false,
             "retainflexpositionproperties": false,
             "retainflowhorizontalalignment": false,
             "snapgridsize": 10,
             "snapshot": {
-                "md5": "WPjBofwTEV1oXxtlJWGvK3xeB4k="
+                "md5": "sY9Oy5bU/lSja68GenCsMNWxoJQ="
             },
             "snaptogrid": true,
             "wType": "FlexContainer",
@@ -6229,22 +6220,22 @@
         "iphone": {},
         "iscustomlayout": false,
         "isvisible": true,
-        "kuid": "u3bd4bd0c4f04df3a5e3be7361298f91",
+        "kuid": "u20acf87d5b6458089f2eee11e08f98f",
         "layouttype": 2,
         "name": "kony.ui.FlexContainer",
-        "parent": "uwu9657723ead14416b2b607f60803b232",
-        "pf": "uwu9657723ead14416b2b607f60803b232",
+        "parent": "uwu7d6a783d580496e98c53d16673e6a2b",
+        "pf": "uwu7d6a783d580496e98c53d16673e6a2b",
         "retaincontentalignment": false,
         "retainflexpositionproperties": false,
         "retainflowhorizontalalignment": false,
         "snapgridsize": 10,
         "snapshot": {
-            "md5": "8zUNYR9vBqSOSsHo+7PR2Tl6fHk="
+            "md5": "bITcVOwOIZ9lBo2vZYIen/UUJVw="
         },
         "snaptogrid": true,
         "wType": "FlexContainer",
         "widgetalignment": 1,
         "winphone8": {}
     },
-    "userwidgetKUID": "ud2ee83a209443cdb5fdc8cc7d081c51"
+    "userwidgetKUID": "u2d67e7cb67e46f09b9e8f3acf103ddf"
 }

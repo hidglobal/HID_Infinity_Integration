@@ -25,6 +25,13 @@
         "parent": "w79d97f53d044cd78fc2edde2281dbe4",
         "type": "F"
     },
+    "w21a95dc9fb04c84ab2cf81b2bb7f95c": {
+        "extension": "js",
+        "kuid": "w21a95dc9fb04c84ab2cf81b2bb7f95c",
+        "name": "qrcode.js",
+        "parent": "w42de991bb3244b1a6384b26b640c453",
+        "type": "F"
+    },
     "w28226208a814e41a1ba3c924879724c": {
         "extension": "html",
         "kuid": "w28226208a814e41a1ba3c924879724c",
@@ -39,6 +46,13 @@
         "parent": "w321a4567c6b4388912d878f8c10fb83",
         "type": "F"
     },
+    "w2ee621810ab4a3c98e9c5c074d32c2d": {
+        "extension": "js",
+        "kuid": "w2ee621810ab4a3c98e9c5c074d32c2d",
+        "name": "jquery.min.js",
+        "parent": "w42de991bb3244b1a6384b26b640c453",
+        "type": "F"
+    },
     "w321a4567c6b4388912d878f8c10fb83": {
         "children": [
             "wbd321f43b684b5d816bcff37bc6ee6c",
@@ -50,12 +64,30 @@
         "parent": "wa5e5360a7b64875838ebb69d13b5460",
         "type": "D"
     },
+    "w39fc39005d249d2b1d3a4d90652f6e8": {
+        "extension": "html",
+        "kuid": "w39fc39005d249d2b1d3a4d90652f6e8",
+        "name": "qrcodeIndex.html",
+        "parent": "w42de991bb3244b1a6384b26b640c453",
+        "type": "F"
+    },
     "w3f921ed007c40e3936ca4bffadd28ff": {
         "extension": "html",
         "kuid": "w3f921ed007c40e3936ca4bffadd28ff",
         "name": "Copyqrenc1.html",
         "parent": "wa5e5360a7b64875838ebb69d13b5460",
         "type": "F"
+    },
+    "w42de991bb3244b1a6384b26b640c453": {
+        "children": [
+            "w2ee621810ab4a3c98e9c5c074d32c2d",
+            "w21a95dc9fb04c84ab2cf81b2bb7f95c",
+            "w39fc39005d249d2b1d3a4d90652f6e8"
+        ],
+        "kuid": "w42de991bb3244b1a6384b26b640c453",
+        "name": "CopykonympQRCode3",
+        "parent": "wa5e5360a7b64875838ebb69d13b5460",
+        "type": "D"
     },
     "w589a8bdc17c4457b0458a93411e74f6": {
         "extension": "html",
@@ -110,6 +142,13 @@
         "parent": "w0aaf972911d4873b8bc20f2577215c1",
         "type": "F"
     },
+    "w996adcca394465faadb6b18cda26a77": {
+        "extension": "html",
+        "kuid": "w996adcca394465faadb6b18cda26a77",
+        "name": "Copyqrenc3.html",
+        "parent": "wa5e5360a7b64875838ebb69d13b5460",
+        "type": "F"
+    },
     "w9fa876c46184229a6fdfac96f0e36d1": {
         "extension": "html",
         "kuid": "w9fa876c46184229a6fdfac96f0e36d1",
@@ -126,7 +165,9 @@
             "w321a4567c6b4388912d878f8c10fb83",
             "w3f921ed007c40e3936ca4bffadd28ff",
             "w0aaf972911d4873b8bc20f2577215c1",
-            "w28226208a814e41a1ba3c924879724c"
+            "w28226208a814e41a1ba3c924879724c",
+            "w42de991bb3244b1a6384b26b640c453",
+            "w996adcca394465faadb6b18cda26a77"
         ],
         "kuid": "wa5e5360a7b64875838ebb69d13b5460",
         "name": "localfiles",

@@ -1,6 +1,6 @@
 {
-    "AS_Button_e965f2f4de0e4456b573e7ede582623e": {
-        "id": "AS_Button_e965f2f4de0e4456b573e7ede582623e",
+    "AS_Button_ddfb51a0bf4a4d4db7c0b0a77113abf1": {
+        "id": "AS_Button_ddfb51a0bf4a4d4db7c0b0a77113abf1",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -8,10 +8,10 @@
         }],
         "language": "js",
         "actions": [{
-            "id": "INVOKE_FUNCTION__ide_onClick_e538245c3f534b9f94edbe8532acfbd8",
+            "id": "INVOKE_FUNCTION__ide_onClick_cd44f931c6094196b6d7b5d19ad7c8ea",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "loginPassword",
-            "display": "loginPassword",
+            "sequenceKUID": "cancelOnClick",
+            "display": "cancelOnClick",
             "inputparams": [],
             "callbackType": null,
             "disabled": null,

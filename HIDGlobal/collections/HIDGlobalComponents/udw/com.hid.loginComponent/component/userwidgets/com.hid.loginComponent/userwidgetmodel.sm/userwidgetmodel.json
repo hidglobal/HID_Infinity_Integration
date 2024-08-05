@@ -43,7 +43,8 @@
     "globalUserWidgetRefs": [
         "u18ede0dcdd2408cb64fadc88b9577e2",
         "u8bf3cbe1b1b4acebb33732eea6a2661",
-        "ud2ee83a209443cdb5fdc8cc7d081c51"
+        "ud2e999dc6134a48bed5f321fbfbdeff",
+        "u2d67e7cb67e46f09b9e8f3acf103ddf"
     ],
     "id": "userwidgetmodel",
     "info": null,
@@ -54,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u9657723ead14416b2b607f60803b232",
+    "kuid": "u7d6a783d580496e98c53d16673e6a2b",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.Form2",

@@ -54,20 +54,12 @@
     "desktop": {
         "_data_": [
             {
-                "lblDeviceId": {
-                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "Label"
-                },
                 "lblDeviceName": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                     "text": "PushDevice1"
                 }
             },
             {
-                "lblDeviceId": {
-                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "Label"
-                },
                 "lblDeviceName": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                     "text": "PushDevice2"
@@ -78,8 +70,7 @@
         "rowtemplate": "Flex0d3d7ae1b5dea4c",
         "selectionBehaviorConfig": {},
         "widgetdatamap": {
-            "CopyCopyCopyflxSegPushDevices": "CopyCopyCopyflxSegPushDevices",
-            "lblDeviceId": "lblDeviceId",
+            "flxSegPushDevices": "flxSegPushDevices",
             "lblDeviceName": "lblDeviceName"
         }
     },
@@ -88,7 +79,7 @@
     "groupcells": false,
     "hasSections": false,
     "id": "segmentPushDevices",
-    "ide_onRowClick": "AS_Segment_e2b37beb9d254b6ebcbb3721dc62f336",
+    "ide_onRowClick": "AS_Segment_d24a638397e847c1938fee698d4a7ef1",
     "info": null,
     "ipad": {
         "psp": {
@@ -102,7 +93,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ua3291d117ee4a85826b0c1379ee1bcd",
+    "kuid": "u142288905964a1e82580f1fb1d81358",
     "masterdata": {},
     "name": "kony.ui.SegmentedUI2",
     "needpageindicator": true,
@@ -118,7 +109,7 @@
     "retainselection": false,
     "rowcounter": 1,
     "rowfocusskin": "s26da85cb7714910ab688fbe4937495f",
-    "rowskin": "s8b31e60f52a4c9d90615ca92cebe199",
+    "rowskin": "s357e1992b7d401e8b374684e2bd5c7b",
     "rowtemplate": "Flex0d3d7ae1b5dea4c",
     "screenlevelwidget": false,
     "seccounter": 0,

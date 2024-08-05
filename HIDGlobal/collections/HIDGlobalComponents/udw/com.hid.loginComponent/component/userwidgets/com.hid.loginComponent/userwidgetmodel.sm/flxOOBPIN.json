@@ -54,14 +54,14 @@
     "containerweight": 100,
     "desktopweb": {},
     "disabledSkins": {
-        "blockedUISkin": "sf5c004426b14e779e0de619db4df846"
+        "blockedUISkin": "s83f3a449d464afa906a0e97f09b4843"
     },
     "enablescrolling": true,
     "id": "flxOOBPIN",
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "ub8a5b5cd09340f3a493bfbc466d4035",
+    "kuid": "uf3e7ebe51ff430484f6830e09c07923",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "loginComponent",
