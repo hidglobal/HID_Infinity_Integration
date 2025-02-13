@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s83edd01075d47f4a6ac7797f14c7446",
+    "_skin_": "s7e3555407174f79997cc053a4be6e65",
     "_text_": "9870 7654 4321 0088",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ue9169d618a14c3c84420ab17abd9a10",
+    "kuid": "ua14e9ce1ac34600b7085f7ef9cf4026",
     "name": "kony.ui.Label",
     "parent": "flxCheckingAcc",
     "pf": "userwidgetmodel",

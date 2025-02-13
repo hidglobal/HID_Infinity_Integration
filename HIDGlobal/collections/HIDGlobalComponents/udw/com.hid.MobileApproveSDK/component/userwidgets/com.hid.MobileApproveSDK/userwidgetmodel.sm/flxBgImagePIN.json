@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s8b1b80f55e14be0ae28d4c5d3f2dfb8",
+    "_skin_": "s4740fc9fba84412b40017899fa0aa92",
     "_top_": {
         "type": "string",
         "value": "-14.09%"
@@ -37,11 +37,11 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "s8b1b80f55e14be0ae28d4c5d3f2dfb8",
+    "focusskin": "s4740fc9fba84412b40017899fa0aa92",
     "id": "flxBgImagePIN",
     "info": null,
     "isvisible": false,
-    "kuid": "uc71538a270548a18b93a1118ec4cb94",
+    "kuid": "ud763778bddf4fed95f224dab51f33d2",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxProfileResetUI",

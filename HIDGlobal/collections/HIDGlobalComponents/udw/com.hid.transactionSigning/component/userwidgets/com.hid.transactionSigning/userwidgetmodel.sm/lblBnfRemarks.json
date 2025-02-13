@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
+    "_skin_": "s8c580668383415387ca92902617115d",
     "_text_": "Remarks*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u37f8564d1194d279a349b9987d19f47",
+    "kuid": "uc2f311612cd46569126a933a6bafc40",
     "name": "kony.ui.Label",
     "parent": "flxBnfRemarks",
     "pf": "userwidgetmodel",

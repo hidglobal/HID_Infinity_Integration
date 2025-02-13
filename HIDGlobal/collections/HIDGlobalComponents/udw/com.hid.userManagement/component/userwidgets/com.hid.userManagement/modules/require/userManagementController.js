@@ -54,10 +54,15 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
     policy : "",
     sessionId : "",
 	actionType :"",
+    UserManagementCorrelationIdPrefix: "MGMT-",
+    correlationId : "",
     loadUserManagement : function(sessionId){
       this.sessionId = sessionId;
       this.commonEventHandler(this.showLoading, "");
       this.getPasswordPolicy(this.getUserDevices);
+      this.resetChangePasswordUI(); 
+      this.view.nonFinancialComponent.resetUIFields();
+      this.view.flxNonFinancialComponent.setVisibility(false);
     },
 
     getUserDevices : function(){     
@@ -149,7 +154,10 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
     },
     
     deletedeviceButtonClick: function(context){
-		if (this.view.segmentDevices.data.length === 1){
+      	this.correlationId = this.UserManagementCorrelationIdPrefix + this.generateUUID();
+		this.view.nonFinancialComponent.stepUpRequired = status => { this.view.flxNonFinancialComponent.setVisibility(true);
+                                                                  this.commonEventHandler(this.dismissLoading, "");};
+        if (this.view.segmentDevices.data.length === 1){
           EventEmitter.mandatoryEvent.emit(this.deleteFailure, "deleteFailure", ["Delete Device Failed, Only One Device left!"]);
 
         }
@@ -158,7 +166,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
           this.commonEventHandler(this.showLoading, "");
           this.actionType = "Delete_Device";
           if(this._isRMSEnabled){
-            this.view.nonFinancialComponent.rmsDeleteStatus = status => {
+         /*   this.view.nonFinancialComponent.rmsDeleteStatus = status => {
               this.commonEventHandler(this.dismissLoading, "");
               if (status.status === "USER-BLOCK"){
                 alert("Cannot delete device User Blocked");
@@ -185,8 +193,15 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
                   EventEmitter.mandatoryEvent.emit(this.setDevice, "setDevice", [listData]);
                 }
               }
+            };*/
+            this.view.nonFinancialComponent.analyzeActionSuccess = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                             this.unassignDevice(rowData.deviceId); 
             };
-            this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId);
+            this.view.nonFinancialComponent.analyzeActionFailure = status =>{this.view.flxNonFinancialComponent.setVisibility(false);
+                                                                             this.commonEventHandler(this.dismissLoading, "");
+                                                                             alert(status);
+            };
+            this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId, this._isRMSEnabled,this.correlationId);
           } else{
             /*
             Karthiga-BNF changes for Push and Secure code when RMS is disabled
@@ -196,9 +211,10 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
             this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
                                                                               this.unassignDevice(rowData.deviceId);};
             this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
-                                                                             this.commonEventHandler(this.dismissLoading, "");};
+                                                                             this.commonEventHandler(this.dismissLoading, "");
+                                                                             alert(status);};
       
-            this.view.nonFinancialComponent.stepUpAuthentication(this._username, "");            
+            this.view.nonFinancialComponent.stepUpAuthentication(this._username, this.actionType,this.correlationId);            
             this.view.flxNonFinancialComponent.forceLayout();
           }
         }
@@ -209,13 +225,13 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
       this.commonEventHandler(this.showLoading, "");
       UserManagementPresentationController.unassignDevice(deviceId,"SUSPENDED","",
                                                          success => this.unassignDeviceSuccess(deviceId,success),
-                                                         error => this.unassignDeviceError(error)
+                                                         error => this.unassignDeviceError(error),this.correlationId
                                                          );
       
     },
     
     unassignDeviceSuccess: function(deviceId,response){
-      this.deleteDevice(deviceId);
+      this.deleteDevice(deviceId,this.correlationId);
     },
     
     unassignDeviceError: function(error){
@@ -230,7 +246,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
                                                                     },
                                                         error => {this.commonEventHandler(this.dismissLoading, "");
                                                                    alert(JSON.stringify(error));
-                                                                 }
+                                                                 },this.correlationId
                                                          );
       
     },
@@ -239,13 +255,17 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
     deleteDevice : function(deviceId){
       UserManagementPresentationController.deleteDevice(deviceId,
                                                         success => this.deleteDeviceSuccess(success), 
-                                                        error =>  this.deleteDeviceError(deviceId,error)
+                                                        error =>  this.deleteDeviceError(deviceId,error),
+                                                        this.correlationId
                                                         );
       
     },
     
     deleteDeviceSuccess : function(response){
       this.getUserDevices();
+      if(this._isRMSEnabled){
+        this.view.nonFinancialComponent.updateActionInRMS();
+      }
       EventEmitter.mandatoryEvent.emit(this.deleteSuccess, "deleteSuccess", []);
     },
     
@@ -255,6 +275,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
     },
 
     editFriendlyName : function(context){
+      this.correlationId = this.UserManagementCorrelationIdPrefix + this.generateUUID();
       this.commonEventHandler(this.showLoading, "");
       let rowData = this.view.segmentDevices.data[context.row];
       let newfriendlyName = rowData.friendlyName.text;
@@ -266,7 +287,8 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
       UserManagementPresentationController.updateFriendlyName(rowData.deviceId, newfriendlyName, 
                                                               success =>this.editFriendlyNameSuccess(context, success), 
                                                               error => { alert("Failed to update device friendly name");
-                                                                        this.commonEventHandler(this.dismissLoading, "");}
+                                                                        this.commonEventHandler(this.dismissLoading, "");},
+                                                              			this.correlationId
                                                              );};
       this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
       rowData = this.view.segmentDevices.data[context.row];      
@@ -277,7 +299,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
       this.view.segmentDevices.setDataAt(rowData, context.row, context.section);
       this.commonEventHandler(this.dismissLoading, "");
       alert(status);};
-      this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId);
+      this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId, this._isRMSEnabled,this.correlationId);
       } else{
         this.view.flxNonFinancialComponent.setVisibility(true);
         this.commonEventHandler(this.dismissLoading, "");
@@ -285,7 +307,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
                                                                           UserManagementPresentationController.updateFriendlyName(rowData.deviceId, newfriendlyName, 
                                                                                                                                   success =>this.editFriendlyNameSuccess(context, success), 
                                                                                                                                   error => { alert("Failed to update device friendly name");
-                                                                                                                                            this.commonEventHandler(this.dismissLoading, "");}
+                                                                                                                                            this.commonEventHandler(this.dismissLoading, "");},this.correlationId
                                                                                                                                  );};
         this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
                                                                          rowData = this.view.segmentDevices.data[context.row];      
@@ -296,7 +318,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
                                                                          this.view.segmentDevices.setDataAt(rowData, context.row, context.section);
                                                                          this.commonEventHandler(this.dismissLoading, "");
                                                                          alert(status);}; 
-        this.view.nonFinancialComponent.stepUpAuthentication(this._username, "");
+        this.view.nonFinancialComponent.stepUpAuthentication(this._username, this.actionType,this.correlationId);
         this.view.flxNonFinancialComponent.forceLayout();
       }
     },
@@ -315,6 +337,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
     },
 
     changeDeviceStatusOnClick : function(context){
+      this.correlationId = this.UserManagementCorrelationIdPrefix + this.generateUUID();
       this.commonEventHandler(this.showLoading, "");
       var rowData = this.view.segmentDevices.data[context.row];
       let newStatus = rowData.changeStatus.text;
@@ -342,19 +365,19 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
         this.commonEventHandler(this.dismissLoading, "");
         this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
                                                                           UserManagementPresentationController.updateDeviceStatus(rowData.deviceId, newStatus, success => this.onUpdateDeviceStatusSuccess(context, success),
-                                                                                                                                  this.onUpdateDeviceStatusFailure);};
+                                                                                                                                  this.onUpdateDeviceStatusFailure , this.correlationId);};
         this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
                                                                          this.commonEventHandler(this.dismissLoading, "");alert(status);};
-        this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId);
+        this.view.nonFinancialComponent.analyzeAction(this._username,this.actionType,this.sessionId, this._isRMSEnabled,this.correlationId);
       } else{       
         this.view.flxNonFinancialComponent.setVisibility(true);
         this.commonEventHandler(this.dismissLoading, "");        
         this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
                                                                           UserManagementPresentationController.updateDeviceStatus(rowData.deviceId, newStatus, success => this.onUpdateDeviceStatusSuccess(context, success),
-                                                                                                                                  this.onUpdateDeviceStatusFailure);};
+                                                                                                                                  this.onUpdateDeviceStatusFailure, this.correlationId);};
         this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
                                                                          this.commonEventHandler(this.dismissLoading, "");alert(status);};
-        this.view.nonFinancialComponent.stepUpAuthentication(this._username, "");
+        this.view.nonFinancialComponent.stepUpAuthentication(this._username, this.actionType,this.correlationId);
         this.view.flxNonFinancialComponent.forceLayout();
       }
     },
@@ -380,6 +403,7 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
     },
 
     changePasswordOnClick : function(){
+      this.correlationId = this.UserManagementCorrelationIdPrefix + this.generateUUID();
       if (this.view.tabSelfService.txtOldPassword.text === "") {
         this.view.tabSelfService.lblChangePwdNotification.text = "Please enter the Current Password";        
         return;
@@ -421,15 +445,17 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
      /* UserManagementPresentationController.changeUserPassword(this._username, this.view.tabSelfService.txtOldPassword.text, newPassword,
                                                               this.onPasswordChangeSuccess, this.onPasswordChangeFailure);
       */   
+      this.actionType = "Change_Password";
       this.view.flxNonFinancialComponent.setVisibility(true);
       this.commonEventHandler(this.dismissLoading, "");        
       this.view.nonFinancialComponent.analyzeActionSuccess = status => {this.view.flxNonFinancialComponent.setVisibility(false);
                                                                         UserManagementPresentationController.changeUserPassword(this._username, this.view.tabSelfService.txtOldPassword.text, newPassword,
-                                                               this.onPasswordChangeSuccess, this.onPasswordChangeFailure);};
+                                                               this.onPasswordChangeSuccess, this.onPasswordChangeFailure , this.correlationId);};
       this.view.nonFinancialComponent.analyzeActionFailure = status =>{ this.view.flxNonFinancialComponent.setVisibility(false);
-                                                                       this.commonEventHandler(this.dismissLoading, "");};
+                                                                       this.commonEventHandler(this.dismissLoading, "");
+                                                                       alert(status)};
 
-      this.view.nonFinancialComponent.stepUpAuthentication(this._username, "Change_Password");
+      this.view.nonFinancialComponent.stepUpAuthentication(this._username, this.actionType,this.correaltionId);
       //this.view.nonFinancialComponent.MFA = "STD_PWD"; 
       this.view.flxNonFinancialComponent.forceLayout();
     },
@@ -460,16 +486,17 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
     },
 
     registerApproveOnClick : function(){
-       this.commonEventHandler(this.showLoading, "");
+      this.correlationId = this.UserManagementCorrelationIdPrefix + this.generateUUID();
+      this.commonEventHandler(this.showLoading, "");
       UserManagementPresentationController.registerApproveDevice(this._username, this.onDeviceRegSuccess,
-                                                                 this.onDeviceRegFailure);
+                                                                 this.onDeviceRegFailure,this.correlationId);
     },
 
     onDeviceRegSuccess : function(response) {
       this.view.tabSelfService.flxRegisterDevice0.setVisibility(false);
       this.view.tabSelfService.flxRegisterDevice1.setVisibility(true);
-      this.view.tabSelfService.qrcodegeneratorNew.dataToEncode = response.provisioningMsg;
-      this.view.tabSelfService.qrcodegeneratorNew.generate();
+      //this.view.tabSelfService.qrcodegeneratorNew.dataToEncode = response.provisioningMsg;
+      this.view.tabSelfService.QRCodeGenerator.generateQRCode(response.provisioningMsg);
       this.view.tabSelfService.txtUserIdValue.text = response.username;
       this.view.tabSelfService.txtInviteCodeValue.text = response.inviteCode;
       this.view.tabSelfService.txtServiceUrlValue.text = response.url;
@@ -571,8 +598,26 @@ define([`com/hid/userManagement/UserManagementPresentationController`], function
     },
     
     registerFIDOOnClick: function() {
+      this.correlationId = this.UserManagementCorrelationIdPrefix + this.generateUUID();
       UserManagementPresentationController.registerFIDODevice(
-        this._username, this.onRegisterFIDOSuccess, this.onRegisterFIDOFailure);
+        this._username, this.onRegisterFIDOSuccess, this.onRegisterFIDOFailure,this.correlationId);
+    },
+    
+    generateUUID: function() {
+      const crypto = window.crypto || window.msCrypto;
+      const buffer = new Uint16Array(8);
+      crypto.getRandomValues(buffer);
+
+      buffer[3] &= 0x0fff;
+      buffer[3] |= 0x4000;
+      buffer[4] &= 0x3fff;
+      buffer[4] |= 0x8000;
+
+      return buffer.reduce((str, byte, i) => {
+        const hex = byte.toString(16).padStart(4, '0');
+        return str + (i === 2 || i === 4 || i === 6 ? '-' : '') + hex;
+      }, '');
     }
+    
   };
 });

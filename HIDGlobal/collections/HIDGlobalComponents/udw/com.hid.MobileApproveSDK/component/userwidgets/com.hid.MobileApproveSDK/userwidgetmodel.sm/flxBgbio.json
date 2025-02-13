@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s2fcaf34abcb4510a7335351ef607b55",
+    "_skin_": "sd1e9f0e4cd6461c8c4be1a284c146bf",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -44,7 +44,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u75dfc49c174434baf637c5690552834",
+    "kuid": "u5aa3e9dd9534af89c45dc0d9bd714d7",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxBiometric",

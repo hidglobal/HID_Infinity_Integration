@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s3eb4c1fef8448588cfebdafc8f3e5ed",
+    "_skin_": "saf76d650b3c47b6a9f8fd2f63c8f03a",
     "_text_": "Please Approve the notification to complete registration",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "u3fe5921ce5448aa9d916f2cfac355b0",
+    "kuid": "ucb678918a7d4c4580e2743a8548f649",
     "name": "kony.ui.Label",
     "parent": "flxApprove",
     "pf": "userwidgetmodel",

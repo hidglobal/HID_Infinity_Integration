@@ -17,7 +17,7 @@
         0,
         0
     ],
-    "_skin_": "sa0f7df5c1024632bde26dd950ecff3c",
+    "_skin_": "s43f5006bf3c4b0a8f5b7b047920bc4d",
     "_text_": "Label",
     "_width_": {
         "type": "ref",
@@ -56,7 +56,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "dec7ea323fa84a6fb762afdac698f4e0",
+    "kuid": "b22678e075964b898613c58076a49c82",
     "name": "kony.ui.Label",
     "parent": "CopyCopyCopyflxSegPushDevices",
     "pf": "CopyCopyCopytmpPushDevice",

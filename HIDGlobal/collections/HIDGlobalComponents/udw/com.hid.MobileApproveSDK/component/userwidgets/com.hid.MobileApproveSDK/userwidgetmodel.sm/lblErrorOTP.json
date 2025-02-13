@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s011c04289624c20858ec57045748984",
+    "_skin_": "sd3209e861d44bf79be7351afe27a8fe",
     "_text_": "Incorrect Username/Password.",
     "_top_": {
         "type": "number",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ub7b6dd6c619445fbf450849307e733e",
+    "kuid": "u790ba0eec704a96842ffa24b537f6e6",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxErrOTP",

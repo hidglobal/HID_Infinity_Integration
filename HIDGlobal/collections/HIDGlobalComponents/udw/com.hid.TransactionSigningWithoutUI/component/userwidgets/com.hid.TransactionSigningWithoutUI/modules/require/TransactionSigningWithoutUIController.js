@@ -1,4 +1,4 @@
-define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationController`],function(transactionSigningPresentationController) {
+define([`com/hid/TransactionSigningWithoutUI/txnSigningPresentationController`],function(txnSigningPresentationController) {
   const transactionSigningConstants = {};
   transactionSigningConstants.UNREGISTERED_EVENT = `HID Internal Error, Unregistered Event`;
   transactionSigningConstants.INVALID_USERNAME = `Username is Invalid`;
@@ -36,11 +36,13 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
      
   return {
     constructor: function(baseConfig, layoutConfig, pspConfig) {
-
+      this.getClientAppProperties();
     },
     initGettersSetters: function() {
       
     },
+    transactionCorrelationIdPrefix: "TRNS-",
+    correlationId : "",
     commonEventHandler(eventName, args, isOptional = false){
         let eventEmitter = isOptional ? EventEmitter.optionalEvent : EventEmitter.mandatoryEvent;
         switch(eventName){
@@ -107,6 +109,12 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
           case "approveDeleteInitiateFailure" :
             eventEmitter.emit(this.approveDeleteInitiateFailure, eventName, args);
             return;
+          case "getDeviceSuccess":
+            eventEmitter.emit(this.getDeviceSuccess, eventName, args);
+            return;
+          case "getDeviceFailure":
+            eventEmitter.emit(this.getDeviceFailure, eventName, args);
+            return;
           default :
             throwCustomException(transactionSigningConstants.UNREGISTERED_EVENT);
         }
@@ -120,18 +128,20 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
        if(tds === null){
          throwCustomException(transactionSigningConstants.INVALID_TDS);
        }
-       transactionSigningPresentationController.aprroveDeleteInitiate(this.commonEventHandler,username,tds,deviceId);
+      this.correlationId = this.transactionCorrelationIdPrefix+this.generateUUID();
+      txnSigningPresentationController.aprroveDeleteInitiate(this.commonEventHandler,username,tds,deviceId,this.correlationId);
     },
     
     //public function
-    approveInitiate : function(username, tds, deviceId = undefined){
+    approveInitiate : function(username, tds, deviceId = ""){
        if(username === null){
          throwCustomException(transactionSigningConstants.INVALID_USERNAME);
        }
        if(tds === null){
          throwCustomException(transactionSigningConstants.INVALID_TDS);
        }
-       transactionSigningPresentationController.aprroveTransactInitiate(this.commonEventHandler,username,tds,deviceId);
+      this.correlationId = this.transactionCorrelationIdPrefix+this.generateUUID();
+       txnSigningPresentationController.aprroveTransactInitiate(this.commonEventHandler,username,tds,deviceId,this.correlationId);
     },
     
     validateOfflineOTP : function(username,signContent,OTP){
@@ -144,7 +154,8 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
       if(OTP === "" || isNaN(OTP)){
         throwCustomException(transactionSigningConstants.INVALID_OTP);
       }
-      transactionSigningPresentationController.validateOfflineOTP(this.commonEventHandler,username,signContent,OTP);
+      this.correlationId = this.transactionCorrelationIdPrefix+this.generateUUID();
+      txnSigningPresentationController.validateOfflineOTP(this.commonEventHandler,username,signContent,OTP,this.correlationId);
     },
     
     generateChallenge : function(username,toAccount,amount,desc){
@@ -160,7 +171,8 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
       if(desc === "" || desc === undefined){
         throwCustomException(transactionSigningConstants.INVALID_DESC);
       }
-      transactionSigningPresentationController.generateChallenge(this.commonEventHandler,username);
+      this.correlationId = this.transactionCorrelationIdPrefix+this.generateUUID();
+      txnSigningPresentationController.generateChallenge(this.commonEventHandler,username,this.correlationId);
     },
     
     validateChallenge : function(username,OTP){
@@ -170,7 +182,7 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
       if(OTP === "" || isNaN(OTP)){
         throwCustomException(transactionSigningConstants.INVALID_OTP);
       }
-      transactionSigningPresentationController.validateChallenge(this.commonEventHandler,username,OTP);
+      txnSigningPresentationController.validateChallenge(this.commonEventHandler,username,OTP,this.correlationId);
     },
    
     sendSMSOTP : function(username,toAccount,amount,desc){
@@ -185,8 +197,9 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
       }      
       if(desc === "" || desc === undefined){
         throwCustomException(transactionSigningConstants.INVALID_DESC);
-      }      
-      transactionSigningPresentationController.sendSMSOTP(this.commonEventHandler,username,toAccount,amount,desc);      
+      }  
+      this.correlationId = this.transactionCorrelationIdPrefix+this.generateUUID();
+      txnSigningPresentationController.sendSMSOTP(this.commonEventHandler,username,toAccount,amount,desc,this.correlationId);      
     },
     validateOTP : function(username,OTP){
       if(username === null){
@@ -195,7 +208,7 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
       if(OTP === "" || isNaN(OTP)){
         throwCustomException(transactionSigningConstants.INVALID_OTP);
       }
-      transactionSigningPresentationController.validateSMSOTP(this.commonEventHandler,username,OTP);
+      txnSigningPresentationController.validateSMSOTP(this.commonEventHandler,username,OTP,this.correlationId);
     },
     generateQRDataForHIDApprove : function(serviceURL,account,amount,remarks,user){      
       //Below is the format to scan the QR code from HIDApproveApp
@@ -218,7 +231,31 @@ define([`com/hid/TransactionSigningWithoutUI/transactionSigningPresentationContr
       return JSON.stringify(qrData);
     },
     getServiceURL : function(){
-      transactionSigningPresentationController.getServiceURL(this.commonEventHandler);
+      txnSigningPresentationController.getServiceURL(this.commonEventHandler);
+    },
+    
+    getClientAppProperties : function(){
+     txnSigningPresentationController.getClientAppProperties();     
+    },
+
+    getApproveDevices : function(username){
+     let params = {"username" : username};
+     txnSigningPresentationController.getApproveDevices(params, this.commonEventHandler);
+    },    
+    generateUUID: function() {
+      const crypto = window.crypto || window.msCrypto;
+      const buffer = new Uint16Array(8);
+      crypto.getRandomValues(buffer);
+
+      buffer[3] &= 0x0fff;
+      buffer[3] |= 0x4000;
+      buffer[4] &= 0x3fff;
+      buffer[4] |= 0x8000;
+
+      return buffer.reduce((str, byte, i) => {
+        const hex = byte.toString(16).padStart(4, '0');
+        return str + (i === 2 || i === 4 || i === 6 ? '-' : '') + hex;
+      }, '');
     }
   };
 });

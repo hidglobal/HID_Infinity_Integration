@@ -5,14 +5,14 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "f982a0f262344aeabeeca097bd74729b",
+                    "kuid": "d6486ff83ddf4bad88145f4374a5f0cb",
                     "paramList": [],
                     "propertyKey": "resetUI",
                     "pw": {
                         "displayName": "resetUI",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "u3b0d02dae0d4c2988d1da12d3eb77f3",
+                    "srcWgtKUID": "u4e68454196e40f9b3ffe3595623e16b",
                     "type": "event"
                 }
             ],
@@ -22,7 +22,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "eb32b4a7e03a451f9598e1816e06adcf",
+                    "kuid": "f5b52aa9417d41df857f5d651ca3fb01",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "onSuccess",
@@ -30,12 +30,12 @@
                         "displayName": "onSuccess",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "u3b0d02dae0d4c2988d1da12d3eb77f3",
+                    "srcWgtKUID": "u4e68454196e40f9b3ffe3595623e16b",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "h5e7f79ba7104d658349565cbdeb6ee7",
+                    "kuid": "adf5512eb4824e3bbb8f577da85ca05b",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "showLoading",
@@ -43,12 +43,12 @@
                         "displayName": "showLoading",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "u3b0d02dae0d4c2988d1da12d3eb77f3",
+                    "srcWgtKUID": "u4e68454196e40f9b3ffe3595623e16b",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "e5c8a2da418948f1a565aff653037473",
+                    "kuid": "g4b6bf20275d4525a5d17f92374cd481",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "onPasswordPrompt",
@@ -56,12 +56,12 @@
                         "displayName": "onPasswordPrompt",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "u3b0d02dae0d4c2988d1da12d3eb77f3",
+                    "srcWgtKUID": "u4e68454196e40f9b3ffe3595623e16b",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "d1fc4e5302a74b81bb05e826a04dbd7c",
+                    "kuid": "h614a587cf7a46929e05a3cc8bcda05c",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "onConfirmationPrompt",
@@ -69,7 +69,7 @@
                         "displayName": "onConfirmationPrompt",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "u3b0d02dae0d4c2988d1da12d3eb77f3",
+                    "srcWgtKUID": "u4e68454196e40f9b3ffe3595623e16b",
                     "type": "event"
                 }
             ],
@@ -89,7 +89,7 @@
                     "access": "Write",
                     "defaultValue": "",
                     "group": "General",
-                    "kuid": "c98ee958e5374ff8a5303ee722275db9",
+                    "kuid": "c9f68040ecba4472a69db10101dda3d3",
                     "originalPropertyKey": "username",
                     "propertyIndex": 8,
                     "propertyKey": "username",
@@ -98,7 +98,7 @@
                         "displayName": "username",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "u3b0d02dae0d4c2988d1da12d3eb77f3",
+                    "srcWgtKUID": "u4e68454196e40f9b3ffe3595623e16b",
                     "type": "string",
                     "value": ""
                 },
@@ -106,7 +106,7 @@
                     "access": "Write",
                     "defaultValue": "TRANSACT",
                     "group": "General",
-                    "kuid": "c9dd9736f9dd4c2a92edd32740b2bbaa",
+                    "kuid": "ie857d48ad3045d69a98b7959dc9b314",
                     "originalPropertyKey": "mode",
                     "propertyIndex": 9,
                     "propertyKey": "mode",
@@ -115,7 +115,7 @@
                         "displayName": "mode",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "u3b0d02dae0d4c2988d1da12d3eb77f3",
+                    "srcWgtKUID": "u4e68454196e40f9b3ffe3595623e16b",
                     "type": "string",
                     "value": ""
                 },
@@ -123,7 +123,7 @@
                     "access": "Write",
                     "defaultValue": true,
                     "group": "General",
-                    "kuid": "c9e30b0216eb4bf5ab3e190fbc1342f6",
+                    "kuid": "i0fe7081ef9b4a9cb8edb5e7d6ce20c4",
                     "originalPropertyKey": "isRMS",
                     "propertyIndex": 10,
                     "propertyKey": "isRMS",
@@ -132,7 +132,7 @@
                         "displayName": "isRMS",
                         "uiRepresentation": "Label-Radiobuttongroup"
                     },
-                    "srcWgtKUID": "u3b0d02dae0d4c2988d1da12d3eb77f3",
+                    "srcWgtKUID": "u4e68454196e40f9b3ffe3595623e16b",
                     "type": "boolean",
                     "value": "true/false"
                 }
@@ -141,7 +141,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "jf39a3c16f3242b797ea758703266fc6",
+                    "kuid": "e6fefa34f2694b779d039252498b4180",
                     "originalPropertyKey": "skin",
                     "propertyIndex": 7,
                     "propertyKey": "skin5",
@@ -155,16 +155,16 @@
                         "srcWidget": "flxTransferSuccess",
                         "wType": "FlexContainer"
                     },
-                    "srcWgtKUID": "u06e2c9249ef44d2852809bca5e93904"
+                    "srcWgtKUID": "ucb960e6927c4e66978db66a06113ddb"
                 }
             ]
         },
         "widgets": {
             "expose": [
                 {
-                    "kuid": "g1ae75d8dcf7434fa5190195074002c2",
+                    "kuid": "becda97ce4b6408d9aedab85db3ad293",
                     "propertyKey": "lblTransferError",
-                    "srcWgtKUID": "u4ce6f52e36b434c97c535f6e47186a8"
+                    "srcWgtKUID": "u4e9e3eca1a94458a23398814d1b8334"
                 }
             ],
             "passthrough": []

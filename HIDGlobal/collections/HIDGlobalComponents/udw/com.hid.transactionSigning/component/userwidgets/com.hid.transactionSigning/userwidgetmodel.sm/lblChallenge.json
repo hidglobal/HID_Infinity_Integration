@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s387044650e84556acb5ebcd1030180f",
+    "_skin_": "s659e59569924a2185bd22ddd6eff48d",
     "_text_": "Login to your account",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "udff3e6fc5df4a1cbebfcf7d65b91545",
+    "kuid": "uff8c60caa4e4c5ca38e6b8e6cc262a6",
     "name": "kony.ui.Label",
     "parent": "flxTSChallenge",
     "pf": "userwidgetmodel",

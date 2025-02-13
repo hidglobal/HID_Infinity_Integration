@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s56771aad8b14301ac08afdd3b2b461f",
+    "_skin_": "s5953b868ec04e408c9d35b54323398e",
     "_text_": "Login to your account",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u9485e05feb34e0ab17c43bac97f58c7",
+    "kuid": "u0c7bf5bef3f421196a721e8b7cd2526",
     "name": "kony.ui.Label",
     "parent": "flxScanToApprove",
     "pf": "userwidgetmodel",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sbd52a398fdf4f3e8176b2cf1c78892f",
+    "_skin_": "s5c1d63d37514af08ed942ec0f8f73da",
     "_text_": "Cancel",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s0f8c29a288c46828244961098a5ce60",
+    "focusskin": "s549d0d016ec4397ba6f021bcc998fb9",
     "id": "btnRegCancel",
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "u818632696664720a7cc24d2a0188fa3",
+    "kuid": "u25cbc65d08c4e13867759f856a1e7b3",
     "name": "kony.ui.Button",
     "parent": "SuccessButtons",
     "pf": "userwidgetmodel",

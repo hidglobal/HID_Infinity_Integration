@@ -4,6 +4,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
   return {
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       this.resetUIFields();
+      this.getClientAppProperties();
       this.view.btnSubmit.onClick = this.loginPassword;
       this.view.tbxPassword.onDone = this.loginPassword;
       this.TM_Cookie_Sid = "";
@@ -77,10 +78,13 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
     actionType: "",
     newrequest : "",
 	app_session_id : "",
-    analyzeAction: function(username, actionType,sessionId){
+    correlationId: "",
+    analyzeAction: function(username, actionType,sessionId, isRMSEnabled,correlationId){
       this.username = username;
       this.actionType = actionType;
       this.app_session_id = sessionId;
+      this.isRMSEnabled = isRMSEnabled;
+      this.correlationId = correlationId;
       this.assignValue();
       this.commonEventHandler(this.showLoading, "");
     },
@@ -135,7 +139,9 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
       }
     },
     rmsActionSucess : function(response){
-      if (this.actionType === "Delete_Device"){
+      //V10 changes for delete device - Calling NonFinancialComponent MFA"
+      
+   /*   if (this.actionType === "Delete_Device"){
         var scores = response.currentThreat;
         var tagsResp = (response.tags && response.tags[0] && response.tags[0] !== null) ? response.tags[0] : "STEP-UP";
 //         var tagsRes = response.tags || "[]";
@@ -152,7 +158,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
          }
         this.mandatoryEventHandler("rmsDeleteStatus", this.rmsDeleteStatus, [respData]);
       }
-      else{
+      else{*/
         var score = response.currentThreat;
         var tagsResp = (response.tags && response.tags[0] && response.tags[0] !== null) ? response.tags[0] : "STEP-UP";
        /*
@@ -165,20 +171,22 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
         }
         */
         if(score >= this._thresholdScore){
-          this.stepUpAuthentication(this.username, this.actionType);
+          this.stepUpAuthentication(this.username, this.actionType,this.correlationId);
         } else {
           this.mandatoryEventHandler("analyzeActionSuccess", this.analyzeActionSuccess, ["Score < thresholdScore"]);
         }
-      }
+   //   }
     },
     rmsActionFailure : function(error){
-      if (this.actionType === "Delete_Device"){
-        this.mandatoryEventHandler("rmsDeleteStatus", this.rmsDeleteStatus, [{status: "STEP-UP"}]);
-		}
-      else{
-		this.commonEventHandler(this.stepUpRequired, "true");
-		this.stepUpAuthentication(this.username, this.actionType);
-		}
+      //Karthiga: V10 changes for Delete device
+//       if (this.actionType === "Delete_Device"){
+//         this.mandatoryEventHandler("rmsDeleteStatus", this.rmsDeleteStatus, [{status: "STEP-UP"}]);
+// 		}
+//       else{
+// 		this.commonEventHandler(this.stepUpRequired, "true");
+// 		this.stepUpAuthentication(this.username, this.actionType);
+// 		}
+       this.mandatoryEventHandler("analyzeActionFailure", this.analyzeActionFailure, ["Failed to create RMS action."]);
 	},
     updateActionInRMS : function(){
       NonFinancialPresentationController.rmsActionComplete(true,this.SCB_updateActionInRMS,this.FCB_updateActionInRMS);
@@ -189,9 +197,15 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
     FCB_updateActionInRMS : function(error){
       this.commonEventHandler(this.updateActionInRMSFailure, "failed");
     },
-    stepUpAuthentication : function(username, actionType){
+    stepUpAuthentication : function(username, actionType,correlationId){
+      this.correlationId = correlationId;
       this.username = username;
       this.actionType = actionType;
+      if(this.actionType && this.actionType === "Delete_Device"){
+        this.commonEventHandler(this.stepUpRequired, "true");
+        NonFinancialPresentationController.getApproveDevices(this.username,  this.getDeviceSuccess, this.getDeviceFailure); 
+        return;
+      }
       if(this._MFA == "STD_PWD"){
         this.view.tbxUser.text = username;
         this.commonEventHandler(this.stepUpRequired, "true");
@@ -212,11 +226,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
         return;
       }
       if(this.actionType && this.actionType !== null && this.actionType === "Change_Password"){
-        var inputParams = {
-          "username": this.username,
-          "password": this.view.tbxPassword.text.trim()
-        };
-        this.validatePassword(inputParams);
+        NonFinancialPresentationController.validatePassword(this.username, this.view.tbxPassword.text, this.validatePasswordSuccessforCP, this.validatePasswordFailureForCP,this.correlationId);        
       } else{
 //       this.username = this.view.tbxUser.text;
       this.loginPasswordWithoutRMS();
@@ -225,7 +235,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
 
     loginPasswordWithoutRMS : function(){
       this.commonEventHandler(this.showLoading, "");
-      NonFinancialPresentationController.validatePassword(this.username, this.view.tbxPassword.text, this.onValidatePasswordSuccess, this.onValidatePasswordFailure);
+      NonFinancialPresentationController.validatePassword(this.username, this.view.tbxPassword.text, this.onValidatePasswordSuccess, this.onValidatePasswordFailure,this.correlationId);
     },
     onValidatePasswordSuccess : function(response){
       this.mandatoryEventHandler("analyzeActionSuccess", this.analyzeActionSuccess, [""]);
@@ -237,11 +247,11 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
 
     initiateSecondFactor : function(){
       if(this._MFA === "OTP_SMS" || this._MFA === "OTP_EML"){
-        NonFinancialPresentationController.sendOTP(this._MFA, this.username, this.sendOTPSuccess, this.sendOTPFailure);
+        NonFinancialPresentationController.sendOTP(this._MFA, this.username, this.sendOTPSuccess, this.sendOTPFailure,this.correlationId);
       } else if (this._MFA === "APPROVE") {
          this.deviceId = "";
           NonFinancialPresentationController.initiateApprove(this.username, "", this.initiateApproveSuccess,
-                                                             this.initiateApproveFailure);
+                                                             this.initiateApproveFailure,this.correlationId);
         //this.getDeviceFailure("");
         //NonFinancialPresentationController.getApproveDevices(this.username, this.getDeviceSuccess,
                                                              //this.getDeviceFailure); 
@@ -291,13 +301,14 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
         var inputPayload = {
           "username": this.username,
           "password": this.view.tbxOTP.text.trim(),
-          "authType": authType
+          "authType": authType,
+          "correaltionId": this.correlationId
         };
         NonFinancialPresentationController.validateOTPforChangePwd(inputPayload, this.validateOTPSuccessforCP,
                                                                    this.validateOTPFailureForCP);
       } else{
         NonFinancialPresentationController.validateOTP(this.username,this._MFA, this.view.tbxOTP.text, this.mfa_key, this.AuthSuccess,
-                                                       this.onValidateOTPFailure);
+                                                       this.onValidateOTPFailure,this.correlationId);
       }
     }, 
     
@@ -317,7 +328,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
       if(this._MFA === "APPROVE"){
         clearInterval(this.gblTimer);
       }
-      if(this._isRMSEnabled == true){
+      if(this.isRMSEnabled == true){
       NonFinancialPresentationController.rmsActionComplete(false,this.SCB_updateActionInRMS,this.FCB_updateActionInRMS);
       } 
       this.mandatoryEventHandler("actionCancel", this.analyzeActionFailure, ["Action cancelled"]);
@@ -328,16 +339,12 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
         clearInterval(this.gblTimer);
       }
       this.mfa_key = "";
-      if(this._isRMSEnabled && !this.isKnownDevice){
-        this.confirmationAlert(this.deviceTag);
+      if(!this.isRMSEnabled){
+        this.mandatoryEventHandler("analyzeActionSuccess", this.analyzeActionSuccess, [""]);
+        this.commonEventHandler(this.dismissLoading, "");
       } else{
-		    this.mandatoryEventHandler("analyzeActionSuccess", this.analyzeActionSuccess, [""]);
-      this.commonEventHandler(this.dismissLoading, "");
-	  }
-      // this.onSuccessCallback(response);
-	  if(this._isRMSEnabled){
-      NonFinancialPresentationController.rmsActionSign(this.username,this._MFA,this.rmsActionSignSuccess, this.rmsActionSignFailure);
-	  }
+        NonFinancialPresentationController.rmsActionSign(this.username,this._MFA,this.rmsActionSignSuccess, this.rmsActionSignFailure);
+      }
       //this.contextSwitch("Login");
     }, 
     
@@ -398,7 +405,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
           this.deviceId = "";
           this.contextSwitch("Approve");
           NonFinancialPresentationController.initiateApprove(this.username, "", this.initiateApproveSuccess,
-                                                             this.initiateApproveFailure);
+                                                             this.initiateApproveFailure,this.correlationId);
         }
     }, 
     getDeviceFailure : function(response) {
@@ -433,14 +440,14 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
         this.approveView(false,"Approve");
         let errorText = "";
         if(response === "deny"){
-			 if(this._isRMSEnabled == true){
+			 if(this.isRMSEnabled == true){
           NonFinancialPresentationController.rmsActionComplete(false,this.SCB_updateActionInRMS,this.FCB_updateActionInRMS);
 			 }
         //  this.mandatoryEventHandler("analyzeActionFailure", this.analyzeActionFailure, ["Action Denied"]);
           errorText = "Approve has been declined, please try again";
           
           //Approve Failure API call to RMS 
-          if(this._isRMSEnabled == true){
+          if(this.isRMSEnabled == true){
             this.updateRMSServiceEvent("APPROVE_DENY");
           }
         } else if(response.includes("UNKNOWN")){
@@ -448,7 +455,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
         } else if(response.message === "Approve poll Time Expired"){
           errorText = "Approve timeout please try resend or try login using Approve secure code";
           //Approve Timeout call to RMS
-          if(this._isRMSEnabled == true){
+          if(this.isRMSEnabled == true){
             this.updateRMSServiceEvent("APPROVE_TIMEOUT");
           }
         } else {
@@ -508,7 +515,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
       }
       NonFinancialPresentationController.cancelApprovePolling();
       NonFinancialPresentationController.initiateApprove(this.username, this.deviceId, this.initiateApproveSuccess,
-                                                         this.initiateApproveFailure);
+                                                         this.initiateApproveFailure,this.correlationId);
     }, 
 
     contextSwitch: function(context) {
@@ -555,7 +562,7 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
       let data = totalData[rowNumber];
       this.deviceId = data.deviceId;
       NonFinancialPresentationController.initiateApprove(this.username, this.deviceId, this.initiateApproveSuccess,
-                                                         this.initiateApproveFailure);
+                                                         this.initiateApproveFailure,this.correlationId);
     },   
     
     validatePassword : function(inputPayload){
@@ -566,11 +573,11 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
     validatePasswordSuccessforCP: function(response){
       this.commonEventHandler(this.dismissLoading, "");
       if(this._SecondFactor === "OTP_SMS" || this._SecondFactor === "OTP_EML"){
-        NonFinancialPresentationController.sendOTP(this._SecondFactor, this.username, this.sendOTPSuccess, this.sendOTPFailure);
+        NonFinancialPresentationController.sendOTP(this._SecondFactor, this.username, this.sendOTPSuccess, this.sendOTPFailure,this.correlationId);
       } else if (this._SecondFactor === "APPROVE") {
          this.deviceId = "";
           NonFinancialPresentationController.initiateApprove(this.username, "", this.initiateApproveSuccess,
-                                                             this.initiateApproveFailure);
+                                                             this.initiateApproveFailure,this.correlationId);
       }else if (this._SecondFactor === "OTP_HWT") {
         this._SecondFactor = "APPROVE";
         this.sendOTPSuccess("OTP_HWT");
@@ -582,6 +589,10 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialPresentationController'],
     validatePasswordFailureForCP: function(error){
       this.view.lblErrorLogin.text = "Password is Incorrect";
       this.commonEventHandler(this.dismissLoading, "");
+    },
+
+    getClientAppProperties : function(){
+     NonFinancialPresentationController.getClientAppProperties();     
     },
   };
 

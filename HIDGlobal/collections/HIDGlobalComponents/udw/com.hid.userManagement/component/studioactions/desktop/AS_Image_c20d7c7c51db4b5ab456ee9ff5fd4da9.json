@@ -1,0 +1,32 @@
+{
+    "AS_Image_c20d7c7c51db4b5ab456ee9ff5fd4da9": {
+        "id": "AS_Image_c20d7c7c51db4b5ab456ee9ff5fd4da9",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "KUID": "c90578acdcf04fc88c17463eb01fb989",
+            "platform": "",
+            "type": "templates",
+            "name": "CopyCopytmpDevicesSegment"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_b57b9c0638cb45c281f70e7e38bd9944",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var secIndex = context.sectionIndex;\r\nvar rowIndex = context.rowIndex;\r\nthis.executeOnParent(\"editFriendlyName\", {\r\n    row: rowIndex,\r\n    section: secIndex\r\n});",
+            "parentId": null
+        }]
+    }
+}

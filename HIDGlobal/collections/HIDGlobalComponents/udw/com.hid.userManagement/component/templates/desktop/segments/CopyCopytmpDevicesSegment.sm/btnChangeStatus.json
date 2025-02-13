@@ -17,7 +17,7 @@
         0,
         0
     ],
-    "_skin_": "s4deedce9d524a8d8834dae6df0096c6",
+    "_skin_": "s0ea394bc1a54681bf1c9868400e3285",
     "_text_": "Button",
     "_top_": {
         "type": "string",
@@ -43,17 +43,17 @@
         "psp": {}
     },
     "disabledSkins": {
-        "blockedUISkin": "s78fe0649558442095cc9e549982e9f2",
-        "hoverSkin": "s750666d2c7148f19b0b52be96e487d7"
+        "blockedUISkin": "s4dd3c325c6f45019fe621d8c966736f",
+        "hoverSkin": "s5cef021d9f349edaa7a80eb3b6e7321"
     },
     "displaytext": true,
-    "focusskin": "s4357d43bef545f693c49eada3977395",
+    "focusskin": "sc4dda63d3db475da387a5525f77680f",
     "id": "btnChangeStatus",
-    "ide_onClick": "AS_Button_je76f50671f54717b4718ab235d9b9d0",
+    "ide_onClick": "AS_Button_dd8a65749cd2417f8fc3faaa5d016692",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a8db25d07dbd4576b7d534b6c86aa719",
+    "kuid": "gcdb7b7124134cbfbf2fe7b00a3bc05c",
     "name": "kony.ui.Button",
     "parent": "flxdeviceAction",
     "pf": "CopyCopytmpDevicesSegment",

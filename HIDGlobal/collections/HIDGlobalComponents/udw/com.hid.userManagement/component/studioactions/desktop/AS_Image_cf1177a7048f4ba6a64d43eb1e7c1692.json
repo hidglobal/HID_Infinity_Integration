@@ -1,0 +1,32 @@
+{
+    "AS_Image_cf1177a7048f4ba6a64d43eb1e7c1692": {
+        "id": "AS_Image_cf1177a7048f4ba6a64d43eb1e7c1692",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "CopyCopytmpDevicesSegment",
+            "type": "templates",
+            "platform": "",
+            "KUID": "c90578acdcf04fc88c17463eb01fb989"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_f416867ec89d4ada9cb14f45f3f29429",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.executeOnParent(\"deletedeviceButtonClick\", {row : context.rowIndex,\n                                                   section : context.sectionIndex});",
+            "parentId": null
+        }]
+    }
+}

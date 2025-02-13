@@ -1,0 +1,1251 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_bounces_": true,
+    "_data_": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "91%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "9%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "019",
+    "desktop": {
+        "_data_": [
+            {
+                "Edit": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "btnChangeStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Button"
+                },
+                "imgActive": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "tick_2_1.png"
+                },
+                "imgCancel": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "clear_black_24dp_2_1.png"
+                },
+                "imgDeleteDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "delete_77_512.png"
+                },
+                "imgOk": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "done_black_24dp_2_1.png"
+                },
+                "imgSuspend": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "cross_2_1.png"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblValidFromValue": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblValidToValue": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "txtDeviceName": {
+                    "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
+                    "placeholder": "",
+                    "text": ""
+                }
+            },
+            {
+                "Edit": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "btnChangeStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Button"
+                },
+                "imgActive": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "tick_2_1.png"
+                },
+                "imgCancel": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "clear_black_24dp_2_1.png"
+                },
+                "imgDeleteDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "delete_77_512.png"
+                },
+                "imgOk": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "done_black_24dp_2_1.png"
+                },
+                "imgSuspend": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "cross_2_1.png"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblValidFromValue": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblValidToValue": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "txtDeviceName": {
+                    "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
+                    "placeholder": "",
+                    "text": ""
+                }
+            },
+            {
+                "Edit": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "btnChangeStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Button"
+                },
+                "imgActive": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "tick_2_1.png"
+                },
+                "imgCancel": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "clear_black_24dp_2_1.png"
+                },
+                "imgDeleteDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "delete_77_512.png"
+                },
+                "imgOk": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "done_black_24dp_2_1.png"
+                },
+                "imgSuspend": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "cross_2_1.png"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": ""
+                },
+                "lblValidFromValue": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblValidToValue": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "txtDeviceName": {
+                    "@class": "com.viz.ide.model.segment.ComplexTextSegmentData",
+                    "placeholder": "",
+                    "text": ""
+                }
+            }
+        ],
+        "rowTemplateId": "cd85a6cffb5241499cfc917d20034159",
+        "rowtemplate": "CopyCopyflxDevicesSegment",
+        "sectionHeaderTemplateId": null,
+        "widgetdatamap": {
+            "CopyCopyflxDevicesSegment": "CopyCopyflxDevicesSegment",
+            "Edit": "Edit",
+            "btnChangeStatus": "btnChangeStatus",
+            "flxDeviceName": "flxDeviceName",
+            "flxEditButtons": "flxEditButtons",
+            "flxStatus": "flxStatus",
+            "flxValidFromValue": "flxValidFromValue",
+            "flxValidToValue": "flxValidToValue",
+            "flxdeviceAction": "flxdeviceAction",
+            "imgActive": "imgActive",
+            "imgCancel": "imgCancel",
+            "imgDeleteDevice": "imgDeleteDevice",
+            "imgOk": "imgOk",
+            "imgSuspend": "imgSuspend",
+            "lblDeviceId": "lblDeviceId",
+            "lblValidFromValue": "lblValidFromValue",
+            "lblValidToValue": "lblValidToValue",
+            "txtDeviceName": "txtDeviceName"
+        }
+    },
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segmentDevices",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "bounces": true,
+            "indicator": "none",
+            "showProgressIndicator": true
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "ud35aa379bab46b9b2ade47997b1d666",
+    "masterdata": {},
+    "mobile": {
+        "_data_": [
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgDevice": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "device_3.png"
+                },
+                "imgOptions": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "more_detail.png"
+                },
+                "lblDeviceExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceId": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Bryan’s iPhone"
+                },
+                "lblDeviceRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "02/18/2021"
+                },
+                "lblDeviceStatus": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Status:"
+                },
+                "lblDeviceStatusActive": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblDeviceStatusSuspend": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblExpiryDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                },
+                "lblRegisteredDate": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            }
+        ],
+        "rowTemplateId": "f74ad33c5a4b40b98719f6914dc6fb5e",
+        "rowtemplate": "flxRegisteredDevices",
+        "sectionHeaderTemplateId": null,
+        "selectionBehaviorConfig": null,
+        "widgetdatamap": {
+            "flxDeviceExpiryDate": "flxDeviceExpiryDate",
+            "flxDeviceInfo": "flxDeviceInfo",
+            "flxDeviceInfoLeft": "flxDeviceInfoLeft",
+            "flxDeviceInfoMid": "flxDeviceInfoMid",
+            "flxDeviceInfoMidInner": "flxDeviceInfoMidInner",
+            "flxDeviceInfoRight": "flxDeviceInfoRight",
+            "flxDeviceRegistrationDate": "flxDeviceRegistrationDate",
+            "flxDeviceStatusInner": "flxDeviceStatusInner",
+            "flxRegisteredDevices": "flxRegisteredDevices",
+            "imgDevice": "imgDevice",
+            "imgOptions": "imgOptions",
+            "lblDeviceExpiryDate": "lblDeviceExpiryDate",
+            "lblDeviceId": "lblDeviceId",
+            "lblDeviceName": "lblDeviceName",
+            "lblDeviceRegisteredDate": "lblDeviceRegisteredDate",
+            "lblDeviceStatus": "lblDeviceStatus",
+            "lblDeviceStatusActive": "lblDeviceStatusActive",
+            "lblDeviceStatusSuspend": "lblDeviceStatusSuspend",
+            "lblExpiryDate": "lblExpiryDate",
+            "lblRegisteredDate": "lblRegisteredDate"
+        }
+    },
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom",
+        "vdistance": 1
+    },
+    "parent": "flxManageDevices",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowcounter": 19,
+    "rowfocusskin": "sc22e9f20fea4e61b12b09fe5b59f144",
+    "rowskin": "s708d087d10d4433b7d4f82b52541132",
+    "rowtemplate": "Flex0h9e71ad78d4c4a",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s58574ce97e9400ca6ca5c75af86b883",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "selectionbehaviorconfig": null,
+    "separatorcolor": "aaaaaa00",
+    "separatorrequired": true,
+    "separatorthickness": 1,
+    "showprogressindicator": true,
+    "showscrollbars": false,
+    "swipeContext": {
+        "currentPage": 0,
+        "imageWidth": 234,
+        "widthRatio": 0
+    },
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxDeviceInfo": "flxDeviceInfo",
+        "flxDeviceInfoLeft": "flxDeviceInfoLeft",
+        "flxDeviceInfoMid": "flxDeviceInfoMid",
+        "flxDeviceInfoMidInner": "flxDeviceInfoMidInner",
+        "flxDeviceInfoRight": "flxDeviceInfoRight",
+        "flxDeviceRegistrationDate": "flxDeviceRegistrationDate",
+        "flxDeviceStatus": "flxDeviceStatus",
+        "flxDeviceStatusInner": "flxDeviceStatusInner",
+        "flxRegisteredDevices": "flxRegisteredDevices",
+        "imgDevice": "imgDevice",
+        "imgDeviceStatus": "imgDeviceStatus",
+        "imgOptions": "imgOptions",
+        "lblDeviceName": "lblDeviceName",
+        "lblDeviceRegisteredDate": "lblDeviceRegisteredDate",
+        "lblDeviceStatus": "lblDeviceStatus",
+        "lblRegisteredOn": "lblRegisteredOn"
+    }
+}

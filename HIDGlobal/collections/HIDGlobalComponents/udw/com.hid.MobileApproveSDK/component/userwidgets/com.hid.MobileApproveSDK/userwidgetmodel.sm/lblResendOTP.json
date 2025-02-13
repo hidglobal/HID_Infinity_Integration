@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sba47d18ed534bde9d4b25d81a8fd5bd",
+    "_skin_": "scf1eedda3184523817912b8bfc73f6a",
     "_text_": "Resend OTP",
     "_top_": {
         "type": "number",
@@ -66,7 +66,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "u9ea63a0091e4619a383a30327ded175",
+    "kuid": "u1834bd35cad4f7a94f166cb1d48b73c",
     "name": "kony.ui.Label",
     "parent": "flxResendOTPBtn",
     "pf": "userwidgetmodel",

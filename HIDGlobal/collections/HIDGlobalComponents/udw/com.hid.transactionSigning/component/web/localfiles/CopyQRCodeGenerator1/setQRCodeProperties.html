@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My Page Title</title>
+  <meta name="description" content="My Page Description">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <title>QR Code</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="qrcode.js"></script>
+</head>
+<body>
+  <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+<script type="text/javascript">
+    $.urlParam = function (name) {
+        var results = new RegExp('[\?|]' + name + '=([^|#]*)').exec(window.location.href);
+        if (results == null) {
+            return null;
+        } else {
+            return results[1] || 0;
+        }
+    }
+
+    //t=This%20is%20my%20sampel%20text&w=120&h=120&dc=000000&lc=ffffff&cl=0
+    var text = ($.urlParam('t') !== null) ? decodeURI($.urlParam('t')) : "A sample text to get QR Code";
+    var width = ($.urlParam('w') !== null) ? decodeURI($.urlParam('w')) : 120;
+    var height = ($.urlParam('h') !== null) ? decodeURI($.urlParam('h')) : 120;
+    var colorDark = ($.urlParam('dc') !== null) ? decodeURI($.urlParam('dc')) : "000000";
+    var colorLight = ($.urlParam('lc') !== null) ? decodeURI($.urlParam('lc')) : "FFFFFF";
+    var correcnLavel = ($.urlParam('cl') !== null) ? decodeURI($.urlParam('cl')) : 0;
+
+    colorDark = "#" + colorDark;
+    colorLight = "#" + colorLight;
+    correcnLavel = parseInt(correcnLavel);
+    console.log(text);
+    console.log(width);
+    console.log(height);
+    console.log(colorDark);
+    console.log(colorLight);
+    console.log(correcnLavel);
+
+    
+
+    function makeCode(sText, codeWidth, codeHeight, correctionLvl = 0, darkColor = "#000000", lightColor = "#FFFFFF") {
+        console.log("Generating started");
+        var oQRCode = new QRCode("qrcode", {
+            text: sText,
+            width: codeWidth,
+            height: codeHeight,
+            colorDark: darkColor,
+            colorLight: lightColor,
+            correctLevel: correctionLvl
+        });
+        console.log("Generating end");
+    }
+
+    makeCode(text, width, height, correcnLavel, colorDark, colorLight);
+</script>
+</body>
+</html>
+
+
+
+    
+

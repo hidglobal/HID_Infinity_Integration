@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "",
-    "_skin_": "sa39576b8ba243d89ce4706489ce7f57",
+    "_skin_": "sa29a6d7ae0f4768803fb1895cc01a1c",
     "_text_": "USD",
     "_top_": {
         "type": "string",
@@ -42,20 +42,20 @@
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {
-        "placeholderSkin": "sde669b110fb41db8c97f6f774d6f886"
+        "placeholderSkin": "s63962b45b6d4cf8a2b6bde36b664954"
     },
-    "focusskin": "sa39576b8ba243d89ce4706489ce7f57",
+    "focusskin": "sa29a6d7ae0f4768803fb1895cc01a1c",
     "id": "tbxBnfName",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "u0fa3ed76fea499c9b04c19ad72a20c6",
+    "kuid": "u448950cf83747299f1fdbe7d9a4cb5d",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "flxBnfName",
     "pf": "userwidgetmodel",
-    "placeholderskin": "sde669b110fb41db8c97f6f774d6f886",
+    "placeholderskin": "s63962b45b6d4cf8a2b6bde36b664954",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": false,

@@ -1,0 +1,27 @@
+{
+    "AS_Button_d41358767e2c4a2c93d2fccc4057d21d": {
+        "id": "AS_Button_d41358767e2c4a2c93d2fccc4057d21d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "u9bbd16dc356420bba02c488bb3ac80a",
+            "name": "userwidgetmodel",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___b07cc7f6556646c19984ecdbc35a74b3",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "cancelChangePasswordOnClick",
+            "display": "cancelChangePasswordOnClick",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

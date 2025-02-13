@@ -3,6 +3,8 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
   sdkConstants.TS_NOTIFY_PASSWORD_MODE = "SIGN_TRASACTION";
   sdkConstants.TS_VALUES_SEPERATOR = "~";
   return {
+    correlationIdTransactionPrefix : "TRNS-",
+    correlationId : "",
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       this.nativeController = new controllerImplemetation(this,baseConfig.id);
     },
@@ -123,11 +125,13 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
      let contentValue = tempArr.join(" ");
       kony.print("ApproveSDK Params: user:"+username+" otp:"+otp+" content:"+contentValue)
+      this.correlationId = this.correlationIdTransactionPrefix+this.generatUUID();
 //   let tempStrng = `sign1:1234:false sign2:123:false sign3:test:false`
      let params =  {
       "username" : username,
       "password" : otp,
-      "content"  : contentValue
+      "content"  : contentValue,
+      "correlationId": this.correlationId
     };
       businessController.validateTransactionOTP(params,this.validateTransactionOTPSuccess,this.validateTransactionOTPFailure);
     },
@@ -141,6 +145,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     validateTransactionOTPFailure : function(error){
       kony.print("ApproveSDK --> validateTransactionOTPFailure: " + JSON.stringify(error));
       this.commonEventEmitter(this.signTransactionFailure, [error]);
+    },
+    generatUUID: function() {
+    var uuid = kony.os.createUUID();
+    //kony.print("The created UUID is : " + uuid);
+    return uuid;
     },
     getUsername : function(){
        return this._username;

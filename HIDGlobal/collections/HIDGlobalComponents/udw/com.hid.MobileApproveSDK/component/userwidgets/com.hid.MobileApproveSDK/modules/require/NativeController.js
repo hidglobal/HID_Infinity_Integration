@@ -43,5 +43,8 @@ define([],function () {
   NativeController.prototype.setNotificationStatus = function(){
     throw new Error('setNotificationStatus function is not implemented');
   };
+    NativeController.prototype.getDeviceProperty = function(){
+    throw new Error('getDeviceProperty function is not implemented');
+  };
   return NativeController;
 });

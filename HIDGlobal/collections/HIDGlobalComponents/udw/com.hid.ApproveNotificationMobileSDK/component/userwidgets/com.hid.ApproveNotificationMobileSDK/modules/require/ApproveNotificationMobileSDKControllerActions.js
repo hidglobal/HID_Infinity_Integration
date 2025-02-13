@@ -3,7 +3,7 @@ define({
       This is an auto generated file and any modifications to it may result in corruption of the action sequence.
     */
     /** postShow defined for ApproveNotificationMobileSDK **/
-    AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766: function AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766(eventobject) {
+    AS_FlexContainer_b31af7a8edad4c6585ac0b786493dd32: function AS_FlexContainer_b31af7a8edad4c6585ac0b786493dd32(eventobject) {
         var self = this;
 
         function ROTATE_ACTION_eb49d1d8c42e4dd7beacfbd8868e45d4_Callback() {}
@@ -103,7 +103,7 @@ define({
         });
     },
     /** onClick defined for flxSliderMain **/
-    AS_FlexContainer_f6ba12005b004a388e7d594123f4a82d: function AS_FlexContainer_f6ba12005b004a388e7d594123f4a82d(eventobject) {
+    AS_FlexContainer_fcf322a0f4f8400f81c24823f9c60fab: function AS_FlexContainer_fcf322a0f4f8400f81c24823f9c60fab(eventobject) {
         var self = this;
 
         function ROTATE_ACTION_d05d002b36634d6aa90171406a5a5f91_Callback() {}
@@ -131,7 +131,7 @@ define({
         });
     },
     /** onTouchStart defined for imgClosePR **/
-    AS_Image_h24046e7338b493fa03d1744d10c61e1: function AS_Image_h24046e7338b493fa03d1744d10c61e1(eventobject, x, y) {
+    AS_Image_cbeba44bd6fd4bc8ac2766497dd08f3c: function AS_Image_cbeba44bd6fd4bc8ac2766497dd08f3c(eventobject, x, y) {
         var self = this;
         this.view.flxErrorPwdPR.setVisibility(false);
     }

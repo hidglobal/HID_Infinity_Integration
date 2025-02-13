@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa4ac65b226a4add97dd77a49cb7394b",
+    "_skin_": "sfd47c1dd00f4e23b11744a136124a13",
     "_text_": "Status",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "uc2fb6c27822428499bb38f9f0e9c490",
+    "kuid": "u580c90d14f445d49f341b4c41b8ec8e",
     "name": "kony.ui.Label",
     "parent": "flxStatus",
     "pf": "userwidgetmodel",

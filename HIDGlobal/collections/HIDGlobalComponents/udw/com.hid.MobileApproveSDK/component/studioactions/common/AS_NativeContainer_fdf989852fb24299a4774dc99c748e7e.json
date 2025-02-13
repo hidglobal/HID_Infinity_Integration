@@ -1,0 +1,23 @@
+{
+    "AS_NativeContainer_fdf989852fb24299a4774dc99c748e7e": {
+        "id": "AS_NativeContainer_fdf989852fb24299a4774dc99c748e7e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "u07bc708a78f421089dd3d3d4223c3dd",
+            "name": "userwidgetmodel",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__ec448c2463b04c56bd1c7872b1050b90",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.release(eventobject);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

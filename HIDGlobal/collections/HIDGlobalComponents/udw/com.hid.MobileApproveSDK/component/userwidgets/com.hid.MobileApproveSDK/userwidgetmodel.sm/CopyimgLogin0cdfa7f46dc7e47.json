@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
+    "_skin_": "s37eb5e472f84c4bbe8a0d12ddda46b1",
     "_src_": "bank_portal_logo_blue.png",
     "_top_": {
         "type": "string",
@@ -43,7 +43,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "uc77a873094a4af8ac3097db10b39cb4",
+    "kuid": "u88fac1d35d04d4ebffeed0015b94a13",
     "name": "kony.ui.Image2",
     "parent": "FlxHeaderProfileReset",
     "pf": "userwidgetmodel",

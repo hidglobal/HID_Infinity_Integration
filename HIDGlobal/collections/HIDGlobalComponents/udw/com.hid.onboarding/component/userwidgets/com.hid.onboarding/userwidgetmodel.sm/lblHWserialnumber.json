@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb42050179f5408a978ee53cf2096fb1",
+    "_skin_": "sb237d370c6f41e5b0ca20660e6382da",
     "_text_": "Please enter the Hardware device serial number",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u7526b74bed0411689d6b59ec0ca64cd",
+    "kuid": "ue1e17dde112424d9414fe04607618bb",
     "name": "kony.ui.Label",
     "parent": "flxHW",
     "pf": "userwidgetmodel",

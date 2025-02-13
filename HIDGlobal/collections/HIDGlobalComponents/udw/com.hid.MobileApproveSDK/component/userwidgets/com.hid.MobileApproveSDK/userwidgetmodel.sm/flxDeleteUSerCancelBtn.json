@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s796849d2bf34eb6a2aa7f170babdc42",
+    "_skin_": "s1e5364e589e4b5ab65c2e5c156650c0",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -44,7 +44,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ua83ce7ce1684ea9a72fbbdfdabeab26",
+    "kuid": "ueebb26c61364303b509de61f63bf5a2",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxBtnsDeleteUser",

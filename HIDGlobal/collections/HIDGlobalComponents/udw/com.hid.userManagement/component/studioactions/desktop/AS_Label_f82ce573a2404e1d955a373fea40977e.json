@@ -1,0 +1,33 @@
+{
+    "AS_Label_f82ce573a2404e1d955a373fea40977e": {
+        "id": "AS_Label_f82ce573a2404e1d955a373fea40977e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "KUID": "c90578acdcf04fc88c17463eb01fb989",
+            "platform": "",
+            "type": "templates",
+            "name": "CopyCopytmpDevicesSegment"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_j4b027a6a0574041a31b1e05470a997e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var secIndex = context.sectionIndex;\r\nvar rowIndex = context.rowIndex;\r\nthis.executeOnParent(\"editTouchEnd\", {\r\n    row: rowIndex,\r\n    section: secIndex\r\n});",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

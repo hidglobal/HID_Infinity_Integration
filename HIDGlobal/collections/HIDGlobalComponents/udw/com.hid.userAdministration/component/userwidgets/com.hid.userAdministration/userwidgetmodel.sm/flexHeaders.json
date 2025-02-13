@@ -26,7 +26,7 @@
         "type": "string",
         "value": "2%"
     },
-    "_skin_": "s4e2de8caefd4429b700d182ea0f0296",
+    "_skin_": "s375ec75c92c4440877bf8c5edb6e2d2",
     "_top_": {
         "type": "string",
         "value": "3%"
@@ -52,7 +52,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u8c4b3d7983c417a9e8e8da4cbece87f",
+    "kuid": "ue5e6c3d62a7401399dad7843a7cd9ea",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxManageDevices",

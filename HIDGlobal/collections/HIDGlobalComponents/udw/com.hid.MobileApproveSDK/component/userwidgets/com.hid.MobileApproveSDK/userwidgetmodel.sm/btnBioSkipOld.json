@@ -25,7 +25,7 @@
         0,
         0
     ],
-    "_skin_": "sa2add6e489a4d89a9b70fd1388861b4",
+    "_skin_": "sa2ae585f45a4760822b9e7e19edccde",
     "_text_": "Skip",
     "_width_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s4357d43bef545f693c49eada3977395",
+    "focusskin": "sc4dda63d3db475da387a5525f77680f",
     "id": "btnBioSkipOld",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u723c1c5d55443deaf6cb9a8a2fd77e2",
+    "kuid": "ua1fea828b3b4a119c07e05a20036530",
     "name": "kony.ui.Button",
     "parent": "flxBioConcet",
     "pf": "userwidgetmodel",

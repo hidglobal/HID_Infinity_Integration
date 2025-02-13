@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s42d0b82a5024d359c6846b27c379545",
+    "_skin_": "s2476f009fc24b51a76c79a90693639c",
     "_text_": "OK",
     "_top_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s31e6138eed94ed9b3cc6e3270da03c2",
+    "focusskin": "sbd372c58078467e9f9207f5a40bf4ce",
     "id": "btnDeleteUserOK",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u9e11082c5ea49b29e1b723283be6b45",
+    "kuid": "ub1848a3af444eada03dfe4e3071d7b6",
     "name": "kony.ui.Button",
     "parent": "CopyflxEnableBioOKBtn0f5fc8b6493ee4d",
     "pf": "userwidgetmodel",

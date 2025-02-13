@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s5e0682746a0423591c09b4e642d2a57",
+    "_skin_": "s74368b3ca774ccdb5006ba71c45128f",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u355c50b16a04158acc7de05fa5f3d76",
+    "kuid": "ueb9eecc3920465ba6e79fe0caef62f1",
     "name": "kony.ui.Label",
     "parent": "flxResponse",
     "pf": "userwidgetmodel",

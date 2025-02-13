@@ -1,15 +1,15 @@
 {
     "assetPlatform": "Visualizer",
     "assetVersion": "1.0.0",
-    "createdBy": "gagandeep.kaur1@hidglobal.com",
-    "createdMFVersion": "9.7.1.3",
-    "createdVizVersion": "9.5.28",
-    "currentMFVersion": "9.7.1.3",
-    "currentVizVersion": "9.5.28",
-    "description": "V9 Components",
+    "createdBy": "rohit.singh@hidglobal.com",
+    "createdMFVersion": "202410.0.2",
+    "createdVizVersion": "202307.0.9",
+    "currentMFVersion": "202410.0.2",
+    "currentVizVersion": "202307.0.9",
+    "description": "",
     "itemCategory": "udw",
-    "itemGuid": "e512cbbb829d4e99ba466dc3905c41c8",
+    "itemGuid": "g14354d59d7449fea592876d636567a0",
     "itemName": "com.hid.ApproveNotificationMobileSDK",
     "libraryVersion": "libver4",
-    "modifiedBy": "gagandeep.kaur1@hidglobal.com"
+    "modifiedBy": "rohit.singh@hidglobal.com"
 }

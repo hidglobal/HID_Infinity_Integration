@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s796849d2bf34eb6a2aa7f170babdc42",
+    "_skin_": "s1e5364e589e4b5ab65c2e5c156650c0",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -44,7 +44,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u58e60c3c9394494b2f226d7faa8ed17",
+    "kuid": "uefeea5a15244efdba4742b865ee4877",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxSecureCodeEnableButton",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
+    "_skin_": "s8c580668383415387ca92902617115d",
     "_text_": "Amount*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ue244dd24f4246219f41f268d5bfc52a",
+    "kuid": "u795576283804aa786edb8aebd483672",
     "name": "kony.ui.Label",
     "parent": "flxAmountSMS",
     "pf": "userwidgetmodel",

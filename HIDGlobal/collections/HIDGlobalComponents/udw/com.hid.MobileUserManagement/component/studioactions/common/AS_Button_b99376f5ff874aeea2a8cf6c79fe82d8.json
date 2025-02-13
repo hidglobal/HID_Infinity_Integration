@@ -1,0 +1,27 @@
+{
+    "AS_Button_b99376f5ff874aeea2a8cf6c79fe82d8": {
+        "id": "AS_Button_b99376f5ff874aeea2a8cf6c79fe82d8",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "ufc3c800a15a4a0b97b389c50a53441b"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__acf88f6b932f4658b6ccf77c78dacf2c",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "editFriendlyNameCancelOnClick",
+            "display": "editFriendlyNameCancelOnClick",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

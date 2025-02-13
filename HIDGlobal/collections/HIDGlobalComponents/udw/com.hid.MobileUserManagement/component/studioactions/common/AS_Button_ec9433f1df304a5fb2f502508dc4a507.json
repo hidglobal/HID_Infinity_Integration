@@ -1,0 +1,21 @@
+{
+    "AS_Button_ec9433f1df304a5fb2f502508dc4a507": {
+        "id": "AS_Button_ec9433f1df304a5fb2f502508dc4a507",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_b0b7b64505fa402f8d2d4a50bb39f41b",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "passwordSubmitOnClick",
+            "display": "passwordSubmitOnClick",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

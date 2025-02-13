@@ -37,42 +37,7 @@
         "isForked": false
     },
     "isDefaultSkin": false,
-    "kiosk": {
-        "font_name": "FontAwesome",
-        "font_size": 100,
-        "isForked": false
-    },
-    "kuid": "s3dc7eff51ce4dea991b8e551482cc60",
-    "spaan": {
-        "font_name": "FontAwesome",
-        "font_size": 100,
-        "isForked": false
-    },
-    "spaandroidtablet": {
-        "font_name": "FontAwesome",
-        "font_size": 100,
-        "isForked": false
-    },
-    "spaip": {
-        "font_name": "FontAwesome",
-        "font_size": 100,
-        "isForked": false
-    },
-    "spaipad": {
-        "font_name": "FontAwesome",
-        "font_size": 100,
-        "isForked": false
-    },
-    "spawindowstablet": {
-        "font_name": "FontAwesome",
-        "font_size": 100,
-        "isForked": false
-    },
-    "spawinphone8": {
-        "font_name": "FontAwesome",
-        "font_size": 100,
-        "isForked": false
-    },
+    "kuid": "s0f705456cfb4f19980113d310c861cb",
     "tabrcandroid": {
         "font_name": "FontAwesome",
         "font_size": 100,
@@ -80,16 +45,6 @@
     },
     "wType": "Label",
     "watchos": {
-        "font_name": "FontAwesome",
-        "font_size": 100,
-        "isForked": false
-    },
-    "windows8": {
-        "font_name": "FontAwesome",
-        "font_size": 100,
-        "isForked": false
-    },
-    "winphone8": {
         "font_name": "FontAwesome",
         "font_size": 100,
         "isForked": false

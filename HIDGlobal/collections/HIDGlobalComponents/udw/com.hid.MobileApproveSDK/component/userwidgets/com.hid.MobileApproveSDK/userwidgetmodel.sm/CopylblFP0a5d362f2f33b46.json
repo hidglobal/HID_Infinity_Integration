@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb17e5efe87049a0882d6ba7cd8eeba8",
+    "_skin_": "sf3bc2f6f1b64dd3b60e121eddfa6e1d",
     "_text_": "Do you want to add standard internet banking password",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     },
     "containerweight": 100,
     "contentalignment": 5,
-    "focusskin": "sb86bd46966f402ab969fdb9046e03fa",
+    "focusskin": "sb7f90f420b24f1094f82ad65de211cc",
     "id": "CopylblFP0a5d362f2f33b46",
     "info": null,
     "ipad": {
@@ -72,7 +72,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "ub973dd68045452c876b9709c563a1b0",
+    "kuid": "u4cc2ae1f0084eda9eefa2f62df0eede",
     "name": "kony.ui.Label",
     "parent": "flxStandardPasswordPrompt",
     "pf": "userwidgetmodel",

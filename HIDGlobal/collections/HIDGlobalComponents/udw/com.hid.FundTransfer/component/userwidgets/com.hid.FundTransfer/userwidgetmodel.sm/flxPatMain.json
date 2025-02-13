@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s9147d95b2f94de9bf47ac434f6cd1ab",
+    "_skin_": "se7896dafff5418982bd4063765bb864",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -46,7 +46,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "uba8dfc4748a461385bda84f6a66f8d1",
+    "kuid": "u07d45919f7f43e28f3e148a88ac72c7",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxPatDetails",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s965ac95ff5d4d239a6524a32fc9b397",
+    "_skin_": "s67d36ad1aa64a86b6e76ab257af42af",
     "_text_": "Status",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u8b05552a2d7465fb81773b64e6f7b5e",
+    "kuid": "u4c80f731d204743815b1ffc160fec64",
     "name": "kony.ui.Label",
     "parent": "flexStatus",
     "pf": "userwidgetmodel",

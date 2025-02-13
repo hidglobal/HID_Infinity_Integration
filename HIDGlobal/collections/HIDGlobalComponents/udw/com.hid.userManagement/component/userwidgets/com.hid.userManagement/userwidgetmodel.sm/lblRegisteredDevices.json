@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s79bba9b035b4deaaad759f07c731f73",
+    "_skin_": "sb96161842174c18b5189f124e2a40f9",
     "_text_": "Registered Devices",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "uc781c7e95ed4be9a5ad564603939fcf",
+    "kuid": "uf9efe4f87874f60ab9e45de2eb6deb3",
     "name": "kony.ui.Label",
     "parent": "flxDevices",
     "pf": "userwidgetmodel",

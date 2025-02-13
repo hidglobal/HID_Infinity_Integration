@@ -1,0 +1,33 @@
+{
+    "AS_Label_eb9915ce89ad4190837ded9f02fe8f35": {
+        "id": "AS_Label_eb9915ce89ad4190837ded9f02fe8f35",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u5d2e5130abb4237a136e3c7e244b350"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___c3a2cb7e9a8b42ebb730823aa2b51e73",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "resendPushTouchEnd",
+            "display": "resendPushTouchEnd",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

@@ -25,7 +25,7 @@
         0,
         0
     ],
-    "_skin_": "s0d05cc234124d6e91117f20dbf8a508",
+    "_skin_": "s9761bd5e1824624a028cfcc4b9302fc",
     "_text_": "Yes",
     "_width_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s4357d43bef545f693c49eada3977395",
+    "focusskin": "sc4dda63d3db475da387a5525f77680f",
     "id": "btnBioYesOld",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u38278dea97e4ab6b8d21a99a824ff88",
+    "kuid": "u69f5120a1264c7693ad52e2c9d2bddc",
     "name": "kony.ui.Button",
     "parent": "flxBioConcet",
     "pf": "userwidgetmodel",

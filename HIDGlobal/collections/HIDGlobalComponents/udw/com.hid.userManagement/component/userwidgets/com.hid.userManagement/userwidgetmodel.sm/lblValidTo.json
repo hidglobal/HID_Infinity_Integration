@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa4ac65b226a4add97dd77a49cb7394b",
+    "_skin_": "sfd47c1dd00f4e23b11744a136124a13",
     "_text_": "Valid To",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u0c1bfd7cc3a4440af55ec11a8e51337",
+    "kuid": "u04e37ede69f4088b65240631acfb48f",
     "name": "kony.ui.Label",
     "parent": "flxValidTo",
     "pf": "userwidgetmodel",

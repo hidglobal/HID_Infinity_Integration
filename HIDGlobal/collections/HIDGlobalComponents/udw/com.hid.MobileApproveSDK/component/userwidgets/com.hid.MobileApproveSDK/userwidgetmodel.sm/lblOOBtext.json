@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s1a8cac59aa743a0a125f224d3e3c3b6",
+    "_skin_": "sb612785b50442d69bcb8aa57fefd89d",
     "_text_": "Enter the OTP sent to your registered mobile number",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u8dfe6473790425c857b978a718a2af9",
+    "kuid": "ud500cef930949d8aeffc8e2d14f6b55",
     "name": "kony.ui.Label",
     "parent": "flxMainPageOOB",
     "pf": "userwidgetmodel",

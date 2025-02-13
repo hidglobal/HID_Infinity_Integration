@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7217ce2e24a4d8380eacf40e5f68fd6",
+    "_skin_": "s87a9d8e6ef745408fce52f00e45e7a2",
     "_text_": "Click on the Button below to generate a QR to login.",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u3bb5abc098d43019e84ab8ee33b8fcc",
+    "kuid": "uef273e00e2e48ae85f96ae868d56145",
     "name": "kony.ui.Label",
     "parent": "flxScanToApproveMain",
     "pf": "userwidgetmodel",

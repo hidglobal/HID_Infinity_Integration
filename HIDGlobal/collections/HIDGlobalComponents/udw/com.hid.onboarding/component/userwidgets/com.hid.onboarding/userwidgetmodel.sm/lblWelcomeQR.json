@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa30edb86ece4892a4f2ae10f44842f5",
+    "_skin_": "s1d9784823264e0a858bb7e9e83b9290",
     "_text_": "Registration Process",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u624298d17e64cbb9f26465fb98f1dbc",
+    "kuid": "u1397e7a57484370b4ddc188c97889c8",
     "name": "kony.ui.Label",
     "parent": "flxDeviceRegistration",
     "pf": "userwidgetmodel",

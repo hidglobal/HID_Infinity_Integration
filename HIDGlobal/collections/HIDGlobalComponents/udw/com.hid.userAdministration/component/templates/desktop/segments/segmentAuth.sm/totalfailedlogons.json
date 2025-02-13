@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s3ab671f458c46c5bffcfdda9ec9cd62",
+    "_skin_": "s86b42171b264de5882ab8bba890d898",
     "_text_": "Total failed logons",
     "_top_": {
         "type": "number",
@@ -56,7 +56,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c79468a759044ba2b95b24bddb53bbbc",
+    "kuid": "i98432953e6e4b1fbe53f9ec27bbf2c3",
     "name": "kony.ui.Label",
     "parent": "flexSegmentAuth",
     "pf": "segmentAuth",

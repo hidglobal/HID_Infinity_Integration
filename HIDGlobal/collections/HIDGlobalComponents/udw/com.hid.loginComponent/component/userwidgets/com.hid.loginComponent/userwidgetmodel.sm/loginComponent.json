@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s5fdaf849f6a42e284c5947f45aab163",
+    "_skin_": "s55fea31ded040148da8e4a884c3dfe4",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -55,7 +55,7 @@
     "iphone": {},
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u20acf87d5b6458089f2eee11e08f98f",
+    "kuid": "u1e912d3ce5841be91082c11845aeafb",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "userwidgetmodel",
@@ -66,6 +66,5 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "winphone8": {}
+    "widgetalignment": 1
 }

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s2ade2ca728b440481c0241f090bab86",
+    "_skin_": "s09efc87bc4e4d98a385d5adb7e47be8",
     "_text_": "This code will display for 59 more secs..",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "uf19fe1041c942eeb53c4ef77c9a732f",
+    "kuid": "u8eb79a0a2624e2db8a1b98f9ffb13c4",
     "name": "kony.ui.Label",
     "parent": "flxSecureCodeTimeoutMsg",
     "pf": "userwidgetmodel",

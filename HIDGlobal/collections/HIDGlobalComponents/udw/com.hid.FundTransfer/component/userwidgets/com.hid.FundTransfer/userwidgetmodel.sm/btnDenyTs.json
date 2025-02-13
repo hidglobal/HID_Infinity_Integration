@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s42d0b82a5024d359c6846b27c379545",
+    "_skin_": "s2476f009fc24b51a76c79a90693639c",
     "_text_": "CANCEL",
     "_top_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s31e6138eed94ed9b3cc6e3270da03c2",
+    "focusskin": "sbd372c58078467e9f9207f5a40bf4ce",
     "id": "btnDenyTs",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u8968d0894fb40b9856ac2895e0e5c7d",
+    "kuid": "uebfb3c694a04808813a2c7a5454360d",
     "name": "kony.ui.Button",
     "parent": "FlexContainer0af9571b4e0cd4f",
     "pf": "userwidgetmodel",

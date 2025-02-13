@@ -5,38 +5,38 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "d0f9dd5575364e43b59e3dd3d8bd15d2",
+                    "kuid": "d2e1cb917a03437d9a821b68776e69df",
                     "paramList": [],
                     "propertyKey": "paymentCreate",
                     "pw": {
                         "displayName": "paymentCreate",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "g7c8686880524614b26a49b345a7fa07",
+                    "kuid": "e8a61708a72d405b914cae3f4105cd7f",
                     "paramList": [],
                     "propertyKey": "paymentSign",
                     "pw": {
                         "displayName": "paymentSign",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "e3349dab1a864f30962d98616c2d6876",
+                    "kuid": "c163043034604ab6b705a7ce3f3b69ca",
                     "paramList": [],
                     "propertyKey": "paymentUpdate",
                     "pw": {
                         "displayName": "paymentUpdate",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "event"
                 }
             ],
@@ -46,7 +46,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "d93aa527cf2e4f248ff77edfc8325b43",
+                    "kuid": "cea5769b412b495e9de98210248a74ae",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "onRMSPaymentAccept",
@@ -54,12 +54,12 @@
                         "displayName": "onRMSPaymentAccept",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "eac4195602c34e75b19a6daa03e03130",
+                    "kuid": "acb1500c9b524ce5af531953588e12f7",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "onRMSPaymentDecline",
@@ -67,12 +67,12 @@
                         "displayName": "onRMSPaymentDecline",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "d15a601f7f0d4574b29a03f28232454d",
+                    "kuid": "c0b7d497f2a24897bca63c9e28920795",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "onRMSFailure",
@@ -80,12 +80,12 @@
                         "displayName": "onRMSFailure",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "d710733c4012445da2135145f98a9624",
+                    "kuid": "a9f021cc16d74bab9d986590df326166",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "onRMSSignSuccess",
@@ -93,12 +93,12 @@
                         "displayName": "onRMSSignSuccess",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "ic1c0519155f43be8273712b0f520db4",
+                    "kuid": "gb91e7f0ecb84ded9550f6153459f4eb",
                     "paramList": [],
                     "propertyIndex": 5,
                     "propertyKey": "onRMSSignFailure",
@@ -106,7 +106,7 @@
                         "displayName": "onRMSSignFailure",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "event"
                 }
             ],
@@ -126,7 +126,7 @@
                     "access": "Write",
                     "defaultValue": "web",
                     "group": "General",
-                    "kuid": "eac74f2f52534d4eb1a5ccb04463003e",
+                    "kuid": "g4d67fe97f7f48bb90d23d7914f98ad0",
                     "originalPropertyKey": "platform",
                     "propertyIndex": 2,
                     "propertyKey": "platform",
@@ -135,7 +135,7 @@
                         "displayName": "platform",
                         "uiRepresentation": "Label-Combobox"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "list selector",
                     "value": [
                         "web",
@@ -146,7 +146,7 @@
                     "access": "Write",
                     "defaultValue": "{}",
                     "group": "General",
-                    "kuid": "h6e8debea9624c05a7fb2a319bb4850e",
+                    "kuid": "e6dee98d288b4bebb7e95d0a3c8e9343",
                     "originalPropertyKey": "customPaymentDeclineTags",
                     "propertyIndex": 5,
                     "propertyKey": "customPaymentDeclineTags",
@@ -163,7 +163,7 @@
                         },
                         "uiRepresentation": "Label-Button"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "json",
                     "value": ""
                 },
@@ -171,7 +171,7 @@
                     "access": "Write",
                     "defaultValue": "C8hDRqP6KY",
                     "group": "General",
-                    "kuid": "dec7879339904ce29778f517121aa326",
+                    "kuid": "hc9ee5c168144fefb6736643c07ad6dc",
                     "originalPropertyKey": "tmCookieTag",
                     "propertyIndex": 6,
                     "propertyKey": "tmCookieTag",
@@ -180,7 +180,7 @@
                         "displayName": "tmCookieTag",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "string",
                     "value": ""
                 },
@@ -188,7 +188,7 @@
                     "access": "Write",
                     "defaultValue": "TS01d4cc80",
                     "group": "General",
-                    "kuid": "f020c045cf9b4dc88c70bc211f990be4",
+                    "kuid": "i09d1df91f114e6b8d4c174aea053dd9",
                     "originalPropertyKey": "tmCookieSid",
                     "propertyIndex": 7,
                     "propertyKey": "tmCookieSid",
@@ -197,7 +197,7 @@
                         "displayName": "tmCookieSid",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "uda9970e0f1144c5aa5f82157403dacc",
+                    "srcWgtKUID": "uc71a39fd8124ca19a0b755efad4a63a",
                     "type": "string",
                     "value": ""
                 }

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sdcae2fe479e43a3998858f55c8ebff1",
+    "_skin_": "s1a6a5b054904ff58823d9f3fa431f83",
     "_text_": "HID Approve Notification",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ud3dc90b9cc94f44854dfde0db7c76fa",
+    "kuid": "uefc476c6fd14642bd5b92e5b5e014aa",
     "name": "kony.ui.Label",
     "parent": "flxApprove",
     "pf": "userwidgetmodel",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s42d0b82a5024d359c6846b27c379545",
+    "_skin_": "s2476f009fc24b51a76c79a90693639c",
     "_text_": "OK",
     "_top_": {
         "type": "string",
@@ -36,12 +36,12 @@
     "contentalignment": 5,
     "disabledSkins": {},
     "displaytext": true,
-    "focusskin": "s31e6138eed94ed9b3cc6e3270da03c2",
+    "focusskin": "sbd372c58078467e9f9207f5a40bf4ce",
     "id": "btnDeleteUserDone",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u4300bcc294f44c885514450bad9d89c",
+    "kuid": "u08bd24a830349158327ef832afb53ea",
     "name": "kony.ui.Button",
     "parent": "CopyflxConfirmButton0dd0b0894536444",
     "pf": "userwidgetmodel",

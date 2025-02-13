@@ -1,12 +1,15 @@
 define([`com/hid/transactionSigning/transactionSigningPresentationController`],function(transactionSigningPresentationController) {
-
+   
   return {
+    
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       this.view.btnLogin.onClick = this.btnLogin_onClick;
       this.view.btnLoginOffline.onClick = this.btnLoginOffline_onClick;
       this.view.tbxCurrency.setEnabled(false);
       this.resetUIFeilds();
+	  this.getClientAppProperties();
       this.resetTextFeilds();
+      this.getServiceURL();
       this.view.btnGenerateChallenge.onClick = this.btnGenerateChallenge_onClick;
       this.view.btnLoginChallenge.onClick = this.btnLoginChallenge_onClick;
       this.view.btnSendSMSOtp.onClick = this.btnSendSMSOtp_onClick;
@@ -31,7 +34,8 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
         this._tds = val;
       });  
     },
-   
+    transactionCorrelationIdPrefix: "TRNS-",
+    correlationId : "",
     updateTSUI : function(response){
       this.resetUIFeilds();
       switch(response.state){
@@ -116,7 +120,7 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
       this.view.lblMessage.text = "";
       this.view.lblErrorResponse.text = "";
       this.commonEventHandler(this.showLoading, "");
-      transactionSigningPresentationController.aprroveTransact_Initiate(this.updateTSUI,this._username,this._tds);
+      transactionSigningPresentationController.aprroveTransact_Initiate(this.updateTSUI,this._username,this._tds,this.correlationId);
     },
     btnLogin_onClick : function(){
       this.toAccount = this.view.tbxToAccount.text;
@@ -137,8 +141,9 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
       this.commonEventHandler(this.showLoading, "");
       
       //call list of Devices
+      this.correlationId = this.transactionCorrelationIdPrefix + this.generateUUID();
       transactionSigningPresentationController.getApproveDevices(this.username, this.getDeviceSuccess,
-                                                               this.getDeviceFailure); 
+                                                               this.getDeviceFailure,this.correlationId); 
  //     transactionSigningPresentationController.aprroveTransactInitiate(this.updateTSUI,this._username,toAccount,amount,desc);
     },
     
@@ -163,7 +168,7 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
         this.commonEventHandler(this.dismissLoading, ""); } 
        else {
           this.deviceId = "";
-          transactionSigningPresentationController.aprroveTransactInitiate(this.updateTSUI,this._username,this.deviceId,this.toAccount,this.amount,this.desc);
+          transactionSigningPresentationController.aprroveTransactInitiate(this.updateTSUI,this._username,this.deviceId,this.toAccount,this.amount,this.desc,this.correlationId);
         }
     },    
     
@@ -179,7 +184,7 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
       let totalData = this.view.segmentPushDevices.data.slice();
       let data = totalData[rowNumber];
       this.deviceId = data.deviceId;
-            transactionSigningPresentationController.aprroveTransactInitiate(this.updateTSUI,this._username,this.deviceId, this.toAccount,this.amount,this.desc);
+      transactionSigningPresentationController.aprroveTransactInitiate(this.updateTSUI,this._username,this.deviceId, this.toAccount,this.amount,this.desc,this.correlationId);
     },    
     
     lblGeneratorQR_onTouchEnd : function(){
@@ -202,16 +207,29 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
         this.view.lblTSSuccess.text = "Please enter Description";
         return;
       }      
-      QRdata = {
+     /* var QRdata = {
         "toAccount" : toAccount,
         "amount" : amount,
         "desc" : desc
-      };
-      this.view.qrcodegeneratorNew.dataToEncode = JSON.stringify(QRdata);
-      this.view.qrcodegeneratorNew.generate();
+      };*/
+
+     // To generate qr code for Major Bank App
+     // var QRData = this.generateQRDataForSDK(toAccount, amount, desc, this._username);
+
+     // To generate qr code for HID Approve app
+      var QRData = transactionSigningPresentationController.generateQRDataForHIDApprove(toAccount, amount, desc, this._username);
+      this.view.QRCodeGenerator.generateQRCode(QRData);
       this.view.flxOfflineFields.setVisibility(false);
       this.view.flxQRCodeScan.setVisibility(true);
       this.view.forceLayout();
+    },
+    
+    generateQRDataForSDK : function(account,amount,remarks,user){
+     let qrData = {
+     "username" : user, 
+     "data": [account,amount,remarks]
+     }
+     return JSON.stringify(qrData);
     },
     
     lblOfflineManualEntry_onTouchEnd(){
@@ -248,7 +266,8 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
       }
       this.commonEventHandler(this.showLoading, "");
       // alert("userName offline "+this._username);
-      transactionSigningPresentationController.OfflineTS(this.updateTSUI,this._username,toAccount,amount,desc,OTP);
+      this.correlationId = this.transactionCorrelationIdPrefix + this.generateUUID();
+      transactionSigningPresentationController.OfflineTS(this.updateTSUI,this._username,toAccount,amount,desc,OTP,this.correlationId);
     },
     btnGenerateChallenge_onClick : function(){
       let toAccount = this.view.tbxToAccountChallenge.text;
@@ -267,7 +286,8 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
         return;
       }
       this.commonEventHandler(this.showLoading, "");
-      transactionSigningPresentationController.generateChallenge(this.updateTSUI,this._username);
+      this.correlationId = this.transactionCorrelationIdPrefix + this.generateUUID();
+      transactionSigningPresentationController.generateChallenge(this.updateTSUI,this._username,this.correlationId);
     },
     btnLoginChallenge_onClick : function(){
       let OTP = this.view.tbxOTPChallenge.text.trim();
@@ -276,7 +296,7 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
         return;
       }
       this.commonEventHandler(this.showLoading, "");
-      transactionSigningPresentationController.validateChallenge(this.updateTSUI,this._username,OTP);
+      transactionSigningPresentationController.validateChallenge(this.updateTSUI,this._username,OTP,this.correlationId);
     },
     resetUIFeilds : function (){
       this.view.lblApproveSend.text = "";
@@ -347,7 +367,8 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
         return;
       }      
       this.commonEventHandler(this.showLoading, "");
-      transactionSigningPresentationController.sendSMSOTP(this.updateTSUI,this._username,toAccount,amount,message,this.sendSMSOTP_Success,this.sendSMSOTP_Failure);      
+      this.correlationId = this.transactionCorrelationIdPrefix + this.generateUUID();
+      transactionSigningPresentationController.sendSMSOTP(this.updateTSUI,this._username,toAccount,amount,message,this.sendSMSOTP_Success,this.sendSMSOTP_Failure,this.corrleationId);      
     },
     btnValidateOTP_onClick : function(){
       let OTP = this.view.tbxSMSOTP.text.trim();
@@ -356,7 +377,31 @@ define([`com/hid/transactionSigning/transactionSigningPresentationController`],f
         return;
       }
       this.commonEventHandler(this.showLoading, "");
-      transactionSigningPresentationController.validateSMSOTP(this.updateTSUI,this._username,OTP);
+      transactionSigningPresentationController.validateSMSOTP(this.updateTSUI,this._username,OTP,this.correlationId);
+    },
+    getServiceURL : function(){
+        transactionSigningPresentationController.getServiceURL();
+    },
+	 getClientAppProperties : function(){
+     transactionSigningPresentationController.getClientAppProperties();     
+    },
+    
+    generateUUID: function() {
+      const crypto = window.crypto || window.msCrypto;
+      const buffer = new Uint16Array(8);
+      crypto.getRandomValues(buffer);
+
+      buffer[3] &= 0x0fff;
+      buffer[3] |= 0x4000;
+      buffer[4] &= 0x3fff;
+      buffer[4] |= 0x8000;
+
+      return buffer.reduce((str, byte, i) => {
+        const hex = byte.toString(16).padStart(4, '0');
+        return str + (i === 2 || i === 4 || i === 6 ? '-' : '') + hex;
+      }, '');
     }
+    
+
   };
 });

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sd4668bec9974291b14b511b6db562a5",
+    "_skin_": "sd1b86e3998f43119f26bcc8248ffc3d",
     "_text_": "Cancel",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s8cec2c1a65b41c3a901f00589522445",
+    "focusskin": "s0848e6f302e4b67bad15d5e7530c19f",
     "id": "btnCancleHWOTP",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u11e8f4322034cff92379828b9ad9cc1",
+    "kuid": "udfe5a07a3594ec3b263a289b59b943c",
     "name": "kony.ui.Button",
     "parent": "flxHWOTPButtons",
     "pf": "userwidgetmodel",

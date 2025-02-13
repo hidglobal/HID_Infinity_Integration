@@ -26,7 +26,7 @@
         "type": "number",
         "value": "0"
     },
-    "_skin_": "s56527b3cb1a429e98b414863fab2297",
+    "_skin_": "sb5098bbd5c5441d90797377e5b219c6",
     "_top_": {
         "type": "string",
         "value": "2%"
@@ -52,7 +52,7 @@
     "id": "flxTxtQRCode",
     "info": null,
     "isvisible": true,
-    "kuid": "u58dae840329454fa885ef98f3af8ad1",
+    "kuid": "u2213dce15ee424ba951305fc686b4a3",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxQRCodeMainUI",

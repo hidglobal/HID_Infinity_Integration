@@ -1,0 +1,33 @@
+{
+    "AS_Image_d027794201e64e3ea6f006c0d1c0b98f": {
+        "id": "AS_Image_d027794201e64e3ea6f006c0d1c0b98f",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "ufc3c800a15a4a0b97b389c50a53441b"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__afb888e04c214a91ac72439a62240b2b",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "registeredDeviceBackButtononClick",
+            "display": "registeredDeviceBackButtononClick",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

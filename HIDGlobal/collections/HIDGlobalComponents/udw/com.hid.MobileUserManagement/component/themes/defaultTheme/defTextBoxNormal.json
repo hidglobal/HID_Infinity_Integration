@@ -1,0 +1,37 @@
+{
+    "android": {
+        "font_name": "default"
+    },
+    "androidwearos": {
+        "font_name": "default"
+    },
+    "background_color": "ffffffff",
+    "bg_type": "one",
+    "border_color": "333333ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 1,
+    "desktopweb": {
+        "font_name": "Helvetica"
+    },
+    "font_color": "333333ff",
+    "font_name": "iphoneSystem",
+    "font_size": 107,
+    "font_style": "normal",
+    "font_weight": "400",
+    "ipad": {
+        "font_name": "System"
+    },
+    "iphone": {
+        "font_name": "System"
+    },
+    "isDefaultSkin": true,
+    "kuid": "s71f06256ba14488b92fcda6d379cd57",
+    "tabrcandroid": {
+        "font_name": "default"
+    },
+    "wType": "TextField",
+    "watchos": {
+        "font_name": "System"
+    }
+}

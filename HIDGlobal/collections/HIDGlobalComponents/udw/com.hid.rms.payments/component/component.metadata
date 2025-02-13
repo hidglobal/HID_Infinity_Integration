@@ -14,10 +14,8 @@
             "slFbox"
         ],
         "images": [],
-        "fonts": [
-            "Gotham-Book"
-        ],
-        "nativeApis": 3,
+        "fonts": [],
+        "nativeApis": 0,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -25,7 +23,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2024-07-08T08:39:20.688Z",
-    "createdVizVersion": "9.5.28",
-    "project_version": "sprint42"
+    "createdOn": "2025-02-13T09:37:13.209Z",
+    "createdVizVersion": "202307.0.9",
+    "project_version": "sprint45"
 }

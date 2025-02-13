@@ -21,7 +21,7 @@
         "type": "string",
         "value": "1%"
     },
-    "_skin_": "s4b32e5d0ae4463ea26b002114b2b0f7",
+    "_skin_": "se0b0239431e48c58c6e5be4b876bbd1",
     "_text_": "Hide",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     },
     "containerweight": 100,
     "contentalignment": 6,
-    "focusskin": "s9f56d4db4684acab62f2d3f9d007d5c",
+    "focusskin": "s360bf8d4a3e4e95ab4fe6a9ac6e937f",
     "id": "CopylblHideCreatePin0a4f494fe99424d",
     "info": null,
     "ipad": {
@@ -72,7 +72,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "u8bb464660c74e31a88674018ad88ebf",
+    "kuid": "u581b7b414874b799ecc632d23e47598",
     "name": "kony.ui.Label",
     "parent": "flxHideStandardPassword",
     "pf": "userwidgetmodel",

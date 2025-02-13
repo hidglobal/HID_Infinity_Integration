@@ -195,7 +195,7 @@
                 }
             }
         ],
-        "rowTemplateId": "a859f372b1ea4515beac5105088f7c7b",
+        "rowTemplateId": "c90578acdcf04fc88c17463eb01fb989",
         "rowtemplate": "CopyCopyflxDevicesSegment",
         "sectionHeaderTemplateId": null,
         "widgetdatamap": {
@@ -237,7 +237,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u0a5c42b284140c9bf2dc66295782f1a",
+    "kuid": "u9fdef5f08454ee98cb99ddb67fb0f49",
     "masterdata": {},
     "name": "kony.ui.SegmentedUI2",
     "needpageindicator": true,
@@ -252,12 +252,12 @@
     "retainflexpositionproperties": false,
     "retainselection": false,
     "rowcounter": 2,
-    "rowfocusskin": "s26da85cb7714910ab688fbe4937495f",
-    "rowskin": "s7b6846abdac480a8de4218229ac3c6e",
+    "rowfocusskin": "sc22e9f20fea4e61b12b09fe5b59f144",
+    "rowskin": "s13926644e83417cb9f8886a0b310219",
     "rowtemplate": "Flex0h9e71ad78d4c4a",
     "screenlevelwidget": false,
     "seccounter": 0,
-    "sectionheaderskin": "sae92d78880f4cb087cad5c9504fa1ce",
+    "sectionheaderskin": "s58574ce97e9400ca6ca5c75af86b883",
     "selectedRows": null,
     "selectedState": false,
     "selectedindex": null,

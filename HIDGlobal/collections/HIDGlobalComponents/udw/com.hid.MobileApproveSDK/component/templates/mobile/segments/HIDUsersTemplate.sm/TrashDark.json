@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sdd767c9cac24ca68793d08f6ffdbc48",
+    "_skin_": "sb8f001093dc4ab7b76df88101615d93",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "d501d52a850446aa957ae8cd62bc2f95",
+    "kuid": "h5cf1d8063bc44a9806adb351d1a92e6",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxDelRow",

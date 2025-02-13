@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sdecce6834a045bd9673a5ebd18839a7",
+    "_skin_": "s65a2e2dae9940eebd09107fd5e9790f",
     "_text_": "Approve",
     "_top_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s4357d43bef545f693c49eada3977395",
+    "focusskin": "sc4dda63d3db475da387a5525f77680f",
     "id": "btnApprove",
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "ue1608d9f5064a4e89f962c17843d46b",
+    "kuid": "u651b4522fc34aa1b7f4823bf4031cee",
     "name": "kony.ui.Button",
     "parent": "flxMain",
     "pf": "userwidgetmodel",

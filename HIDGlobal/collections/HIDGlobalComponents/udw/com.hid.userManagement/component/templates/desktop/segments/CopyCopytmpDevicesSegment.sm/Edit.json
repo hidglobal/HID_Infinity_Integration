@@ -17,7 +17,7 @@
         0,
         0
     ],
-    "_skin_": "s4bceacc0e6a4cd8a022eb64a92891e6",
+    "_skin_": "s6c0dc6df30d44b4b73830805a86341a",
     "_text_": "",
     "_width_": {
         "type": "string",
@@ -43,7 +43,7 @@
     "containerweight": 100,
     "contentalignment": 5,
     "id": "Edit",
-    "ide_onTouchEnd": "AS_Label_b0332201388845e0819430c5b8b83c22",
+    "ide_onTouchEnd": "AS_Label_f82ce573a2404e1d955a373fea40977e",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,7 +56,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "c6bdf926300b49988b4f25b73eebffb5",
+    "kuid": "c3e8c9ec0ec04d609cfa45605eab1cef",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxEditButtons",

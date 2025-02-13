@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s36356281e5841359b9dd70859adb5a8",
+    "_skin_": "sbd7314eae4441c59c22bb339bfce8fa",
     "_text_": "HID Secure Code",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u358e4e9d9d645cbbb74c5f3f42edea7",
+    "kuid": "uede99c13e6242c0a31592789518524a",
     "name": "kony.ui.Label",
     "parent": "flxOTPError",
     "pf": "userwidgetmodel",

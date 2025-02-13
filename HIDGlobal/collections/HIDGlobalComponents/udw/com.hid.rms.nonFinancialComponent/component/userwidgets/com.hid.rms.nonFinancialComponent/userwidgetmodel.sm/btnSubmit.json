@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7812efa39b0406eb079b818348a8292",
+    "_skin_": "s589ddca96ab474c9594651a66880fa9",
     "_text_": "SUBMIT",
     "_top_": {
         "type": "string",
@@ -43,19 +43,19 @@
     "containerweight": 100,
     "contentalignment": 5,
     "desktopweb": {
-        "blockedUISkin": "sf040c78d5b8430e9c821121d2c4cf17"
+        "blockedUISkin": "s9a3abe810c542dbb62e04040d6673c1"
     },
     "disabledSkins": {
-        "focusSkin": "s1d9a41c92d640ee8bbae1e399d68264"
+        "focusSkin": "s89009d903aa460daa2ad38dcada6493"
     },
     "displaytext": true,
     "focusskin": null,
     "id": "btnSubmit",
-    "ide_onClick": "AS_Button_a0b17ac47fae41f18b627ce63ed42b95",
+    "ide_onClick": "AS_Button_j2ed567551174a159f32113c66636660",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u8ee1c4e23df4aab85376960b0221773",
+    "kuid": "uceb57c47de8478ea17a4ebbbc988213",
     "name": "kony.ui.Button",
     "parent": "flxButtons",
     "pf": "userwidgetmodel",

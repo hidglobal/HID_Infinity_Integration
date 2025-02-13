@@ -102,7 +102,8 @@ define([], function() {
                       "Scope": "LOGIN" ,
                       "Name": "Temenos Internet Banking",
                       "userid": "${loginJSON.userid}",
-                      "password": "${loginJSON.password}"
+                      "password": "${loginJSON.password}",
+                      "correlationId": "${loginJSON.correlationId}"
                   }
             }`;
         }
@@ -183,11 +184,11 @@ define([], function() {
     objService.customVerb("getInviteCodeTDSV4B", params, callback);
   };
   // Validate Secure OTP with RMS
-  BusinessController.prototype.validateSecureOTPWithRMS = function(username, password, S_CB, F_CB,rmsLoad=""){
+  BusinessController.prototype.validateSecureOTPWithRMS = function(username, password, correlationId ,S_CB, F_CB,rmsLoad=""){
     let transactionId = Math.floor(Math.random() * 10000);    
     msgId = transactionId;
     let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0", 
-                    "currentRiskScore" : "2", "transactionId" : transactionId};    
+                    "currentRiskScore" : "2", "transactionId" : transactionId, "correlationId": correlationId};    
     
     var client = KNYMobileFabric;
     var serviceName = "customHIDLogin";
@@ -201,8 +202,7 @@ define([], function() {
     }
     var options = {
       "payload" : loginPayload,
-      "authType":"SECURE_CODE",
-      "isMfa":true
+      "authType":"SECURE_CODE"
     };
 
     identitySvc.login(options, success=>{
@@ -213,11 +213,11 @@ define([], function() {
          F_CB(error);
     });};  
   
-  BusinessController.prototype.validateSecureOTP = function(username, password, S_CB, F_CB){
+  BusinessController.prototype.validateSecureOTP = function(username, password, correlationId, S_CB, F_CB){
     let transactionId = Math.floor(Math.random() * 10000);    
     msgId = transactionId;
     let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0", 
-                    "currentRiskScore" : "2", "transactionId" : transactionId};    
+                    "currentRiskScore" : "2", "transactionId" : transactionId,"correlationId":correlationId};    
     
     var client = KNYMobileFabric;
     var serviceName = "customHIDLogin";
@@ -226,14 +226,13 @@ define([], function() {
     
     var options = {
       "payload" : loginPayload,
-      "authType":"SECURE_CODE",
-      "isMfa":false
+      "authType":"SECURE_CODE"
     };
 
     identitySvc.login(options, success=>{
-//          var mfaDetails = identitySvc.getMfaDetails();
-//          userName = loginJson.userid;
-         S_CB();
+          var mfaDetails = identitySvc.getMfaDetails();
+          userName = loginJson.userid;
+           S_CB(mfaDetails);
       },error=>{
          F_CB(error);
     });}; 
@@ -291,7 +290,7 @@ BusinessController.prototype.sendOOB = function(params, S_CB, F_CB){
   };
   
 //Second factor Authenticator    
-BusinessController.prototype.authenticateSecondFactor = function(username,factor,password,mfa_key, S_CB, F_CB){
+BusinessController.prototype.authenticateSecondFactor = function(username,factor,password,mfa_key,correlationId,S_CB, F_CB){
     kony.print("RMS => Inside businessController.authenticateSecondFactor");
     var client = KNYMobileFabric;
     var serviceName = "customHIDLogin";
@@ -303,7 +302,8 @@ BusinessController.prototype.authenticateSecondFactor = function(username,factor
       "mfa_key" :mfa_key,
       "password":password,
       "authType":factor,
-      "userName": username
+      "userName": username,
+      "correlationId": correlationId
     };
     identitySvc.validateMfa(mfaParams, 
                             success => S_CB(success),

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sc25a83461f04edda9441ed52f37191e",
+    "_skin_": "s8a1affa0f934fcf8b5d1a385dc33a69",
     "_text_": "User profile Deleted Successfully",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u3047a08a1be413a99bfdec548330f55",
+    "kuid": "uf734a12ffb2498d8d338030b8def43e",
     "name": "kony.ui.Label",
     "parent": "CopyflxBioConfimText0b2f6e31a4dca46",
     "pf": "userwidgetmodel",

@@ -1,0 +1,21 @@
+{
+    "AS_Button_hc9dfbc80ea24bbb874d8e11c64b8fb2": {
+        "id": "AS_Button_hc9dfbc80ea24bbb874d8e11c64b8fb2",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_i693e481bc4942b992f298b82e34bb08",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "cancelOnClick",
+            "display": "cancelOnClick",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

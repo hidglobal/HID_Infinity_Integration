@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "Enter OTP",
-    "_skin_": "s8d193c3dd7b4a7b917ef33980d559b0",
+    "_skin_": "s09b959773164e668769e53567ca56ab",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -46,10 +46,10 @@
     "containerweight": 100,
     "contentalignment": 5,
     "desktopweb": {
-        "placeholderSkin": "se7c414ad4b34ef889693321ab649b60"
+        "placeholderSkin": "s8cdd27efef9486b848f70ea18759ba0"
     },
     "disabledSkins": {
-        "focusSkin": "s29505abf266419bbe3bbf1161eece31"
+        "focusSkin": "sece5363ba894e5ebb2de24833288b58"
     },
     "id": "tbxHWOTP",
     "info": null,
@@ -57,12 +57,12 @@
     "isvisible": true,
     "keyboardstyle": "A",
     "keyboardtype": "A",
-    "kuid": "ua79434f536645068b5107e07072f866",
+    "kuid": "ua713ce8fcf24cb4960f4f96487386a7",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "flxHWOTP",
     "pf": "userwidgetmodel",
-    "placeholderskin": "se7c414ad4b34ef889693321ab649b60",
+    "placeholderskin": "s8cdd27efef9486b848f70ea18759ba0",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": true,

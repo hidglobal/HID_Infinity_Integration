@@ -3,27 +3,27 @@ define({
       This is an auto generated file and any modifications to it may result in corruption of the action sequence.
     */
     /** onClick defined for btnRegisterDevice **/
-    AS_Button_bcb361b193ea4bfa9925a0e865b11335: function AS_Button_bcb361b193ea4bfa9925a0e865b11335(eventobject) {
+    AS_Button_df0c0294252440e4b93f76f19775a863: function AS_Button_df0c0294252440e4b93f76f19775a863(eventobject) {
         var self = this;
         return self.registerApproveOnClick.call(this);
     },
     /** onClick defined for btnDone **/
-    AS_Button_d2b6989d87284c8aa55585b07854c377: function AS_Button_d2b6989d87284c8aa55585b07854c377(eventobject) {
+    AS_Button_fbc7b2d962114cc8bacf9a2c02b47193: function AS_Button_fbc7b2d962114cc8bacf9a2c02b47193(eventobject) {
         var self = this;
         return self.onPollingSuccess.call(this, null);
     },
-    /** onClick defined for btnSave **/
-    AS_Button_e8a9930e43334741b7ce3d5654fcc64f: function AS_Button_e8a9930e43334741b7ce3d5654fcc64f(eventobject) {
-        var self = this;
-        return self.changePasswordOnClick.call(this);
-    },
     /** onClick defined for btnRegisterFIDODevice **/
-    AS_Button_f1b1aa0d8d7d4a979aab76c0549eb57a: function AS_Button_f1b1aa0d8d7d4a979aab76c0549eb57a(eventobject) {
+    AS_Button_g2438507a9134a3086acf8b960cca72c: function AS_Button_g2438507a9134a3086acf8b960cca72c(eventobject) {
         var self = this;
         return self.registerFIDOOnClick.call(this);
     },
+    /** onClick defined for btnSave **/
+    AS_Button_ia957a4a99c240cda42456aa4cb65537: function AS_Button_ia957a4a99c240cda42456aa4cb65537(eventobject) {
+        var self = this;
+        return self.changePasswordOnClick.call(this);
+    },
     /** onClick defined for btnCancel **/
-    AS_Button_h237bd499f394ce9b0834d37dc57b20c: function AS_Button_h237bd499f394ce9b0834d37dc57b20c(eventobject) {
+    AS_Button_jd46006c910e42889a8bdca528942c99: function AS_Button_jd46006c910e42889a8bdca528942c99(eventobject) {
         var self = this;
         return self.cancelChangePasswordOnClick.call(this);
     }

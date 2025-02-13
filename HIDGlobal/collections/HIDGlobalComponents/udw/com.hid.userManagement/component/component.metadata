@@ -6,7 +6,7 @@
         "isLocked": false,
         "userwidgets": [
             "com.hid.userManagement",
-            "com.konymp.qrcodegeneratorNew",
+            "com.hid.QRCodeGenerator",
             "com.hid.rms.nonFinancialComponent"
         ],
         "templates": [
@@ -23,138 +23,150 @@
         ],
         "actions": {
             "desktop": {
-                "AS_Label_b0332201388845e0819430c5b8b83c22": {
+                "AS_Label_f82ce573a2404e1d955a373fea40977e": {
                     "channel": "desktop",
-                    "actionId": "AS_Label_b0332201388845e0819430c5b8b83c22",
-                    "actionName": "AS_Label_b0332201388845e0819430c5b8b83c22",
+                    "actionId": "AS_Label_f82ce573a2404e1d955a373fea40977e",
+                    "actionName": "AS_Label_f82ce573a2404e1d955a373fea40977e",
                     "key": "ide_onTouchEnd"
                 },
-                "AS_Button_je76f50671f54717b4718ab235d9b9d0": {
+                "AS_Button_dd8a65749cd2417f8fc3faaa5d016692": {
                     "channel": "desktop",
-                    "actionId": "AS_Button_je76f50671f54717b4718ab235d9b9d0",
-                    "actionName": "AS_Button_je76f50671f54717b4718ab235d9b9d0",
+                    "actionId": "AS_Button_dd8a65749cd2417f8fc3faaa5d016692",
+                    "actionName": "AS_Button_dd8a65749cd2417f8fc3faaa5d016692",
                     "key": "ide_onClick"
                 },
-                "AS_Image_e15fabd8e40c4c2f961f8d5710706dc0": {
+                "AS_Image_a40428f6ea9a4740801fc9ec8ea300f8": {
                     "channel": "desktop",
-                    "actionId": "AS_Image_e15fabd8e40c4c2f961f8d5710706dc0",
-                    "actionName": "AS_Image_e15fabd8e40c4c2f961f8d5710706dc0",
+                    "actionId": "AS_Image_a40428f6ea9a4740801fc9ec8ea300f8",
+                    "actionName": "AS_Image_a40428f6ea9a4740801fc9ec8ea300f8",
                     "key": "ide_onTouchEnd"
                 },
-                "AS_Image_j6744e4134e74beab5fcc9a1dce944b2": {
+                "AS_Image_cf1177a7048f4ba6a64d43eb1e7c1692": {
                     "channel": "desktop",
-                    "actionId": "AS_Image_j6744e4134e74beab5fcc9a1dce944b2",
-                    "actionName": "AS_Image_j6744e4134e74beab5fcc9a1dce944b2",
+                    "actionId": "AS_Image_cf1177a7048f4ba6a64d43eb1e7c1692",
+                    "actionName": "AS_Image_cf1177a7048f4ba6a64d43eb1e7c1692",
                     "key": "ide_onTouchEnd"
                 },
-                "AS_Image_aead8761a31d4081938186bb2f0001db": {
+                "AS_Image_c20d7c7c51db4b5ab456ee9ff5fd4da9": {
                     "channel": "desktop",
-                    "actionId": "AS_Image_aead8761a31d4081938186bb2f0001db",
-                    "actionName": "AS_Image_aead8761a31d4081938186bb2f0001db",
+                    "actionId": "AS_Image_c20d7c7c51db4b5ab456ee9ff5fd4da9",
+                    "actionName": "AS_Image_c20d7c7c51db4b5ab456ee9ff5fd4da9",
                     "key": "ide_onTouchEnd"
                 }
             },
             "common": {
-                "AS_Button_h237bd499f394ce9b0834d37dc57b20c": {
+                "AS_Button_d41358767e2c4a2c93d2fccc4057d21d": {
                     "channel": "common",
-                    "actionId": "AS_Button_h237bd499f394ce9b0834d37dc57b20c",
-                    "actionName": "AS_Button_h237bd499f394ce9b0834d37dc57b20c",
+                    "actionId": "AS_Button_d41358767e2c4a2c93d2fccc4057d21d",
+                    "actionName": "AS_Button_d41358767e2c4a2c93d2fccc4057d21d",
                     "key": "ide_onClick"
                 },
-                "AS_Button_d2b6989d87284c8aa55585b07854c377": {
+                "AS_Button_de119dff49924148956dd11ecae06616": {
                     "channel": "common",
-                    "actionId": "AS_Button_d2b6989d87284c8aa55585b07854c377",
-                    "actionName": "AS_Button_d2b6989d87284c8aa55585b07854c377",
+                    "actionId": "AS_Button_de119dff49924148956dd11ecae06616",
+                    "actionName": "AS_Button_de119dff49924148956dd11ecae06616",
                     "key": "ide_onClick"
                 },
-                "AS_Button_bcb361b193ea4bfa9925a0e865b11335": {
+                "AS_Button_d7ae7f576edb4f84ae09f05dc37e556e": {
                     "channel": "common",
-                    "actionId": "AS_Button_bcb361b193ea4bfa9925a0e865b11335",
-                    "actionName": "AS_Button_bcb361b193ea4bfa9925a0e865b11335",
+                    "actionId": "AS_Button_d7ae7f576edb4f84ae09f05dc37e556e",
+                    "actionName": "AS_Button_d7ae7f576edb4f84ae09f05dc37e556e",
                     "key": "ide_onClick"
                 },
-                "AS_Button_f1b1aa0d8d7d4a979aab76c0549eb57a": {
+                "AS_Button_e3afbf44083040a18d19ff99506aa946": {
                     "channel": "common",
-                    "actionId": "AS_Button_f1b1aa0d8d7d4a979aab76c0549eb57a",
-                    "actionName": "AS_Button_f1b1aa0d8d7d4a979aab76c0549eb57a",
+                    "actionId": "AS_Button_e3afbf44083040a18d19ff99506aa946",
+                    "actionName": "AS_Button_e3afbf44083040a18d19ff99506aa946",
                     "key": "ide_onClick"
                 },
-                "AS_Button_e8a9930e43334741b7ce3d5654fcc64f": {
+                "AS_Button_e05e2e2dbcaf41b6b3bb9e5760ca29b3": {
                     "channel": "common",
-                    "actionId": "AS_Button_e8a9930e43334741b7ce3d5654fcc64f",
-                    "actionName": "AS_Button_e8a9930e43334741b7ce3d5654fcc64f",
+                    "actionId": "AS_Button_e05e2e2dbcaf41b6b3bb9e5760ca29b3",
+                    "actionName": "AS_Button_e05e2e2dbcaf41b6b3bb9e5760ca29b3",
                     "key": "ide_onClick"
                 },
-                "AS_Button_cf5757dd7eaf49cfb3e1faefbf3cb7b6": {
+                "AS_FlexContainer_fcf37fe3ff5640a3a3c705434b369fe5": {
                     "channel": "common",
-                    "actionId": "AS_Button_cf5757dd7eaf49cfb3e1faefbf3cb7b6",
-                    "actionName": "AS_Button_cf5757dd7eaf49cfb3e1faefbf3cb7b6",
+                    "actionId": "AS_FlexContainer_fcf37fe3ff5640a3a3c705434b369fe5",
+                    "actionName": "AS_FlexContainer_fcf37fe3ff5640a3a3c705434b369fe5",
+                    "key": "ide_postShow"
+                },
+                "AS_Browser_e947b29e1f874c4aa4c9ee54398ad890": {
+                    "channel": "common",
+                    "actionId": "AS_Browser_e947b29e1f874c4aa4c9ee54398ad890",
+                    "actionName": "AS_Browser_e947b29e1f874c4aa4c9ee54398ad890",
+                    "key": "ide_onPageFinished"
+                },
+                "AS_Button_e41f90c5c23f48a592eb8c23423527a8": {
+                    "channel": "common",
+                    "actionId": "AS_Button_e41f90c5c23f48a592eb8c23423527a8",
+                    "actionName": "AS_Button_e41f90c5c23f48a592eb8c23423527a8",
                     "key": "ide_onClick"
                 },
-                "AS_Button_h7cecf9dccba4b9ea2cc27db52e5b197": {
+                "AS_Button_i35614aad09341a298b10350197c672c": {
                     "channel": "common",
-                    "actionId": "AS_Button_h7cecf9dccba4b9ea2cc27db52e5b197",
-                    "actionName": "AS_Button_h7cecf9dccba4b9ea2cc27db52e5b197",
+                    "actionId": "AS_Button_i35614aad09341a298b10350197c672c",
+                    "actionName": "AS_Button_i35614aad09341a298b10350197c672c",
                     "key": "ide_onClick"
                 },
-                "AS_Button_ffc0676639b4484fa6fc2eed5d42a214": {
+                "AS_Button_ae7f1c242eec49c18bcc78ecccc3d9c9": {
                     "channel": "common",
-                    "actionId": "AS_Button_ffc0676639b4484fa6fc2eed5d42a214",
-                    "actionName": "AS_Button_ffc0676639b4484fa6fc2eed5d42a214",
+                    "actionId": "AS_Button_ae7f1c242eec49c18bcc78ecccc3d9c9",
+                    "actionName": "AS_Button_ae7f1c242eec49c18bcc78ecccc3d9c9",
                     "key": "ide_onClick"
                 },
-                "AS_Button_a9f13e8cdfaa46eeb217d4a3adfd4453": {
+                "AS_Button_e033ea2eeb924210935c59b0fb923645": {
                     "channel": "common",
-                    "actionId": "AS_Button_a9f13e8cdfaa46eeb217d4a3adfd4453",
-                    "actionName": "AS_Button_a9f13e8cdfaa46eeb217d4a3adfd4453",
+                    "actionId": "AS_Button_e033ea2eeb924210935c59b0fb923645",
+                    "actionName": "AS_Button_e033ea2eeb924210935c59b0fb923645",
                     "key": "ide_onClick"
                 },
-                "AS_Button_ib62dfaaa6234152b7a5ceb41aa803b4": {
+                "AS_Button_hc9dfbc80ea24bbb874d8e11c64b8fb2": {
                     "channel": "common",
-                    "actionId": "AS_Button_ib62dfaaa6234152b7a5ceb41aa803b4",
-                    "actionName": "AS_Button_ib62dfaaa6234152b7a5ceb41aa803b4",
+                    "actionId": "AS_Button_hc9dfbc80ea24bbb874d8e11c64b8fb2",
+                    "actionName": "AS_Button_hc9dfbc80ea24bbb874d8e11c64b8fb2",
                     "key": "ide_onClick"
                 },
-                "AS_Button_ge9cab963b37461daf300dc9056a22a8": {
+                "AS_Button_h411b40c13ea4a7da1226f25e149460a": {
                     "channel": "common",
-                    "actionId": "AS_Button_ge9cab963b37461daf300dc9056a22a8",
-                    "actionName": "AS_Button_ge9cab963b37461daf300dc9056a22a8",
+                    "actionId": "AS_Button_h411b40c13ea4a7da1226f25e149460a",
+                    "actionName": "AS_Button_h411b40c13ea4a7da1226f25e149460a",
                     "key": "ide_onClick"
                 },
-                "AS_Button_d5c3b4a100c3407691cf8243d5f23430": {
+                "AS_Button_h2d918c1e3924b29a996c7082b5e1e64": {
                     "channel": "common",
-                    "actionId": "AS_Button_d5c3b4a100c3407691cf8243d5f23430",
-                    "actionName": "AS_Button_d5c3b4a100c3407691cf8243d5f23430",
+                    "actionId": "AS_Button_h2d918c1e3924b29a996c7082b5e1e64",
+                    "actionName": "AS_Button_h2d918c1e3924b29a996c7082b5e1e64",
                     "key": "ide_onClick"
                 },
-                "AS_Button_e5287adcf3fd422aa504dfc12b5196fb": {
+                "AS_Button_j149a499f7784d9d964e8ef464d5c8f5": {
                     "channel": "common",
-                    "actionId": "AS_Button_e5287adcf3fd422aa504dfc12b5196fb",
-                    "actionName": "AS_Button_e5287adcf3fd422aa504dfc12b5196fb",
+                    "actionId": "AS_Button_j149a499f7784d9d964e8ef464d5c8f5",
+                    "actionName": "AS_Button_j149a499f7784d9d964e8ef464d5c8f5",
                     "key": "ide_onClick"
                 },
-                "AS_Button_a0b17ac47fae41f18b627ce63ed42b95": {
+                "AS_Button_j2ed567551174a159f32113c66636660": {
                     "channel": "common",
-                    "actionId": "AS_Button_a0b17ac47fae41f18b627ce63ed42b95",
-                    "actionName": "AS_Button_a0b17ac47fae41f18b627ce63ed42b95",
+                    "actionId": "AS_Button_j2ed567551174a159f32113c66636660",
+                    "actionName": "AS_Button_j2ed567551174a159f32113c66636660",
                     "key": "ide_onClick"
                 },
-                "AS_Button_g3e1150c3bed4471b4d042aa07433b40": {
+                "AS_Button_jd37b9da5dca4596a3d727e0a816e156": {
                     "channel": "common",
-                    "actionId": "AS_Button_g3e1150c3bed4471b4d042aa07433b40",
-                    "actionName": "AS_Button_g3e1150c3bed4471b4d042aa07433b40",
+                    "actionId": "AS_Button_jd37b9da5dca4596a3d727e0a816e156",
+                    "actionName": "AS_Button_jd37b9da5dca4596a3d727e0a816e156",
                     "key": "ide_onClick"
                 },
-                "AS_Label_dc688f81f82c4ebf8286a8bc055e6e06": {
+                "AS_Label_dbe406b926434af2a9ef483aac121f9d": {
                     "channel": "common",
-                    "actionId": "AS_Label_dc688f81f82c4ebf8286a8bc055e6e06",
-                    "actionName": "AS_Label_dc688f81f82c4ebf8286a8bc055e6e06",
+                    "actionId": "AS_Label_dbe406b926434af2a9ef483aac121f9d",
+                    "actionName": "AS_Label_dbe406b926434af2a9ef483aac121f9d",
                     "key": "ide_onTouchEnd"
                 },
-                "AS_Segment_b2cb9ac6cbb647189abfdd0477957f35": {
+                "AS_Segment_h66151c8742044a5a839ab1edcd503d4": {
                     "channel": "common",
-                    "actionId": "AS_Segment_b2cb9ac6cbb647189abfdd0477957f35",
-                    "actionName": "AS_Segment_b2cb9ac6cbb647189abfdd0477957f35",
+                    "actionId": "AS_Segment_h66151c8742044a5a839ab1edcd503d4",
+                    "actionName": "AS_Segment_h66151c8742044a5a839ab1edcd503d4",
                     "key": "ide_onRowClick"
                 }
             }
@@ -256,7 +268,7 @@
             "iphoneSystem",
             "Gotham-Book"
         ],
-        "nativeApis": 3,
+        "nativeApis": 0,
         "mfbundle": "services/services.zip",
         "localFiles": true,
         "cordova": [],
@@ -264,7 +276,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2024-07-08T08:53:15.743Z",
-    "createdVizVersion": "9.5.28",
-    "project_version": "sprint42"
+    "createdOn": "2025-02-13T10:10:14.150Z",
+    "createdVizVersion": "202307.0.9",
+    "project_version": "sprint45"
 }

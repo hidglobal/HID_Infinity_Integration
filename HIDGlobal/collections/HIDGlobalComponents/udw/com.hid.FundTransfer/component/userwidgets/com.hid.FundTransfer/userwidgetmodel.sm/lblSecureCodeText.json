@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s24b0599a0bb497dab27c7abbf64a56f",
+    "_skin_": "sd6ef8948946469eb70eaf8d0357c1f3",
     "_text_": "Secure Code Text",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u9e4425608114aa19ae560523ede1ae6",
+    "kuid": "u14bb8e5baae4f27b7ac26aa3d6e15a5",
     "name": "kony.ui.Label",
     "parent": "flxSecureCodeText",
     "pf": "userwidgetmodel",

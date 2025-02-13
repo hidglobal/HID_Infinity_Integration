@@ -1,6 +1,9 @@
 define([`com/hid/transactionSigning/transactionSigningBusinessController`], function(transactionSigningBusinessController) {
   var instance = null;
   var pollCounter = 2;
+  var host = "";
+  var domain = "";
+  var serviceURL = "";
   const getLogTag = function(string){
     return "transactionSigningPresentationController." + string;
   };
@@ -10,7 +13,7 @@ define([`com/hid/transactionSigning/transactionSigningBusinessController`], func
   
   
   
-    transactionSigningPresentationController.prototype.aprroveTransact_Initiate = function(updateTSUI,username,tds){
+    transactionSigningPresentationController.prototype.aprroveTransact_Initiate = function(updateTSUI,username,tds,correlationId){
     let Success_CB = success => {
       var authReqId = success.AprroveTransactInitiate[0].auth_req_id;
       let UIObject = {
@@ -31,12 +34,13 @@ define([`com/hid/transactionSigning/transactionSigningBusinessController`], func
 
     let params = {
       	"username": username,
-		"tds": ` ${tds}`
+		"tds": ` ${tds}`,
+        "correlationId": correlationId
     };
     transactionSigningBusinessController.approveTransactInitiate(params, Success_CB,Failure_CB);
   };
   
-  transactionSigningPresentationController.prototype.aprroveTransactInitiate = function(updateTSUI,username,deviceId,toAccount,amount,desc){
+  transactionSigningPresentationController.prototype.aprroveTransactInitiate = function(updateTSUI,username,deviceId,toAccount,amount,desc,correlationId){
     let Success_CB = success => {
       var authReqId = success.AprroveTransactInitiate[0].auth_req_id;
       let UIObject = {
@@ -58,7 +62,8 @@ define([`com/hid/transactionSigning/transactionSigningBusinessController`], func
     let params = {
       "username": username,
       "deviceId": deviceId,
-      "tds": ` You are about to perform the below transaction to ${toAccount} of amount ${amount} with description ${desc}`
+      "tds": ` You are about to perform the below transaction to ${toAccount} of amount ${amount} with description ${desc}`,
+      "correlationId": correlationId
      
     };
     transactionSigningBusinessController.approveTransactInitiate(params, Success_CB,Failure_CB);
@@ -69,7 +74,7 @@ define([`com/hid/transactionSigning/transactionSigningBusinessController`], func
     transactionSigningBusinessController.getApproveDevices(params, S_CB, F_CB);
   };
   
-  transactionSigningPresentationController.prototype.OfflineTS = function(updateTSUI,username,toAccount,amount,desc,OTP){
+  transactionSigningPresentationController.prototype.OfflineTS = function(updateTSUI,username,toAccount,amount,desc,OTP,correlationId){
     let Success_CB = success => {
       //alert(JSON.stringify(success));
       let UIObject = {
@@ -89,11 +94,12 @@ define([`com/hid/transactionSigning/transactionSigningBusinessController`], func
     let params =  {
       "username" : username,
       "password" : OTP,
-      "content"  : `sign1:${toAccount}:false sign2:${amount}:false sign3:${desc}:false`
+      "content"  : `sign1:${toAccount}:false sign2:${amount}:false sign3:${desc}:false`,
+      "correlationId" : correlationId
     };
     transactionSigningBusinessController.OfflineTS(params, Success_CB,Failure_CB);
   };  
-  transactionSigningPresentationController.prototype.generateChallenge = function(updateTSUI,username,deviceId=""){
+  transactionSigningPresentationController.prototype.generateChallenge = function(updateTSUI,username,correlationId,deviceId=""){
     let Success_CB = success => {
       //alert(JSON.stringify(success));
       let UIObject = {
@@ -112,11 +118,12 @@ define([`com/hid/transactionSigning/transactionSigningBusinessController`], func
     };
     let params =  {
       "username" : username,
-      "deviceId" : deviceId
+      "deviceId" : deviceId,
+      "correlationId": correlationId
     };
     transactionSigningBusinessController.generateChallenge(params, Success_CB,Failure_CB);
   };
-transactionSigningPresentationController.prototype.validateChallenge = function(updateTSUI,username,OTP){
+transactionSigningPresentationController.prototype.validateChallenge = function(updateTSUI,username,OTP,correlationId){
     let Success_CB = success => {
     //  alert(JSON.stringify(success));
       let UIObject = {
@@ -135,7 +142,8 @@ transactionSigningPresentationController.prototype.validateChallenge = function(
     };
     let params =  {
       "username" : username,
-      "password" : OTP
+      "password" : OTP,
+      "correlationId" : correlationId
     };
     transactionSigningBusinessController.validateChallenge(params, Success_CB,Failure_CB);
   };  
@@ -191,7 +199,7 @@ transactionSigningPresentationController.prototype.validateChallenge = function(
     transactionSigningBusinessController.approveStatusPolling(params, Success_CB,Failure_CB);  
   };
 
-   transactionSigningPresentationController.prototype.sendSMSOTP = function(updateTSUI,username,toAccount,amount,message){
+   transactionSigningPresentationController.prototype.sendSMSOTP = function(updateTSUI,username,toAccount,amount,message,correlationId){
     let Success_CB = success => {
 
       var txid = success.attributes.filter(v => v.name === "CHALLENGE.ID");
@@ -213,13 +221,13 @@ transactionSigningPresentationController.prototype.validateChallenge = function(
     };
     let params =  {
       "ExternalUserId" : username,
-      "correlationid" : '1123',
+      "correlationId": correlationId,
       "Message" : ` You are about to perform the below transaction to ${toAccount} of amount ${amount} with message ${message}` 
     };
     transactionSigningBusinessController.sendSMSOTP(params, Success_CB,Failure_CB);
   };
   
-  transactionSigningPresentationController.prototype.validateSMSOTP = function(updateTSUI,username,OTP){
+  transactionSigningPresentationController.prototype.validateSMSOTP = function(updateTSUI,username,OTP,correlationId){
     let Success_CB = success => {
       let UIObject = {
         "state" : "validateSMSOTPSuccess",
@@ -239,10 +247,31 @@ transactionSigningPresentationController.prototype.validateChallenge = function(
       "username" : username,
       "password" : OTP,
       "txId" : txId,
-      "correlationId" : '1123'
+      "correlationId": correlationId
     };
     transactionSigningBusinessController.validateSMSOTP(params, Success_CB,Failure_CB);
-  };  
+  };
+  transactionSigningPresentationController.prototype.getServiceURL = function(){ 
+    transactionSigningBusinessController.getServiceURL(this.getServiceURLSuccess,this.getServiceURLFailure); 
+  };
+
+  transactionSigningPresentationController.prototype.getServiceURLSuccess = function(response){
+    host = response.host;
+    domain = response.tenant;
+    serviceURL = `${host}\\\\${domain}`;
+  };
+
+  transactionSigningPresentationController.prototype.getServiceURLFailure = function(error){
+    kony.print("HID: GetHostAndDomain error: " + JSON.stringify(error));
+  };
+
+  transactionSigningPresentationController.prototype.generateQRDataForHIDApprove = function(account,amount,remarks,user){     
+     let qrData = `ocra://S:${serviceURL}&${user};5:${account};6:${amount};7:${remarks};;`
+     return qrData;
+    },
+   transactionSigningPresentationController.prototype.getClientAppProperties = function(){     
+     transactionSigningBusinessController.getClientAppProperties();
+    },  
   
   transactionSigningPresentationController.getInstance = function() {
     instance = instance === null ? new transactionSigningPresentationController() : instance;

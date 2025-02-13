@@ -1,6 +1,10 @@
 {
-    "android": {},
-    "androidwearos": {},
+    "android": {
+        "font_name": "default"
+    },
+    "androidwearos": {
+        "font_name": "default"
+    },
     "background_color": "6fa0f4ff",
     "bg_type": "one",
     "border_color": "ffffffff",
@@ -8,27 +12,26 @@
     "border_type": 0,
     "border_width": 0,
     "desktopweb": {
-        "font_name": "Gotham-Book"
+        "font_name": "Helvetica"
     },
     "font_color": "ffffffff",
     "font_name": "iphoneSystem",
     "font_size": 150,
     "font_style": "normal",
-    "font_weight": "normal",
-    "ipad": {},
-    "iphone": {},
+    "font_weight": "400",
+    "ipad": {
+        "font_name": "System"
+    },
+    "iphone": {
+        "font_name": "System"
+    },
     "isDefaultSkin": true,
-    "kiosk": {},
-    "kuid": "s4357d43bef545f693c49eada3977395",
-    "spaan": {},
-    "spaandroidtablet": {},
-    "spaip": {},
-    "spaipad": {},
-    "spawindowstablet": {},
-    "spawinphone8": {},
-    "tabrcandroid": {},
+    "kuid": "sc4dda63d3db475da387a5525f77680f",
+    "tabrcandroid": {
+        "font_name": "default"
+    },
     "wType": "Button",
-    "watchos": {},
-    "windows8": {},
-    "winphone8": {}
+    "watchos": {
+        "font_name": "System"
+    }
 }

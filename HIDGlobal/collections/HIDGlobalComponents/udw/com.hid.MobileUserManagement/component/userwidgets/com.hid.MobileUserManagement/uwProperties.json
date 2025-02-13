@@ -1,0 +1,185 @@
+{
+    "classname": "MobileUserManagement",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "j0bbd798a63348199858e4cd7723c24c",
+                    "paramList": [],
+                    "propertyKey": "loadUserManagement",
+                    "pw": {
+                        "displayName": "loadUserManagement",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "bb6092dd64704c7a9b2c0214af744dba",
+                    "paramList": [],
+                    "propertyKey": "unassignDevice",
+                    "pw": {
+                        "displayName": "unassignDevice",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "e15379db44ab49fdabb7150e850a3355",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "showLoading",
+                    "pw": {
+                        "displayName": "showLoading",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "h863c393a6de4d599685fee3d052fd9a",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "dismissLoading",
+                    "pw": {
+                        "displayName": "dismissLoading",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "cd592ea5dc344c329a85ffc049c30858",
+                    "paramList": [],
+                    "propertyIndex": 3,
+                    "propertyKey": "setDevice",
+                    "pw": {
+                        "displayName": "setDevice",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "g18e023a18a64fc9b637e8398494cb3f",
+                    "paramList": [],
+                    "propertyIndex": 4,
+                    "propertyKey": "deleteSuccess",
+                    "pw": {
+                        "displayName": "deleteSuccess",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "hd7729b20cd54e06a2cbc2fb5d716060",
+                    "paramList": [],
+                    "propertyIndex": 5,
+                    "propertyKey": "deleteFailure",
+                    "pw": {
+                        "displayName": "deleteFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "gbf9ee898fad49889625a3ed1817c954",
+                    "paramList": [],
+                    "propertyIndex": 6,
+                    "propertyKey": "suspendFailure",
+                    "pw": {
+                        "displayName": "suspendFailure",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "d8636b5676b64c7588331b72c9e1d2af",
+                    "paramList": [],
+                    "propertyIndex": 7,
+                    "propertyKey": "registeredDeviceBackButtononClick",
+                    "pw": {
+                        "displayName": "registeredDeviceBackButtononClick",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "",
+                    "group": "General",
+                    "kuid": "h7adf2d6fa52454ea762541cc94684a2",
+                    "originalPropertyKey": "Username",
+                    "orignalPropertyType": "custom",
+                    "propertyIndex": 2,
+                    "propertyKey": "Username",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "Username",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": true,
+                    "group": "General",
+                    "kuid": "a1d846e1dea44ddfa77727428dd090a8",
+                    "originalPropertyKey": "isRMSEnabled",
+                    "orignalPropertyType": "custom",
+                    "propertyIndex": 3,
+                    "propertyKey": "isRMSEnabled",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "isRMSEnabled",
+                        "uiRepresentation": "Label-Radiobuttongroup"
+                    },
+                    "srcWgtKUID": "ub32fc8e82ba4c6c8f766de76b501a0f",
+                    "type": "boolean",
+                    "value": "true/false"
+                }
+            ],
+            "passthrough": []
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.hid",
+    "version": "1.0.0"
+}

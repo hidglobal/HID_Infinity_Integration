@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s197b71f4408427c8a3394ddbec939c0",
+    "_skin_": "sef9fc760ec84d31a8db4e92a096537c",
     "_text_": "User Administration",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u82073f437344c41842e37293e5df442",
+    "kuid": "udf41a902db14081b7d9685aaea77308",
     "name": "kony.ui.Label",
     "parent": "flxLogin",
     "pf": "userwidgetmodel",

@@ -25,7 +25,7 @@
     ],
     "_percent_": true,
     "_render_": true,
-    "_skin_": "s88a8dea717b49c3a827676d468a677d",
+    "_skin_": "s3bd2cdc74cf4996ab16bd383ceb3f84",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -42,7 +42,7 @@
     "iscustomlayout": false,
     "issegmentchild": false,
     "isvisible": false,
-    "kuid": "ua53326486864164a0fcffddb1f01dfb",
+    "kuid": "u017524ec72d439e8552e0c27efec02b",
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
     "parent": "FundTransfer",
@@ -50,6 +50,6 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "sourceUserWidget": "u5a5bec8bce14849b39ae377fbca6788",
+    "sourceUserWidget": "u340c47594784c979e1c951e2c45afb4",
     "wType": "UserWidgetInstance"
 }

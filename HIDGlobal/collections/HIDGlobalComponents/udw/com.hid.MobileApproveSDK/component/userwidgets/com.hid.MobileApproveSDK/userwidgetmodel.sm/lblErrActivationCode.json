@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb9131ae9fc94cd8b57a04fa81d0c4fd",
+    "_skin_": "s89b894dd145433b9ccbea0adc716684",
     "_text_": "",
     "_top_": {
         "type": "number",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "u019a9f9668d493db7eb2e8e4edd054c",
+    "kuid": "u6f39f9b8b9e441aa9a64e60b6816d7c",
     "name": "kony.ui.Label",
     "parent": "flxErrActivationCode",
     "pf": "userwidgetmodel",

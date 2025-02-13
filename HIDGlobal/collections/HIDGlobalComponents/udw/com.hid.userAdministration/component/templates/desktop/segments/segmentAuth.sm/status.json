@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s3ab671f458c46c5bffcfdda9ec9cd62",
+    "_skin_": "s86b42171b264de5882ab8bba890d898",
     "_text_": "Status",
     "_top_": {
         "type": "string",
@@ -56,7 +56,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i793543052f949bc846dc0bcb226f461",
+    "kuid": "d71d7c6606e544899303c244782563f9",
     "name": "kony.ui.Label",
     "parent": "flexSegmentAuth",
     "pf": "segmentAuth",

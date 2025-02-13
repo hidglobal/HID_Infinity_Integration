@@ -2,36 +2,35 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialBusinessController'], fun
 
   var instance = null;
 
-  NonFinancialPresentationController.prototype.validatePassword = function(username, password, S_CB, F_CB,rmsLoad){
-    let transactionId = Math.floor(Math.random() * 10000);    
-    let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0", 
-                    "currentRiskScore" : "2", "transactionId" : transactionId};
+  NonFinancialPresentationController.prototype.validatePassword = function(username, password, S_CB, F_CB,correlationId,rmsLoad){      
+    let loginJson = {"username" : username, "password" : password , "correlationId": correlationId};
     NonFinancialBusinessController.validatePassword(loginJson, S_CB, F_CB,rmsLoad);
   };
   
-  NonFinancialPresentationController.prototype.validate2ndFactorStepDown = function(authType , mfa_key, S_CB , F_CB){
+  NonFinancialPresentationController.prototype.validate2ndFactorStepDown = function(authType , mfa_key, S_CB , F_CB,corrleationId){
 	NonFinancialBusinessController.validate2ndFactorStepDown(authType, mfa_key, S_CB , F_CB);
   };
   
-  NonFinancialPresentationController.prototype.sendOTP = function(factor, username, S_CB, F_CB){
+  NonFinancialPresentationController.prototype.sendOTP = function(factor, username, S_CB, F_CB,correlationId){
     let authType = factor === "OTP_SMS" ? "AT_OOBSMS":"AT_OOBEML";
     let params = {"username" : username,
-                 "AuthenticationType" : authType};
+                 "AuthenticationType" : authType,
+                 "correlationId": correlationId };
     NonFinancialBusinessController.sendOTP(params, S_CB, F_CB);    
   };
   
-  NonFinancialPresentationController.prototype.validateOTP = function(username, factor, otp, mfa_key, S_CB, F_CB){
+  NonFinancialPresentationController.prototype.validateOTP = function(username, factor, otp, mfa_key, S_CB, F_CB,correlationId){
     if(factor === "APPROVE"){
       factor = "SECURE_CODE";
     }
-    NonFinancialBusinessController.authenticateSecondFactor(username,factor,otp, mfa_key, S_CB, F_CB);//this.callback.onSuccess.bind(this), 
+    NonFinancialBusinessController.authenticateSecondFactor(username,factor,otp, mfa_key, S_CB, F_CB,correlationId);//this.callback.onSuccess.bind(this), 
                                                               //this.callback.onFailure.bind(this));    
   };
   
-  NonFinancialPresentationController.prototype.initiateApprove = function(username, deviceId, S_CB, F_CB){    
+  NonFinancialPresentationController.prototype.initiateApprove = function(username, deviceId, S_CB, F_CB,correlationId){    
     let pushMsg = "Please validate the action on the Infinity App.";
         //"Please validate the action to Infinity Demo App";
-    let params = {"username" : username, "deviceId" : deviceId, "pushMessage" : pushMsg};
+    let params = {"username" : username, "deviceId" : deviceId, "pushMessage" : pushMsg,"correlationId": correlationId};
     NonFinancialBusinessController.initiateApproveNotification(params, S_CB, F_CB);
   };
   
@@ -111,6 +110,10 @@ define(['com/hid/rms/nonFinancialComponent/NonFinancialBusinessController'], fun
   */
   NonFinancialPresentationController.prototype.validateOTPforChangePwd = function(params,S_CB,F_CB){
     NonFinancialBusinessController.validateOTPforChangePwd(params, S_CB, F_CB);
+  };
+
+  NonFinancialPresentationController.prototype.getClientAppProperties = function(){
+    NonFinancialBusinessController.getClientAppProperties();
   };
 
   function NonFinancialPresentationController(){

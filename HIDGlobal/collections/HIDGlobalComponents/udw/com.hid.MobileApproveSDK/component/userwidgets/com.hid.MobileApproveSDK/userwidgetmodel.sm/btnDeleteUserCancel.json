@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s42d0b82a5024d359c6846b27c379545",
+    "_skin_": "s2476f009fc24b51a76c79a90693639c",
     "_text_": "CANCEL",
     "_top_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s31e6138eed94ed9b3cc6e3270da03c2",
+    "focusskin": "sbd372c58078467e9f9207f5a40bf4ce",
     "id": "btnDeleteUserCancel",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ud7e219ef43e431ba3db51839d500c11",
+    "kuid": "u4bff0005f1146c983b683c8c7347c5d",
     "name": "kony.ui.Button",
     "parent": "CopyflxEnableBioCancelBtn0c057cf66c5964d",
     "pf": "userwidgetmodel",

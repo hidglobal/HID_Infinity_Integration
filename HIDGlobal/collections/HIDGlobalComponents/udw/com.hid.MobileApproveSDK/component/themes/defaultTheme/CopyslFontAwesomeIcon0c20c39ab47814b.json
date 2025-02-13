@@ -26,29 +26,8 @@
         "font_name": "FontAwesome"
     },
     "isDefaultSkin": false,
-    "kiosk": {
-        "font_name": "FontAwesome"
-    },
-    "kuid": "se449157bf8a4115b4765952815da4b8",
-    "spaan": {
-        "font_name": "FontAwesome"
-    },
-    "spaandroidtablet": {
-        "font_name": "FontAwesome"
-    },
+    "kuid": "s7a26874ae944d10a751a578e7b0e633",
     "spabb": {
-        "font_name": "FontAwesome"
-    },
-    "spaip": {
-        "font_name": "FontAwesome"
-    },
-    "spaipad": {
-        "font_name": "FontAwesome"
-    },
-    "spawindowstablet": {
-        "font_name": "FontAwesome"
-    },
-    "spawinphone8": {
         "font_name": "FontAwesome"
     },
     "tabrcandroid": {
@@ -56,12 +35,6 @@
     },
     "wType": "Label",
     "watchos": {
-        "font_name": "FontAwesome"
-    },
-    "windows8": {
-        "font_name": "FontAwesome"
-    },
-    "winphone8": {
         "font_name": "FontAwesome"
     }
 }

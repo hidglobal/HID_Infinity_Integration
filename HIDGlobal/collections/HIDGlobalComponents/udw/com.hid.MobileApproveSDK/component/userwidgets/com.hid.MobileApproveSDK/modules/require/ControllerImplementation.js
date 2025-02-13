@@ -89,6 +89,9 @@ define([], function() {
       ControllerImplementation.prototype.setNotificationStatus = function(txtId, status, pin){
           return this.getNativeController().setNotificationStatus(txtId, status, pin);
         };
+		ControllerImplementation.prototype.getDeviceProperty = function(){
+          return this.getNativeController().getDeviceProperty();
+        };
       
     };
     return ControllerImplementation;

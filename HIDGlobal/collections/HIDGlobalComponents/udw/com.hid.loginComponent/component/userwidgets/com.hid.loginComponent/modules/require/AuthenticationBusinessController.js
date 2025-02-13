@@ -9,6 +9,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
   globals.scan_auth_req_id = "";
   globals.scanApprovePoll = false;
   globals.ScanApproveFlag = false;
+  var deviceType = "DT_TDSV4B";
 
   var userName = "";
   var instance = null;
@@ -73,7 +74,8 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
                       "Scope": "LOGIN" ,
                       "Name": "Temenos Internet Banking",
                       "userid": "${loginJSON.userid}",
-                      "password": "${loginJSON.password}"
+                      "password": "${loginJSON.password}",
+                      "correlationId": "${loginJSON.correlationId}"
                   }
             }`;
     },
@@ -94,6 +96,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
                       "userid": "${loginJSON.userid}",
                       "request_uri": "${loginJSON.request_uri}",
                       "csrf": "${loginJSON.csrf}",
+                      "correlationId": "${loginJSON.correlationId}",
                       "password": {
                           "id": "${loginJSON.password.id}",
                           "response": {
@@ -153,7 +156,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     konymp.logger.trace("----------Exiting authenticateFirstFactor Function---------", konymp.logger.FUNCTION_EXIT);
   };
 
-  AuthenticationBusinessController.prototype.updateRMSServiceEvent = function(authType, mfa_key, S_CB, F_CB,password){
+  AuthenticationBusinessController.prototype.updateRMSServiceEvent = function(authType, mfa_key, S_CB, F_CB,correlationId,password){
     var client = KNYMobileFabric;
     var serviceName = "customHIDLogin";
     var identitySvc = client.getIdentityService(serviceName);
@@ -163,17 +166,18 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
       },
       "authType" : authType,
       "password" : password,
-      "mfa_key" : mfa_key
+      "mfa_key" : mfa_key,
+      "correlationId": correlationId
     };
     identitySvc.validateMfa(mfaParams, success => S_CB(success), error => F_CB(error));
   };
 
-  AuthenticationBusinessController.prototype.authenticateSecondFactor = function(factor,password,mfa_key, S_CB, F_CB){
+  AuthenticationBusinessController.prototype.authenticateSecondFactor = function(factor,password,mfa_key, S_CB, F_CB,correlationId){
     konymp.logger.trace("----------Entering authenticateSecondFactor Function---------", konymp.logger.FUNCTION_ENTRY);
     if(factor === "APPROVE" && !globals.approvePoll){
       globals.auth_req_id = password;
       pollCounter = 2;
-      this.pollForConsensus(password,"second",mfa_key, S_CB, F_CB);
+      this.pollForConsensus(password,"second",mfa_key, S_CB, F_CB,correlationId);
       return;
     }    
     globals.approvePoll = false;
@@ -187,7 +191,8 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
       "mfa_key" :mfa_key,
       "password":password,
       "authType":factor,
-      "userName": userName
+      "userName": userName,
+      "correlationId": correlationId
     };
     identitySvc.validateMfa(mfaParams, 
                             success => S_CB(success),
@@ -269,14 +274,14 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     konymp.logger.trace("----------Exiting pollForConsensus Function---------", konymp.logger.FUNCTION_EXIT);
   };
 
-  AuthenticationBusinessController.prototype.pollForConsensus = function(auth_req_id, factor,mfa_key, S_CB, F_CB){
+  AuthenticationBusinessController.prototype.pollForConsensus = function(auth_req_id, factor,mfa_key, S_CB, F_CB,correlationId){
     if (globals.auth_req_id !== auth_req_id) return;
     pollCounter--;
     const successCB = response => {
       if (globals.auth_req_id !== auth_req_id) return;
       pollCounter =2;
       if(response.ApproveStatus[0].auth_status === "accept"){
-        this.authenticateApprove(factor,auth_req_id,mfa_key, S_CB, F_CB);
+        this.authenticateApprove(factor,auth_req_id,mfa_key, S_CB, F_CB,correlationId);
       }else if(response.ApproveStatus[0].auth_status === "deny"){
         konymp.logger.debug("Approve Notification status for authID : "+auth_req_id+ "is :"+response.ApproveStatus[0].auth_status, konymp.logger.ERROR_CALLBACK);
         F_CB(response.ApproveStatus[0].auth_status);
@@ -288,7 +293,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
         F_CB({"message":"Approve poll Time Expired"});
         pollCounter = 2;
       } else{
-        this.pollForConsensus(auth_req_id, factor, mfa_key, S_CB, F_CB);
+        this.pollForConsensus(auth_req_id, factor, mfa_key, S_CB, F_CB,correlationId);
       }
     };
     var params = {
@@ -309,13 +314,13 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     objService.customVerb("poll", params, callback);
   };
   
-  AuthenticationBusinessController.prototype.scanToApproveFirstFactor = function(username,password,authType, S_CB, F_CB,rmsLoad=null){
+  AuthenticationBusinessController.prototype.scanToApproveFirstFactor = function(username,password,authType, S_CB, F_CB,correlationId,rmsLoad=null){
     kony.print("Business Controller authtype "+ authType);
     konymp.logger.trace("----------Entering scanToApproveFirstFactor Function---------", konymp.logger.FUNCTION_ENTRY);
     if(authType === "APPROVE" && !globals.scanApprovePoll){
       globals.scan_auth_req_id = password;
       ScanToApprovePollCounter = 2;
-      this.pollForScanToApprove(username,password,authType, S_CB, F_CB,rmsLoad);
+      this.pollForScanToApprove(username,password,authType, S_CB, F_CB,correlationId,rmsLoad);
       return;
     }    
     globals.scanApprovePoll = false;
@@ -325,7 +330,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     kony.print("username : "+ username);
     var loginJson = {
 			"userid" : username, "password" : password, "requiredRiskScore" : "0", 
-                     "currentRiskScore" : "2", "transactionId" : transactionId
+                     "currentRiskScore" : "2", "transactionId" : transactionId, "correlationId": correlationId 
     }
     var serviceName = "customHIDLogin";
     var identitySvc = client.getIdentityService(serviceName);
@@ -357,7 +362,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     konymp.logger.trace("----------Exiting authenticateFirstFactor Function---------", konymp.logger.FUNCTION_EXIT);
   }
   
-    AuthenticationBusinessController.prototype.pollForScanToApprove = function(username,auth_req_id, authType, S_CB, F_CB,rmsLoad=null){
+    AuthenticationBusinessController.prototype.pollForScanToApprove = function(username,auth_req_id, authType, S_CB, F_CB,correlationId,rmsLoad=null){
     if (globals.scan_auth_req_id !== auth_req_id) return;
     ScanToApprovePollCounter--;
     const successCB = response => {
@@ -366,7 +371,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
       if(response.ApproveStatus[0].auth_status === "accept"){
         globals.scanApprovePoll = true;
       	username = response.ApproveStatus[0].usercode;
-        this.scanToApproveFirstFactor(username,auth_req_id,authType, S_CB, F_CB,rmsLoad);
+        this.scanToApproveFirstFactor(username,auth_req_id,authType, S_CB, F_CB,correlationId,rmsLoad);
       }else if(response.ApproveStatus[0].auth_status === "deny"){
         konymp.logger.debug("Scan to Approve Notification status for authID : "+auth_req_id+ "is :"+response.ApproveStatus[0].auth_status, konymp.logger.ERROR_CALLBACK);
         F_CB(response.ApproveStatus[0].auth_status);
@@ -378,7 +383,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
         F_CB({"message":"Approve poll Time Expired"});
         ScanToApprovePollCounter = 2;
       } else{
-        this.pollForScanToApprove(username,auth_req_id, authType, S_CB, F_CB,rmsLoad);
+        this.pollForScanToApprove(username,auth_req_id, authType, S_CB, F_CB,correlationId,rmsLoad);
       }
     };
     var params = {
@@ -399,10 +404,10 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     objService.customVerb("poll", params, callback);
   };
 
-  AuthenticationBusinessController.prototype.authenticateApprove = function(factor,password,mfa_key, S_CB, F_CB){
+  AuthenticationBusinessController.prototype.authenticateApprove = function(factor,password,mfa_key, S_CB, F_CB,correlationId){
     globals.approvePoll = true;
     if(factor === "second"){
-      this.authenticateSecondFactor("APPROVE",password, mfa_key, S_CB, F_CB);  
+      this.authenticateSecondFactor("APPROVE",password, mfa_key, S_CB, F_CB,correlationId);  
     }/*else{
       this.authenticateWithoutMFA("APPROVE", globals.username, password);
     }*/
@@ -458,7 +463,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
   };
 
   AuthenticationBusinessController.prototype.fetchFriendlyName = function(devices){
-    let filteredResources = devices.filter(v => (v.type === "DT_TDSV4" || v.type === "DT_TDSV4B") && v.active);
+    let filteredResources = devices.filter(v => (v.type === "DT_TDSV4" || v.type === deviceType) && v.active);
     let friendlyNames = [];
     let tempJson = {};
     filteredResources.forEach(v => {
@@ -521,7 +526,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     getClientIp.customVerb("getClientIp", "" , callback);
   };
   
-  AuthenticationBusinessController.prototype.getScanToApproveQrData = function(S_CB,F_CB){
+  AuthenticationBusinessController.prototype.getScanToApproveQrData = function(S_CB,F_CB,params){
     
     let getScanToApproveQrData = ObjectServices.getDataModel("getScanToApproveQrData");
     const callback = (status,response) => {
@@ -531,7 +536,7 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
         F_CB(response);
       }
     };
-    getScanToApproveQrData.customVerb("getScanToApproveQrData", "" , callback);
+    getScanToApproveQrData.customVerb("getScanToApproveQrData", params , callback);
 
   }
     
@@ -564,6 +569,15 @@ define(['com/hid/loginComponent/KonyLogger'], function (KonyLogger) {
     
     objSvc.customVerb("authenticate", params, callback);
   }
+
+  AuthenticationBusinessController.prototype.getClientAppProperties = function()
+  {
+    let configurationSvc = kony.sdk.getCurrentInstance().getConfigurationService();
+    configurationSvc.getAllClientAppProperties(function(response) {
+    clientProperties = response;
+    deviceType = (clientProperties.DEVICE_TYPE && clientProperties.DEVICE_TYPE !== null) ? clientProperties.DEVICE_TYPE : deviceType;
+      }, function(){});
+  };
 
   function AuthenticationBusinessController() {
 

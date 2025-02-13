@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s56527b3cb1a429e98b414863fab2297",
+    "_skin_": "sb5098bbd5c5441d90797377e5b219c6",
     "_top_": {
         "type": "string",
         "value": "5%"
@@ -48,7 +48,7 @@
     "id": "CopyflxHeader0a2a525b4524a4e",
     "info": null,
     "isvisible": true,
-    "kuid": "u0e1723da2774bc880c36c1994b9ecee",
+    "kuid": "u8a7ff5c50324a9ba2c8717b5ed24c97",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxPasswordTimeout",

@@ -90,6 +90,9 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
   NativeControllerIOS.prototype.setNotificationStatus = function(txtId, status, pin){
     this.approveSDKWrapper.setNotificationStatusWithStatusWithPasswordWithJSCallbackWithPwdPromptCB(txtId,status,pin,this.componentInstance.scanToApproveCompletionCallback, this.componentInstance.pwdPromptCallback);   
   };
+  NativeControllerIOS.prototype.getDeviceProperty = function(){
+    return this.approveSDKWrapper.getDeviceProperty();   
+  };
   return NativeControllerIOS;
 
 });

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s3152c31972d4eb7876f2c97dca45e20",
+    "_skin_": "scdbf9669acd4de0bfac4c63bf1d905d",
     "_text_": "Registration Process",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u141e147bd224b679c1b9a5cb1f0f282",
+    "kuid": "u3e7828886474d0e961d16a9b9aef94e",
     "name": "kony.ui.Label",
     "parent": "flxConfirmPassword",
     "pf": "userwidgetmodel",

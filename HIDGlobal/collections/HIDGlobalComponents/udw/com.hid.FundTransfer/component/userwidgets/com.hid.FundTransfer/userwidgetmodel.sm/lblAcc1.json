@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s2e57c5654024189a6d753e06ac733fe",
+    "_skin_": "s1516673fce64286888f702a4b2cccd3",
     "_text_": "Checking Account",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u1fa3ec39ee843db8f76930bdf79a272",
+    "kuid": "u0667c16a0e049f3aca15ecb19a02cc3",
     "name": "kony.ui.Label",
     "parent": "flxChecAccInner",
     "pf": "userwidgetmodel",

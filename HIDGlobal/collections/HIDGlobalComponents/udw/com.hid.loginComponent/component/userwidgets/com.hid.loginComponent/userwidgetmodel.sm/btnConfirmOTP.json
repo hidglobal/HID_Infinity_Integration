@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s62c06c9d97a409a9244f4a5c4e199c9",
+    "_skin_": "s82a94e978b941c198da1c9bb5640c29",
     "_text_": "Confirm",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s684cf293a1f4149ae4bea6aa52b842f",
+    "focusskin": "s459105ed95b4e3daa77f65ba7dc09a5",
     "id": "btnConfirmOTP",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u882d06ee9ea4d218bc0c1ccbb8aa244",
+    "kuid": "u34d7cf8b2c54d2a8f79733ad06b1972",
     "name": "kony.ui.Button",
     "parent": "flxOTPButtons",
     "pf": "userwidgetmodel",

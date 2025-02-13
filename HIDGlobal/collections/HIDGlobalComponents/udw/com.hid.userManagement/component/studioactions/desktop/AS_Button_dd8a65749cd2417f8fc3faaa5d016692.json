@@ -1,0 +1,20 @@
+{
+    "AS_Button_dd8a65749cd2417f8fc3faaa5d016692": {
+        "id": "AS_Button_dd8a65749cd2417f8fc3faaa5d016692",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_a203a1775a9142f38bd23ef982961027",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.executeOnParent(\"changeDeviceStatusOnClick\", {row : context.rowIndex,\n                                                   section : context.sectionIndex});",
+            "callbackType": null
+        }]
+    }
+}

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa4ac65b226a4add97dd77a49cb7394b",
+    "_skin_": "sfd47c1dd00f4e23b11744a136124a13",
     "_text_": "Device Action",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ua0932af809e47828c13ed21ce0f5d96",
+    "kuid": "u3f996b6e5c140729e392af85e8a2311",
     "name": "kony.ui.Label",
     "parent": "flxDeviceStatus",
     "pf": "userwidgetmodel",

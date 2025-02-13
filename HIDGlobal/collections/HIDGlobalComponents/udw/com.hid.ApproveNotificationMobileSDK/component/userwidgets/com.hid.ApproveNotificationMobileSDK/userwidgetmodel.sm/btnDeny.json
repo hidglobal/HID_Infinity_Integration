@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sdecce6834a045bd9673a5ebd18839a7",
+    "_skin_": "s65a2e2dae9940eebd09107fd5e9790f",
     "_text_": "Deny",
     "_top_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s4357d43bef545f693c49eada3977395",
+    "focusskin": "sc4dda63d3db475da387a5525f77680f",
     "id": "btnDeny",
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "u7e30075ae1742458fb0566ac25e8834",
+    "kuid": "ua212ce669834023a0fe94f97e91fdce",
     "name": "kony.ui.Button",
     "parent": "flxMain",
     "pf": "userwidgetmodel",

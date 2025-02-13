@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s1609b4851d3424f8d56e86e173c20db",
+    "_skin_": "sd5e47f3483b465996e78aae049aee8c",
     "_top_": {
         "type": "string",
         "value": "26.39%"
@@ -56,7 +56,7 @@
     "id": "flxMainPage",
     "info": null,
     "isvisible": true,
-    "kuid": "u19469317dee41fb94aa54c7d417ef24",
+    "kuid": "u1d1cc430d1e4ed89de8300a99716dcf",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxLogin",

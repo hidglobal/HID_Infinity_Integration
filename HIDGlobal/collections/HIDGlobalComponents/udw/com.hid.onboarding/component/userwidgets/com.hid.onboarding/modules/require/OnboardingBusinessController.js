@@ -109,9 +109,8 @@ define([], function() {
     };
     objService.customVerb("addPasswordAuthenticator", params, callback);
   };
-  OnboardingBusinessController.prototype.addOOBToUser = function(params, S_CB, F_CB) { //Karthiga changes
-  //  let objService = HIDObjectServices.getRepository("AddOOBAuthenticator"); //existing
-    let objService = HIDObjectServices.getRepository("AddAllOOBAuthNew");
+  OnboardingBusinessController.prototype.addOOBToUser = function(params, S_CB, F_CB) {
+    let objService = HIDObjectServices.getRepository("AddOOBAuthAndSendSMS");
     const callback = (status, response) => {
       if (status) {
         S_CB(response);
@@ -119,8 +118,7 @@ define([], function() {
         F_CB(response);
       }
     };
-    objService.customVerb("addAllOOBAuthenticators", params, callback);
-   // objService.customVerb("addOOBAuthenticator", params, callback); existing
+    objService.customVerb("addOOBAuthAndSendSMS", params, callback);
   };
   OnboardingBusinessController.prototype.sendOOB = function(params, S_CB, F_CB) {
     let objService = HIDObjectServices.getRepository("SendOOB");

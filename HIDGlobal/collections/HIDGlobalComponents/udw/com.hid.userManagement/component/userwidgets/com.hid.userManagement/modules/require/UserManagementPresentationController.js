@@ -7,39 +7,39 @@ define([`com/hid/userManagement/UserManagementBusinessController`], function(Use
     UserManagementBusinessController.getDevicesForUser(params, S_CB, F_CB);
   };
 
-  UserManagementPresentationController.prototype.updateDeviceStatus = function(deviceId, status, S_CB, F_CB){
-    let params = {"DeviceId" : deviceId, "status" : status };
+  UserManagementPresentationController.prototype.updateDeviceStatus = function(deviceId, status, S_CB, F_CB,correlationId){
+    let params = {"DeviceId" : deviceId, "status" : status , "correlationId": correlationId };
     UserManagementBusinessController.updateDeviceStatus(params, S_CB, F_CB);
   };
   
-  UserManagementPresentationController.prototype.deleteDevice = function(deviceId, S_CB, F_CB){
-    let params = {"deviceId" : deviceId};
+  UserManagementPresentationController.prototype.deleteDevice = function(deviceId, S_CB, F_CB,correlationId){
+    let params = {"deviceId" : deviceId, "correlationId": correlationId};
     UserManagementBusinessController.deleteDevice(params, S_CB, F_CB);
   };
   
-  UserManagementPresentationController.prototype.unassignDevice = function(deviceId,status,owner, S_CB, F_CB){
-    let params = {"deviceId" : deviceId , "status" : status , "owner" : owner};
+  UserManagementPresentationController.prototype.unassignDevice = function(deviceId,status,owner, S_CB, F_CB,correlationId){
+    let params = {"deviceId" : deviceId , "status" : status , "owner" : owner , "correlationId": correlationId};
     UserManagementBusinessController.assignUnassignDevice(params, S_CB, F_CB);
   };
   
-  UserManagementPresentationController.prototype.assignDevice = function(deviceId, S_CB, F_CB){
-    let params = {"deviceId" : deviceId , "status" : status , "owner" : owner};
+  UserManagementPresentationController.prototype.assignDevice = function(deviceId,status,owner, S_CB, F_CB, correlationId){
+    let params = {"deviceId" : deviceId , "status" : status , "owner" : owner , "correlationId": correlationId};
     UserManagementBusinessController.assignUnassignDevice(params, S_CB, F_CB);
   };
 
 
-  UserManagementPresentationController.prototype.updateFriendlyName = function(deviceId, newName, S_CB, F_CB){
-    let params = {"deviceId" : deviceId, "friendlyName" : newName};
+  UserManagementPresentationController.prototype.updateFriendlyName = function(deviceId, newName, S_CB, F_CB,correlationId){
+    let params = {"deviceId" : deviceId, "friendlyName" : newName , "correlationId": correlationId};
     UserManagementBusinessController.updateDeviceFriendlyName(params, S_CB, F_CB);
   };
 
-  UserManagementPresentationController.prototype.changeUserPassword = function(username, oldPassword, newPassword, S_CB, F_CB){
-    UserManagementBusinessController.changeUserPassword(username, oldPassword, newPassword, S_CB, F_CB);
+  UserManagementPresentationController.prototype.changeUserPassword = function(username, oldPassword, newPassword, S_CB, F_CB,correlationId){
+    UserManagementBusinessController.changeUserPassword(username, oldPassword, newPassword, S_CB, F_CB,correlationId);
   };
 
-  UserManagementPresentationController.prototype.registerApproveDevice = function(username, S_CB, F_CB){
+  UserManagementPresentationController.prototype.registerApproveDevice = function(username, S_CB, F_CB,correlationId){
     let randNo = Math.floor(Math.random() * 10000);
-    let params = {"username": username,"usernameWithRandomNo": `${username}.${randNo}`};
+    let params = {"username": username,"usernameWithRandomNo": `${username}.${randNo}`, "correlationId": correlationId};
     UserManagementBusinessController.registerApproveDevice(params, success => {
       let provisionMsg = success.RegisterDevice[0].provisionMsg;
       let parsedProvisionMsg = JSON.parse(provisionMsg);
@@ -93,10 +93,9 @@ define([`com/hid/userManagement/UserManagementBusinessController`], function(Use
       .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
   }
   
-  UserManagementPresentationController.prototype.registerFIDODevice
-    = function(username, S_CB, F_CB)
+  UserManagementPresentationController.prototype.registerFIDODevice = function(username, S_CB, F_CB,correlationId)
   {
-    let params = { "username": username };
+    let params = { "username": username , "correlationId": correlationId };
     
     let s_cb = success => {
       const request_uri = success.FIDORegistration[0].request_uri;
@@ -150,7 +149,8 @@ define([`com/hid/userManagement/UserManagementBusinessController`], function(Use
           "id": credential.id,
           "rawId": credential.rawId,
           "clientDataJSON": credential.response.clientDataJSON,
-          "attestationObject": credential.response.attestationObject
+          "attestationObject": credential.response.attestationObject,
+          "correlationId": correlationId
         };
         
         UserManagementBusinessController.registerFIDODevice(inpParams, S_CB, F_CB);

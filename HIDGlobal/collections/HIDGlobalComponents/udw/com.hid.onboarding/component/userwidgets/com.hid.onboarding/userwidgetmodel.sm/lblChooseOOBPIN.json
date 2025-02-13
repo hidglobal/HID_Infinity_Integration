@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7dcc7c0b16b42e5b58a844cfb4fbc18",
+    "_skin_": "sa34bf17d84f4fb6a21f69473b812785",
     "_text_": "Choose Another Credential",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u1d18e8fb09844538893a4b70432102b",
+    "kuid": "u8984db7abcb4e0791fb8cd745c280cb",
     "name": "kony.ui.Label",
     "parent": "flxChooseOOBPIN",
     "pf": "userwidgetmodel",

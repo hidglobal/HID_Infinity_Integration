@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s1a8cac59aa743a0a125f224d3e3c3b6",
+    "_skin_": "sb612785b50442d69bcb8aa57fefd89d",
     "_text_": "CREDENTIALS",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ufcc0f5864ef4dda9701afb6b405db6c",
+    "kuid": "u4e6675306d14948b69ee409d25168e0",
     "name": "kony.ui.Label",
     "parent": "flxUserSubHeader",
     "pf": "userwidgetmodel",

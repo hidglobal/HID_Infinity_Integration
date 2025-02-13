@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "Activation Code",
-    "_skin_": "s916874139d342159de5524717260c52",
+    "_skin_": "s0f4eaf371644aee8da838f39b1fba13",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -46,10 +46,10 @@
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {
-        "placeholderSkin": "s2db52ea4e2f479fbb114f02b73ad3dd"
+        "placeholderSkin": "s51221f405f044c89d58a217a2ed9b7d"
     },
     "disabledSkins": {
-        "focusSkin": "sa02043df09b481782233fcf4800d7e7"
+        "focusSkin": "s9f3fe8f79e34c60be183c5874a98358"
     },
     "focusskin": null,
     "id": "tbxActivationCode",
@@ -57,12 +57,12 @@
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "u5d603f8897944f9872ca85e3051133a",
+    "kuid": "u49f040e848a40d0bfe6a9cba4eb847a",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "flxPassword",
     "pf": "userwidgetmodel",
-    "placeholderskin": "s2db52ea4e2f479fbb114f02b73ad3dd",
+    "placeholderskin": "s51221f405f044c89d58a217a2ed9b7d",
     "responsiveData": {},
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

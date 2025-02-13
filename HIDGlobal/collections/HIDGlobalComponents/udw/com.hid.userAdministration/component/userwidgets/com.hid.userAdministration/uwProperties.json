@@ -22,9 +22,9 @@
         "widgets": {
             "expose": [
                 {
-                    "kuid": "e050ebf2adf84a318d49586fe0bf9977",
+                    "kuid": "bdd39d9824854dacb83af8af28a462b3",
                     "propertyKey": "btnLogin",
-                    "srcWgtKUID": "u86a5191ad63407dac92e49cc8b1efa6"
+                    "srcWgtKUID": "ud5f3925e2214e0f9c322c50f523b669"
                 }
             ],
             "passthrough": []

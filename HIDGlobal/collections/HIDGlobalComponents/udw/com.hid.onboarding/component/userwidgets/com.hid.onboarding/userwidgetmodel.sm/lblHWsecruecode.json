@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s0dd7fcb325c42628be8af2807f5fa0e",
+    "_skin_": "s98c7ab7a1e84eb8b0f381c7e9c31bce",
     "_text_": "Hardware Secure Code",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u2f3bf80d6ab4e33bc6fd25e6f588840",
+    "kuid": "u0ac4fe9d49d42588797ba7cc7c84427",
     "name": "kony.ui.Label",
     "parent": "flxHWOTP",
     "pf": "userwidgetmodel",

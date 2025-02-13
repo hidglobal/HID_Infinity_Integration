@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sda2033b62cd474a8b1f34509f6f3eb5",
+    "_skin_": "s3284be9ca1a412fb2af19fd37c2c678",
     "_text_": "Major Bank",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "sda2033b62cd474a8b1f34509f6f3eb5",
+    "focusskin": "s3284be9ca1a412fb2af19fd37c2c678",
     "id": "CopylblMajorBank0a1f16f932a244c",
     "info": null,
     "ipad": {
@@ -72,7 +72,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "uc38b5e4666b44e9afb35b98a190942f",
+    "kuid": "uc0647a52afb462cbe8fc2146fcd8923",
     "name": "kony.ui.Label",
     "parent": "flxQRCodeHeader",
     "pf": "userwidgetmodel",

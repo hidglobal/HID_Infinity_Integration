@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s5aa27c195f2408591d42cc5102ad8a2",
+    "_skin_": "s4dc8f34bdf2405cb441ea03f6a2ea99",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -56,7 +56,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "ecd9590faaf1461f8447efa4b1f12e13",
+    "kuid": "dc6fc526f8f04420838d58ba7dbfb1cb",
     "name": "kony.ui.Label",
     "parent": "CopyCopyflxDevicesSegment",
     "pf": "CopyCopytmpDevicesSegment",

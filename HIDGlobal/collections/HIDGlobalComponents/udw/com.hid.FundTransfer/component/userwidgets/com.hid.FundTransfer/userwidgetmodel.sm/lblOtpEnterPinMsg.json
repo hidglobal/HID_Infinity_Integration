@@ -24,7 +24,7 @@
         0,
         0
     ],
-    "_skin_": "s9dd057547d441aea388f454903b364c",
+    "_skin_": "s797852f950f40059eff5b1368ea3f20",
     "_text_": "Please enter your PIN to generate secure code",
     "_top_": {
         "type": "string",
@@ -58,7 +58,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u9b2ed7483e44b4096762f4cc3916438",
+    "kuid": "u76cb74ebc994639baad8c2e7fac6bdb",
     "name": "kony.ui.Label",
     "parent": "flxSecureCodeEnterPin",
     "pf": "userwidgetmodel",

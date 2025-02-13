@@ -1,0 +1,27 @@
+{
+    "AS_Label_h1f45cba723e4e82b6c8fe5b7a2b54c2": {
+        "id": "AS_Label_h1f45cba723e4e82b6c8fe5b7a2b54c2",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onTouchEnd_bfa998da65e84c0f95a49a9493e6415a",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "lblDeviceStatusOnClick",
+            "display": "lblDeviceStatusOnClick",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "PIN",
-    "_skin_": "sc3652d52d844bcf8dae376552c521de",
+    "_skin_": "s8a886a7a98e41db908c8645e88c5826",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -46,21 +46,21 @@
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {
-        "placeholderSkin": "s607bd7431e8457b944d8a819784cdb3"
+        "placeholderSkin": "sc460879a89e4ca7b58e8e0561541d60"
     },
     "disabledSkins": {},
-    "focusskin": "s506a3a919294ab4a5008767536cae28",
+    "focusskin": "sd9524e327db428fabb1b34f71ff178c",
     "id": "tbxOOBPIN",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "u6bff9503ab04f6f8f2f09d359719b0d",
+    "kuid": "u21d2494990e4ac2a0fd6a03840445b6",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "flxPIN",
     "pf": "userwidgetmodel",
-    "placeholderskin": "s607bd7431e8457b944d8a819784cdb3",
+    "placeholderskin": "sc460879a89e4ca7b58e8e0561541d60",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": true,

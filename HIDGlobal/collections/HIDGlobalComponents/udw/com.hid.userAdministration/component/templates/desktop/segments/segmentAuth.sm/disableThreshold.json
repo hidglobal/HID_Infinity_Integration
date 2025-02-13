@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s5aa27c195f2408591d42cc5102ad8a2",
+    "_skin_": "s4dc8f34bdf2405cb441ea03f6a2ea99",
     "_text_": "Label",
     "_top_": {
         "type": "string",
@@ -56,7 +56,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "id669632b9b948baafa445857b3d1d47",
+    "kuid": "id181b0f48624f0481640eb46f11b73d",
     "name": "kony.ui.Label",
     "parent": "flexSegmentAuth",
     "pf": "segmentAuth",
