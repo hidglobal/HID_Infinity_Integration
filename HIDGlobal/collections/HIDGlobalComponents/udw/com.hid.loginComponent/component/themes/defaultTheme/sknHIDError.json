@@ -33,49 +33,13 @@
         "isForked": false
     },
     "isDefaultSkin": false,
-    "kiosk": {
-        "font_size": 80,
-        "isForked": false
-    },
-    "kuid": "s9d0889836974c9c9b80c1cbb393555a",
-    "spaan": {
-        "font_size": 80,
-        "isForked": false
-    },
-    "spaandroidtablet": {
-        "font_size": 80,
-        "isForked": false
-    },
-    "spaip": {
-        "font_size": 80,
-        "isForked": false
-    },
-    "spaipad": {
-        "font_size": 80,
-        "isForked": false
-    },
-    "spawindowstablet": {
-        "font_size": 80,
-        "isForked": false
-    },
-    "spawinphone8": {
-        "font_size": 80,
-        "isForked": false
-    },
+    "kuid": "se67c762a33745b6bf5c66be3e653ca5",
     "tabrcandroid": {
         "font_size": 80,
         "isForked": false
     },
     "wType": "Label",
     "watchos": {
-        "font_size": 80,
-        "isForked": false
-    },
-    "windows8": {
-        "font_size": 80,
-        "isForked": false
-    },
-    "winphone8": {
         "font_size": 80,
         "isForked": false
     }

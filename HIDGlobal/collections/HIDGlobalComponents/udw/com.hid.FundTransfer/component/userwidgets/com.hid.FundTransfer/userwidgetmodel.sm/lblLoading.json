@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb71ae188ec2471e9304f71263984e0c",
+    "_skin_": "s3a7fbcdeae042b8b1f9dceea4388c65",
     "_text_": "Please wait while we process your request.",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u00a1f5510654cd3a6731dbe79944e4b",
+    "kuid": "u0e81d2456874842819ebf8143aeb3d9",
     "name": "kony.ui.Label",
     "parent": "flxPopUp",
     "pf": "userwidgetmodel",

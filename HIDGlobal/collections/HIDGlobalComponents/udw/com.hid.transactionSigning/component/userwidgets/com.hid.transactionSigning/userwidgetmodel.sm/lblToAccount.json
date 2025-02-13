@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
+    "_skin_": "s8c580668383415387ca92902617115d",
     "_text_": "To Account*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ub2a7bc889ce4c918b395ff4df6a5100",
+    "kuid": "u0ab252c190d4b80b17434a6b27a080b",
     "name": "kony.ui.Label",
     "parent": "flxToAccount",
     "pf": "userwidgetmodel",

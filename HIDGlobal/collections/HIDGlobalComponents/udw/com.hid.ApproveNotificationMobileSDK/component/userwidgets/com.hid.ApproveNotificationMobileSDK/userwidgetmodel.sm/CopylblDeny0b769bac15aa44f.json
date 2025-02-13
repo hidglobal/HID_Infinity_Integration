@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfd4da9ea3534a289e479a7603aacfb0",
+    "_skin_": "sc922ea1cdd94ab7b2eb399cb54b1bb2",
     "_text_": "Deny",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u7e1deae35d341e78efbe88eeb0c492b",
+    "kuid": "u96b277c961747b88e67691f596a1868",
     "name": "kony.ui.Label",
     "parent": "flxDenySliderMain",
     "pf": "userwidgetmodel",

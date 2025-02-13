@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
+    "_skin_": "s8c580668383415387ca92902617115d",
     "_text_": "Currency",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u39a6d1dd89f4082a2ee4b18699cc736",
+    "kuid": "ud14483b8f374929b8a0ad1f73dc14a9",
     "name": "kony.ui.Label",
     "parent": "flxCurrency",
     "pf": "userwidgetmodel",

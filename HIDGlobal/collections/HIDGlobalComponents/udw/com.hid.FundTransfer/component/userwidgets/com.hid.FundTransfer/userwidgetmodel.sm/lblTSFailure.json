@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa6163728d864c48a770ef7082a8c3bd",
+    "_skin_": "s84d4e19321d4672becdff52293f0f91",
     "_text_": "Payment Declined",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u0be608276004e329a27898b7c7e7b4c",
+    "kuid": "u81daa741b604ab78012c023045ddacc",
     "name": "kony.ui.Label",
     "parent": "flxTransferDeclined",
     "pf": "userwidgetmodel",

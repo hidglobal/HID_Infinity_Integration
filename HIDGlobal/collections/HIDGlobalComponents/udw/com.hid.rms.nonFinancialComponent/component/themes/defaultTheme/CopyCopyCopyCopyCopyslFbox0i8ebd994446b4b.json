@@ -13,17 +13,8 @@
     "ipad": {},
     "iphone": {},
     "isDefaultSkin": false,
-    "kiosk": {},
-    "kuid": "sc15e79d9d744bf1b07adf83f279f63d",
-    "spaan": {},
-    "spaandroidtablet": {},
-    "spaip": {},
-    "spaipad": {},
-    "spawindowstablet": {},
-    "spawinphone8": {},
+    "kuid": "sf66eb10156a4a3e8b53ba6ce33a7f99",
     "tabrcandroid": {},
     "wType": "FlexContainer",
-    "watchos": {},
-    "windows8": {},
-    "winphone8": {}
+    "watchos": {}
 }

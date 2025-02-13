@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s83edd01075d47f4a6ac7797f14c7446",
+    "_skin_": "s7e3555407174f79997cc053a4be6e65",
     "_text_": "8976 4560 1199 4400",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u1e0a215799745879bfd342327de092b",
+    "kuid": "ue81c2849c224ab2b37ee91adb8745fb",
     "name": "kony.ui.Label",
     "parent": "CopyflxCheckingAcc0h255eeca1f1b40",
     "pf": "userwidgetmodel",

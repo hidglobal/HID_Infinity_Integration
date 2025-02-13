@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s6ce4baf4c91463ca4936a8b89fae124",
+    "_skin_": "sc01ba11154749d1b9993a172819de78",
     "_top_": {
         "type": "string",
         "value": "1%"
@@ -40,11 +40,11 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "s54026b39fd844c3853887b9a5a5dcf6",
+    "focusskin": "s7df5958e34140c88df33f14865ce139",
     "id": "flxTbxInviteCode",
     "info": null,
     "isvisible": true,
-    "kuid": "u6e18af13b794919895929ffd8550683",
+    "kuid": "u14f5322519d4ed48e9de578b2cc5ae0",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxInviteCode",

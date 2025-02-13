@@ -1,0 +1,27 @@
+{
+    "AS_Label_ac432d1ff70240659119bbcc4654a35d": {
+        "id": "AS_Label_ac432d1ff70240659119bbcc4654a35d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onTouchEnd_e2a78f29724f4a469739faff9938c0da",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "editFriendlyNameButtonOnClick",
+            "display": "editFriendlyNameButtonOnClick",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

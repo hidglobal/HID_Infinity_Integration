@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb17e5efe87049a0882d6ba7cd8eeba8",
+    "_skin_": "sf3bc2f6f1b64dd3b60e121eddfa6e1d",
     "_text_": "Dear user do you want to enable Biometrics for Login",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     },
     "containerweight": 100,
     "contentalignment": 5,
-    "focusskin": "sb86bd46966f402ab969fdb9046e03fa",
+    "focusskin": "sb7f90f420b24f1094f82ad65de211cc",
     "id": "lblFP",
     "info": null,
     "ipad": {
@@ -72,7 +72,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "ub0720e7d0244328acf611b20d88ceff",
+    "kuid": "u8dc72f2839544c586fee9882b6f06c1",
     "name": "kony.ui.Label",
     "parent": "flxBioPrompt",
     "pf": "userwidgetmodel",

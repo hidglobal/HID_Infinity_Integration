@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sbcc765632c74482a2c4c14bb17859f5",
+    "_skin_": "s5c94086da1b45e09f560f9874c74585",
     "_text_": "Remember Me",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u27e699e575c41898dba33dcdd07d7a6",
+    "kuid": "u4a25951bc204e39b25101a9ab137498",
     "name": "kony.ui.Label",
     "parent": "flxRM",
     "pf": "userwidgetmodel",

@@ -6,7 +6,7 @@
         "isLocked": false,
         "userwidgets": [
             "com.hid.transactionSigning",
-            "com.konymp.qrcodegeneratorNew"
+            "com.hid.QRCodeGenerator"
         ],
         "templates": [
             [
@@ -17,17 +17,29 @@
         ],
         "actions": {
             "common": {
-                "AS_Button_a9e2a8a76fdc4a68bb453fc2154d068e": {
+                "AS_Button_d8b18a887606438b99df135d4a7b7450": {
                     "channel": "common",
-                    "actionId": "AS_Button_a9e2a8a76fdc4a68bb453fc2154d068e",
-                    "actionName": "AS_Button_a9e2a8a76fdc4a68bb453fc2154d068e",
+                    "actionId": "AS_Button_d8b18a887606438b99df135d4a7b7450",
+                    "actionName": "AS_Button_d8b18a887606438b99df135d4a7b7450",
                     "key": "ide_onClick"
                 },
-                "AS_Segment_e1c42d1e98114e4dafb66f69a6104dec": {
+                "AS_Segment_f436b45accf74e639dbcb5cdade977b5": {
                     "channel": "common",
-                    "actionId": "AS_Segment_e1c42d1e98114e4dafb66f69a6104dec",
-                    "actionName": "AS_Segment_e1c42d1e98114e4dafb66f69a6104dec",
+                    "actionId": "AS_Segment_f436b45accf74e639dbcb5cdade977b5",
+                    "actionName": "AS_Segment_f436b45accf74e639dbcb5cdade977b5",
                     "key": "ide_onRowClick"
+                },
+                "AS_FlexContainer_fcf37fe3ff5640a3a3c705434b369fe5": {
+                    "channel": "common",
+                    "actionId": "AS_FlexContainer_fcf37fe3ff5640a3a3c705434b369fe5",
+                    "actionName": "AS_FlexContainer_fcf37fe3ff5640a3a3c705434b369fe5",
+                    "key": "ide_postShow"
+                },
+                "AS_Browser_e947b29e1f874c4aa4c9ee54398ad890": {
+                    "channel": "common",
+                    "actionId": "AS_Browser_e947b29e1f874c4aa4c9ee54398ad890",
+                    "actionName": "AS_Browser_e947b29e1f874c4aa4c9ee54398ad890",
+                    "key": "ide_onPageFinished"
                 }
             }
         },
@@ -64,7 +76,7 @@
         "fonts": [
             "Gotham-Book"
         ],
-        "nativeApis": 3,
+        "nativeApis": 0,
         "mfbundle": "services/services.zip",
         "localFiles": true,
         "cordova": [],
@@ -72,7 +84,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2024-07-08T08:41:24.418Z",
-    "createdVizVersion": "9.5.28",
-    "project_version": "sprint42"
+    "createdOn": "2025-02-13T10:06:37.200Z",
+    "createdVizVersion": "202307.0.9",
+    "project_version": "sprint45"
 }

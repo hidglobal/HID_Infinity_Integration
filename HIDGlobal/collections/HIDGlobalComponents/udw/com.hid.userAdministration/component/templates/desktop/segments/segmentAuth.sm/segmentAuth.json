@@ -16,7 +16,7 @@
     ],
     "_percent_": true,
     "_render_": true,
-    "_skin_": "s38ec2ab21e943ec8604b6e9b07a81d1",
+    "_skin_": "sc6ca7ce0b2e4975b1811bd275c12ed2",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -54,10 +54,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kiosk": {
-        "render": true
-    },
-    "kuid": "fd9614262ba246b299c62a47bb5cfecd",
+    "kuid": "e51f4bfb70774752a1b535257864cff4",
     "name": "kony.ui.Form2",
     "needappmenu": true,
     "outtransitionconfig": {

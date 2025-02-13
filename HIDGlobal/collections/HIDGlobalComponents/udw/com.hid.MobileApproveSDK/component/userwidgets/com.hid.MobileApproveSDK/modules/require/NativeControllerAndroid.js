@@ -68,5 +68,8 @@ define(['./Inherits', './NativeController'], function(Inherits, NativeController
   NativeControllerAndroid.prototype.setNotificationStatus = function(txtId, status, pin){
       return this.sdkWrapperObj.setNotificationStatus(txtId,status,pin,this.componentInstance.scanToApproveCompletionCallback, this.componentInstance.pwdPromptCallback, this.konyContext, this.konyActivity);   
     };
+	NativeControllerAndroid.prototype.getDeviceProperty = function(){
+      return this.sdkWrapperObj.getDeviceProperty();   
+    };
     return NativeControllerAndroid;
 });

@@ -22,7 +22,7 @@
         "type": "string",
         "value": "5%"
     },
-    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
+    "_skin_": "s37eb5e472f84c4bbe8a0d12ddda46b1",
     "_src_": "imgshape140421490125936_3_4_1.png",
     "_top_": {
         "type": "string",
@@ -43,7 +43,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u0094f868906473d9bf5ac0abfe0da84",
+    "kuid": "uef05f8784954794a6e814c1578cff14",
     "name": "kony.ui.Image2",
     "parent": "flxHidePassword",
     "pf": "userwidgetmodel",

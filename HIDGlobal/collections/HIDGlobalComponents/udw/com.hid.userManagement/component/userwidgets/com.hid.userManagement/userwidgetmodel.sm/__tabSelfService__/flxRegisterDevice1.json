@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sad6d3c415df43d98ac27ce3d2c1846d",
+    "_skin_": "sbdc71761ee34d59b4e2d9df17819203",
     "_top_": {
         "type": "string",
         "value": "2%"
@@ -48,7 +48,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "u406e27b477f4abe980fe90915eb8f35",
+    "kuid": "u5b8deba8e6f49459e97a5b8c4d431b3",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "tabRegisterDevice",

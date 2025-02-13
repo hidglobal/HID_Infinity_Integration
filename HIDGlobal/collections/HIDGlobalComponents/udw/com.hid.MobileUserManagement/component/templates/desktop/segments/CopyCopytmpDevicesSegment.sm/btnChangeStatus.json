@@ -1,0 +1,63 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s0ea394bc1a54681bf1c9868400e3285",
+    "_text_": "Button",
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "40%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "35%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerId": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "desktopweb": {
+        "psp": {}
+    },
+    "disabledSkins": {
+        "blockedUISkin": "se9a54a960234c49bdc4a1938bc7b62a",
+        "hoverSkin": "s3489a14811e4295b6b6164bbfc713da"
+    },
+    "displaytext": true,
+    "focusskin": "sc4dda63d3db475da387a5525f77680f",
+    "id": "btnChangeStatus",
+    "ide_onClick": "AS_Button_d61c9f24d5524d0798cffa8ff3c3fda9",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "a871edaf2da54a11b70ad1a2325fc57b",
+    "name": "kony.ui.Button",
+    "parent": "flxdeviceAction",
+    "pf": "CopyCopytmpDevicesSegment",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button"
+}

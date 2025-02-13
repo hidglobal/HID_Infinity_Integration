@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s1a8cac59aa743a0a125f224d3e3c3b6",
+    "_skin_": "sb612785b50442d69bcb8aa57fefd89d",
     "_text_": "To experience an end-to-end banking journey Login now",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u5c4b4b5408c4d25934809d8f74f3e79",
+    "kuid": "ubfc3411f6324562af5101237ff687d5",
     "name": "kony.ui.Label",
     "parent": "flxMainPage",
     "pf": "userwidgetmodel",

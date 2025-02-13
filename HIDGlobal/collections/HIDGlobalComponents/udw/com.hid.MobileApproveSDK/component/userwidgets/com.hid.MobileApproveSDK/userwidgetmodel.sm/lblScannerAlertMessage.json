@@ -24,7 +24,7 @@
         0,
         0
     ],
-    "_skin_": "sc58da2078b7400d925a2226ecdaf506",
+    "_skin_": "sd35a10f967346cdb6e024b4a315c3aa",
     "_text_": "Alert Message",
     "_top_": {
         "type": "string",
@@ -58,7 +58,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u3e60b0252cc4dfaa8f431e2f7afed03",
+    "kuid": "u98b6c06260c4df888b720bd948b3fa6",
     "name": "kony.ui.Label",
     "parent": "flxScannerAlertMessage",
     "pf": "userwidgetmodel",

@@ -38,23 +38,27 @@ define(function () {
                       "Scope": "LOGIN" ,
                       "Name": "Temenos Internet Banking",
                       "userid": "${loginJSON.userid}",
-                      "password": "${loginJSON.password}"
+                      "password": "${loginJSON.password}",
+                      "correlationId": "${loginJSON.correlationId}
                   }
             }`;
         }
     };   
 
   UserManagementBusinessController.prototype.validatePassword = function(loginJson, S_CB, F_CB){  
-    var client = KNYMobileFabric;
-    var serviceName = "customHIDLoginWithoutMFA";
-    var identitySvc = client.getIdentityService(serviceName);
-    let loginPayload = SCAEventConstants.getLoginPayload(loginJson);
-    var options = {
-      "payload": loginPayload, 
-      "authType" : "STATIC_PWD",
-      "isMfa":false
+    try {
+    let objectServices = ObjectServices.getDataModel("ValidatePassword");
+    const callback = (status, response) => {
+      if (status) {
+        S_CB(response);
+      } else {
+        F_CB(response);
+      }
     };
-    identitySvc.login(options,success=>S_CB(success),error=> F_CB(error));
+    objectServices.customVerb("validatePassword", loginJson, callback);
+   } catch(exception){
+      alert("Exception occurred in GetDevicesForUser, error : "+ exception.message);
+    }
   };
 
   UserManagementBusinessController.prototype.navigateToRegisterDevice = function(username, S_CB, F_CB){ 
@@ -142,12 +146,12 @@ define(function () {
   };
 
 
-  UserManagementBusinessController.prototype.changeUserPassword = function(username,oldPassword, newPassword, S_CB, F_CB){
+  UserManagementBusinessController.prototype.changeUserPassword = function(username,oldPassword, newPassword, S_CB, F_CB,correlationId){
     const success = (result) =>
     {
       try{
         var changePwdModel = ObjectServices.getDataModel("ChangePassword");
-        let params = {"userName" : username, "password" : newPassword};
+        let params = {"userName" : username, "password" : newPassword,"correlationId": correlationId};
         const callback = (status, response) => {
           if(status){
             S_CB(response);
@@ -160,11 +164,11 @@ define(function () {
       } catch(exception){
         alert("Exception occurred in changeUserPassword, error : "+ exception.message);
       }};
+     F_CB = (error) =>{
+      alert("Exception occurred in changeUserPassword");
+    };
 
-//    this.validatePassword(username, oldPassword, success, F_CB);
-    let transactionId = Math.floor(Math.random() * 10000);
-    let loginJson = {"userid" : username, "password" : oldPassword, "requiredRiskScore" : "0", 
-                    "currentRiskScore" : "2", "transactionId" : transactionId};
+    let loginJson = {"username" : username, "password" : oldPassword, "correlationId": correlationId};
     this.validatePassword(loginJson, success, F_CB);
     
   };

@@ -1,0 +1,27 @@
+{
+    "AS_Label_i19765ecc5254b1c846d41c8ea07db30": {
+        "id": "AS_Label_i19765ecc5254b1c846d41c8ea07db30",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onTouchEnd_b8dd4877f55d4c60a68bbcf141b4edd4",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "deletedeviceButtonClick",
+            "display": "deletedeviceButtonClick",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

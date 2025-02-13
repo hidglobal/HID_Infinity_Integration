@@ -48,7 +48,7 @@
     "id": "flxResendOTPBtn",
     "info": null,
     "isvisible": true,
-    "kuid": "u5e3eae2fbd0450887f7980b5d5a0e5a",
+    "kuid": "u8a86d33997146f6bb1cf7d76586f70d",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxMainPageOOB",

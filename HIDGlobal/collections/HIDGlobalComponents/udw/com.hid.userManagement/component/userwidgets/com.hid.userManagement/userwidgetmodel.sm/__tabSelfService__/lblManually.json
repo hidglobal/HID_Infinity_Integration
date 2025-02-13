@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s23ac570d5804a2c8732948b6b84c8e5",
+    "_skin_": "se0baf66babb4b3d86626bb5b47ea1e1",
     "_text_": "Activate Manually",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u0402ff601124193a85aad388c6c138a",
+    "kuid": "u845e537b0ef47febf20203e17583f1a",
     "name": "kony.ui.Label",
     "parent": "flxRegisterDevice1",
     "pf": "userwidgetmodel",

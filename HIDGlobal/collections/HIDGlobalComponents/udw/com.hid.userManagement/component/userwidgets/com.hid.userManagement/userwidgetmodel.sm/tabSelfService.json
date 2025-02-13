@@ -34,7 +34,7 @@
         "type": "string",
         "value": "100%"
     },
-    "activeskin": "s99f1afc4524482ba1018a6947950e55",
+    "activeskin": "s489a8e9626c48faae69187dcc82de0e",
     "activetab": 1,
     "activetabs": [
         0
@@ -50,11 +50,11 @@
     "expandedimage": "",
     "id": "tabSelfService",
     "imageposition": "right",
-    "inactiveskin": "s932ebab3b6d49759d36e6372dd7714e",
+    "inactiveskin": "s0f1bddd2bca4edf9e56d7c40c2934cb",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ua51a2d05c6d459cab42db70665a2132",
+    "kuid": "u56ad04496b84044b93342ae4db492de",
     "layouttype": 0,
     "margininpixel": false,
     "name": "kony.ui.TabPane",

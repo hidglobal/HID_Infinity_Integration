@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
+    "_skin_": "s37eb5e472f84c4bbe8a0d12ddda46b1",
     "_src_": "smsotpicon_3_3.png",
     "_top_": {
         "type": "string",
@@ -40,7 +40,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ue798320f59c4d6486fa293484e480e2",
+    "kuid": "u89d04c0b4b749e18eaa06f89b9159ba",
     "name": "kony.ui.Image2",
     "parent": "flxDiffAuth",
     "pf": "userwidgetmodel",

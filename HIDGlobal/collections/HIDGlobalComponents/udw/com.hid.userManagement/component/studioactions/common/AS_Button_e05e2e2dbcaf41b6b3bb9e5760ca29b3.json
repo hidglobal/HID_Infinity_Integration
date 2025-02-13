@@ -1,0 +1,27 @@
+{
+    "AS_Button_e05e2e2dbcaf41b6b3bb9e5760ca29b3": {
+        "id": "AS_Button_e05e2e2dbcaf41b6b3bb9e5760ca29b3",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "u9bbd16dc356420bba02c488bb3ac80a",
+            "name": "userwidgetmodel",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION___fd0b7fbd0ea048aab9e41e9630e98784",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "changePasswordOnClick",
+            "display": "changePasswordOnClick",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

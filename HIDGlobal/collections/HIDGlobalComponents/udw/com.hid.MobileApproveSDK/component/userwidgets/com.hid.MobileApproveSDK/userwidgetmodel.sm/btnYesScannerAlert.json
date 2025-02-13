@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sba595bf79e94a05910a87ae97798a2a",
+    "_skin_": "s6a62130aa9a48728de815ac0a05d5cb",
     "_text_": "YES",
     "_top_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s4ce70ada6924e17bfb68dd5d67634c7",
+    "focusskin": "s83c11cb44c347f89c26dd9ba7a664c8",
     "id": "btnYesScannerAlert",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u8ae3486a2214c12877fee663c02a4cd",
+    "kuid": "u56553e361434cf69bd77ef0d031abb8",
     "name": "kony.ui.Button",
     "parent": "flxScannerAlertUIYesBtn",
     "pf": "userwidgetmodel",

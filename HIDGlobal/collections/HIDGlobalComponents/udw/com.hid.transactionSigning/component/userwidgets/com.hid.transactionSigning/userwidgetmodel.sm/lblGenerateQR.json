@@ -25,7 +25,7 @@
         0,
         0
     ],
-    "_skin_": "s921eb86830f413b915ef8cc22b5676d",
+    "_skin_": "s9b34953efdd4766b105a50faab3bb15",
     "_text_": "Click here to generate Secure code",
     "_width_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u06c91450b6c40e98993396334dbb13e",
+    "kuid": "u47375b332cc42ad9efa0eafb4b30029",
     "name": "kony.ui.Label",
     "parent": "flxOfflineFields",
     "pf": "userwidgetmodel",

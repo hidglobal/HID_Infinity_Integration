@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "sd91c587eb574ddea7dc38a934c9f3a7",
+    "_skin_": "s37eb5e472f84c4bbe8a0d12ddda46b1",
     "_src_": "imgsc_3_2.png",
     "_top_": {
         "type": "string",
@@ -40,7 +40,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u5e8d4da34ed4a11bdb8bb3d7e2fd805",
+    "kuid": "u1e0cebb3e0a4d48af115ecca86fe773",
     "name": "kony.ui.Image2",
     "parent": "flxDiffAuth",
     "pf": "userwidgetmodel",

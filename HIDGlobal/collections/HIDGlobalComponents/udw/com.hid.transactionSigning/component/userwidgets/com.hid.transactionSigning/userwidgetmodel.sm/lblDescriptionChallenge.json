@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
+    "_skin_": "s8c580668383415387ca92902617115d",
     "_text_": "Remarks*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u7c0ad4ea22341a99262988f43064aa6",
+    "kuid": "u0314d966e13474e9db697092e4d21c4",
     "name": "kony.ui.Label",
     "parent": "flxDescChallenge",
     "pf": "userwidgetmodel",

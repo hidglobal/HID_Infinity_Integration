@@ -1,0 +1,244 @@
+{
+    "exportType": "component",
+    "info": {
+        "uw_namespace": "com.hid",
+        "uw_classname": "MobileUserManagement",
+        "isLocked": false,
+        "userwidgets": [
+            "com.hid.MobileUserManagement",
+            "com.hid.rms.nonFinancialWithoutUI",
+            "com.hid.TransactionSigningMobileSDK"
+        ],
+        "templates": [
+            [
+                "mobile",
+                "segments",
+                "segRegisteredDevices"
+            ],
+            [
+                "desktop",
+                "segments",
+                "CopyCopytmpDevicesSegment"
+            ]
+        ],
+        "actions": {
+            "mobile": {
+                "AS_Image_c8be99a040cb48b5bde281bda5aa039e": {
+                    "channel": "mobile",
+                    "actionId": "AS_Image_c8be99a040cb48b5bde281bda5aa039e",
+                    "actionName": "AS_Image_c8be99a040cb48b5bde281bda5aa039e",
+                    "key": "ide_onTouchEnd"
+                }
+            },
+            "desktop": {
+                "AS_Label_bc561b02f21f4d98b99a18e02a4d5842": {
+                    "channel": "desktop",
+                    "actionId": "AS_Label_bc561b02f21f4d98b99a18e02a4d5842",
+                    "actionName": "AS_Label_bc561b02f21f4d98b99a18e02a4d5842",
+                    "key": "ide_onTouchEnd"
+                },
+                "AS_Button_d61c9f24d5524d0798cffa8ff3c3fda9": {
+                    "channel": "desktop",
+                    "actionId": "AS_Button_d61c9f24d5524d0798cffa8ff3c3fda9",
+                    "actionName": "AS_Button_d61c9f24d5524d0798cffa8ff3c3fda9",
+                    "key": "ide_onClick"
+                },
+                "AS_Image_a4c87b4963484b8cba57d364724fd0c1": {
+                    "channel": "desktop",
+                    "actionId": "AS_Image_a4c87b4963484b8cba57d364724fd0c1",
+                    "actionName": "AS_Image_a4c87b4963484b8cba57d364724fd0c1",
+                    "key": "ide_onTouchEnd"
+                },
+                "AS_Image_f978286ddb1f45be9a94be8c1a330809": {
+                    "channel": "desktop",
+                    "actionId": "AS_Image_f978286ddb1f45be9a94be8c1a330809",
+                    "actionName": "AS_Image_f978286ddb1f45be9a94be8c1a330809",
+                    "key": "ide_onTouchEnd"
+                },
+                "AS_Image_daac1296c6c743738d5315fabb42abba": {
+                    "channel": "desktop",
+                    "actionId": "AS_Image_daac1296c6c743738d5315fabb42abba",
+                    "actionName": "AS_Image_daac1296c6c743738d5315fabb42abba",
+                    "key": "ide_onTouchEnd"
+                }
+            },
+            "common": {
+                "AS_Button_ia3f5e62f00c412d917c623cb8ce3820": {
+                    "channel": "common",
+                    "actionId": "AS_Button_ia3f5e62f00c412d917c623cb8ce3820",
+                    "actionName": "AS_Button_ia3f5e62f00c412d917c623cb8ce3820",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_b99376f5ff874aeea2a8cf6c79fe82d8": {
+                    "channel": "common",
+                    "actionId": "AS_Button_b99376f5ff874aeea2a8cf6c79fe82d8",
+                    "actionName": "AS_Button_b99376f5ff874aeea2a8cf6c79fe82d8",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_b7e9c740a6da4958a111b40c8750f14d": {
+                    "channel": "common",
+                    "actionId": "AS_Button_b7e9c740a6da4958a111b40c8750f14d",
+                    "actionName": "AS_Button_b7e9c740a6da4958a111b40c8750f14d",
+                    "key": "ide_onClick"
+                },
+                "AS_Button_ec9433f1df304a5fb2f502508dc4a507": {
+                    "channel": "common",
+                    "actionId": "AS_Button_ec9433f1df304a5fb2f502508dc4a507",
+                    "actionName": "AS_Button_ec9433f1df304a5fb2f502508dc4a507",
+                    "key": "ide_onClick"
+                },
+                "AS_Image_d027794201e64e3ea6f006c0d1c0b98f": {
+                    "channel": "common",
+                    "actionId": "AS_Image_d027794201e64e3ea6f006c0d1c0b98f",
+                    "actionName": "AS_Image_d027794201e64e3ea6f006c0d1c0b98f",
+                    "key": "ide_onTouchEnd"
+                },
+                "AS_Label_i19765ecc5254b1c846d41c8ea07db30": {
+                    "channel": "common",
+                    "actionId": "AS_Label_i19765ecc5254b1c846d41c8ea07db30",
+                    "actionName": "AS_Label_i19765ecc5254b1c846d41c8ea07db30",
+                    "key": "ide_onTouchEnd"
+                },
+                "AS_Label_h1f45cba723e4e82b6c8fe5b7a2b54c2": {
+                    "channel": "common",
+                    "actionId": "AS_Label_h1f45cba723e4e82b6c8fe5b7a2b54c2",
+                    "actionName": "AS_Label_h1f45cba723e4e82b6c8fe5b7a2b54c2",
+                    "key": "ide_onTouchEnd"
+                },
+                "AS_Label_ac432d1ff70240659119bbcc4654a35d": {
+                    "channel": "common",
+                    "actionId": "AS_Label_ac432d1ff70240659119bbcc4654a35d",
+                    "actionName": "AS_Label_ac432d1ff70240659119bbcc4654a35d",
+                    "key": "ide_onTouchEnd"
+                }
+            }
+        },
+        "skins": [
+            "CopyCopysknHIDNotification0i69876e8352547",
+            "CopyCopysknActive1",
+            "CopyCopysknSuspend1",
+            "slFbox",
+            "slForm",
+            "CopydefBtnNormal0gd0f6104f31c43",
+            "CopydefBtnNormal0g813034a91af43",
+            "defBtnFocus",
+            "CopydefBtnNormal0e983529930c147",
+            "CopydefBtnNormal0e92e0bfaa86d48",
+            "sknBtnMain",
+            "sknBtnFocus",
+            "CopydefBtnNormal0b70c32a9a16543",
+            "CopyslFbox0fdc9d96420f842",
+            "CopyslFbox0bec3a88142074b",
+            "CopyslFbox0j055f3896a434b",
+            "CopyslFbox0c305052ee0754b",
+            "CopyCopyCopyCopyCopyslFbox0h40dc563b6c547",
+            "CopyslFbox0ib149a2ab4ce46",
+            "CopyslFbox0d04d7f3c427347",
+            "CopyslFbox0a1630e98d7ec4f",
+            "CopyslFbox0gd6c646567234b",
+            "sknFlxEnableBiometric",
+            "CopyslFbox0e5599940104b4a",
+            "CopyslFbox0ea539ac4ba4d43",
+            "CopyslFbox0g138546840ca41",
+            "CopyslFbox0bbe9b8e28efd48",
+            "CopyslFbox0idb096df0b8e48",
+            "CopyslFbox0i4d88fd35ec341",
+            "CopyslFbox0ffd0a89e600a46",
+            "CopyslFbox0f39ba7d963a74a",
+            "CopysknPinLogin0e93850a5b88741",
+            "CopysknPinLogin3",
+            "CopyCopyCopyslFbox0ee8ae05287e24b",
+            "CopyslFbox0b038ad15d17745",
+            "CopyCopysknScreenBgColor0hf7f94577dd34b",
+            "CopyCopysknScreenBgColor0a5cb23195bd640",
+            "CopyCopyslFbox0g8246346ae0f4b",
+            "CopyCopyslFbox0ab4476b4d26341",
+            "CopyslFbox0fe3bfef0c0af43",
+            "CopyslFbox0c4c6f3e5e34548",
+            "CopyslFbox0e7f518b2dbea44",
+            "CopyslFbox0ac82c04c365a42",
+            "CopyslFbox0c9f29c2a551e4f",
+            "slImage",
+            "CopydefLabel0jc08b09c1f4645",
+            "CopydefLabel0ge0ece8dbefe43",
+            "CopydefLabel0bf91e5c445b141",
+            "CopydefLabel0h7380361126346",
+            "CopydefLabel0f6c15088d4e34e",
+            "CopydefLabel0c415e16aa3cb4f",
+            "CopydefLabel0d90c23f05eaa4d",
+            "CopydefLabel0c12fea1e31194d",
+            "sknLblEnableBiometric",
+            "CopyCopydefLabel0fbdd69aa892b42",
+            "CopyCopyCopydefLabel0e7e744f0a1d14a",
+            "CopydefLabel0ad3b28c8c81d46",
+            "CopydefLabel0d984b2959d3249",
+            "sknLabEnableTopMsg",
+            "CopysknTransferError0i054f99f02f341",
+            "seg2Focus",
+            "CopyCopyCopyseg4",
+            "sliPhoneSegmentHeader",
+            "defTextBoxNormal",
+            "defTextBoxFocus",
+            "defTextBoxPlaceholder",
+            "CopysknTbxFocus0b53ec2ad0b534c",
+            "CopysknTbxFocus0df55af7dfc5346",
+            "CopysknTbxFocus0cc42765ceac745",
+            "sknFlxBgFFFFFF",
+            "CopysknFlxBgFFFFFF0d74492ec7b3547",
+            "slImagemb",
+            "CopydefLabel0ad7b51c6331242",
+            "defLabel",
+            "sknLblSSPSemiBold18px424242",
+            "CopydefLabel0fe736f7ed92c47",
+            "CopydefLabel0j664704c319f43",
+            "CopydefLabel0f9c4e9ac000245",
+            "CopydefLabel0c48fdda2452443",
+            "CopydefLabel0ca38a327286f49",
+            "CopydefLabel0a5e0abe1fe5045",
+            "CopyCopyCopyslFontAwesomeIcon0dfde1008072b42",
+            "CopyCopysknActive",
+            "CopyCopysknActive0h478eb79d3c348",
+            "CopyCopysknActive0d1a61207273f4c",
+            "CopyslFbox0h552e2ba4dae44",
+            "CopyCopyCopyslFbox0eb111ace7e5747",
+            "CopyslFbox0dcbfe7255e0b4c",
+            "CopyslFbox0d8df9b929b9e44",
+            "CopyslFbox0j03381042fc24f",
+            "CopyslFbox0ae69ab3e472749",
+            "CopyCopyCopydefLabel0eae0291ac30f47",
+            "CopyCopydefTextBoxNormal0f7810252ee844e"
+        ],
+        "images": [
+            "image_732.gif",
+            "close.png",
+            "tick_2_1.png",
+            "clear_black_24dp_2_1.png",
+            "delete_77_512.png",
+            "done_black_24dp_2_1.png",
+            "cross_2_1.png",
+            "device_3.png",
+            "more_detail.png",
+            "pageoffdot.png",
+            "pageondot.png",
+            "imgshape140346310585024_3.png",
+            "menufooter.png",
+            "icons8_trash_1280.png"
+        ],
+        "fonts": [
+            "iphoneSystem",
+            "default",
+            "Helvetica",
+            "System"
+        ],
+        "nativeApis": 0,
+        "mfbundle": "services/services.zip",
+        "localFiles": [],
+        "cordova": [],
+        "forms": {},
+        "type": "userwidget",
+        "isMVC": false
+    },
+    "createdOn": "2025-02-13T09:33:28.248Z",
+    "createdVizVersion": "202307.0.9",
+    "project_version": "sprint45"
+}

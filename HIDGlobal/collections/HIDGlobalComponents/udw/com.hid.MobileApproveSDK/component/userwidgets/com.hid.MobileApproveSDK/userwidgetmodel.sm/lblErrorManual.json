@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s0aedf46c57f4fb3946a5ef743b06335",
+    "_skin_": "s10bff65a259461fb727a8b51feda11f",
     "_text_": "Incorrect UserId/Invite Code.",
     "_top_": {
         "type": "number",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u6689a362e46451bb549ecd5825137ac",
+    "kuid": "u600daf7e84b417fb37571740bd9b13c",
     "masterType": 1,
     "name": "kony.ui.Label",
     "parent": "flxErrManual",

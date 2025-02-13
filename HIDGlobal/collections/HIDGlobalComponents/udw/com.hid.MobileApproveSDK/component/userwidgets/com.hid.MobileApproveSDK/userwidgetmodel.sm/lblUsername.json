@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s29b6bbef5a64c59aaa101a3654e5831",
+    "_skin_": "s2596ed656fc4c4eb6abb98e82b9a3bb",
     "_text_": "Username",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s4b32e5d0ae4463ea26b002114b2b0f7",
+    "focusskin": "se0b0239431e48c58c6e5be4b876bbd1",
     "id": "lblUsername",
     "info": null,
     "ipad": {
@@ -68,7 +68,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "u3c811d995344efbb5d24bd7f1f4b172",
+    "kuid": "u982b32b335e4fa5aac48a4cbee3446d",
     "name": "kony.ui.Label",
     "parent": "flxUsername",
     "pf": "userwidgetmodel",

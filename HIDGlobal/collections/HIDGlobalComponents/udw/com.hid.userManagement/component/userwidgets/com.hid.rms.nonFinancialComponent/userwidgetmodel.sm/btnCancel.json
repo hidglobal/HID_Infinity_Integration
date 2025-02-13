@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s7812efa39b0406eb079b818348a8292",
+    "_skin_": "s589ddca96ab474c9594651a66880fa9",
     "_text_": "CANCEL",
     "_top_": {
         "type": "string",
@@ -37,11 +37,11 @@
     "displaytext": true,
     "focusskin": null,
     "id": "btnCancel",
-    "ide_onClick": "AS_Button_cf5757dd7eaf49cfb3e1faefbf3cb7b6",
+    "ide_onClick": "AS_Button_e41f90c5c23f48a592eb8c23423527a8",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u81181b8030e4ac2aa89844695031658",
+    "kuid": "u8e68b1753a844e2ada904c8e1237e48",
     "name": "kony.ui.Button",
     "parent": "flxButtons",
     "pf": "userwidgetmodel",

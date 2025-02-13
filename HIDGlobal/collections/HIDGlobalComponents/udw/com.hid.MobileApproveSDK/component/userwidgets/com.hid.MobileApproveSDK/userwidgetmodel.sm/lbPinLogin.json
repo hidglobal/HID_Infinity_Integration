@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s4b32e5d0ae4463ea26b002114b2b0f7",
+    "_skin_": "se0b0239431e48c58c6e5be4b876bbd1",
     "_text_": "PIN",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s4b32e5d0ae4463ea26b002114b2b0f7",
+    "focusskin": "se0b0239431e48c58c6e5be4b876bbd1",
     "id": "lbPinLogin",
     "info": null,
     "ipad": {
@@ -68,7 +68,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "ua1bbd6accd14472b508f17ef7da57c1",
+    "kuid": "uebef1c7547b46968530e507219ae033",
     "name": "kony.ui.Label",
     "parent": "flxPinLogin",
     "pf": "userwidgetmodel",

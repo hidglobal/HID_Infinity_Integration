@@ -168,16 +168,16 @@ define(["com/hid/rms/payments/PaymentsBusinessController"],function(PaymentsBusi
          this.mandatoryEventEmitter(this.onRMSFailure, "onRMSFailure", success);
          return;
       }
-    /*  try{
-        tags = JSON.parse(tags);
-      }catch(error){
-        tags = [];
-      }*/
+//       try{
+//         tags = JSON.parse(tags);
+//       }catch(error){
+//         tags = [];
+//       }
       if(tags.length == 0){
          this.mandatoryEventEmitter(this.onRMSFailure, "onRMSFailure", success);
          return;
       }
-    //  let score = success.score;
+//       let score = success.score;
       let score = success.risk;
       let tagSet = new Set(tags);
       this.app_action_id = success.app_action_id;

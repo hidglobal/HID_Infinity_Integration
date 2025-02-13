@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s3fc2a2c630a43eea12139314d051b75",
+    "_skin_": "s1127c5ba3c647ba93a022d81cd57a6b",
     "_text_": "Approve",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u0d3cb510c594dbab0000a6a2b562dc3",
+    "kuid": "u03227d56045499cb3fc500015ccd2d6",
     "name": "kony.ui.Label",
     "parent": "flxApproveLight",
     "pf": "userwidgetmodel",

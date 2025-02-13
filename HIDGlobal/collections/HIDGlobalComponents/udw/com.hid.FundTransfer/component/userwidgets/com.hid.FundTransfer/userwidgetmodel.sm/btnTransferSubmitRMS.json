@@ -25,7 +25,7 @@
         "type": "string",
         "value": "6%"
     },
-    "_skin_": "s61b9da2f8da4d4394c3c84c3f0d2727",
+    "_skin_": "s0954e185c204b60832802b9758b0a5d",
     "_text_": "Transfer",
     "_top_": {
         "type": "string",
@@ -43,12 +43,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s31e6138eed94ed9b3cc6e3270da03c2",
+    "focusskin": "sbd372c58078467e9f9207f5a40bf4ce",
     "id": "btnTransferSubmitRMS",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u9e9b5313568407c90f1cbd02a162dc0",
+    "kuid": "u31f0175321c4a088d69c87765f07950",
     "name": "kony.ui.Button",
     "parent": "flxBtns",
     "pf": "userwidgetmodel",

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s1609b4851d3424f8d56e86e173c20db",
+    "_skin_": "sd5e47f3483b465996e78aae049aee8c",
     "_top_": {
         "type": "string",
         "value": "26.39%"
@@ -59,11 +59,11 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "sd1cd37c4288463fb5bd9d8452a2458d",
+    "focusskin": "s0c46352277d4260b3fed8db36d04696",
     "id": "flxMainUI",
     "info": null,
     "isvisible": true,
-    "kuid": "u3dd02cd8f2b41089699db821bb29824",
+    "kuid": "u213eb0a7e63446c98e102344534002c",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxActivationCode",

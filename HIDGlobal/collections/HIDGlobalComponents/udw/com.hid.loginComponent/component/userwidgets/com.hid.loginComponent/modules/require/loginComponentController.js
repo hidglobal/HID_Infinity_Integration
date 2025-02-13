@@ -1,10 +1,11 @@
 define(['com/hid/loginComponent/AuthenticationPresentationController'], function(AuthenticationPresentationController) {
 
   var contexts = ["Login","OTP","OTPError","PushDevices", "Approve","OOBPIN","Secure","ScanToApprove","ScanToApproveMain","LoginFIDO"];
-
+  var clientProperties = {};
   return {
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       this.resetUIFields();
+      this.getClientAppProperties();
       this.view.btnLogin.onClick = this.loginPassword;
       this.view.tbxPassword.onDone = this.loginPassword;
       this.view.btnLoginOOBPIN.onClick = this.loginSMSOTP;
@@ -127,7 +128,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         return this._MFA;
       });
       defineSetter(this, "MFA", function(val) {
-        if(!["OTP_SMS","OTP_EML","APPROVE","OTP_HWT","NO_MFA"].some(v=>v===val)){
+     /*   if(!["OTP_SMS","OTP_EML","APPROVE","OTP_HWT","NO_MFA"].some(v=>v===val)){
           throw {
             "type": "CUSTOM",
             "message": "MFA property is Invalid"
@@ -145,7 +146,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
             "type": "CUSTOM",
             "message": "MFA property is Invalid.Cannot set MFA value = NO_MFA for selected FirstFactor"
           };
-        }
+        }*/
         this._MFA = val;
       });
     },
@@ -158,6 +159,8 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     isKnownDevice : false,
     client_ip : "",
     newrequest : "",
+    loginCorrelationIdPrefix: "LOGN-",
+    correlationId : "",
     setContext: function(context) {
     }, 
     
@@ -172,6 +175,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       }
       this.username = this.view.tbxUser.text;
       this.password = this.view.tbxPassword.text;
+      this.correlationId = this.loginCorrelationIdPrefix + this.generateUUID();
       this.login(this._isRMSEnabled,this.username,this.password);
     },
     loginSecureCode : function(){     
@@ -185,6 +189,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       }
       this.username = this.view.tbxUserSecure.text;
       this.password = this.view.tbxSecureCode.text;
+      this.correlationId = this.loginCorrelationIdPrefix + this.generateUUID();
       this.login(this._isRMSEnabled,this.username,this.password);
       
     },
@@ -192,7 +197,8 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     loginFIDO : function() {
       this.username = this.view.tbxUserFIDO.text;
       this.commonEventHandler(this.showLoading, "");
-      AuthenticationPresentationController.getFIDOAuthentication(this.username, this.getFIDOAuthenticationSuccess,this.getFIDOAuthenticationFailure);
+      this.correlationId = this.loginCorrelationIdPrefix + this.generateUUID();
+      AuthenticationPresentationController.getFIDOAuthentication(this.username, this.getFIDOAuthenticationSuccess,this.getFIDOAuthenticationFailure,this.correlationId);
     },
     
     getFIDOAuthenticationFailure: function(error) {
@@ -265,7 +271,8 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.username = this.view.tbxUserOOBPIN.text;
       this.password = this.view.tbxOOBPIN.text;
       this.commonEventHandler(this.showLoading, "");
-      AuthenticationPresentationController.sendOTP(this._FirstFactor, this.username,this.sendSMSOTPSuccess, this.sendSMSOTPFailure, true, this.password);
+      this.correlationId = this.loginCorrelationIdPrefix + this.generateUUID();
+      AuthenticationPresentationController.sendOTP(this._FirstFactor, this.username,this.sendSMSOTPSuccess, this.sendSMSOTPFailure, this.correlationId ,true, this.password);
     }, 
     sendSMSOTPSuccess : function(response){
       this.view.lblWelcome6.text = "HID Out Of Band SMS OTP";
@@ -345,7 +352,9 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       if(this._FirstFactor == "FIDO"){
         this.rmsLoginApiCall(this.username,this.password,this.request_uri,this.csrf);
       }
-      this.rmsLoginApiCall(this.username,this.password);
+      else{
+        this.rmsLoginApiCall(this.username,this.password);
+      }
       
     },
     
@@ -375,21 +384,23 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     
     generateQr: function(){
 		this.contextSwitch("ScanToApprove");
+      	this.correlationId = this.loginCorrelationIdPrefix + this.generateUUID();
 		this.getScanToApproveQrData();
     },
     
     
     getScanToApproveQrData: function(){
 		this.commonEventHandler(this.showLoading, "");
-    	AuthenticationPresentationController.getScanToApproveQrData(this.getScanToApproveQrDataSuccess,this.getScanToApproveQrDataFailure);
+    	AuthenticationPresentationController.getScanToApproveQrData(this.getScanToApproveQrDataSuccess,this.getScanToApproveQrDataFailure,this.correlationId);
     },
 	
 	
 	getScanToApproveQrDataSuccess: function(response){
       this.commonEventHandler(this.dismissLoading, "");
       kony.application.getCurrentForm().lblSwitchSignIn.setVisibility(false);
-      this.view.qrcodegeneratorNew.dataToEncode = response.getScanToApproveQrData[0].txid;
-      this.view.qrcodegeneratorNew.generate();
+     // this.view.qrcodegeneratorNew.dataToEncode = response.getScanToApproveQrData[0].txid;
+     // this.view.qrcodegeneratorNew.generate();
+      this.view.QRCodeGenerator.generateQRCode(response.getScanToApproveQrData[0].txid);
       this.view.forceLayout();
       kony.print("firstfactor after logout" + this._Firstfactor);
       if (this._isRMSEnabled === true){
@@ -416,7 +427,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       kony.print("RMS => isKnownDevice:"+this.isKnownDevice);
       var self = this;
       if(this.client_ip.trim() !== ""){
-      let randomValue = Math.floor(Math.random()*100000);
+      let randomValue = this.generateUUID();
       this.app_session_id = String(randomValue);
       kony.print("app_session_id" + this.app_session_id);
       const rmsLoad = {
@@ -426,7 +437,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         "app_session_id" : this.app_session_id
       };
       //this.commonEventHandler(this.showLoading, "");
-      AuthenticationPresentationController.pollForScanToApprove("",response.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure,rmsLoad);
+      AuthenticationPresentationController.pollForScanToApprove("",response.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure,this.correlationId,rmsLoad);
        
       }else{
         
@@ -443,7 +454,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       }
       else{
       kony.print("rms not enabled");
-      AuthenticationPresentationController.pollForScanToApprove("",response.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure);
+      AuthenticationPresentationController.pollForScanToApprove("",response.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure,this.correlationId);
       }
     },
     
@@ -461,7 +472,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       else{
         this.client_ip = "";
       }
-      let randomValue = Math.floor(Math.random()*100000);
+      let randomValue = this.generateUUID();
       this.app_session_id = String(randomValue);
       kony.print("app_session_id" + this.app_session_id);
       const rmsLoad = {
@@ -471,14 +482,14 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         "app_session_id" : this.app_session_id
       };
       
-      AuthenticationPresentationController.pollForScanToApprove("",qrDataResponse.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure,rmsLoad);
+      AuthenticationPresentationController.pollForScanToApprove("",qrDataResponse.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure,this.correlationId,rmsLoad);
       
     },
     
     getClientIpForScanToApproveFailure: function(qrDataResponse,response){
       this.commonEventHandler(this.dismissLoading, "");
       this.client_ip = "";
-      let randomValue = Math.floor(Math.random()*100000);
+      let randomValue = this.generateUUID();
       this.app_session_id = String(randomValue);
       kony.print("app_session_id" + this.app_session_id);
       const rmsLoad = {
@@ -487,7 +498,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         "client_ip" : this.client_ip,
         "app_session_id" : this.app_session_id
       };
-      AuthenticationPresentationController.pollForScanToApprove("",qrDataResponse.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure,rmsLoad);
+      AuthenticationPresentationController.pollForScanToApprove("",qrDataResponse.getScanToApproveQrData[0].auth_req_id,"APPROVE",this.pollForScanToApproveSuccess,this.pollForScanToApproveFailure,this.correlationId,rmsLoad);
       //kony.print(JSON.stringify(response));
     },
    
@@ -496,8 +507,9 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       kony.print("qr data failure"+ response);
       this.view.lblError.text = "Failed to generate Qr code, Someting went wrong. Click on button below to Genetrate Qr to try login again"
       this.view.lblError.skin = "sknHIDError";
-      this.view.qrcodegeneratorNew.dataToEncode = " ";
-      this.view.qrcodegeneratorNew.generate();
+      //this.view.qrcodegeneratorNew.dataToEncode = " ";
+      //this.view.qrcodegeneratorNew.generate();
+      this.view.QRCodeGenerator.generateQRCode(" ");
       this.commonEventHandler(this.dismissLoading, "");
       this.contextSwitch("ScanToApproveMain");
     },
@@ -520,14 +532,15 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
         this.view.lblError.text = "Login failed, Something went wrong. Click on button below to Genetrate Qr to try login again."
       } 
       this.view.lblError.skin = "sknScanToApproveError";
-      this.view.qrcodegeneratorNew.dataToEncode = " ";
-      this.view.qrcodegeneratorNew.generate();
+  //    this.view.qrcodegeneratorNew.dataToEncode = " ";
+  //    this.view.qrcodegeneratorNew.generate();
+      this.view.QRCodeGenerator.generateQRCode(" ");
       this.contextSwitch("ScanToApproveMain");
     },
     
    
     rmsLoginApiCall : function(username,password,request_uri="",csrf=""){
-      let randomValue = Math.floor(Math.random()*100000);
+      let randomValue = this.generateUUID();
       this.app_session_id = String(randomValue) ;
 
       const rmsLoad = {
@@ -538,11 +551,11 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       };
       this.commonEventHandler(this.showLoading, "");
       if(this._FirstFactor ==="STATIC_PWD"){
-        AuthenticationPresentationController.validatePassword(username, password, this.onValidatePasswordRMSSuccess, this.onValidatePasswordRMSFailure,rmsLoad);
+        AuthenticationPresentationController.validatePassword(username, password, this.onValidatePasswordRMSSuccess, this.onValidatePasswordRMSFailure,this.correlationId,rmsLoad);
       } else if(this._FirstFactor ==="FIDO"){
-        AuthenticationPresentationController.authenticateFido(username, password, request_uri,csrf, this.firstFactorRMSSuccess, this.firstFactorRMSFailure,rmsLoad);
+        AuthenticationPresentationController.authenticateFido(username, password, request_uri,csrf, this.firstFactorRMSSuccess, this.firstFactorRMSFailure,this.correlationId,rmsLoad);
       } else {
-        AuthenticationPresentationController.authenticateFirstFactor(username, password, this._FirstFactor, this.firstFactorRMSSuccess, this.firstFactorRMSFailure,rmsLoad);              
+        AuthenticationPresentationController.authenticateFirstFactor(username, password, this._FirstFactor, this.firstFactorRMSSuccess, this.firstFactorRMSFailure,this.correlationId,rmsLoad);              
       }
     },
     firstFactorRMSSuccess : function(response){      
@@ -666,11 +679,11 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     },
     updateRMSServiceEvent : function(rmsevent){
       if(rmsevent === "STEP_DOWN" && this._FirstFactor !=="OTP_SMS_PIN"){
-        AuthenticationPresentationController.updateRMSServiceEvent(rmsevent, this.mfa_key, this.onStepDownSuccessCB, this.onStepDownFailureCB );
+        AuthenticationPresentationController.updateRMSServiceEvent(rmsevent, this.mfa_key, this.onStepDownSuccessCB, this.onStepDownFailureCB ,this.correlationId);
       }else if(rmsevent === "STEP_DOWN" && this._FirstFactor ==="OTP_SMS_PIN"){
-        AuthenticationPresentationController.updateRMSServiceEvent(rmsevent, this.mfa_key, this.onStepDownSuccessCB, this.onStepDownFailureCB, this.password);
+        AuthenticationPresentationController.updateRMSServiceEvent(rmsevent, this.mfa_key, this.onStepDownSuccessCB, this.onStepDownFailureCB, this.password,this.correlationId);
       }else if((rmsevent === "APPROVE_DENY") || (rmsevent === "APPROVE_TIMEOUT")){
-        AuthenticationPresentationController.updateRMSServiceEvent(rmsevent, this.mfa_key, this.onApproveRMSEventSuccessCB, this.onApproveRMSEventFailureCB);
+        AuthenticationPresentationController.updateRMSServiceEvent(rmsevent, this.mfa_key, this.onApproveRMSEventSuccessCB, this.onApproveRMSEventFailureCB,this.correlationId);
       }
     },
     onApproveRMSEventSuccessCB: function(response){
@@ -723,11 +736,11 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     loginPasswordWithoutRMS : function(username,password,request_uri="",csrf=""){
       this.commonEventHandler(this.showLoading, "");
       if(this._FirstFactor ==="STATIC_PWD"){
-        AuthenticationPresentationController.validatePassword(username, password, this.onValidatePasswordSuccess, this.onValidatePasswordFailure);
+        AuthenticationPresentationController.validatePassword(username, password, this.onValidatePasswordSuccess, this.onValidatePasswordFailure,this.correlationId);
       } else if(this._FirstFactor ==="FIDO"){
-        AuthenticationPresentationController.authenticateFido(username, password, request_uri,csrf, this.firstFactorSuccess, this.firstFactorFailure);
+        AuthenticationPresentationController.authenticateFido(username, password, request_uri,csrf, this.firstFactorSuccess, this.firstFactorFailure,this.correlationId);
       } else {
-        AuthenticationPresentationController.authenticateFirstFactor(username, password, this._FirstFactor, this.firstFactorSuccess, this.firstFactorFailure);             
+        AuthenticationPresentationController.authenticateFirstFactor(username, password, this._FirstFactor, this.firstFactorSuccess, this.firstFactorFailure,this.correlationId);             
       }
     },
     firstFactorSuccess : function(response){      
@@ -793,13 +806,13 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
     initiateSecondFactor : function(){
       switch(this._MFA){
         case "OTP_SMS":
-          AuthenticationPresentationController.sendOTP(this._MFA, this.username, this.sendOTPSuccess, this.sendOTPFailure);
+          AuthenticationPresentationController.sendOTP(this._MFA, this.username, this.sendOTPSuccess, this.sendOTPFailure,this.correlationId);
           break;
         case "OTP_EML":
-          AuthenticationPresentationController.sendOTP(this._MFA, this.username, this.sendOTPSuccess, this.sendOTPFailure);
+          AuthenticationPresentationController.sendOTP(this._MFA, this.username, this.sendOTPSuccess, this.sendOTPFailure,this.correlationId);
           break;
         case "APPROVE":
-          AuthenticationPresentationController.getApproveDevices(this.username, this.getDeviceSuccess, this.getDeviceFailure);
+          AuthenticationPresentationController.getApproveDevices(this.username, this.getDeviceSuccess, this.getDeviceFailure,this.correlationId);
           break;
         case "OTP_HWT":
           this._MFA = "APPROVE";
@@ -807,14 +820,14 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
           break;
         case "NO_MFA":
           if(this._isRMSEnabled === true){
-	    AuthenticationPresentationController.validateOTP("STEP_DOWN", this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure);
+	    AuthenticationPresentationController.validateOTP("STEP_DOWN", this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure,this.correlationId);
           } else {
-	    AuthenticationPresentationController.validateOTP(this._MFA, this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure);
+	    AuthenticationPresentationController.validateOTP(this._MFA, this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure,this.correlationId);
 	  }
           break;
           
         case "STEP_DOWN":
-          AuthenticationPresentationController.validateOTP(this._MFA, this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure);
+          AuthenticationPresentationController.validateOTP(this._MFA, this.password, this.mfa_key, this.AuthSuccess, this.onValidateOTPFailure,this.correlationId);
           break;
       }
     }, 
@@ -854,7 +867,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.commonEventHandler(this.showLoading, "");
       this.view.lblErrorOTP.text = "";
       AuthenticationPresentationController.validateOTP(this._MFA, this.view.tbxOTP.text, this.mfa_key, this.AuthSuccess,
-                                                       this.onValidateOTPFailure);
+                                                       this.onValidateOTPFailure,this.correlationId);
     }, 
     AuthSuccess : function(response){
       if(this._MFA === "APPROVE"){
@@ -944,7 +957,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
        else {
           this.deviceId = "";
           AuthenticationPresentationController.initiateApprove(this.username, "", this.initiateApproveSuccess,
-                                                               this.initiateApproveFailure);
+                                                               this.initiateApproveFailure,this.correlationId);
         }
     }, 
     initiateApprove : function(rowNumber){
@@ -953,7 +966,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       let data = totalData[rowNumber];
       this.deviceId = data.deviceId;
       AuthenticationPresentationController.initiateApprove(this.username, this.deviceId, this.initiateApproveSuccess,
-                                                           this.initiateApproveFailure);
+                                                           this.initiateApproveFailure,this.correlationId);
     },
     getDeviceFailure : function(response) {
       this.approveView(false, "Approve");
@@ -973,7 +986,7 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       this.commonEventHandler(this.dismissLoading, "");
       this.view.lblApproveNot.text = "We've sent a notification to your device. Approve the notification to continue.";
       AuthenticationPresentationController.pollForApprove(response, this.mfa_key, this.AuthSuccess,
-                                                          this.onApproveFailure);
+                                                          this.onApproveFailure,this.correlationId);
     }, 
     initiateApproveFailure : function(respose){
       this.approveView(false, "Approve");
@@ -1097,11 +1110,11 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       }
       AuthenticationPresentationController.cancelApprovePolling();
       AuthenticationPresentationController.initiateApprove(this.username, this.deviceId, this.initiateApproveSuccess,
-                                                           this.initiateApproveFailure);
+                                                           this.initiateApproveFailure,this.correlationId);
     }, 
     contextSwitch: function(context) {
-      if (context === "ScanToApproveMain"){
-        this.commonEventHandler(this.changeContext,"ScanToApproveAuth");
+      if (context === "ScanToApproveMain" || context === "ScanToApprove"){
+        this.commonEventHandler(this.changeContext,"ApproveAuth");
       }
       else{
       	this.commonEventHandler(this.changeContext,context+"Auth");
@@ -1145,13 +1158,15 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       }    
     },
     
+    
     resetQrUi: function(){
       //this.view.flxScanToApprove.setVisibility(false);
       //this.contextSwitch("ScanToApproveMain");
       this.view.lblError.skin = "sknScanToApproveNotfication";
       this.view.lblError.text = "Click on the Button below to generate a QR to login."
-      this.view.qrcodegeneratorNew.dataToEncode = " ";
-      this.view.qrcodegeneratorNew.generate();
+     // this.view.qrcodegeneratorNew.dataToEncode = " ";
+     // this.view.qrcodegeneratorNew.generate();
+     this.view.QRCodeGenerator.generateQRCode(" ");
     },
     
     getUserName : function(){
@@ -1176,6 +1191,26 @@ define(['com/hid/loginComponent/AuthenticationPresentationController'], function
       if(event){
         event(intent);
       }
+    },
+    
+    generateUUID: function() {
+      const crypto = window.crypto || window.msCrypto;
+      const buffer = new Uint16Array(8);
+      crypto.getRandomValues(buffer);
+
+      buffer[3] &= 0x0fff;
+      buffer[3] |= 0x4000;
+      buffer[4] &= 0x3fff;
+      buffer[4] |= 0x8000;
+
+      return buffer.reduce((str, byte, i) => {
+        const hex = byte.toString(16).padStart(4, '0');
+        return str + (i === 2 || i === 4 || i === 6 ? '-' : '') + hex;
+      }, '');
+    },
+
+    getClientAppProperties : function(){
+     AuthenticationPresentationController.getClientAppProperties();     
     }
   };
 });

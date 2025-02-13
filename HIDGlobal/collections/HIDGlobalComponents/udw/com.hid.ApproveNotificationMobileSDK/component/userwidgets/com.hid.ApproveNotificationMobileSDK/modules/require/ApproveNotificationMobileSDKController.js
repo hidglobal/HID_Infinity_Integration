@@ -17,6 +17,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
   sdkConstants.ERROR_CNF_PWD = "Please confirm the new PIN";
   sdkConstants.ERROR_PWD_MATCH = `New PIN cannot be same as old PIN`;
   sdkConstants.ERROR_MESSAGE =`Password change is required`;
+  sdkConstants.TRANSACTION_EXPIRED = "Transaction is Expired!";
   var deviceHeight = kony.os.deviceInfo().screenHeight;
   var deviceWidth = kony.os.deviceInfo().screenWidth;
   var heightFactor = 0.060;
@@ -59,6 +60,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       //this.view.btnDeny.onClick = source => this.upateStatus(sdkConstants.STATUS_DENY);
       this.view.btnSubmitPasswordTimeout.onClick = this.btnSubmitPasswordTimeOut_onClick;
       this.view.btnSubmitPassword.onClick = this.btnSubmitPassword_onClick;
+      this.view.btnOKAlert.onClick = this.btnOKAlert_onClick;
       this.view.flxConsensusMain.onTouchMove = (source ,x,y,obj) => this.slide(x);
       this.view.flxApproveSliderMain.onTouchMove = (source,x,y,changedObj) => this.approveSlide(x);
       this.view.flxDenySliderMain.onTouchMove = (source,x,y,changedObj) => this.denySlide(x);
@@ -98,11 +100,15 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         this._transactionID = val;
       });
     },
-    showAuthentication : function(){
-        this.contextSwitch("Loading");
-      kony.print(`ApproveSDK --> Inside showAuthentication ApproveNotification isVisible: ${this.view.isVisible}`);
+    showAuthentication: function(){
+      this.contextSwitch("Loading");
+      var txID = this._transactionID;
+      this.nativeController.retriveTransaction(txID,"",true);
+      /*
         if(!this.isAndroid()){
-           kony.timer.schedule("timer",()=>{
+           let randomTimer = Math.floor(Math.random()*1000);
+    	   let timer = `timer${randomTimer}`;
+           kony.timer.schedule(timer,()=>{
              var txID = this._transactionID;
              let str = this.nativeController.retriveTransaction(txID,"",true);
             kony.print(`ApproveSDK --> Value for str from retrieveTransaction: ${str}`);
@@ -112,12 +118,12 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
            },0.5,false); 
         }else{
           var txID = this._transactionID;
-          this.contextSwitch("Password");
+         // this.contextSwitch("Password");
           this.nativeController.retriveTransaction(txID,"",true);
-        }
+        }*/
       
     },
-    btnSubmitPassword_onClick : function(){
+    btnSubmitPassword_onClick: function(){
       kony.print("Password Clicked");
       this.view.lblErrorPIN.setVisibility(false);
       if(this.view.tbxPassword.text == "" || this.view.tbxPassword.text == null  || this.view.tbxPassword.text == undefined){
@@ -127,9 +133,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
       var txID = this._transactionID;
       this.contextSwitch("Loading");
+      this.view.tbxPassword.text = "";
       this.nativeController.retriveTransaction(txID,this.view.tbxPassword.text,false);
     },
-    retriveTransactionCallback : function(status,message,txInfo){
+    retriveTransactionCallback: function(status,message,txInfo){
+      this.view.tbxPassword.text = "";
       kony.print(`ApproveSDK ---> retriveTransactionCallback ${status} ${message} ${txInfo}`);
       if(status == "error"){
         this.contextSwitch("UpdatePassword");
@@ -158,7 +166,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         this.view.forceLayout();
       }
     },
-    retrieveTransactionIds : function(username,isAscendingFlag = true){
+    retrieveTransactionIds: function(username,isAscendingFlag = true){
         if(username){
           this.nativeController.updateUsername(username);
         }
@@ -166,7 +174,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         kony.print("ApproveSDK --> isAscendingOrder in ApproveNotification"+isAscendingOrder);
         this.nativeController.retrievePendingNotifications();
     },    
-    onRecievedNotificationsCallback : function(message,ids){
+    onRecievedNotificationsCallback: function(message,ids){
       kony.print("message in recievedNotificationCallback: "+message);
       if(message == "success"){
         var obj = JSON.parse(ids);
@@ -180,16 +188,16 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         this.commonEventEmitter(this.onRetrieveNotificationsCallback,[message]); 
       }
     },
-    onCompletionCallback : function(status){
+    onCompletionCallback: function(status){
       this.view.tbxPassword.text = "";
-      this.view.tbxPasswordTimeout = "";
+      this.view.tbxPasswordTimeout.text = "";
       kony.print("ApproveSDK ----> Success Status is "+status)
       this.resetSlide();
       this.view.setVisibility(false);
       this.commonEventEmitter(this.onCompletion, [statusRegistered]);
       statusRegistered = "";
     },
-    pwdPromtCallback : function(eventType,eventCode){
+    pwdPromtCallback: function(eventType,eventCode){
       kony.print(`In pwdPromtCallback with eventCode: ${eventCode} and eventType: ${eventType}`);
       if(eventCode == "5002"){
         this.contextSwitch("UpdatePassword");
@@ -197,10 +205,31 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       if(eventCode == "5001"){
         this.view.lblErrorPINTimeout.text = sdkConstants.ERROR_PIN;
         this.view.lblErrorPINTimeout.setVisibility(true);
+        this.contextSwitch("PasswordTimeout");
       }
-      this.contextSwitch("PasswordTimeout");
+      if(eventCode == "5000"){
+        this.contextSwitch("PasswordTimeout");
+      }
+      if(eventCode == "1000"){
+        this.view.flxLoading.setVisibility(false);
+        this.view.flxMain.setVisibility(false);
+        this.view.flxPassword.setVisibility(false);
+        this.view.flxPasswordTimeout.setVisibility(false);
+        this.view.forceLayout();
+        this.view.lblAlertMessage.text = sdkConstants.TRANSACTION_EXPIRED;
+        this.view.flxAlertBox.setVisibility(true);
+        this.view.forceLayout();
+      }
     },
-    btnSubmitPasswordTimeOut_onClick : function(){
+    btnOKAlert_onClick: function(){
+      this.view.tbxPassword.text = "";
+      this.view.tbxPasswordTimeout.text = "";
+      kony.print("ApproveNotificationMobileSDK ----> Button Ok Clicked");
+      this.view.flxAlertBox.setVisibility(false);
+      this.view.setVisibility(false);
+      this.view.forceLayout();
+    },
+    btnSubmitPasswordTimeOut_onClick: function(){
       kony.print("Timeout Clicked");
       this.view.lblErrorPINTimeout.setVisibility(false);
       var pwd = this.view.tbxPasswordTimeout.text;

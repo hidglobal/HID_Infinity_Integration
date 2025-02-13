@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s3703628cdf5468bbe57f7dce64c0a73",
+    "_skin_": "sb7f683c2b564674a8524270598fc28c",
     "_text_": "Registration Successful",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u0841ba3bb684cef8284436cea52adee",
+    "kuid": "ua49d1adecac48eebc265bffdbc8bb93",
     "name": "kony.ui.Label",
     "parent": "flxRegistrationSuccess",
     "pf": "userwidgetmodel",

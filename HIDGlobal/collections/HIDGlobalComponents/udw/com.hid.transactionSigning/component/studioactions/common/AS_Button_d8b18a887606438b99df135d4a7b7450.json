@@ -1,0 +1,21 @@
+{
+    "AS_Button_d8b18a887606438b99df135d4a7b7450": {
+        "id": "AS_Button_d8b18a887606438b99df135d4a7b7450",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_bc6b6a62195a4711844aa6c97e59def6",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "btnAdd_beneficiary",
+            "display": "btnAdd_beneficiary",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

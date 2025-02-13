@@ -1,0 +1,72 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "25%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Enter PIN",
+    "_skin_": "se363c2462214658aa0134c41fbf631a",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "14%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "android": {},
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "s50fa7a7d1fd4a4ba172f88dc9bbc406",
+    "id": "txtEnterPin",
+    "info": null,
+    "iphone": {},
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardstyle": "telpad",
+    "keyboardtype": "A",
+    "kuid": "ua3f442d9ae4485ca9fd4de7ba8ecae8",
+    "mode": "N",
+    "name": "kony.ui.TextBox2",
+    "parent": "flxPasswordPromptBody",
+    "pf": "userwidgetmodel",
+    "placeholderskin": "sb18dbe19f804f5788f0e86aa56eb681",
+    "restrictcharactersset": "!@#$%^&*(){}><  +=/,-_.N;",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": true,
+    "textinputmode": "N",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 1
+}

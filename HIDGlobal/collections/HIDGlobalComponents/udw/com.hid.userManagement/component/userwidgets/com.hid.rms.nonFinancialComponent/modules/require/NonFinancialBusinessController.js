@@ -6,6 +6,7 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
   globals.approveFlag = false;
   globals.approvePoll = false;
   var userName = "";
+  var deviceType = "DT_TDSV4B";
   var instance = null;
   var pollCounter = 2;
   
@@ -89,7 +90,8 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
                       "Scope": "LOGIN" ,
                       "Name": "Temenos Internet Banking",
                       "userid": "${loginJSON.userid}",
-                      "password": "${loginJSON.password}"
+                      "password": "${loginJSON.password}",
+                      "correlationId": "${loginJSON.correlationId}"
                   }
             }`;
         }
@@ -97,65 +99,40 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
 
   NonFinancialBusinessController.prototype.validatePassword = function(loginJson, S_CB, F_CB,rmsLoad=null){
     konymp.logger.trace("----------Entering validatePassword Function---------", konymp.logger.FUNCTION_ENTRY);
-    var client = KNYMobileFabric;
-    var serviceName = "customHIDLoginWithoutMFA";//"customHIDLogin";
-    var identitySvc = client.getIdentityService(serviceName);
-    let loginPayload = SCAEventConstants.getLoginPayload(loginJson);
-
-    if(rmsLoad){
-      let obj = JSON.parse(loginPayload) ;
-      obj.Meta.rmspayload = rmsLoad;
-      loginPayload = JSON.stringify(obj);
+    let objectServices = ObjectServices.getDataModel("ValidatePassword");
+    const callback = (status, response) => {
+    if (status) {
+       konymp.logger.debug("ValidatePassword Function success", konymp.logger.SUCCESS_CALLBACK);
+       S_CB(response);
+     } else {
+        konymp.logger.debug("ValidatePassword function error : "+ JSON.stringify(response), konymp.logger.ERROR_CALLBACK);
+        F_CB(vresponse);
       }
-    var options = {
-      "payload" : loginPayload,
-      "authType":"STATIC_PWD",
-      "isMfa":false
     };
-
-    identitySvc.login(options,
-                      success=>{
-      var mfaDetails = identitySvc.getMfaDetails();
-      konymp.logger.debug("validatePassword Function success", konymp.logger.SUCCESS_CALLBACK);
-      userName = loginJson.userid;
-      S_CB(mfaDetails);
-      
-    },
-                      error=>{
-      konymp.logger.debug("validatePassword function error : "+ JSON.stringify(error), konymp.logger.ERROR_CALLBACK);
-      F_CB(error);
-    }
-                     );
-    konymp.logger.trace("----------Exiting validatePassword Function---------", konymp.logger.FUNCTION_EXIT);
+    objectServices.customVerb("validatePassword", loginJson, callback);        
   };
   
-  NonFinancialBusinessController.prototype.authenticateSecondFactor = function(username,factor,password,mfa_key, S_CB, F_CB){
+  NonFinancialBusinessController.prototype.authenticateSecondFactor = function(username,factor,password,mfa_key, S_CB, F_CB,correlationId){
     konymp.logger.trace("----------Entering authenticateSecondFactor Function---------", konymp.logger.FUNCTION_ENTRY);
     if(factor === "APPROVE" && !globals.approvePoll){      
       this.pollForConsensus(username,password,mfa_key, S_CB, F_CB);
       return;
     }    
+    let loginJson = {"username" : username, "password" : password, "authType" : factor , "correlationId": correlationId};
     globals.approvePoll = false;
-    var client = KNYMobileFabric;
-    let transactionId = Math.floor(Math.random()*10000000);
-    let loginJson = {"userid" : username, "password" : password, "requiredRiskScore" : "0", 
-                     "currentRiskScore" : "2", "transactionId" : transactionId};
-    var serviceName = "customHIDLoginWithoutMFA";
-    var identitySvc = client.getIdentityService(serviceName);     
-    let loginPayload = SCAEventConstants.getLoginPayload(loginJson);
-    var options = {
-      "payload" : loginPayload,
-      "authType":factor,
-      "isMfa":false
+    if(factor !== "APPROVE"){  
+      let objectServices = ObjectServices.getDataModel("ValidateSecureCode");
+      const callback = (status, response) => {
+      if (status) {
+         konymp.logger.debug("ValidateSecureCode Function success", konymp.logger.SUCCESS_CALLBACK);
+         S_CB(response);
+      } else {
+         konymp.logger.debug("ValidateSecureCode function error : "+ JSON.stringify(response), konymp.logger.ERROR_CALLBACK);
+         F_CB(response);
+      }
     };
-    identitySvc.login(options, 
-                      success => S_CB(success),
-                      error => {
-      konymp.logger.debug("authenticateSecondFactor function error : "+ JSON.stringify(error), konymp.logger.ERROR_CALLBACK);      
-      F_CB(error);
+    objectServices.customVerb("validateOTPAuth", loginJson, callback); 
     }
-                     );
-    konymp.logger.trace("----------Exiting authenticateSecondFactor Function---------", konymp.logger.FUNCTION_EXIT);
   };
   
   NonFinancialBusinessController.prototype.initiateApproveNotification = function(params, S_CB, F_CB){
@@ -185,7 +162,8 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
     const successCB = response => {
           pollCounter =2;
           if(response.ApproveStatus[0].auth_status === "accept"){
-            this.authenticateApprove(username,auth_req_id,mfa_key, S_CB, F_CB);
+           // this.authenticateApprove(username,auth_req_id,mfa_key, S_CB, F_CB);
+            S_CB(response);
           }else{
             konymp.logger.debug("Approve Notification status for authID : "+auth_req_id+ "is :"+response.ApproveStatus[0].auth_status, konymp.logger.ERROR_CALLBACK);
             F_CB(response.ApproveStatus[0].auth_status);
@@ -220,7 +198,10 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
 
   NonFinancialBusinessController.prototype.authenticateApprove = function(username,password,mfa_key, S_CB, F_CB){
      globals.approvePoll = true;
-     this.authenticateSecondFactor(username,"APPROVE",password, mfa_key, S_CB, F_CB);  
+    /*
+    V10 Release: MFA validation
+    */
+   //  this.authenticateSecondFactor(username,"APPROVE",password, mfa_key, S_CB, F_CB);  
   };
 
   NonFinancialBusinessController.prototype.sendOTP = function(params, S_CB, F_CB){
@@ -274,7 +255,7 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
   };
 
   NonFinancialBusinessController.prototype.fetchFriendlyName = function(devices){
-    let filteredResources = devices.filter(v => (v.type === "DT_TDSV4" || v.type === "DT_TDSV4B") && v.active);
+    let filteredResources = devices.filter(v => (v.type === "DT_TDSV4" || v.type === deviceType) && v.active);
     let friendlyNames = [];
     let tempJson = {};
     filteredResources.forEach(v => {
@@ -339,22 +320,6 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
   };
   
   /*
-  Change password flow with MFA: static password
-  Validate the password
-  */
-  NonFinancialBusinessController.prototype.validatePasswordforChangePwd = function(params, S_CB, F_CB) {
-    let objectServices = ObjectServices.getDataModel("ValidatePassword");
-    const callback = (status, response) => {
-      if (status) {
-        S_CB(response);
-      } else {
-        F_CB(response);
-      }
-    };
-    objectServices.customVerb("validatePassword", params, callback);
-  };  
-  
-  /*
   Change password flow with 2nd factor MFA: OTP_SMS
   Validate the OTP
   */
@@ -370,6 +335,15 @@ define(['com/hid/rms/nonFinancialComponent/KonyLogger'],function (KonyLogger) {
     objectServices.customVerb("validateOtp", params, callback);
   };
   
+ NonFinancialBusinessController.prototype.getClientAppProperties = function()
+   {
+    let configurationSvc = kony.sdk.getCurrentInstance().getConfigurationService();
+    configurationSvc.getAllClientAppProperties(function(response) {
+    clientProperties = response;
+    deviceType = (clientProperties.DEVICE_TYPE && clientProperties.DEVICE_TYPE !== null) ? clientProperties.DEVICE_TYPE : deviceType;
+      }, function(){});
+   };
+   
    function NonFinancialBusinessController() {
   }
 

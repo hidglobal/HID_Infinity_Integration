@@ -1,0 +1,45 @@
+{
+    "android": {
+        "font_size": 75,
+        "isForked": false
+    },
+    "androidwearos": {
+        "font_size": 75,
+        "isForked": false
+    },
+    "background_color": "388e3cff",
+    "bg_type": "one",
+    "border_color": "388e3cff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "desktopweb": {
+        "font_name": "Gotham-Book",
+        "font_size": 75,
+        "isForked": false
+    },
+    "font_color": "ffffffff",
+    "font_name": "iphoneSystem",
+    "font_size": 75,
+    "font_style": "normal",
+    "font_weight": "normal",
+    "ipad": {
+        "font_size": 75,
+        "isForked": false
+    },
+    "iphone": {
+        "font_size": 75,
+        "isForked": false
+    },
+    "isDefaultSkin": false,
+    "kuid": "s3489a14811e4295b6b6164bbfc713da",
+    "tabrcandroid": {
+        "font_size": 75,
+        "isForked": false
+    },
+    "wType": "Button",
+    "watchos": {
+        "font_size": 75,
+        "isForked": false
+    }
+}

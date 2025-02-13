@@ -1,0 +1,26 @@
+{
+    "AS_Button_g9a79443071c45fd89e92ddcbc4af284": {
+        "id": "AS_Button_g9a79443071c45fd89e92ddcbc4af284",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u5d2e5130abb4237a136e3c7e244b350"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_a581f4a696e248e7b05b5bc5cc0256fb",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "loginPassword",
+            "display": "loginPassword",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

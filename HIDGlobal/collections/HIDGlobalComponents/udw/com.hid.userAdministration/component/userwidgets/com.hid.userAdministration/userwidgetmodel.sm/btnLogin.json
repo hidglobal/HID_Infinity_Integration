@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sd030cc0067145b98870455c114b08e8",
+    "_skin_": "s22ec6f545e346dbab7dce26b4cb5d55",
     "_text_": "Login",
     "_top_": {
         "type": "string",
@@ -43,17 +43,17 @@
     "containerweight": 100,
     "contentalignment": 5,
     "desktopweb": {
-        "blockedUISkin": "s5463c57c45c4ad7afbe5f9b11d0ab3b"
+        "blockedUISkin": "s30b27e340d548689fb2d4c49af81932"
     },
     "disabledSkins": {},
     "displaytext": true,
-    "focusskin": "s82f05cc5267402aba8b6917d8e96128",
+    "focusskin": "sf829e860d344a97a199dc694908d9b7",
     "id": "btnLogin",
-    "ide_onClick": "AS_Button_ca3d0fd440b14f0fb80301124341d26b",
+    "ide_onClick": "AS_Button_e32094b1de154f3d8ab81a35147ae89c",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u86a5191ad63407dac92e49cc8b1efa6",
+    "kuid": "ud5f3925e2214e0f9c322c50f523b669",
     "name": "kony.ui.Button",
     "parent": "flxButtons",
     "pf": "userwidgetmodel",

@@ -22,7 +22,7 @@
         "type": "number",
         "value": "0"
     },
-    "_skin_": "s5d1fb82e63a4ef48f6a45daf56352e6",
+    "_skin_": "se42afde1c5d4a2d9f57df1dd33bb5b8",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -44,7 +44,7 @@
     "id": "CopyflxHideNewPIN0ecc86607bc7c47",
     "info": null,
     "isvisible": false,
-    "kuid": "ua4b75b6cdff4a4a81d0aeceac730e44",
+    "kuid": "ud96941868e744709bd0f3e709af7e2e",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxConfirmUpdPwd",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s727b6d399d04c25abc0b63fbfcea8fe",
+    "_skin_": "sbd4d3192abf43c9861379be0da7423e",
     "_text_": "Delete",
     "_top_": {
         "type": "string",
@@ -64,7 +64,7 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "g3a52d5180b649248aef99babda1ba5d",
+    "kuid": "e2c25651bd2849dcafbeb418a1c6351c",
     "name": "kony.ui.Label",
     "parent": "flxDelRow",
     "pf": "HIDUsersTemplate",

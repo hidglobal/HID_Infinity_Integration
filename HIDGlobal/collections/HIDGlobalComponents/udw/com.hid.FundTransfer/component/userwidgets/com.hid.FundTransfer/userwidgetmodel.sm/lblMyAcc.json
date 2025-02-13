@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb485dbaac0a46b698ade3f95d55b0b6",
+    "_skin_": "s4ca4968fe8949b3a72832ca2ec87161",
     "_text_": "My Accounts",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "uc9bca8eb66d4fd98d68b1bcd4f9395f",
+    "kuid": "u394e0b6b9df4eb9b9ea9a04a7789377",
     "name": "kony.ui.Label",
     "parent": "flxAccountDetails",
     "pf": "userwidgetmodel",

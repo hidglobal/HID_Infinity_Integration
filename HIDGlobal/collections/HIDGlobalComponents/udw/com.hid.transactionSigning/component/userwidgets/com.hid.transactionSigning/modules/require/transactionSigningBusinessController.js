@@ -1,5 +1,6 @@
 define([], function() {
   var instance = null;
+  var deviceType = "DT_TDSV4B";
   const getLogTag = function(string){
     return "transactionSigningBusinessController." + string;
   };
@@ -160,7 +161,7 @@ define([], function() {
   };  
   
   transactionSigningBusinessController.prototype.fetchFriendlyName = function(devices){
-    let filteredResources = devices.filter(v => (v.type === "DT_TDSV4" || v.type === "DT_TDSV4B") && v.active);
+    let filteredResources = devices.filter(v => (v.type === "DT_TDSV4" || v.type === deviceType ) && v.active);
     let friendlyNames = [];
     let tempJson = {};
     filteredResources.forEach(v => {
@@ -168,6 +169,29 @@ define([], function() {
       friendlyNames.push(tempJson); });
     return friendlyNames;
   };
+  
+  transactionSigningBusinessController.prototype.getServiceURL = function(S_CB, F_CB){
+    let objService = HIDObjectServices.getRepository("GetHostAndTenant");
+    const callback = (status,response) => {
+      if(response){
+        S_CB(response.GetHostAndTenant[0]);
+      }
+      else {
+        F_CB(response);
+      }
+    };
+    objService.customVerb("getServiceURL","", callback);
+  };
+
+  transactionSigningBusinessController.prototype.getClientAppProperties = function()
+   {
+    let configurationSvc = kony.sdk.getCurrentInstance().getConfigurationService();
+    configurationSvc.getAllClientAppProperties(function(response) {
+    clientProperties = response;
+    deviceType = (clientProperties.DEVICE_TYPE && clientProperties.DEVICE_TYPE !== null) ? clientProperties.DEVICE_TYPE : deviceType;
+      }, function(){});
+   };
+  
   transactionSigningBusinessController.getInstance = function() {
     instance = instance === null ? new transactionSigningBusinessController() : instance;
     return instance;

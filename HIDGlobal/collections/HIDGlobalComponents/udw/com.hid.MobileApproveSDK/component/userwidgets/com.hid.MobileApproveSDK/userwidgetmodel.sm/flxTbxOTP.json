@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s54026b39fd844c3853887b9a5a5dcf6",
+    "_skin_": "s7df5958e34140c88df33f14865ce139",
     "_top_": {
         "type": "string",
         "value": "1%"
@@ -40,11 +40,11 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "s54026b39fd844c3853887b9a5a5dcf6",
+    "focusskin": "s7df5958e34140c88df33f14865ce139",
     "id": "flxTbxOTP",
     "info": null,
     "isvisible": true,
-    "kuid": "u3c1cbb512334c12aa27b5b25485abd5",
+    "kuid": "ub952db515ff462a9f59a7d2df44dc50",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxOTP",

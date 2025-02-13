@@ -2,6 +2,10 @@ define([`com/hid/userAdministration/userAdministrationPresentationController`], 
   username = "";
   gblTimer  = null;
   var userid;
+
+  correlationId = "";
+  var userAdminCorrelationIdPrefix = "ADMN-";
+
   
   return {
     constructor: function(baseConfig, layoutConfig, pspConfig) {
@@ -80,11 +84,12 @@ define([`com/hid/userAdministration/userAdministrationPresentationController`], 
        this.view.alertMessage.text = "UserID not found";
     },
     enableDisableAuthenticator : function(context){
+      this.correlationId = userAdminCorrelationIdPrefix + this.generateUUID();
       var rowData = this.view.segAuth.data[context.row];
       let authType = rowData.authType.text;
       let sts = rowData.enableOrDisable.text == "ENABLE" ? "ENABLED" : "DISABLED";
       let active = sts == "ENABLED" ? true : false;
-      userAdministrationPresentationController.enableDisableAuthenticator(active,authType,sts,userid, success => this.onEnableDisableSuccess(success, context.row), this.onEnableDisableFailure);       
+      userAdministrationPresentationController.enableDisableAuthenticator(active,authType,sts,userid, success => this.onEnableDisableSuccess(success, context.row), this.onEnableDisableFailure,this.correlationId);       
     },
     onEnableDisableSuccess : function(response,index){
       for(var property in response) {
@@ -104,10 +109,11 @@ define([`com/hid/userAdministration/userAdministrationPresentationController`], 
       this.view.alertMessage.text = JSON.stringify(error);
     },
     resetFailureCount : function(context){
+      this.correlationId = userAdminCorrelationIdPrefix + this.generateUUID();
       this.view.alertMessage.text = ""
       var rowData = this.view.segAuth.data[context.row];
       let authType = rowData.authType.text;
-      userAdministrationPresentationController.resetFailureCount(userid, authType,  success =>this.onResetFailureCountSuccess(success,context.row), failure => this.onResetFailureCountFailure(failure, context.row));       
+      userAdministrationPresentationController.resetFailureCount(userid, authType,  success =>this.onResetFailureCountSuccess(success,context.row), failure => this.onResetFailureCountFailure(failure, context.row),this.correlationId);       
     },
     onResetFailureCountSuccess : function(response, index){
       let totalData = this.view.segAuth.data.slice();
@@ -129,6 +135,22 @@ define([`com/hid/userAdministration/userAdministrationPresentationController`], 
         }  
       }
     },
+
+    generateUUID: function() {
+      const crypto = window.crypto || window.msCrypto;
+      const buffer = new Uint16Array(8);
+      crypto.getRandomValues(buffer);
+
+      buffer[3] &= 0x0fff;
+      buffer[3] |= 0x4000;
+      buffer[4] &= 0x3fff;
+      buffer[4] |= 0x8000;
+
+      return buffer.reduce((str, byte, i) => {
+        const hex = byte.toString(16).padStart(4, '0');
+        return str + (i === 2 || i === 4 || i === 6 ? '-' : '') + hex;
+      }, '');
+    }
    
   };
 });

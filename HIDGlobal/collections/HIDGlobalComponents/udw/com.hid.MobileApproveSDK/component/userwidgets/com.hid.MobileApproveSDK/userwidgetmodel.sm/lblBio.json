@@ -17,7 +17,7 @@
         0,
         0
     ],
-    "_skin_": "s99769ca49414da1b568b07d69fcbbac",
+    "_skin_": "scd081ef1f8f4c4d8983837298af0932",
     "_text_": "Dear user do you want to enable Finger print Authentication",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u794e83e64e54e5c9f676be65078a757",
+    "kuid": "u7383b49c3aa4d439f6b6e1d4fc12605",
     "name": "kony.ui.Label",
     "parent": "flxBioConcet",
     "pf": "userwidgetmodel",

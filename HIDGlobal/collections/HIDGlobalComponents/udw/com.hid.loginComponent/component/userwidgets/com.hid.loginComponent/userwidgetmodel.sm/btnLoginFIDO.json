@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s62c06c9d97a409a9244f4a5c4e199c9",
+    "_skin_": "s82a94e978b941c198da1c9bb5640c29",
     "_text_": "LOGIN",
     "_top_": {
         "type": "string",
@@ -43,17 +43,17 @@
     "containerweight": 100,
     "contentalignment": 5,
     "desktopweb": {
-        "blockedUISkin": "sb4052daabfa44a08fe8db0819e055cb"
+        "blockedUISkin": "s35c01ab02794237921f095047ea4c21"
     },
     "disabledSkins": {},
     "displaytext": true,
-    "focusskin": "s43268be1bbd4abbb8df6d259924ff41",
+    "focusskin": "secca13ef8cd4709983a90f5748c9316",
     "id": "btnLoginFIDO",
-    "ide_onClick": "AS_Button_da8c211a1c9847e683cb13a85540b5eb",
+    "ide_onClick": "AS_Button_g9a79443071c45fd89e92ddcbc4af284",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "uff274354ef74b36a20b4fe7fb95b080",
+    "kuid": "u5d6480cd2ac4238bd7145e9c389c0ca",
     "name": "kony.ui.Button",
     "parent": "flxButtonsFIDO",
     "pf": "userwidgetmodel",

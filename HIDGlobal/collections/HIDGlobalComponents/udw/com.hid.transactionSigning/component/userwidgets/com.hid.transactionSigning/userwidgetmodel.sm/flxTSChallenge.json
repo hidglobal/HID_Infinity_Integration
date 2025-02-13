@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s7b6e14b5fa447fba8a64d91554f63ac",
+    "_skin_": "s440a3797f0644dbbc9614133d6c666c",
     "_top_": {
         "type": "string",
         "value": "6dp"
@@ -61,7 +61,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "u1ebb411f93b4c00973ac310df43dd37",
+    "kuid": "u299ddef688c4f72ad59ee77e808dc72",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "transactionSigning",

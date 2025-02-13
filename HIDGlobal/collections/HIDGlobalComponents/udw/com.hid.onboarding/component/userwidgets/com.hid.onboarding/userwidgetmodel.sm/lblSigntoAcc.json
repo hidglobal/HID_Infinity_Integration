@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sb0fa6b59c4842c4978b90dec42f6689",
+    "_skin_": "s24c05f9043e45f785312c7d3ea9dfe3",
     "_text_": "Enter your Activation Code",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ue5e9999b94f46e4b5598a0895983730",
+    "kuid": "u8355b634eb94b3b82d833f146d0df6e",
     "name": "kony.ui.Label",
     "parent": "flxLogin",
     "pf": "userwidgetmodel",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa320fdafee0481fb1b51f98fc1bb8ac",
+    "_skin_": "s22709513f2c429b9872491bc7645637",
     "_text_": "Invite Code",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "uecf6c3dbf124ba098e51401e1ca8a71",
+    "kuid": "u029891250574f0e99aa1aacbe16d3a1",
     "name": "kony.ui.Label",
     "parent": "flxManual",
     "pf": "userwidgetmodel",

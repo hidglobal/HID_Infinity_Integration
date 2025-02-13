@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "Secure Code",
-    "_skin_": "s061d417edb1490f80e0dd3c842a7b3b",
+    "_skin_": "sc8b796e91674623b14465222c36b842",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -46,21 +46,21 @@
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {
-        "placeholderSkin": "s992958069154bfd87f88e98f0b642cd"
+        "placeholderSkin": "sc460879a89e4ca7b58e8e0561541d60"
     },
     "disabledSkins": {},
-    "focusskin": "s506a3a919294ab4a5008767536cae28",
+    "focusskin": "sd9524e327db428fabb1b34f71ff178c",
     "id": "tbxSecureCode",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "u995abcd407c42a288b4a0e7bf0b09e6",
+    "kuid": "ubd234c300624463a25d8829e317754e",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "flxSecureCode",
     "pf": "userwidgetmodel",
-    "placeholderskin": "s992958069154bfd87f88e98f0b642cd",
+    "placeholderskin": "sc460879a89e4ca7b58e8e0561541d60",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": true,

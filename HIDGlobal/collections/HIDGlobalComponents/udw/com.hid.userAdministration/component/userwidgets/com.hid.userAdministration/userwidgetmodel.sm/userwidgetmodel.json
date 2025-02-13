@@ -15,7 +15,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s9eca150a96847ff948bb7d331c4be35",
+    "_skin_": "sf6e6f4a602041f8adc8cbeb1e718790",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -46,8 +46,8 @@
         "uee538a0ecd44b84b2155c78e8643bbc",
         "u8b90c0f59974999a541a64457659168",
         "uee9a02223fc4a6c87f0c4f7422e033b",
-        "ufd8ea59e400436b9c6cf4e7e92377ec",
-        "u3b5abad1ebe4cbb8293f8f80c959684"
+        "u4773726ae5043b99ea9016985d2fb22",
+        "uc37d1e8cb9d4b8d832718c88438758d"
     ],
     "id": "userwidgetmodel",
     "info": null,
@@ -58,7 +58,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ud5c19ef7b48499995d869eb0dbdcb23",
+    "kuid": "ue815c85cc3a4bcd9ff6911dd23e3675",
     "layouttype": 2,
     "masterType": 1,
     "name": "kony.ui.Form2",

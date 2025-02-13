@@ -25,7 +25,7 @@
         0
     ],
     "_placeholder_": "",
-    "_skin_": "s80a2e19175c4f47b2f0fed3fd154456",
+    "_skin_": "s5d3351ab0a14925b31a0dcd08414970",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -54,18 +54,18 @@
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {},
-    "focusskin": "s29505abf266419bbe3bbf1161eece31",
+    "focusskin": "sece5363ba894e5ebb2de24833288b58",
     "id": "txtDeviceName",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "c2c10ae497d84ba5ab806327fdf30d6c",
+    "kuid": "a01371107a6549c9af897d2088e138a1",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "flxDeviceName",
     "pf": "CopyCopytmpDevicesSegment",
-    "placeholderskin": "sdbbc419247a4d61aa352c2d8ef9428e",
+    "placeholderskin": "sf867a2b85044c63b925dbf8951e40e3",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": false,
@@ -74,12 +74,6 @@
     "viewtype": "default",
     "wType": "TextField",
     "watchos": {
-        "render": false
-    },
-    "windows10": {
-        "render": false
-    },
-    "winphone10": {
         "render": false
     }
 }

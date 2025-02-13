@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "see45f615c0c4734b1c3e04c9fa6a662",
+    "_skin_": "s787dcec63ea43858b484669d9b24c1f",
     "_text_": "Hardware Device Registration",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u6ca678d98f54af0a1584bd8b1728030",
+    "kuid": "u005a9df1be84c9490e806fcb0195707",
     "name": "kony.ui.Label",
     "parent": "flxHW",
     "pf": "userwidgetmodel",

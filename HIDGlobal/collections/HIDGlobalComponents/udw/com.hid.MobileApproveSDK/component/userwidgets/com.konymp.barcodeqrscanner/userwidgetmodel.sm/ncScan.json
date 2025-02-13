@@ -38,55 +38,22 @@
         "render": false
     },
     "id": "ncScan",
-    "ide_onCleanup": "AS_NativeContainer_f3071f9b54c44300a73c31c8407e7f3f",
-    "ide_onCreated": "AS_NativeContainer_i0aa6e12dd444a568ecde45bdc979f1d",
+    "ide_onCleanup": "AS_NativeContainer_fdf989852fb24299a4774dc99c748e7e",
+    "ide_onCreated": "AS_NativeContainer_b018640527834c38b787332f466b4592",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kiosk": {
-        "render": false
-    },
-    "kuid": "u9e97228df1549b297c5132ad3a3f995",
+    "kuid": "u0ec3602beeb425dbeaa00616905a363",
     "name": "kony.ui.NativeContainer",
     "parent": "barcodeqrscanner",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "spaan": {
-        "render": false
-    },
-    "spaandroidtablet": {
-        "render": false
-    },
     "spabb": {
-        "render": false
-    },
-    "spaip": {
-        "render": false
-    },
-    "spaipad": {
-        "render": false
-    },
-    "spawindowstablet": {
-        "render": false
-    },
-    "spawinphone8": {
         "render": false
     },
     "wType": "NativeContainer",
     "watchos": {
-        "render": false
-    },
-    "windows10": {
-        "render": false
-    },
-    "windows8": {
-        "render": false
-    },
-    "winphone10": {
-        "render": false
-    },
-    "winphone8": {
         "render": false
     },
     "zindex": 1

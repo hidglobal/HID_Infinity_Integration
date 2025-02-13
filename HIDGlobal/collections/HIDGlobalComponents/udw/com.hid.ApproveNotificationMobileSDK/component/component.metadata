@@ -10,22 +10,22 @@
         "templates": [],
         "actions": {
             "common": {
-                "AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766": {
+                "AS_FlexContainer_b31af7a8edad4c6585ac0b786493dd32": {
                     "channel": "common",
-                    "actionId": "AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766",
-                    "actionName": "AS_FlexContainer_da88fa1de95742c6a48de23cb28eb766",
+                    "actionId": "AS_FlexContainer_b31af7a8edad4c6585ac0b786493dd32",
+                    "actionName": "AS_FlexContainer_b31af7a8edad4c6585ac0b786493dd32",
                     "key": "ide_postShow"
                 },
-                "AS_FlexContainer_f6ba12005b004a388e7d594123f4a82d": {
+                "AS_FlexContainer_fcf322a0f4f8400f81c24823f9c60fab": {
                     "channel": "common",
-                    "actionId": "AS_FlexContainer_f6ba12005b004a388e7d594123f4a82d",
-                    "actionName": "AS_FlexContainer_f6ba12005b004a388e7d594123f4a82d",
+                    "actionId": "AS_FlexContainer_fcf322a0f4f8400f81c24823f9c60fab",
+                    "actionName": "AS_FlexContainer_fcf322a0f4f8400f81c24823f9c60fab",
                     "key": "ide_onClick"
                 },
-                "AS_Image_h24046e7338b493fa03d1744d10c61e1": {
+                "AS_Image_cbeba44bd6fd4bc8ac2766497dd08f3c": {
                     "channel": "common",
-                    "actionId": "AS_Image_h24046e7338b493fa03d1744d10c61e1",
-                    "actionName": "AS_Image_h24046e7338b493fa03d1744d10c61e1",
+                    "actionId": "AS_Image_cbeba44bd6fd4bc8ac2766497dd08f3c",
+                    "actionName": "AS_Image_cbeba44bd6fd4bc8ac2766497dd08f3c",
                     "key": "ide_onTouchStart"
                 }
             }
@@ -45,9 +45,17 @@
             "slForm",
             "defBtnNormal",
             "defBtnFocus",
+            "sknBtnNo0cca2a36246d44b",
+            "sknBtnFocus0ad7fdabd7af247",
             "CopyCopyCopysknBtnCreate1",
             "sknBtnMobileComponent",
             "sknBtnFocusMobileComponent",
+            "sknFlxEnableScannerAlert0j495588c80934a",
+            "slFboxScannerMessage0b222caed5afd49",
+            "slFboxScannerEnableBtn0cd05c536b0ab45",
+            "slFboxBtnNo0bdd0a26254ce49",
+            "slFboxScannerEnableTitle0c6407fac247941",
+            "slFboxBtnYes0i541bb8e26724b",
             "CopyCopyslFbox0bd5411173c1440",
             "sknApproveLineFocus",
             "sknApproveLineNormal",
@@ -69,6 +77,8 @@
             "sknDenyFlxFocus",
             "CopyCopyslFbox0cb5ec2ca8ab640",
             "CopyCopysknScreen3",
+            "sknLblScannerAlertMessage0cbaf44492dec4f",
+            "sknLblScannerAlertTitle0e3427821409749",
             "CopyCopydefLabel5",
             "CopyCopysknLblPwdPromptNormal1",
             "CopyCopyCopyCopydefLabel0fab9151c80b847",
@@ -89,11 +99,11 @@
             "closeicon_1_3_4_1.png"
         ],
         "fonts": [
+            "Helvetica",
             "Gotham-Book",
-            "default",
-            "Helvetica"
+            "default"
         ],
-        "nativeApis": 3,
+        "nativeApis": 0,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -101,7 +111,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2024-07-08T08:21:24.164Z",
-    "createdVizVersion": "9.5.28",
-    "project_version": "sprint42"
+    "createdOn": "2025-02-13T09:27:10.614Z",
+    "createdVizVersion": "202307.0.9",
+    "project_version": "sprint45"
 }

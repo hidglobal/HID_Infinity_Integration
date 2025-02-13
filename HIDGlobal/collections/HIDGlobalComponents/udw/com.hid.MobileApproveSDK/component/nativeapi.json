@@ -1,13 +1,33 @@
 {
     "NativeFunctionAPI": {
         "iOS": {
-            "17.0": {
-                "HIDApproveSDKWrapper-iOS-17.0": {
+            "18.0": {
+                "HIDApproveSDKWrapper-iOS-18.0": {
                     "title": "HIDApproveSDKWrapper",
+                    "platform": "iOS",
+                    "os": "18.0",
+                    "isDefault": false,
+                    "filename": "HIDApproveSDKWrapper-iOS-18.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                },
+                "HID_Approve_SDK-iOS-18.0": {
+                    "title": "HID_Approve_SDK",
+                    "platform": "iOS",
+                    "os": "18.0",
+                    "isDefault": false,
+                    "filename": "HID_Approve_SDK-iOS-18.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                }
+            },
+            "17.0": {
+                "HIDRMSWrapper-iOS-17.0": {
+                    "title": "HIDRMSWrapper",
                     "platform": "iOS",
                     "os": "17.0",
                     "isDefault": false,
-                    "filename": "HIDApproveSDKWrapper-iOS-17.0.zip",
+                    "filename": "HIDRMSWrapper-iOS-17.0.zip",
                     "nfiversion": "3.0",
                     "enable": true
                 },
@@ -17,17 +37,6 @@
                     "os": "17.0",
                     "isDefault": false,
                     "filename": "KonyBarcodeDetector-iOS-17.0.zip",
-                    "nfiversion": "3.0",
-                    "enable": true
-                }
-            },
-            "16.0": {
-                "HID_Approve_SDK-iOS-16.0": {
-                    "title": "HID_Approve_SDK",
-                    "platform": "iOS",
-                    "os": "16.0",
-                    "isDefault": false,
-                    "filename": "HID_Approve_SDK-iOS-16.0.zip",
                     "nfiversion": "3.0",
                     "enable": true
                 }

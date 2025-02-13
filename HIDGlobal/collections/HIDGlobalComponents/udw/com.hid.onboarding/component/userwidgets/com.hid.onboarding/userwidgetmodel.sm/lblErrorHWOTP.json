@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sf96505ae73f492bad97397e449ad4e5",
+    "_skin_": "s609ba85caef4fbeaa9caee0bd8609d5",
     "_text_": "You have 3 attempts before account is blocked",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u50e23eb3a6a405198f67f16ab0c4f88",
+    "kuid": "u805574e0e0c48999fd1d80cc882b9b5",
     "name": "kony.ui.Label",
     "parent": "flxHWOTP",
     "pf": "userwidgetmodel",

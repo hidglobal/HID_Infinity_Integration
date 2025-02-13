@@ -37,42 +37,7 @@
         "isForked": false
     },
     "isDefaultSkin": false,
-    "kiosk": {
-        "font_name": "None",
-        "font_size": 130,
-        "isForked": false
-    },
-    "kuid": "sc25a83461f04edda9441ed52f37191e",
-    "spaan": {
-        "font_name": "Helvetica",
-        "font_size": 130,
-        "isForked": false
-    },
-    "spaandroidtablet": {
-        "font_name": "Helvetica",
-        "font_size": 130,
-        "isForked": false
-    },
-    "spaip": {
-        "font_name": "Helvetica",
-        "font_size": 130,
-        "isForked": false
-    },
-    "spaipad": {
-        "font_name": "Helvetica",
-        "font_size": 130,
-        "isForked": false
-    },
-    "spawindowstablet": {
-        "font_name": "Helvetica",
-        "font_size": 130,
-        "isForked": false
-    },
-    "spawinphone8": {
-        "font_name": "Helvetica",
-        "font_size": 130,
-        "isForked": false
-    },
+    "kuid": "s8a1affa0f934fcf8b5d1a385dc33a69",
     "tabrcandroid": {
         "font_name": "default",
         "font_size": 130,
@@ -81,16 +46,6 @@
     "wType": "Label",
     "watchos": {
         "font_name": "System",
-        "font_size": 130,
-        "isForked": false
-    },
-    "windows8": {
-        "font_name": "None",
-        "font_size": 130,
-        "isForked": false
-    },
-    "winphone8": {
-        "font_name": "None",
         "font_size": 130,
         "isForked": false
     }

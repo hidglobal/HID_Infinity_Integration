@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sf31fc121210472ebdb25b6b5cecd939",
+    "_skin_": "s2bcbf9981d54c148a93de433fd67779",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -48,7 +48,7 @@
     "id": "flxHeader",
     "info": null,
     "isvisible": false,
-    "kuid": "u05f3077c93f46f4aca176e44637f092",
+    "kuid": "u4971533fb734a979aa8b5ae2e4e5590",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxMainPage",

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s387f203661e4532a424af73dbccebca",
+    "_skin_": "sacf5aee3a9c49dba973e7721fbcda5e",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -49,7 +49,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u4851c1cc8ba47b9a738ec7211b60792",
+    "kuid": "uf504e0781a3468aaeaa853ddb5a483f",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxApproveSliderMain",

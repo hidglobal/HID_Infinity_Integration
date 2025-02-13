@@ -48,7 +48,7 @@
     "id": "flxConfirmPin",
     "info": null,
     "isvisible": true,
-    "kuid": "u49c8e70430046cba3c48078208f0563",
+    "kuid": "ud22c5df2bb24f37bb9a9de8b82824f1",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxMainSetPwd",

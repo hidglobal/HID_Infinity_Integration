@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s42d0b82a5024d359c6846b27c379545",
+    "_skin_": "s2476f009fc24b51a76c79a90693639c",
     "_text_": "CANCEL",
     "_top_": {
         "type": "string",
@@ -35,12 +35,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s31e6138eed94ed9b3cc6e3270da03c2",
+    "focusskin": "sbd372c58078467e9f9207f5a40bf4ce",
     "id": "btnEnableOtpCancel",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u252d169b0c841dcad9336bec8039f81",
+    "kuid": "ud3c05fd4b76462eb3fc9d0b45821b87",
     "name": "kony.ui.Button",
     "parent": "flxEnableOtpCancelBtn",
     "pf": "userwidgetmodel",

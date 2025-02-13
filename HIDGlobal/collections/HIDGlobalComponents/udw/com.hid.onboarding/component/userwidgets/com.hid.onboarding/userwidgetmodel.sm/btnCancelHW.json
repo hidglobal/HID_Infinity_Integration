@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s272266c52194ee5b03413fbc0e3ba4f",
+    "_skin_": "sbd1c3157182483b93a7e5544106d7e5",
     "_text_": "CANCEL",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s8f0b76e220c4eac8d74fe3e662daea4",
+    "focusskin": "s9c87d33d7a240db9f5d91393623b814",
     "id": "btnCancelHW",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u3c0c7a97a3f4068ba63dba436b55b5f",
+    "kuid": "u594006ad0d44012bad95579e3a40dfc",
     "name": "kony.ui.Button",
     "parent": "flxsumbitbuttons",
     "pf": "userwidgetmodel",

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sff23fe154c049bfaecefdacd924f3cc",
+    "_skin_": "sa5452a0522e4fc9ba4b897210ef3f5e",
     "_top_": {
         "type": "string",
         "value": "6%"
@@ -49,7 +49,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u7a0542609964568abf40483353ee403",
+    "kuid": "ucafa530c3ec45c4bf7249140ae484e1",
     "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxLoginFIDO",

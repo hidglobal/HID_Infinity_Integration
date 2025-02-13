@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sfdd4f0806c941c5bab71be64529f5b8",
+    "_skin_": "s46a916eeeec4f81ae2d25a37b27b59c",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -42,12 +42,12 @@
     "clipbounds": true,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "sb169245b15e4a9daa4c203af5590cb6",
+    "focusskin": "s45d107d848e47e6bcdec6b734927ff4",
     "id": "flxSlider",
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "u5c827dda7994a3fa1f034a70f1f8b5e",
+    "kuid": "u4f73fcceaa048b7b0fb26a7cafdd018",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxSliderMain",

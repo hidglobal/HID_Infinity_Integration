@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s49ac79cff98404f9563aa7451b88a23",
+    "_skin_": "s101798947324773a5e47e8170feec1e",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -44,7 +44,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u2815b80c66048c58e77ba6c402e08d6",
+    "kuid": "u8813d9caf5e42f386422ac3ed55b74d",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "MobileApproveSDK",

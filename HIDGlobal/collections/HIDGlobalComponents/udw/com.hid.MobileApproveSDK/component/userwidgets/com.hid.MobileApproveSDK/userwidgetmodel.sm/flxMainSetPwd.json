@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s1609b4851d3424f8d56e86e173c20db",
+    "_skin_": "sd5e47f3483b465996e78aae049aee8c",
     "_top_": {
         "type": "string",
         "value": "26.39%"
@@ -47,7 +47,7 @@
     "id": "flxMainSetPwd",
     "info": null,
     "isvisible": true,
-    "kuid": "ud2173d76c3f49d2ad25d11e03e6220d",
+    "kuid": "u614dc080d584cda84928bde3900713c",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxSetPassword",

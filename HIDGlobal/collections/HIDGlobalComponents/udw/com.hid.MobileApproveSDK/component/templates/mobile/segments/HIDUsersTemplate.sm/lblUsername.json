@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sbe9f1404a6746b48876a5946f7263bc",
+    "_skin_": "s78ad111b20a4208b3ba1bb17ea8a6bd",
     "_text_": "Label",
     "_top_": {
         "type": "string",
@@ -60,7 +60,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "gd454faaa3ae4442ac62964ed399b6b4",
+    "kuid": "e2e42bdd1920468a9eac19cefc8098f2",
     "name": "kony.ui.Label",
     "parent": "flxRowWrapper",
     "pf": "HIDUsersTemplate",

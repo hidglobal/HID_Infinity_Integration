@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sda2033b62cd474a8b1f34509f6f3eb5",
+    "_skin_": "s3284be9ca1a412fb2af19fd37c2c678",
     "_text_": "Major Bank",
     "_top_": {
         "type": "string",
@@ -46,7 +46,7 @@
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "sda2033b62cd474a8b1f34509f6f3eb5",
+    "focusskin": "s3284be9ca1a412fb2af19fd37c2c678",
     "id": "CopylblHeaderLogin0j95e55e2d72a47",
     "info": null,
     "ipad": {
@@ -72,7 +72,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "u0b2762f1cea46d69d43f93122d63904",
+    "kuid": "u8df9f39abf44256b14680f84291d3b8",
     "name": "kony.ui.Label",
     "parent": "flxHeaderUpdatePassword",
     "pf": "userwidgetmodel",

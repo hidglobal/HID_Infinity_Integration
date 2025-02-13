@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s294fea78487462fa482d60786d1f551",
+    "_skin_": "s1c76e5322f64d43b895f22cab2ba1c0",
     "_text_": "REGISTER",
     "_top_": {
         "type": "string",
@@ -39,12 +39,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s3d34225a67d4099be0e4843d745378a",
+    "focusskin": "s0e28ec9c9aa4b38af7dc94745230f2c",
     "id": "btnSignUpOOBPIN",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ufb50f0bd87c475388aa7d51dabb5dc0",
+    "kuid": "u2b03a455244454e9a89b611724767de",
     "name": "kony.ui.Button",
     "parent": "flxLoginButton",
     "pf": "userwidgetmodel",

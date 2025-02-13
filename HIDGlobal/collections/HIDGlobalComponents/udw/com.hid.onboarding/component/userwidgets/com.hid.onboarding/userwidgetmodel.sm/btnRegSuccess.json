@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s8f1a7c2fb4747659854056a4fee5265",
+    "_skin_": "s29acf85939844f99830b1a5a0d1662c",
     "_text_": "Login",
     "_top_": {
         "type": "string",
@@ -43,12 +43,12 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s96922654ede45b5b98fa866a0678430",
+    "focusskin": "s75a5e79cd9e46e59a586190a32bc44e",
     "id": "btnRegSuccess",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u50449c2469941348db2dacff299cce7",
+    "kuid": "uc0adc0f9465492a87e5c017201ab4ee",
     "name": "kony.ui.Button",
     "parent": "SuccessButtons",
     "pf": "userwidgetmodel",

@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sfa83e16b17647888b17ee389d8a34c6",
+    "_skin_": "s8c580668383415387ca92902617115d",
     "_text_": "SMS OTP Code*",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u9d4bda30650449ba9f7c456efe92a69",
+    "kuid": "u7e9cb1a6342455da420d0f3c7dad820",
     "name": "kony.ui.Label",
     "parent": "flxSMSOTP",
     "pf": "userwidgetmodel",

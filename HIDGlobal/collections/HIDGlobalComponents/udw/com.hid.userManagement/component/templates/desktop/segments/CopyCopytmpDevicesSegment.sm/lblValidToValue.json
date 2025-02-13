@@ -17,7 +17,7 @@
         0,
         0
     ],
-    "_skin_": "s54272a8bbdf4af0b766b1c5aa3e344b",
+    "_skin_": "s5424bdd72bb42ddad53397631b21aee",
     "_text_": "Label",
     "_top_": {
         "type": "string",
@@ -60,7 +60,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "g8968da452aa4d65b43686b21fba13dd",
+    "kuid": "fab633149ecd492d82057c8ab9b34b58",
     "name": "kony.ui.Label",
     "parent": "flxValidToValue",
     "pf": "CopyCopytmpDevicesSegment",

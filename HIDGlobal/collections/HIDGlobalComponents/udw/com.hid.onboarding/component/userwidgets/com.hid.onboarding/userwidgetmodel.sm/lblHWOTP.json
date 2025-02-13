@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s91a53367a4a448ea98f702a1c6a857e",
+    "_skin_": "sde16aebfd4e484eb47be80871b2d0f9",
     "_text_": "Please enter your One-Time Password",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "uc30a014ca4d434c91d0f426c3403e0e",
+    "kuid": "ub81eff657e6414fab97569ef105885e",
     "name": "kony.ui.Label",
     "parent": "flxHWOTP",
     "pf": "userwidgetmodel",

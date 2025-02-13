@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s1609b4851d3424f8d56e86e173c20db",
+    "_skin_": "sd5e47f3483b465996e78aae049aee8c",
     "_top_": {
         "type": "string",
         "value": "26.39%"
@@ -46,7 +46,7 @@
     "id": "flxMainConfirmPIN",
     "info": null,
     "isvisible": true,
-    "kuid": "u970e9c23c2541f3bc8ebafc4453c5e5",
+    "kuid": "u53f8e6d185d47acbc6bad0432a48524",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxProfileResetUI",

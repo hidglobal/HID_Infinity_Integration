@@ -1,0 +1,41 @@
+<html>
+<head>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="qrcode.js"></script>
+</head>
+<body>
+<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+
+<script type="text/javascript">
+function makeCode (sText, codeWidth, codeHeight, correctionLvl = 0, darkColor = "#000000", lightColor = "#FFFFFF") {
+	console.log("Generating started");	
+	var oQRCode = new QRCode("qrcode", {
+		text : sText,
+		width : codeWidth,
+		height : codeHeight,
+		colorDark: darkColor,
+		colorLight: lightColor,
+		correctLevel: correctionLvl
+	});
+	console.log("Generating end");
+}
+function makeCodeBCK () {
+	console.log("BCK Start");
+	console.log("BCK End");
+	return "Return some text to catch in VIZ";
+}
+//makeCode("@mishraDileep", 500, 500, 3, "#FF00FF", "#00FF00");
+//makeCodeBCK();
+var documentReady = false;
+$(document).ready(function(){
+	documentReady = true;
+});
+
+function isDocumentReady(){
+	return documentReady;
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+    "AS_Button_jeb79b9dcd7b4f3f9dc16f25f15be991": {
+        "id": "AS_Button_jeb79b9dcd7b4f3f9dc16f25f15be991",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "segmentAuth",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e51f4bfb70774752a1b535257864cff4"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_i8dbbf8881ae4fb78fcd119dcc2b2f18",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.executeOnParent(\"enableDisableAuthenticator\", {row : context.rowIndex,\nsection : context.sectionIndex});",
+            "parentId": null
+        }]
+    }
+}

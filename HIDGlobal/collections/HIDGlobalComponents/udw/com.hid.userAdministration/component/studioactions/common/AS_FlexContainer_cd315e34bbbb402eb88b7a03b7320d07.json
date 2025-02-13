@@ -1,0 +1,23 @@
+{
+    "AS_FlexContainer_cd315e34bbbb402eb88b7a03b7320d07": {
+        "id": "AS_FlexContainer_cd315e34bbbb402eb88b7a03b7320d07",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "KUID": "ue815c85cc3a4bcd9ff6911dd23e3675",
+            "name": "userwidgetmodel",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": []
+    }
+}

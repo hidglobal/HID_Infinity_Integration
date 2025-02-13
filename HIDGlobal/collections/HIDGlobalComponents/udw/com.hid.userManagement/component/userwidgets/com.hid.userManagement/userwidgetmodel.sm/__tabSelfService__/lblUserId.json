@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sa320fdafee0481fb1b51f98fc1bb8ac",
+    "_skin_": "s22709513f2c429b9872491bc7645637",
     "_text_": "User ID",
     "_top_": {
         "type": "string",
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u9c8afdf3fb5437eb643fc24c00a8320",
+    "kuid": "ufb3ee766a114292a5da627257010fb5",
     "name": "kony.ui.Label",
     "parent": "flxManual",
     "pf": "userwidgetmodel",

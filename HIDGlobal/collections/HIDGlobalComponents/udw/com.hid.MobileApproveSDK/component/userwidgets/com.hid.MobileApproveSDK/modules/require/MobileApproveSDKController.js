@@ -80,7 +80,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     isCookiesLoaded : true,
     newRequest : "",
     otp : "",
+    deviceId : "",
     currentContext : "",
+    correlationIdOnboardingPrefix : "ONBD-",
+    correlationIdLoginPrefix : "LOGN-",
+    correlationId : "",
     constructor: function(baseConfig, layoutConfig, pspConfig) {
       this.resetUI();
 //       this.contextSwitch("ActivationCode");
@@ -238,6 +242,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       var pushIDFromManager = gblSDKNotificationManager.isUpdateRequired() ? gblSDKNotificationManager.getPushId() : "";
       var pushID = pushIDFromManager || "";
       let flowString = this.nativeController.getLoginFlow(pushID);
+
       
       if(flowString === "Register"){
         isRegister = true ;		  
@@ -444,6 +449,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     }, 
     //Changes for RMS to capture risk score
     generateOTPSuccess : function(otp){
+      this.correlationId = this.correlationIdLoginPrefix + this.generateUUID();
       kony.print('HIDSDK => Inside generateOTPSuccess');
       this.setLoadingScreen(true);
       kony.print('HIDSDK => isRMSEnabled:'+this._isRMSEnabled);
@@ -455,13 +461,14 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
           this.rmsLogin(otp);
         }
       }else{
-           businessController.validateSecureOTP(this.username,otp,this.validateSecureOTPSuccess,this.validateSecureOTPFailure);      
+           businessController.validateSecureOTP(this.username,otp,this.correlationId,this.validateSecureOTPSuccess,this.validateSecureOTPFailure);      
      }
     },
     // Function for enabling RMS 
     rmsLogin : function(otp){
       kony.print("RMS => Inside rmsLogin");
-      this.app_session_id = String(Math.floor(Math.random()*100000));
+      this.app_session_id = kony.os.createUUID();
+     // this.app_session_id = //String(Math.floor(Math.random()*100000));
       HidRmsSDKManager.setRMSAppSessionId(this.app_session_id);
       var tmCookieTAG = this.TM_Cookie_Tag;
       var tmCookieSID = this.TM_Cookie_Sid;
@@ -488,7 +495,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         "platform" : platform
       };
        kony.print("RMS => rmsLoad : "+JSON.stringify(rmsLoad));
-      businessController.validateSecureOTPWithRMS(this.username,otp,this.validateSecureOTPRMSSuccess,this.validateSecureOTPRMSFailure,rmsLoad);      
+      businessController.validateSecureOTPWithRMS(this.username,otp,this.correlationId,this.validateSecureOTPRMSSuccess,this.validateSecureOTPRMSFailure,rmsLoad);      
     },
 
     generateOTPFailure : function(exceptionType,message){
@@ -576,7 +583,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
             authenticatorType = "AT_OTP";
         }
         let params = {"username" : this.username,
-                  "AuthenticationType" : authType};
+                  "AuthenticationType" : authType , "correlationId": this.correlationId};
 //         alert(JSON.stringify(params));
        businessController.sendOOB(params, this.sendOTPSuccess, this.sendOTPFailure);
       }
@@ -605,7 +612,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.timerNot();
       this.contextSwitch("OOB");
       
-    }, 
+    },
     //Callback Function to receive send otp failure for RMS
     sendOTPFailure : function(error){
       kony.print("RMS => Inside sendOTPFailure : " +JSON.stringify(error));
@@ -631,12 +638,12 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         return;
       } 
       this.view.lblErrorOTP.text = "";
-      businessController.authenticateSecondFactor(this.username, this._MFA, OOB, this.mfa_key, this.AuthSuccess, this.AuthFailure);
+      businessController.authenticateSecondFactor(this.username, this._MFA, OOB, this.mfa_key, this.correlationId ,this.AuthSuccess, this.AuthFailure);
     },
     // Callback function to validate second factor success for RMS
     AuthSuccess : function(response){
       kony.print("RMS => Inside AuthSuccess");
-      kony.timer.cancel("timer5");
+//       kony.timer.cancel("timer5");
       this.setLoadingScreen(false);
       this.resetUI();
       if(this.onSuccessCB){
@@ -656,12 +663,15 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.lblErrorOTP.text = msg;
       this.view.flxErrOTP.setVisibility(visible);
     },
-    validateSecureOTPSuccess : function(){
-      this.setLoadingScreen(false);
-      this.resetUI();
-      if(this.onSuccessCB){
-        this.onSuccessCB.call(this);
-      }
+    validateSecureOTPSuccess : function(response){
+//      this.setLoadingScreen(false);
+//      this.resetUI();
+//      if(this.onSuccessCB){
+//        this.onSuccessCB.call(this);
+//      }
+      kony.print('HID --> Inside validateSecureOTPSuccess');
+      this.mfa_key = response.mfa_meta.auth_id;
+      businessController.authenticateSecondFactor(this.username, "NO_MFA", "", this.mfa_key, this.correlationId, this.AuthSuccess, this.AuthFailure);
     },   
     validateSecureOTPFailure : function(error){
       //Please customize this message as user will not able to login
@@ -718,6 +728,9 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }
     },
     initQRCodeFlow : function(){
+      if (this._isRMSEnabled === true){
+        this.correlationId = this.correlationIdOnboardingPrefix+this.generateUUID();
+      }
       kony.print("ApproveSDK --> Inside initQRCodeFlow method ");
       this.state = "QRCode";
       this.contextSwitch("QRCode");
@@ -874,7 +887,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       var status = this.nativeController.checkForBioAvailability(); 
       kony.print(`Bio avaliability is ${status}`);
       if(status){
-        this.nativeController.generateOTP("",true);
+        this.nativeController.generateOTP("",true,this._otpLabel);
       }
     },
     getSecureCode : function(pin,username){
@@ -966,7 +979,8 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         "username": this.username,
         "password": password,
         "userId": this.userId,
-        "Auth_Key": this.authKey
+        "Auth_Key": this.authKey,
+        "correlationId": this.correlationId
       };
       businessController.setStandardPassword(params,this.setStandardPasswordSucess,this.setStandardPasswordFailure);
       //     }
@@ -1092,14 +1106,16 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         return;
       }
       this.username = username;
+      this.correlationId = this.correlationIdOnboardingPrefix + this.generateUUID();
       var params = {
         "filter": username,
         "activationCode": activationCode,
-        "username": username
+        "username": username,
+        "correlationId": this.correlationId
       };
       let networkStatus = this.checkIfNetworkIsAvailable();
       if(networkStatus === true){
-      businessController.validateActivatonCode(params,this.validateActivationCodeSucess,this.validateActivationCodeFailure);
+        businessController.validateActivatonCode(params,this.validateActivationCodeSucess,this.validateActivationCodeFailure);
       } else {
 		this.showError(true,sdkConstants.ERROR_INTERNET_CONNECTION_GENERIC);
         this.setLoadingScreen(false);
@@ -1115,7 +1131,8 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         "UserId": userId,
         "username": username,
         "usernameWithRandomNo": `${username}.${randNo}`,
-        "Auth_Key": this.authKey
+        "Auth_Key": this.authKey,
+        "correlationId": this.correlationId
       };
       businessController.approveDeviceRegistration(params, this.approveDeviceRegistrationSuccess,this.approveDeviceRegistrationFailure);
     },
@@ -1465,13 +1482,16 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       if(this.state === "QRCode" || this.state === "Manual"){
         if(this._isRMSEnabled === true){
            this.searchUser(this.username);
-         }
+        } else{
+            this.showSuccessScreen("Device Registered Successfully");
+        }
 //         this.showSuccessScreen("Device Registered Successfully");
-      }else{
+      } else{
         if(this._isRMSEnabled === true){
-           this.addOOBToUser(this.userId);
-         }
-        this.showSuccessScreen("Device Registered Successfully");
+            this.addOOBToUser(this.userId);
+        } else{
+            this.showSuccessScreen("Device Registered Successfully");
+        }
 //         this.showStandardPasswordUI();  
       }          
       //       this.showSuccessScreen("Device Registered Successfully with Biometrics");
@@ -1480,15 +1500,17 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.flxBioPrompt.setVisibility(false);
       this.nativeController.disableBioMetrics();
       if(this.state === "QRCode" || this.state === "Manual"){
-         if(this._isRMSEnabled === true){
+        if(this._isRMSEnabled === true){
            this.searchUser(this.username);
-         }
-//          this.showSuccessScreen("Device Registered Successfully");
-      }else{
+        } else{
+            this.showSuccessScreen("Device Registered Successfully");
+        }
+      } else{
         if(this._isRMSEnabled === true){
            this.addOOBToUser(this.userId);
-         }
-        this.showSuccessScreen("Device Registered Successfully");
+        } else{
+            this.showSuccessScreen("Device Registered Successfully");
+        }
 //         this.showStandardPasswordUI();
       }
             
@@ -1500,12 +1522,16 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       }else if(this.state === "QRCode" || this.state === "Manual"){
          if(this._isRMSEnabled === true){
             this.searchUser(this.username);
+          } else{
+            this.showSuccessScreen("Device Registered Successfully");            
           }
 //          this.showSuccessScreen("Device Registered Successfully");
       }else{
 //         this.showStandardPasswordUI();
         if(this._isRMSEnabled === true){
           this.addOOBToUser(this.userId);
+        } else{
+          this.showSuccessScreen("Device Registered Successfully");
         }
 //         this.showSuccessScreen("Device Registered Successfully");
         kony.print(`Biometric not enabled for the following reason ${message}`);
@@ -1688,7 +1714,9 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.lblSuccess.text = successMsg;
       this.contextSwitch("Success");
       this.resetUI();
-      kony.timer.schedule("Timer",this.initiate,3,false);
+      let randomTimer = Math.floor(Math.random()*1000);
+      let timer = `timer${randomTimer}`;
+      kony.timer.schedule(timer,this.initiate,3,false);
     },
     contextSwitch : function(context){
       for(let i of contexts){
@@ -1730,6 +1758,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     getUsername : function(){
       kony.print("ApproveSDK ---> Username inside component is " + this.username);
       return this.username;
+    },
+    getDeviceProperty : function(){
+      this.deviceId = this.nativeController.getDeviceProperty();
+      kony.print("ApproveSDK ---> DeviceId inside component is " + this.deviceId);
+      return this.deviceId;
     },
     deleteUserProfile : function(name){
       kony.print("ApproveSDK ---> username to be deleted is " + name);
@@ -1959,7 +1992,7 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     searchUser : function(username){
      
       let params = {
-        "filter": `externalId eq ${username}`
+        "filter": `userName eq ${username}`
       };
       businessController.searchUser(params, this.searchUserSuccess, this.searchUserFailure);
     },
@@ -1984,7 +2017,8 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
         "AuthenticatorType": authenticatorType,
         "userId": userId,
         "AuthenticatorValue": authenticatorValue,
-        "isPasswordRequired":"false"
+        "isPasswordRequired":"false",
+        "correlationId": this.correlationId
       };
       businessController.addOOBToUser(params, this.addOOBToUserSuccess, this.addOOBToUserFailure);
     },
@@ -2061,6 +2095,11 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
     verifyPasswordCallbackInternal : function(status, exception, exception_code){
        this.commonEventEmitter(this.verifyPasswordCallback,[status, exception, exception_code]);
     },
+
+    generateUUID: function(){
+        var uuid =  kony.os.createUUID();
+        return uuid;
+    },
     
     //Public Function for Renew Container
     isContainerRenewalRequired : function(){
@@ -2090,15 +2129,20 @@ define([`./approveSDKBusinessController`,`./ControllerImplementation`],function(
       this.view.lblTimer.text = ("0" + parseInt(sec/60)).toString().slice(-2) + ":" + 
         ("0" + (sec%60).toString()).slice(-2);
       sec--;
-      kony.timer.schedule("timer5", function(){          
+      let randomTimer = Math.floor(Math.random()*1000);
+      var timer = `timer${randomTimer}`;
+      kony.timer.schedule(timer, function(){          
         self.view.lblTimer.text = ("0" + parseInt(sec/60)).toString().slice(-2) + ":" + 
           ("0" + (sec%60).toString()).slice(-2);       
         sec--;
         if(sec < 0){
           self.view.flxErrOTP.setVisibility(true);          
           self.view.lblErrorOTP.text = "Request cannot be processed, Please return to the login page.";
-          kony.timer.cancel("timer5");
-          kony.timer.schedule("Timer",self.initiate,3,false);                  
+//           kony.timer.cancel("timer5");
+          kony.timer.cancel(timer); 
+          let randomTimer1 = Math.floor(Math.random()*1000);
+    	  let timer1 = `timer${randomTimer1}`;
+          kony.timer.schedule(timer1,self.initiate,3,false);
         } 
       }, 1, true);    
     }, 

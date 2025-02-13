@@ -1,0 +1,69 @@
+{
+    "android": {
+        "font_name": "default",
+        "font_size": 130,
+        "font_weight": "bold",
+        "isForked": true
+    },
+    "androidwearos": {
+        "font_name": "default",
+        "font_size": 130,
+        "font_weight": "bold",
+        "isForked": true
+    },
+    "background_color": "00000000",
+    "bg_type": "one",
+    "border_color": "424242ff",
+    "border_style": "plain",
+    "border_type": 0,
+    "border_width": 0,
+    "desktopweb": {
+        "bottom_left_border_color": "424242ff",
+        "bottom_left_border_style": "plain",
+        "bottom_left_border_width": 0,
+        "bottom_right_border_color": "424242ff",
+        "bottom_right_border_style": "plain",
+        "bottom_right_border_width": 0,
+        "font_name": "Helvetica",
+        "font_size": 130,
+        "font_weight": "bold",
+        "isForked": true,
+        "top_left_border_color": "424242ff",
+        "top_left_border_style": "plain",
+        "top_left_border_width": 0,
+        "top_right_border_color": "424242ff",
+        "top_right_border_style": "plain",
+        "top_right_border_width": 0
+    },
+    "fontSizeInPx": false,
+    "font_color": "333333ff",
+    "font_name": "iphoneSystem",
+    "font_size": 112,
+    "font_style": "normal",
+    "font_weight": "400",
+    "ipad": {
+        "font_name": "System-Bold",
+        "font_size": 130,
+        "isForked": true
+    },
+    "iphone": {
+        "font_name": "System-Bold",
+        "font_size": 130,
+        "isForked": true
+    },
+    "isDefaultSkin": false,
+    "kuid": "s762f96d36d74614b264d25286807eab",
+    "tabrcandroid": {
+        "font_name": "default",
+        "font_size": 130,
+        "font_weight": "bold",
+        "isForked": true
+    },
+    "wType": "Label",
+    "watchos": {
+        "font_name": "System",
+        "font_size": 130,
+        "font_weight": "bold",
+        "isForked": true
+    }
+}

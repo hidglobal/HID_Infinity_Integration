@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sba47d18ed534bde9d4b25d81a8fd5bd",
+    "_skin_": "scf1eedda3184523817912b8bfc73f6a",
     "_text_": "00:00",
     "_top_": {
         "type": "number",
@@ -66,7 +66,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u89485f0aa1e4afa93ee65de8b8368f0",
+    "kuid": "ud1ace2f621640e6b8cd3c57d3815d45",
     "name": "kony.ui.Label",
     "parent": "flxResendOTPBtn",
     "pf": "userwidgetmodel",

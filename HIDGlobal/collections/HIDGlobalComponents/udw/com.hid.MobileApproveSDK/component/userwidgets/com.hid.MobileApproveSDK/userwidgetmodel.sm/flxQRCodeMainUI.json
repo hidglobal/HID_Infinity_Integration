@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sdab9a217b314f4bac8c6fee8a323461",
+    "_skin_": "sfb0232430db427cb2f50b79aab654f4",
     "_top_": {
         "type": "string",
         "value": "20.39%"
@@ -55,11 +55,11 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "sd1cd37c4288463fb5bd9d8452a2458d",
+    "focusskin": "s0c46352277d4260b3fed8db36d04696",
     "id": "flxQRCodeMainUI",
     "info": null,
     "isvisible": true,
-    "kuid": "u4796a649c4d47c98abddbc774dd4eaf",
+    "kuid": "u999665d14da4b959c30957c5d813eba",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "flxQRCode",

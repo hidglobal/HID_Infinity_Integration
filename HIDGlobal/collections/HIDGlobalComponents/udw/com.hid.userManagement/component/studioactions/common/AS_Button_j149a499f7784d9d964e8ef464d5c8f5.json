@@ -1,0 +1,21 @@
+{
+    "AS_Button_j149a499f7784d9d964e8ef464d5c8f5": {
+        "id": "AS_Button_j149a499f7784d9d964e8ef464d5c8f5",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_ff97c92a0db043c9a4d2670cd9fa5cdb",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "initiateSecondFactor",
+            "display": "initiateSecondFactor",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s2d539403f694501a1ded5567f4c5a34",
+    "_skin_": "sf40e43e487044638afa5625b2a14adf",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -41,11 +41,11 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "focusskin": "s8b27a54f15645b1aff3f516d11c73ee",
+    "focusskin": "sf365501229f492b9229d332d451365d",
     "id": "flxTransferDeclined",
     "info": null,
     "isvisible": false,
-    "kuid": "u12563d998bf4731bb0dcaf8d2085a02",
+    "kuid": "uf90126f909b43feb4ec12402b9cbc87",
     "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "FundTransfer",

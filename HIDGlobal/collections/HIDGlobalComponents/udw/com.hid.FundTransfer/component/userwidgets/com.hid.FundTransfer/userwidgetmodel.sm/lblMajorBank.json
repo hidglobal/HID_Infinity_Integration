@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "se340432803644a8bafba8a6bf7aafba",
+    "_skin_": "sd65ee2876684df89bb301dc6042f27b",
     "_text_": "Major Bank",
     "_top_": {
         "type": "string",
@@ -50,7 +50,7 @@
     },
     "containerweight": 100,
     "contentalignment": 5,
-    "focusskin": "s529f521d1094caa8c73a2d98a6d8c64",
+    "focusskin": "sc5108de0835465a90a134ff2b78f66f",
     "id": "lblMajorBank",
     "info": null,
     "ipad": {
@@ -76,7 +76,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "uf4a427470d04208add09dc2a808437c",
+    "kuid": "u3aec5f6ee8a4befa7953005c1b2cf7c",
     "name": "kony.ui.Label",
     "parent": "flxHeader",
     "pf": "userwidgetmodel",

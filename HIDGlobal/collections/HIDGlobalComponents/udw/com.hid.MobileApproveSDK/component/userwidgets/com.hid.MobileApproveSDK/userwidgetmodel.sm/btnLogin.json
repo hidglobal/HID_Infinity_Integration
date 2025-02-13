@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s6e333a3b9824ef4a0d31eacb0e22e91",
+    "_skin_": "s399f074ef564477822173429ea7e39f",
     "_text_": "LOGIN",
     "_top_": {
         "type": "string",
@@ -36,7 +36,7 @@
     "contentalignment": 5,
     "displaytext": true,
     "enablehapticfeedback": false,
-    "focusskin": "sc020060659b421394411a782442388c",
+    "focusskin": "s86fcacc318c4acf91000ed20c53440e",
     "id": "btnLogin",
     "info": null,
     "iphone": {
@@ -46,7 +46,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u8670f26814044ab9cb4450c01a9f166",
+    "kuid": "u3a6a9cb0b58415e94474f1d023ab36e",
     "name": "kony.ui.Button",
     "parent": "flxLoginBtn",
     "pf": "userwidgetmodel",

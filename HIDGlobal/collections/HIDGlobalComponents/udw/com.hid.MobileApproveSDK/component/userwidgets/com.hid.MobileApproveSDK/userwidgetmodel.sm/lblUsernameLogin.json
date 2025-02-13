@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s4b32e5d0ae4463ea26b002114b2b0f7",
+    "_skin_": "se0b0239431e48c58c6e5be4b876bbd1",
     "_text_": "Customer ID",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s4b32e5d0ae4463ea26b002114b2b0f7",
+    "focusskin": "se0b0239431e48c58c6e5be4b876bbd1",
     "id": "lblUsernameLogin",
     "info": null,
     "ipad": {
@@ -68,7 +68,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "ubc10f5b082f4247a339c0ef653f664e",
+    "kuid": "uf4616654b184c458823f4e58ade5542",
     "name": "kony.ui.Label",
     "parent": "flxusernameLogin",
     "pf": "userwidgetmodel",

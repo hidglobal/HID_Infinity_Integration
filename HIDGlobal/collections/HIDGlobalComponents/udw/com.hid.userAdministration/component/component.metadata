@@ -16,36 +16,36 @@
         ],
         "actions": {
             "desktop": {
-                "AS_Button_fd714249923446af893aa4bb5126e92c": {
+                "AS_Button_jeb79b9dcd7b4f3f9dc16f25f15be991": {
                     "channel": "desktop",
-                    "actionId": "AS_Button_fd714249923446af893aa4bb5126e92c",
-                    "actionName": "AS_Button_fd714249923446af893aa4bb5126e92c",
+                    "actionId": "AS_Button_jeb79b9dcd7b4f3f9dc16f25f15be991",
+                    "actionName": "AS_Button_jeb79b9dcd7b4f3f9dc16f25f15be991",
                     "key": "ide_onClick"
                 },
-                "AS_Button_a10950f2f02648968da7a915c6c56e86": {
+                "AS_Button_ba42a9461a224bdda4ceaed8602cd921": {
                     "channel": "desktop",
-                    "actionId": "AS_Button_a10950f2f02648968da7a915c6c56e86",
-                    "actionName": "AS_Button_a10950f2f02648968da7a915c6c56e86",
+                    "actionId": "AS_Button_ba42a9461a224bdda4ceaed8602cd921",
+                    "actionName": "AS_Button_ba42a9461a224bdda4ceaed8602cd921",
                     "key": "ide_onClick"
                 }
             },
             "common": {
-                "AS_Button_ca3d0fd440b14f0fb80301124341d26b": {
+                "AS_Button_e32094b1de154f3d8ab81a35147ae89c": {
                     "channel": "common",
-                    "actionId": "AS_Button_ca3d0fd440b14f0fb80301124341d26b",
-                    "actionName": "AS_Button_ca3d0fd440b14f0fb80301124341d26b",
+                    "actionId": "AS_Button_e32094b1de154f3d8ab81a35147ae89c",
+                    "actionName": "AS_Button_e32094b1de154f3d8ab81a35147ae89c",
                     "key": "ide_onClick"
                 },
-                "AS_Button_gfc720f537ab47df8e6c3ef84eeedef0": {
+                "AS_Button_c6342ac16cd144efae526ec2f006d7aa": {
                     "channel": "common",
-                    "actionId": "AS_Button_gfc720f537ab47df8e6c3ef84eeedef0",
-                    "actionName": "AS_Button_gfc720f537ab47df8e6c3ef84eeedef0",
+                    "actionId": "AS_Button_c6342ac16cd144efae526ec2f006d7aa",
+                    "actionName": "AS_Button_c6342ac16cd144efae526ec2f006d7aa",
                     "key": "ide_onClick"
                 },
-                "AS_FlexContainer_c2636f9f19654d90839ab49cb3b6d8ca": {
+                "AS_FlexContainer_cd315e34bbbb402eb88b7a03b7320d07": {
                     "channel": "common",
-                    "actionId": "AS_FlexContainer_c2636f9f19654d90839ab49cb3b6d8ca",
-                    "actionName": "AS_FlexContainer_c2636f9f19654d90839ab49cb3b6d8ca",
+                    "actionId": "AS_FlexContainer_cd315e34bbbb402eb88b7a03b7320d07",
+                    "actionName": "AS_FlexContainer_cd315e34bbbb402eb88b7a03b7320d07",
                     "key": "ide_onTouchEnd"
                 }
             }
@@ -86,7 +86,7 @@
             "FontAwesome",
             "Gotham-Book"
         ],
-        "nativeApis": 3,
+        "nativeApis": 0,
         "mfbundle": "services/services.zip",
         "localFiles": [],
         "cordova": [],
@@ -94,7 +94,7 @@
         "type": "userwidget",
         "isMVC": false
     },
-    "createdOn": "2024-07-08T08:50:26.192Z",
-    "createdVizVersion": "9.5.28",
-    "project_version": "sprint42"
+    "createdOn": "2025-02-13T10:14:13.050Z",
+    "createdVizVersion": "202307.0.9",
+    "project_version": "sprint45"
 }

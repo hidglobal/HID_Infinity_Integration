@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s965ac95ff5d4d239a6524a32fc9b397",
+    "_skin_": "s67d36ad1aa64a86b6e76ab257af42af",
     "_text_": "Authenticator",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u042c996891749eaaca75a26f4905841",
+    "kuid": "u35f547ea11c44b9ba85e2d65fefcbd6",
     "name": "kony.ui.Label",
     "parent": "flexAuthenticator",
     "pf": "userwidgetmodel",

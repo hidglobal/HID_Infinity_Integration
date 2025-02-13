@@ -17,7 +17,7 @@
         0,
         0
     ],
-    "_skin_": "s89776dd0eb84f8192cec7199301263a",
+    "_skin_": "scc4d8bf7b6c40a3a6a899d3617df4cd",
     "_text_": "Generate Qr",
     "_top_": {
         "type": "string",
@@ -40,7 +40,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "udde5d30a929429ba9042877e60fdbe1",
+    "kuid": "u368c91658f6418cbf7224fbfdc03c40",
     "name": "kony.ui.Button",
     "parent": "flxScanToApproveMain",
     "pf": "userwidgetmodel",

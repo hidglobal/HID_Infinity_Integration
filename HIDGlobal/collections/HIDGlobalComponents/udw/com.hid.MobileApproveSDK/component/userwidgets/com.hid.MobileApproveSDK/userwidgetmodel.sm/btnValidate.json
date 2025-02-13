@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "sd1359e3f3b54b9c9056f494335d75e3",
+    "_skin_": "sc433e3837104da68da6f308ed8202d9",
     "_text_": "Validate",
     "_top_": {
         "type": "string",
@@ -36,7 +36,7 @@
     "contentalignment": 5,
     "displaytext": true,
     "enablehapticfeedback": false,
-    "focusskin": "sc020060659b421394411a782442388c",
+    "focusskin": "s86fcacc318c4acf91000ed20c53440e",
     "id": "btnValidate",
     "info": null,
     "iphone": {
@@ -46,7 +46,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u2e8b998cdfd4799bcea0d78b3eec176",
+    "kuid": "u6c6362698504236bc0cfba58a4f38e9",
     "name": "kony.ui.Button",
     "parent": "flxBtnValidate",
     "pf": "userwidgetmodel",

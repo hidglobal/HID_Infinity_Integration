@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s3fc2a2c630a43eea12139314d051b75",
+    "_skin_": "s1127c5ba3c647ba93a022d81cd57a6b",
     "_text_": "Approve",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "u02502d3eae34a10b3dbd9b0aaf815ad",
+    "kuid": "uae26ce150964b33b99341a0878306b1",
     "name": "kony.ui.Label",
     "parent": "flxApproveSliderMain",
     "pf": "userwidgetmodel",

@@ -1,0 +1,23 @@
+{
+    "AS_NativeContainer_b018640527834c38b787332f466b4592": {
+        "id": "AS_NativeContainer_b018640527834c38b787332f466b4592",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "u07bc708a78f421089dd3d3d4223c3dd",
+            "name": "userwidgetmodel",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__da0b72ed929e4bae9b72ed3e9dd75631",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.scan(eventobject);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

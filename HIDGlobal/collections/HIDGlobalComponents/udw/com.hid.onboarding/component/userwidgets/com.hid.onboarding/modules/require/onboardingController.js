@@ -71,6 +71,8 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     deviceSerial : "",
     pinMinLength : 4,
     pinMaxLength : 100,
+    onboardingCorrelationIdPrefix: "ONBD-",
+    correlationId : "",
     updateOnboardingUI: function(UIObject) {
       switch (UIObject.state) {
         case "activationCodeSuccess":
@@ -184,7 +186,10 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
       var activationCode = this.view.tbxActivationCode.text;
       this.commonEventHandler(this.showLoading, "");
       this.username = username;
-      OnboardingPresentationController.validateActivationCode(this.updateOnboardingUI,username, activationCode);
+      var UUID = this.generateUUID();
+      this.correlationId = (this.onboardingCorrelationIdPrefix + UUID);
+      kony.print(this.correlationId);
+      OnboardingPresentationController.validateActivationCode(this.updateOnboardingUI,username, activationCode, this.correlationId);
     },
     btnSubmitHW_onClick: function() {      
       if (this.view.tbxDeviceSerial.text === "") {
@@ -200,6 +205,7 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     },
 
     btnConfirmHWOTP_onClick : function(){
+      this.correlationId = this.onboardingCorrelationIdPrefix + this.generateUUID();
       var OTP = this.view.tbxHWOTP.text;
       if (this.view.tbxHWOTP.text === "") {
         this.view.lblErrorHWOTP.setVisibility(true);
@@ -209,7 +215,7 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
       var authType = "AT_EMPOTP";
       this.view.lblErrorHWOTP.text = "";
       this.commonEventHandler(this.showLoading, "");
-      OnboardingPresentationController.validateOOB(this.updateOnboardingUI,OTP,authType);	
+      OnboardingPresentationController.validateOOB(this.updateOnboardingUI,OTP,this.correlationId,authType);	
     },
     btnPwdSubmit_onClick: function() {
       if (this.view.tbxPassword1.text === "") {
@@ -260,7 +266,7 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
       }
       var password = this.view.tbxPassword1.text;
       this.commonEventHandler(this.showLoading, "");
-      OnboardingPresentationController.addPasswordandMFAtoUser(this.updateOnboardingUI,password,this._MFA);
+      OnboardingPresentationController.addPasswordandMFAtoUser(this.updateOnboardingUI,password,this._MFA,this.correlationId);
     },
     updatePwdPolicy : function(response){
        //alert(JSON.stringify(response));
@@ -281,11 +287,12 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
       }
       this.view.lblErrorOTP.text = "";
       this.commonEventHandler(this.showLoading, "");
-      OnboardingPresentationController.validateOOB(this.updateOnboardingUI,OTP);
+      OnboardingPresentationController.validateOOB(this.updateOnboardingUI,OTP,this.correlationId);
     },
     activationCodeSuccess: function(response) {
       this.userId = response.userid;
       this.Auth_Key = response.Auth_Key;
+      //this.correlationId = response.correlationId;
       this.navigateToFirstFactor();
     },
     navigateToFirstFactor : function(){
@@ -311,7 +318,7 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     
     navigateToProvisionMode : function(){
         this.commonEventHandler(this.showLoading, "");
-        OnboardingPresentationController.approveDeviceRegistration(this.updateOnboardingUI);
+        OnboardingPresentationController.approveDeviceRegistration(this.updateOnboardingUI,this.correlationId);
     },
     navigateToPassword : function(){
        this.configureSumbitPINButton("Password");
@@ -327,7 +334,7 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
     },
     
     navigateToFIDO() {
-      OnboardingPresentationController.fidoDeviceRegistration(this.updateOnboardingUI);
+      OnboardingPresentationController.fidoDeviceRegistration(this.updateOnboardingUI,this.correlationId);
     },
     
     activationCodeFailure: function({ActivationCodeError}) {
@@ -374,11 +381,12 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
       }
       var password = this.view.tbxPassword1.text;
       this.commonEventHandler(this.showLoading, "");
-       OnboardingPresentationController.addOOBToUserWithPin(this.updateOnboardingUI, "OTP_SMS", password);
+       OnboardingPresentationController.addOOBToUserWithPin(this.updateOnboardingUI, "OTP_SMS", password,this.correlationId);
     },
     approveDeviceRegistrationSuccess : function(response){
-      this.view.qrcodegeneratorNew.dataToEncode = response.inviteCodeString;
-      this.view.qrcodegeneratorNew.generate();
+    //  this.view.qrcodegeneratorNew.dataToEncode = response.inviteCodeString;
+    //  this.view.qrcodegeneratorNew.generate();
+      this.view.QRCodeGenerator.generateQRCode(response.inviteCodeString);
       this.view.lblUid.text = `<p>Username : ${response.username}<\p>`;
       this.view.lblInvCode.text =`<p>Invite Code : ${response.decodedInvCode}<\p>`;
       this.view.lblRegURL.text = `<p>${response.url}<\p>`;
@@ -474,6 +482,23 @@ define([`com/hid/onboarding/OnboardingPresentationController`], function(Onboard
       this.view.lblErrorHW.text = "Unable to find Hardware devices";
       this.view.lblErrorHW.setVisibility(true);
     },
+    
+    generateUUID: function() {
+      const crypto = window.crypto || window.msCrypto;
+      const buffer = new Uint16Array(8);
+      crypto.getRandomValues(buffer);
+ 
+      buffer[3] &= 0x0fff;
+      buffer[3] |= 0x4000;
+      buffer[4] &= 0x3fff;
+      buffer[4] |= 0x8000;
+ 
+      return buffer.reduce((str, byte, i) => {
+        const hex = byte.toString(16).padStart(4, '0');
+        return str + (i === 2 || i === 4 || i === 6 ? '-' : '') + hex;
+      }, '');
+    },
+    
     seqCheck: function(s) {
       // Check for sequential numerical characters
       for (let i in s)

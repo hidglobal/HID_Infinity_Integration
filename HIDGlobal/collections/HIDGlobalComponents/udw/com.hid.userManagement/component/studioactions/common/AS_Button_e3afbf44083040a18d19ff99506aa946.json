@@ -1,0 +1,26 @@
+{
+    "AS_Button_e3afbf44083040a18d19ff99506aa946": {
+        "id": "AS_Button_e3afbf44083040a18d19ff99506aa946",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u9bbd16dc356420bba02c488bb3ac80a"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_d91f6cd2348347dcbaad734f24b8c7a9",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "registerFIDOOnClick",
+            "display": "registerFIDOOnClick",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

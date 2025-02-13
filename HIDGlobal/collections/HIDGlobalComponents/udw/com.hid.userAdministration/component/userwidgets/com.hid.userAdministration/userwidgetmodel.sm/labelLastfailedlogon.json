@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s965ac95ff5d4d239a6524a32fc9b397",
+    "_skin_": "s67d36ad1aa64a86b6e76ab257af42af",
     "_text_": "Last failed logon",
     "_top_": {
         "type": "string",
@@ -63,7 +63,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ub2799724f2f429cb22f60c0749d1cc1",
+    "kuid": "u936ae245f9a4720893b113fbe3365db",
     "name": "kony.ui.Label",
     "parent": "flexLastfailedlogon",
     "pf": "userwidgetmodel",

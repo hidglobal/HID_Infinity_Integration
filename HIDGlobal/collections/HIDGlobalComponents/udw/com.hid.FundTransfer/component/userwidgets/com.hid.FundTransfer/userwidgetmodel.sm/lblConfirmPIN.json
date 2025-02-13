@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s4b32e5d0ae4463ea26b002114b2b0f7",
+    "_skin_": "se0b0239431e48c58c6e5be4b876bbd1",
     "_text_": "Confirm PIN",
     "_top_": {
         "type": "string",
@@ -42,7 +42,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s806eaa4f75b416aaf065eb605a77726",
+    "focusskin": "sc9d5cd77c4142c79b977ab419551bc0",
     "id": "lblConfirmPIN",
     "info": null,
     "ipad": {
@@ -68,7 +68,7 @@
         }
     },
     "isvisible": true,
-    "kuid": "u347e70a01f148dfbe76ebaa9bb15d62",
+    "kuid": "uabf796fd1704e128729985b930c6a24",
     "name": "kony.ui.Label",
     "parent": "flxNewPINConfirmInner",
     "pf": "userwidgetmodel",

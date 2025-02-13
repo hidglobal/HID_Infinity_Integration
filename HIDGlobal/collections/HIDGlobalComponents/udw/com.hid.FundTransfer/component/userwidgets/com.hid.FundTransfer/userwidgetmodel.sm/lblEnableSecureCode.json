@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s3b273b79344474a8550d437feaf41cb",
+    "_skin_": "s13d7421945249b99b82a92e025b4fcf",
     "_text_": "Enter PIN",
     "_top_": {
         "type": "string",
@@ -59,7 +59,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ucfe043da379450a888015eb81b8d841",
+    "kuid": "u9d99232c7e448e2afde8bec634c9277",
     "name": "kony.ui.Label",
     "parent": "flxSecureCodeEnableTitle",
     "pf": "userwidgetmodel",

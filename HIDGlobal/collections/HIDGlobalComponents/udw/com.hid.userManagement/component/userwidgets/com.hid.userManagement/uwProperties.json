@@ -5,26 +5,26 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "e23ce954594d4420a7af5ae1478052e7",
+                    "kuid": "f8d50166ea024588b27129f35f7f8fef",
                     "paramList": [],
                     "propertyKey": "loadUserManagement",
                     "pw": {
                         "displayName": "loadUserManagement",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "udade68328004b2885ad94627e582b23",
+                    "srcWgtKUID": "u1d9fc623aca486a881b3c53fba3b6de",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "ac7ad6dd1498493eabab7fc0a0c965c1",
+                    "kuid": "de896d6deee949eba93a2da61083f07c",
                     "paramList": [],
                     "propertyKey": "unassignDevice",
                     "pw": {
                         "displayName": "unassignDevice",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "udade68328004b2885ad94627e582b23",
+                    "srcWgtKUID": "u1d9fc623aca486a881b3c53fba3b6de",
                     "type": "event"
                 }
             ],
@@ -34,7 +34,7 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "f8a3ae9c44bd4953bc19aa0d2f644413",
+                    "kuid": "b558e27bab864c529a0051a902edcaaf",
                     "paramList": [],
                     "propertyIndex": 1,
                     "propertyKey": "showLoading",
@@ -42,12 +42,12 @@
                         "displayName": "showLoading",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "udade68328004b2885ad94627e582b23",
+                    "srcWgtKUID": "u1d9fc623aca486a881b3c53fba3b6de",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "cd9edc1bcaec41a8bdf0463e7ff2ca13",
+                    "kuid": "e271e3c99f244f3ebb58771fd697aaff",
                     "paramList": [],
                     "propertyIndex": 2,
                     "propertyKey": "dismissLoading",
@@ -55,12 +55,12 @@
                         "displayName": "dismissLoading",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "udade68328004b2885ad94627e582b23",
+                    "srcWgtKUID": "u1d9fc623aca486a881b3c53fba3b6de",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "j34fa5c3702b4e2b9a9af3937248709f",
+                    "kuid": "ad109cd5da6b4646a016f03e9a8ab079",
                     "paramList": [],
                     "propertyIndex": 3,
                     "propertyKey": "setDevice",
@@ -68,12 +68,12 @@
                         "displayName": "setDevice",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "udade68328004b2885ad94627e582b23",
+                    "srcWgtKUID": "u1d9fc623aca486a881b3c53fba3b6de",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "da58c914accc40d5a97cb1458c32c4b1",
+                    "kuid": "f9a72549c2db49dc92dcdc53f7c92012",
                     "paramList": [],
                     "propertyIndex": 4,
                     "propertyKey": "deleteSuccess",
@@ -81,12 +81,12 @@
                         "displayName": "deleteSuccess",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "udade68328004b2885ad94627e582b23",
+                    "srcWgtKUID": "u1d9fc623aca486a881b3c53fba3b6de",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "bf7b6b2324f04678a4ef73860794bec6",
+                    "kuid": "d46d3c1fc46542b3a450adab06e9e2c5",
                     "paramList": [],
                     "propertyIndex": 5,
                     "propertyKey": "deleteFailure",
@@ -94,12 +94,12 @@
                         "displayName": "deleteFailure",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "udade68328004b2885ad94627e582b23",
+                    "srcWgtKUID": "u1d9fc623aca486a881b3c53fba3b6de",
                     "type": "event"
                 },
                 {
                     "group": "General",
-                    "kuid": "fe9e02f0b6bb478c934dea158a3723e3",
+                    "kuid": "d0a50019dfcb472b8f09fa411d0407eb",
                     "paramList": [],
                     "propertyIndex": 6,
                     "propertyKey": "suspendFailure",
@@ -107,7 +107,7 @@
                         "displayName": "suspendFailure",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
-                    "srcWgtKUID": "udade68328004b2885ad94627e582b23",
+                    "srcWgtKUID": "u1d9fc623aca486a881b3c53fba3b6de",
                     "type": "event"
                 }
             ],
@@ -127,7 +127,7 @@
                     "access": "Write",
                     "defaultValue": "",
                     "group": "General",
-                    "kuid": "bfa868788f904927ad357c34cc259ced",
+                    "kuid": "a2965407d6684339aebce3a410b03782",
                     "originalPropertyKey": "Username",
                     "orignalPropertyType": "custom",
                     "propertyIndex": 2,
@@ -137,7 +137,7 @@
                         "displayName": "Username",
                         "uiRepresentation": "Label-Textbox"
                     },
-                    "srcWgtKUID": "udade68328004b2885ad94627e582b23",
+                    "srcWgtKUID": "u1d9fc623aca486a881b3c53fba3b6de",
                     "type": "string",
                     "value": ""
                 },
@@ -145,7 +145,7 @@
                     "access": "Write",
                     "defaultValue": false,
                     "group": "General",
-                    "kuid": "de4e7003b0884a1c85fe44f8bf8e9857",
+                    "kuid": "c429308e3db546019f841106c2d12892",
                     "originalPropertyKey": "isRMSEnabled",
                     "orignalPropertyType": "custom",
                     "propertyIndex": 3,
@@ -155,7 +155,7 @@
                         "displayName": "isRMSEnabled",
                         "uiRepresentation": "Label-Radiobuttongroup"
                     },
-                    "srcWgtKUID": "udade68328004b2885ad94627e582b23",
+                    "srcWgtKUID": "u1d9fc623aca486a881b3c53fba3b6de",
                     "type": "boolean",
                     "value": "true/false"
                 }
